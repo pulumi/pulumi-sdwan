@@ -88,14 +88,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition")
 public class ZoneBasedFirewallPolicyDefinition extends com.pulumi.resources.CustomResource {
     /**
-     * , Attribute conditional on `mode` being equal to `security`
+     * , Attribute conditional on `mode` equal to `security`
      * 
      */
     @Export(name="applyZonePairs", refs={List.class,ZoneBasedFirewallPolicyDefinitionApplyZonePair.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ZoneBasedFirewallPolicyDefinitionApplyZonePair>> applyZonePairs;
 
     /**
-     * @return , Attribute conditional on `mode` being equal to `security`
+     * @return , Attribute conditional on `mode` equal to `security`
      * 
      */
     public Output<Optional<List<ZoneBasedFirewallPolicyDefinitionApplyZonePair>>> applyZonePairs() {

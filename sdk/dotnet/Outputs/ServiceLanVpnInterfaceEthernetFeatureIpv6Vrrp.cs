@@ -14,6 +14,11 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp
     {
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        ///   - Default value: `True`
+        /// </summary>
+        public readonly bool? FollowDualRouterHighAvailability;
+        /// <summary>
         /// Group ID
         ///   - Range: `1`-`255`
         /// </summary>
@@ -26,6 +31,15 @@ namespace Pulumi.Sdwan.Outputs
         /// IPv6 VRRP
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address> Ipv6Addresses;
+        /// <summary>
+        /// Minimum preempt delay in seconds
+        ///   - Range: `0`-`3600`
+        /// </summary>
+        public readonly int? MinPreemptDelay;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? MinPreemptDelayVariable;
         /// <summary>
         /// Set priority
         ///   - Range: `1`-`254`
@@ -54,11 +68,17 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp(
+            bool? followDualRouterHighAvailability,
+
             int? groupId,
 
             string? groupIdVariable,
 
             ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address> ipv6Addresses,
+
+            int? minPreemptDelay,
+
+            string? minPreemptDelayVariable,
 
             int? priority,
 
@@ -70,9 +90,12 @@ namespace Pulumi.Sdwan.Outputs
 
             bool? trackOmp)
         {
+            FollowDualRouterHighAvailability = followDualRouterHighAvailability;
             GroupId = groupId;
             GroupIdVariable = groupIdVariable;
             Ipv6Addresses = ipv6Addresses;
+            MinPreemptDelay = minPreemptDelay;
+            MinPreemptDelayVariable = minPreemptDelayVariable;
             Priority = priority;
             PriorityVariable = priorityVariable;
             Timer = timer;

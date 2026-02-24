@@ -27,7 +27,7 @@ class GetSystemBasicFeatureResult:
     """
     A collection of values returned by getSystemBasicFeature.
     """
-    def __init__(__self__, admin_tech_on_failure=None, admin_tech_on_failure_variable=None, affinity_group_number=None, affinity_group_number_variable=None, affinity_group_preferences=None, affinity_group_preferences_variable=None, affinity_per_vrfs=None, affinity_preference_auto=None, affinity_preference_auto_variable=None, config_description=None, config_description_variable=None, console_baud_rate=None, console_baud_rate_variable=None, control_session_pps=None, control_session_pps_variable=None, controller_groups=None, controller_groups_variable=None, description=None, device_groups=None, device_groups_variable=None, enhanced_app_aware_routing=None, enhanced_app_aware_routing_variable=None, feature_profile_id=None, gps_geo_fencing_enable=None, gps_geo_fencing_range=None, gps_geo_fencing_range_variable=None, gps_latitude=None, gps_latitude_variable=None, gps_longitude=None, gps_longitude_variable=None, gps_sms_enable=None, gps_sms_mobile_numbers=None, id=None, idle_timeout=None, idle_timeout_variable=None, location=None, location_variable=None, max_omp_sessions=None, max_omp_sessions_variable=None, multi_tenant=None, multi_tenant_variable=None, name=None, on_demand_enable=None, on_demand_enable_variable=None, on_demand_idle_timeout=None, on_demand_idle_timeout_variable=None, overlay_id=None, overlay_id_variable=None, port_hopping=None, port_hopping_variable=None, port_offset=None, port_offset_variable=None, site_types=None, site_types_variable=None, timezone=None, timezone_variable=None, track_default_gateway=None, track_default_gateway_variable=None, track_interface_tag=None, track_interface_tag_variable=None, track_transport=None, track_transport_variable=None, transport_gateway=None, transport_gateway_variable=None, version=None):
+    def __init__(__self__, admin_tech_on_failure=None, admin_tech_on_failure_variable=None, affinity_group_number=None, affinity_group_number_variable=None, affinity_group_preferences=None, affinity_group_preferences_variable=None, affinity_per_vrfs=None, affinity_preference_auto=None, affinity_preference_auto_variable=None, config_description=None, config_description_variable=None, console_baud_rate=None, console_baud_rate_variable=None, control_session_pps=None, control_session_pps_variable=None, controller_groups=None, controller_groups_variable=None, description=None, device_groups=None, device_groups_variable=None, enhanced_app_aware_routing=None, enhanced_app_aware_routing_variable=None, feature_profile_id=None, gps_geo_fencing_enable=None, gps_geo_fencing_range=None, gps_geo_fencing_range_variable=None, gps_latitude=None, gps_latitude_variable=None, gps_longitude=None, gps_longitude_variable=None, gps_sms_enable=None, gps_sms_mobile_numbers=None, id=None, idle_timeout=None, idle_timeout_variable=None, location=None, location_variable=None, max_omp_sessions=None, max_omp_sessions_variable=None, multi_tenant=None, multi_tenant_variable=None, name=None, on_demand_enable=None, on_demand_enable_variable=None, on_demand_idle_timeout=None, on_demand_idle_timeout_variable=None, overlay_id=None, overlay_id_variable=None, port_hopping=None, port_hopping_variable=None, port_offset=None, port_offset_variable=None, site_types=None, site_types_variable=None, timezone=None, timezone_variable=None, track_default_gateway=None, track_default_gateway_variable=None, track_interface_tag=None, track_interface_tag_variable=None, track_transport=None, track_transport_variable=None, tracker_dia_stabilize_status=None, tracker_dia_stabilize_status_variable=None, transport_gateway=None, transport_gateway_variable=None, version=None):
         if admin_tech_on_failure and not isinstance(admin_tech_on_failure, bool):
             raise TypeError("Expected argument 'admin_tech_on_failure' to be a bool")
         pulumi.set(__self__, "admin_tech_on_failure", admin_tech_on_failure)
@@ -214,6 +214,12 @@ class GetSystemBasicFeatureResult:
         if track_transport_variable and not isinstance(track_transport_variable, str):
             raise TypeError("Expected argument 'track_transport_variable' to be a str")
         pulumi.set(__self__, "track_transport_variable", track_transport_variable)
+        if tracker_dia_stabilize_status and not isinstance(tracker_dia_stabilize_status, bool):
+            raise TypeError("Expected argument 'tracker_dia_stabilize_status' to be a bool")
+        pulumi.set(__self__, "tracker_dia_stabilize_status", tracker_dia_stabilize_status)
+        if tracker_dia_stabilize_status_variable and not isinstance(tracker_dia_stabilize_status_variable, str):
+            raise TypeError("Expected argument 'tracker_dia_stabilize_status_variable' to be a str")
+        pulumi.set(__self__, "tracker_dia_stabilize_status_variable", tracker_dia_stabilize_status_variable)
         if transport_gateway and not isinstance(transport_gateway, bool):
             raise TypeError("Expected argument 'transport_gateway' to be a bool")
         pulumi.set(__self__, "transport_gateway", transport_gateway)
@@ -721,6 +727,22 @@ class GetSystemBasicFeatureResult:
         return pulumi.get(self, "track_transport_variable")
 
     @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatus")
+    def tracker_dia_stabilize_status(self) -> _builtins.bool:
+        """
+        Enable or disable endpoint tracker diaStabilize status
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status")
+
+    @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatusVariable")
+    def tracker_dia_stabilize_status_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status_variable")
+
+    @_builtins.property
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> _builtins.bool:
         """
@@ -813,6 +835,8 @@ class AwaitableGetSystemBasicFeatureResult(GetSystemBasicFeatureResult):
             track_interface_tag_variable=self.track_interface_tag_variable,
             track_transport=self.track_transport,
             track_transport_variable=self.track_transport_variable,
+            tracker_dia_stabilize_status=self.tracker_dia_stabilize_status,
+            tracker_dia_stabilize_status_variable=self.tracker_dia_stabilize_status_variable,
             transport_gateway=self.transport_gateway,
             transport_gateway_variable=self.transport_gateway_variable,
             version=self.version)
@@ -907,6 +931,8 @@ def get_system_basic_feature(feature_profile_id: Optional[_builtins.str] = None,
         track_interface_tag_variable=pulumi.get(__ret__, 'track_interface_tag_variable'),
         track_transport=pulumi.get(__ret__, 'track_transport'),
         track_transport_variable=pulumi.get(__ret__, 'track_transport_variable'),
+        tracker_dia_stabilize_status=pulumi.get(__ret__, 'tracker_dia_stabilize_status'),
+        tracker_dia_stabilize_status_variable=pulumi.get(__ret__, 'tracker_dia_stabilize_status_variable'),
         transport_gateway=pulumi.get(__ret__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__ret__, 'transport_gateway_variable'),
         version=pulumi.get(__ret__, 'version'))
@@ -998,6 +1024,8 @@ def get_system_basic_feature_output(feature_profile_id: Optional[pulumi.Input[_b
         track_interface_tag_variable=pulumi.get(__response__, 'track_interface_tag_variable'),
         track_transport=pulumi.get(__response__, 'track_transport'),
         track_transport_variable=pulumi.get(__response__, 'track_transport_variable'),
+        tracker_dia_stabilize_status=pulumi.get(__response__, 'tracker_dia_stabilize_status'),
+        tracker_dia_stabilize_status_variable=pulumi.get(__response__, 'tracker_dia_stabilize_status_variable'),
         transport_gateway=pulumi.get(__response__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__response__, 'transport_gateway_variable'),
         version=pulumi.get(__response__, 'version')))

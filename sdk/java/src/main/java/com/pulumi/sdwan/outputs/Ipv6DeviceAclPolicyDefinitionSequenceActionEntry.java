@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     private @Nullable String counterName;
@@ -26,7 +26,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
 
     private Ipv6DeviceAclPolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     public Optional<String> counterName() {

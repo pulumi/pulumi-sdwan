@@ -48,14 +48,14 @@ public final class SystemAaaFeatureUserArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Set the user password
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return Set the user password
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> password() {
@@ -199,7 +199,7 @@ public final class SystemAaaFeatureUserArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param password Set the user password
+         * @param password Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class SystemAaaFeatureUserArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param password Set the user password
+         * @param password Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

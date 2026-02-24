@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     /**
-     * @return Carrier, Attribute conditional on `type` being equal to `carrier`
+     * @return Carrier, Attribute conditional on `type` equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      * 
      */
     private @Nullable String carrier;
     /**
-     * @return Color list ID, Attribute conditional on `type` being equal to `colorList`
+     * @return Color list ID, Attribute conditional on `type` equal to `colorList`
      * 
      */
     private @Nullable String colorListId;
@@ -30,7 +30,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer colorListVersion;
     /**
-     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * @return Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     private @Nullable String communityListId;
@@ -40,13 +40,13 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer communityListVersion;
     /**
-     * @return Domain ID, Attribute conditional on `type` being equal to `domainId`
+     * @return Domain ID, Attribute conditional on `type` equal to `domainId`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer domainId;
     /**
-     * @return Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * @return Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     private @Nullable String expandedCommunityListId;
@@ -56,42 +56,42 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer expandedCommunityListVersion;
     /**
-     * @return Group ID, Attribute conditional on `type` being equal to `groupId`
+     * @return Group ID, Attribute conditional on `type` equal to `groupId`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer groupId;
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer ompTag;
     /**
-     * @return Origin, Attribute conditional on `type` being equal to `origin`
+     * @return Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      * 
      */
     private @Nullable String origin;
     /**
-     * @return Originator IP, Attribute conditional on `type` being equal to `originator`
+     * @return Originator IP, Attribute conditional on `type` equal to `originator`
      * 
      */
     private @Nullable String originator;
     /**
-     * @return Path type, Attribute conditional on `type` being equal to `pathType`
+     * @return Path type, Attribute conditional on `type` equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      * 
      */
     private @Nullable String pathType;
     /**
-     * @return Preference, Attribute conditional on `type` being equal to `preference`
+     * @return Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer preference;
     /**
-     * @return Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+     * @return Prefix list ID, Attribute conditional on `type` equal to `prefixList`
      * 
      */
     private @Nullable String prefixListId;
@@ -101,30 +101,30 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer prefixListVersion;
     /**
-     * @return Region ID, Attribute conditional on `type` being equal to `regionId`
+     * @return Region ID, Attribute conditional on `type` equal to `regionId`
      *   - Range: `0`-`63`
      * 
      */
     private @Nullable Integer regionId;
     /**
-     * @return Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * @return Region list ID, Attribute conditional on `type` equal to `regionList`
      * 
      */
     private @Nullable String regionListId;
     /**
-     * @return Role, Attribute conditional on `type` being equal to `role`
+     * @return Role, Attribute conditional on `type` equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
     private @Nullable String role;
     /**
-     * @return Site ID, Attribute conditional on `type` being equal to `siteId`
+     * @return Site ID, Attribute conditional on `type` equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer siteId;
     /**
-     * @return Site list ID, Attribute conditional on `type` being equal to `siteList`
+     * @return Site list ID, Attribute conditional on `type` equal to `siteList`
      * 
      */
     private @Nullable String siteListId;
@@ -134,23 +134,23 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer siteListVersion;
     /**
-     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     private @Nullable String tlocColor;
     /**
-     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
     private @Nullable String tlocEncapsulation;
     /**
-     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     private @Nullable String tlocIp;
     /**
-     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * @return TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     private @Nullable String tlocListId;
@@ -166,13 +166,13 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private String type;
     /**
-     * @return VPN ID, Attribute conditional on `type` being equal to `vpn`
+     * @return VPN ID, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65536`
      * 
      */
     private @Nullable Integer vpnId;
     /**
-     * @return VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+     * @return VPN list ID, Attribute conditional on `type` equal to `vpnList`
      * 
      */
     private @Nullable String vpnListId;
@@ -184,7 +184,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
 
     private CustomControlTopologyPolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return Carrier, Attribute conditional on `type` being equal to `carrier`
+     * @return Carrier, Attribute conditional on `type` equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      * 
      */
@@ -192,7 +192,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.carrier);
     }
     /**
-     * @return Color list ID, Attribute conditional on `type` being equal to `colorList`
+     * @return Color list ID, Attribute conditional on `type` equal to `colorList`
      * 
      */
     public Optional<String> colorListId() {
@@ -206,7 +206,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.colorListVersion);
     }
     /**
-     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * @return Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     public Optional<String> communityListId() {
@@ -220,7 +220,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.communityListVersion);
     }
     /**
-     * @return Domain ID, Attribute conditional on `type` being equal to `domainId`
+     * @return Domain ID, Attribute conditional on `type` equal to `domainId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -228,7 +228,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.domainId);
     }
     /**
-     * @return Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * @return Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     public Optional<String> expandedCommunityListId() {
@@ -242,7 +242,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.expandedCommunityListVersion);
     }
     /**
-     * @return Group ID, Attribute conditional on `type` being equal to `groupId`
+     * @return Group ID, Attribute conditional on `type` equal to `groupId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -250,7 +250,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -258,7 +258,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.ompTag);
     }
     /**
-     * @return Origin, Attribute conditional on `type` being equal to `origin`
+     * @return Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      * 
      */
@@ -266,14 +266,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return Originator IP, Attribute conditional on `type` being equal to `originator`
+     * @return Originator IP, Attribute conditional on `type` equal to `originator`
      * 
      */
     public Optional<String> originator() {
         return Optional.ofNullable(this.originator);
     }
     /**
-     * @return Path type, Attribute conditional on `type` being equal to `pathType`
+     * @return Path type, Attribute conditional on `type` equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      * 
      */
@@ -281,7 +281,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.pathType);
     }
     /**
-     * @return Preference, Attribute conditional on `type` being equal to `preference`
+     * @return Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -289,7 +289,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.preference);
     }
     /**
-     * @return Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+     * @return Prefix list ID, Attribute conditional on `type` equal to `prefixList`
      * 
      */
     public Optional<String> prefixListId() {
@@ -303,7 +303,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.prefixListVersion);
     }
     /**
-     * @return Region ID, Attribute conditional on `type` being equal to `regionId`
+     * @return Region ID, Attribute conditional on `type` equal to `regionId`
      *   - Range: `0`-`63`
      * 
      */
@@ -311,14 +311,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.regionId);
     }
     /**
-     * @return Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * @return Region list ID, Attribute conditional on `type` equal to `regionList`
      * 
      */
     public Optional<String> regionListId() {
         return Optional.ofNullable(this.regionListId);
     }
     /**
-     * @return Role, Attribute conditional on `type` being equal to `role`
+     * @return Role, Attribute conditional on `type` equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
@@ -326,7 +326,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.role);
     }
     /**
-     * @return Site ID, Attribute conditional on `type` being equal to `siteId`
+     * @return Site ID, Attribute conditional on `type` equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -334,7 +334,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.siteId);
     }
     /**
-     * @return Site list ID, Attribute conditional on `type` being equal to `siteList`
+     * @return Site list ID, Attribute conditional on `type` equal to `siteList`
      * 
      */
     public Optional<String> siteListId() {
@@ -348,14 +348,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.siteListVersion);
     }
     /**
-     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<String> tlocColor() {
         return Optional.ofNullable(this.tlocColor);
     }
     /**
-     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -363,14 +363,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.tlocEncapsulation);
     }
     /**
-     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<String> tlocIp() {
         return Optional.ofNullable(this.tlocIp);
     }
     /**
-     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * @return TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     public Optional<String> tlocListId() {
@@ -392,7 +392,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return this.type;
     }
     /**
-     * @return VPN ID, Attribute conditional on `type` being equal to `vpn`
+     * @return VPN ID, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65536`
      * 
      */
@@ -400,7 +400,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.vpnId);
     }
     /**
-     * @return VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+     * @return VPN list ID, Attribute conditional on `type` equal to `vpnList`
      * 
      */
     public Optional<String> vpnListId() {

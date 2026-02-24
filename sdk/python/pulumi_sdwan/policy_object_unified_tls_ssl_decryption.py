@@ -52,7 +52,7 @@ class PolicyObjectUnifiedTlsSslDecryptionArgs:
         :param pulumi.Input[_builtins.str] untrusted_certificate: - Choices: `decrypt`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
                  - Choices: `decrypt`, `drop`
         """
         pulumi.set(__self__, "certificate_lifetime", certificate_lifetime)
@@ -267,7 +267,7 @@ class PolicyObjectUnifiedTlsSslDecryptionArgs:
     @pulumi.getter(name="unknownRevocationStatus")
     def unknown_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
           - Choices: `decrypt`, `drop`
         """
         return pulumi.get(self, "unknown_revocation_status")
@@ -311,7 +311,7 @@ class _PolicyObjectUnifiedTlsSslDecryptionState:
         :param pulumi.Input[_builtins.str] minimal_tls_ver: - Choices: `TLSv1`, `TLSv1.1`, `TLSv1.2`
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.str] rsa_keypair_modules: - Choices: `1024`, `2048`, `4096`
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
                  - Choices: `decrypt`, `drop`
         :param pulumi.Input[_builtins.str] unsupported_cipher_suites: - Choices: `no-decrypt`, `drop`
         :param pulumi.Input[_builtins.str] unsupported_protocol_versions: - Choices: `no-decrypt`, `drop`
@@ -507,7 +507,7 @@ class _PolicyObjectUnifiedTlsSslDecryptionState:
     @pulumi.getter(name="unknownRevocationStatus")
     def unknown_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
           - Choices: `decrypt`, `drop`
         """
         return pulumi.get(self, "unknown_revocation_status")
@@ -591,7 +591,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -639,7 +639,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] minimal_tls_ver: - Choices: `TLSv1`, `TLSv1.1`, `TLSv1.2`
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.str] rsa_keypair_modules: - Choices: `1024`, `2048`, `4096`
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
                  - Choices: `decrypt`, `drop`
         :param pulumi.Input[_builtins.str] unsupported_cipher_suites: - Choices: `no-decrypt`, `drop`
         :param pulumi.Input[_builtins.str] unsupported_protocol_versions: - Choices: `no-decrypt`, `drop`
@@ -653,7 +653,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -815,7 +815,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] minimal_tls_ver: - Choices: `TLSv1`, `TLSv1.1`, `TLSv1.2`
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.str] rsa_keypair_modules: - Choices: `1024`, `2048`, `4096`
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
                  - Choices: `decrypt`, `drop`
         :param pulumi.Input[_builtins.str] unsupported_cipher_suites: - Choices: `no-decrypt`, `drop`
         :param pulumi.Input[_builtins.str] unsupported_protocol_versions: - Choices: `no-decrypt`, `drop`
@@ -946,7 +946,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
     @pulumi.getter(name="unknownRevocationStatus")
     def unknown_revocation_status(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` being equal to `ocsp`
+        Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
           - Choices: `decrypt`, `drop`
         """
         return pulumi.get(self, "unknown_revocation_status")

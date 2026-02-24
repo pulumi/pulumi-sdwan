@@ -109,9 +109,9 @@ type ServiceRoutingEigrpFeature struct {
 	HelloInterval pulumi.IntPtrOutput `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrOutput `pulumi:"helloIntervalVariable"`
-	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKey pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKey"`
-	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKeyVariable"`
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
@@ -121,7 +121,7 @@ type ServiceRoutingEigrpFeature struct {
 	HoldTimeVariable pulumi.StringPtrOutput `pulumi:"holdTimeVariable"`
 	// Configure IPv4 Static Routes
 	Interfaces ServiceRoutingEigrpFeatureInterfaceArrayOutput `pulumi:"interfaces"`
-	// Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+	// Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
 	Md5Keys ServiceRoutingEigrpFeatureMd5KeyArrayOutput `pulumi:"md5Keys"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -195,9 +195,9 @@ type serviceRoutingEigrpFeatureState struct {
 	HelloInterval *int `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
-	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
-	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
@@ -207,7 +207,7 @@ type serviceRoutingEigrpFeatureState struct {
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
 	// Configure IPv4 Static Routes
 	Interfaces []ServiceRoutingEigrpFeatureInterface `pulumi:"interfaces"`
-	// Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+	// Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
 	Md5Keys []ServiceRoutingEigrpFeatureMd5Key `pulumi:"md5Keys"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
@@ -246,9 +246,9 @@ type ServiceRoutingEigrpFeatureState struct {
 	HelloInterval pulumi.IntPtrInput
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
-	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKey pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
@@ -258,7 +258,7 @@ type ServiceRoutingEigrpFeatureState struct {
 	HoldTimeVariable pulumi.StringPtrInput
 	// Configure IPv4 Static Routes
 	Interfaces ServiceRoutingEigrpFeatureInterfaceArrayInput
-	// Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+	// Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
 	Md5Keys ServiceRoutingEigrpFeatureMd5KeyArrayInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
@@ -301,9 +301,9 @@ type serviceRoutingEigrpFeatureArgs struct {
 	HelloInterval *int `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
-	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
-	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
@@ -313,7 +313,7 @@ type serviceRoutingEigrpFeatureArgs struct {
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
 	// Configure IPv4 Static Routes
 	Interfaces []ServiceRoutingEigrpFeatureInterface `pulumi:"interfaces"`
-	// Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+	// Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
 	Md5Keys []ServiceRoutingEigrpFeatureMd5Key `pulumi:"md5Keys"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
@@ -351,9 +351,9 @@ type ServiceRoutingEigrpFeatureArgs struct {
 	HelloInterval pulumi.IntPtrInput
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
-	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKey pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+	// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
 	// Set EIGRP hold time
 	//   - Range: `0`-`65535`
@@ -363,7 +363,7 @@ type ServiceRoutingEigrpFeatureArgs struct {
 	HoldTimeVariable pulumi.StringPtrInput
 	// Configure IPv4 Static Routes
 	Interfaces ServiceRoutingEigrpFeatureInterfaceArrayInput
-	// Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+	// Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
 	Md5Keys ServiceRoutingEigrpFeatureMd5KeyArrayInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
@@ -516,12 +516,12 @@ func (o ServiceRoutingEigrpFeatureOutput) HelloIntervalVariable() pulumi.StringP
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HelloIntervalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKey }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+// Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
 func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKeyVariable }).(pulumi.StringPtrOutput)
 }
@@ -545,7 +545,7 @@ func (o ServiceRoutingEigrpFeatureOutput) Interfaces() ServiceRoutingEigrpFeatur
 	}).(ServiceRoutingEigrpFeatureInterfaceArrayOutput)
 }
 
-// Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+// Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
 func (o ServiceRoutingEigrpFeatureOutput) Md5Keys() ServiceRoutingEigrpFeatureMd5KeyArrayOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) ServiceRoutingEigrpFeatureMd5KeyArrayOutput { return v.Md5Keys }).(ServiceRoutingEigrpFeatureMd5KeyArrayOutput)
 }

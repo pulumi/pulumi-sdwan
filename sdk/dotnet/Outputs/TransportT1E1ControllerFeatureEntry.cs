@@ -59,21 +59,21 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? E1LinecodeVariable;
         /// <summary>
-        /// length, Attribute conditional on `CableLength` being equal to `Long`
+        /// length, Attribute conditional on `CableLength` equal to `Long`
         ///   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
         /// </summary>
         public readonly string? LengthLong;
         /// <summary>
-        /// Variable name, Attribute conditional on `CableLength` being equal to `Long`
+        /// Variable name, Attribute conditional on `CableLength` equal to `Long`
         /// </summary>
         public readonly string? LengthLongVariable;
         /// <summary>
-        /// length, Attribute conditional on `CableLength` being equal to `Short`
+        /// length, Attribute conditional on `CableLength` equal to `Short`
         ///   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
         /// </summary>
         public readonly string? LengthShort;
         /// <summary>
-        /// Variable name, Attribute conditional on `CableLength` being equal to `Short`
+        /// Variable name, Attribute conditional on `CableLength` equal to `Short`
         /// </summary>
         public readonly string? LengthShortVariable;
         /// <summary>

@@ -8,7 +8,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Service LAN VPN Interface SVI Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -64,6 +64,7 @@ import * as utilities from "./utilities";
  *             trackAction: "decrement",
  *             decrementValue: 100,
  *         }],
+ *         followDualRouterHighAvailability: false,
  *     }],
  *     ipv6Vrrps: [{
  *         groupId: 1,
@@ -78,6 +79,7 @@ import * as utilities from "./utilities";
  *         secondaryAddresses: [{
  *             prefix: "::20/32",
  *         }],
+ *         followDualRouterHighAvailability: false,
  *     }],
  *     enableDhcpv6: false,
  *     tcpMss: 1024,

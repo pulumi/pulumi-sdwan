@@ -76,19 +76,19 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
     }
 
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly aaaDeriveNameFromPeerDomain: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly aaaDeriveNameFromPeerDomainVariable: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly aaaDeriveNameFromPeerIdentity: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly aaaDeriveNameFromPeerIdentityVariable: pulumi.Output<string | undefined>;
     /**
@@ -111,7 +111,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     declare public readonly aaaSpecifyNamePolicyPasswordVariable: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `user`, `device`
      */
     declare public readonly anyConnectEapAuthenticationType: pulumi.Output<string | undefined>;
@@ -137,77 +137,77 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `10`-`1000`
      *   - Default value: `100`
      */
     declare public readonly ikev2AntiDosThreshold: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ikev2AntiDosThresholdVariable: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      */
     declare public readonly ikev2LocalIkeIdentityType: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ikev2LocalIkeIdentityTypeVariable: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ikev2LocalIkeIdentityValue: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ikev2LocalIkeIdentityValueVariable: pulumi.Output<string | undefined>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `86400`
      */
     declare public readonly ikev2SecurityAssociationLifetime: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ikev2SecurityAssociationLifetimeVariable: pulumi.Output<string | undefined>;
     /**
-     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` equal to `true`
      *   - Default value: `64`
      */
     declare public readonly ipsecAntiReplayWindowSize: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` equal to `true`
      */
     declare public readonly ipsecAntiReplayWindowSizeVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Default value: `true`
      */
     declare public readonly ipsecEnableAntiReplay: pulumi.Output<boolean | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ipsecEnableAntiReplayVariable: pulumi.Output<string | undefined>;
     /**
-     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Default value: `false`
      */
     declare public readonly ipsecEnablePerfectFowardSecrecy: pulumi.Output<boolean | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ipsecEnablePerfectFowardSecrecyVariable: pulumi.Output<string | undefined>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `3600`
      */
     declare public readonly ipsecSecurityAssociationLifetime: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly ipsecSecurityAssociationLifetimeVariable: pulumi.Output<string | undefined>;
     /**
@@ -233,20 +233,20 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` being equal to `group`
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     declare public readonly pskAuthenticationPreSharedKey: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
+     * Variable name, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     declare public readonly pskAuthenticationPreSharedKeyVariable: pulumi.Output<string | undefined>;
     /**
-     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `aaa`, `group`
      */
     declare public readonly pskAuthenticationType: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     declare public readonly pskAuthenticationTypeVariable: pulumi.Output<string | undefined>;
     declare public readonly radiusGroupName: pulumi.Output<string>;
@@ -379,19 +379,19 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
  */
 export interface SystemRemoteAccessFeatureState {
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerDomain?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerDomainVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerIdentity?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerIdentityVariable?: pulumi.Input<string>;
     /**
@@ -414,7 +414,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     aaaSpecifyNamePolicyPasswordVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `user`, `device`
      */
     anyConnectEapAuthenticationType?: pulumi.Input<string>;
@@ -440,77 +440,77 @@ export interface SystemRemoteAccessFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `10`-`1000`
      *   - Default value: `100`
      */
     ikev2AntiDosThreshold?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2AntiDosThresholdVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      */
     ikev2LocalIkeIdentityType?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2LocalIkeIdentityTypeVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2LocalIkeIdentityValue?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2LocalIkeIdentityValueVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `86400`
      */
     ikev2SecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2SecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` equal to `true`
      *   - Default value: `64`
      */
     ipsecAntiReplayWindowSize?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` equal to `true`
      */
     ipsecAntiReplayWindowSizeVariable?: pulumi.Input<string>;
     /**
-     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Default value: `true`
      */
     ipsecEnableAntiReplay?: pulumi.Input<boolean>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ipsecEnableAntiReplayVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Default value: `false`
      */
     ipsecEnablePerfectFowardSecrecy?: pulumi.Input<boolean>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ipsecEnablePerfectFowardSecrecyVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `3600`
      */
     ipsecSecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ipsecSecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
@@ -536,20 +536,20 @@ export interface SystemRemoteAccessFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` being equal to `group`
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     pskAuthenticationPreSharedKey?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
+     * Variable name, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string>;
     /**
-     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `aaa`, `group`
      */
     pskAuthenticationType?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     pskAuthenticationTypeVariable?: pulumi.Input<string>;
     radiusGroupName?: pulumi.Input<string>;
@@ -568,19 +568,19 @@ export interface SystemRemoteAccessFeatureState {
  */
 export interface SystemRemoteAccessFeatureArgs {
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerDomain?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerDomainVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerIdentity?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     aaaDeriveNameFromPeerIdentityVariable?: pulumi.Input<string>;
     /**
@@ -603,7 +603,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     aaaSpecifyNamePolicyPasswordVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `user`, `device`
      */
     anyConnectEapAuthenticationType?: pulumi.Input<string>;
@@ -629,77 +629,77 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `10`-`1000`
      *   - Default value: `100`
      */
     ikev2AntiDosThreshold?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2AntiDosThresholdVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      */
     ikev2LocalIkeIdentityType?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2LocalIkeIdentityTypeVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2LocalIkeIdentityValue?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2LocalIkeIdentityValueVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `86400`
      */
     ikev2SecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ikev2SecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` equal to `true`
      *   - Default value: `64`
      */
     ipsecAntiReplayWindowSize?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` equal to `true`
      */
     ipsecAntiReplayWindowSizeVariable?: pulumi.Input<string>;
     /**
-     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Default value: `true`
      */
     ipsecEnableAntiReplay?: pulumi.Input<boolean>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ipsecEnableAntiReplayVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Default value: `false`
      */
     ipsecEnablePerfectFowardSecrecy?: pulumi.Input<boolean>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ipsecEnablePerfectFowardSecrecyVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `3600`
      */
     ipsecSecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     ipsecSecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
@@ -725,20 +725,20 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` being equal to `group`
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     pskAuthenticationPreSharedKey?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
+     * Variable name, Attribute conditional on `pskAuthenticationType` equal to `group`
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string>;
     /**
-     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` equal to `false`
      *   - Choices: `aaa`, `group`
      */
     pskAuthenticationType?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` equal to `false`
      */
     pskAuthenticationTypeVariable?: pulumi.Input<string>;
     radiusGroupName: pulumi.Input<string>;

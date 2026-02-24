@@ -20,6 +20,23 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs extends com
     public static final ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs Empty = new ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs();
 
     /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="followDualRouterHighAvailability")
+    private @Nullable Output<Boolean> followDualRouterHighAvailability;
+
+    /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> followDualRouterHighAvailability() {
+        return Optional.ofNullable(this.followDualRouterHighAvailability);
+    }
+
+    /**
      * Group ID
      *   - Range: `1`-`255`
      * 
@@ -64,6 +81,38 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs extends com
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs>>> ipv6Addresses() {
         return Optional.ofNullable(this.ipv6Addresses);
+    }
+
+    /**
+     * Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     * 
+     */
+    @Import(name="minPreemptDelay")
+    private @Nullable Output<Integer> minPreemptDelay;
+
+    /**
+     * @return Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     * 
+     */
+    public Optional<Output<Integer>> minPreemptDelay() {
+        return Optional.ofNullable(this.minPreemptDelay);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="minPreemptDelayVariable")
+    private @Nullable Output<String> minPreemptDelayVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> minPreemptDelayVariable() {
+        return Optional.ofNullable(this.minPreemptDelayVariable);
     }
 
     /**
@@ -154,9 +203,12 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs extends com
     private ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs() {}
 
     private ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs(ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs $) {
+        this.followDualRouterHighAvailability = $.followDualRouterHighAvailability;
         this.groupId = $.groupId;
         this.groupIdVariable = $.groupIdVariable;
         this.ipv6Addresses = $.ipv6Addresses;
+        this.minPreemptDelay = $.minPreemptDelay;
+        this.minPreemptDelayVariable = $.minPreemptDelayVariable;
         this.priority = $.priority;
         this.priorityVariable = $.priorityVariable;
         this.timer = $.timer;
@@ -180,6 +232,29 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs extends com
 
         public Builder(ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs defaults) {
             $ = new ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param followDualRouterHighAvailability Follow RG state by default when B2B HA is configured
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder followDualRouterHighAvailability(@Nullable Output<Boolean> followDualRouterHighAvailability) {
+            $.followDualRouterHighAvailability = followDualRouterHighAvailability;
+            return this;
+        }
+
+        /**
+         * @param followDualRouterHighAvailability Follow RG state by default when B2B HA is configured
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder followDualRouterHighAvailability(Boolean followDualRouterHighAvailability) {
+            return followDualRouterHighAvailability(Output.of(followDualRouterHighAvailability));
         }
 
         /**
@@ -255,6 +330,50 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs extends com
          */
         public Builder ipv6Addresses(ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
+        }
+
+        /**
+         * @param minPreemptDelay Minimum preempt delay in seconds
+         *   - Range: `0`-`3600`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelay(@Nullable Output<Integer> minPreemptDelay) {
+            $.minPreemptDelay = minPreemptDelay;
+            return this;
+        }
+
+        /**
+         * @param minPreemptDelay Minimum preempt delay in seconds
+         *   - Range: `0`-`3600`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelay(Integer minPreemptDelay) {
+            return minPreemptDelay(Output.of(minPreemptDelay));
+        }
+
+        /**
+         * @param minPreemptDelayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelayVariable(@Nullable Output<String> minPreemptDelayVariable) {
+            $.minPreemptDelayVariable = minPreemptDelayVariable;
+            return this;
+        }
+
+        /**
+         * @param minPreemptDelayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelayVariable(String minPreemptDelayVariable) {
+            return minPreemptDelayVariable(Output.of(minPreemptDelayVariable));
         }
 
         /**

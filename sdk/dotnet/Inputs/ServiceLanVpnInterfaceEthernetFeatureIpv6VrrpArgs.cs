@@ -13,6 +13,13 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("followDualRouterHighAvailability")]
+        public Input<bool>? FollowDualRouterHighAvailability { get; set; }
+
+        /// <summary>
         /// Group ID
         ///   - Range: `1`-`255`
         /// </summary>
@@ -36,6 +43,19 @@ namespace Pulumi.Sdwan.Inputs
             get => _ipv6Addresses ?? (_ipv6Addresses = new InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs>());
             set => _ipv6Addresses = value;
         }
+
+        /// <summary>
+        /// Minimum preempt delay in seconds
+        ///   - Range: `0`-`3600`
+        /// </summary>
+        [Input("minPreemptDelay")]
+        public Input<int>? MinPreemptDelay { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("minPreemptDelayVariable")]
+        public Input<string>? MinPreemptDelayVariable { get; set; }
 
         /// <summary>
         /// Set priority

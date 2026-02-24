@@ -36,6 +36,23 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs extends com.pulu
     }
 
     /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="followDualRouterHighAvailability")
+    private @Nullable Output<Boolean> followDualRouterHighAvailability;
+
+    /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> followDualRouterHighAvailability() {
+        return Optional.ofNullable(this.followDualRouterHighAvailability);
+    }
+
+    /**
      * Group ID
      *   - Range: `1`-`255`
      * 
@@ -216,6 +233,7 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs extends com.pulu
 
     private ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs(ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs $) {
         this.addresses = $.addresses;
+        this.followDualRouterHighAvailability = $.followDualRouterHighAvailability;
         this.groupId = $.groupId;
         this.groupIdVariable = $.groupIdVariable;
         this.priority = $.priority;
@@ -276,6 +294,29 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs extends com.pulu
          */
         public Builder addresses(ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs... addresses) {
             return addresses(List.of(addresses));
+        }
+
+        /**
+         * @param followDualRouterHighAvailability Follow RG state by default when B2B HA is configured
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder followDualRouterHighAvailability(@Nullable Output<Boolean> followDualRouterHighAvailability) {
+            $.followDualRouterHighAvailability = followDualRouterHighAvailability;
+            return this;
+        }
+
+        /**
+         * @param followDualRouterHighAvailability Follow RG state by default when B2B HA is configured
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder followDualRouterHighAvailability(Boolean followDualRouterHighAvailability) {
+            return followDualRouterHighAvailability(Output.of(followDualRouterHighAvailability));
         }
 
         /**

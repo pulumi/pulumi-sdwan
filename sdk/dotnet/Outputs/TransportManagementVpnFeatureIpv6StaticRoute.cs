@@ -19,20 +19,20 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? Gateway;
         /// <summary>
-        /// IPv6 Nat, Attribute conditional on `Gateway` being equal to `Nat`
+        /// IPv6 Nat, Attribute conditional on `Gateway` equal to `Nat`
         ///   - Choices: `NAT64`, `NAT66`
         /// </summary>
         public readonly string? Nat;
         /// <summary>
-        /// Variable name, Attribute conditional on `Gateway` being equal to `Nat`
+        /// Variable name, Attribute conditional on `Gateway` equal to `Nat`
         /// </summary>
         public readonly string? NatVariable;
         /// <summary>
-        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop> NextHops;
         /// <summary>
-        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `Null0`
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `Null0`
         /// </summary>
         public readonly bool? Null0;
         /// <summary>

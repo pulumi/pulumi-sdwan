@@ -20,14 +20,14 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
     public static final SecurityPolicyDefinitionArgs Empty = new SecurityPolicyDefinitionArgs();
 
     /**
-     * List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
      * 
      */
     @Import(name="entries")
     private @Nullable Output<List<SecurityPolicyDefinitionEntryArgs>> entries;
 
     /**
-     * @return List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * @return List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
      * 
      */
     public Optional<Output<List<SecurityPolicyDefinitionEntryArgs>>> entries() {
@@ -109,7 +109,7 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param entries List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * @param entries List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param entries List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * @param entries List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param entries List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * @param entries List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
          * 
          * @return builder
          * 

@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -12,6 +13,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
+    /**
+     * @return Egress Interface
+     *   - Default value: `false`
+     * 
+     */
+    private @Nullable Boolean egressInterface;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String egressInterfaceVariable;
     /**
      * @return Source Prefix
      * 
@@ -45,6 +57,21 @@ public final class TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
     private @Nullable String translatedSourcePrefixVariable;
 
     private TransportWanVpnInterfaceEthernetFeatureStaticNat66() {}
+    /**
+     * @return Egress Interface
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Boolean> egressInterface() {
+        return Optional.ofNullable(this.egressInterface);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> egressInterfaceVariable() {
+        return Optional.ofNullable(this.egressInterfaceVariable);
+    }
     /**
      * @return Source Prefix
      * 
@@ -98,6 +125,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable Boolean egressInterface;
+        private @Nullable String egressInterfaceVariable;
         private @Nullable String sourcePrefix;
         private @Nullable String sourcePrefixVariable;
         private @Nullable Integer sourceVpnId;
@@ -107,6 +136,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
         public Builder() {}
         public Builder(TransportWanVpnInterfaceEthernetFeatureStaticNat66 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.egressInterface = defaults.egressInterface;
+    	      this.egressInterfaceVariable = defaults.egressInterfaceVariable;
     	      this.sourcePrefix = defaults.sourcePrefix;
     	      this.sourcePrefixVariable = defaults.sourcePrefixVariable;
     	      this.sourceVpnId = defaults.sourceVpnId;
@@ -115,6 +146,18 @@ public final class TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
     	      this.translatedSourcePrefixVariable = defaults.translatedSourcePrefixVariable;
         }
 
+        @CustomType.Setter
+        public Builder egressInterface(@Nullable Boolean egressInterface) {
+
+            this.egressInterface = egressInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder egressInterfaceVariable(@Nullable String egressInterfaceVariable) {
+
+            this.egressInterfaceVariable = egressInterfaceVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder sourcePrefix(@Nullable String sourcePrefix) {
 
@@ -153,6 +196,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
         }
         public TransportWanVpnInterfaceEthernetFeatureStaticNat66 build() {
             final var _resultValue = new TransportWanVpnInterfaceEthernetFeatureStaticNat66();
+            _resultValue.egressInterface = egressInterface;
+            _resultValue.egressInterfaceVariable = egressInterfaceVariable;
             _resultValue.sourcePrefix = sourcePrefix;
             _resultValue.sourcePrefixVariable = sourcePrefixVariable;
             _resultValue.sourceVpnId = sourceVpnId;

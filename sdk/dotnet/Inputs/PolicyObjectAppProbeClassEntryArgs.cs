@@ -18,6 +18,9 @@ namespace Pulumi.Sdwan.Inputs
         [Input("forwardingClass")]
         public Input<string>? ForwardingClass { get; set; }
 
+        [Input("forwardingClassId")]
+        public Input<string>? ForwardingClassId { get; set; }
+
         [Input("maps")]
         private InputList<Inputs.PolicyObjectAppProbeClassEntryMapArgs>? _maps;
 

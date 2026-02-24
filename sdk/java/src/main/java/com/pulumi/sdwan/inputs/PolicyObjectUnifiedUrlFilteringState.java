@@ -19,14 +19,14 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
     public static final PolicyObjectUnifiedUrlFilteringState Empty = new PolicyObjectUnifiedUrlFilteringState();
 
     /**
-     * , Attribute conditional on `enableAlerts` being equal to `true`
+     * , Attribute conditional on `enableAlerts` equal to `true`
      * 
      */
     @Import(name="alerts")
     private @Nullable Output<List<String>> alerts;
 
     /**
-     * @return , Attribute conditional on `enableAlerts` being equal to `true`
+     * @return , Attribute conditional on `enableAlerts` equal to `true`
      * 
      */
     public Optional<Output<List<String>>> alerts() {
@@ -49,14 +49,14 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
     }
 
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `text`
+     * , Attribute conditional on `blockPageAction` equal to `text`
      * 
      */
     @Import(name="blockPageContents")
     private @Nullable Output<String> blockPageContents;
 
     /**
-     * @return , Attribute conditional on `blockPageAction` being equal to `text`
+     * @return , Attribute conditional on `blockPageAction` equal to `text`
      * 
      */
     public Optional<Output<String>> blockPageContents() {
@@ -116,14 +116,14 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
     }
 
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      * 
      */
     @Import(name="redirectUrl")
     private @Nullable Output<String> redirectUrl;
 
     /**
-     * @return , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * @return , Attribute conditional on `blockPageAction` equal to `redirect-url`
      * 
      */
     public Optional<Output<String>> redirectUrl() {
@@ -234,7 +234,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param alerts , Attribute conditional on `enableAlerts` being equal to `true`
+         * @param alerts , Attribute conditional on `enableAlerts` equal to `true`
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param alerts , Attribute conditional on `enableAlerts` being equal to `true`
+         * @param alerts , Attribute conditional on `enableAlerts` equal to `true`
          * 
          * @return builder
          * 
@@ -255,7 +255,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param alerts , Attribute conditional on `enableAlerts` being equal to `true`
+         * @param alerts , Attribute conditional on `enableAlerts` equal to `true`
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param blockPageContents , Attribute conditional on `blockPageAction` being equal to `text`
+         * @param blockPageContents , Attribute conditional on `blockPageAction` equal to `text`
          * 
          * @return builder
          * 
@@ -297,7 +297,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param blockPageContents , Attribute conditional on `blockPageAction` being equal to `text`
+         * @param blockPageContents , Attribute conditional on `blockPageAction` equal to `text`
          * 
          * @return builder
          * 
@@ -379,7 +379,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param redirectUrl , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+         * @param redirectUrl , Attribute conditional on `blockPageAction` equal to `redirect-url`
          * 
          * @return builder
          * 
@@ -390,7 +390,7 @@ public final class PolicyObjectUnifiedUrlFilteringState extends com.pulumi.resou
         }
 
         /**
-         * @param redirectUrl , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+         * @param redirectUrl , Attribute conditional on `blockPageAction` equal to `redirect-url`
          * 
          * @return builder
          * 

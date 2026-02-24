@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Policy Object Unified URL Filtering Policy_object.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -68,11 +68,11 @@ import (
 type PolicyObjectUnifiedUrlFiltering struct {
 	pulumi.CustomResourceState
 
-	// , Attribute conditional on `enableAlerts` being equal to `true`
+	// , Attribute conditional on `enableAlerts` equal to `true`
 	Alerts pulumi.StringArrayOutput `pulumi:"alerts"`
 	// - Choices: `text`, `redirect-url`
 	BlockPageAction pulumi.StringOutput `pulumi:"blockPageAction"`
-	// , Attribute conditional on `blockPageAction` being equal to `text`
+	// , Attribute conditional on `blockPageAction` equal to `text`
 	BlockPageContents pulumi.StringPtrOutput `pulumi:"blockPageContents"`
 	// The description of the Policy_object
 	Description  pulumi.StringPtrOutput `pulumi:"description"`
@@ -81,7 +81,7 @@ type PolicyObjectUnifiedUrlFiltering struct {
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Policy_object
 	Name pulumi.StringOutput `pulumi:"name"`
-	// , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+	// , Attribute conditional on `blockPageAction` equal to `redirect-url`
 	RedirectUrl    pulumi.StringPtrOutput `pulumi:"redirectUrl"`
 	UrlAllowListId pulumi.StringPtrOutput `pulumi:"urlAllowListId"`
 	UrlBlockListId pulumi.StringPtrOutput `pulumi:"urlBlockListId"`
@@ -142,11 +142,11 @@ func GetPolicyObjectUnifiedUrlFiltering(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering PolicyObjectUnifiedUrlFiltering resources.
 type policyObjectUnifiedUrlFilteringState struct {
-	// , Attribute conditional on `enableAlerts` being equal to `true`
+	// , Attribute conditional on `enableAlerts` equal to `true`
 	Alerts []string `pulumi:"alerts"`
 	// - Choices: `text`, `redirect-url`
 	BlockPageAction *string `pulumi:"blockPageAction"`
-	// , Attribute conditional on `blockPageAction` being equal to `text`
+	// , Attribute conditional on `blockPageAction` equal to `text`
 	BlockPageContents *string `pulumi:"blockPageContents"`
 	// The description of the Policy_object
 	Description  *string `pulumi:"description"`
@@ -155,7 +155,7 @@ type policyObjectUnifiedUrlFilteringState struct {
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Policy_object
 	Name *string `pulumi:"name"`
-	// , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+	// , Attribute conditional on `blockPageAction` equal to `redirect-url`
 	RedirectUrl    *string `pulumi:"redirectUrl"`
 	UrlAllowListId *string `pulumi:"urlAllowListId"`
 	UrlBlockListId *string `pulumi:"urlBlockListId"`
@@ -169,11 +169,11 @@ type policyObjectUnifiedUrlFilteringState struct {
 }
 
 type PolicyObjectUnifiedUrlFilteringState struct {
-	// , Attribute conditional on `enableAlerts` being equal to `true`
+	// , Attribute conditional on `enableAlerts` equal to `true`
 	Alerts pulumi.StringArrayInput
 	// - Choices: `text`, `redirect-url`
 	BlockPageAction pulumi.StringPtrInput
-	// , Attribute conditional on `blockPageAction` being equal to `text`
+	// , Attribute conditional on `blockPageAction` equal to `text`
 	BlockPageContents pulumi.StringPtrInput
 	// The description of the Policy_object
 	Description  pulumi.StringPtrInput
@@ -182,7 +182,7 @@ type PolicyObjectUnifiedUrlFilteringState struct {
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Policy_object
 	Name pulumi.StringPtrInput
-	// , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+	// , Attribute conditional on `blockPageAction` equal to `redirect-url`
 	RedirectUrl    pulumi.StringPtrInput
 	UrlAllowListId pulumi.StringPtrInput
 	UrlBlockListId pulumi.StringPtrInput
@@ -200,11 +200,11 @@ func (PolicyObjectUnifiedUrlFilteringState) ElementType() reflect.Type {
 }
 
 type policyObjectUnifiedUrlFilteringArgs struct {
-	// , Attribute conditional on `enableAlerts` being equal to `true`
+	// , Attribute conditional on `enableAlerts` equal to `true`
 	Alerts []string `pulumi:"alerts"`
 	// - Choices: `text`, `redirect-url`
 	BlockPageAction string `pulumi:"blockPageAction"`
-	// , Attribute conditional on `blockPageAction` being equal to `text`
+	// , Attribute conditional on `blockPageAction` equal to `text`
 	BlockPageContents *string `pulumi:"blockPageContents"`
 	// The description of the Policy_object
 	Description  *string `pulumi:"description"`
@@ -213,7 +213,7 @@ type policyObjectUnifiedUrlFilteringArgs struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Policy_object
 	Name *string `pulumi:"name"`
-	// , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+	// , Attribute conditional on `blockPageAction` equal to `redirect-url`
 	RedirectUrl    *string  `pulumi:"redirectUrl"`
 	UrlAllowListId *string  `pulumi:"urlAllowListId"`
 	UrlBlockListId *string  `pulumi:"urlBlockListId"`
@@ -226,11 +226,11 @@ type policyObjectUnifiedUrlFilteringArgs struct {
 
 // The set of arguments for constructing a PolicyObjectUnifiedUrlFiltering resource.
 type PolicyObjectUnifiedUrlFilteringArgs struct {
-	// , Attribute conditional on `enableAlerts` being equal to `true`
+	// , Attribute conditional on `enableAlerts` equal to `true`
 	Alerts pulumi.StringArrayInput
 	// - Choices: `text`, `redirect-url`
 	BlockPageAction pulumi.StringInput
-	// , Attribute conditional on `blockPageAction` being equal to `text`
+	// , Attribute conditional on `blockPageAction` equal to `text`
 	BlockPageContents pulumi.StringPtrInput
 	// The description of the Policy_object
 	Description  pulumi.StringPtrInput
@@ -239,7 +239,7 @@ type PolicyObjectUnifiedUrlFilteringArgs struct {
 	FeatureProfileId pulumi.StringInput
 	// The name of the Policy_object
 	Name pulumi.StringPtrInput
-	// , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+	// , Attribute conditional on `blockPageAction` equal to `redirect-url`
 	RedirectUrl    pulumi.StringPtrInput
 	UrlAllowListId pulumi.StringPtrInput
 	UrlBlockListId pulumi.StringPtrInput
@@ -337,7 +337,7 @@ func (o PolicyObjectUnifiedUrlFilteringOutput) ToPolicyObjectUnifiedUrlFiltering
 	return o
 }
 
-// , Attribute conditional on `enableAlerts` being equal to `true`
+// , Attribute conditional on `enableAlerts` equal to `true`
 func (o PolicyObjectUnifiedUrlFilteringOutput) Alerts() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedUrlFiltering) pulumi.StringArrayOutput { return v.Alerts }).(pulumi.StringArrayOutput)
 }
@@ -347,7 +347,7 @@ func (o PolicyObjectUnifiedUrlFilteringOutput) BlockPageAction() pulumi.StringOu
 	return o.ApplyT(func(v *PolicyObjectUnifiedUrlFiltering) pulumi.StringOutput { return v.BlockPageAction }).(pulumi.StringOutput)
 }
 
-// , Attribute conditional on `blockPageAction` being equal to `text`
+// , Attribute conditional on `blockPageAction` equal to `text`
 func (o PolicyObjectUnifiedUrlFilteringOutput) BlockPageContents() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedUrlFiltering) pulumi.StringPtrOutput { return v.BlockPageContents }).(pulumi.StringPtrOutput)
 }
@@ -371,7 +371,7 @@ func (o PolicyObjectUnifiedUrlFilteringOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedUrlFiltering) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+// , Attribute conditional on `blockPageAction` equal to `redirect-url`
 func (o PolicyObjectUnifiedUrlFilteringOutput) RedirectUrl() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedUrlFiltering) pulumi.StringPtrOutput { return v.RedirectUrl }).(pulumi.StringPtrOutput)
 }

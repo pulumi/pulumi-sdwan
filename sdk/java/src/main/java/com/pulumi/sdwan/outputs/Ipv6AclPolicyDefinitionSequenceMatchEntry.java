@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
     /**
-     * @return Class map ID, Attribute conditional on `type` being equal to `class`
+     * @return Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     private @Nullable String classMapId;
@@ -24,7 +24,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer classMapVersion;
     /**
-     * @return Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * @return Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     private @Nullable String destinationDataIpv6PrefixListId;
@@ -34,35 +34,35 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer destinationDataIpv6PrefixListVersion;
     /**
-     * @return Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * @return Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     private @Nullable String destinationIp;
     /**
-     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      * 
      */
     private @Nullable String destinationPorts;
     /**
-     * @return Next header, Attribute conditional on `type` being equal to `nextHeader`
+     * @return Next header, Attribute conditional on `type` equal to `nextHeader`
      *   - Range: `0`-`255`
      * 
      */
     private @Nullable Integer nextHeader;
     /**
-     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * @return Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer packetLength;
     /**
-     * @return PLP - priority, Attribute conditional on `type` being equal to `plp`
+     * @return PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
     private @Nullable String priority;
     /**
-     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     private @Nullable String sourceDataIpv6PrefixListId;
@@ -72,23 +72,23 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer sourceDataIpv6PrefixListVersion;
     /**
-     * @return Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * @return Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     private @Nullable String sourceIp;
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     private @Nullable String sourcePorts;
     /**
-     * @return TCP parameters, Attribute conditional on `type` being equal to `tcp`
+     * @return TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      * 
      */
     private @Nullable String tcp;
     /**
-     * @return Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * @return Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */
@@ -102,7 +102,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
 
     private Ipv6AclPolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return Class map ID, Attribute conditional on `type` being equal to `class`
+     * @return Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     public Optional<String> classMapId() {
@@ -116,7 +116,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.classMapVersion);
     }
     /**
-     * @return Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * @return Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     public Optional<String> destinationDataIpv6PrefixListId() {
@@ -130,21 +130,21 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationDataIpv6PrefixListVersion);
     }
     /**
-     * @return Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * @return Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     public Optional<String> destinationIp() {
         return Optional.ofNullable(this.destinationIp);
     }
     /**
-     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      * 
      */
     public Optional<String> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
     /**
-     * @return Next header, Attribute conditional on `type` being equal to `nextHeader`
+     * @return Next header, Attribute conditional on `type` equal to `nextHeader`
      *   - Range: `0`-`255`
      * 
      */
@@ -152,7 +152,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.nextHeader);
     }
     /**
-     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * @return Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -160,7 +160,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.packetLength);
     }
     /**
-     * @return PLP - priority, Attribute conditional on `type` being equal to `plp`
+     * @return PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
@@ -168,7 +168,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     public Optional<String> sourceDataIpv6PrefixListId() {
@@ -182,21 +182,21 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.sourceDataIpv6PrefixListVersion);
     }
     /**
-     * @return Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * @return Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     public Optional<String> sourcePorts() {
         return Optional.ofNullable(this.sourcePorts);
     }
     /**
-     * @return TCP parameters, Attribute conditional on `type` being equal to `tcp`
+     * @return TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -204,7 +204,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.tcp);
     }
     /**
-     * @return Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * @return Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */

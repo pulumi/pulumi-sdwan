@@ -18,14 +18,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     public static final Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs Empty = new Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+     * Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      * 
      */
     @Import(name="destinationDataIpv4PrefixListId")
     private @Nullable Output<String> destinationDataIpv4PrefixListId;
 
     /**
-     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      * 
      */
     public Optional<Output<String>> destinationDataIpv4PrefixListId() {
@@ -48,14 +48,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
      * 
      */
     @Import(name="destinationIp")
     private @Nullable Output<String> destinationIp;
 
     /**
-     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+     * @return Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
      * 
      */
     public Optional<Output<String>> destinationIp() {
@@ -63,14 +63,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
      * 
      */
     @Import(name="destinationIpVariable")
     private @Nullable Output<String> destinationIpVariable;
 
     /**
-     * @return Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * @return Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
      * 
      */
     public Optional<Output<String>> destinationIpVariable() {
@@ -78,7 +78,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
@@ -86,7 +86,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     private @Nullable Output<Integer> destinationPort;
 
     /**
-     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
@@ -95,14 +95,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+     * Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      * 
      */
     @Import(name="sourceDataIpv4PrefixListId")
     private @Nullable Output<String> sourceDataIpv4PrefixListId;
 
     /**
-     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      * 
      */
     public Optional<Output<String>> sourceDataIpv4PrefixListId() {
@@ -125,14 +125,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
      * 
      */
     @Import(name="sourceIp")
     private @Nullable Output<String> sourceIp;
 
     /**
-     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+     * @return Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
      * 
      */
     public Optional<Output<String>> sourceIp() {
@@ -140,14 +140,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
      * 
      */
     @Import(name="sourceIpVariable")
     private @Nullable Output<String> sourceIpVariable;
 
     /**
-     * @return Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * @return Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
      * 
      */
     public Optional<Output<String>> sourceIpVariable() {
@@ -155,14 +155,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     @Import(name="sourcePorts")
     private @Nullable Output<String> sourcePorts;
 
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     public Optional<Output<String>> sourcePorts() {
@@ -221,7 +221,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
          * 
          * @return builder
          * 
@@ -263,7 +263,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationIp Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+         * @param destinationIp Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -274,7 +274,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationIp Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+         * @param destinationIp Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -284,7 +284,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -295,7 +295,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -305,7 +305,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -317,7 +317,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -328,7 +328,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
          * 
          * @return builder
          * 
@@ -339,7 +339,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
          * 
          * @return builder
          * 
@@ -370,7 +370,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceIp Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+         * @param sourceIp Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -381,7 +381,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceIp Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+         * @param sourceIp Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -391,7 +391,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -402,7 +402,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -412,7 +412,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -423,7 +423,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
          * 
          * @return builder
          * 

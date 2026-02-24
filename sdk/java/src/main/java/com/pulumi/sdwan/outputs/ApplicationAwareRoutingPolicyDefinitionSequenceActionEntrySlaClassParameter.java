@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter {
     /**
-     * @return preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+     * @return preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
      * 
      */
     private @Nullable String preferredColor;
     /**
-     * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * @return Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      * 
      */
     private @Nullable String preferredColorGroupListId;
@@ -29,7 +29,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      */
     private @Nullable Integer preferredColorGroupListVersion;
     /**
-     * @return SLA class list ID, Attribute conditional on `type` being equal to `name`
+     * @return SLA class list ID, Attribute conditional on `type` equal to `name`
      * 
      */
     private @Nullable String slaClassListId;
@@ -47,14 +47,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
 
     private ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter() {}
     /**
-     * @return preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+     * @return preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
      * 
      */
     public Optional<String> preferredColor() {
         return Optional.ofNullable(this.preferredColor);
     }
     /**
-     * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * @return Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      * 
      */
     public Optional<String> preferredColorGroupListId() {
@@ -68,7 +68,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         return Optional.ofNullable(this.preferredColorGroupListVersion);
     }
     /**
-     * @return SLA class list ID, Attribute conditional on `type` being equal to `name`
+     * @return SLA class list ID, Attribute conditional on `type` equal to `name`
      * 
      */
     public Optional<String> slaClassListId() {

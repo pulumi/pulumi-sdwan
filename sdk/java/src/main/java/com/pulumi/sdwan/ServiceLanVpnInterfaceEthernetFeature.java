@@ -17,6 +17,8 @@ import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHel
 import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress;
 import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress;
 import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp;
+import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink;
+import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink;
 import com.pulumi.sdwan.outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +29,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Service LAN VPN Interface Ethernet Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -96,6 +98,8 @@ import javax.annotation.Nullable;
  *                     .linkLocalAddress("1::1")
  *                     .globalAddress("1::1/24")
  *                     .build())
+ *                 .followDualRouterHighAvailability(false)
+ *                 .minPreemptDelay(60)
  *                 .build())
  *             .ipv4Vrrps(ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs.builder()
  *                 .groupId(1)
@@ -114,6 +118,8 @@ import javax.annotation.Nullable;
  *                     .trackerAction("Decrement")
  *                     .decrementValue(100)
  *                     .build())
+ *                 .followDualRouterHighAvailability(false)
+ *                 .minPreemptDelay(60)
  *                 .build())
  *             .arps(ServiceLanVpnInterfaceEthernetFeatureArpArgs.builder()
  *                 .ipAddress("1.2.3.4")
@@ -182,7 +188,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.aclIpv6IngressPolicyId);
     }
     /**
-     * Shaping Rate (Kbps)
+     * Shaping Rate (Kbps), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `8`-`100000000`
      * 
      */
@@ -190,7 +196,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> aclShapingRate;
 
     /**
-     * @return Shaping Rate (Kbps)
+     * @return Shaping Rate (Kbps), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `8`-`100000000`
      * 
      */
@@ -198,21 +204,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.aclShapingRate);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="aclShapingRateVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> aclShapingRateVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> aclShapingRateVariable() {
         return Codegen.optional(this.aclShapingRateVariable);
     }
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -221,7 +227,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -230,28 +236,28 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.arpTimeout);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="arpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> arpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> arpTimeoutVariable() {
         return Codegen.optional(this.arpTimeoutVariable);
     }
     /**
-     * Configure ARP entries
+     * Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="arps", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureArp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureArp>> arps;
 
     /**
-     * @return Configure ARP entries
+     * @return Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureArp>>> arps() {
@@ -300,7 +306,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.description);
     }
     /**
-     * Duplex mode
+     * Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -308,7 +314,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ String> duplex;
 
     /**
-     * @return Duplex mode
+     * @return Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -316,28 +322,28 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.duplex);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="duplexVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> duplexVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> duplexVariable() {
         return Codegen.optional(this.duplexVariable);
     }
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Export(name="enableDhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
@@ -358,7 +364,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return this.featureProfileId;
     }
     /**
-     * ICMP/ICMPv6 Redirect Disable
+     * ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -366,7 +372,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable
+     * @return ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -374,14 +380,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.icmpRedirectDisable);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="icmpRedirectDisableVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> icmpRedirectDisableVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> icmpRedirectDisableVariable() {
@@ -408,7 +414,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU
+     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -417,7 +423,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU
+     * @return Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -426,14 +432,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.interfaceMtu);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="interfaceMtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> interfaceMtuVariable() {
@@ -460,7 +466,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * IP Directed-Broadcast
+     * IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -468,7 +474,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast
+     * @return IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -476,21 +482,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipDirectedBroadcast);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipDirectedBroadcastVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipDirectedBroadcastVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipDirectedBroadcastVariable() {
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -499,7 +505,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -508,50 +514,50 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipMtu);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipMtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipMtuVariable() {
         return Codegen.optional(this.ipMtuVariable);
     }
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4Address() {
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -559,8 +565,8 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ String> ipv4ConfigurationType;
 
     /**
-     * @return IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * @return IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -568,8 +574,8 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4ConfigurationType);
     }
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -577,8 +583,8 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -586,49 +592,49 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4DhcpDistance);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     @Export(name="ipv4DhcpDistanceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     public Output<Optional<String>> ipv4DhcpDistanceVariable() {
         return Codegen.optional(this.ipv4DhcpDistanceVariable);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4DhcpHelperVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpHelperVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4DhcpHelperVariable() {
         return Codegen.optional(this.ipv4DhcpHelperVariable);
     }
     /**
-     * List of DHCP IPv4 helper addresses (min 1, max 8)
+     * List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4DhcpHelpers", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> ipv4DhcpHelpers;
 
     /**
-     * @return List of DHCP IPv4 helper addresses (min 1, max 8)
+     * @return List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<String>>> ipv4DhcpHelpers() {
         return Codegen.optional(this.ipv4DhcpHelpers);
     }
     /**
-     * enable Network Address Translation on this interface
+     * enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -636,7 +642,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> ipv4Nat;
 
     /**
-     * @return enable Network Address Translation on this interface
+     * @return enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -852,21 +858,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatUdpTimeoutVariable);
     }
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4SecondaryAddresses", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>>> ipv4SecondaryAddresses() {
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -874,7 +880,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -882,63 +888,63 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
         return Codegen.optional(this.ipv4SubnetMaskVariable);
     }
     /**
-     * Enable VRRP
+     * Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4Vrrps", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp>> ipv4Vrrps;
 
     /**
-     * @return Enable VRRP
+     * @return Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp>>> ipv4Vrrps() {
         return Codegen.optional(this.ipv4Vrrps);
     }
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6Address() {
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * IPv6 Configuration Type
+     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -947,7 +953,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ String> ipv6ConfigurationType;
 
     /**
-     * @return IPv6 Configuration Type
+     * @return IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -956,35 +962,35 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv6ConfigurationType);
     }
     /**
-     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6DhcpHelpers", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>> ipv6DhcpHelpers;
 
     /**
-     * @return DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>>> ipv6DhcpHelpers() {
         return Codegen.optional(this.ipv6DhcpHelpers);
     }
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Export(name="ipv6DhcpSecondaryAddresses", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>>> ipv6DhcpSecondaryAddresses() {
         return Codegen.optional(this.ipv6DhcpSecondaryAddresses);
     }
     /**
-     * enable Network Address Translation ipv6 on this interface
+     * enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -992,7 +998,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> ipv6Nat;
 
     /**
-     * @return enable Network Address Translation ipv6 on this interface
+     * @return enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1000,28 +1006,28 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv6Nat);
     }
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6SecondaryAddresses", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>>> ipv6SecondaryAddresses() {
         return Codegen.optional(this.ipv6SecondaryAddresses);
     }
     /**
-     * Enable VRRP Ipv6
+     * Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv6Vrrps", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp>> ipv6Vrrps;
 
     /**
-     * @return Enable VRRP Ipv6
+     * @return Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp>>> ipv6Vrrps() {
@@ -1060,35 +1066,35 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.loadIntervalVariable);
     }
     /**
-     * MAC Address
+     * MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="macAddress", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> macAddress;
 
     /**
-     * @return MAC Address
+     * @return MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> macAddress() {
         return Codegen.optional(this.macAddress);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="macAddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> macAddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> macAddressVariable() {
         return Codegen.optional(this.macAddressVariable);
     }
     /**
-     * Media type
+     * Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -1096,7 +1102,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ String> mediaType;
 
     /**
-     * @return Media type
+     * @return Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -1104,14 +1110,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.mediaType);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="mediaTypeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mediaTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> mediaTypeVariable() {
@@ -1146,6 +1152,356 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
      */
     public Output<Optional<Boolean>> nat64() {
         return Codegen.optional(this.nat64);
+    }
+    /**
+     * Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="portChannelInterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelInterface;
+
+    /**
+     * @return Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelInterface() {
+        return Codegen.optional(this.portChannelInterface);
+    }
+    /**
+     * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpFastSwitchover", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelLacpFastSwitchover;
+
+    /**
+     * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelLacpFastSwitchover() {
+        return Codegen.optional(this.portChannelLacpFastSwitchover);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpFastSwitchoverVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpFastSwitchoverVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpFastSwitchoverVariable() {
+        return Codegen.optional(this.portChannelLacpFastSwitchoverVariable);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Export(name="portChannelLacpLoadBalance", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpLoadBalance() {
+        return Codegen.optional(this.portChannelLacpLoadBalance);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpLoadBalanceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpLoadBalanceVariable() {
+        return Codegen.optional(this.portChannelLacpLoadBalanceVariable);
+    }
+    /**
+     * Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Export(name="portChannelLacpMaxBundle", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> portChannelLacpMaxBundle;
+
+    /**
+     * @return Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Output<Optional<Integer>> portChannelLacpMaxBundle() {
+        return Codegen.optional(this.portChannelLacpMaxBundle);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpMaxBundleVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpMaxBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpMaxBundleVariable() {
+        return Codegen.optional(this.portChannelLacpMaxBundleVariable);
+    }
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpMemberLinks", refs={List.class,ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink>> portChannelLacpMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink>>> portChannelLacpMemberLinks() {
+        return Codegen.optional(this.portChannelLacpMemberLinks);
+    }
+    /**
+     * Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Export(name="portChannelLacpMinBundle", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> portChannelLacpMinBundle;
+
+    /**
+     * @return Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Output<Optional<Integer>> portChannelLacpMinBundle() {
+        return Codegen.optional(this.portChannelLacpMinBundle);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpMinBundleVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpMinBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpMinBundleVariable() {
+        return Codegen.optional(this.portChannelLacpMinBundleVariable);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpQosAggregate", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelLacpQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelLacpQosAggregate() {
+        return Codegen.optional(this.portChannelLacpQosAggregate);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpQosAggregateVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpQosAggregateVariable() {
+        return Codegen.optional(this.portChannelLacpQosAggregateVariable);
+    }
+    /**
+     * Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="portChannelMemberInterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelMemberInterface;
+
+    /**
+     * @return Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelMemberInterface() {
+        return Codegen.optional(this.portChannelMemberInterface);
+    }
+    /**
+     * Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    @Export(name="portChannelMode", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelMode;
+
+    /**
+     * @return Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    public Output<Optional<String>> portChannelMode() {
+        return Codegen.optional(this.portChannelMode);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Export(name="portChannelStaticLoadBalance", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelStaticLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Output<Optional<String>> portChannelStaticLoadBalance() {
+        return Codegen.optional(this.portChannelStaticLoadBalance);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticLoadBalanceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelStaticLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<String>> portChannelStaticLoadBalanceVariable() {
+        return Codegen.optional(this.portChannelStaticLoadBalanceVariable);
+    }
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticMemberLinks", refs={List.class,ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>> portChannelStaticMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>>> portChannelStaticMemberLinks() {
+        return Codegen.optional(this.portChannelStaticMemberLinks);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticQosAggregate", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelStaticQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelStaticQosAggregate() {
+        return Codegen.optional(this.portChannelStaticQosAggregate);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticQosAggregateVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelStaticQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<String>> portChannelStaticQosAggregateVariable() {
+        return Codegen.optional(this.portChannelStaticQosAggregateVariable);
+    }
+    /**
+     * Port Channel Sub Interface on/off, Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    @Export(name="portChannelSubinterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelSubinterface;
+
+    /**
+     * @return Port Channel Sub Interface on/off, Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelSubinterface() {
+        return Codegen.optional(this.portChannelSubinterface);
+    }
+    /**
+     * , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Export(name="portChannelSubinterfacePrimaryInterfaceName", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelSubinterfacePrimaryInterfaceName;
+
+    /**
+     * @return , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> portChannelSubinterfacePrimaryInterfaceName() {
+        return Codegen.optional(this.portChannelSubinterfacePrimaryInterfaceName);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Export(name="portChannelSubinterfacePrimaryInterfaceNameVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelSubinterfacePrimaryInterfaceNameVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> portChannelSubinterfacePrimaryInterfaceNameVariable() {
+        return Codegen.optional(this.portChannelSubinterfacePrimaryInterfaceNameVariable);
+    }
+    /**
+     * , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Export(name="portChannelSubinterfaceSecondaryInterfaceName", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelSubinterfaceSecondaryInterfaceName;
+
+    /**
+     * @return , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> portChannelSubinterfaceSecondaryInterfaceName() {
+        return Codegen.optional(this.portChannelSubinterfaceSecondaryInterfaceName);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Export(name="portChannelSubinterfaceSecondaryInterfaceNameVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelSubinterfaceSecondaryInterfaceNameVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> portChannelSubinterfaceSecondaryInterfaceNameVariable() {
+        return Codegen.optional(this.portChannelSubinterfaceSecondaryInterfaceNameVariable);
     }
     /**
      * Service LAN VPN Feature ID
@@ -1190,30 +1546,30 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     @Export(name="speed", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speed;
 
     /**
-     * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     public Output<Optional<String>> speed() {
         return Codegen.optional(this.speed);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="speedVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speedVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> speedVariable() {
@@ -1234,7 +1590,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.staticNats);
     }
     /**
-     * TCP MSS on SYN packets, in bytes
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1242,7 +1598,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes
+     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1250,63 +1606,35 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.tcpMss);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tcpMssVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tcpMssVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tcpMssVariable() {
         return Codegen.optional(this.tcpMssVariable);
     }
     /**
-     * Enable tracker for this interface
-     * 
-     */
-    @Export(name="tracker", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> tracker;
-
-    /**
-     * @return Enable tracker for this interface
-     * 
-     */
-    public Output<Optional<String>> tracker() {
-        return Codegen.optional(this.tracker);
-    }
-    /**
-     * Variable name
-     * 
-     */
-    @Export(name="trackerVariable", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> trackerVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Output<Optional<String>> trackerVariable() {
-        return Codegen.optional(this.trackerVariable);
-    }
-    /**
-     * Enable/Disable SGT Enforcement on an interface
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="trustsecEnableEnforcedPropogation", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> trustsecEnableEnforcedPropogation;
 
     /**
-     * @return Enable/Disable SGT Enforcement on an interface
+     * @return Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<Boolean>> trustsecEnableEnforcedPropogation() {
         return Codegen.optional(this.trustsecEnableEnforcedPropogation);
     }
     /**
-     * Indicates that the interface is trustworthy for CTS
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1314,7 +1642,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> trustsecEnableSgtPropogation;
 
     /**
-     * @return Indicates that the interface is trustworthy for CTS
+     * @return Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1322,7 +1650,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.trustsecEnableSgtPropogation);
     }
     /**
-     * SGT value between 2 and 65519
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1330,7 +1658,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> trustsecEnforcedSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1338,21 +1666,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.trustsecEnforcedSecurityGroupTag);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="trustsecEnforcedSecurityGroupTagVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> trustsecEnforcedSecurityGroupTagVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> trustsecEnforcedSecurityGroupTagVariable() {
         return Codegen.optional(this.trustsecEnforcedSecurityGroupTagVariable);
     }
     /**
-     * Enables the interface for CTS SGT authorization and forwarding
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1360,7 +1688,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> trustsecPropogate;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding
+     * @return Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1368,7 +1696,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.trustsecPropogate);
     }
     /**
-     * SGT value between 2 and 65519
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1376,7 +1704,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> trustsecSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1384,14 +1712,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.trustsecSecurityGroupTag);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="trustsecSecurityGroupTagVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> trustsecSecurityGroupTagVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> trustsecSecurityGroupTagVariable() {
@@ -1412,28 +1740,28 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return this.version;
     }
     /**
-     * Extend remote TLOC over a GRE tunnel to a local LAN interface
+     * Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="xconnect", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> xconnect;
 
     /**
-     * @return Extend remote TLOC over a GRE tunnel to a local LAN interface
+     * @return Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> xconnect() {
         return Codegen.optional(this.xconnect);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="xconnectVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> xconnectVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> xconnectVariable() {

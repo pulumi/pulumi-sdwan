@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Transport WAN VPN Interface Ethernet Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -50,6 +50,7 @@ import (
 //					pulumi.String("1.2.3.4"),
 //				},
 //				Ipv6ConfigurationType:                 pulumi.String("static"),
+//				Ipv6Address:                           pulumi.String("2001:0:0:1::1/64"),
 //				IperfServer:                           pulumi.String("example"),
 //				BlockNonSourceIp:                      pulumi.Bool(false),
 //				ServiceProvider:                       pulumi.String("example"),
@@ -62,7 +63,7 @@ import (
 //				TunnelBandwidthPercent:                pulumi.Int(82),
 //				TunnelInterfaceBindLoopbackTunnel:     pulumi.String("example"),
 //				TunnelInterfaceCarrier:                pulumi.String("default"),
-//				TunnelInterfaceColor:                  pulumi.String("default"),
+//				TunnelInterfaceColor:                  pulumi.String("mpls"),
 //				TunnelInterfaceHelloInterval:          pulumi.Int(1000),
 //				TunnelInterfaceHelloTolerance:         pulumi.Int(12),
 //				TunnelInterfaceLastResortCircuit:      pulumi.Bool(false),
@@ -83,6 +84,8 @@ import (
 //				TunnelInterfaceClearDontFragment:           pulumi.Bool(false),
 //				TunnelInterfaceCtsSgtPropagation:           pulumi.Bool(false),
 //				TunnelInterfaceNetworkBroadcast:            pulumi.Bool(false),
+//				TunnelInterfaceAllowFragmentation:          pulumi.Bool(false),
+//				TunnelInterfaceSetSdwanTunnelMtuToMax:      pulumi.Bool(false),
 //				TunnelInterfaceAllowAll:                    pulumi.Bool(false),
 //				TunnelInterfaceAllowBgp:                    pulumi.Bool(false),
 //				TunnelInterfaceAllowDhcp:                   pulumi.Bool(true),
@@ -103,16 +106,44 @@ import (
 //						Weight:        pulumi.Int(250),
 //					},
 //				},
-//				NatIpv4:       pulumi.Bool(true),
-//				NatType:       pulumi.String("interface"),
+//				NatIpv4: pulumi.Bool(true),
+//				NatType: pulumi.String("interface"),
+//				NatIpv4Pools: sdwan.TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray{
+//					&sdwan.TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{
+//						Name:                      pulumi.Int(10),
+//						RangeStart:                pulumi.String("203.0.115.50"),
+//						RangeEnd:                  pulumi.String("203.0.115.100"),
+//						Overload:                  pulumi.Bool(true),
+//						PrefixLength:              pulumi.Int(25),
+//						EnableDualRouterHaMapping: pulumi.Bool(false),
+//					},
+//				},
+//				NatIpv4Loopbacks: sdwan.TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray{
+//					&sdwan.TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{
+//						LoopbackInterface: pulumi.String("Loopback0"),
+//					},
+//				},
 //				NatUdpTimeout: pulumi.Int(1),
 //				NatTcpTimeout: pulumi.Int(60),
 //				NewStaticNats: sdwan.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArray{
 //					&sdwan.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{
-//						SourceIp:     pulumi.String("1.2.3.4"),
-//						TranslatedIp: pulumi.String("2.3.4.5"),
-//						Direction:    pulumi.String("inside"),
-//						SourceVpn:    pulumi.Int(3),
+//						SourceIp:                  pulumi.String("1.2.3.4"),
+//						TranslatedIp:              pulumi.String("2.3.4.5"),
+//						Direction:                 pulumi.String("inside"),
+//						SourceVpn:                 pulumi.Int(3),
+//						EnableDualRouterHaMapping: pulumi.Bool(false),
+//					},
+//				},
+//				StaticPortForwards: sdwan.TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray{
+//					&sdwan.TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{
+//						Protocol:                  pulumi.String("tcp"),
+//						SourceIp:                  pulumi.String("1.2.3.4"),
+//						SourcePort:                pulumi.Int(8080),
+//						TranslatedIp:              pulumi.String("2.3.4.5"),
+//						TranslatedPort:            pulumi.Int(80),
+//						Direction:                 pulumi.String("inside"),
+//						SourceVpn:                 pulumi.Int(3),
+//						EnableDualRouterHaMapping: pulumi.Bool(false),
 //					},
 //				},
 //				NatIpv6: pulumi.Bool(true),
@@ -123,6 +154,7 @@ import (
 //						SourcePrefix:           pulumi.String("2001:0db8:85a3::/48"),
 //						TranslatedSourcePrefix: pulumi.String("abcd:1234:5678::/48"),
 //						SourceVpnId:            pulumi.Int(4),
+//						EgressInterface:        pulumi.Bool(true),
 //					},
 //				},
 //				QosAdaptive:             pulumi.Bool(false),
@@ -177,121 +209,121 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	AclIpv4IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv4IngressFeatureId"`
 	AclIpv6EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv6EgressFeatureId"`
 	AclIpv6IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv6IngressFeatureId"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `0`-`2147483`
 	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ArpTimeoutVariable pulumi.StringPtrOutput `pulumi:"arpTimeoutVariable"`
-	// Configure ARP entries
+	// Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Arps TransportWanVpnInterfaceEthernetFeatureArpArrayOutput `pulumi:"arps"`
-	// Interface auto detect bandwidth
+	// Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	AutoDetectBandwidth pulumi.BoolPtrOutput `pulumi:"autoDetectBandwidth"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	AutoDetectBandwidthVariable pulumi.StringPtrOutput `pulumi:"autoDetectBandwidthVariable"`
 	// Link autonegotiation
 	Autonegotiate pulumi.BoolPtrOutput `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrOutput `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps
+	// Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrOutput `pulumi:"bandwidthDownstream"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthDownstreamVariable pulumi.StringPtrOutput `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps
+	// Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrOutput `pulumi:"bandwidthUpstream"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthUpstreamVariable pulumi.StringPtrOutput `pulumi:"bandwidthUpstreamVariable"`
-	// Block packets originating from IP address that is not from this source
+	// Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	BlockNonSourceIp pulumi.BoolPtrOutput `pulumi:"blockNonSourceIp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BlockNonSourceIpVariable pulumi.StringPtrOutput `pulumi:"blockNonSourceIpVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Duplex mode
+	// Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrOutput `pulumi:"duplex"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	DuplexVariable pulumi.StringPtrOutput `pulumi:"duplexVariable"`
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// GRE tunnel source IP
+	// GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIp pulumi.StringPtrOutput `pulumi:"greTunnelSourceIp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIpVariable pulumi.StringPtrOutput `pulumi:"greTunnelSourceIpVariable"`
-	// ICMP/ICMPv6 Redirect Disable
+	// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrOutput `pulumi:"icmpRedirectDisable"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IcmpRedirectDisableVariable pulumi.StringPtrOutput `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1500`-`9216`
 	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
 	InterfaceName        pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast
+	// IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrOutput `pulumi:"ipDirectedBroadcast"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpDirectedBroadcastVariable pulumi.StringPtrOutput `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `576`-`9216`
 	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
-	// Iperf server for auto bandwidth detect
+	// Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServer pulumi.StringPtrOutput `pulumi:"iperfServer"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServerVariable pulumi.StringPtrOutput `pulumi:"iperfServerVariable"`
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
+	// IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `dynamic`
 	Ipv4ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrOutput `pulumi:"ipv4DhcpDistance"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpDistanceVariable"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelperVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpHelperVariable"`
-	// List of DHCP IPv4 helper addresses (min 1, max 8)
+	// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelpers pulumi.StringArrayOutput `pulumi:"ipv4DhcpHelpers"`
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
+	// IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `none`
 	Ipv6ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv6ConfigurationType"`
-	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput `pulumi:"ipv6DhcpSecondaryAddresses"`
-	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6SecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput `pulumi:"ipv6SecondaryAddresses"`
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
@@ -299,81 +331,142 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	LoadInterval pulumi.IntPtrOutput `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrOutput `pulumi:"loadIntervalVariable"`
-	// MAC Address
+	// MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddress pulumi.StringPtrOutput `pulumi:"macAddress"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddressVariable pulumi.StringPtrOutput `pulumi:"macAddressVariable"`
-	// Media type
+	// Media type, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrOutput `pulumi:"mediaType"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	MediaTypeVariable pulumi.StringPtrOutput `pulumi:"mediaTypeVariable"`
+	// Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `core-shared`, `core`
+	//   - Default value: `core-shared`
+	MrfCoreRegionType pulumi.StringPtrOutput `pulumi:"mrfCoreRegionType"`
+	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableCoreRegion pulumi.BoolPtrOutput `pulumi:"mrfEnableCoreRegion"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat64 pulumi.BoolPtrOutput `pulumi:"nat64"`
-	// NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat66 pulumi.BoolPtrOutput `pulumi:"nat66"`
-	// enable Network Address Translation on this interface
+	// enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv4 pulumi.BoolPtrOutput `pulumi:"natIpv4"`
-	// Variable name
+	// NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Loopbacks TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput `pulumi:"natIpv4Loopbacks"`
+	// NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Pools TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput `pulumi:"natIpv4Pools"`
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv4Variable pulumi.StringPtrOutput `pulumi:"natIpv4Variable"`
-	// enable Network Address Translation ipv6 on this interface
+	// enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv6 pulumi.BoolPtrOutput `pulumi:"natIpv6"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv6Variable pulumi.StringPtrOutput `pulumi:"natIpv6Variable"`
-	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopback pulumi.StringPtrOutput `pulumi:"natLoopback"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopbackVariable pulumi.StringPtrOutput `pulumi:"natLoopbackVariable"`
-	// NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+	//   - Default value: `false`
+	NatMatchInterface pulumi.BoolPtrOutput `pulumi:"natMatchInterface"`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
+	NatMatchInterfaceVariable pulumi.StringPtrOutput `pulumi:"natMatchInterfaceVariable"`
+	// NAT Overload, Attribute conditional on `natIpv4` equal to `true`
 	//   - Default value: `true`
 	NatOverload pulumi.BoolPtrOutput `pulumi:"natOverload"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatOverloadVariable pulumi.StringPtrOutput `pulumi:"natOverloadVariable"`
-	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`32`
 	NatPrefixLength pulumi.IntPtrOutput `pulumi:"natPrefixLength"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatPrefixLengthVariable pulumi.StringPtrOutput `pulumi:"natPrefixLengthVariable"`
-	// NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEnd pulumi.StringPtrOutput `pulumi:"natRangeEnd"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEndVariable pulumi.StringPtrOutput `pulumi:"natRangeEndVariable"`
-	// NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStart pulumi.StringPtrOutput `pulumi:"natRangeStart"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStartVariable pulumi.StringPtrOutput `pulumi:"natRangeStartVariable"`
-	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `60`
 	NatTcpTimeout pulumi.IntPtrOutput `pulumi:"natTcpTimeout"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatTcpTimeoutVariable pulumi.StringPtrOutput `pulumi:"natTcpTimeoutVariable"`
-	// NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Type, Attribute conditional on `natIpv4` equal to `true`
 	//   - Choices: `interface`, `pool`, `loopback`
 	//   - Default value: `interface`
 	NatType pulumi.StringPtrOutput `pulumi:"natType"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
-	NatTypeVariable pulumi.StringPtrOutput `pulumi:"natTypeVariable"`
-	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	NatUdpTimeout pulumi.IntPtrOutput `pulumi:"natUdpTimeout"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatUdpTimeoutVariable pulumi.StringPtrOutput `pulumi:"natUdpTimeoutVariable"`
-	// static NAT, Attribute conditional on `natIpv4` being equal to `true`
+	// static NAT, Attribute conditional on `natIpv4` equal to `true`
 	NewStaticNats TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput `pulumi:"newStaticNats"`
-	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	PerTunnelQos pulumi.BoolPtrOutput `pulumi:"perTunnelQos"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	PerTunnelQosVariable pulumi.StringPtrOutput `pulumi:"perTunnelQosVariable"`
-	// Adaptive QoS
+	// Port-Channel interface on/off
+	//   - Default value: `false`
+	PortChannelInterface pulumi.BoolPtrOutput `pulumi:"portChannelInterface"`
+	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchover pulumi.BoolPtrOutput `pulumi:"portChannelLacpFastSwitchover"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchoverVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpFastSwitchoverVariable"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Choices: `flow`, `vlan`
+	PortChannelLacpLoadBalance pulumi.StringPtrOutput `pulumi:"portChannelLacpLoadBalance"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpLoadBalanceVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpLoadBalanceVariable"`
+	// Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMaxBundle pulumi.IntPtrOutput `pulumi:"portChannelLacpMaxBundle"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMaxBundleVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpMaxBundleVariable"`
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput `pulumi:"portChannelLacpMemberLinks"`
+	// Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMinBundle pulumi.IntPtrOutput `pulumi:"portChannelLacpMinBundle"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMinBundleVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpMinBundleVariable"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregate pulumi.BoolPtrOutput `pulumi:"portChannelLacpQosAggregate"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregateVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpQosAggregateVariable"`
+	// Port-Channel member interface on/off
+	//   - Default value: `false`
+	PortChannelMemberInterface pulumi.BoolPtrOutput `pulumi:"portChannelMemberInterface"`
+	// Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+	//   - Choices: `lacp`, `static`
+	PortChannelMode pulumi.StringPtrOutput `pulumi:"portChannelMode"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Choices: `flow`, `vlan`
+	PortChannelStaticLoadBalance pulumi.StringPtrOutput `pulumi:"portChannelStaticLoadBalance"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticLoadBalanceVariable pulumi.StringPtrOutput `pulumi:"portChannelStaticLoadBalanceVariable"`
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput `pulumi:"portChannelStaticMemberLinks"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregate pulumi.BoolPtrOutput `pulumi:"portChannelStaticQosAggregate"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregateVariable pulumi.StringPtrOutput `pulumi:"portChannelStaticQosAggregateVariable"`
+	// , Attribute conditional on `portChannelInterface` equal to `true`
+	PortChannelSubinterface pulumi.BoolPtrOutput `pulumi:"portChannelSubinterface"`
+	// Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	QosAdaptive pulumi.BoolPtrOutput `pulumi:"qosAdaptive"`
 	// Shaping Rate Downstream
@@ -423,230 +516,242 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	QosShapingRate pulumi.IntPtrOutput `pulumi:"qosShapingRate"`
 	// Variable name
 	QosShapingRateVariable pulumi.StringPtrOutput `pulumi:"qosShapingRateVariable"`
-	// Service Provider Name
+	// Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProvider pulumi.StringPtrOutput `pulumi:"serviceProvider"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProviderVariable pulumi.StringPtrOutput `pulumi:"serviceProviderVariable"`
 	// - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
 	Speed pulumi.StringPtrOutput `pulumi:"speed"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	SpeedVariable pulumi.StringPtrOutput `pulumi:"speedVariable"`
-	// static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+	// static NAT66, Attribute conditional on `natIpv6` equal to `true`
 	StaticNat66s TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput `pulumi:"staticNat66s"`
-	// TCP MSS on SYN packets, in bytes
+	// Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+	StaticPortForwards TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput `pulumi:"staticPortForwards"`
+	// TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
-	// Extends a local TLOC to a remote node only for vpn 0
+	// Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtension pulumi.StringPtrOutput `pulumi:"tlocExtension"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtensionVariable pulumi.StringPtrOutput `pulumi:"tlocExtensionVariable"`
-	// Enable tracker for this interface
+	// Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Tracker pulumi.StringPtrOutput `pulumi:"tracker"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrackerVariable pulumi.StringPtrOutput `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrOutput `pulumi:"tunnelBandwidthPercent"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelBandwidthPercentVariable pulumi.StringPtrOutput `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	//   - Default value: `false`
 	TunnelInterface pulumi.BoolPtrOutput `pulumi:"tunnelInterface"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowAll"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/Deny BFD
+	// Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBfd pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowBfd"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBfdVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowBfdVariable"`
-	// Allow/deny BGP
+	// Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowBgp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP
+	// Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowDhcp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS
+	// Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowDns"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny HTTPS
+	// Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceAllowFragmentation pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowFragmentation"`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceAllowFragmentationVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowFragmentationVariable"`
+	// Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowHttps"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP
+	// Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowIcmp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF
+	// Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowNetconf"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP
-	//   - Default value: `true`
+	// Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowNtp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF
+	// Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowOspf"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP
+	// Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowSnmp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH
-	//   - Default value: `true`
+	// Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowSsh"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN
+	// Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowStun"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowStunVariable"`
-	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceBorder"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBorderVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
 	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCarrier"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCarrierVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceClearDontFragment"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceColorRestrict"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorRestrictVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorRestrictVariable"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorVariable"`
-	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceCtsSgtPropagation pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceCtsSgtPropagation"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCtsSgtPropagationVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCtsSgtPropagationVariable"`
-	// Encapsulation for TLOC
+	// Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceEncapsulations TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput `pulumi:"tunnelInterfaceEncapsulations"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
-	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayOutput `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
-	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIp pulumi.StringPtrOutput `pulumi:"tunnelInterfaceGreTunnelDestinationIp"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceGreTunnelDestinationIpVariable"`
-	// List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+	// List of groups, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrOutput `pulumi:"tunnelInterfaceGroups"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGroupsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `100`-`600000`
 	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceHelloInterval"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `12`-`6000`
 	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrOutput `pulumi:"tunnelInterfaceHelloTolerance"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceLastResortCircuit"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceLowBandwidthLink"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrOutput `pulumi:"tunnelInterfaceMaxControlConnections"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`60`
 	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceNatRefreshInterval"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcast"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfacePortHop"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfacePortHopVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfacePortHopVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceSetSdwanTunnelMtuToMax pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceSetSdwanTunnelMtuToMax"`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceSetSdwanTunnelMtuToMaxVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceSetSdwanTunnelMtuToMaxVariable"`
+	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrOutput `pulumi:"tunnelInterfaceTunnelTcpMss"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceVbondAsStunServer"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`8`
 	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrOutput `pulumi:"tunnelQosMode"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelQosModeVariable pulumi.StringPtrOutput `pulumi:"tunnelQosModeVariable"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
-	// Extend remote TLOC over a GRE tunnel to a local WAN interface
+	// Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect pulumi.StringPtrOutput `pulumi:"xconnect"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	XconnectVariable pulumi.StringPtrOutput `pulumi:"xconnectVariable"`
 }
 
@@ -690,121 +795,121 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
 	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
 	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `0`-`2147483`
 	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
-	// Configure ARP entries
+	// Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Arps []TransportWanVpnInterfaceEthernetFeatureArp `pulumi:"arps"`
-	// Interface auto detect bandwidth
+	// Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	AutoDetectBandwidth *bool `pulumi:"autoDetectBandwidth"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	AutoDetectBandwidthVariable *string `pulumi:"autoDetectBandwidthVariable"`
 	// Link autonegotiation
 	Autonegotiate *bool `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps
+	// Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthDownstream *int `pulumi:"bandwidthDownstream"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthDownstreamVariable *string `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps
+	// Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthUpstream *int `pulumi:"bandwidthUpstream"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthUpstreamVariable *string `pulumi:"bandwidthUpstreamVariable"`
-	// Block packets originating from IP address that is not from this source
+	// Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	BlockNonSourceIp *bool `pulumi:"blockNonSourceIp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BlockNonSourceIpVariable *string `pulumi:"blockNonSourceIpVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Duplex mode
+	// Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// GRE tunnel source IP
+	// GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIp *string `pulumi:"greTunnelSourceIp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIpVariable *string `pulumi:"greTunnelSourceIpVariable"`
-	// ICMP/ICMPv6 Redirect Disable
+	// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1500`-`9216`
 	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	InterfaceName        *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast
+	// IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `576`-`9216`
 	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// Iperf server for auto bandwidth detect
+	// Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServer *string `pulumi:"iperfServer"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServerVariable *string `pulumi:"iperfServerVariable"`
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
+	// IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `dynamic`
 	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
-	// List of DHCP IPv4 helper addresses (min 1, max 8)
+	// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelpers []string `pulumi:"ipv4DhcpHelpers"`
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SecondaryAddresses []TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
+	// IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `none`
 	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
-	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses []TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
-	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6SecondaryAddresses []TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
@@ -812,81 +917,142 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
-	// MAC Address
+	// MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddress *string `pulumi:"macAddress"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type
+	// Media type, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
+	// Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `core-shared`, `core`
+	//   - Default value: `core-shared`
+	MrfCoreRegionType *string `pulumi:"mrfCoreRegionType"`
+	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableCoreRegion *bool `pulumi:"mrfEnableCoreRegion"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat64 *bool `pulumi:"nat64"`
-	// NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat66 *bool `pulumi:"nat66"`
-	// enable Network Address Translation on this interface
+	// enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv4 *bool `pulumi:"natIpv4"`
-	// Variable name
+	// NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Loopbacks []TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback `pulumi:"natIpv4Loopbacks"`
+	// NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Pools []TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool `pulumi:"natIpv4Pools"`
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv4Variable *string `pulumi:"natIpv4Variable"`
-	// enable Network Address Translation ipv6 on this interface
+	// enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv6 *bool `pulumi:"natIpv6"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv6Variable *string `pulumi:"natIpv6Variable"`
-	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopback *string `pulumi:"natLoopback"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopbackVariable *string `pulumi:"natLoopbackVariable"`
-	// NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+	//   - Default value: `false`
+	NatMatchInterface *bool `pulumi:"natMatchInterface"`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
+	NatMatchInterfaceVariable *string `pulumi:"natMatchInterfaceVariable"`
+	// NAT Overload, Attribute conditional on `natIpv4` equal to `true`
 	//   - Default value: `true`
 	NatOverload *bool `pulumi:"natOverload"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatOverloadVariable *string `pulumi:"natOverloadVariable"`
-	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`32`
 	NatPrefixLength *int `pulumi:"natPrefixLength"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatPrefixLengthVariable *string `pulumi:"natPrefixLengthVariable"`
-	// NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEnd *string `pulumi:"natRangeEnd"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEndVariable *string `pulumi:"natRangeEndVariable"`
-	// NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStart *string `pulumi:"natRangeStart"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStartVariable *string `pulumi:"natRangeStartVariable"`
-	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `60`
 	NatTcpTimeout *int `pulumi:"natTcpTimeout"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatTcpTimeoutVariable *string `pulumi:"natTcpTimeoutVariable"`
-	// NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Type, Attribute conditional on `natIpv4` equal to `true`
 	//   - Choices: `interface`, `pool`, `loopback`
 	//   - Default value: `interface`
 	NatType *string `pulumi:"natType"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
-	NatTypeVariable *string `pulumi:"natTypeVariable"`
-	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	NatUdpTimeout *int `pulumi:"natUdpTimeout"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatUdpTimeoutVariable *string `pulumi:"natUdpTimeoutVariable"`
-	// static NAT, Attribute conditional on `natIpv4` being equal to `true`
+	// static NAT, Attribute conditional on `natIpv4` equal to `true`
 	NewStaticNats []TransportWanVpnInterfaceEthernetFeatureNewStaticNat `pulumi:"newStaticNats"`
-	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	PerTunnelQos *bool `pulumi:"perTunnelQos"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	PerTunnelQosVariable *string `pulumi:"perTunnelQosVariable"`
-	// Adaptive QoS
+	// Port-Channel interface on/off
+	//   - Default value: `false`
+	PortChannelInterface *bool `pulumi:"portChannelInterface"`
+	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchover *bool `pulumi:"portChannelLacpFastSwitchover"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchoverVariable *string `pulumi:"portChannelLacpFastSwitchoverVariable"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Choices: `flow`, `vlan`
+	PortChannelLacpLoadBalance *string `pulumi:"portChannelLacpLoadBalance"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpLoadBalanceVariable *string `pulumi:"portChannelLacpLoadBalanceVariable"`
+	// Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMaxBundle *int `pulumi:"portChannelLacpMaxBundle"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMaxBundleVariable *string `pulumi:"portChannelLacpMaxBundleVariable"`
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMemberLinks []TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink `pulumi:"portChannelLacpMemberLinks"`
+	// Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMinBundle *int `pulumi:"portChannelLacpMinBundle"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMinBundleVariable *string `pulumi:"portChannelLacpMinBundleVariable"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregate *bool `pulumi:"portChannelLacpQosAggregate"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregateVariable *string `pulumi:"portChannelLacpQosAggregateVariable"`
+	// Port-Channel member interface on/off
+	//   - Default value: `false`
+	PortChannelMemberInterface *bool `pulumi:"portChannelMemberInterface"`
+	// Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+	//   - Choices: `lacp`, `static`
+	PortChannelMode *string `pulumi:"portChannelMode"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Choices: `flow`, `vlan`
+	PortChannelStaticLoadBalance *string `pulumi:"portChannelStaticLoadBalance"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticLoadBalanceVariable *string `pulumi:"portChannelStaticLoadBalanceVariable"`
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticMemberLinks []TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink `pulumi:"portChannelStaticMemberLinks"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregate *bool `pulumi:"portChannelStaticQosAggregate"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregateVariable *string `pulumi:"portChannelStaticQosAggregateVariable"`
+	// , Attribute conditional on `portChannelInterface` equal to `true`
+	PortChannelSubinterface *bool `pulumi:"portChannelSubinterface"`
+	// Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	QosAdaptive *bool `pulumi:"qosAdaptive"`
 	// Shaping Rate Downstream
@@ -936,230 +1102,242 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	QosShapingRate *int `pulumi:"qosShapingRate"`
 	// Variable name
 	QosShapingRateVariable *string `pulumi:"qosShapingRateVariable"`
-	// Service Provider Name
+	// Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProvider *string `pulumi:"serviceProvider"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProviderVariable *string `pulumi:"serviceProviderVariable"`
 	// - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
 	Speed *string `pulumi:"speed"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	SpeedVariable *string `pulumi:"speedVariable"`
-	// static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+	// static NAT66, Attribute conditional on `natIpv6` equal to `true`
 	StaticNat66s []TransportWanVpnInterfaceEthernetFeatureStaticNat66 `pulumi:"staticNat66s"`
-	// TCP MSS on SYN packets, in bytes
+	// Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+	StaticPortForwards []TransportWanVpnInterfaceEthernetFeatureStaticPortForward `pulumi:"staticPortForwards"`
+	// TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
-	// Extends a local TLOC to a remote node only for vpn 0
+	// Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtension *string `pulumi:"tlocExtension"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtensionVariable *string `pulumi:"tlocExtensionVariable"`
-	// Enable tracker for this interface
+	// Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Tracker *string `pulumi:"tracker"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent *int `pulumi:"tunnelBandwidthPercent"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelBandwidthPercentVariable *string `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	//   - Default value: `false`
 	TunnelInterface *bool `pulumi:"tunnelInterface"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowAll *bool `pulumi:"tunnelInterfaceAllowAll"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowAllVariable *string `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/Deny BFD
+	// Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBfd *bool `pulumi:"tunnelInterfaceAllowBfd"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBfdVariable *string `pulumi:"tunnelInterfaceAllowBfdVariable"`
-	// Allow/deny BGP
+	// Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBgp *bool `pulumi:"tunnelInterfaceAllowBgp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBgpVariable *string `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP
+	// Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp *bool `pulumi:"tunnelInterfaceAllowDhcp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDhcpVariable *string `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS
+	// Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDns *bool `pulumi:"tunnelInterfaceAllowDns"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDnsVariable *string `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny HTTPS
+	// Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceAllowFragmentation *bool `pulumi:"tunnelInterfaceAllowFragmentation"`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceAllowFragmentationVariable *string `pulumi:"tunnelInterfaceAllowFragmentationVariable"`
+	// Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowHttps *bool `pulumi:"tunnelInterfaceAllowHttps"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowHttpsVariable *string `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP
+	// Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp *bool `pulumi:"tunnelInterfaceAllowIcmp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowIcmpVariable *string `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF
+	// Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf *bool `pulumi:"tunnelInterfaceAllowNetconf"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNetconfVariable *string `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP
-	//   - Default value: `true`
+	// Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp *bool `pulumi:"tunnelInterfaceAllowNtp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNtpVariable *string `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF
+	// Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowOspf *bool `pulumi:"tunnelInterfaceAllowOspf"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowOspfVariable *string `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP
+	// Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp *bool `pulumi:"tunnelInterfaceAllowSnmp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSnmpVariable *string `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH
-	//   - Default value: `true`
+	// Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh *bool `pulumi:"tunnelInterfaceAllowSsh"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSshVariable *string `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN
+	// Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowStun *bool `pulumi:"tunnelInterfaceAllowStun"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowStunVariable *string `pulumi:"tunnelInterfaceAllowStunVariable"`
-	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnel *string `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnelVariable *string `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceBorder *bool `pulumi:"tunnelInterfaceBorder"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBorderVariable *string `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
 	//   - Default value: `default`
 	TunnelInterfaceCarrier *string `pulumi:"tunnelInterfaceCarrier"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCarrierVariable *string `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment *bool `pulumi:"tunnelInterfaceClearDontFragment"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceClearDontFragmentVariable *string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorRestrictVariable *string `pulumi:"tunnelInterfaceColorRestrictVariable"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
-	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceCtsSgtPropagation *bool `pulumi:"tunnelInterfaceCtsSgtPropagation"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCtsSgtPropagationVariable *string `pulumi:"tunnelInterfaceCtsSgtPropagationVariable"`
-	// Encapsulation for TLOC
+	// Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceEncapsulations []TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation `pulumi:"tunnelInterfaceEncapsulations"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupListVariable *string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
-	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
-	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIp *string `pulumi:"tunnelInterfaceGreTunnelDestinationIp"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIpVariable *string `pulumi:"tunnelInterfaceGreTunnelDestinationIpVariable"`
-	// List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+	// List of groups, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups *int `pulumi:"tunnelInterfaceGroups"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGroupsVariable *string `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `100`-`600000`
 	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval *int `pulumi:"tunnelInterfaceHelloInterval"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloIntervalVariable *string `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `12`-`6000`
 	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance *int `pulumi:"tunnelInterfaceHelloTolerance"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloToleranceVariable *string `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit *bool `pulumi:"tunnelInterfaceLastResortCircuit"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLastResortCircuitVariable *string `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink *bool `pulumi:"tunnelInterfaceLowBandwidthLink"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLowBandwidthLinkVariable *string `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections *int `pulumi:"tunnelInterfaceMaxControlConnections"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceMaxControlConnectionsVariable *string `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`60`
 	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfacePortHopVariable *string `pulumi:"tunnelInterfacePortHopVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceSetSdwanTunnelMtuToMax *bool `pulumi:"tunnelInterfaceSetSdwanTunnelMtuToMax"`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceSetSdwanTunnelMtuToMaxVariable *string `pulumi:"tunnelInterfaceSetSdwanTunnelMtuToMaxVariable"`
+	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss *int `pulumi:"tunnelInterfaceTunnelTcpMss"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceTunnelTcpMssVariable *string `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer *bool `pulumi:"tunnelInterfaceVbondAsStunServer"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVbondAsStunServerVariable *string `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`8`
 	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `hub`, `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
-	// Extend remote TLOC over a GRE tunnel to a local WAN interface
+	// Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect *string `pulumi:"xconnect"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	XconnectVariable *string `pulumi:"xconnectVariable"`
 }
 
@@ -1168,121 +1346,121 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	AclIpv4IngressFeatureId pulumi.StringPtrInput
 	AclIpv6EgressFeatureId  pulumi.StringPtrInput
 	AclIpv6IngressFeatureId pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `0`-`2147483`
 	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ArpTimeoutVariable pulumi.StringPtrInput
-	// Configure ARP entries
+	// Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Arps TransportWanVpnInterfaceEthernetFeatureArpArrayInput
-	// Interface auto detect bandwidth
+	// Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	AutoDetectBandwidth pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	AutoDetectBandwidthVariable pulumi.StringPtrInput
 	// Link autonegotiation
 	Autonegotiate pulumi.BoolPtrInput
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrInput
-	// Interface downstream bandwidth capacity, in kbps
+	// Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthDownstreamVariable pulumi.StringPtrInput
-	// Interface upstream bandwidth capacity, in kbps
+	// Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthUpstreamVariable pulumi.StringPtrInput
-	// Block packets originating from IP address that is not from this source
+	// Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	BlockNonSourceIp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BlockNonSourceIpVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Duplex mode
+	// Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	DuplexVariable pulumi.StringPtrInput
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// GRE tunnel source IP
+	// GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIp pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIpVariable pulumi.StringPtrInput
-	// ICMP/ICMPv6 Redirect Disable
+	// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
 	InterfaceDescription        pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1500`-`9216`
 	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	InterfaceMtuVariable pulumi.StringPtrInput
 	InterfaceName        pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast
+	// IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `576`-`9216`
 	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpMtuVariable pulumi.StringPtrInput
-	// Iperf server for auto bandwidth detect
+	// Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServer pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServerVariable pulumi.StringPtrInput
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
+	// IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `dynamic`
 	Ipv4ConfigurationType pulumi.StringPtrInput
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
-	// List of DHCP IPv4 helper addresses (min 1, max 8)
+	// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelpers pulumi.StringArrayInput
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// IPv6 Configuration Type
+	// IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `none`
 	Ipv6ConfigurationType pulumi.StringPtrInput
-	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput
-	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6SecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
@@ -1290,81 +1468,142 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
-	// MAC Address
+	// MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddress pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type
+	// Media type, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	MediaTypeVariable pulumi.StringPtrInput
+	// Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `core-shared`, `core`
+	//   - Default value: `core-shared`
+	MrfCoreRegionType pulumi.StringPtrInput
+	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableCoreRegion pulumi.BoolPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat64 pulumi.BoolPtrInput
-	// NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat66 pulumi.BoolPtrInput
-	// enable Network Address Translation on this interface
+	// enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv4 pulumi.BoolPtrInput
-	// Variable name
+	// NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Loopbacks TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput
+	// NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Pools TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv4Variable pulumi.StringPtrInput
-	// enable Network Address Translation ipv6 on this interface
+	// enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv6 pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv6Variable pulumi.StringPtrInput
-	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopback pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopbackVariable pulumi.StringPtrInput
-	// NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+	//   - Default value: `false`
+	NatMatchInterface pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
+	NatMatchInterfaceVariable pulumi.StringPtrInput
+	// NAT Overload, Attribute conditional on `natIpv4` equal to `true`
 	//   - Default value: `true`
 	NatOverload pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatOverloadVariable pulumi.StringPtrInput
-	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`32`
 	NatPrefixLength pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatPrefixLengthVariable pulumi.StringPtrInput
-	// NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEnd pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEndVariable pulumi.StringPtrInput
-	// NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStart pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStartVariable pulumi.StringPtrInput
-	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `60`
 	NatTcpTimeout pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatTcpTimeoutVariable pulumi.StringPtrInput
-	// NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Type, Attribute conditional on `natIpv4` equal to `true`
 	//   - Choices: `interface`, `pool`, `loopback`
 	//   - Default value: `interface`
 	NatType pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
-	NatTypeVariable pulumi.StringPtrInput
-	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	NatUdpTimeout pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatUdpTimeoutVariable pulumi.StringPtrInput
-	// static NAT, Attribute conditional on `natIpv4` being equal to `true`
+	// static NAT, Attribute conditional on `natIpv4` equal to `true`
 	NewStaticNats TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput
-	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	PerTunnelQos pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	PerTunnelQosVariable pulumi.StringPtrInput
-	// Adaptive QoS
+	// Port-Channel interface on/off
+	//   - Default value: `false`
+	PortChannelInterface pulumi.BoolPtrInput
+	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchover pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchoverVariable pulumi.StringPtrInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Choices: `flow`, `vlan`
+	PortChannelLacpLoadBalance pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpLoadBalanceVariable pulumi.StringPtrInput
+	// Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMaxBundle pulumi.IntPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMaxBundleVariable pulumi.StringPtrInput
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput
+	// Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMinBundle pulumi.IntPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMinBundleVariable pulumi.StringPtrInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregate pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregateVariable pulumi.StringPtrInput
+	// Port-Channel member interface on/off
+	//   - Default value: `false`
+	PortChannelMemberInterface pulumi.BoolPtrInput
+	// Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+	//   - Choices: `lacp`, `static`
+	PortChannelMode pulumi.StringPtrInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Choices: `flow`, `vlan`
+	PortChannelStaticLoadBalance pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticLoadBalanceVariable pulumi.StringPtrInput
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregate pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregateVariable pulumi.StringPtrInput
+	// , Attribute conditional on `portChannelInterface` equal to `true`
+	PortChannelSubinterface pulumi.BoolPtrInput
+	// Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	QosAdaptive pulumi.BoolPtrInput
 	// Shaping Rate Downstream
@@ -1414,230 +1653,242 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	QosShapingRate pulumi.IntPtrInput
 	// Variable name
 	QosShapingRateVariable pulumi.StringPtrInput
-	// Service Provider Name
+	// Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProvider pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProviderVariable pulumi.StringPtrInput
 	// - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
 	Speed pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	SpeedVariable pulumi.StringPtrInput
-	// static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+	// static NAT66, Attribute conditional on `natIpv6` equal to `true`
 	StaticNat66s TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput
-	// TCP MSS on SYN packets, in bytes
+	// Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+	StaticPortForwards TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput
+	// TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TcpMssVariable pulumi.StringPtrInput
-	// Extends a local TLOC to a remote node only for vpn 0
+	// Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtension pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtensionVariable pulumi.StringPtrInput
-	// Enable tracker for this interface
+	// Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Tracker pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrackerVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringPtrInput
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelBandwidthPercentVariable pulumi.StringPtrInput
 	// Tunnel Interface on/off
 	//   - Default value: `false`
 	TunnelInterface pulumi.BoolPtrInput
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrInput
-	// Allow/Deny BFD
+	// Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBfd pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBfdVariable pulumi.StringPtrInput
-	// Allow/deny BGP
+	// Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrInput
-	// Allow/Deny DHCP
+	// Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrInput
-	// Allow/Deny DNS
+	// Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrInput
-	// Allow/Deny HTTPS
+	// Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceAllowFragmentation pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceAllowFragmentationVariable pulumi.StringPtrInput
+	// Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrInput
-	// Allow/Deny ICMP
+	// Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrInput
-	// Allow/Deny NETCONF
+	// Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrInput
-	// Allow/Deny NTP
-	//   - Default value: `true`
+	// Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrInput
-	// Allow/Deny OSPF
+	// Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrInput
-	// Allow/Deny SNMP
+	// Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrInput
-	// Allow/Deny SSH
-	//   - Default value: `true`
+	// Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrInput
-	// Allow/Deny STUN
+	// Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrInput
-	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrInput
-	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBorderVariable pulumi.StringPtrInput
-	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
 	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCarrierVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrInput
-	// Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor pulumi.StringPtrInput
-	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorRestrictVariable pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
-	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceCtsSgtPropagation pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCtsSgtPropagationVariable pulumi.StringPtrInput
-	// Encapsulation for TLOC
+	// Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceEncapsulations TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrInput
-	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayInput
-	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIp pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIpVariable pulumi.StringPtrInput
-	// List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+	// List of groups, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGroupsVariable pulumi.StringPtrInput
-	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `100`-`600000`
 	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrInput
-	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `12`-`6000`
 	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrInput
-	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrInput
-	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrInput
-	// Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrInput
-	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`60`
 	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfacePortHopVariable pulumi.StringPtrInput
-	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceSetSdwanTunnelMtuToMax pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceSetSdwanTunnelMtuToMaxVariable pulumi.StringPtrInput
+	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrInput
-	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrInput
-	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`8`
 	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelQosModeVariable pulumi.StringPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
-	// Extend remote TLOC over a GRE tunnel to a local WAN interface
+	// Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	XconnectVariable pulumi.StringPtrInput
 }
 
@@ -1650,121 +1901,121 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
 	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
 	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `0`-`2147483`
 	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
-	// Configure ARP entries
+	// Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Arps []TransportWanVpnInterfaceEthernetFeatureArp `pulumi:"arps"`
-	// Interface auto detect bandwidth
+	// Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	AutoDetectBandwidth *bool `pulumi:"autoDetectBandwidth"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	AutoDetectBandwidthVariable *string `pulumi:"autoDetectBandwidthVariable"`
 	// Link autonegotiation
 	Autonegotiate *bool `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps
+	// Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthDownstream *int `pulumi:"bandwidthDownstream"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthDownstreamVariable *string `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps
+	// Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthUpstream *int `pulumi:"bandwidthUpstream"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthUpstreamVariable *string `pulumi:"bandwidthUpstreamVariable"`
-	// Block packets originating from IP address that is not from this source
+	// Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	BlockNonSourceIp *bool `pulumi:"blockNonSourceIp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BlockNonSourceIpVariable *string `pulumi:"blockNonSourceIpVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Duplex mode
+	// Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// GRE tunnel source IP
+	// GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIp *string `pulumi:"greTunnelSourceIp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIpVariable *string `pulumi:"greTunnelSourceIpVariable"`
-	// ICMP/ICMPv6 Redirect Disable
+	// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1500`-`9216`
 	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	InterfaceName        *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast
+	// IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `576`-`9216`
 	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// Iperf server for auto bandwidth detect
+	// Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServer *string `pulumi:"iperfServer"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServerVariable *string `pulumi:"iperfServerVariable"`
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
+	// IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `dynamic`
 	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
-	// List of DHCP IPv4 helper addresses (min 1, max 8)
+	// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelpers []string `pulumi:"ipv4DhcpHelpers"`
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SecondaryAddresses []TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
+	// IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `none`
 	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
-	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses []TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
-	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6SecondaryAddresses []TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
@@ -1772,81 +2023,142 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
-	// MAC Address
+	// MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddress *string `pulumi:"macAddress"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type
+	// Media type, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
+	// Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `core-shared`, `core`
+	//   - Default value: `core-shared`
+	MrfCoreRegionType *string `pulumi:"mrfCoreRegionType"`
+	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableCoreRegion *bool `pulumi:"mrfEnableCoreRegion"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat64 *bool `pulumi:"nat64"`
-	// NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat66 *bool `pulumi:"nat66"`
-	// enable Network Address Translation on this interface
+	// enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv4 *bool `pulumi:"natIpv4"`
-	// Variable name
+	// NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Loopbacks []TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback `pulumi:"natIpv4Loopbacks"`
+	// NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Pools []TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool `pulumi:"natIpv4Pools"`
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv4Variable *string `pulumi:"natIpv4Variable"`
-	// enable Network Address Translation ipv6 on this interface
+	// enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv6 *bool `pulumi:"natIpv6"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv6Variable *string `pulumi:"natIpv6Variable"`
-	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopback *string `pulumi:"natLoopback"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopbackVariable *string `pulumi:"natLoopbackVariable"`
-	// NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+	//   - Default value: `false`
+	NatMatchInterface *bool `pulumi:"natMatchInterface"`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
+	NatMatchInterfaceVariable *string `pulumi:"natMatchInterfaceVariable"`
+	// NAT Overload, Attribute conditional on `natIpv4` equal to `true`
 	//   - Default value: `true`
 	NatOverload *bool `pulumi:"natOverload"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatOverloadVariable *string `pulumi:"natOverloadVariable"`
-	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`32`
 	NatPrefixLength *int `pulumi:"natPrefixLength"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatPrefixLengthVariable *string `pulumi:"natPrefixLengthVariable"`
-	// NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEnd *string `pulumi:"natRangeEnd"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEndVariable *string `pulumi:"natRangeEndVariable"`
-	// NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStart *string `pulumi:"natRangeStart"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStartVariable *string `pulumi:"natRangeStartVariable"`
-	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `60`
 	NatTcpTimeout *int `pulumi:"natTcpTimeout"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatTcpTimeoutVariable *string `pulumi:"natTcpTimeoutVariable"`
-	// NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Type, Attribute conditional on `natIpv4` equal to `true`
 	//   - Choices: `interface`, `pool`, `loopback`
 	//   - Default value: `interface`
 	NatType *string `pulumi:"natType"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
-	NatTypeVariable *string `pulumi:"natTypeVariable"`
-	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	NatUdpTimeout *int `pulumi:"natUdpTimeout"`
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatUdpTimeoutVariable *string `pulumi:"natUdpTimeoutVariable"`
-	// static NAT, Attribute conditional on `natIpv4` being equal to `true`
+	// static NAT, Attribute conditional on `natIpv4` equal to `true`
 	NewStaticNats []TransportWanVpnInterfaceEthernetFeatureNewStaticNat `pulumi:"newStaticNats"`
-	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	PerTunnelQos *bool `pulumi:"perTunnelQos"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	PerTunnelQosVariable *string `pulumi:"perTunnelQosVariable"`
-	// Adaptive QoS
+	// Port-Channel interface on/off
+	//   - Default value: `false`
+	PortChannelInterface *bool `pulumi:"portChannelInterface"`
+	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchover *bool `pulumi:"portChannelLacpFastSwitchover"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchoverVariable *string `pulumi:"portChannelLacpFastSwitchoverVariable"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Choices: `flow`, `vlan`
+	PortChannelLacpLoadBalance *string `pulumi:"portChannelLacpLoadBalance"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpLoadBalanceVariable *string `pulumi:"portChannelLacpLoadBalanceVariable"`
+	// Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMaxBundle *int `pulumi:"portChannelLacpMaxBundle"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMaxBundleVariable *string `pulumi:"portChannelLacpMaxBundleVariable"`
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMemberLinks []TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink `pulumi:"portChannelLacpMemberLinks"`
+	// Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMinBundle *int `pulumi:"portChannelLacpMinBundle"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMinBundleVariable *string `pulumi:"portChannelLacpMinBundleVariable"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregate *bool `pulumi:"portChannelLacpQosAggregate"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregateVariable *string `pulumi:"portChannelLacpQosAggregateVariable"`
+	// Port-Channel member interface on/off
+	//   - Default value: `false`
+	PortChannelMemberInterface *bool `pulumi:"portChannelMemberInterface"`
+	// Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+	//   - Choices: `lacp`, `static`
+	PortChannelMode *string `pulumi:"portChannelMode"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Choices: `flow`, `vlan`
+	PortChannelStaticLoadBalance *string `pulumi:"portChannelStaticLoadBalance"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticLoadBalanceVariable *string `pulumi:"portChannelStaticLoadBalanceVariable"`
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticMemberLinks []TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink `pulumi:"portChannelStaticMemberLinks"`
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregate *bool `pulumi:"portChannelStaticQosAggregate"`
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregateVariable *string `pulumi:"portChannelStaticQosAggregateVariable"`
+	// , Attribute conditional on `portChannelInterface` equal to `true`
+	PortChannelSubinterface *bool `pulumi:"portChannelSubinterface"`
+	// Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	QosAdaptive *bool `pulumi:"qosAdaptive"`
 	// Shaping Rate Downstream
@@ -1896,228 +2208,240 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	QosShapingRate *int `pulumi:"qosShapingRate"`
 	// Variable name
 	QosShapingRateVariable *string `pulumi:"qosShapingRateVariable"`
-	// Service Provider Name
+	// Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProvider *string `pulumi:"serviceProvider"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProviderVariable *string `pulumi:"serviceProviderVariable"`
 	// - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
 	Speed *string `pulumi:"speed"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	SpeedVariable *string `pulumi:"speedVariable"`
-	// static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+	// static NAT66, Attribute conditional on `natIpv6` equal to `true`
 	StaticNat66s []TransportWanVpnInterfaceEthernetFeatureStaticNat66 `pulumi:"staticNat66s"`
-	// TCP MSS on SYN packets, in bytes
+	// Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+	StaticPortForwards []TransportWanVpnInterfaceEthernetFeatureStaticPortForward `pulumi:"staticPortForwards"`
+	// TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
-	// Extends a local TLOC to a remote node only for vpn 0
+	// Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtension *string `pulumi:"tlocExtension"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtensionVariable *string `pulumi:"tlocExtensionVariable"`
-	// Enable tracker for this interface
+	// Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Tracker *string `pulumi:"tracker"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent *int `pulumi:"tunnelBandwidthPercent"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelBandwidthPercentVariable *string `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	//   - Default value: `false`
 	TunnelInterface *bool `pulumi:"tunnelInterface"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowAll *bool `pulumi:"tunnelInterfaceAllowAll"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowAllVariable *string `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/Deny BFD
+	// Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBfd *bool `pulumi:"tunnelInterfaceAllowBfd"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBfdVariable *string `pulumi:"tunnelInterfaceAllowBfdVariable"`
-	// Allow/deny BGP
+	// Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBgp *bool `pulumi:"tunnelInterfaceAllowBgp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBgpVariable *string `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP
+	// Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp *bool `pulumi:"tunnelInterfaceAllowDhcp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDhcpVariable *string `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS
+	// Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDns *bool `pulumi:"tunnelInterfaceAllowDns"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDnsVariable *string `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny HTTPS
+	// Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceAllowFragmentation *bool `pulumi:"tunnelInterfaceAllowFragmentation"`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceAllowFragmentationVariable *string `pulumi:"tunnelInterfaceAllowFragmentationVariable"`
+	// Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowHttps *bool `pulumi:"tunnelInterfaceAllowHttps"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowHttpsVariable *string `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP
+	// Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp *bool `pulumi:"tunnelInterfaceAllowIcmp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowIcmpVariable *string `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF
+	// Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf *bool `pulumi:"tunnelInterfaceAllowNetconf"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNetconfVariable *string `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP
-	//   - Default value: `true`
+	// Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp *bool `pulumi:"tunnelInterfaceAllowNtp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNtpVariable *string `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF
+	// Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowOspf *bool `pulumi:"tunnelInterfaceAllowOspf"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowOspfVariable *string `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP
+	// Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp *bool `pulumi:"tunnelInterfaceAllowSnmp"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSnmpVariable *string `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH
-	//   - Default value: `true`
+	// Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh *bool `pulumi:"tunnelInterfaceAllowSsh"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSshVariable *string `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN
+	// Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowStun *bool `pulumi:"tunnelInterfaceAllowStun"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowStunVariable *string `pulumi:"tunnelInterfaceAllowStunVariable"`
-	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnel *string `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnelVariable *string `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceBorder *bool `pulumi:"tunnelInterfaceBorder"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBorderVariable *string `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
 	//   - Default value: `default`
 	TunnelInterfaceCarrier *string `pulumi:"tunnelInterfaceCarrier"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCarrierVariable *string `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment *bool `pulumi:"tunnelInterfaceClearDontFragment"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceClearDontFragmentVariable *string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorRestrictVariable *string `pulumi:"tunnelInterfaceColorRestrictVariable"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
-	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceCtsSgtPropagation *bool `pulumi:"tunnelInterfaceCtsSgtPropagation"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCtsSgtPropagationVariable *string `pulumi:"tunnelInterfaceCtsSgtPropagationVariable"`
-	// Encapsulation for TLOC
+	// Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceEncapsulations []TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation `pulumi:"tunnelInterfaceEncapsulations"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupListVariable *string `pulumi:"tunnelInterfaceExcludeControllerGroupListVariable"`
-	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupLists []int `pulumi:"tunnelInterfaceExcludeControllerGroupLists"`
-	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIp *string `pulumi:"tunnelInterfaceGreTunnelDestinationIp"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIpVariable *string `pulumi:"tunnelInterfaceGreTunnelDestinationIpVariable"`
-	// List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+	// List of groups, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups *int `pulumi:"tunnelInterfaceGroups"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGroupsVariable *string `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `100`-`600000`
 	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval *int `pulumi:"tunnelInterfaceHelloInterval"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloIntervalVariable *string `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `12`-`6000`
 	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance *int `pulumi:"tunnelInterfaceHelloTolerance"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloToleranceVariable *string `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit *bool `pulumi:"tunnelInterfaceLastResortCircuit"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLastResortCircuitVariable *string `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink *bool `pulumi:"tunnelInterfaceLowBandwidthLink"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLowBandwidthLinkVariable *string `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections *int `pulumi:"tunnelInterfaceMaxControlConnections"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceMaxControlConnectionsVariable *string `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`60`
 	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfacePortHopVariable *string `pulumi:"tunnelInterfacePortHopVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceSetSdwanTunnelMtuToMax *bool `pulumi:"tunnelInterfaceSetSdwanTunnelMtuToMax"`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceSetSdwanTunnelMtuToMaxVariable *string `pulumi:"tunnelInterfaceSetSdwanTunnelMtuToMaxVariable"`
+	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss *int `pulumi:"tunnelInterfaceTunnelTcpMss"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceTunnelTcpMssVariable *string `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer *bool `pulumi:"tunnelInterfaceVbondAsStunServer"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVbondAsStunServerVariable *string `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`8`
 	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `hub`, `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
-	// Extend remote TLOC over a GRE tunnel to a local WAN interface
+	// Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect *string `pulumi:"xconnect"`
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	XconnectVariable *string `pulumi:"xconnectVariable"`
 }
 
@@ -2127,121 +2451,121 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	AclIpv4IngressFeatureId pulumi.StringPtrInput
 	AclIpv6EgressFeatureId  pulumi.StringPtrInput
 	AclIpv6IngressFeatureId pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `0`-`2147483`
 	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ArpTimeoutVariable pulumi.StringPtrInput
-	// Configure ARP entries
+	// Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Arps TransportWanVpnInterfaceEthernetFeatureArpArrayInput
-	// Interface auto detect bandwidth
+	// Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	AutoDetectBandwidth pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	AutoDetectBandwidthVariable pulumi.StringPtrInput
 	// Link autonegotiation
 	Autonegotiate pulumi.BoolPtrInput
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrInput
-	// Interface downstream bandwidth capacity, in kbps
+	// Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthDownstreamVariable pulumi.StringPtrInput
-	// Interface upstream bandwidth capacity, in kbps
+	// Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BandwidthUpstreamVariable pulumi.StringPtrInput
-	// Block packets originating from IP address that is not from this source
+	// Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	BlockNonSourceIp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	BlockNonSourceIpVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Duplex mode
+	// Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	DuplexVariable pulumi.StringPtrInput
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// GRE tunnel source IP
+	// GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIp pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	GreTunnelSourceIpVariable pulumi.StringPtrInput
-	// ICMP/ICMPv6 Redirect Disable
+	// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
 	InterfaceDescription        pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `1500`-`9216`
 	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	InterfaceMtuVariable pulumi.StringPtrInput
 	InterfaceName        pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast
+	// IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `576`-`9216`
 	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IpMtuVariable pulumi.StringPtrInput
-	// Iperf server for auto bandwidth detect
+	// Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServer pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	IperfServerVariable pulumi.StringPtrInput
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
+	// IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `dynamic`
 	Ipv4ConfigurationType pulumi.StringPtrInput
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
-	// List of DHCP IPv4 helper addresses (min 1, max 8)
+	// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Ipv4DhcpHelpers pulumi.StringArrayInput
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// IPv6 Configuration Type
+	// IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Choices: `dynamic`, `static`, `none`
 	//   - Default value: `none`
 	Ipv6ConfigurationType pulumi.StringPtrInput
-	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput
-	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 	Ipv6SecondaryAddresses TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
@@ -2249,81 +2573,142 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
-	// MAC Address
+	// MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddress pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type
+	// Media type, Attribute conditional on `portChannelInterface` not equal to `true`
 	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	MediaTypeVariable pulumi.StringPtrInput
+	// Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `core-shared`, `core`
+	//   - Default value: `core-shared`
+	MrfCoreRegionType pulumi.StringPtrInput
+	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableCoreRegion pulumi.BoolPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat64 pulumi.BoolPtrInput
-	// NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+	// NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
 	//   - Default value: `false`
 	Nat66 pulumi.BoolPtrInput
-	// enable Network Address Translation on this interface
+	// enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv4 pulumi.BoolPtrInput
-	// Variable name
+	// NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Loopbacks TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput
+	// NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+	NatIpv4Pools TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv4Variable pulumi.StringPtrInput
-	// enable Network Address Translation ipv6 on this interface
+	// enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	NatIpv6 pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	NatIpv6Variable pulumi.StringPtrInput
-	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopback pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatLoopbackVariable pulumi.StringPtrInput
-	// NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+	//   - Default value: `false`
+	NatMatchInterface pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
+	NatMatchInterfaceVariable pulumi.StringPtrInput
+	// NAT Overload, Attribute conditional on `natIpv4` equal to `true`
 	//   - Default value: `true`
 	NatOverload pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatOverloadVariable pulumi.StringPtrInput
-	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`32`
 	NatPrefixLength pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatPrefixLengthVariable pulumi.StringPtrInput
-	// NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEnd pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeEndVariable pulumi.StringPtrInput
-	// NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStart pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatRangeStartVariable pulumi.StringPtrInput
-	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `60`
 	NatTcpTimeout pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatTcpTimeoutVariable pulumi.StringPtrInput
-	// NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+	// NAT Type, Attribute conditional on `natIpv4` equal to `true`
 	//   - Choices: `interface`, `pool`, `loopback`
 	//   - Default value: `interface`
 	NatType pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
-	NatTypeVariable pulumi.StringPtrInput
-	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+	// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	NatUdpTimeout pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+	// Variable name, Attribute conditional on `natIpv4` equal to `true`
 	NatUdpTimeoutVariable pulumi.StringPtrInput
-	// static NAT, Attribute conditional on `natIpv4` being equal to `true`
+	// static NAT, Attribute conditional on `natIpv4` equal to `true`
 	NewStaticNats TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput
-	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	PerTunnelQos pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	PerTunnelQosVariable pulumi.StringPtrInput
-	// Adaptive QoS
+	// Port-Channel interface on/off
+	//   - Default value: `false`
+	PortChannelInterface pulumi.BoolPtrInput
+	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchover pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpFastSwitchoverVariable pulumi.StringPtrInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Choices: `flow`, `vlan`
+	PortChannelLacpLoadBalance pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpLoadBalanceVariable pulumi.StringPtrInput
+	// Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMaxBundle pulumi.IntPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMaxBundleVariable pulumi.StringPtrInput
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput
+	// Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Range: `1`-`16`
+	PortChannelLacpMinBundle pulumi.IntPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpMinBundleVariable pulumi.StringPtrInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregate pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+	PortChannelLacpQosAggregateVariable pulumi.StringPtrInput
+	// Port-Channel member interface on/off
+	//   - Default value: `false`
+	PortChannelMemberInterface pulumi.BoolPtrInput
+	// Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+	//   - Choices: `lacp`, `static`
+	PortChannelMode pulumi.StringPtrInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Choices: `flow`, `vlan`
+	PortChannelStaticLoadBalance pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticLoadBalanceVariable pulumi.StringPtrInput
+	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput
+	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregate pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+	PortChannelStaticQosAggregateVariable pulumi.StringPtrInput
+	// , Attribute conditional on `portChannelInterface` equal to `true`
+	PortChannelSubinterface pulumi.BoolPtrInput
+	// Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	QosAdaptive pulumi.BoolPtrInput
 	// Shaping Rate Downstream
@@ -2373,228 +2758,240 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	QosShapingRate pulumi.IntPtrInput
 	// Variable name
 	QosShapingRateVariable pulumi.StringPtrInput
-	// Service Provider Name
+	// Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProvider pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	ServiceProviderVariable pulumi.StringPtrInput
 	// - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
 	Speed pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 	SpeedVariable pulumi.StringPtrInput
-	// static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+	// static NAT66, Attribute conditional on `natIpv6` equal to `true`
 	StaticNat66s TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput
-	// TCP MSS on SYN packets, in bytes
+	// Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+	StaticPortForwards TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput
+	// TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TcpMssVariable pulumi.StringPtrInput
-	// Extends a local TLOC to a remote node only for vpn 0
+	// Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtension pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TlocExtensionVariable pulumi.StringPtrInput
-	// Enable tracker for this interface
+	// Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Tracker pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TrackerVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringInput
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelBandwidthPercentVariable pulumi.StringPtrInput
 	// Tunnel Interface on/off
 	//   - Default value: `false`
 	TunnelInterface pulumi.BoolPtrInput
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrInput
-	// Allow/Deny BFD
+	// Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBfd pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBfdVariable pulumi.StringPtrInput
-	// Allow/deny BGP
+	// Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrInput
-	// Allow/Deny DHCP
+	// Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrInput
-	// Allow/Deny DNS
+	// Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrInput
-	// Allow/Deny HTTPS
+	// Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceAllowFragmentation pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceAllowFragmentationVariable pulumi.StringPtrInput
+	// Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrInput
-	// Allow/Deny ICMP
+	// Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrInput
-	// Allow/Deny NETCONF
+	// Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrInput
-	// Allow/Deny NTP
-	//   - Default value: `true`
+	// Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrInput
-	// Allow/Deny OSPF
+	// Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrInput
-	// Allow/Deny SNMP
+	// Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrInput
-	// Allow/Deny SSH
-	//   - Default value: `true`
+	// Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrInput
-	// Allow/Deny STUN
+	// Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrInput
-	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrInput
-	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceBorderVariable pulumi.StringPtrInput
-	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
 	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCarrierVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrInput
-	// Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 	//   - Default value: `mpls`
 	TunnelInterfaceColor pulumi.StringPtrInput
-	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorRestrictVariable pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
-	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+	// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceCtsSgtPropagation pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceCtsSgtPropagationVariable pulumi.StringPtrInput
-	// Encapsulation for TLOC
+	// Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	TunnelInterfaceEncapsulations TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupListVariable pulumi.StringPtrInput
-	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+	// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceExcludeControllerGroupLists pulumi.IntArrayInput
-	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+	// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIp pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGreTunnelDestinationIpVariable pulumi.StringPtrInput
-	// List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+	// List of groups, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`4294967295`
 	TunnelInterfaceGroups pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceGroupsVariable pulumi.StringPtrInput
-	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `100`-`600000`
 	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrInput
-	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `12`-`6000`
 	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrInput
-	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrInput
-	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrInput
-	// Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrInput
-	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `1`-`60`
 	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfacePortHopVariable pulumi.StringPtrInput
-	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+	//   - Default value: `false`
+	TunnelInterfaceSetSdwanTunnelMtuToMax pulumi.BoolPtrInput
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	TunnelInterfaceSetSdwanTunnelMtuToMaxVariable pulumi.StringPtrInput
+	// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrInput
-	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrInput
-	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Range: `0`-`8`
 	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
 	//   - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 	TunnelQosModeVariable pulumi.StringPtrInput
-	// Extend remote TLOC over a GRE tunnel to a local WAN interface
+	// Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	Xconnect pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	XconnectVariable pulumi.StringPtrInput
 }
 
@@ -2709,32 +3106,32 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) AclIpv6IngressFeatureId()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+// Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Range: `0`-`2147483`
 //   - Default value: `1200`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) ArpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.ArpTimeout }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) ArpTimeoutVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.ArpTimeoutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure ARP entries
+// Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Arps() TransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
 		return v.Arps
 	}).(TransportWanVpnInterfaceEthernetFeatureArpArrayOutput)
 }
 
-// Interface auto detect bandwidth
+// Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) AutoDetectBandwidth() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.AutoDetectBandwidth }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) AutoDetectBandwidthVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.AutoDetectBandwidthVariable
@@ -2753,39 +3150,39 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) AutonegotiateVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface downstream bandwidth capacity, in kbps
+// Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Range: `1`-`2147483647`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) BandwidthDownstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.BandwidthDownstream }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) BandwidthDownstreamVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.BandwidthDownstreamVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface upstream bandwidth capacity, in kbps
+// Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Range: `1`-`2147483647`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) BandwidthUpstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.BandwidthUpstream }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) BandwidthUpstreamVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.BandwidthUpstreamVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Block packets originating from IP address that is not from this source
+// Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) BlockNonSourceIp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.BlockNonSourceIp }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) BlockNonSourceIpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.BlockNonSourceIpVariable
@@ -2797,18 +3194,18 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) Description() pulumi.Stri
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Duplex mode
+// Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
 //   - Choices: `full`, `half`, `auto`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Duplex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Duplex }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) DuplexVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.DuplexVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) EnableDhcpv6() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.EnableDhcpv6 }).(pulumi.BoolPtrOutput)
 }
@@ -2818,25 +3215,25 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) FeatureProfileId() pulumi
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// GRE tunnel source IP
+// GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) GreTunnelSourceIp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.GreTunnelSourceIp }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) GreTunnelSourceIpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.GreTunnelSourceIpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// ICMP/ICMPv6 Redirect Disable
+// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IcmpRedirectDisable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.IcmpRedirectDisable }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IcmpRedirectDisableVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.IcmpRedirectDisableVariable
@@ -2854,14 +3251,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) InterfaceDescriptionVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Range: `1500`-`9216`
 //   - Default value: `1500`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) InterfaceMtuVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.InterfaceMtuVariable }).(pulumi.StringPtrOutput)
 }
@@ -2877,53 +3274,53 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) InterfaceNameVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// IP Directed-Broadcast
+// IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IpDirectedBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.IpDirectedBroadcast }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IpDirectedBroadcastVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.IpDirectedBroadcastVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Range: `576`-`9216`
 //   - Default value: `1500`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IpMtuVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.IpMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// Iperf server for auto bandwidth detect
+// Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IperfServer() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.IperfServer }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) IperfServerVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.IperfServerVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// IPv4 Configuration Type
-//   - Choices: `dynamic`, `static`
+// IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Choices: `dynamic`, `static`, `none`
 //   - Default value: `dynamic`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4ConfigurationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
@@ -2931,63 +3328,63 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4ConfigurationType() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-//   - Range: `1`-`65536`
+// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+//   - Range: `1`-`255`
 //   - Default value: `1`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4DhcpDistance }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistanceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4DhcpDistanceVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpHelperVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4DhcpHelperVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// List of DHCP IPv4 helper addresses (min 1, max 8)
+// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpHelpers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringArrayOutput { return v.Ipv4DhcpHelpers }).(pulumi.StringArrayOutput)
 }
 
-// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4SecondaryAddresses() TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
 		return v.Ipv4SecondaryAddresses
 	}).(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
 }
 
-// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 //   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMaskVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4SubnetMaskVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv6Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv6AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv6AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// IPv6 Configuration Type
+// IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Choices: `dynamic`, `static`, `none`
 //   - Default value: `none`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv6ConfigurationType() pulumi.StringPtrOutput {
@@ -2996,14 +3393,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv6ConfigurationType() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv6DhcpSecondaryAddresses() TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
 		return v.Ipv6DhcpSecondaryAddresses
 	}).(TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput)
 }
 
-// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Ipv6SecondaryAddresses() TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
 		return v.Ipv6SecondaryAddresses
@@ -3022,25 +3419,38 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) LoadIntervalVariable() pu
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.LoadIntervalVariable }).(pulumi.StringPtrOutput)
 }
 
-// MAC Address
+// MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) MacAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MacAddress }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) MacAddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MacAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Media type
+// Media type, Attribute conditional on `portChannelInterface` not equal to `true`
 //   - Choices: `auto-select`, `rj45`, `sfp`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) MediaType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MediaType }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) MediaTypeVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MediaTypeVariable }).(pulumi.StringPtrOutput)
+}
+
+// Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Choices: `core-shared`, `core`
+//   - Default value: `core-shared`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) MrfCoreRegionType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MrfCoreRegionType }).(pulumi.StringPtrOutput)
+}
+
+// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) MrfEnableCoreRegion() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.MrfEnableCoreRegion }).(pulumi.BoolPtrOutput)
 }
 
 // The name of the Feature
@@ -3048,155 +3458,320 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) Name() pulumi.StringOutpu
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Nat64() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Nat64 }).(pulumi.BoolPtrOutput)
 }
 
-// NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+// NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Nat66() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Nat66 }).(pulumi.BoolPtrOutput)
 }
 
-// enable Network Address Translation on this interface
+// enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatIpv4() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.NatIpv4 }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatIpv4Loopbacks() TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
+		return v.NatIpv4Loopbacks
+	}).(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput)
+}
+
+// NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatIpv4Pools() TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
+		return v.NatIpv4Pools
+	}).(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatIpv4Variable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatIpv4Variable }).(pulumi.StringPtrOutput)
 }
 
-// enable Network Address Translation ipv6 on this interface
+// enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatIpv6() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.NatIpv6 }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatIpv6Variable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatIpv6Variable }).(pulumi.StringPtrOutput)
 }
 
-// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+// NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatLoopback() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatLoopback }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatLoopbackVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatLoopbackVariable }).(pulumi.StringPtrOutput)
 }
 
-// NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+// NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatMatchInterface() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.NatMatchInterface }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatMatchInterfaceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.NatMatchInterfaceVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// NAT Overload, Attribute conditional on `natIpv4` equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatOverload() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.NatOverload }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatOverloadVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatOverloadVariable }).(pulumi.StringPtrOutput)
 }
 
-// NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+// NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
 //   - Range: `1`-`32`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatPrefixLength() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.NatPrefixLength }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatPrefixLengthVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.NatPrefixLengthVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+// NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatRangeEnd() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatRangeEnd }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatRangeEndVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatRangeEndVariable }).(pulumi.StringPtrOutput)
 }
 
-// NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+// NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatRangeStart() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatRangeStart }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatRangeStartVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.NatRangeStartVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+// Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 //   - Range: `1`-`8947`
 //   - Default value: `60`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatTcpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.NatTcpTimeout }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatTcpTimeoutVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.NatTcpTimeoutVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+// NAT Type, Attribute conditional on `natIpv4` equal to `true`
 //   - Choices: `interface`, `pool`, `loopback`
 //   - Default value: `interface`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatType }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
-func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatTypeVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.NatTypeVariable }).(pulumi.StringPtrOutput)
-}
-
-// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+// Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
 //   - Range: `1`-`8947`
 //   - Default value: `1`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatUdpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.NatUdpTimeout }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `natIpv4` being equal to `true`
+// Variable name, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NatUdpTimeoutVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.NatUdpTimeoutVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// static NAT, Attribute conditional on `natIpv4` being equal to `true`
+// static NAT, Attribute conditional on `natIpv4` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) NewStaticNats() TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
 		return v.NewStaticNats
 	}).(TransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput)
 }
 
-// Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+// Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) PerTunnelQos() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.PerTunnelQos }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) PerTunnelQosVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.PerTunnelQosVariable }).(pulumi.StringPtrOutput)
 }
 
-// Adaptive QoS
+// Port-Channel interface on/off
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelInterface() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.PortChannelInterface }).(pulumi.BoolPtrOutput)
+}
+
+// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpFastSwitchover() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.PortChannelLacpFastSwitchover
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpFastSwitchoverVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelLacpFastSwitchoverVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+//   - Choices: `flow`, `vlan`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpLoadBalance() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelLacpLoadBalance
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpLoadBalanceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelLacpLoadBalanceVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+//   - Range: `1`-`16`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpMaxBundle() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput {
+		return v.PortChannelLacpMaxBundle
+	}).(pulumi.IntPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpMaxBundleVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelLacpMaxBundleVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpMemberLinks() TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+		return v.PortChannelLacpMemberLinks
+	}).(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput)
+}
+
+// Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+//   - Range: `1`-`16`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpMinBundle() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput {
+		return v.PortChannelLacpMinBundle
+	}).(pulumi.IntPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpMinBundleVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelLacpMinBundleVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpQosAggregate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.PortChannelLacpQosAggregate
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpQosAggregateVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelLacpQosAggregateVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Port-Channel member interface on/off
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelMemberInterface() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.PortChannelMemberInterface
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+//   - Choices: `lacp`, `static`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelMode() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.PortChannelMode }).(pulumi.StringPtrOutput)
+}
+
+// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+//   - Choices: `flow`, `vlan`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticLoadBalance() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelStaticLoadBalance
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticLoadBalanceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelStaticLoadBalanceVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticMemberLinks() TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+		return v.PortChannelStaticMemberLinks
+	}).(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput)
+}
+
+// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticQosAggregate() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.PortChannelStaticQosAggregate
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on `portChannelMode` equal to `static`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticQosAggregateVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.PortChannelStaticQosAggregateVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// , Attribute conditional on `portChannelInterface` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelSubinterface() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.PortChannelSubinterface
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) QosAdaptive() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.QosAdaptive }).(pulumi.BoolPtrOutput)
@@ -3331,12 +3906,12 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) QosShapingRateVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Service Provider Name
+// Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) ServiceProvider() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.ServiceProvider }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) ServiceProviderVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.ServiceProviderVariable
@@ -3353,53 +3928,60 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) ShutdownVariable() pulumi
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set interface speed
-//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+// Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+//   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Speed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Speed }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) SpeedVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.SpeedVariable }).(pulumi.StringPtrOutput)
 }
 
-// static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+// static NAT66, Attribute conditional on `natIpv6` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) StaticNat66s() TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
 		return v.StaticNat66s
 	}).(TransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput)
 }
 
-// TCP MSS on SYN packets, in bytes
+// Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) StaticPortForwards() TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
+		return v.StaticPortForwards
+	}).(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput)
+}
+
+// TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Range: `500`-`1460`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TcpMssVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.TcpMssVariable }).(pulumi.StringPtrOutput)
 }
 
-// Extends a local TLOC to a remote node only for vpn 0
+// Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TlocExtension() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.TlocExtension }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TlocExtensionVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TlocExtensionVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable tracker for this interface
+// Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Tracker() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Tracker }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TrackerVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.TrackerVariable }).(pulumi.StringPtrOutput)
 }
@@ -3411,14 +3993,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TransportWanVpnFeatureId(
 	}).(pulumi.StringOutput)
 }
 
-// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `1`-`100`
 //   - Default value: `50`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelBandwidthPercent() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TunnelBandwidthPercent }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelBandwidthPercentVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelBandwidthPercentVariable
@@ -3431,7 +4013,7 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterface() pulumi.
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.TunnelInterface }).(pulumi.BoolPtrOutput)
 }
 
-// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+// Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowAll() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3439,14 +4021,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowAll()
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowAllVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowAllVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny BFD
+// Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowBfd() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3454,14 +4036,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowBfd()
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowBfdVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowBfdVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/deny BGP
+// Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowBgp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3469,14 +4051,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowBgp()
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowBgpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowBgpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny DHCP
+// Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowDhcp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3484,14 +4066,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowDhcp(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowDhcpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowDhcpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny DNS
+// Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowDns() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3499,14 +4081,29 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowDns()
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowDnsVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowDnsVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny HTTPS
+// Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowFragmentation() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.TunnelInterfaceAllowFragmentation
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowFragmentationVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceAllowFragmentationVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowHttps() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3514,14 +4111,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowHttps
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowHttpsVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowHttpsVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny ICMP
+// Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowIcmp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3529,14 +4126,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowIcmp(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowIcmpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowIcmpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny NETCONF
+// Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowNetconf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3544,29 +4141,29 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowNetco
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowNetconfVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowNetconfVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny NTP
-//   - Default value: `true`
+// Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowNtp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceAllowNtp
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowNtpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowNtpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny OSPF
+// Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowOspf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3574,14 +4171,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowOspf(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowOspfVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowOspfVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny SNMP
+// Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowSnmp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3589,29 +4186,29 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowSnmp(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowSnmpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowSnmpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny SSH
-//   - Default value: `true`
+// Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowSsh() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceAllowSsh
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowSshVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowSshVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny STUN
+// Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowStun() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3619,41 +4216,41 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowStun(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceAllowStunVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceAllowStunVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceBindLoopbackTunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceBindLoopbackTunnel
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceBindLoopbackTunnelVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceBindLoopbackTunnelVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceBorder() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.TunnelInterfaceBorder }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceBorderVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceBorderVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
 //   - Default value: `default`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceCarrier() pulumi.StringPtrOutput {
@@ -3662,14 +4259,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceCarrier() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceCarrierVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceCarrierVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3677,21 +4274,21 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceClearDontF
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceClearDontFragmentVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceClearDontFragmentVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
 //   - Default value: `mpls`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceColor() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.TunnelInterfaceColor }).(pulumi.StringPtrOutput)
 }
 
-// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+// Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceColorRestrict() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3699,21 +4296,21 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceColorRestr
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceColorRestrictVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceColorRestrictVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceColorVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceColorVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+// CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceCtsSgtPropagation() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3721,62 +4318,62 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceCtsSgtProp
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceCtsSgtPropagationVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceCtsSgtPropagationVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Encapsulation for TLOC
+// Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceEncapsulations() TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput {
 		return v.TunnelInterfaceEncapsulations
 	}).(TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceExcludeControllerGroupListVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceExcludeControllerGroupListVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+// Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceExcludeControllerGroupLists() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntArrayOutput {
 		return v.TunnelInterfaceExcludeControllerGroupLists
 	}).(pulumi.IntArrayOutput)
 }
 
-// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+// GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceGreTunnelDestinationIp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceGreTunnelDestinationIp
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceGreTunnelDestinationIpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceGreTunnelDestinationIpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+// List of groups, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `1`-`4294967295`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceGroups() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TunnelInterfaceGroups }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceGroupsVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceGroupsVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `100`-`600000`
 //   - Default value: `1000`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceHelloInterval() pulumi.IntPtrOutput {
@@ -3785,14 +4382,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceHelloInter
 	}).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceHelloIntervalVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceHelloIntervalVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `12`-`6000`
 //   - Default value: `12`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceHelloTolerance() pulumi.IntPtrOutput {
@@ -3801,14 +4398,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceHelloToler
 	}).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceHelloToleranceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceHelloToleranceVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceLastResortCircuit() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3816,14 +4413,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceLastResort
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceLastResortCircuitVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceLastResortCircuitVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceLowBandwidthLink() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3831,14 +4428,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceLowBandwid
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceLowBandwidthLinkVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceLowBandwidthLinkVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+// Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `0`-`100`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceMaxControlConnections() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput {
@@ -3846,14 +4443,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceMaxControl
 	}).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceMaxControlConnectionsVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceMaxControlConnectionsVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `1`-`60`
 //   - Default value: `5`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceNatRefreshInterval() pulumi.IntPtrOutput {
@@ -3862,14 +4459,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceNatRefresh
 	}).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceNatRefreshIntervalVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceNatRefreshIntervalVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceNetworkBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3877,27 +4474,42 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceNetworkBro
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceNetworkBroadcastVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceNetworkBroadcastVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfacePortHop() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.TunnelInterfacePortHop }).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfacePortHopVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfacePortHopVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceSetSdwanTunnelMtuToMax() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.TunnelInterfaceSetSdwanTunnelMtuToMax
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceSetSdwanTunnelMtuToMaxVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.TunnelInterfaceSetSdwanTunnelMtuToMaxVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `500`-`1460`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceTunnelTcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput {
@@ -3905,14 +4517,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceTunnelTcpM
 	}).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceTunnelTcpMssVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceTunnelTcpMssVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+// Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceVbondAsStunServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
@@ -3920,14 +4532,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceVbondAsStu
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceVbondAsStunServerVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceVbondAsStunServerVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Range: `0`-`8`
 //   - Default value: `5`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceVmanageConnectionPreference() pulumi.IntPtrOutput {
@@ -3936,20 +4548,20 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceVmanageCon
 	}).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelInterfaceVmanageConnectionPreferenceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelInterfaceVmanageConnectionPreferenceVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+// Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
 //   - Choices: `hub`, `spoke`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelQosMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.TunnelQosMode }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelQosModeVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelQosModeVariable
@@ -3961,12 +4573,12 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) Version() pulumi.IntOutpu
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// Extend remote TLOC over a GRE tunnel to a local WAN interface
+// Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Xconnect() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Xconnect }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) XconnectVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.XconnectVariable }).(pulumi.StringPtrOutput)
 }

@@ -34,7 +34,7 @@ class ZoneBasedFirewallPolicyDefinitionArgs:
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] mode: The policy mode
                  - Choices: `security`, `unified`
-        :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
+        :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         """
         pulumi.set(__self__, "default_action", default_action)
@@ -97,7 +97,7 @@ class ZoneBasedFirewallPolicyDefinitionArgs:
     @pulumi.getter(name="applyZonePairs")
     def apply_zone_pairs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]]]:
         """
-        , Attribute conditional on `mode` being equal to `security`
+        , Attribute conditional on `mode` equal to `security`
         """
         return pulumi.get(self, "apply_zone_pairs")
 
@@ -130,7 +130,7 @@ class _ZoneBasedFirewallPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ZoneBasedFirewallPolicyDefinition resources.
-        :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
+        :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -158,7 +158,7 @@ class _ZoneBasedFirewallPolicyDefinitionState:
     @pulumi.getter(name="applyZonePairs")
     def apply_zone_pairs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]]]:
         """
-        , Attribute conditional on `mode` being equal to `security`
+        , Attribute conditional on `mode` equal to `security`
         """
         return pulumi.get(self, "apply_zone_pairs")
 
@@ -294,7 +294,7 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -418,7 +418,7 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -444,7 +444,7 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="applyZonePairs")
     def apply_zone_pairs(self) -> pulumi.Output[Optional[Sequence['outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair']]]:
         """
-        , Attribute conditional on `mode` being equal to `security`
+        , Attribute conditional on `mode` equal to `security`
         """
         return pulumi.get(self, "apply_zone_pairs")
 

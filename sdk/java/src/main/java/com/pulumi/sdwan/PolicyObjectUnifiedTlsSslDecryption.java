@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -240,7 +240,7 @@ public class PolicyObjectUnifiedTlsSslDecryption extends com.pulumi.resources.Cu
         return this.rsaKeypairModules;
     }
     /**
-     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      * 
      */
@@ -248,7 +248,7 @@ public class PolicyObjectUnifiedTlsSslDecryption extends com.pulumi.resources.Cu
     private Output</* @Nullable */ String> unknownRevocationStatus;
 
     /**
-     * @return Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * @return Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      * 
      */

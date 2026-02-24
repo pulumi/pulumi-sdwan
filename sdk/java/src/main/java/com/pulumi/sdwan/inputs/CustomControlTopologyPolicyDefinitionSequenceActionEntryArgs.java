@@ -20,14 +20,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
     public static final CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs Empty = new CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs();
 
     /**
-     * Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
+     * Export to VPN list ID, Attribute conditional on `type` equal to `exportTo`
      * 
      */
     @Import(name="exportToVpnListId")
     private @Nullable Output<String> exportToVpnListId;
 
     /**
-     * @return Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
+     * @return Export to VPN list ID, Attribute conditional on `type` equal to `exportTo`
      * 
      */
     public Optional<Output<String>> exportToVpnListId() {
@@ -50,14 +50,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
     }
 
     /**
-     * List of set parameters, Attribute conditional on `type` being equal to `set`
+     * List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     @Import(name="setParameters")
     private @Nullable Output<List<CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs>> setParameters;
 
     /**
-     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
+     * @return List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     public Optional<Output<List<CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs>>> setParameters() {
@@ -109,7 +109,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
         }
 
         /**
-         * @param exportToVpnListId Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
+         * @param exportToVpnListId Export to VPN list ID, Attribute conditional on `type` equal to `exportTo`
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
         }
 
         /**
-         * @param exportToVpnListId Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
+         * @param exportToVpnListId Export to VPN list ID, Attribute conditional on `type` equal to `exportTo`
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
         }
 
         /**
-         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
+         * @param setParameters List of set parameters, Attribute conditional on `type` equal to `set`
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
         }
 
         /**
-         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
+         * @param setParameters List of set parameters, Attribute conditional on `type` equal to `set`
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs 
         }
 
         /**
-         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
+         * @param setParameters List of set parameters, Attribute conditional on `type` equal to `set`
          * 
          * @return builder
          * 

@@ -17,7 +17,7 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
      */
     private String address;
     /**
-     * @return Set the TACACS server shared key
+     * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String key;
@@ -26,6 +26,11 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
      * 
      */
     private String keyEnum;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String keyVariable;
     /**
      * @return TACACS Port
      * 
@@ -66,7 +71,7 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
         return this.address;
     }
     /**
-     * @return Set the TACACS server shared key
+     * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String key() {
@@ -78,6 +83,13 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
      */
     public String keyEnum() {
         return this.keyEnum;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String keyVariable() {
+        return this.keyVariable;
     }
     /**
      * @return TACACS Port
@@ -134,6 +146,7 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
         private String address;
         private String key;
         private String keyEnum;
+        private String keyVariable;
         private Integer port;
         private String portVariable;
         private String secretKey;
@@ -146,6 +159,7 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
     	      this.address = defaults.address;
     	      this.key = defaults.key;
     	      this.keyEnum = defaults.keyEnum;
+    	      this.keyVariable = defaults.keyVariable;
     	      this.port = defaults.port;
     	      this.portVariable = defaults.portVariable;
     	      this.secretKey = defaults.secretKey;
@@ -176,6 +190,14 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "keyEnum");
             }
             this.keyEnum = keyEnum;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder keyVariable(String keyVariable) {
+            if (keyVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureTacacsGroupServer", "keyVariable");
+            }
+            this.keyVariable = keyVariable;
             return this;
         }
         @CustomType.Setter
@@ -231,6 +253,7 @@ public final class GetSystemAaaFeatureTacacsGroupServer {
             _resultValue.address = address;
             _resultValue.key = key;
             _resultValue.keyEnum = keyEnum;
+            _resultValue.keyVariable = keyVariable;
             _resultValue.port = port;
             _resultValue.portVariable = portVariable;
             _resultValue.secretKey = secretKey;

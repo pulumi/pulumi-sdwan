@@ -84,27 +84,27 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? E1LinecodeVariable { get; set; }
 
         /// <summary>
-        /// length, Attribute conditional on `CableLength` being equal to `Long`
+        /// length, Attribute conditional on `CableLength` equal to `Long`
         ///   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
         /// </summary>
         [Input("lengthLong")]
         public Input<string>? LengthLong { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `CableLength` being equal to `Long`
+        /// Variable name, Attribute conditional on `CableLength` equal to `Long`
         /// </summary>
         [Input("lengthLongVariable")]
         public Input<string>? LengthLongVariable { get; set; }
 
         /// <summary>
-        /// length, Attribute conditional on `CableLength` being equal to `Short`
+        /// length, Attribute conditional on `CableLength` equal to `Short`
         ///   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
         /// </summary>
         [Input("lengthShort")]
         public Input<string>? LengthShort { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `CableLength` being equal to `Short`
+        /// Variable name, Attribute conditional on `CableLength` equal to `Short`
         /// </summary>
         [Input("lengthShortVariable")]
         public Input<string>? LengthShortVariable { get; set; }

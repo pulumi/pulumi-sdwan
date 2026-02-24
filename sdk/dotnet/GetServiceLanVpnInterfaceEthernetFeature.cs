@@ -414,6 +414,96 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly bool Nat64;
         /// <summary>
+        /// Port-Channel interface on/off
+        /// </summary>
+        public readonly bool PortChannelInterface;
+        /// <summary>
+        /// Eanble lacp fast switchover
+        /// </summary>
+        public readonly bool PortChannelLacpFastSwitchover;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpFastSwitchoverVariable;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly string PortChannelLacpLoadBalance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpLoadBalanceVariable;
+        /// <summary>
+        /// Set LACP max bundle
+        /// </summary>
+        public readonly int PortChannelLacpMaxBundle;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpMaxBundleVariable;
+        /// <summary>
+        /// Configure Port-Channel member links
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkResult> PortChannelLacpMemberLinks;
+        /// <summary>
+        /// Set LACP min bundle
+        /// </summary>
+        public readonly int PortChannelLacpMinBundle;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpMinBundleVariable;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly bool PortChannelLacpQosAggregate;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpQosAggregateVariable;
+        /// <summary>
+        /// Port-Channel member interface on/off
+        /// </summary>
+        public readonly bool PortChannelMemberInterface;
+        /// <summary>
+        /// Port Channel Mode
+        /// </summary>
+        public readonly string PortChannelMode;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly string PortChannelStaticLoadBalance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelStaticLoadBalanceVariable;
+        /// <summary>
+        /// Configure Port-Channel member links
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkResult> PortChannelStaticMemberLinks;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly bool PortChannelStaticQosAggregate;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelStaticQosAggregateVariable;
+        /// <summary>
+        /// Port Channel Sub Interface on/off
+        /// </summary>
+        public readonly bool PortChannelSubinterface;
+        public readonly string PortChannelSubinterfacePrimaryInterfaceName;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelSubinterfacePrimaryInterfaceNameVariable;
+        public readonly string PortChannelSubinterfaceSecondaryInterfaceName;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelSubinterfaceSecondaryInterfaceNameVariable;
+        /// <summary>
         /// Service LAN VPN Feature ID
         /// </summary>
         public readonly string ServiceLanVpnFeatureId;
@@ -442,14 +532,6 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string TcpMssVariable;
-        /// <summary>
-        /// Enable tracker for this interface
-        /// </summary>
-        public readonly string Tracker;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string TrackerVariable;
         /// <summary>
         /// Enable/Disable SGT Enforcement on an interface
         /// </summary>
@@ -635,6 +717,54 @@ namespace Pulumi.Sdwan
 
             bool nat64,
 
+            bool portChannelInterface,
+
+            bool portChannelLacpFastSwitchover,
+
+            string portChannelLacpFastSwitchoverVariable,
+
+            string portChannelLacpLoadBalance,
+
+            string portChannelLacpLoadBalanceVariable,
+
+            int portChannelLacpMaxBundle,
+
+            string portChannelLacpMaxBundleVariable,
+
+            ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkResult> portChannelLacpMemberLinks,
+
+            int portChannelLacpMinBundle,
+
+            string portChannelLacpMinBundleVariable,
+
+            bool portChannelLacpQosAggregate,
+
+            string portChannelLacpQosAggregateVariable,
+
+            bool portChannelMemberInterface,
+
+            string portChannelMode,
+
+            string portChannelStaticLoadBalance,
+
+            string portChannelStaticLoadBalanceVariable,
+
+            ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkResult> portChannelStaticMemberLinks,
+
+            bool portChannelStaticQosAggregate,
+
+            string portChannelStaticQosAggregateVariable,
+
+            bool portChannelSubinterface,
+
+            string portChannelSubinterfacePrimaryInterfaceName,
+
+            string portChannelSubinterfacePrimaryInterfaceNameVariable,
+
+            string portChannelSubinterfaceSecondaryInterfaceName,
+
+            string portChannelSubinterfaceSecondaryInterfaceNameVariable,
+
             string serviceLanVpnFeatureId,
 
             bool shutdown,
@@ -650,10 +780,6 @@ namespace Pulumi.Sdwan
             int tcpMss,
 
             string tcpMssVariable,
-
-            string tracker,
-
-            string trackerVariable,
 
             bool trustsecEnableEnforcedPropogation,
 
@@ -746,6 +872,30 @@ namespace Pulumi.Sdwan
             MediaTypeVariable = mediaTypeVariable;
             Name = name;
             Nat64 = nat64;
+            PortChannelInterface = portChannelInterface;
+            PortChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            PortChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            PortChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            PortChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            PortChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            PortChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            PortChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            PortChannelLacpMinBundle = portChannelLacpMinBundle;
+            PortChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            PortChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            PortChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            PortChannelMemberInterface = portChannelMemberInterface;
+            PortChannelMode = portChannelMode;
+            PortChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            PortChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            PortChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            PortChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            PortChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            PortChannelSubinterface = portChannelSubinterface;
+            PortChannelSubinterfacePrimaryInterfaceName = portChannelSubinterfacePrimaryInterfaceName;
+            PortChannelSubinterfacePrimaryInterfaceNameVariable = portChannelSubinterfacePrimaryInterfaceNameVariable;
+            PortChannelSubinterfaceSecondaryInterfaceName = portChannelSubinterfaceSecondaryInterfaceName;
+            PortChannelSubinterfaceSecondaryInterfaceNameVariable = portChannelSubinterfaceSecondaryInterfaceNameVariable;
             ServiceLanVpnFeatureId = serviceLanVpnFeatureId;
             Shutdown = shutdown;
             ShutdownVariable = shutdownVariable;
@@ -754,8 +904,6 @@ namespace Pulumi.Sdwan
             StaticNats = staticNats;
             TcpMss = tcpMss;
             TcpMssVariable = tcpMssVariable;
-            Tracker = tracker;
-            TrackerVariable = trackerVariable;
             TrustsecEnableEnforcedPropogation = trustsecEnableEnforcedPropogation;
             TrustsecEnableSgtPropogation = trustsecEnableSgtPropogation;
             TrustsecEnforcedSecurityGroupTag = trustsecEnforcedSecurityGroupTag;

@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string NameVariable;
         /// <summary>
-        /// Set the user password
+        /// Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         public readonly string Password;
         /// <summary>

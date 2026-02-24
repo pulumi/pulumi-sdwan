@@ -97,6 +97,74 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
+     * 
+     */
+    @Import(name="dpdInterval")
+    private @Nullable Output<Integer> dpdInterval;
+
+    /**
+     * @return IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
+     * 
+     */
+    public Optional<Output<Integer>> dpdInterval() {
+        return Optional.ofNullable(this.dpdInterval);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="dpdIntervalVariable")
+    private @Nullable Output<String> dpdIntervalVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> dpdIntervalVariable() {
+        return Optional.ofNullable(this.dpdIntervalVariable);
+    }
+
+    /**
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     * 
+     */
+    @Import(name="dpdRetries")
+    private @Nullable Output<Integer> dpdRetries;
+
+    /**
+     * @return IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     * 
+     */
+    public Optional<Output<Integer>> dpdRetries() {
+        return Optional.ofNullable(this.dpdRetries);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="dpdRetriesVariable")
+    private @Nullable Output<String> dpdRetriesVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> dpdRetriesVariable() {
+        return Optional.ofNullable(this.dpdRetriesVariable);
+    }
+
+    /**
      * Feature Profile ID
      * 
      */
@@ -109,6 +177,221 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
      */
     public Optional<Output<String>> featureProfileId() {
         return Optional.ofNullable(this.featureProfileId);
+    }
+
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     * 
+     */
+    @Import(name="ikeCiphersuite")
+    private @Nullable Output<String> ikeCiphersuite;
+
+    /**
+     * @return IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     * 
+     */
+    public Optional<Output<String>> ikeCiphersuite() {
+        return Optional.ofNullable(this.ikeCiphersuite);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ikeCiphersuiteVariable")
+    private @Nullable Output<String> ikeCiphersuiteVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ikeCiphersuiteVariable() {
+        return Optional.ofNullable(this.ikeCiphersuiteVariable);
+    }
+
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
+     * 
+     */
+    @Import(name="ikeGroup")
+    private @Nullable Output<String> ikeGroup;
+
+    /**
+     * @return IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
+     * 
+     */
+    public Optional<Output<String>> ikeGroup() {
+        return Optional.ofNullable(this.ikeGroup);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ikeGroupVariable")
+    private @Nullable Output<String> ikeGroupVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ikeGroupVariable() {
+        return Optional.ofNullable(this.ikeGroupVariable);
+    }
+
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    @Import(name="ikeLocalId")
+    private @Nullable Output<String> ikeLocalId;
+
+    /**
+     * @return IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    public Optional<Output<String>> ikeLocalId() {
+        return Optional.ofNullable(this.ikeLocalId);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ikeLocalIdVariable")
+    private @Nullable Output<String> ikeLocalIdVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ikeLocalIdVariable() {
+        return Optional.ofNullable(this.ikeLocalIdVariable);
+    }
+
+    /**
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
+     * 
+     */
+    @Import(name="ikeMode")
+    private @Nullable Output<String> ikeMode;
+
+    /**
+     * @return IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
+     * 
+     */
+    public Optional<Output<String>> ikeMode() {
+        return Optional.ofNullable(this.ikeMode);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ikeModeVariable")
+    private @Nullable Output<String> ikeModeVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ikeModeVariable() {
+        return Optional.ofNullable(this.ikeModeVariable);
+    }
+
+    /**
+     * IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
+     * 
+     */
+    @Import(name="ikeRekeyInterval")
+    private @Nullable Output<Integer> ikeRekeyInterval;
+
+    /**
+     * @return IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
+     * 
+     */
+    public Optional<Output<Integer>> ikeRekeyInterval() {
+        return Optional.ofNullable(this.ikeRekeyInterval);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ikeRekeyIntervalVariable")
+    private @Nullable Output<String> ikeRekeyIntervalVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ikeRekeyIntervalVariable() {
+        return Optional.ofNullable(this.ikeRekeyIntervalVariable);
+    }
+
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    @Import(name="ikeRemoteId")
+    private @Nullable Output<String> ikeRemoteId;
+
+    /**
+     * @return IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    public Optional<Output<String>> ikeRemoteId() {
+        return Optional.ofNullable(this.ikeRemoteId);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ikeRemoteIdVariable")
+    private @Nullable Output<String> ikeRemoteIdVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ikeRemoteIdVariable() {
+        return Optional.ofNullable(this.ikeRemoteIdVariable);
+    }
+
+    /**
+     * IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
+     * 
+     */
+    @Import(name="ikeVersion")
+    private @Nullable Output<Integer> ikeVersion;
+
+    /**
+     * @return IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
+     * 
+     */
+    public Optional<Output<Integer>> ikeVersion() {
+        return Optional.ofNullable(this.ikeVersion);
     }
 
     /**
@@ -172,55 +455,131 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Interface MTU &lt;576..9976&gt;, in bytes
-     *   - Range: `576`-`9976`
-     *   - Default value: `1500`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
-    @Import(name="ipMtu")
-    private @Nullable Output<Integer> ipMtu;
+    @Import(name="ipsecCiphersuite")
+    private @Nullable Output<String> ipsecCiphersuite;
 
     /**
-     * @return Interface MTU &lt;576..9976&gt;, in bytes
-     *   - Range: `576`-`9976`
-     *   - Default value: `1500`
+     * @return IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
-    public Optional<Output<Integer>> ipMtu() {
-        return Optional.ofNullable(this.ipMtu);
+    public Optional<Output<String>> ipsecCiphersuite() {
+        return Optional.ofNullable(this.ipsecCiphersuite);
     }
 
     /**
      * Variable name
      * 
      */
-    @Import(name="ipMtuVariable")
-    private @Nullable Output<String> ipMtuVariable;
+    @Import(name="ipsecCiphersuiteVariable")
+    private @Nullable Output<String> ipsecCiphersuiteVariable;
 
     /**
      * @return Variable name
      * 
      */
-    public Optional<Output<String>> ipMtuVariable() {
-        return Optional.ofNullable(this.ipMtuVariable);
+    public Optional<Output<String>> ipsecCiphersuiteVariable() {
+        return Optional.ofNullable(this.ipsecCiphersuiteVariable);
     }
 
+    /**
+     * IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
+     * 
+     */
+    @Import(name="ipsecRekeyInterval")
+    private @Nullable Output<Integer> ipsecRekeyInterval;
+
+    /**
+     * @return IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
+     * 
+     */
+    public Optional<Output<Integer>> ipsecRekeyInterval() {
+        return Optional.ofNullable(this.ipsecRekeyInterval);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ipsecRekeyIntervalVariable")
+    private @Nullable Output<String> ipsecRekeyIntervalVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ipsecRekeyIntervalVariable() {
+        return Optional.ofNullable(this.ipsecRekeyIntervalVariable);
+    }
+
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
+     * 
+     */
+    @Import(name="ipsecReplayWindow")
+    private @Nullable Output<Integer> ipsecReplayWindow;
+
+    /**
+     * @return Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
+     * 
+     */
+    public Optional<Output<Integer>> ipsecReplayWindow() {
+        return Optional.ofNullable(this.ipsecReplayWindow);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="ipsecReplayWindowVariable")
+    private @Nullable Output<String> ipsecReplayWindowVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> ipsecReplayWindowVariable() {
+        return Optional.ofNullable(this.ipsecReplayWindowVariable);
+    }
+
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
+    /**
+     * @return , Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
     public Optional<Output<String>> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -228,14 +587,50 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
+     * 
+     */
+    @Import(name="ipv4Mtu")
+    private @Nullable Output<Integer> ipv4Mtu;
+
+    /**
+     * @return Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
+     * 
+     */
+    public Optional<Output<Integer>> ipv4Mtu() {
+        return Optional.ofNullable(this.ipv4Mtu);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    @Import(name="ipv4MtuVariable")
+    private @Nullable Output<String> ipv4MtuVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    public Optional<Output<String>> ipv4MtuVariable() {
+        return Optional.ofNullable(this.ipv4MtuVariable);
+    }
+
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return , Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -243,18 +638,176 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
         return Optional.ofNullable(this.ipv4SubnetMaskVariable);
+    }
+
+    /**
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `500`-`1460`
+     * 
+     */
+    @Import(name="ipv4TcpMss")
+    private @Nullable Output<Integer> ipv4TcpMss;
+
+    /**
+     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `500`-`1460`
+     * 
+     */
+    public Optional<Output<Integer>> ipv4TcpMss() {
+        return Optional.ofNullable(this.ipv4TcpMss);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    @Import(name="ipv4TcpMssVariable")
+    private @Nullable Output<String> ipv4TcpMssVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    public Optional<Output<String>> ipv4TcpMssVariable() {
+        return Optional.ofNullable(this.ipv4TcpMssVariable);
+    }
+
+    /**
+     * Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="ipv6Address")
+    private @Nullable Output<String> ipv6Address;
+
+    /**
+     * @return Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> ipv6Address() {
+        return Optional.ofNullable(this.ipv6Address);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="ipv6AddressVariable")
+    private @Nullable Output<String> ipv6AddressVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> ipv6AddressVariable() {
+        return Optional.ofNullable(this.ipv6AddressVariable);
+    }
+
+    /**
+     * Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     *   - Range: `1280`-`9976`
+     * 
+     */
+    @Import(name="ipv6Mtu")
+    private @Nullable Output<Integer> ipv6Mtu;
+
+    /**
+     * @return Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     *   - Range: `1280`-`9976`
+     * 
+     */
+    public Optional<Output<Integer>> ipv6Mtu() {
+        return Optional.ofNullable(this.ipv6Mtu);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="ipv6MtuVariable")
+    private @Nullable Output<String> ipv6MtuVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> ipv6MtuVariable() {
+        return Optional.ofNullable(this.ipv6MtuVariable);
+    }
+
+    /**
+     * IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     *   - Range: `40`-`1454`
+     * 
+     */
+    @Import(name="ipv6TcpMss")
+    private @Nullable Output<Integer> ipv6TcpMss;
+
+    /**
+     * @return IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     *   - Range: `40`-`1454`
+     * 
+     */
+    public Optional<Output<Integer>> ipv6TcpMss() {
+        return Optional.ofNullable(this.ipv6TcpMss);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="ipv6TcpMssVariable")
+    private @Nullable Output<String> ipv6TcpMssVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> ipv6TcpMssVariable() {
+        return Optional.ofNullable(this.ipv6TcpMssVariable);
+    }
+
+    /**
+     * Tunnel multiplexing state
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="multiplexing")
+    private @Nullable Output<Boolean> multiplexing;
+
+    /**
+     * @return Tunnel multiplexing state
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> multiplexing() {
+        return Optional.ofNullable(this.multiplexing);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="multiplexingVariable")
+    private @Nullable Output<String> multiplexingVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> multiplexingVariable() {
+        return Optional.ofNullable(this.multiplexingVariable);
     }
 
     /**
@@ -270,6 +823,70 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
      */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
+     * 
+     */
+    @Import(name="perfectForwardSecrecy")
+    private @Nullable Output<String> perfectForwardSecrecy;
+
+    /**
+     * @return IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
+     * 
+     */
+    public Optional<Output<String>> perfectForwardSecrecy() {
+        return Optional.ofNullable(this.perfectForwardSecrecy);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="perfectForwardSecrecyVariable")
+    private @Nullable Output<String> perfectForwardSecrecyVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> perfectForwardSecrecyVariable() {
+        return Optional.ofNullable(this.perfectForwardSecrecyVariable);
+    }
+
+    /**
+     * Use preshared key to authenticate IKE peer
+     * 
+     */
+    @Import(name="preSharedSecret")
+    private @Nullable Output<String> preSharedSecret;
+
+    /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    public Optional<Output<String>> preSharedSecret() {
+        return Optional.ofNullable(this.preSharedSecret);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="preSharedSecretVariable")
+    private @Nullable Output<String> preSharedSecretVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> preSharedSecretVariable() {
+        return Optional.ofNullable(this.preSharedSecretVariable);
     }
 
     /**
@@ -305,38 +922,6 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes
-     *   - Range: `500`-`1460`
-     * 
-     */
-    @Import(name="tcpMss")
-    private @Nullable Output<Integer> tcpMss;
-
-    /**
-     * @return TCP MSS on SYN packets, in bytes
-     *   - Range: `500`-`1460`
-     * 
-     */
-    public Optional<Output<Integer>> tcpMss() {
-        return Optional.ofNullable(this.tcpMss);
-    }
-
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="tcpMssVariable")
-    private @Nullable Output<String> tcpMssVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> tcpMssVariable() {
-        return Optional.ofNullable(this.tcpMssVariable);
-    }
-
-    /**
      * Transport WAN VPN Feature ID
      * 
      */
@@ -352,14 +937,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Tunnel destination IP Address
+     * Tunnel destination IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelDestinationIpv4Address")
     private @Nullable Output<String> tunnelDestinationIpv4Address;
 
     /**
-     * @return Tunnel destination IP Address
+     * @return Tunnel destination IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelDestinationIpv4Address() {
@@ -367,14 +952,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelDestinationIpv4AddressVariable")
     private @Nullable Output<String> tunnelDestinationIpv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelDestinationIpv4AddressVariable() {
@@ -382,14 +967,170 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name, can&#39;t be Loopback interface
+     * Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="tunnelDestinationIpv6Address")
+    private @Nullable Output<String> tunnelDestinationIpv6Address;
+
+    /**
+     * @return Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> tunnelDestinationIpv6Address() {
+        return Optional.ofNullable(this.tunnelDestinationIpv6Address);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="tunnelDestinationIpv6AddressVariable")
+    private @Nullable Output<String> tunnelDestinationIpv6AddressVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> tunnelDestinationIpv6AddressVariable() {
+        return Optional.ofNullable(this.tunnelDestinationIpv6AddressVariable);
+    }
+
+    /**
+     * GRE Tunnel Mode
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     * 
+     */
+    @Import(name="tunnelMode")
+    private @Nullable Output<String> tunnelMode;
+
+    /**
+     * @return GRE Tunnel Mode
+     *   - Choices: `ipv4`, `ipv6`
+     *   - Default value: `ipv4`
+     * 
+     */
+    public Optional<Output<String>> tunnelMode() {
+        return Optional.ofNullable(this.tunnelMode);
+    }
+
+    /**
+     * Tunnel protection state
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="tunnelProtection")
+    private @Nullable Output<Boolean> tunnelProtection;
+
+    /**
+     * @return Tunnel protection state
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> tunnelProtection() {
+        return Optional.ofNullable(this.tunnelProtection);
+    }
+
+    /**
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    @Import(name="tunnelRouteViaInterface")
+    private @Nullable Output<String> tunnelRouteViaInterface;
+
+    /**
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    public Optional<Output<String>> tunnelRouteViaInterface() {
+        return Optional.ofNullable(this.tunnelRouteViaInterface);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    @Import(name="tunnelRouteViaInterfaceVariable")
+    private @Nullable Output<String> tunnelRouteViaInterfaceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    public Optional<Output<String>> tunnelRouteViaInterfaceVariable() {
+        return Optional.ofNullable(this.tunnelRouteViaInterfaceVariable);
+    }
+
+    /**
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    @Import(name="tunnelRouteViaIpv4Address")
+    private @Nullable Output<String> tunnelRouteViaIpv4Address;
+
+    /**
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    public Optional<Output<String>> tunnelRouteViaIpv4Address() {
+        return Optional.ofNullable(this.tunnelRouteViaIpv4Address);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    @Import(name="tunnelRouteViaIpv4AddressVariable")
+    private @Nullable Output<String> tunnelRouteViaIpv4AddressVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * 
+     */
+    public Optional<Output<String>> tunnelRouteViaIpv4AddressVariable() {
+        return Optional.ofNullable(this.tunnelRouteViaIpv4AddressVariable);
+    }
+
+    /**
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="tunnelRouteViaIpv6Address")
+    private @Nullable Output<String> tunnelRouteViaIpv6Address;
+
+    /**
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> tunnelRouteViaIpv6Address() {
+        return Optional.ofNullable(this.tunnelRouteViaIpv6Address);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="tunnelRouteViaIpv6AddressVariable")
+    private @Nullable Output<String> tunnelRouteViaIpv6AddressVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> tunnelRouteViaIpv6AddressVariable() {
+        return Optional.ofNullable(this.tunnelRouteViaIpv6AddressVariable);
+    }
+
+    /**
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelRouteViaLoopback")
     private @Nullable Output<String> tunnelRouteViaLoopback;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name, can&#39;t be Loopback interface
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelRouteViaLoopback() {
@@ -397,14 +1138,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelRouteViaLoopbackVariable")
     private @Nullable Output<String> tunnelRouteViaLoopbackVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelRouteViaLoopbackVariable() {
@@ -412,14 +1153,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name
+     * &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelSourceInterface")
     private @Nullable Output<String> tunnelSourceInterface;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name
+     * @return &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelSourceInterface() {
@@ -427,14 +1168,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name
+     * &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelSourceInterfaceLoopback")
     private @Nullable Output<String> tunnelSourceInterfaceLoopback;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name
+     * @return &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelSourceInterfaceLoopback() {
@@ -442,14 +1183,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelSourceInterfaceLoopbackVariable")
     private @Nullable Output<String> tunnelSourceInterfaceLoopbackVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelSourceInterfaceLoopbackVariable() {
@@ -457,14 +1198,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelSourceInterfaceVariable")
     private @Nullable Output<String> tunnelSourceInterfaceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelSourceInterfaceVariable() {
@@ -472,14 +1213,14 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Tunnel source IP Address
+     * Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelSourceIpv4Address")
     private @Nullable Output<String> tunnelSourceIpv4Address;
 
     /**
-     * @return Tunnel source IP Address
+     * @return Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelSourceIpv4Address() {
@@ -487,18 +1228,48 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     @Import(name="tunnelSourceIpv4AddressVariable")
     private @Nullable Output<String> tunnelSourceIpv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      * 
      */
     public Optional<Output<String>> tunnelSourceIpv4AddressVariable() {
         return Optional.ofNullable(this.tunnelSourceIpv4AddressVariable);
+    }
+
+    /**
+     * Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="tunnelSourceIpv6Address")
+    private @Nullable Output<String> tunnelSourceIpv6Address;
+
+    /**
+     * @return Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> tunnelSourceIpv6Address() {
+        return Optional.ofNullable(this.tunnelSourceIpv6Address);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    @Import(name="tunnelSourceIpv6AddressVariable")
+    private @Nullable Output<String> tunnelSourceIpv6AddressVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * 
+     */
+    public Optional<Output<String>> tunnelSourceIpv6AddressVariable() {
+        return Optional.ofNullable(this.tunnelSourceIpv6AddressVariable);
     }
 
     /**
@@ -524,25 +1295,70 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         this.clearDontFragment = $.clearDontFragment;
         this.clearDontFragmentVariable = $.clearDontFragmentVariable;
         this.description = $.description;
+        this.dpdInterval = $.dpdInterval;
+        this.dpdIntervalVariable = $.dpdIntervalVariable;
+        this.dpdRetries = $.dpdRetries;
+        this.dpdRetriesVariable = $.dpdRetriesVariable;
         this.featureProfileId = $.featureProfileId;
+        this.ikeCiphersuite = $.ikeCiphersuite;
+        this.ikeCiphersuiteVariable = $.ikeCiphersuiteVariable;
+        this.ikeGroup = $.ikeGroup;
+        this.ikeGroupVariable = $.ikeGroupVariable;
+        this.ikeLocalId = $.ikeLocalId;
+        this.ikeLocalIdVariable = $.ikeLocalIdVariable;
+        this.ikeMode = $.ikeMode;
+        this.ikeModeVariable = $.ikeModeVariable;
+        this.ikeRekeyInterval = $.ikeRekeyInterval;
+        this.ikeRekeyIntervalVariable = $.ikeRekeyIntervalVariable;
+        this.ikeRemoteId = $.ikeRemoteId;
+        this.ikeRemoteIdVariable = $.ikeRemoteIdVariable;
+        this.ikeVersion = $.ikeVersion;
         this.interfaceDescription = $.interfaceDescription;
         this.interfaceDescriptionVariable = $.interfaceDescriptionVariable;
         this.interfaceName = $.interfaceName;
         this.interfaceNameVariable = $.interfaceNameVariable;
-        this.ipMtu = $.ipMtu;
-        this.ipMtuVariable = $.ipMtuVariable;
+        this.ipsecCiphersuite = $.ipsecCiphersuite;
+        this.ipsecCiphersuiteVariable = $.ipsecCiphersuiteVariable;
+        this.ipsecRekeyInterval = $.ipsecRekeyInterval;
+        this.ipsecRekeyIntervalVariable = $.ipsecRekeyIntervalVariable;
+        this.ipsecReplayWindow = $.ipsecReplayWindow;
+        this.ipsecReplayWindowVariable = $.ipsecReplayWindowVariable;
         this.ipv4Address = $.ipv4Address;
         this.ipv4AddressVariable = $.ipv4AddressVariable;
+        this.ipv4Mtu = $.ipv4Mtu;
+        this.ipv4MtuVariable = $.ipv4MtuVariable;
         this.ipv4SubnetMask = $.ipv4SubnetMask;
         this.ipv4SubnetMaskVariable = $.ipv4SubnetMaskVariable;
+        this.ipv4TcpMss = $.ipv4TcpMss;
+        this.ipv4TcpMssVariable = $.ipv4TcpMssVariable;
+        this.ipv6Address = $.ipv6Address;
+        this.ipv6AddressVariable = $.ipv6AddressVariable;
+        this.ipv6Mtu = $.ipv6Mtu;
+        this.ipv6MtuVariable = $.ipv6MtuVariable;
+        this.ipv6TcpMss = $.ipv6TcpMss;
+        this.ipv6TcpMssVariable = $.ipv6TcpMssVariable;
+        this.multiplexing = $.multiplexing;
+        this.multiplexingVariable = $.multiplexingVariable;
         this.name = $.name;
+        this.perfectForwardSecrecy = $.perfectForwardSecrecy;
+        this.perfectForwardSecrecyVariable = $.perfectForwardSecrecyVariable;
+        this.preSharedSecret = $.preSharedSecret;
+        this.preSharedSecretVariable = $.preSharedSecretVariable;
         this.shutdown = $.shutdown;
         this.shutdownVariable = $.shutdownVariable;
-        this.tcpMss = $.tcpMss;
-        this.tcpMssVariable = $.tcpMssVariable;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
         this.tunnelDestinationIpv4Address = $.tunnelDestinationIpv4Address;
         this.tunnelDestinationIpv4AddressVariable = $.tunnelDestinationIpv4AddressVariable;
+        this.tunnelDestinationIpv6Address = $.tunnelDestinationIpv6Address;
+        this.tunnelDestinationIpv6AddressVariable = $.tunnelDestinationIpv6AddressVariable;
+        this.tunnelMode = $.tunnelMode;
+        this.tunnelProtection = $.tunnelProtection;
+        this.tunnelRouteViaInterface = $.tunnelRouteViaInterface;
+        this.tunnelRouteViaInterfaceVariable = $.tunnelRouteViaInterfaceVariable;
+        this.tunnelRouteViaIpv4Address = $.tunnelRouteViaIpv4Address;
+        this.tunnelRouteViaIpv4AddressVariable = $.tunnelRouteViaIpv4AddressVariable;
+        this.tunnelRouteViaIpv6Address = $.tunnelRouteViaIpv6Address;
+        this.tunnelRouteViaIpv6AddressVariable = $.tunnelRouteViaIpv6AddressVariable;
         this.tunnelRouteViaLoopback = $.tunnelRouteViaLoopback;
         this.tunnelRouteViaLoopbackVariable = $.tunnelRouteViaLoopbackVariable;
         this.tunnelSourceInterface = $.tunnelSourceInterface;
@@ -551,6 +1367,8 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         this.tunnelSourceInterfaceVariable = $.tunnelSourceInterfaceVariable;
         this.tunnelSourceIpv4Address = $.tunnelSourceIpv4Address;
         this.tunnelSourceIpv4AddressVariable = $.tunnelSourceIpv4AddressVariable;
+        this.tunnelSourceIpv6Address = $.tunnelSourceIpv6Address;
+        this.tunnelSourceIpv6AddressVariable = $.tunnelSourceIpv6AddressVariable;
         this.version = $.version;
     }
 
@@ -682,6 +1500,98 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
+         * @param dpdInterval IKE keepalive interval (seconds)
+         *   - Range: `10`-`3600`
+         *   - Default value: `10`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdInterval(@Nullable Output<Integer> dpdInterval) {
+            $.dpdInterval = dpdInterval;
+            return this;
+        }
+
+        /**
+         * @param dpdInterval IKE keepalive interval (seconds)
+         *   - Range: `10`-`3600`
+         *   - Default value: `10`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdInterval(Integer dpdInterval) {
+            return dpdInterval(Output.of(dpdInterval));
+        }
+
+        /**
+         * @param dpdIntervalVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdIntervalVariable(@Nullable Output<String> dpdIntervalVariable) {
+            $.dpdIntervalVariable = dpdIntervalVariable;
+            return this;
+        }
+
+        /**
+         * @param dpdIntervalVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdIntervalVariable(String dpdIntervalVariable) {
+            return dpdIntervalVariable(Output.of(dpdIntervalVariable));
+        }
+
+        /**
+         * @param dpdRetries IKE keepalive retries
+         *   - Range: `2`-`60`
+         *   - Default value: `3`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdRetries(@Nullable Output<Integer> dpdRetries) {
+            $.dpdRetries = dpdRetries;
+            return this;
+        }
+
+        /**
+         * @param dpdRetries IKE keepalive retries
+         *   - Range: `2`-`60`
+         *   - Default value: `3`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdRetries(Integer dpdRetries) {
+            return dpdRetries(Output.of(dpdRetries));
+        }
+
+        /**
+         * @param dpdRetriesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdRetriesVariable(@Nullable Output<String> dpdRetriesVariable) {
+            $.dpdRetriesVariable = dpdRetriesVariable;
+            return this;
+        }
+
+        /**
+         * @param dpdRetriesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dpdRetriesVariable(String dpdRetriesVariable) {
+            return dpdRetriesVariable(Output.of(dpdRetriesVariable));
+        }
+
+        /**
          * @param featureProfileId Feature Profile ID
          * 
          * @return builder
@@ -700,6 +1610,299 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
          */
         public Builder featureProfileId(String featureProfileId) {
             return featureProfileId(Output.of(featureProfileId));
+        }
+
+        /**
+         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+         *   - Default value: `aes256-cbc-sha1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeCiphersuite(@Nullable Output<String> ikeCiphersuite) {
+            $.ikeCiphersuite = ikeCiphersuite;
+            return this;
+        }
+
+        /**
+         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+         *   - Default value: `aes256-cbc-sha1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeCiphersuite(String ikeCiphersuite) {
+            return ikeCiphersuite(Output.of(ikeCiphersuite));
+        }
+
+        /**
+         * @param ikeCiphersuiteVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeCiphersuiteVariable(@Nullable Output<String> ikeCiphersuiteVariable) {
+            $.ikeCiphersuiteVariable = ikeCiphersuiteVariable;
+            return this;
+        }
+
+        /**
+         * @param ikeCiphersuiteVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeCiphersuiteVariable(String ikeCiphersuiteVariable) {
+            return ikeCiphersuiteVariable(Output.of(ikeCiphersuiteVariable));
+        }
+
+        /**
+         * @param ikeGroup IKE Diffie Hellman Groups
+         *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+         *   - Default value: `16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeGroup(@Nullable Output<String> ikeGroup) {
+            $.ikeGroup = ikeGroup;
+            return this;
+        }
+
+        /**
+         * @param ikeGroup IKE Diffie Hellman Groups
+         *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+         *   - Default value: `16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeGroup(String ikeGroup) {
+            return ikeGroup(Output.of(ikeGroup));
+        }
+
+        /**
+         * @param ikeGroupVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeGroupVariable(@Nullable Output<String> ikeGroupVariable) {
+            $.ikeGroupVariable = ikeGroupVariable;
+            return this;
+        }
+
+        /**
+         * @param ikeGroupVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeGroupVariable(String ikeGroupVariable) {
+            return ikeGroupVariable(Output.of(ikeGroupVariable));
+        }
+
+        /**
+         * @param ikeLocalId IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeLocalId(@Nullable Output<String> ikeLocalId) {
+            $.ikeLocalId = ikeLocalId;
+            return this;
+        }
+
+        /**
+         * @param ikeLocalId IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeLocalId(String ikeLocalId) {
+            return ikeLocalId(Output.of(ikeLocalId));
+        }
+
+        /**
+         * @param ikeLocalIdVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeLocalIdVariable(@Nullable Output<String> ikeLocalIdVariable) {
+            $.ikeLocalIdVariable = ikeLocalIdVariable;
+            return this;
+        }
+
+        /**
+         * @param ikeLocalIdVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeLocalIdVariable(String ikeLocalIdVariable) {
+            return ikeLocalIdVariable(Output.of(ikeLocalIdVariable));
+        }
+
+        /**
+         * @param ikeMode IKE integrity protocol
+         *   - Choices: `main`, `aggressive`
+         *   - Default value: `main`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeMode(@Nullable Output<String> ikeMode) {
+            $.ikeMode = ikeMode;
+            return this;
+        }
+
+        /**
+         * @param ikeMode IKE integrity protocol
+         *   - Choices: `main`, `aggressive`
+         *   - Default value: `main`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeMode(String ikeMode) {
+            return ikeMode(Output.of(ikeMode));
+        }
+
+        /**
+         * @param ikeModeVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeModeVariable(@Nullable Output<String> ikeModeVariable) {
+            $.ikeModeVariable = ikeModeVariable;
+            return this;
+        }
+
+        /**
+         * @param ikeModeVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeModeVariable(String ikeModeVariable) {
+            return ikeModeVariable(Output.of(ikeModeVariable));
+        }
+
+        /**
+         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds
+         *   - Range: `60`-`86400`
+         *   - Default value: `14400`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRekeyInterval(@Nullable Output<Integer> ikeRekeyInterval) {
+            $.ikeRekeyInterval = ikeRekeyInterval;
+            return this;
+        }
+
+        /**
+         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds
+         *   - Range: `60`-`86400`
+         *   - Default value: `14400`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRekeyInterval(Integer ikeRekeyInterval) {
+            return ikeRekeyInterval(Output.of(ikeRekeyInterval));
+        }
+
+        /**
+         * @param ikeRekeyIntervalVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRekeyIntervalVariable(@Nullable Output<String> ikeRekeyIntervalVariable) {
+            $.ikeRekeyIntervalVariable = ikeRekeyIntervalVariable;
+            return this;
+        }
+
+        /**
+         * @param ikeRekeyIntervalVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRekeyIntervalVariable(String ikeRekeyIntervalVariable) {
+            return ikeRekeyIntervalVariable(Output.of(ikeRekeyIntervalVariable));
+        }
+
+        /**
+         * @param ikeRemoteId IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRemoteId(@Nullable Output<String> ikeRemoteId) {
+            $.ikeRemoteId = ikeRemoteId;
+            return this;
+        }
+
+        /**
+         * @param ikeRemoteId IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRemoteId(String ikeRemoteId) {
+            return ikeRemoteId(Output.of(ikeRemoteId));
+        }
+
+        /**
+         * @param ikeRemoteIdVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRemoteIdVariable(@Nullable Output<String> ikeRemoteIdVariable) {
+            $.ikeRemoteIdVariable = ikeRemoteIdVariable;
+            return this;
+        }
+
+        /**
+         * @param ikeRemoteIdVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeRemoteIdVariable(String ikeRemoteIdVariable) {
+            return ikeRemoteIdVariable(Output.of(ikeRemoteIdVariable));
+        }
+
+        /**
+         * @param ikeVersion IKE Version &lt;1..2&gt;
+         *   - Range: `1`-`2`
+         *   - Default value: `1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeVersion(@Nullable Output<Integer> ikeVersion) {
+            $.ikeVersion = ikeVersion;
+            return this;
+        }
+
+        /**
+         * @param ikeVersion IKE Version &lt;1..2&gt;
+         *   - Range: `1`-`2`
+         *   - Default value: `1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ikeVersion(Integer ikeVersion) {
+            return ikeVersion(Output.of(ikeVersion));
         }
 
         /**
@@ -787,62 +1990,166 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;576..9976&gt;, in bytes
-         *   - Range: `576`-`9976`
-         *   - Default value: `1500`
+         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+         *   - Default value: `aes256-gcm`
          * 
          * @return builder
          * 
          */
-        public Builder ipMtu(@Nullable Output<Integer> ipMtu) {
-            $.ipMtu = ipMtu;
+        public Builder ipsecCiphersuite(@Nullable Output<String> ipsecCiphersuite) {
+            $.ipsecCiphersuite = ipsecCiphersuite;
             return this;
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;576..9976&gt;, in bytes
-         *   - Range: `576`-`9976`
-         *   - Default value: `1500`
+         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+         *   - Default value: `aes256-gcm`
          * 
          * @return builder
          * 
          */
-        public Builder ipMtu(Integer ipMtu) {
-            return ipMtu(Output.of(ipMtu));
+        public Builder ipsecCiphersuite(String ipsecCiphersuite) {
+            return ipsecCiphersuite(Output.of(ipsecCiphersuite));
         }
 
         /**
-         * @param ipMtuVariable Variable name
+         * @param ipsecCiphersuiteVariable Variable name
          * 
          * @return builder
          * 
          */
-        public Builder ipMtuVariable(@Nullable Output<String> ipMtuVariable) {
-            $.ipMtuVariable = ipMtuVariable;
+        public Builder ipsecCiphersuiteVariable(@Nullable Output<String> ipsecCiphersuiteVariable) {
+            $.ipsecCiphersuiteVariable = ipsecCiphersuiteVariable;
             return this;
         }
 
         /**
-         * @param ipMtuVariable Variable name
+         * @param ipsecCiphersuiteVariable Variable name
          * 
          * @return builder
          * 
          */
-        public Builder ipMtuVariable(String ipMtuVariable) {
-            return ipMtuVariable(Output.of(ipMtuVariable));
+        public Builder ipsecCiphersuiteVariable(String ipsecCiphersuiteVariable) {
+            return ipsecCiphersuiteVariable(Output.of(ipsecCiphersuiteVariable));
         }
 
+        /**
+         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds
+         *   - Range: `120`-`2592000`
+         *   - Default value: `3600`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecRekeyInterval(@Nullable Output<Integer> ipsecRekeyInterval) {
+            $.ipsecRekeyInterval = ipsecRekeyInterval;
+            return this;
+        }
+
+        /**
+         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds
+         *   - Range: `120`-`2592000`
+         *   - Default value: `3600`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecRekeyInterval(Integer ipsecRekeyInterval) {
+            return ipsecRekeyInterval(Output.of(ipsecRekeyInterval));
+        }
+
+        /**
+         * @param ipsecRekeyIntervalVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecRekeyIntervalVariable(@Nullable Output<String> ipsecRekeyIntervalVariable) {
+            $.ipsecRekeyIntervalVariable = ipsecRekeyIntervalVariable;
+            return this;
+        }
+
+        /**
+         * @param ipsecRekeyIntervalVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecRekeyIntervalVariable(String ipsecRekeyIntervalVariable) {
+            return ipsecRekeyIntervalVariable(Output.of(ipsecRekeyIntervalVariable));
+        }
+
+        /**
+         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2)
+         *   - Range: `64`-`4096`
+         *   - Default value: `512`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecReplayWindow(@Nullable Output<Integer> ipsecReplayWindow) {
+            $.ipsecReplayWindow = ipsecReplayWindow;
+            return this;
+        }
+
+        /**
+         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2)
+         *   - Range: `64`-`4096`
+         *   - Default value: `512`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecReplayWindow(Integer ipsecReplayWindow) {
+            return ipsecReplayWindow(Output.of(ipsecReplayWindow));
+        }
+
+        /**
+         * @param ipsecReplayWindowVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecReplayWindowVariable(@Nullable Output<String> ipsecReplayWindowVariable) {
+            $.ipsecReplayWindowVariable = ipsecReplayWindowVariable;
+            return this;
+        }
+
+        /**
+         * @param ipsecReplayWindowVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecReplayWindowVariable(String ipsecReplayWindowVariable) {
+            return ipsecReplayWindowVariable(Output.of(ipsecReplayWindowVariable));
+        }
+
+        /**
+         * @param ipv4Address , Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
 
+        /**
+         * @param ipv4Address , Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv4Address(String ipv4Address) {
             return ipv4Address(Output.of(ipv4Address));
         }
 
         /**
-         * @param ipv4AddressVariable Variable name
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -853,7 +2160,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4AddressVariable Variable name
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -863,7 +2170,54 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4Mtu Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         *   - Range: `576`-`9976`
+         *   - Default value: `1500`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4Mtu(@Nullable Output<Integer> ipv4Mtu) {
+            $.ipv4Mtu = ipv4Mtu;
+            return this;
+        }
+
+        /**
+         * @param ipv4Mtu Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         *   - Range: `576`-`9976`
+         *   - Default value: `1500`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4Mtu(Integer ipv4Mtu) {
+            return ipv4Mtu(Output.of(ipv4Mtu));
+        }
+
+        /**
+         * @param ipv4MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4MtuVariable(@Nullable Output<String> ipv4MtuVariable) {
+            $.ipv4MtuVariable = ipv4MtuVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv4MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4MtuVariable(String ipv4MtuVariable) {
+            return ipv4MtuVariable(Output.of(ipv4MtuVariable));
+        }
+
+        /**
+         * @param ipv4SubnetMask , Attribute conditional on `tunnelMode` equal to `ipv4`
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -874,7 +2228,8 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask , Attribute conditional on `tunnelMode` equal to `ipv4`
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -884,7 +2239,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -895,13 +2250,231 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
          */
         public Builder ipv4SubnetMaskVariable(String ipv4SubnetMaskVariable) {
             return ipv4SubnetMaskVariable(Output.of(ipv4SubnetMaskVariable));
+        }
+
+        /**
+         * @param ipv4TcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         *   - Range: `500`-`1460`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4TcpMss(@Nullable Output<Integer> ipv4TcpMss) {
+            $.ipv4TcpMss = ipv4TcpMss;
+            return this;
+        }
+
+        /**
+         * @param ipv4TcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         *   - Range: `500`-`1460`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4TcpMss(Integer ipv4TcpMss) {
+            return ipv4TcpMss(Output.of(ipv4TcpMss));
+        }
+
+        /**
+         * @param ipv4TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4TcpMssVariable(@Nullable Output<String> ipv4TcpMssVariable) {
+            $.ipv4TcpMssVariable = ipv4TcpMssVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv4TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4TcpMssVariable(String ipv4TcpMssVariable) {
+            return ipv4TcpMssVariable(Output.of(ipv4TcpMssVariable));
+        }
+
+        /**
+         * @param ipv6Address Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
+            $.ipv6Address = ipv6Address;
+            return this;
+        }
+
+        /**
+         * @param ipv6Address Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Address(String ipv6Address) {
+            return ipv6Address(Output.of(ipv6Address));
+        }
+
+        /**
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6AddressVariable(@Nullable Output<String> ipv6AddressVariable) {
+            $.ipv6AddressVariable = ipv6AddressVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6AddressVariable(String ipv6AddressVariable) {
+            return ipv6AddressVariable(Output.of(ipv6AddressVariable));
+        }
+
+        /**
+         * @param ipv6Mtu Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         *   - Range: `1280`-`9976`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Mtu(@Nullable Output<Integer> ipv6Mtu) {
+            $.ipv6Mtu = ipv6Mtu;
+            return this;
+        }
+
+        /**
+         * @param ipv6Mtu Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         *   - Range: `1280`-`9976`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6Mtu(Integer ipv6Mtu) {
+            return ipv6Mtu(Output.of(ipv6Mtu));
+        }
+
+        /**
+         * @param ipv6MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6MtuVariable(@Nullable Output<String> ipv6MtuVariable) {
+            $.ipv6MtuVariable = ipv6MtuVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv6MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6MtuVariable(String ipv6MtuVariable) {
+            return ipv6MtuVariable(Output.of(ipv6MtuVariable));
+        }
+
+        /**
+         * @param ipv6TcpMss IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         *   - Range: `40`-`1454`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6TcpMss(@Nullable Output<Integer> ipv6TcpMss) {
+            $.ipv6TcpMss = ipv6TcpMss;
+            return this;
+        }
+
+        /**
+         * @param ipv6TcpMss IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         *   - Range: `40`-`1454`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6TcpMss(Integer ipv6TcpMss) {
+            return ipv6TcpMss(Output.of(ipv6TcpMss));
+        }
+
+        /**
+         * @param ipv6TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6TcpMssVariable(@Nullable Output<String> ipv6TcpMssVariable) {
+            $.ipv6TcpMssVariable = ipv6TcpMssVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv6TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6TcpMssVariable(String ipv6TcpMssVariable) {
+            return ipv6TcpMssVariable(Output.of(ipv6TcpMssVariable));
+        }
+
+        /**
+         * @param multiplexing Tunnel multiplexing state
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiplexing(@Nullable Output<Boolean> multiplexing) {
+            $.multiplexing = multiplexing;
+            return this;
+        }
+
+        /**
+         * @param multiplexing Tunnel multiplexing state
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiplexing(Boolean multiplexing) {
+            return multiplexing(Output.of(multiplexing));
+        }
+
+        /**
+         * @param multiplexingVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiplexingVariable(@Nullable Output<String> multiplexingVariable) {
+            $.multiplexingVariable = multiplexingVariable;
+            return this;
+        }
+
+        /**
+         * @param multiplexingVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiplexingVariable(String multiplexingVariable) {
+            return multiplexingVariable(Output.of(multiplexingVariable));
         }
 
         /**
@@ -923,6 +2496,94 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param perfectForwardSecrecy IPsec perfect forward secrecy settings
+         *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+         *   - Default value: `group-16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder perfectForwardSecrecy(@Nullable Output<String> perfectForwardSecrecy) {
+            $.perfectForwardSecrecy = perfectForwardSecrecy;
+            return this;
+        }
+
+        /**
+         * @param perfectForwardSecrecy IPsec perfect forward secrecy settings
+         *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+         *   - Default value: `group-16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder perfectForwardSecrecy(String perfectForwardSecrecy) {
+            return perfectForwardSecrecy(Output.of(perfectForwardSecrecy));
+        }
+
+        /**
+         * @param perfectForwardSecrecyVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder perfectForwardSecrecyVariable(@Nullable Output<String> perfectForwardSecrecyVariable) {
+            $.perfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
+            return this;
+        }
+
+        /**
+         * @param perfectForwardSecrecyVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder perfectForwardSecrecyVariable(String perfectForwardSecrecyVariable) {
+            return perfectForwardSecrecyVariable(Output.of(perfectForwardSecrecyVariable));
+        }
+
+        /**
+         * @param preSharedSecret Use preshared key to authenticate IKE peer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecret(@Nullable Output<String> preSharedSecret) {
+            $.preSharedSecret = preSharedSecret;
+            return this;
+        }
+
+        /**
+         * @param preSharedSecret Use preshared key to authenticate IKE peer
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecret(String preSharedSecret) {
+            return preSharedSecret(Output.of(preSharedSecret));
+        }
+
+        /**
+         * @param preSharedSecretVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecretVariable(@Nullable Output<String> preSharedSecretVariable) {
+            $.preSharedSecretVariable = preSharedSecretVariable;
+            return this;
+        }
+
+        /**
+         * @param preSharedSecretVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preSharedSecretVariable(String preSharedSecretVariable) {
+            return preSharedSecretVariable(Output.of(preSharedSecretVariable));
         }
 
         /**
@@ -970,50 +2631,6 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes
-         *   - Range: `500`-`1460`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tcpMss(@Nullable Output<Integer> tcpMss) {
-            $.tcpMss = tcpMss;
-            return this;
-        }
-
-        /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes
-         *   - Range: `500`-`1460`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tcpMss(Integer tcpMss) {
-            return tcpMss(Output.of(tcpMss));
-        }
-
-        /**
-         * @param tcpMssVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tcpMssVariable(@Nullable Output<String> tcpMssVariable) {
-            $.tcpMssVariable = tcpMssVariable;
-            return this;
-        }
-
-        /**
-         * @param tcpMssVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tcpMssVariable(String tcpMssVariable) {
-            return tcpMssVariable(Output.of(tcpMssVariable));
-        }
-
-        /**
          * @param transportWanVpnFeatureId Transport WAN VPN Feature ID
          * 
          * @return builder
@@ -1035,7 +2652,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelDestinationIpv4Address Tunnel destination IP Address
+         * @param tunnelDestinationIpv4Address Tunnel destination IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1046,7 +2663,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelDestinationIpv4Address Tunnel destination IP Address
+         * @param tunnelDestinationIpv4Address Tunnel destination IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1056,7 +2673,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelDestinationIpv4AddressVariable Variable name
+         * @param tunnelDestinationIpv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1067,7 +2684,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelDestinationIpv4AddressVariable Variable name
+         * @param tunnelDestinationIpv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1077,7 +2694,223 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name, can&#39;t be Loopback interface
+         * @param tunnelDestinationIpv6Address Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelDestinationIpv6Address(@Nullable Output<String> tunnelDestinationIpv6Address) {
+            $.tunnelDestinationIpv6Address = tunnelDestinationIpv6Address;
+            return this;
+        }
+
+        /**
+         * @param tunnelDestinationIpv6Address Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelDestinationIpv6Address(String tunnelDestinationIpv6Address) {
+            return tunnelDestinationIpv6Address(Output.of(tunnelDestinationIpv6Address));
+        }
+
+        /**
+         * @param tunnelDestinationIpv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelDestinationIpv6AddressVariable(@Nullable Output<String> tunnelDestinationIpv6AddressVariable) {
+            $.tunnelDestinationIpv6AddressVariable = tunnelDestinationIpv6AddressVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelDestinationIpv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelDestinationIpv6AddressVariable(String tunnelDestinationIpv6AddressVariable) {
+            return tunnelDestinationIpv6AddressVariable(Output.of(tunnelDestinationIpv6AddressVariable));
+        }
+
+        /**
+         * @param tunnelMode GRE Tunnel Mode
+         *   - Choices: `ipv4`, `ipv6`
+         *   - Default value: `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelMode(@Nullable Output<String> tunnelMode) {
+            $.tunnelMode = tunnelMode;
+            return this;
+        }
+
+        /**
+         * @param tunnelMode GRE Tunnel Mode
+         *   - Choices: `ipv4`, `ipv6`
+         *   - Default value: `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelMode(String tunnelMode) {
+            return tunnelMode(Output.of(tunnelMode));
+        }
+
+        /**
+         * @param tunnelProtection Tunnel protection state
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelProtection(@Nullable Output<Boolean> tunnelProtection) {
+            $.tunnelProtection = tunnelProtection;
+            return this;
+        }
+
+        /**
+         * @param tunnelProtection Tunnel protection state
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelProtection(Boolean tunnelProtection) {
+            return tunnelProtection(Output.of(tunnelProtection));
+        }
+
+        /**
+         * @param tunnelRouteViaInterface &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaInterface(@Nullable Output<String> tunnelRouteViaInterface) {
+            $.tunnelRouteViaInterface = tunnelRouteViaInterface;
+            return this;
+        }
+
+        /**
+         * @param tunnelRouteViaInterface &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaInterface(String tunnelRouteViaInterface) {
+            return tunnelRouteViaInterface(Output.of(tunnelRouteViaInterface));
+        }
+
+        /**
+         * @param tunnelRouteViaInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaInterfaceVariable(@Nullable Output<String> tunnelRouteViaInterfaceVariable) {
+            $.tunnelRouteViaInterfaceVariable = tunnelRouteViaInterfaceVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelRouteViaInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaInterfaceVariable(String tunnelRouteViaInterfaceVariable) {
+            return tunnelRouteViaInterfaceVariable(Output.of(tunnelRouteViaInterfaceVariable));
+        }
+
+        /**
+         * @param tunnelRouteViaIpv4Address &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv4Address(@Nullable Output<String> tunnelRouteViaIpv4Address) {
+            $.tunnelRouteViaIpv4Address = tunnelRouteViaIpv4Address;
+            return this;
+        }
+
+        /**
+         * @param tunnelRouteViaIpv4Address &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv4Address(String tunnelRouteViaIpv4Address) {
+            return tunnelRouteViaIpv4Address(Output.of(tunnelRouteViaIpv4Address));
+        }
+
+        /**
+         * @param tunnelRouteViaIpv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv4AddressVariable(@Nullable Output<String> tunnelRouteViaIpv4AddressVariable) {
+            $.tunnelRouteViaIpv4AddressVariable = tunnelRouteViaIpv4AddressVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelRouteViaIpv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv4AddressVariable(String tunnelRouteViaIpv4AddressVariable) {
+            return tunnelRouteViaIpv4AddressVariable(Output.of(tunnelRouteViaIpv4AddressVariable));
+        }
+
+        /**
+         * @param tunnelRouteViaIpv6Address &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv6Address(@Nullable Output<String> tunnelRouteViaIpv6Address) {
+            $.tunnelRouteViaIpv6Address = tunnelRouteViaIpv6Address;
+            return this;
+        }
+
+        /**
+         * @param tunnelRouteViaIpv6Address &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv6Address(String tunnelRouteViaIpv6Address) {
+            return tunnelRouteViaIpv6Address(Output.of(tunnelRouteViaIpv6Address));
+        }
+
+        /**
+         * @param tunnelRouteViaIpv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv6AddressVariable(@Nullable Output<String> tunnelRouteViaIpv6AddressVariable) {
+            $.tunnelRouteViaIpv6AddressVariable = tunnelRouteViaIpv6AddressVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelRouteViaIpv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelRouteViaIpv6AddressVariable(String tunnelRouteViaIpv6AddressVariable) {
+            return tunnelRouteViaIpv6AddressVariable(Output.of(tunnelRouteViaIpv6AddressVariable));
+        }
+
+        /**
+         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1088,7 +2921,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name, can&#39;t be Loopback interface
+         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1098,7 +2931,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelRouteViaLoopbackVariable Variable name
+         * @param tunnelRouteViaLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1109,7 +2942,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelRouteViaLoopbackVariable Variable name
+         * @param tunnelRouteViaLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1119,7 +2952,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name
+         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1130,7 +2963,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name
+         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1140,7 +2973,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name
+         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1151,7 +2984,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name
+         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1161,7 +2994,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopbackVariable Variable name
+         * @param tunnelSourceInterfaceLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1172,7 +3005,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopbackVariable Variable name
+         * @param tunnelSourceInterfaceLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1182,7 +3015,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterfaceVariable Variable name
+         * @param tunnelSourceInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1193,7 +3026,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceInterfaceVariable Variable name
+         * @param tunnelSourceInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1203,7 +3036,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceIpv4Address Tunnel source IP Address
+         * @param tunnelSourceIpv4Address Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1214,7 +3047,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceIpv4Address Tunnel source IP Address
+         * @param tunnelSourceIpv4Address Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1224,7 +3057,7 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceIpv4AddressVariable Variable name
+         * @param tunnelSourceIpv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
@@ -1235,13 +3068,55 @@ public final class TransportWanVpnInterfaceGreFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceIpv4AddressVariable Variable name
+         * @param tunnelSourceIpv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
          * 
          * @return builder
          * 
          */
         public Builder tunnelSourceIpv4AddressVariable(String tunnelSourceIpv4AddressVariable) {
             return tunnelSourceIpv4AddressVariable(Output.of(tunnelSourceIpv4AddressVariable));
+        }
+
+        /**
+         * @param tunnelSourceIpv6Address Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelSourceIpv6Address(@Nullable Output<String> tunnelSourceIpv6Address) {
+            $.tunnelSourceIpv6Address = tunnelSourceIpv6Address;
+            return this;
+        }
+
+        /**
+         * @param tunnelSourceIpv6Address Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelSourceIpv6Address(String tunnelSourceIpv6Address) {
+            return tunnelSourceIpv6Address(Output.of(tunnelSourceIpv6Address));
+        }
+
+        /**
+         * @param tunnelSourceIpv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelSourceIpv6AddressVariable(@Nullable Output<String> tunnelSourceIpv6AddressVariable) {
+            $.tunnelSourceIpv6AddressVariable = tunnelSourceIpv6AddressVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelSourceIpv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelSourceIpv6AddressVariable(String tunnelSourceIpv6AddressVariable) {
+            return tunnelSourceIpv6AddressVariable(Output.of(tunnelSourceIpv6AddressVariable));
         }
 
         /**

@@ -19,16 +19,17 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? KeyString { get; set; }
 
         /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("keyStringVariable")]
+        public Input<string>? KeyStringVariable { get; set; }
+
+        /// <summary>
         /// Only RSA is supported
+        ///   - Choices: `ssh-rsa`
         /// </summary>
         [Input("keyType")]
         public Input<string>? KeyType { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("keyTypeVariable")]
-        public Input<string>? KeyTypeVariable { get; set; }
 
         public SystemAaaFeatureUserPublicKeyGetArgs()
         {

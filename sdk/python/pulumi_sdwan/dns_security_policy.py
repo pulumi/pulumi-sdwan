@@ -36,14 +36,14 @@ class DnsSecurityPolicyArgs:
         The set of arguments for constructing a DnsSecurityPolicy resource.
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         :param pulumi.Input[_builtins.bool] dns_crypt: If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
-        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] local_domain_bypass_enabled: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.bool] match_all_vpn: If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
         :param pulumi.Input[_builtins.bool] umbrella_default: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        :param pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         """
         pulumi.set(__self__, "child_org_id", child_org_id)
         pulumi.set(__self__, "dns_crypt", dns_crypt)
@@ -88,7 +88,7 @@ class DnsSecurityPolicyArgs:
     @pulumi.getter(name="dnsServerIp")
     def dns_server_ip(self) -> pulumi.Input[_builtins.str]:
         """
-        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         """
         return pulumi.get(self, "dns_server_ip")
 
@@ -181,7 +181,7 @@ class DnsSecurityPolicyArgs:
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]:
         """
-        Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         """
         return pulumi.get(self, "target_vpns")
 
@@ -210,12 +210,12 @@ class _DnsSecurityPolicyState:
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.bool] dns_crypt: If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
-        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] local_domain_bypass_enabled: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.bool] match_all_vpn: If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        :param pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         :param pulumi.Input[_builtins.bool] umbrella_default: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.int] version: The version of the Policy
         """
@@ -284,7 +284,7 @@ class _DnsSecurityPolicyState:
     @pulumi.getter(name="dnsServerIp")
     def dns_server_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         """
         return pulumi.get(self, "dns_server_ip")
 
@@ -353,7 +353,7 @@ class _DnsSecurityPolicyState:
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]:
         """
-        Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         """
         return pulumi.get(self, "target_vpns")
 
@@ -442,12 +442,12 @@ class DnsSecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.bool] dns_crypt: If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
-        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] local_domain_bypass_enabled: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.bool] match_all_vpn: If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         :param pulumi.Input[_builtins.bool] umbrella_default: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         """
         ...
@@ -584,12 +584,12 @@ class DnsSecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.bool] dns_crypt: If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
-        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] local_domain_bypass_enabled: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.bool] match_all_vpn: If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
         :param pulumi.Input[_builtins.str] name: The name of the Policy
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]] target_vpns: Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         :param pulumi.Input[_builtins.bool] umbrella_default: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         :param pulumi.Input[_builtins.int] version: The version of the Policy
         """
@@ -639,7 +639,7 @@ class DnsSecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="dnsServerIp")
     def dns_server_ip(self) -> pulumi.Output[_builtins.str]:
         """
-        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         """
         return pulumi.get(self, "dns_server_ip")
 
@@ -684,7 +684,7 @@ class DnsSecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="targetVpns")
     def target_vpns(self) -> pulumi.Output[Optional[Sequence['outputs.DnsSecurityPolicyTargetVpn']]]:
         """
-        Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         """
         return pulumi.get(self, "target_vpns")
 

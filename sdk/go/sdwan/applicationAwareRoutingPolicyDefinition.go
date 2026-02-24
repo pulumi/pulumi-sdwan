@@ -73,7 +73,7 @@ type ApplicationAwareRoutingPolicyDefinition struct {
 	// Type of default action
 	//   - Choices: `slaClass`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
-	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	// SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
 	DefaultActionSlaClassListId pulumi.StringPtrOutput `pulumi:"defaultActionSlaClassListId"`
 	// SLA class list version
 	DefaultActionSlaClassListVersion pulumi.IntPtrOutput `pulumi:"defaultActionSlaClassListVersion"`
@@ -128,7 +128,7 @@ type applicationAwareRoutingPolicyDefinitionState struct {
 	// Type of default action
 	//   - Choices: `slaClass`
 	DefaultAction *string `pulumi:"defaultAction"`
-	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	// SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
 	DefaultActionSlaClassListId *string `pulumi:"defaultActionSlaClassListId"`
 	// SLA class list version
 	DefaultActionSlaClassListVersion *int `pulumi:"defaultActionSlaClassListVersion"`
@@ -148,7 +148,7 @@ type ApplicationAwareRoutingPolicyDefinitionState struct {
 	// Type of default action
 	//   - Choices: `slaClass`
 	DefaultAction pulumi.StringPtrInput
-	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	// SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
 	DefaultActionSlaClassListId pulumi.StringPtrInput
 	// SLA class list version
 	DefaultActionSlaClassListVersion pulumi.IntPtrInput
@@ -172,7 +172,7 @@ type applicationAwareRoutingPolicyDefinitionArgs struct {
 	// Type of default action
 	//   - Choices: `slaClass`
 	DefaultAction *string `pulumi:"defaultAction"`
-	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	// SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
 	DefaultActionSlaClassListId *string `pulumi:"defaultActionSlaClassListId"`
 	// SLA class list version
 	DefaultActionSlaClassListVersion *int `pulumi:"defaultActionSlaClassListVersion"`
@@ -189,7 +189,7 @@ type ApplicationAwareRoutingPolicyDefinitionArgs struct {
 	// Type of default action
 	//   - Choices: `slaClass`
 	DefaultAction pulumi.StringPtrInput
-	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	// SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
 	DefaultActionSlaClassListId pulumi.StringPtrInput
 	// SLA class list version
 	DefaultActionSlaClassListVersion pulumi.IntPtrInput
@@ -294,7 +294,7 @@ func (o ApplicationAwareRoutingPolicyDefinitionOutput) DefaultAction() pulumi.St
 	return o.ApplyT(func(v *ApplicationAwareRoutingPolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }
 
-// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+// SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
 func (o ApplicationAwareRoutingPolicyDefinitionOutput) DefaultActionSlaClassListId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationAwareRoutingPolicyDefinition) pulumi.StringPtrOutput {
 		return v.DefaultActionSlaClassListId

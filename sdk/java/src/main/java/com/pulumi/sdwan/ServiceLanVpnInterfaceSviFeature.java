@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Service LAN VPN Interface SVI Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -105,6 +105,7 @@ import javax.annotation.Nullable;
  *                     .trackAction("decrement")
  *                     .decrementValue(100)
  *                     .build())
+ *                 .followDualRouterHighAvailability(false)
  *                 .build())
  *             .ipv6Vrrps(ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs.builder()
  *                 .groupId(1)
@@ -119,6 +120,7 @@ import javax.annotation.Nullable;
  *                 .secondaryAddresses(ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs.builder()
  *                     .prefix("::20/32")
  *                     .build())
+ *                 .followDualRouterHighAvailability(false)
  *                 .build())
  *             .enableDhcpv6(false)
  *             .tcpMss(1024)

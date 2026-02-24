@@ -31,7 +31,23 @@ public final class SystemAaaFeatureUserPublicKeyArgs extends com.pulumi.resource
     }
 
     /**
+     * Variable name
+     * 
+     */
+    @Import(name="keyStringVariable")
+    private @Nullable Output<String> keyStringVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> keyStringVariable() {
+        return Optional.ofNullable(this.keyStringVariable);
+    }
+
+    /**
      * Only RSA is supported
+     *   - Choices: `ssh-rsa`
      * 
      */
     @Import(name="keyType")
@@ -39,33 +55,19 @@ public final class SystemAaaFeatureUserPublicKeyArgs extends com.pulumi.resource
 
     /**
      * @return Only RSA is supported
+     *   - Choices: `ssh-rsa`
      * 
      */
     public Optional<Output<String>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
 
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="keyTypeVariable")
-    private @Nullable Output<String> keyTypeVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> keyTypeVariable() {
-        return Optional.ofNullable(this.keyTypeVariable);
-    }
-
     private SystemAaaFeatureUserPublicKeyArgs() {}
 
     private SystemAaaFeatureUserPublicKeyArgs(SystemAaaFeatureUserPublicKeyArgs $) {
         this.keyString = $.keyString;
+        this.keyStringVariable = $.keyStringVariable;
         this.keyType = $.keyType;
-        this.keyTypeVariable = $.keyTypeVariable;
     }
 
     public static Builder builder() {
@@ -108,7 +110,29 @@ public final class SystemAaaFeatureUserPublicKeyArgs extends com.pulumi.resource
         }
 
         /**
+         * @param keyStringVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStringVariable(@Nullable Output<String> keyStringVariable) {
+            $.keyStringVariable = keyStringVariable;
+            return this;
+        }
+
+        /**
+         * @param keyStringVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyStringVariable(String keyStringVariable) {
+            return keyStringVariable(Output.of(keyStringVariable));
+        }
+
+        /**
          * @param keyType Only RSA is supported
+         *   - Choices: `ssh-rsa`
          * 
          * @return builder
          * 
@@ -120,33 +144,13 @@ public final class SystemAaaFeatureUserPublicKeyArgs extends com.pulumi.resource
 
         /**
          * @param keyType Only RSA is supported
+         *   - Choices: `ssh-rsa`
          * 
          * @return builder
          * 
          */
         public Builder keyType(String keyType) {
             return keyType(Output.of(keyType));
-        }
-
-        /**
-         * @param keyTypeVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder keyTypeVariable(@Nullable Output<String> keyTypeVariable) {
-            $.keyTypeVariable = keyTypeVariable;
-            return this;
-        }
-
-        /**
-         * @param keyTypeVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder keyTypeVariable(String keyTypeVariable) {
-            return keyTypeVariable(Output.of(keyTypeVariable));
         }
 
         public SystemAaaFeatureUserPublicKeyArgs build() {

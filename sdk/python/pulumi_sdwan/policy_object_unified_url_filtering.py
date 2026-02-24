@@ -38,11 +38,11 @@ class PolicyObjectUnifiedUrlFilteringArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] web_categories_action: - Choices: `block`, `allow`
         :param pulumi.Input[_builtins.str] web_reputation: - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` being equal to `true`
-        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` being equal to `text`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` equal to `true`
+        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` equal to `text`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` equal to `redirect-url`
         """
         pulumi.set(__self__, "block_page_action", block_page_action)
         pulumi.set(__self__, "enable_alerts", enable_alerts)
@@ -135,7 +135,7 @@ class PolicyObjectUnifiedUrlFilteringArgs:
     @pulumi.getter
     def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        , Attribute conditional on `enable_alerts` being equal to `true`
+        , Attribute conditional on `enable_alerts` equal to `true`
         """
         return pulumi.get(self, "alerts")
 
@@ -147,7 +147,7 @@ class PolicyObjectUnifiedUrlFilteringArgs:
     @pulumi.getter(name="blockPageContents")
     def block_page_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `block_page_action` being equal to `text`
+        , Attribute conditional on `block_page_action` equal to `text`
         """
         return pulumi.get(self, "block_page_contents")
 
@@ -183,7 +183,7 @@ class PolicyObjectUnifiedUrlFilteringArgs:
     @pulumi.getter(name="redirectUrl")
     def redirect_url(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        , Attribute conditional on `block_page_action` equal to `redirect-url`
         """
         return pulumi.get(self, "redirect_url")
 
@@ -229,13 +229,13 @@ class _PolicyObjectUnifiedUrlFilteringState:
                  web_reputation: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedUrlFiltering resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` equal to `true`
         :param pulumi.Input[_builtins.str] block_page_action: - Choices: `text`, `redirect-url`
-        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` being equal to `text`
+        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` equal to `text`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` equal to `redirect-url`
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
         :param pulumi.Input[_builtins.str] web_categories_action: - Choices: `block`, `allow`
         :param pulumi.Input[_builtins.str] web_reputation: - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -273,7 +273,7 @@ class _PolicyObjectUnifiedUrlFilteringState:
     @pulumi.getter
     def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        , Attribute conditional on `enable_alerts` being equal to `true`
+        , Attribute conditional on `enable_alerts` equal to `true`
         """
         return pulumi.get(self, "alerts")
 
@@ -297,7 +297,7 @@ class _PolicyObjectUnifiedUrlFilteringState:
     @pulumi.getter(name="blockPageContents")
     def block_page_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `block_page_action` being equal to `text`
+        , Attribute conditional on `block_page_action` equal to `text`
         """
         return pulumi.get(self, "block_page_contents")
 
@@ -354,7 +354,7 @@ class _PolicyObjectUnifiedUrlFilteringState:
     @pulumi.getter(name="redirectUrl")
     def redirect_url(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        , Attribute conditional on `block_page_action` equal to `redirect-url`
         """
         return pulumi.get(self, "redirect_url")
 
@@ -448,7 +448,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Policy Object Unified URL Filtering Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -483,13 +483,13 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` equal to `true`
         :param pulumi.Input[_builtins.str] block_page_action: - Choices: `text`, `redirect-url`
-        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` being equal to `text`
+        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` equal to `text`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` equal to `redirect-url`
         :param pulumi.Input[_builtins.str] web_categories_action: - Choices: `block`, `allow`
         :param pulumi.Input[_builtins.str] web_reputation: - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
@@ -501,7 +501,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Policy Object Unified URL Filtering Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -628,13 +628,13 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` equal to `true`
         :param pulumi.Input[_builtins.str] block_page_action: - Choices: `text`, `redirect-url`
-        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` being equal to `text`
+        :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` equal to `text`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        :param pulumi.Input[_builtins.str] redirect_url: , Attribute conditional on `block_page_action` equal to `redirect-url`
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
         :param pulumi.Input[_builtins.str] web_categories_action: - Choices: `block`, `allow`
         :param pulumi.Input[_builtins.str] web_reputation: - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -663,7 +663,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
     @pulumi.getter
     def alerts(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        , Attribute conditional on `enable_alerts` being equal to `true`
+        , Attribute conditional on `enable_alerts` equal to `true`
         """
         return pulumi.get(self, "alerts")
 
@@ -679,7 +679,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
     @pulumi.getter(name="blockPageContents")
     def block_page_contents(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `block_page_action` being equal to `text`
+        , Attribute conditional on `block_page_action` equal to `text`
         """
         return pulumi.get(self, "block_page_contents")
 
@@ -716,7 +716,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
     @pulumi.getter(name="redirectUrl")
     def redirect_url(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `block_page_action` being equal to `redirect-url`
+        , Attribute conditional on `block_page_action` equal to `redirect-url`
         """
         return pulumi.get(self, "redirect_url")
 

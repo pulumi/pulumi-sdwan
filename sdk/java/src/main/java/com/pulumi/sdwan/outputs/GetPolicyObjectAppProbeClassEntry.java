@@ -17,6 +17,7 @@ public final class GetPolicyObjectAppProbeClassEntry {
      * 
      */
     private String forwardingClass;
+    private String forwardingClassId;
     /**
      * @return Map
      * 
@@ -30,6 +31,9 @@ public final class GetPolicyObjectAppProbeClassEntry {
      */
     public String forwardingClass() {
         return this.forwardingClass;
+    }
+    public String forwardingClassId() {
+        return this.forwardingClassId;
     }
     /**
      * @return Map
@@ -49,11 +53,13 @@ public final class GetPolicyObjectAppProbeClassEntry {
     @CustomType.Builder
     public static final class Builder {
         private String forwardingClass;
+        private String forwardingClassId;
         private List<GetPolicyObjectAppProbeClassEntryMap> maps;
         public Builder() {}
         public Builder(GetPolicyObjectAppProbeClassEntry defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.forwardingClass = defaults.forwardingClass;
+    	      this.forwardingClassId = defaults.forwardingClassId;
     	      this.maps = defaults.maps;
         }
 
@@ -63,6 +69,14 @@ public final class GetPolicyObjectAppProbeClassEntry {
               throw new MissingRequiredPropertyException("GetPolicyObjectAppProbeClassEntry", "forwardingClass");
             }
             this.forwardingClass = forwardingClass;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder forwardingClassId(String forwardingClassId) {
+            if (forwardingClassId == null) {
+              throw new MissingRequiredPropertyException("GetPolicyObjectAppProbeClassEntry", "forwardingClassId");
+            }
+            this.forwardingClassId = forwardingClassId;
             return this;
         }
         @CustomType.Setter
@@ -79,6 +93,7 @@ public final class GetPolicyObjectAppProbeClassEntry {
         public GetPolicyObjectAppProbeClassEntry build() {
             final var _resultValue = new GetPolicyObjectAppProbeClassEntry();
             _resultValue.forwardingClass = forwardingClass;
+            _resultValue.forwardingClassId = forwardingClassId;
             _resultValue.maps = maps;
             return _resultValue;
         }

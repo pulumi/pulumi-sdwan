@@ -78,7 +78,7 @@ import (
 type ZoneBasedFirewallPolicyDefinition struct {
 	pulumi.CustomResourceState
 
-	// , Attribute conditional on `mode` being equal to `security`
+	// , Attribute conditional on `mode` equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput `pulumi:"applyZonePairs"`
 	// Default Action
 	//   - Choices: `pass`, `drop`
@@ -137,7 +137,7 @@ func GetZoneBasedFirewallPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ZoneBasedFirewallPolicyDefinition resources.
 type zoneBasedFirewallPolicyDefinitionState struct {
-	// , Attribute conditional on `mode` being equal to `security`
+	// , Attribute conditional on `mode` equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`
 	// Default Action
 	//   - Choices: `pass`, `drop`
@@ -155,7 +155,7 @@ type zoneBasedFirewallPolicyDefinitionState struct {
 }
 
 type ZoneBasedFirewallPolicyDefinitionState struct {
-	// , Attribute conditional on `mode` being equal to `security`
+	// , Attribute conditional on `mode` equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayInput
 	// Default Action
 	//   - Choices: `pass`, `drop`
@@ -177,7 +177,7 @@ func (ZoneBasedFirewallPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type zoneBasedFirewallPolicyDefinitionArgs struct {
-	// , Attribute conditional on `mode` being equal to `security`
+	// , Attribute conditional on `mode` equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`
 	// Default Action
 	//   - Choices: `pass`, `drop`
@@ -194,7 +194,7 @@ type zoneBasedFirewallPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a ZoneBasedFirewallPolicyDefinition resource.
 type ZoneBasedFirewallPolicyDefinitionArgs struct {
-	// , Attribute conditional on `mode` being equal to `security`
+	// , Attribute conditional on `mode` equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayInput
 	// Default Action
 	//   - Choices: `pass`, `drop`
@@ -296,7 +296,7 @@ func (o ZoneBasedFirewallPolicyDefinitionOutput) ToZoneBasedFirewallPolicyDefini
 	return o
 }
 
-// , Attribute conditional on `mode` being equal to `security`
+// , Attribute conditional on `mode` equal to `security`
 func (o ZoneBasedFirewallPolicyDefinitionOutput) ApplyZonePairs() ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput {
 	return o.ApplyT(func(v *ZoneBasedFirewallPolicyDefinition) ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput {
 		return v.ApplyZonePairs

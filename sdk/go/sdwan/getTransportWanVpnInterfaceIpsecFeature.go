@@ -122,10 +122,6 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 	InterfaceName string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable string `pulumi:"interfaceNameVariable"`
-	// Interface MTU \n\n, in bytes
-	IpMtu int `pulumi:"ipMtu"`
-	// Variable name
-	IpMtuVariable string `pulumi:"ipMtuVariable"`
 	// IPsec(ESP) encryption and integrity protocol
 	IpsecCiphersuite string `pulumi:"ipsecCiphersuite"`
 	// Variable name
@@ -141,9 +137,33 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 	Ipv4Address               string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable string `pulumi:"ipv4AddressVariable"`
-	Ipv4SubnetMask      string `pulumi:"ipv4SubnetMask"`
+	// Interface MTU \n\n, in bytes
+	Ipv4Mtu int `pulumi:"ipv4Mtu"`
+	// Variable name
+	Ipv4MtuVariable string `pulumi:"ipv4MtuVariable"`
+	Ipv4SubnetMask  string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable string `pulumi:"ipv4SubnetMaskVariable"`
+	// TCP MSS on SYN packets, in bytes
+	Ipv4TcpMss int `pulumi:"ipv4TcpMss"`
+	// Variable name
+	Ipv4TcpMssVariable string `pulumi:"ipv4TcpMssVariable"`
+	// Assign IPv6 address
+	Ipv6Address string `pulumi:"ipv6Address"`
+	// Variable name
+	Ipv6AddressVariable string `pulumi:"ipv6AddressVariable"`
+	// Interface MTU \n\n, in bytes
+	Ipv6Mtu int `pulumi:"ipv6Mtu"`
+	// Variable name
+	Ipv6MtuVariable string `pulumi:"ipv6MtuVariable"`
+	// IPv6 TCP MSS on SYN packets, in bytes
+	Ipv6TcpMss int `pulumi:"ipv6TcpMss"`
+	// Variable name
+	Ipv6TcpMssVariable string `pulumi:"ipv6TcpMssVariable"`
+	// Tunnel multiplexing state
+	Multiplexing bool `pulumi:"multiplexing"`
+	// Variable name
+	MultiplexingVariable string `pulumi:"multiplexingVariable"`
 	// The name of the Feature
 	Name string `pulumi:"name"`
 	// IPsec perfect forward secrecy settings
@@ -154,10 +174,6 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 	Shutdown bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes
-	TcpMss int `pulumi:"tcpMss"`
-	// Variable name
-	TcpMssVariable string `pulumi:"tcpMssVariable"`
 	// Enable tracker for this interface
 	TrackerId string `pulumi:"trackerId"`
 	// Variable name
@@ -167,9 +183,12 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 	TunnelDestinationIpv4Address string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable string `pulumi:"tunnelDestinationIpv4AddressVariable"`
-	TunnelDestinationIpv4SubnetMask      string `pulumi:"tunnelDestinationIpv4SubnetMask"`
+	// Tunnel destination IPv6 Address
+	TunnelDestinationIpv6Address string `pulumi:"tunnelDestinationIpv6Address"`
 	// Variable name
-	TunnelDestinationIpv4SubnetMaskVariable string `pulumi:"tunnelDestinationIpv4SubnetMaskVariable"`
+	TunnelDestinationIpv6AddressVariable string `pulumi:"tunnelDestinationIpv6AddressVariable"`
+	// IPsec Tunnel Mode
+	TunnelMode string `pulumi:"tunnelMode"`
 	// \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
 	TunnelRouteVia string `pulumi:"tunnelRouteVia"`
 	// Variable name
@@ -181,9 +200,10 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 	TunnelSourceIpv4Address       string `pulumi:"tunnelSourceIpv4Address"`
 	// Variable name
 	TunnelSourceIpv4AddressVariable string `pulumi:"tunnelSourceIpv4AddressVariable"`
-	TunnelSourceIpv4SubnetMask      string `pulumi:"tunnelSourceIpv4SubnetMask"`
+	// Tunnel source IPv6 Address
+	TunnelSourceIpv6Address string `pulumi:"tunnelSourceIpv6Address"`
 	// Variable name
-	TunnelSourceIpv4SubnetMaskVariable string `pulumi:"tunnelSourceIpv4SubnetMaskVariable"`
+	TunnelSourceIpv6AddressVariable string `pulumi:"tunnelSourceIpv6AddressVariable"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 }
@@ -380,16 +400,6 @@ func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) InterfaceNameVar
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.InterfaceNameVariable }).(pulumi.StringOutput)
 }
 
-// Interface MTU \n\n, in bytes
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) IpMtu() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) int { return v.IpMtu }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) IpMtuVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.IpMtuVariable }).(pulumi.StringOutput)
-}
-
 // IPsec(ESP) encryption and integrity protocol
 func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) IpsecCiphersuite() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.IpsecCiphersuite }).(pulumi.StringOutput)
@@ -429,6 +439,16 @@ func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4AddressVaria
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv4AddressVariable }).(pulumi.StringOutput)
 }
 
+// Interface MTU \n\n, in bytes
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4Mtu() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) int { return v.Ipv4Mtu }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4MtuVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv4MtuVariable }).(pulumi.StringOutput)
+}
+
 func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4SubnetMask() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv4SubnetMask }).(pulumi.StringOutput)
 }
@@ -436,6 +456,56 @@ func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4SubnetMask()
 // Variable name
 func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4SubnetMaskVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv4SubnetMaskVariable }).(pulumi.StringOutput)
+}
+
+// TCP MSS on SYN packets, in bytes
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4TcpMss() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) int { return v.Ipv4TcpMss }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv4TcpMssVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv4TcpMssVariable }).(pulumi.StringOutput)
+}
+
+// Assign IPv6 address
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv6Address() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv6Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv6AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv6AddressVariable }).(pulumi.StringOutput)
+}
+
+// Interface MTU \n\n, in bytes
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv6Mtu() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) int { return v.Ipv6Mtu }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv6MtuVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv6MtuVariable }).(pulumi.StringOutput)
+}
+
+// IPv6 TCP MSS on SYN packets, in bytes
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv6TcpMss() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) int { return v.Ipv6TcpMss }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Ipv6TcpMssVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.Ipv6TcpMssVariable }).(pulumi.StringOutput)
+}
+
+// Tunnel multiplexing state
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) Multiplexing() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) bool { return v.Multiplexing }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) MultiplexingVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.MultiplexingVariable }).(pulumi.StringOutput)
 }
 
 // The name of the Feature
@@ -465,16 +535,6 @@ func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) ShutdownVariable
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.ShutdownVariable }).(pulumi.StringOutput)
 }
 
-// TCP MSS on SYN packets, in bytes
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TcpMss() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) int { return v.TcpMss }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TcpMssVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.TcpMssVariable }).(pulumi.StringOutput)
-}
-
 // Enable tracker for this interface
 func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TrackerId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.TrackerId }).(pulumi.StringOutput)
@@ -501,17 +561,21 @@ func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelDestinatio
 	}).(pulumi.StringOutput)
 }
 
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelDestinationIpv4SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string {
-		return v.TunnelDestinationIpv4SubnetMask
-	}).(pulumi.StringOutput)
+// Tunnel destination IPv6 Address
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelDestinationIpv6Address() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.TunnelDestinationIpv6Address }).(pulumi.StringOutput)
 }
 
 // Variable name
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelDestinationIpv4SubnetMaskVariable() pulumi.StringOutput {
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelDestinationIpv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string {
-		return v.TunnelDestinationIpv4SubnetMaskVariable
+		return v.TunnelDestinationIpv6AddressVariable
 	}).(pulumi.StringOutput)
+}
+
+// IPsec Tunnel Mode
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelMode() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.TunnelMode }).(pulumi.StringOutput)
 }
 
 // \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
@@ -547,14 +611,15 @@ func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelSourceIpv4
 	}).(pulumi.StringOutput)
 }
 
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelSourceIpv4SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.TunnelSourceIpv4SubnetMask }).(pulumi.StringOutput)
+// Tunnel source IPv6 Address
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelSourceIpv6Address() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string { return v.TunnelSourceIpv6Address }).(pulumi.StringOutput)
 }
 
 // Variable name
-func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelSourceIpv4SubnetMaskVariable() pulumi.StringOutput {
+func (o LookupTransportWanVpnInterfaceIpsecFeatureResultOutput) TunnelSourceIpv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceIpsecFeatureResult) string {
-		return v.TunnelSourceIpv4SubnetMaskVariable
+		return v.TunnelSourceIpv6AddressVariable
 	}).(pulumi.StringOutput)
 }
 

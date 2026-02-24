@@ -13,6 +13,2210 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicer struct {
+	// Direction
+	Direction string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Name of policer
+	PolicerName string `pulumi:"policerName"`
+}
+
+// GetVpnInterfaceDslIpoeFeatureTemplatePolicerInput is an input type that accepts GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs and GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslIpoeFeatureTemplatePolicerInput` via:
+//
+//	GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs{...}
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicerInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput() GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput
+	ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutputWithContext(context.Context) GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs struct {
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Name of policer
+	PolicerName pulumi.StringInput `pulumi:"policerName"`
+}
+
+func (GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput() GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput {
+	return i.ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput)
+}
+
+// GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayInput is an input type that accepts GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray and GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayInput` via:
+//
+//	GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray{ GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs{...} }
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput
+	ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutputWithContext(context.Context) GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray []GetVpnInterfaceDslIpoeFeatureTemplatePolicerInput
+
+func (GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslIpoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput {
+	return i.ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput() GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput {
+	return o
+}
+
+// Direction
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplatePolicer) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplatePolicer) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Name of policer
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput) PolicerName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplatePolicer) string { return v.PolicerName }).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslIpoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput) ToGetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslIpoeFeatureTemplatePolicer {
+		return vs[0].([]GetVpnInterfaceDslIpoeFeatureTemplatePolicer)[vs[1].(int)]
+	}).(GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation struct {
+	// Encapsulation
+	Encapsulation string `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Set preference for TLOC
+	Preference int `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable string `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight int `pulumi:"weight"`
+	// Variable name
+	WeightVariable string `pulumi:"weightVariable"`
+}
+
+// GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationInput is an input type that accepts GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs and GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationInput` via:
+//
+//	GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs{...}
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput
+	ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Context) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs struct {
+	// Encapsulation
+	Encapsulation pulumi.StringInput `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Set preference for TLOC
+	Preference pulumi.IntInput `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable pulumi.StringInput `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight pulumi.IntInput `pulumi:"weight"`
+	// Variable name
+	WeightVariable pulumi.StringInput `pulumi:"weightVariable"`
+}
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return i.ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+// GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput is an input type that accepts GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray and GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput` via:
+//
+//	GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray{ GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs{...} }
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+	ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray []GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationInput
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return i.ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+// Encapsulation
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.Encapsulation
+	}).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Set preference for TLOC
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation) int { return v.Preference }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.PreferenceVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set weight for TLOC
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation) int { return v.Weight }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.WeightVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation {
+		return vs[0].([]GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation)[vs[1].(int)]
+	}).(GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration struct {
+	// Set module slot/subslot/port number
+	ControllerVdslSlot string `pulumi:"controllerVdslSlot"`
+	// Variable name
+	ControllerVdslSlotVariable string `pulumi:"controllerVdslSlotVariable"`
+	// Set VDSL operating mode to adsl1
+	ModeAdsl1 bool `pulumi:"modeAdsl1"`
+	// Set VDSL operating mode to adsl2
+	ModeAdsl2 bool `pulumi:"modeAdsl2"`
+	// Set VDSL operating mode to adsl2plus
+	ModeAdsl2plus bool `pulumi:"modeAdsl2plus"`
+	// Set VDSL operating mode to ansi
+	ModeAnsi bool `pulumi:"modeAnsi"`
+	// Set VDSL operating mode to vdsl2
+	ModeVdsl2 bool `pulumi:"modeVdsl2"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Seamless rate adaption
+	Sra bool `pulumi:"sra"`
+	// Set module slot/subslot/port number
+	VdslModemConfiguration string `pulumi:"vdslModemConfiguration"`
+	// Variable name
+	VdslModemConfigurationVariable string `pulumi:"vdslModemConfigurationVariable"`
+}
+
+// GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationInput is an input type that accepts GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs and GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationInput` via:
+//
+//	GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs{...}
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput
+	ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutputWithContext(context.Context) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs struct {
+	// Set module slot/subslot/port number
+	ControllerVdslSlot pulumi.StringInput `pulumi:"controllerVdslSlot"`
+	// Variable name
+	ControllerVdslSlotVariable pulumi.StringInput `pulumi:"controllerVdslSlotVariable"`
+	// Set VDSL operating mode to adsl1
+	ModeAdsl1 pulumi.BoolInput `pulumi:"modeAdsl1"`
+	// Set VDSL operating mode to adsl2
+	ModeAdsl2 pulumi.BoolInput `pulumi:"modeAdsl2"`
+	// Set VDSL operating mode to adsl2plus
+	ModeAdsl2plus pulumi.BoolInput `pulumi:"modeAdsl2plus"`
+	// Set VDSL operating mode to ansi
+	ModeAnsi pulumi.BoolInput `pulumi:"modeAnsi"`
+	// Set VDSL operating mode to vdsl2
+	ModeVdsl2 pulumi.BoolInput `pulumi:"modeVdsl2"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Seamless rate adaption
+	Sra pulumi.BoolInput `pulumi:"sra"`
+	// Set module slot/subslot/port number
+	VdslModemConfiguration pulumi.StringInput `pulumi:"vdslModemConfiguration"`
+	// Variable name
+	VdslModemConfigurationVariable pulumi.StringInput `pulumi:"vdslModemConfigurationVariable"`
+}
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput {
+	return i.ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput)
+}
+
+// GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayInput is an input type that accepts GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray and GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayInput` via:
+//
+//	GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray{ GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs{...} }
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput
+	ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutputWithContext(context.Context) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray []GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationInput
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput {
+	return i.ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput {
+	return o
+}
+
+// Set module slot/subslot/port number
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ControllerVdslSlot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) string { return v.ControllerVdslSlot }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ControllerVdslSlotVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) string {
+		return v.ControllerVdslSlotVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set VDSL operating mode to adsl1
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ModeAdsl1() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl1 }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to adsl2
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ModeAdsl2() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl2 }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to adsl2plus
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ModeAdsl2plus() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl2plus }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to ansi
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ModeAnsi() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.ModeAnsi }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to vdsl2
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) ModeVdsl2() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.ModeVdsl2 }).(pulumi.BoolOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Seamless rate adaption
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) Sra() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) bool { return v.Sra }).(pulumi.BoolOutput)
+}
+
+// Set module slot/subslot/port number
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) VdslModemConfiguration() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) string { return v.VdslModemConfiguration }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput) VdslModemConfigurationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration) string {
+		return v.VdslModemConfigurationVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput) ToGetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration {
+		return vs[0].([]GetVpnInterfaceDslIpoeFeatureTemplateVdslConfiguration)[vs[1].(int)]
+	}).(GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessList struct {
+	// Name of access list
+	AclName string `pulumi:"aclName"`
+	// Variable name
+	AclNameVariable string `pulumi:"aclNameVariable"`
+	// Direction
+	Direction string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateAccessListInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs and GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateAccessListInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs{...}
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessListInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput() GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs struct {
+	// Name of access list
+	AclName pulumi.StringInput `pulumi:"aclName"`
+	// Variable name
+	AclNameVariable pulumi.StringInput `pulumi:"aclNameVariable"`
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+}
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput() GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput)
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray and GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray{ GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs{...} }
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray []GetVpnInterfaceDslPppoaFeatureTemplateAccessListInput
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput() GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput {
+	return o
+}
+
+// Name of access list
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) AclName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateAccessList) string { return v.AclName }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) AclNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateAccessList) string { return v.AclNameVariable }).(pulumi.StringOutput)
+}
+
+// Direction
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateAccessList) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateAccessList) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoaFeatureTemplateAccessList {
+		return vs[0].([]GetVpnInterfaceDslPppoaFeatureTemplateAccessList)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward struct {
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Ending port of port range
+	PortEndRange int `pulumi:"portEndRange"`
+	// Starting port of port range
+	PortStartRange int `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress string `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable string `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	PrivateVpn int `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable string `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	Protocol string `pulumi:"protocol"`
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs and GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs{...}
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput() GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs struct {
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Ending port of port range
+	PortEndRange pulumi.IntInput `pulumi:"portEndRange"`
+	// Starting port of port range
+	PortStartRange pulumi.IntInput `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress pulumi.StringInput `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable pulumi.StringInput `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	PrivateVpn pulumi.IntInput `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable pulumi.StringInput `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+}
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput() GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput)
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray and GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray{ GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs{...} }
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray []GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardInput
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput() GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Ending port of port range
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) PortEndRange() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) int { return v.PortEndRange }).(pulumi.IntOutput)
+}
+
+// Starting port of port range
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) PortStartRange() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) int { return v.PortStartRange }).(pulumi.IntOutput)
+}
+
+// Private IP Address to translate to
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) PrivateIpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) string { return v.PrivateIpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) PrivateIpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) string { return v.PrivateIpAddressVariable }).(pulumi.StringOutput)
+}
+
+// VPN in which private IP Address resides
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) PrivateVpn() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) int { return v.PrivateVpn }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) PrivateVpnVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) string { return v.PrivateVpnVariable }).(pulumi.StringOutput)
+}
+
+// Layer 4 protocol to apply port forwarding to
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward {
+		return vs[0].([]GetVpnInterfaceDslPppoaFeatureTemplateNatPortForward)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicer struct {
+	// Direction
+	Direction string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Name of policer
+	PolicerName string `pulumi:"policerName"`
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplatePolicerInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs and GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplatePolicerInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs{...}
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicerInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput() GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs struct {
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Name of policer
+	PolicerName pulumi.StringInput `pulumi:"policerName"`
+}
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput() GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput)
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray and GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray{ GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs{...} }
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray []GetVpnInterfaceDslPppoaFeatureTemplatePolicerInput
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput() GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput {
+	return o
+}
+
+// Direction
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePolicer) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePolicer) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Name of policer
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput) PolicerName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePolicer) string { return v.PolicerName }).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoaFeatureTemplatePolicer {
+		return vs[0].([]GetVpnInterfaceDslPppoaFeatureTemplatePolicer)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePvc struct {
+	// Dialer Pool corresponding to this pvc
+	AtmDialerPoolMember int `pulumi:"atmDialerPoolMember"`
+	// Variable name
+	AtmDialerPoolMemberVariable string `pulumi:"atmDialerPoolMemberVariable"`
+	// dialer
+	AtmEncapsulationAal5mux bool `pulumi:"atmEncapsulationAal5mux"`
+	// aal5nlpid
+	AtmEncapsulationAal5nlpid bool `pulumi:"atmEncapsulationAal5nlpid"`
+	// aal5snap
+	AtmEncapsulationAal5snap bool `pulumi:"atmEncapsulationAal5snap"`
+	// Maximum Burst Size in Cells
+	AtmVbrNrtMaximumBurstSize int `pulumi:"atmVbrNrtMaximumBurstSize"`
+	// Variable name
+	AtmVbrNrtMaximumBurstSizeVariable string `pulumi:"atmVbrNrtMaximumBurstSizeVariable"`
+	// Peak Cell Rate in Kbps
+	AtmVbrNrtPeakCellRate int `pulumi:"atmVbrNrtPeakCellRate"`
+	// Variable name
+	AtmVbrNrtPeakCellRateVariable string `pulumi:"atmVbrNrtPeakCellRateVariable"`
+	// Peak Cell Rate in Kbps
+	AtmVbrNrtSustainableCellRate int `pulumi:"atmVbrNrtSustainableCellRate"`
+	// Variable name
+	AtmVbrNrtSustainableCellRateVariable string `pulumi:"atmVbrNrtSustainableCellRateVariable"`
+	// Average Cell Rate in Kbps
+	AtmVbrRtAverageCellRate int `pulumi:"atmVbrRtAverageCellRate"`
+	// Variable name
+	AtmVbrRtAverageCellRateVariable string `pulumi:"atmVbrRtAverageCellRateVariable"`
+	// Maximum Burst Size in number of Cells
+	AtmVbrRtMaximumBurstSize int `pulumi:"atmVbrRtMaximumBurstSize"`
+	// Variable name
+	AtmVbrRtMaximumBurstSizeVariable string `pulumi:"atmVbrRtMaximumBurstSizeVariable"`
+	// Peak Cell Rate in Kbps
+	AtmVbrRtPeakCellRate int `pulumi:"atmVbrRtPeakCellRate"`
+	// Variable name
+	AtmVbrRtPeakCellRateVariable string `pulumi:"atmVbrRtPeakCellRateVariable"`
+	// VPI/VCI
+	AtmVpiAndVci string `pulumi:"atmVpiAndVci"`
+	// Variable name
+	AtmVpiAndVciVariable string `pulumi:"atmVpiAndVciVariable"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplatePvcInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs and GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplatePvcInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs{...}
+type GetVpnInterfaceDslPppoaFeatureTemplatePvcInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutput() GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs struct {
+	// Dialer Pool corresponding to this pvc
+	AtmDialerPoolMember pulumi.IntInput `pulumi:"atmDialerPoolMember"`
+	// Variable name
+	AtmDialerPoolMemberVariable pulumi.StringInput `pulumi:"atmDialerPoolMemberVariable"`
+	// dialer
+	AtmEncapsulationAal5mux pulumi.BoolInput `pulumi:"atmEncapsulationAal5mux"`
+	// aal5nlpid
+	AtmEncapsulationAal5nlpid pulumi.BoolInput `pulumi:"atmEncapsulationAal5nlpid"`
+	// aal5snap
+	AtmEncapsulationAal5snap pulumi.BoolInput `pulumi:"atmEncapsulationAal5snap"`
+	// Maximum Burst Size in Cells
+	AtmVbrNrtMaximumBurstSize pulumi.IntInput `pulumi:"atmVbrNrtMaximumBurstSize"`
+	// Variable name
+	AtmVbrNrtMaximumBurstSizeVariable pulumi.StringInput `pulumi:"atmVbrNrtMaximumBurstSizeVariable"`
+	// Peak Cell Rate in Kbps
+	AtmVbrNrtPeakCellRate pulumi.IntInput `pulumi:"atmVbrNrtPeakCellRate"`
+	// Variable name
+	AtmVbrNrtPeakCellRateVariable pulumi.StringInput `pulumi:"atmVbrNrtPeakCellRateVariable"`
+	// Peak Cell Rate in Kbps
+	AtmVbrNrtSustainableCellRate pulumi.IntInput `pulumi:"atmVbrNrtSustainableCellRate"`
+	// Variable name
+	AtmVbrNrtSustainableCellRateVariable pulumi.StringInput `pulumi:"atmVbrNrtSustainableCellRateVariable"`
+	// Average Cell Rate in Kbps
+	AtmVbrRtAverageCellRate pulumi.IntInput `pulumi:"atmVbrRtAverageCellRate"`
+	// Variable name
+	AtmVbrRtAverageCellRateVariable pulumi.StringInput `pulumi:"atmVbrRtAverageCellRateVariable"`
+	// Maximum Burst Size in number of Cells
+	AtmVbrRtMaximumBurstSize pulumi.IntInput `pulumi:"atmVbrRtMaximumBurstSize"`
+	// Variable name
+	AtmVbrRtMaximumBurstSizeVariable pulumi.StringInput `pulumi:"atmVbrRtMaximumBurstSizeVariable"`
+	// Peak Cell Rate in Kbps
+	AtmVbrRtPeakCellRate pulumi.IntInput `pulumi:"atmVbrRtPeakCellRate"`
+	// Variable name
+	AtmVbrRtPeakCellRateVariable pulumi.StringInput `pulumi:"atmVbrRtPeakCellRateVariable"`
+	// VPI/VCI
+	AtmVpiAndVci pulumi.StringInput `pulumi:"atmVpiAndVci"`
+	// Variable name
+	AtmVpiAndVciVariable pulumi.StringInput `pulumi:"atmVpiAndVciVariable"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+}
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePvc)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutput() GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput)
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplatePvcArray and GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplatePvcArray{ GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs{...} }
+type GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePvcArray []GetVpnInterfaceDslPppoaFeatureTemplatePvcInput
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePvcArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplatePvc)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePvcArray) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplatePvcArray) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePvc)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutput() GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput {
+	return o
+}
+
+// Dialer Pool corresponding to this pvc
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmDialerPoolMember() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmDialerPoolMember }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmDialerPoolMemberVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmDialerPoolMemberVariable }).(pulumi.StringOutput)
+}
+
+// dialer
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmEncapsulationAal5mux() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) bool { return v.AtmEncapsulationAal5mux }).(pulumi.BoolOutput)
+}
+
+// aal5nlpid
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmEncapsulationAal5nlpid() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) bool { return v.AtmEncapsulationAal5nlpid }).(pulumi.BoolOutput)
+}
+
+// aal5snap
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmEncapsulationAal5snap() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) bool { return v.AtmEncapsulationAal5snap }).(pulumi.BoolOutput)
+}
+
+// Maximum Burst Size in Cells
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrNrtMaximumBurstSize() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmVbrNrtMaximumBurstSize }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrNrtMaximumBurstSizeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVbrNrtMaximumBurstSizeVariable }).(pulumi.StringOutput)
+}
+
+// Peak Cell Rate in Kbps
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrNrtPeakCellRate() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmVbrNrtPeakCellRate }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrNrtPeakCellRateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVbrNrtPeakCellRateVariable }).(pulumi.StringOutput)
+}
+
+// Peak Cell Rate in Kbps
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrNrtSustainableCellRate() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmVbrNrtSustainableCellRate }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrNrtSustainableCellRateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string {
+		return v.AtmVbrNrtSustainableCellRateVariable
+	}).(pulumi.StringOutput)
+}
+
+// Average Cell Rate in Kbps
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrRtAverageCellRate() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmVbrRtAverageCellRate }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrRtAverageCellRateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVbrRtAverageCellRateVariable }).(pulumi.StringOutput)
+}
+
+// Maximum Burst Size in number of Cells
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrRtMaximumBurstSize() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmVbrRtMaximumBurstSize }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrRtMaximumBurstSizeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVbrRtMaximumBurstSizeVariable }).(pulumi.StringOutput)
+}
+
+// Peak Cell Rate in Kbps
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrRtPeakCellRate() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) int { return v.AtmVbrRtPeakCellRate }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVbrRtPeakCellRateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVbrRtPeakCellRateVariable }).(pulumi.StringOutput)
+}
+
+// VPI/VCI
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVpiAndVci() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVpiAndVci }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) AtmVpiAndVciVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) string { return v.AtmVpiAndVciVariable }).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplatePvc) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplatePvc)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoaFeatureTemplatePvc {
+		return vs[0].([]GetVpnInterfaceDslPppoaFeatureTemplatePvc)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation struct {
+	// Encapsulation
+	Encapsulation string `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Set preference for TLOC
+	Preference int `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable string `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight int `pulumi:"weight"`
+	// Variable name
+	WeightVariable string `pulumi:"weightVariable"`
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs and GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs{...}
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs struct {
+	// Encapsulation
+	Encapsulation pulumi.StringInput `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Set preference for TLOC
+	Preference pulumi.IntInput `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable pulumi.StringInput `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight pulumi.IntInput `pulumi:"weight"`
+	// Variable name
+	WeightVariable pulumi.StringInput `pulumi:"weightVariable"`
+}
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray and GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray{ GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs{...} }
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray []GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationInput
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+// Encapsulation
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.Encapsulation
+	}).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Set preference for TLOC
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation) int { return v.Preference }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.PreferenceVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set weight for TLOC
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation) int { return v.Weight }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.WeightVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation {
+		return vs[0].([]GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration struct {
+	// Set module slot/subslot/port number
+	ControllerVdslSlot string `pulumi:"controllerVdslSlot"`
+	// Variable name
+	ControllerVdslSlotVariable string `pulumi:"controllerVdslSlotVariable"`
+	// Set VDSL operating mode to adsl1
+	ModeAdsl1 bool `pulumi:"modeAdsl1"`
+	// Set VDSL operating mode to adsl2
+	ModeAdsl2 bool `pulumi:"modeAdsl2"`
+	// Set VDSL operating mode to adsl2plus
+	ModeAdsl2plus bool `pulumi:"modeAdsl2plus"`
+	// Set VDSL operating mode to ansi
+	ModeAnsi bool `pulumi:"modeAnsi"`
+	// Set VDSL operating mode to vdsl2
+	ModeVdsl2 bool `pulumi:"modeVdsl2"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Seamless rate adaption
+	Sra bool `pulumi:"sra"`
+	// Set module slot/subslot/port number
+	VdslModemConfiguration string `pulumi:"vdslModemConfiguration"`
+	// Variable name
+	VdslModemConfigurationVariable string `pulumi:"vdslModemConfigurationVariable"`
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs and GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs{...}
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs struct {
+	// Set module slot/subslot/port number
+	ControllerVdslSlot pulumi.StringInput `pulumi:"controllerVdslSlot"`
+	// Variable name
+	ControllerVdslSlotVariable pulumi.StringInput `pulumi:"controllerVdslSlotVariable"`
+	// Set VDSL operating mode to adsl1
+	ModeAdsl1 pulumi.BoolInput `pulumi:"modeAdsl1"`
+	// Set VDSL operating mode to adsl2
+	ModeAdsl2 pulumi.BoolInput `pulumi:"modeAdsl2"`
+	// Set VDSL operating mode to adsl2plus
+	ModeAdsl2plus pulumi.BoolInput `pulumi:"modeAdsl2plus"`
+	// Set VDSL operating mode to ansi
+	ModeAnsi pulumi.BoolInput `pulumi:"modeAnsi"`
+	// Set VDSL operating mode to vdsl2
+	ModeVdsl2 pulumi.BoolInput `pulumi:"modeVdsl2"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Seamless rate adaption
+	Sra pulumi.BoolInput `pulumi:"sra"`
+	// Set module slot/subslot/port number
+	VdslModemConfiguration pulumi.StringInput `pulumi:"vdslModemConfiguration"`
+	// Variable name
+	VdslModemConfigurationVariable pulumi.StringInput `pulumi:"vdslModemConfigurationVariable"`
+}
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput)
+}
+
+// GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayInput is an input type that accepts GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray and GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray{ GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs{...} }
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput
+	ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray []GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationInput
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput {
+	return o
+}
+
+// Set module slot/subslot/port number
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ControllerVdslSlot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) string { return v.ControllerVdslSlot }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ControllerVdslSlotVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) string {
+		return v.ControllerVdslSlotVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set VDSL operating mode to adsl1
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ModeAdsl1() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl1 }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to adsl2
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ModeAdsl2() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl2 }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to adsl2plus
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ModeAdsl2plus() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl2plus }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to ansi
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ModeAnsi() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.ModeAnsi }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to vdsl2
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) ModeVdsl2() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.ModeVdsl2 }).(pulumi.BoolOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Seamless rate adaption
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) Sra() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) bool { return v.Sra }).(pulumi.BoolOutput)
+}
+
+// Set module slot/subslot/port number
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) VdslModemConfiguration() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) string {
+		return v.VdslModemConfiguration
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput) VdslModemConfigurationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration) string {
+		return v.VdslModemConfigurationVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput) ToGetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration {
+		return vs[0].([]GetVpnInterfaceDslPppoaFeatureTemplateVdslConfiguration)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessList struct {
+	// Name of access list
+	AclName string `pulumi:"aclName"`
+	// Variable name
+	AclNameVariable string `pulumi:"aclNameVariable"`
+	// Direction
+	Direction string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateAccessListInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs and GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateAccessListInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs{...}
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessListInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput() GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs struct {
+	// Name of access list
+	AclName pulumi.StringInput `pulumi:"aclName"`
+	// Variable name
+	AclNameVariable pulumi.StringInput `pulumi:"aclNameVariable"`
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+}
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput() GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput)
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray and GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray{ GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs{...} }
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray []GetVpnInterfaceDslPppoeFeatureTemplateAccessListInput
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput() GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput {
+	return o
+}
+
+// Name of access list
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) AclName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateAccessList) string { return v.AclName }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) AclNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateAccessList) string { return v.AclNameVariable }).(pulumi.StringOutput)
+}
+
+// Direction
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateAccessList) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateAccessList) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoeFeatureTemplateAccessList {
+		return vs[0].([]GetVpnInterfaceDslPppoeFeatureTemplateAccessList)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward struct {
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Ending port of port range
+	PortEndRange int `pulumi:"portEndRange"`
+	// Starting port of port range
+	PortStartRange int `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress string `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable string `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	PrivateVpn int `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable string `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	Protocol string `pulumi:"protocol"`
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs and GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs{...}
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput() GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs struct {
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Ending port of port range
+	PortEndRange pulumi.IntInput `pulumi:"portEndRange"`
+	// Starting port of port range
+	PortStartRange pulumi.IntInput `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress pulumi.StringInput `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable pulumi.StringInput `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	PrivateVpn pulumi.IntInput `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable pulumi.StringInput `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+}
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput() GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput)
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray and GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray{ GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs{...} }
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray []GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardInput
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput() GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Ending port of port range
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) PortEndRange() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) int { return v.PortEndRange }).(pulumi.IntOutput)
+}
+
+// Starting port of port range
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) PortStartRange() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) int { return v.PortStartRange }).(pulumi.IntOutput)
+}
+
+// Private IP Address to translate to
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) PrivateIpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) string { return v.PrivateIpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) PrivateIpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) string { return v.PrivateIpAddressVariable }).(pulumi.StringOutput)
+}
+
+// VPN in which private IP Address resides
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) PrivateVpn() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) int { return v.PrivateVpn }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) PrivateVpnVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) string { return v.PrivateVpnVariable }).(pulumi.StringOutput)
+}
+
+// Layer 4 protocol to apply port forwarding to
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward {
+		return vs[0].([]GetVpnInterfaceDslPppoeFeatureTemplateNatPortForward)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicer struct {
+	// Direction
+	Direction string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Name of policer
+	PolicerName string `pulumi:"policerName"`
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplatePolicerInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs and GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplatePolicerInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs{...}
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicerInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput() GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs struct {
+	// Direction
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Name of policer
+	PolicerName pulumi.StringInput `pulumi:"policerName"`
+}
+
+func (GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput() GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput)
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray and GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray{ GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs{...} }
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray []GetVpnInterfaceDslPppoeFeatureTemplatePolicerInput
+
+func (GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput() GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput {
+	return o
+}
+
+// Direction
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplatePolicer) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplatePolicer) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Name of policer
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput) PolicerName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplatePolicer) string { return v.PolicerName }).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoeFeatureTemplatePolicer {
+		return vs[0].([]GetVpnInterfaceDslPppoeFeatureTemplatePolicer)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation struct {
+	// Encapsulation
+	Encapsulation string `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Set preference for TLOC
+	Preference int `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable string `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight int `pulumi:"weight"`
+	// Variable name
+	WeightVariable string `pulumi:"weightVariable"`
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs and GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs{...}
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs struct {
+	// Encapsulation
+	Encapsulation pulumi.StringInput `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Set preference for TLOC
+	Preference pulumi.IntInput `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable pulumi.StringInput `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight pulumi.IntInput `pulumi:"weight"`
+	// Variable name
+	WeightVariable pulumi.StringInput `pulumi:"weightVariable"`
+}
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray and GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray{ GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs{...} }
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray []GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationInput
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput() GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+// Encapsulation
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.Encapsulation
+	}).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Set preference for TLOC
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation) int { return v.Preference }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.PreferenceVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set weight for TLOC
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation) int { return v.Weight }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation) string {
+		return v.WeightVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation {
+		return vs[0].([]GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration struct {
+	// Set module slot/subslot/port number
+	ControllerVdslSlot string `pulumi:"controllerVdslSlot"`
+	// Variable name
+	ControllerVdslSlotVariable string `pulumi:"controllerVdslSlotVariable"`
+	// Set VDSL operating mode to adsl1
+	ModeAdsl1 bool `pulumi:"modeAdsl1"`
+	// Set VDSL operating mode to adsl2
+	ModeAdsl2 bool `pulumi:"modeAdsl2"`
+	// Set VDSL operating mode to adsl2plus
+	ModeAdsl2plus bool `pulumi:"modeAdsl2plus"`
+	// Set VDSL operating mode to ansi
+	ModeAnsi bool `pulumi:"modeAnsi"`
+	// Set VDSL operating mode to vdsl2
+	ModeVdsl2 bool `pulumi:"modeVdsl2"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Seamless rate adaption
+	Sra bool `pulumi:"sra"`
+	// Set module slot/subslot/port number
+	VdslModemConfiguration string `pulumi:"vdslModemConfiguration"`
+	// Variable name
+	VdslModemConfigurationVariable string `pulumi:"vdslModemConfigurationVariable"`
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs and GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs{...}
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs struct {
+	// Set module slot/subslot/port number
+	ControllerVdslSlot pulumi.StringInput `pulumi:"controllerVdslSlot"`
+	// Variable name
+	ControllerVdslSlotVariable pulumi.StringInput `pulumi:"controllerVdslSlotVariable"`
+	// Set VDSL operating mode to adsl1
+	ModeAdsl1 pulumi.BoolInput `pulumi:"modeAdsl1"`
+	// Set VDSL operating mode to adsl2
+	ModeAdsl2 pulumi.BoolInput `pulumi:"modeAdsl2"`
+	// Set VDSL operating mode to adsl2plus
+	ModeAdsl2plus pulumi.BoolInput `pulumi:"modeAdsl2plus"`
+	// Set VDSL operating mode to ansi
+	ModeAnsi pulumi.BoolInput `pulumi:"modeAnsi"`
+	// Set VDSL operating mode to vdsl2
+	ModeVdsl2 pulumi.BoolInput `pulumi:"modeVdsl2"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Seamless rate adaption
+	Sra pulumi.BoolInput `pulumi:"sra"`
+	// Set module slot/subslot/port number
+	VdslModemConfiguration pulumi.StringInput `pulumi:"vdslModemConfiguration"`
+	// Variable name
+	VdslModemConfigurationVariable pulumi.StringInput `pulumi:"vdslModemConfigurationVariable"`
+}
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput)
+}
+
+// GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayInput is an input type that accepts GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray and GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayInput` via:
+//
+//	GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray{ GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs{...} }
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput
+	ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutputWithContext(context.Context) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray []GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationInput
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput {
+	return i.ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput() GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput {
+	return o
+}
+
+// Set module slot/subslot/port number
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ControllerVdslSlot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) string { return v.ControllerVdslSlot }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ControllerVdslSlotVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) string {
+		return v.ControllerVdslSlotVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set VDSL operating mode to adsl1
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ModeAdsl1() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl1 }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to adsl2
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ModeAdsl2() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl2 }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to adsl2plus
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ModeAdsl2plus() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.ModeAdsl2plus }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to ansi
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ModeAnsi() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.ModeAnsi }).(pulumi.BoolOutput)
+}
+
+// Set VDSL operating mode to vdsl2
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) ModeVdsl2() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.ModeVdsl2 }).(pulumi.BoolOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Seamless rate adaption
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) Sra() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) bool { return v.Sra }).(pulumi.BoolOutput)
+}
+
+// Set module slot/subslot/port number
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) VdslModemConfiguration() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) string {
+		return v.VdslModemConfiguration
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput) VdslModemConfigurationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration) string {
+		return v.VdslModemConfigurationVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput() GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput) ToGetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutputWithContext(ctx context.Context) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration {
+		return vs[0].([]GetVpnInterfaceDslPppoeFeatureTemplateVdslConfiguration)[vs[1].(int)]
+	}).(GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput)
+}
+
 type GetVpnInterfaceEthernetPppoeFeatureTemplateAccessList struct {
 	// Name of access list
 	AclName string `pulumi:"aclName"`
@@ -4598,6 +6802,34 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplatePolicerInput)(nil)).Elem(), GetVpnInterfaceDslIpoeFeatureTemplatePolicerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayInput)(nil)).Elem(), GetVpnInterfaceDslIpoeFeatureTemplatePolicerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationInput)(nil)).Elem(), GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayInput)(nil)).Elem(), GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateAccessListInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateAccessListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateAccessListArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePolicerInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplatePolicerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplatePolicerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePvcInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplatePvcArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplatePvcArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateAccessListInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateAccessListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateAccessListArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplatePolicerInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplatePolicerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplatePolicerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayInput)(nil)).Elem(), GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceEthernetPppoeFeatureTemplateAccessListInput)(nil)).Elem(), GetVpnInterfaceEthernetPppoeFeatureTemplateAccessListArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceEthernetPppoeFeatureTemplateAccessListArrayInput)(nil)).Elem(), GetVpnInterfaceEthernetPppoeFeatureTemplateAccessListArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardInput)(nil)).Elem(), GetVpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgs{})
@@ -4664,6 +6896,34 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslIpoeFeatureTemplatePolicerOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateAccessListOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateAccessListArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateNatPortForwardArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplatePolicerOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplatePolicerArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplatePvcOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplatePvcArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateAccessListOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateAccessListArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateNatPortForwardArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplatePolicerOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplatePolicerArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArrayOutput{})
 	pulumi.RegisterOutputType(GetVpnInterfaceEthernetPppoeFeatureTemplateAccessListOutput{})
 	pulumi.RegisterOutputType(GetVpnInterfaceEthernetPppoeFeatureTemplateAccessListArrayOutput{})
 	pulumi.RegisterOutputType(GetVpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardOutput{})

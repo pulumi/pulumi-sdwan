@@ -34,11 +34,11 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
         """
         The set of arguments for constructing a PolicyObjectUnifiedTlsSslProfile resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         pulumi.set(__self__, "decrypt_categories", decrypt_categories)
@@ -121,7 +121,7 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
     @pulumi.getter(name="decryptThreshold")
     def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `reputation` being equal to `true`
+        , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "decrypt_threshold")
@@ -158,7 +158,7 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
     @pulumi.getter(name="thresholdCategories")
     def threshold_categories(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `reputation` being equal to `true`
+        , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "threshold_categories")
@@ -204,12 +204,12 @@ class _PolicyObjectUnifiedTlsSslProfileState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslProfile resources.
-        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
         """
@@ -253,7 +253,7 @@ class _PolicyObjectUnifiedTlsSslProfileState:
     @pulumi.getter(name="decryptThreshold")
     def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `reputation` being equal to `true`
+        , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "decrypt_threshold")
@@ -338,7 +338,7 @@ class _PolicyObjectUnifiedTlsSslProfileState:
     @pulumi.getter(name="thresholdCategories")
     def threshold_categories(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `reputation` being equal to `true`
+        , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "threshold_categories")
@@ -399,7 +399,7 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -434,12 +434,12 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         ...
@@ -450,7 +450,7 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -574,12 +574,12 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
-        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` being equal to `true`
+        :param pulumi.Input[_builtins.str] threshold_categories: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
         """
@@ -611,7 +611,7 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
     @pulumi.getter(name="decryptThreshold")
     def decrypt_threshold(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `reputation` being equal to `true`
+        , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "decrypt_threshold")
@@ -664,7 +664,7 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
     @pulumi.getter(name="thresholdCategories")
     def threshold_categories(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `reputation` being equal to `true`
+        , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "threshold_categories")

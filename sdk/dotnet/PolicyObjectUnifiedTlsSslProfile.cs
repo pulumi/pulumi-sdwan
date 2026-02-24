@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -68,7 +68,7 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> DecryptCategories { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `Reputation` being equal to `True`
+        /// , Attribute conditional on `Reputation` equal to `True`
         ///   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `Suspicious`, `Trustworthy`
         /// </summary>
         [Output("decryptThreshold")]
@@ -105,7 +105,7 @@ namespace Pulumi.Sdwan
         public Output<bool> Reputation { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `Reputation` being equal to `True`
+        /// , Attribute conditional on `Reputation` equal to `True`
         ///   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `Suspicious`, `Trustworthy`
         /// </summary>
         [Output("thresholdCategories")]
@@ -178,7 +178,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// , Attribute conditional on `Reputation` being equal to `True`
+        /// , Attribute conditional on `Reputation` equal to `True`
         ///   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `Suspicious`, `Trustworthy`
         /// </summary>
         [Input("decryptThreshold")]
@@ -225,7 +225,7 @@ namespace Pulumi.Sdwan
         public Input<bool> Reputation { get; set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `Reputation` being equal to `True`
+        /// , Attribute conditional on `Reputation` equal to `True`
         ///   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `Suspicious`, `Trustworthy`
         /// </summary>
         [Input("thresholdCategories")]
@@ -254,7 +254,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// , Attribute conditional on `Reputation` being equal to `True`
+        /// , Attribute conditional on `Reputation` equal to `True`
         ///   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `Suspicious`, `Trustworthy`
         /// </summary>
         [Input("decryptThreshold")]
@@ -301,7 +301,7 @@ namespace Pulumi.Sdwan
         public Input<bool>? Reputation { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `Reputation` being equal to `True`
+        /// , Attribute conditional on `Reputation` equal to `True`
         ///   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `Suspicious`, `Trustworthy`
         /// </summary>
         [Input("thresholdCategories")]

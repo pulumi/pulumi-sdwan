@@ -77,7 +77,7 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
     }
 
     /**
-     * , Attribute conditional on `mode` being equal to `security`
+     * , Attribute conditional on `mode` equal to `security`
      */
     declare public readonly applyZonePairs: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair[] | undefined>;
     /**
@@ -156,7 +156,7 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
  */
 export interface ZoneBasedFirewallPolicyDefinitionState {
     /**
-     * , Attribute conditional on `mode` being equal to `security`
+     * , Attribute conditional on `mode` equal to `security`
      */
     applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
     /**
@@ -189,7 +189,7 @@ export interface ZoneBasedFirewallPolicyDefinitionState {
  */
 export interface ZoneBasedFirewallPolicyDefinitionArgs {
     /**
-     * , Attribute conditional on `mode` being equal to `security`
+     * , Attribute conditional on `mode` equal to `security`
      */
     applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
     /**

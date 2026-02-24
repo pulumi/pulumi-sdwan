@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv6AclPolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Class map ID, Attribute conditional on `Type` being equal to `Class`
+        /// Class map ID, Attribute conditional on `Type` equal to `Class`
         /// </summary>
         [Input("classMapId")]
         public Input<string>? ClassMapId { get; set; }
@@ -25,19 +25,19 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ClassMapVersion { get; set; }
 
         /// <summary>
-        /// Counter name, Attribute conditional on `Type` being equal to `Count`
+        /// Counter name, Attribute conditional on `Type` equal to `Count`
         /// </summary>
         [Input("counterName")]
         public Input<string>? CounterName { get; set; }
 
         /// <summary>
-        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
+        /// Enable logging, Attribute conditional on `Type` equal to `Log`
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
 
         /// <summary>
-        /// Mirror ID, Attribute conditional on `Type` being equal to `Mirror`
+        /// Mirror ID, Attribute conditional on `Type` equal to `Mirror`
         /// </summary>
         [Input("mirrorId")]
         public Input<string>? MirrorId { get; set; }
@@ -49,7 +49,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? MirrorVersion { get; set; }
 
         /// <summary>
-        /// Policer ID, Attribute conditional on `Type` being equal to `Policer`
+        /// Policer ID, Attribute conditional on `Type` equal to `Policer`
         /// </summary>
         [Input("policerId")]
         public Input<string>? PolicerId { get; set; }
@@ -64,7 +64,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs>? _setParameters;
 
         /// <summary>
-        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
+        /// List of set parameters, Attribute conditional on `Type` equal to `Set`
         /// </summary>
         public InputList<Inputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs> SetParameters
         {

@@ -9,8 +9,13 @@ import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureArp;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticNat66;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -297,6 +302,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String mediaTypeVariable;
     /**
+     * @return Core Region
+     * 
+     */
+    private String mrfCoreRegionType;
+    /**
+     * @return Enable Core Region
+     * 
+     */
+    private Boolean mrfEnableCoreRegion;
+    /**
      * @return The name of the Feature
      * 
      */
@@ -316,6 +331,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private Boolean natIpv4;
+    /**
+     * @return NAT Multiple Loopback
+     * 
+     */
+    private List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback> natIpv4Loopbacks;
+    /**
+     * @return NAT Multiple Pool
+     * 
+     */
+    private List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool> natIpv4Pools;
     /**
      * @return Variable name
      * 
@@ -341,6 +366,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String natLoopbackVariable;
+    /**
+     * @return NAT Match Interface
+     * 
+     */
+    private Boolean natMatchInterface;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String natMatchInterfaceVariable;
     /**
      * @return NAT Overload
      * 
@@ -397,11 +432,6 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String natType;
     /**
-     * @return Variable name
-     * 
-     */
-    private String natTypeVariable;
-    /**
      * @return Set NAT UDP session timeout, in minutes
      * 
      */
@@ -426,6 +456,102 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String perTunnelQosVariable;
+    /**
+     * @return Port-Channel interface on/off
+     * 
+     */
+    private Boolean portChannelInterface;
+    /**
+     * @return Eanble lacp fast switchover
+     * 
+     */
+    private Boolean portChannelLacpFastSwitchover;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpFastSwitchoverVariable;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private String portChannelLacpLoadBalance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpLoadBalanceVariable;
+    /**
+     * @return Set LACP max bundle
+     * 
+     */
+    private Integer portChannelLacpMaxBundle;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpMaxBundleVariable;
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    private List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks;
+    /**
+     * @return Set LACP min bundle
+     * 
+     */
+    private Integer portChannelLacpMinBundle;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpMinBundleVariable;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private Boolean portChannelLacpQosAggregate;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpQosAggregateVariable;
+    /**
+     * @return Port-Channel member interface on/off
+     * 
+     */
+    private Boolean portChannelMemberInterface;
+    /**
+     * @return Port Channel Mode
+     * 
+     */
+    private String portChannelMode;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private String portChannelStaticLoadBalance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelStaticLoadBalanceVariable;
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    private List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private Boolean portChannelStaticQosAggregate;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelStaticQosAggregateVariable;
+    private Boolean portChannelSubinterface;
     /**
      * @return Adaptive QoS
      * 
@@ -553,6 +679,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private List<GetTransportWanVpnInterfaceEthernetFeatureStaticNat66> staticNat66s;
     /**
+     * @return Configure Port Forward entries
+     * 
+     */
+    private List<GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward> staticPortForwards;
+    /**
      * @return TCP MSS on SYN packets, in bytes
      * 
      */
@@ -652,6 +783,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String tunnelInterfaceAllowDnsVariable;
+    /**
+     * @return Allow Fragmentation and will clear DF bit in outer IP
+     * 
+     */
+    private Boolean tunnelInterfaceAllowFragmentation;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceAllowFragmentationVariable;
     /**
      * @return Allow/Deny HTTPS
      * 
@@ -917,6 +1058,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String tunnelInterfacePortHopVariable;
+    /**
+     * @return Set current tunnel mtu to 9k
+     * 
+     */
+    private Boolean tunnelInterfaceSetSdwanTunnelMtuToMax;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
     /**
      * @return Tunnel TCP MSS on SYN packets, in bytes
      * 
@@ -1371,6 +1522,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.mediaTypeVariable;
     }
     /**
+     * @return Core Region
+     * 
+     */
+    public String mrfCoreRegionType() {
+        return this.mrfCoreRegionType;
+    }
+    /**
+     * @return Enable Core Region
+     * 
+     */
+    public Boolean mrfEnableCoreRegion() {
+        return this.mrfEnableCoreRegion;
+    }
+    /**
      * @return The name of the Feature
      * 
      */
@@ -1397,6 +1562,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public Boolean natIpv4() {
         return this.natIpv4;
+    }
+    /**
+     * @return NAT Multiple Loopback
+     * 
+     */
+    public List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback> natIpv4Loopbacks() {
+        return this.natIpv4Loopbacks;
+    }
+    /**
+     * @return NAT Multiple Pool
+     * 
+     */
+    public List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool> natIpv4Pools() {
+        return this.natIpv4Pools;
     }
     /**
      * @return Variable name
@@ -1432,6 +1611,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public String natLoopbackVariable() {
         return this.natLoopbackVariable;
+    }
+    /**
+     * @return NAT Match Interface
+     * 
+     */
+    public Boolean natMatchInterface() {
+        return this.natMatchInterface;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String natMatchInterfaceVariable() {
+        return this.natMatchInterfaceVariable;
     }
     /**
      * @return NAT Overload
@@ -1511,13 +1704,6 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.natType;
     }
     /**
-     * @return Variable name
-     * 
-     */
-    public String natTypeVariable() {
-        return this.natTypeVariable;
-    }
-    /**
      * @return Set NAT UDP session timeout, in minutes
      * 
      */
@@ -1551,6 +1737,142 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public String perTunnelQosVariable() {
         return this.perTunnelQosVariable;
+    }
+    /**
+     * @return Port-Channel interface on/off
+     * 
+     */
+    public Boolean portChannelInterface() {
+        return this.portChannelInterface;
+    }
+    /**
+     * @return Eanble lacp fast switchover
+     * 
+     */
+    public Boolean portChannelLacpFastSwitchover() {
+        return this.portChannelLacpFastSwitchover;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpFastSwitchoverVariable() {
+        return this.portChannelLacpFastSwitchoverVariable;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public String portChannelLacpLoadBalance() {
+        return this.portChannelLacpLoadBalance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpLoadBalanceVariable() {
+        return this.portChannelLacpLoadBalanceVariable;
+    }
+    /**
+     * @return Set LACP max bundle
+     * 
+     */
+    public Integer portChannelLacpMaxBundle() {
+        return this.portChannelLacpMaxBundle;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpMaxBundleVariable() {
+        return this.portChannelLacpMaxBundleVariable;
+    }
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    public List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks() {
+        return this.portChannelLacpMemberLinks;
+    }
+    /**
+     * @return Set LACP min bundle
+     * 
+     */
+    public Integer portChannelLacpMinBundle() {
+        return this.portChannelLacpMinBundle;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpMinBundleVariable() {
+        return this.portChannelLacpMinBundleVariable;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public Boolean portChannelLacpQosAggregate() {
+        return this.portChannelLacpQosAggregate;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpQosAggregateVariable() {
+        return this.portChannelLacpQosAggregateVariable;
+    }
+    /**
+     * @return Port-Channel member interface on/off
+     * 
+     */
+    public Boolean portChannelMemberInterface() {
+        return this.portChannelMemberInterface;
+    }
+    /**
+     * @return Port Channel Mode
+     * 
+     */
+    public String portChannelMode() {
+        return this.portChannelMode;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public String portChannelStaticLoadBalance() {
+        return this.portChannelStaticLoadBalance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelStaticLoadBalanceVariable() {
+        return this.portChannelStaticLoadBalanceVariable;
+    }
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    public List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks() {
+        return this.portChannelStaticMemberLinks;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public Boolean portChannelStaticQosAggregate() {
+        return this.portChannelStaticQosAggregate;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelStaticQosAggregateVariable() {
+        return this.portChannelStaticQosAggregateVariable;
+    }
+    public Boolean portChannelSubinterface() {
+        return this.portChannelSubinterface;
     }
     /**
      * @return Adaptive QoS
@@ -1731,6 +2053,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.staticNat66s;
     }
     /**
+     * @return Configure Port Forward entries
+     * 
+     */
+    public List<GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward> staticPortForwards() {
+        return this.staticPortForwards;
+    }
+    /**
      * @return TCP MSS on SYN packets, in bytes
      * 
      */
@@ -1869,6 +2198,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public String tunnelInterfaceAllowDnsVariable() {
         return this.tunnelInterfaceAllowDnsVariable;
+    }
+    /**
+     * @return Allow Fragmentation and will clear DF bit in outer IP
+     * 
+     */
+    public Boolean tunnelInterfaceAllowFragmentation() {
+        return this.tunnelInterfaceAllowFragmentation;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceAllowFragmentationVariable() {
+        return this.tunnelInterfaceAllowFragmentationVariable;
     }
     /**
      * @return Allow/Deny HTTPS
@@ -2242,6 +2585,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.tunnelInterfacePortHopVariable;
     }
     /**
+     * @return Set current tunnel mtu to 9k
+     * 
+     */
+    public Boolean tunnelInterfaceSetSdwanTunnelMtuToMax() {
+        return this.tunnelInterfaceSetSdwanTunnelMtuToMax;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelInterfaceSetSdwanTunnelMtuToMaxVariable() {
+        return this.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
+    }
+    /**
      * @return Tunnel TCP MSS on SYN packets, in bytes
      * 
      */
@@ -2388,15 +2745,21 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String macAddressVariable;
         private String mediaType;
         private String mediaTypeVariable;
+        private String mrfCoreRegionType;
+        private Boolean mrfEnableCoreRegion;
         private String name;
         private Boolean nat64;
         private Boolean nat66;
         private Boolean natIpv4;
+        private List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback> natIpv4Loopbacks;
+        private List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool> natIpv4Pools;
         private String natIpv4Variable;
         private Boolean natIpv6;
         private String natIpv6Variable;
         private String natLoopback;
         private String natLoopbackVariable;
+        private Boolean natMatchInterface;
+        private String natMatchInterfaceVariable;
         private Boolean natOverload;
         private String natOverloadVariable;
         private Integer natPrefixLength;
@@ -2408,12 +2771,31 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private Integer natTcpTimeout;
         private String natTcpTimeoutVariable;
         private String natType;
-        private String natTypeVariable;
         private Integer natUdpTimeout;
         private String natUdpTimeoutVariable;
         private List<GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat> newStaticNats;
         private Boolean perTunnelQos;
         private String perTunnelQosVariable;
+        private Boolean portChannelInterface;
+        private Boolean portChannelLacpFastSwitchover;
+        private String portChannelLacpFastSwitchoverVariable;
+        private String portChannelLacpLoadBalance;
+        private String portChannelLacpLoadBalanceVariable;
+        private Integer portChannelLacpMaxBundle;
+        private String portChannelLacpMaxBundleVariable;
+        private List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks;
+        private Integer portChannelLacpMinBundle;
+        private String portChannelLacpMinBundleVariable;
+        private Boolean portChannelLacpQosAggregate;
+        private String portChannelLacpQosAggregateVariable;
+        private Boolean portChannelMemberInterface;
+        private String portChannelMode;
+        private String portChannelStaticLoadBalance;
+        private String portChannelStaticLoadBalanceVariable;
+        private List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks;
+        private Boolean portChannelStaticQosAggregate;
+        private String portChannelStaticQosAggregateVariable;
+        private Boolean portChannelSubinterface;
         private Boolean qosAdaptive;
         private Boolean qosAdaptiveBandwidthDownstream;
         private Boolean qosAdaptiveBandwidthUpstream;
@@ -2440,6 +2822,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String speed;
         private String speedVariable;
         private List<GetTransportWanVpnInterfaceEthernetFeatureStaticNat66> staticNat66s;
+        private List<GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward> staticPortForwards;
         private Integer tcpMss;
         private String tcpMssVariable;
         private String tlocExtension;
@@ -2460,6 +2843,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String tunnelInterfaceAllowDhcpVariable;
         private Boolean tunnelInterfaceAllowDns;
         private String tunnelInterfaceAllowDnsVariable;
+        private Boolean tunnelInterfaceAllowFragmentation;
+        private String tunnelInterfaceAllowFragmentationVariable;
         private Boolean tunnelInterfaceAllowHttps;
         private String tunnelInterfaceAllowHttpsVariable;
         private Boolean tunnelInterfaceAllowIcmp;
@@ -2513,6 +2898,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String tunnelInterfaceNetworkBroadcastVariable;
         private Boolean tunnelInterfacePortHop;
         private String tunnelInterfacePortHopVariable;
+        private Boolean tunnelInterfaceSetSdwanTunnelMtuToMax;
+        private String tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
         private Integer tunnelInterfaceTunnelTcpMss;
         private String tunnelInterfaceTunnelTcpMssVariable;
         private Boolean tunnelInterfaceVbondAsStunServer;
@@ -2587,15 +2974,21 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.macAddressVariable = defaults.macAddressVariable;
     	      this.mediaType = defaults.mediaType;
     	      this.mediaTypeVariable = defaults.mediaTypeVariable;
+    	      this.mrfCoreRegionType = defaults.mrfCoreRegionType;
+    	      this.mrfEnableCoreRegion = defaults.mrfEnableCoreRegion;
     	      this.name = defaults.name;
     	      this.nat64 = defaults.nat64;
     	      this.nat66 = defaults.nat66;
     	      this.natIpv4 = defaults.natIpv4;
+    	      this.natIpv4Loopbacks = defaults.natIpv4Loopbacks;
+    	      this.natIpv4Pools = defaults.natIpv4Pools;
     	      this.natIpv4Variable = defaults.natIpv4Variable;
     	      this.natIpv6 = defaults.natIpv6;
     	      this.natIpv6Variable = defaults.natIpv6Variable;
     	      this.natLoopback = defaults.natLoopback;
     	      this.natLoopbackVariable = defaults.natLoopbackVariable;
+    	      this.natMatchInterface = defaults.natMatchInterface;
+    	      this.natMatchInterfaceVariable = defaults.natMatchInterfaceVariable;
     	      this.natOverload = defaults.natOverload;
     	      this.natOverloadVariable = defaults.natOverloadVariable;
     	      this.natPrefixLength = defaults.natPrefixLength;
@@ -2607,12 +3000,31 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.natTcpTimeout = defaults.natTcpTimeout;
     	      this.natTcpTimeoutVariable = defaults.natTcpTimeoutVariable;
     	      this.natType = defaults.natType;
-    	      this.natTypeVariable = defaults.natTypeVariable;
     	      this.natUdpTimeout = defaults.natUdpTimeout;
     	      this.natUdpTimeoutVariable = defaults.natUdpTimeoutVariable;
     	      this.newStaticNats = defaults.newStaticNats;
     	      this.perTunnelQos = defaults.perTunnelQos;
     	      this.perTunnelQosVariable = defaults.perTunnelQosVariable;
+    	      this.portChannelInterface = defaults.portChannelInterface;
+    	      this.portChannelLacpFastSwitchover = defaults.portChannelLacpFastSwitchover;
+    	      this.portChannelLacpFastSwitchoverVariable = defaults.portChannelLacpFastSwitchoverVariable;
+    	      this.portChannelLacpLoadBalance = defaults.portChannelLacpLoadBalance;
+    	      this.portChannelLacpLoadBalanceVariable = defaults.portChannelLacpLoadBalanceVariable;
+    	      this.portChannelLacpMaxBundle = defaults.portChannelLacpMaxBundle;
+    	      this.portChannelLacpMaxBundleVariable = defaults.portChannelLacpMaxBundleVariable;
+    	      this.portChannelLacpMemberLinks = defaults.portChannelLacpMemberLinks;
+    	      this.portChannelLacpMinBundle = defaults.portChannelLacpMinBundle;
+    	      this.portChannelLacpMinBundleVariable = defaults.portChannelLacpMinBundleVariable;
+    	      this.portChannelLacpQosAggregate = defaults.portChannelLacpQosAggregate;
+    	      this.portChannelLacpQosAggregateVariable = defaults.portChannelLacpQosAggregateVariable;
+    	      this.portChannelMemberInterface = defaults.portChannelMemberInterface;
+    	      this.portChannelMode = defaults.portChannelMode;
+    	      this.portChannelStaticLoadBalance = defaults.portChannelStaticLoadBalance;
+    	      this.portChannelStaticLoadBalanceVariable = defaults.portChannelStaticLoadBalanceVariable;
+    	      this.portChannelStaticMemberLinks = defaults.portChannelStaticMemberLinks;
+    	      this.portChannelStaticQosAggregate = defaults.portChannelStaticQosAggregate;
+    	      this.portChannelStaticQosAggregateVariable = defaults.portChannelStaticQosAggregateVariable;
+    	      this.portChannelSubinterface = defaults.portChannelSubinterface;
     	      this.qosAdaptive = defaults.qosAdaptive;
     	      this.qosAdaptiveBandwidthDownstream = defaults.qosAdaptiveBandwidthDownstream;
     	      this.qosAdaptiveBandwidthUpstream = defaults.qosAdaptiveBandwidthUpstream;
@@ -2639,6 +3051,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.speed = defaults.speed;
     	      this.speedVariable = defaults.speedVariable;
     	      this.staticNat66s = defaults.staticNat66s;
+    	      this.staticPortForwards = defaults.staticPortForwards;
     	      this.tcpMss = defaults.tcpMss;
     	      this.tcpMssVariable = defaults.tcpMssVariable;
     	      this.tlocExtension = defaults.tlocExtension;
@@ -2659,6 +3072,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.tunnelInterfaceAllowDhcpVariable = defaults.tunnelInterfaceAllowDhcpVariable;
     	      this.tunnelInterfaceAllowDns = defaults.tunnelInterfaceAllowDns;
     	      this.tunnelInterfaceAllowDnsVariable = defaults.tunnelInterfaceAllowDnsVariable;
+    	      this.tunnelInterfaceAllowFragmentation = defaults.tunnelInterfaceAllowFragmentation;
+    	      this.tunnelInterfaceAllowFragmentationVariable = defaults.tunnelInterfaceAllowFragmentationVariable;
     	      this.tunnelInterfaceAllowHttps = defaults.tunnelInterfaceAllowHttps;
     	      this.tunnelInterfaceAllowHttpsVariable = defaults.tunnelInterfaceAllowHttpsVariable;
     	      this.tunnelInterfaceAllowIcmp = defaults.tunnelInterfaceAllowIcmp;
@@ -2712,6 +3127,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.tunnelInterfaceNetworkBroadcastVariable = defaults.tunnelInterfaceNetworkBroadcastVariable;
     	      this.tunnelInterfacePortHop = defaults.tunnelInterfacePortHop;
     	      this.tunnelInterfacePortHopVariable = defaults.tunnelInterfacePortHopVariable;
+    	      this.tunnelInterfaceSetSdwanTunnelMtuToMax = defaults.tunnelInterfaceSetSdwanTunnelMtuToMax;
+    	      this.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable = defaults.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
     	      this.tunnelInterfaceTunnelTcpMss = defaults.tunnelInterfaceTunnelTcpMss;
     	      this.tunnelInterfaceTunnelTcpMssVariable = defaults.tunnelInterfaceTunnelTcpMssVariable;
     	      this.tunnelInterfaceVbondAsStunServer = defaults.tunnelInterfaceVbondAsStunServer;
@@ -3221,6 +3638,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder mrfCoreRegionType(String mrfCoreRegionType) {
+            if (mrfCoreRegionType == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "mrfCoreRegionType");
+            }
+            this.mrfCoreRegionType = mrfCoreRegionType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder mrfEnableCoreRegion(Boolean mrfEnableCoreRegion) {
+            if (mrfEnableCoreRegion == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "mrfEnableCoreRegion");
+            }
+            this.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            return this;
+        }
+        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "name");
@@ -3251,6 +3684,28 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             }
             this.natIpv4 = natIpv4;
             return this;
+        }
+        @CustomType.Setter
+        public Builder natIpv4Loopbacks(List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback> natIpv4Loopbacks) {
+            if (natIpv4Loopbacks == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natIpv4Loopbacks");
+            }
+            this.natIpv4Loopbacks = natIpv4Loopbacks;
+            return this;
+        }
+        public Builder natIpv4Loopbacks(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback... natIpv4Loopbacks) {
+            return natIpv4Loopbacks(List.of(natIpv4Loopbacks));
+        }
+        @CustomType.Setter
+        public Builder natIpv4Pools(List<GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool> natIpv4Pools) {
+            if (natIpv4Pools == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natIpv4Pools");
+            }
+            this.natIpv4Pools = natIpv4Pools;
+            return this;
+        }
+        public Builder natIpv4Pools(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool... natIpv4Pools) {
+            return natIpv4Pools(List.of(natIpv4Pools));
         }
         @CustomType.Setter
         public Builder natIpv4Variable(String natIpv4Variable) {
@@ -3290,6 +3745,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natLoopbackVariable");
             }
             this.natLoopbackVariable = natLoopbackVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder natMatchInterface(Boolean natMatchInterface) {
+            if (natMatchInterface == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natMatchInterface");
+            }
+            this.natMatchInterface = natMatchInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder natMatchInterfaceVariable(String natMatchInterfaceVariable) {
+            if (natMatchInterfaceVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natMatchInterfaceVariable");
+            }
+            this.natMatchInterfaceVariable = natMatchInterfaceVariable;
             return this;
         }
         @CustomType.Setter
@@ -3381,14 +3852,6 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder natTypeVariable(String natTypeVariable) {
-            if (natTypeVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natTypeVariable");
-            }
-            this.natTypeVariable = natTypeVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder natUdpTimeout(Integer natUdpTimeout) {
             if (natUdpTimeout == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "natUdpTimeout");
@@ -3429,6 +3892,172 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "perTunnelQosVariable");
             }
             this.perTunnelQosVariable = perTunnelQosVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelInterface(Boolean portChannelInterface) {
+            if (portChannelInterface == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelInterface");
+            }
+            this.portChannelInterface = portChannelInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpFastSwitchover(Boolean portChannelLacpFastSwitchover) {
+            if (portChannelLacpFastSwitchover == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpFastSwitchover");
+            }
+            this.portChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpFastSwitchoverVariable(String portChannelLacpFastSwitchoverVariable) {
+            if (portChannelLacpFastSwitchoverVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpFastSwitchoverVariable");
+            }
+            this.portChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpLoadBalance(String portChannelLacpLoadBalance) {
+            if (portChannelLacpLoadBalance == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpLoadBalance");
+            }
+            this.portChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpLoadBalanceVariable(String portChannelLacpLoadBalanceVariable) {
+            if (portChannelLacpLoadBalanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpLoadBalanceVariable");
+            }
+            this.portChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMaxBundle(Integer portChannelLacpMaxBundle) {
+            if (portChannelLacpMaxBundle == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpMaxBundle");
+            }
+            this.portChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMaxBundleVariable(String portChannelLacpMaxBundleVariable) {
+            if (portChannelLacpMaxBundleVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpMaxBundleVariable");
+            }
+            this.portChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMemberLinks(List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks) {
+            if (portChannelLacpMemberLinks == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpMemberLinks");
+            }
+            this.portChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            return this;
+        }
+        public Builder portChannelLacpMemberLinks(GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink... portChannelLacpMemberLinks) {
+            return portChannelLacpMemberLinks(List.of(portChannelLacpMemberLinks));
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMinBundle(Integer portChannelLacpMinBundle) {
+            if (portChannelLacpMinBundle == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpMinBundle");
+            }
+            this.portChannelLacpMinBundle = portChannelLacpMinBundle;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMinBundleVariable(String portChannelLacpMinBundleVariable) {
+            if (portChannelLacpMinBundleVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpMinBundleVariable");
+            }
+            this.portChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpQosAggregate(Boolean portChannelLacpQosAggregate) {
+            if (portChannelLacpQosAggregate == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpQosAggregate");
+            }
+            this.portChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpQosAggregateVariable(String portChannelLacpQosAggregateVariable) {
+            if (portChannelLacpQosAggregateVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelLacpQosAggregateVariable");
+            }
+            this.portChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelMemberInterface(Boolean portChannelMemberInterface) {
+            if (portChannelMemberInterface == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelMemberInterface");
+            }
+            this.portChannelMemberInterface = portChannelMemberInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelMode(String portChannelMode) {
+            if (portChannelMode == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelMode");
+            }
+            this.portChannelMode = portChannelMode;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticLoadBalance(String portChannelStaticLoadBalance) {
+            if (portChannelStaticLoadBalance == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelStaticLoadBalance");
+            }
+            this.portChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticLoadBalanceVariable(String portChannelStaticLoadBalanceVariable) {
+            if (portChannelStaticLoadBalanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelStaticLoadBalanceVariable");
+            }
+            this.portChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticMemberLinks(List<GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks) {
+            if (portChannelStaticMemberLinks == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelStaticMemberLinks");
+            }
+            this.portChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            return this;
+        }
+        public Builder portChannelStaticMemberLinks(GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink... portChannelStaticMemberLinks) {
+            return portChannelStaticMemberLinks(List.of(portChannelStaticMemberLinks));
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticQosAggregate(Boolean portChannelStaticQosAggregate) {
+            if (portChannelStaticQosAggregate == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelStaticQosAggregate");
+            }
+            this.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticQosAggregateVariable(String portChannelStaticQosAggregateVariable) {
+            if (portChannelStaticQosAggregateVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelStaticQosAggregateVariable");
+            }
+            this.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelSubinterface(Boolean portChannelSubinterface) {
+            if (portChannelSubinterface == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "portChannelSubinterface");
+            }
+            this.portChannelSubinterface = portChannelSubinterface;
             return this;
         }
         @CustomType.Setter
@@ -3643,6 +4272,17 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return staticNat66s(List.of(staticNat66s));
         }
         @CustomType.Setter
+        public Builder staticPortForwards(List<GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward> staticPortForwards) {
+            if (staticPortForwards == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "staticPortForwards");
+            }
+            this.staticPortForwards = staticPortForwards;
+            return this;
+        }
+        public Builder staticPortForwards(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward... staticPortForwards) {
+            return staticPortForwards(List.of(staticPortForwards));
+        }
+        @CustomType.Setter
         public Builder tcpMss(Integer tcpMss) {
             if (tcpMss == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tcpMss");
@@ -3800,6 +4440,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceAllowDnsVariable");
             }
             this.tunnelInterfaceAllowDnsVariable = tunnelInterfaceAllowDnsVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceAllowFragmentation(Boolean tunnelInterfaceAllowFragmentation) {
+            if (tunnelInterfaceAllowFragmentation == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceAllowFragmentation");
+            }
+            this.tunnelInterfaceAllowFragmentation = tunnelInterfaceAllowFragmentation;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceAllowFragmentationVariable(String tunnelInterfaceAllowFragmentationVariable) {
+            if (tunnelInterfaceAllowFragmentationVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceAllowFragmentationVariable");
+            }
+            this.tunnelInterfaceAllowFragmentationVariable = tunnelInterfaceAllowFragmentationVariable;
             return this;
         }
         @CustomType.Setter
@@ -4233,6 +4889,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder tunnelInterfaceSetSdwanTunnelMtuToMax(Boolean tunnelInterfaceSetSdwanTunnelMtuToMax) {
+            if (tunnelInterfaceSetSdwanTunnelMtuToMax == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceSetSdwanTunnelMtuToMax");
+            }
+            this.tunnelInterfaceSetSdwanTunnelMtuToMax = tunnelInterfaceSetSdwanTunnelMtuToMax;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterfaceSetSdwanTunnelMtuToMaxVariable(String tunnelInterfaceSetSdwanTunnelMtuToMaxVariable) {
+            if (tunnelInterfaceSetSdwanTunnelMtuToMaxVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceSetSdwanTunnelMtuToMaxVariable");
+            }
+            this.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable = tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tunnelInterfaceTunnelTcpMss(Integer tunnelInterfaceTunnelTcpMss) {
             if (tunnelInterfaceTunnelTcpMss == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "tunnelInterfaceTunnelTcpMss");
@@ -4382,15 +5054,21 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.macAddressVariable = macAddressVariable;
             _resultValue.mediaType = mediaType;
             _resultValue.mediaTypeVariable = mediaTypeVariable;
+            _resultValue.mrfCoreRegionType = mrfCoreRegionType;
+            _resultValue.mrfEnableCoreRegion = mrfEnableCoreRegion;
             _resultValue.name = name;
             _resultValue.nat64 = nat64;
             _resultValue.nat66 = nat66;
             _resultValue.natIpv4 = natIpv4;
+            _resultValue.natIpv4Loopbacks = natIpv4Loopbacks;
+            _resultValue.natIpv4Pools = natIpv4Pools;
             _resultValue.natIpv4Variable = natIpv4Variable;
             _resultValue.natIpv6 = natIpv6;
             _resultValue.natIpv6Variable = natIpv6Variable;
             _resultValue.natLoopback = natLoopback;
             _resultValue.natLoopbackVariable = natLoopbackVariable;
+            _resultValue.natMatchInterface = natMatchInterface;
+            _resultValue.natMatchInterfaceVariable = natMatchInterfaceVariable;
             _resultValue.natOverload = natOverload;
             _resultValue.natOverloadVariable = natOverloadVariable;
             _resultValue.natPrefixLength = natPrefixLength;
@@ -4402,12 +5080,31 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.natTcpTimeout = natTcpTimeout;
             _resultValue.natTcpTimeoutVariable = natTcpTimeoutVariable;
             _resultValue.natType = natType;
-            _resultValue.natTypeVariable = natTypeVariable;
             _resultValue.natUdpTimeout = natUdpTimeout;
             _resultValue.natUdpTimeoutVariable = natUdpTimeoutVariable;
             _resultValue.newStaticNats = newStaticNats;
             _resultValue.perTunnelQos = perTunnelQos;
             _resultValue.perTunnelQosVariable = perTunnelQosVariable;
+            _resultValue.portChannelInterface = portChannelInterface;
+            _resultValue.portChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            _resultValue.portChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            _resultValue.portChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            _resultValue.portChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            _resultValue.portChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            _resultValue.portChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            _resultValue.portChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            _resultValue.portChannelLacpMinBundle = portChannelLacpMinBundle;
+            _resultValue.portChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            _resultValue.portChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            _resultValue.portChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            _resultValue.portChannelMemberInterface = portChannelMemberInterface;
+            _resultValue.portChannelMode = portChannelMode;
+            _resultValue.portChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            _resultValue.portChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            _resultValue.portChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            _resultValue.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            _resultValue.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            _resultValue.portChannelSubinterface = portChannelSubinterface;
             _resultValue.qosAdaptive = qosAdaptive;
             _resultValue.qosAdaptiveBandwidthDownstream = qosAdaptiveBandwidthDownstream;
             _resultValue.qosAdaptiveBandwidthUpstream = qosAdaptiveBandwidthUpstream;
@@ -4434,6 +5131,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.speed = speed;
             _resultValue.speedVariable = speedVariable;
             _resultValue.staticNat66s = staticNat66s;
+            _resultValue.staticPortForwards = staticPortForwards;
             _resultValue.tcpMss = tcpMss;
             _resultValue.tcpMssVariable = tcpMssVariable;
             _resultValue.tlocExtension = tlocExtension;
@@ -4454,6 +5152,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.tunnelInterfaceAllowDhcpVariable = tunnelInterfaceAllowDhcpVariable;
             _resultValue.tunnelInterfaceAllowDns = tunnelInterfaceAllowDns;
             _resultValue.tunnelInterfaceAllowDnsVariable = tunnelInterfaceAllowDnsVariable;
+            _resultValue.tunnelInterfaceAllowFragmentation = tunnelInterfaceAllowFragmentation;
+            _resultValue.tunnelInterfaceAllowFragmentationVariable = tunnelInterfaceAllowFragmentationVariable;
             _resultValue.tunnelInterfaceAllowHttps = tunnelInterfaceAllowHttps;
             _resultValue.tunnelInterfaceAllowHttpsVariable = tunnelInterfaceAllowHttpsVariable;
             _resultValue.tunnelInterfaceAllowIcmp = tunnelInterfaceAllowIcmp;
@@ -4507,6 +5207,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.tunnelInterfaceNetworkBroadcastVariable = tunnelInterfaceNetworkBroadcastVariable;
             _resultValue.tunnelInterfacePortHop = tunnelInterfacePortHop;
             _resultValue.tunnelInterfacePortHopVariable = tunnelInterfacePortHopVariable;
+            _resultValue.tunnelInterfaceSetSdwanTunnelMtuToMax = tunnelInterfaceSetSdwanTunnelMtuToMax;
+            _resultValue.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable = tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
             _resultValue.tunnelInterfaceTunnelTcpMss = tunnelInterfaceTunnelTcpMss;
             _resultValue.tunnelInterfaceTunnelTcpMssVariable = tunnelInterfaceTunnelTcpMssVariable;
             _resultValue.tunnelInterfaceVbondAsStunServer = tunnelInterfaceVbondAsStunServer;

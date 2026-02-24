@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Policy Object Unified URL Filtering Policy_object.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -79,14 +79,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering")
 public class PolicyObjectUnifiedUrlFiltering extends com.pulumi.resources.CustomResource {
     /**
-     * , Attribute conditional on `enableAlerts` being equal to `true`
+     * , Attribute conditional on `enableAlerts` equal to `true`
      * 
      */
     @Export(name="alerts", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> alerts;
 
     /**
-     * @return , Attribute conditional on `enableAlerts` being equal to `true`
+     * @return , Attribute conditional on `enableAlerts` equal to `true`
      * 
      */
     public Output<Optional<List<String>>> alerts() {
@@ -107,14 +107,14 @@ public class PolicyObjectUnifiedUrlFiltering extends com.pulumi.resources.Custom
         return this.blockPageAction;
     }
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `text`
+     * , Attribute conditional on `blockPageAction` equal to `text`
      * 
      */
     @Export(name="blockPageContents", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> blockPageContents;
 
     /**
-     * @return , Attribute conditional on `blockPageAction` being equal to `text`
+     * @return , Attribute conditional on `blockPageAction` equal to `text`
      * 
      */
     public Output<Optional<String>> blockPageContents() {
@@ -169,14 +169,14 @@ public class PolicyObjectUnifiedUrlFiltering extends com.pulumi.resources.Custom
         return this.name;
     }
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      * 
      */
     @Export(name="redirectUrl", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> redirectUrl;
 
     /**
-     * @return , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * @return , Attribute conditional on `blockPageAction` equal to `redirect-url`
      * 
      */
     public Output<Optional<String>> redirectUrl() {

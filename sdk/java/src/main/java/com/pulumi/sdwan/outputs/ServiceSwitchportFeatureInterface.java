@@ -47,6 +47,12 @@ public final class ServiceSwitchportFeatureInterface {
      */
     private @Nullable String duplexVariable;
     /**
+     * @return Set 802.1x on off
+     *   - Default value: `true`
+     * 
+     */
+    private @Nullable Boolean enableDot1x;
+    /**
      * @return Enable Periodic Reauthentication
      * 
      */
@@ -182,7 +188,7 @@ public final class ServiceSwitchportFeatureInterface {
     private @Nullable String shutdownVariable;
     /**
      * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     private @Nullable String speed;
@@ -280,6 +286,14 @@ public final class ServiceSwitchportFeatureInterface {
      */
     public Optional<String> duplexVariable() {
         return Optional.ofNullable(this.duplexVariable);
+    }
+    /**
+     * @return Set 802.1x on off
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Boolean> enableDot1x() {
+        return Optional.ofNullable(this.enableDot1x);
     }
     /**
      * @return Enable Periodic Reauthentication
@@ -467,7 +481,7 @@ public final class ServiceSwitchportFeatureInterface {
     }
     /**
      * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     public Optional<String> speed() {
@@ -555,6 +569,7 @@ public final class ServiceSwitchportFeatureInterface {
         private @Nullable String criticalVlanVariable;
         private @Nullable String duplex;
         private @Nullable String duplexVariable;
+        private @Nullable Boolean enableDot1x;
         private @Nullable Boolean enablePeriodicReauth;
         private @Nullable String enablePeriodicReauthVariable;
         private @Nullable Boolean enableVoice;
@@ -599,6 +614,7 @@ public final class ServiceSwitchportFeatureInterface {
     	      this.criticalVlanVariable = defaults.criticalVlanVariable;
     	      this.duplex = defaults.duplex;
     	      this.duplexVariable = defaults.duplexVariable;
+    	      this.enableDot1x = defaults.enableDot1x;
     	      this.enablePeriodicReauth = defaults.enablePeriodicReauth;
     	      this.enablePeriodicReauthVariable = defaults.enablePeriodicReauthVariable;
     	      this.enableVoice = defaults.enableVoice;
@@ -670,6 +686,12 @@ public final class ServiceSwitchportFeatureInterface {
         public Builder duplexVariable(@Nullable String duplexVariable) {
 
             this.duplexVariable = duplexVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableDot1x(@Nullable Boolean enableDot1x) {
+
+            this.enableDot1x = enableDot1x;
             return this;
         }
         @CustomType.Setter
@@ -890,6 +912,7 @@ public final class ServiceSwitchportFeatureInterface {
             _resultValue.criticalVlanVariable = criticalVlanVariable;
             _resultValue.duplex = duplex;
             _resultValue.duplexVariable = duplexVariable;
+            _resultValue.enableDot1x = enableDot1x;
             _resultValue.enablePeriodicReauth = enablePeriodicReauth;
             _resultValue.enablePeriodicReauthVariable = enablePeriodicReauthVariable;
             _resultValue.enableVoice = enableVoice;

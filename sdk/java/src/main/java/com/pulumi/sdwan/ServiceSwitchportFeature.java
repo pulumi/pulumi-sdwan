@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Service Switchport Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -61,6 +61,7 @@ import javax.annotation.Nullable;
  *                 .switchportAccessVlan(1)
  *                 .switchportTrunkAllowedVlans("1")
  *                 .switchportTrunkNativeVlan(1)
+ *                 .enableDot1x(false)
  *                 .portControl("auto")
  *                 .voiceVlan(1)
  *                 .paeEnable(true)

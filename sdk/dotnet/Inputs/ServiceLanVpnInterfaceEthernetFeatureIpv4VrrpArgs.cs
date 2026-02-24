@@ -25,6 +25,13 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AddressVariable { get; set; }
 
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("followDualRouterHighAvailability")]
+        public Input<bool>? FollowDualRouterHighAvailability { get; set; }
+
+        /// <summary>
         /// Group ID
         ///   - Range: `1`-`255`
         /// </summary>
@@ -36,6 +43,19 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("groupIdVariable")]
         public Input<string>? GroupIdVariable { get; set; }
+
+        /// <summary>
+        /// Minimum preempt delay in seconds
+        ///   - Range: `0`-`3600`
+        /// </summary>
+        [Input("minPreemptDelay")]
+        public Input<int>? MinPreemptDelay { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("minPreemptDelayVariable")]
+        public Input<string>? MinPreemptDelayVariable { get; set; }
 
         /// <summary>
         /// Set priority
@@ -79,7 +99,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Timer interval for successive advertisements, in milliseconds
-        ///   - Range: `100`-`4294967295`
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("tlocPrefChangeValue")]
         public Input<int>? TlocPrefChangeValue { get; set; }

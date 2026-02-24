@@ -42,9 +42,9 @@ class TransportCellularProfileFeatureArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
                  - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] no_overwrite: No Overwrite
@@ -56,10 +56,10 @@ class TransportCellularProfileFeatureArgs:
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
         """
@@ -139,7 +139,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
           - Choices: `pap`, `chap`, `pap_chap`
         """
         return pulumi.get(self, "authentication_type")
@@ -152,7 +152,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "authentication_type_variable")
 
@@ -263,7 +263,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -275,7 +275,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profilePasswordVariable")
     def profile_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
 
@@ -287,7 +287,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_username")
 
@@ -299,7 +299,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profileUsernameVariable")
     def profile_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_username_variable")
 
@@ -347,9 +347,9 @@ class _TransportCellularProfileFeatureState:
         Input properties used for looking up and filtering TransportCellularProfileFeature resources.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
                  - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -362,10 +362,10 @@ class _TransportCellularProfileFeatureState:
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -437,7 +437,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
           - Choices: `pap`, `chap`, `pap_chap`
         """
         return pulumi.get(self, "authentication_type")
@@ -450,7 +450,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "authentication_type_variable")
 
@@ -573,7 +573,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -585,7 +585,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profilePasswordVariable")
     def profile_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
 
@@ -597,7 +597,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_username")
 
@@ -609,7 +609,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profileUsernameVariable")
     def profile_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_username_variable")
 
@@ -706,9 +706,9 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
                  - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -721,10 +721,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
         """
@@ -869,9 +869,9 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
                  - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -884,10 +884,10 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
-        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.bool] requires_authentication: Require authentication type
                  - Default value: `false`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -937,7 +937,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
           - Choices: `pap`, `chap`, `pap_chap`
         """
         return pulumi.get(self, "authentication_type")
@@ -946,7 +946,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "authentication_type_variable")
 
@@ -1029,7 +1029,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -1037,7 +1037,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profilePasswordVariable")
     def profile_password_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
 
@@ -1045,7 +1045,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_username")
 
@@ -1053,7 +1053,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profileUsernameVariable")
     def profile_username_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        Variable name, Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_username_variable")
 

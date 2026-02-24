@@ -36,7 +36,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     }
 
     /**
-     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      * 
      */
@@ -44,7 +44,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     private @Nullable Output<String> nat;
 
     /**
-     * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * @return IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      * 
      */
@@ -53,14 +53,14 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     }
 
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * Variable name, Attribute conditional on `gateway` equal to `nat`
      * 
      */
     @Import(name="natVariable")
     private @Nullable Output<String> natVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * @return Variable name, Attribute conditional on `gateway` equal to `nat`
      * 
      */
     public Optional<Output<String>> natVariable() {
@@ -68,14 +68,14 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     }
 
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     @Import(name="nextHops")
     private @Nullable Output<List<TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs>> nextHops;
 
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     public Optional<Output<List<TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs>>> nextHops() {
@@ -83,14 +83,14 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     }
 
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     @Import(name="null0")
     private @Nullable Output<Boolean> null0;
 
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     public Optional<Output<Boolean>> null0() {
@@ -181,7 +181,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nat IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+         * @param nat IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
          *   - Choices: `NAT64`, `NAT66`
          * 
          * @return builder
@@ -193,7 +193,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nat IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+         * @param nat IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
          *   - Choices: `NAT64`, `NAT66`
          * 
          * @return builder
@@ -204,7 +204,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param natVariable Variable name, Attribute conditional on `gateway` being equal to `nat`
+         * @param natVariable Variable name, Attribute conditional on `gateway` equal to `nat`
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param natVariable Variable name, Attribute conditional on `gateway` being equal to `nat`
+         * @param natVariable Variable name, Attribute conditional on `gateway` equal to `nat`
          * 
          * @return builder
          * 
@@ -225,7 +225,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -246,7 +246,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -256,7 +256,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param null0 IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+         * @param null0 IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
          * 
          * @return builder
          * 
@@ -267,7 +267,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param null0 IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+         * @param null0 IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
          * 
          * @return builder
          * 

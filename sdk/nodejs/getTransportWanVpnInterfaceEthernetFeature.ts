@@ -276,6 +276,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly mediaTypeVariable: string;
     /**
+     * Core Region
+     */
+    readonly mrfCoreRegionType: string;
+    /**
+     * Enable Core Region
+     */
+    readonly mrfEnableCoreRegion: boolean;
+    /**
      * The name of the Feature
      */
     readonly name: string;
@@ -291,6 +299,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * enable Network Address Translation on this interface
      */
     readonly natIpv4: boolean;
+    /**
+     * NAT Multiple Loopback
+     */
+    readonly natIpv4Loopbacks: outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback[];
+    /**
+     * NAT Multiple Pool
+     */
+    readonly natIpv4Pools: outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool[];
     /**
      * Variable name
      */
@@ -311,6 +327,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly natLoopbackVariable: string;
+    /**
+     * NAT Match Interface
+     */
+    readonly natMatchInterface: boolean;
+    /**
+     * Variable name
+     */
+    readonly natMatchInterfaceVariable: string;
     /**
      * NAT Overload
      */
@@ -356,10 +380,6 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly natType: string;
     /**
-     * Variable name
-     */
-    readonly natTypeVariable: string;
-    /**
      * Set NAT UDP session timeout, in minutes
      */
     readonly natUdpTimeout: number;
@@ -379,6 +399,83 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly perTunnelQosVariable: string;
+    /**
+     * Port-Channel interface on/off
+     */
+    readonly portChannelInterface: boolean;
+    /**
+     * Eanble lacp fast switchover
+     */
+    readonly portChannelLacpFastSwitchover: boolean;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpFastSwitchoverVariable: string;
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelLacpLoadBalance: string;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpLoadBalanceVariable: string;
+    /**
+     * Set LACP max bundle
+     */
+    readonly portChannelLacpMaxBundle: number;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpMaxBundleVariable: string;
+    /**
+     * Configure Port-Channel member links
+     */
+    readonly portChannelLacpMemberLinks: outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink[];
+    /**
+     * Set LACP min bundle
+     */
+    readonly portChannelLacpMinBundle: number;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpMinBundleVariable: string;
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelLacpQosAggregate: boolean;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpQosAggregateVariable: string;
+    /**
+     * Port-Channel member interface on/off
+     */
+    readonly portChannelMemberInterface: boolean;
+    /**
+     * Port Channel Mode
+     */
+    readonly portChannelMode: string;
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelStaticLoadBalance: string;
+    /**
+     * Variable name
+     */
+    readonly portChannelStaticLoadBalanceVariable: string;
+    /**
+     * Configure Port-Channel member links
+     */
+    readonly portChannelStaticMemberLinks: outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink[];
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelStaticQosAggregate: boolean;
+    /**
+     * Variable name
+     */
+    readonly portChannelStaticQosAggregateVariable: string;
+    readonly portChannelSubinterface: boolean;
     /**
      * Adaptive QoS
      */
@@ -481,6 +578,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly staticNat66s: outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticNat66[];
     /**
+     * Configure Port Forward entries
+     */
+    readonly staticPortForwards: outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward[];
+    /**
      * TCP MSS on SYN packets, in bytes
      */
     readonly tcpMss: number;
@@ -560,6 +661,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly tunnelInterfaceAllowDnsVariable: string;
+    /**
+     * Allow Fragmentation and will clear DF bit in outer IP
+     */
+    readonly tunnelInterfaceAllowFragmentation: boolean;
+    /**
+     * Variable name
+     */
+    readonly tunnelInterfaceAllowFragmentationVariable: string;
     /**
      * Allow/Deny HTTPS
      */
@@ -772,6 +881,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly tunnelInterfacePortHopVariable: string;
+    /**
+     * Set current tunnel mtu to 9k
+     */
+    readonly tunnelInterfaceSetSdwanTunnelMtuToMax: boolean;
+    /**
+     * Variable name
+     */
+    readonly tunnelInterfaceSetSdwanTunnelMtuToMaxVariable: string;
     /**
      * Tunnel TCP MSS on SYN packets, in bytes
      */

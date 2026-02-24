@@ -8,7 +8,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a System Basic Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -43,6 +43,7 @@ import * as utilities from "./utilities";
  *     maxOmpSessions: 24,
  *     multiTenant: false,
  *     trackDefaultGateway: true,
+ *     trackerDiaStabilizeStatus: false,
  *     adminTechOnFailure: true,
  *     idleTimeout: 10,
  *     onDemandEnable: true,
@@ -374,6 +375,15 @@ export class SystemBasicFeature extends pulumi.CustomResource {
      */
     declare public readonly trackTransportVariable: pulumi.Output<string | undefined>;
     /**
+     * Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     */
+    declare public readonly trackerDiaStabilizeStatus: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly trackerDiaStabilizeStatusVariable: pulumi.Output<string | undefined>;
+    /**
      * Enable transport gateway
      *   - Default value: `false`
      */
@@ -461,6 +471,8 @@ export class SystemBasicFeature extends pulumi.CustomResource {
             resourceInputs["trackInterfaceTagVariable"] = state?.trackInterfaceTagVariable;
             resourceInputs["trackTransport"] = state?.trackTransport;
             resourceInputs["trackTransportVariable"] = state?.trackTransportVariable;
+            resourceInputs["trackerDiaStabilizeStatus"] = state?.trackerDiaStabilizeStatus;
+            resourceInputs["trackerDiaStabilizeStatusVariable"] = state?.trackerDiaStabilizeStatusVariable;
             resourceInputs["transportGateway"] = state?.transportGateway;
             resourceInputs["transportGatewayVariable"] = state?.transportGatewayVariable;
             resourceInputs["version"] = state?.version;
@@ -530,6 +542,8 @@ export class SystemBasicFeature extends pulumi.CustomResource {
             resourceInputs["trackInterfaceTagVariable"] = args?.trackInterfaceTagVariable;
             resourceInputs["trackTransport"] = args?.trackTransport;
             resourceInputs["trackTransportVariable"] = args?.trackTransportVariable;
+            resourceInputs["trackerDiaStabilizeStatus"] = args?.trackerDiaStabilizeStatus;
+            resourceInputs["trackerDiaStabilizeStatusVariable"] = args?.trackerDiaStabilizeStatusVariable;
             resourceInputs["transportGateway"] = args?.transportGateway;
             resourceInputs["transportGatewayVariable"] = args?.transportGatewayVariable;
             resourceInputs["version"] = undefined /*out*/;
@@ -818,6 +832,15 @@ export interface SystemBasicFeatureState {
      * Variable name
      */
     trackTransportVariable?: pulumi.Input<string>;
+    /**
+     * Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     */
+    trackerDiaStabilizeStatus?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    trackerDiaStabilizeStatusVariable?: pulumi.Input<string>;
     /**
      * Enable transport gateway
      *   - Default value: `false`
@@ -1112,6 +1135,15 @@ export interface SystemBasicFeatureArgs {
      * Variable name
      */
     trackTransportVariable?: pulumi.Input<string>;
+    /**
+     * Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     */
+    trackerDiaStabilizeStatus?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    trackerDiaStabilizeStatusVariable?: pulumi.Input<string>;
     /**
      * Enable transport gateway
      *   - Default value: `false`

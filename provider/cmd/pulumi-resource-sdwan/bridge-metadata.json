@@ -2302,6 +2302,12 @@
                             }
                         }
                     },
+                    "port_channel_lacp_member_links": {
+                        "maxItemsOne": false
+                    },
+                    "port_channel_static_member_links": {
+                        "maxItemsOne": false
+                    },
                     "static_nats": {
                         "maxItemsOne": false
                     }
@@ -3414,10 +3420,25 @@
                     "ipv6_secondary_addresses": {
                         "maxItemsOne": false
                     },
+                    "nat_ipv4_loopbacks": {
+                        "maxItemsOne": false
+                    },
+                    "nat_ipv4_pools": {
+                        "maxItemsOne": false
+                    },
                     "new_static_nats": {
                         "maxItemsOne": false
                     },
+                    "port_channel_lacp_member_links": {
+                        "maxItemsOne": false
+                    },
+                    "port_channel_static_member_links": {
+                        "maxItemsOne": false
+                    },
                     "static_nat66": {
+                        "maxItemsOne": false
+                    },
+                    "static_port_forwards": {
                         "maxItemsOne": false
                     },
                     "tunnel_interface_encapsulations": {
@@ -6128,6 +6149,12 @@
                             }
                         }
                     },
+                    "port_channel_lacp_member_links": {
+                        "maxItemsOne": false
+                    },
+                    "port_channel_static_member_links": {
+                        "maxItemsOne": false
+                    },
                     "static_nats": {
                         "maxItemsOne": false
                     }
@@ -7240,10 +7267,25 @@
                     "ipv6_secondary_addresses": {
                         "maxItemsOne": false
                     },
+                    "nat_ipv4_loopbacks": {
+                        "maxItemsOne": false
+                    },
+                    "nat_ipv4_pools": {
+                        "maxItemsOne": false
+                    },
                     "new_static_nats": {
                         "maxItemsOne": false
                     },
+                    "port_channel_lacp_member_links": {
+                        "maxItemsOne": false
+                    },
+                    "port_channel_static_member_links": {
+                        "maxItemsOne": false
+                    },
                     "static_nat66": {
+                        "maxItemsOne": false
+                    },
+                    "static_port_forwards": {
                         "maxItemsOne": false
                     },
                     "tunnel_interface_encapsulations": {

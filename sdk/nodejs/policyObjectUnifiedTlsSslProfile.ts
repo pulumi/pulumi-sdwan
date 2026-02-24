@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -70,7 +70,7 @@ export class PolicyObjectUnifiedTlsSslProfile extends pulumi.CustomResource {
 
     declare public readonly decryptCategories: pulumi.Output<string[]>;
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
     declare public readonly decryptThreshold: pulumi.Output<string | undefined>;
@@ -91,7 +91,7 @@ export class PolicyObjectUnifiedTlsSslProfile extends pulumi.CustomResource {
     declare public readonly passThroughCategories: pulumi.Output<string[]>;
     declare public readonly reputation: pulumi.Output<boolean>;
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
     declare public readonly thresholdCategories: pulumi.Output<string | undefined>;
@@ -173,7 +173,7 @@ export class PolicyObjectUnifiedTlsSslProfile extends pulumi.CustomResource {
 export interface PolicyObjectUnifiedTlsSslProfileState {
     decryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
     decryptThreshold?: pulumi.Input<string>;
@@ -194,7 +194,7 @@ export interface PolicyObjectUnifiedTlsSslProfileState {
     passThroughCategories?: pulumi.Input<pulumi.Input<string>[]>;
     reputation?: pulumi.Input<boolean>;
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
     thresholdCategories?: pulumi.Input<string>;
@@ -212,7 +212,7 @@ export interface PolicyObjectUnifiedTlsSslProfileState {
 export interface PolicyObjectUnifiedTlsSslProfileArgs {
     decryptCategories: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
     decryptThreshold?: pulumi.Input<string>;
@@ -233,7 +233,7 @@ export interface PolicyObjectUnifiedTlsSslProfileArgs {
     passThroughCategories: pulumi.Input<pulumi.Input<string>[]>;
     reputation: pulumi.Input<boolean>;
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
     thresholdCategories?: pulumi.Input<string>;

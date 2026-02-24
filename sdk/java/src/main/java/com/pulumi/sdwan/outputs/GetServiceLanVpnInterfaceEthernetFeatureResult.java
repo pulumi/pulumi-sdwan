@@ -12,6 +12,8 @@ import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6Dhcp
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureStaticNat;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -353,6 +355,118 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     private Boolean nat64;
     /**
+     * @return Port-Channel interface on/off
+     * 
+     */
+    private Boolean portChannelInterface;
+    /**
+     * @return Eanble lacp fast switchover
+     * 
+     */
+    private Boolean portChannelLacpFastSwitchover;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpFastSwitchoverVariable;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private String portChannelLacpLoadBalance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpLoadBalanceVariable;
+    /**
+     * @return Set LACP max bundle
+     * 
+     */
+    private Integer portChannelLacpMaxBundle;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpMaxBundleVariable;
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    private List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks;
+    /**
+     * @return Set LACP min bundle
+     * 
+     */
+    private Integer portChannelLacpMinBundle;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpMinBundleVariable;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private Boolean portChannelLacpQosAggregate;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelLacpQosAggregateVariable;
+    /**
+     * @return Port-Channel member interface on/off
+     * 
+     */
+    private Boolean portChannelMemberInterface;
+    /**
+     * @return Port Channel Mode
+     * 
+     */
+    private String portChannelMode;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private String portChannelStaticLoadBalance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelStaticLoadBalanceVariable;
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    private List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks;
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    private Boolean portChannelStaticQosAggregate;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelStaticQosAggregateVariable;
+    /**
+     * @return Port Channel Sub Interface on/off
+     * 
+     */
+    private Boolean portChannelSubinterface;
+    private String portChannelSubinterfacePrimaryInterfaceName;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelSubinterfacePrimaryInterfaceNameVariable;
+    private String portChannelSubinterfaceSecondaryInterfaceName;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String portChannelSubinterfaceSecondaryInterfaceNameVariable;
+    /**
      * @return Service LAN VPN Feature ID
      * 
      */
@@ -388,16 +502,6 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String tcpMssVariable;
-    /**
-     * @return Enable tracker for this interface
-     * 
-     */
-    private String tracker;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String trackerVariable;
     /**
      * @return Enable/Disable SGT Enforcement on an interface
      * 
@@ -924,6 +1028,166 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         return this.nat64;
     }
     /**
+     * @return Port-Channel interface on/off
+     * 
+     */
+    public Boolean portChannelInterface() {
+        return this.portChannelInterface;
+    }
+    /**
+     * @return Eanble lacp fast switchover
+     * 
+     */
+    public Boolean portChannelLacpFastSwitchover() {
+        return this.portChannelLacpFastSwitchover;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpFastSwitchoverVariable() {
+        return this.portChannelLacpFastSwitchoverVariable;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public String portChannelLacpLoadBalance() {
+        return this.portChannelLacpLoadBalance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpLoadBalanceVariable() {
+        return this.portChannelLacpLoadBalanceVariable;
+    }
+    /**
+     * @return Set LACP max bundle
+     * 
+     */
+    public Integer portChannelLacpMaxBundle() {
+        return this.portChannelLacpMaxBundle;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpMaxBundleVariable() {
+        return this.portChannelLacpMaxBundleVariable;
+    }
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    public List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks() {
+        return this.portChannelLacpMemberLinks;
+    }
+    /**
+     * @return Set LACP min bundle
+     * 
+     */
+    public Integer portChannelLacpMinBundle() {
+        return this.portChannelLacpMinBundle;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpMinBundleVariable() {
+        return this.portChannelLacpMinBundleVariable;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public Boolean portChannelLacpQosAggregate() {
+        return this.portChannelLacpQosAggregate;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelLacpQosAggregateVariable() {
+        return this.portChannelLacpQosAggregateVariable;
+    }
+    /**
+     * @return Port-Channel member interface on/off
+     * 
+     */
+    public Boolean portChannelMemberInterface() {
+        return this.portChannelMemberInterface;
+    }
+    /**
+     * @return Port Channel Mode
+     * 
+     */
+    public String portChannelMode() {
+        return this.portChannelMode;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public String portChannelStaticLoadBalance() {
+        return this.portChannelStaticLoadBalance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelStaticLoadBalanceVariable() {
+        return this.portChannelStaticLoadBalanceVariable;
+    }
+    /**
+     * @return Configure Port-Channel member links
+     * 
+     */
+    public List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks() {
+        return this.portChannelStaticMemberLinks;
+    }
+    /**
+     * @return Enable QoS Port-Channel aggregate
+     * 
+     */
+    public Boolean portChannelStaticQosAggregate() {
+        return this.portChannelStaticQosAggregate;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelStaticQosAggregateVariable() {
+        return this.portChannelStaticQosAggregateVariable;
+    }
+    /**
+     * @return Port Channel Sub Interface on/off
+     * 
+     */
+    public Boolean portChannelSubinterface() {
+        return this.portChannelSubinterface;
+    }
+    public String portChannelSubinterfacePrimaryInterfaceName() {
+        return this.portChannelSubinterfacePrimaryInterfaceName;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelSubinterfacePrimaryInterfaceNameVariable() {
+        return this.portChannelSubinterfacePrimaryInterfaceNameVariable;
+    }
+    public String portChannelSubinterfaceSecondaryInterfaceName() {
+        return this.portChannelSubinterfaceSecondaryInterfaceName;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String portChannelSubinterfaceSecondaryInterfaceNameVariable() {
+        return this.portChannelSubinterfaceSecondaryInterfaceNameVariable;
+    }
+    /**
      * @return Service LAN VPN Feature ID
      * 
      */
@@ -974,20 +1238,6 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     public String tcpMssVariable() {
         return this.tcpMssVariable;
-    }
-    /**
-     * @return Enable tracker for this interface
-     * 
-     */
-    public String tracker() {
-        return this.tracker;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String trackerVariable() {
-        return this.trackerVariable;
     }
     /**
      * @return Enable/Disable SGT Enforcement on an interface
@@ -1140,6 +1390,30 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         private String mediaTypeVariable;
         private String name;
         private Boolean nat64;
+        private Boolean portChannelInterface;
+        private Boolean portChannelLacpFastSwitchover;
+        private String portChannelLacpFastSwitchoverVariable;
+        private String portChannelLacpLoadBalance;
+        private String portChannelLacpLoadBalanceVariable;
+        private Integer portChannelLacpMaxBundle;
+        private String portChannelLacpMaxBundleVariable;
+        private List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks;
+        private Integer portChannelLacpMinBundle;
+        private String portChannelLacpMinBundleVariable;
+        private Boolean portChannelLacpQosAggregate;
+        private String portChannelLacpQosAggregateVariable;
+        private Boolean portChannelMemberInterface;
+        private String portChannelMode;
+        private String portChannelStaticLoadBalance;
+        private String portChannelStaticLoadBalanceVariable;
+        private List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks;
+        private Boolean portChannelStaticQosAggregate;
+        private String portChannelStaticQosAggregateVariable;
+        private Boolean portChannelSubinterface;
+        private String portChannelSubinterfacePrimaryInterfaceName;
+        private String portChannelSubinterfacePrimaryInterfaceNameVariable;
+        private String portChannelSubinterfaceSecondaryInterfaceName;
+        private String portChannelSubinterfaceSecondaryInterfaceNameVariable;
         private String serviceLanVpnFeatureId;
         private Boolean shutdown;
         private String shutdownVariable;
@@ -1148,8 +1422,6 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         private List<GetServiceLanVpnInterfaceEthernetFeatureStaticNat> staticNats;
         private Integer tcpMss;
         private String tcpMssVariable;
-        private String tracker;
-        private String trackerVariable;
         private Boolean trustsecEnableEnforcedPropogation;
         private Boolean trustsecEnableSgtPropogation;
         private Integer trustsecEnforcedSecurityGroupTag;
@@ -1234,6 +1506,30 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
     	      this.mediaTypeVariable = defaults.mediaTypeVariable;
     	      this.name = defaults.name;
     	      this.nat64 = defaults.nat64;
+    	      this.portChannelInterface = defaults.portChannelInterface;
+    	      this.portChannelLacpFastSwitchover = defaults.portChannelLacpFastSwitchover;
+    	      this.portChannelLacpFastSwitchoverVariable = defaults.portChannelLacpFastSwitchoverVariable;
+    	      this.portChannelLacpLoadBalance = defaults.portChannelLacpLoadBalance;
+    	      this.portChannelLacpLoadBalanceVariable = defaults.portChannelLacpLoadBalanceVariable;
+    	      this.portChannelLacpMaxBundle = defaults.portChannelLacpMaxBundle;
+    	      this.portChannelLacpMaxBundleVariable = defaults.portChannelLacpMaxBundleVariable;
+    	      this.portChannelLacpMemberLinks = defaults.portChannelLacpMemberLinks;
+    	      this.portChannelLacpMinBundle = defaults.portChannelLacpMinBundle;
+    	      this.portChannelLacpMinBundleVariable = defaults.portChannelLacpMinBundleVariable;
+    	      this.portChannelLacpQosAggregate = defaults.portChannelLacpQosAggregate;
+    	      this.portChannelLacpQosAggregateVariable = defaults.portChannelLacpQosAggregateVariable;
+    	      this.portChannelMemberInterface = defaults.portChannelMemberInterface;
+    	      this.portChannelMode = defaults.portChannelMode;
+    	      this.portChannelStaticLoadBalance = defaults.portChannelStaticLoadBalance;
+    	      this.portChannelStaticLoadBalanceVariable = defaults.portChannelStaticLoadBalanceVariable;
+    	      this.portChannelStaticMemberLinks = defaults.portChannelStaticMemberLinks;
+    	      this.portChannelStaticQosAggregate = defaults.portChannelStaticQosAggregate;
+    	      this.portChannelStaticQosAggregateVariable = defaults.portChannelStaticQosAggregateVariable;
+    	      this.portChannelSubinterface = defaults.portChannelSubinterface;
+    	      this.portChannelSubinterfacePrimaryInterfaceName = defaults.portChannelSubinterfacePrimaryInterfaceName;
+    	      this.portChannelSubinterfacePrimaryInterfaceNameVariable = defaults.portChannelSubinterfacePrimaryInterfaceNameVariable;
+    	      this.portChannelSubinterfaceSecondaryInterfaceName = defaults.portChannelSubinterfaceSecondaryInterfaceName;
+    	      this.portChannelSubinterfaceSecondaryInterfaceNameVariable = defaults.portChannelSubinterfaceSecondaryInterfaceNameVariable;
     	      this.serviceLanVpnFeatureId = defaults.serviceLanVpnFeatureId;
     	      this.shutdown = defaults.shutdown;
     	      this.shutdownVariable = defaults.shutdownVariable;
@@ -1242,8 +1538,6 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
     	      this.staticNats = defaults.staticNats;
     	      this.tcpMss = defaults.tcpMss;
     	      this.tcpMssVariable = defaults.tcpMssVariable;
-    	      this.tracker = defaults.tracker;
-    	      this.trackerVariable = defaults.trackerVariable;
     	      this.trustsecEnableEnforcedPropogation = defaults.trustsecEnableEnforcedPropogation;
     	      this.trustsecEnableSgtPropogation = defaults.trustsecEnableSgtPropogation;
     	      this.trustsecEnforcedSecurityGroupTag = defaults.trustsecEnforcedSecurityGroupTag;
@@ -1849,6 +2143,204 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder portChannelInterface(Boolean portChannelInterface) {
+            if (portChannelInterface == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelInterface");
+            }
+            this.portChannelInterface = portChannelInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpFastSwitchover(Boolean portChannelLacpFastSwitchover) {
+            if (portChannelLacpFastSwitchover == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpFastSwitchover");
+            }
+            this.portChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpFastSwitchoverVariable(String portChannelLacpFastSwitchoverVariable) {
+            if (portChannelLacpFastSwitchoverVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpFastSwitchoverVariable");
+            }
+            this.portChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpLoadBalance(String portChannelLacpLoadBalance) {
+            if (portChannelLacpLoadBalance == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpLoadBalance");
+            }
+            this.portChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpLoadBalanceVariable(String portChannelLacpLoadBalanceVariable) {
+            if (portChannelLacpLoadBalanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpLoadBalanceVariable");
+            }
+            this.portChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMaxBundle(Integer portChannelLacpMaxBundle) {
+            if (portChannelLacpMaxBundle == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpMaxBundle");
+            }
+            this.portChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMaxBundleVariable(String portChannelLacpMaxBundleVariable) {
+            if (portChannelLacpMaxBundleVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpMaxBundleVariable");
+            }
+            this.portChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMemberLinks(List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink> portChannelLacpMemberLinks) {
+            if (portChannelLacpMemberLinks == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpMemberLinks");
+            }
+            this.portChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            return this;
+        }
+        public Builder portChannelLacpMemberLinks(GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink... portChannelLacpMemberLinks) {
+            return portChannelLacpMemberLinks(List.of(portChannelLacpMemberLinks));
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMinBundle(Integer portChannelLacpMinBundle) {
+            if (portChannelLacpMinBundle == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpMinBundle");
+            }
+            this.portChannelLacpMinBundle = portChannelLacpMinBundle;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpMinBundleVariable(String portChannelLacpMinBundleVariable) {
+            if (portChannelLacpMinBundleVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpMinBundleVariable");
+            }
+            this.portChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpQosAggregate(Boolean portChannelLacpQosAggregate) {
+            if (portChannelLacpQosAggregate == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpQosAggregate");
+            }
+            this.portChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelLacpQosAggregateVariable(String portChannelLacpQosAggregateVariable) {
+            if (portChannelLacpQosAggregateVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelLacpQosAggregateVariable");
+            }
+            this.portChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelMemberInterface(Boolean portChannelMemberInterface) {
+            if (portChannelMemberInterface == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelMemberInterface");
+            }
+            this.portChannelMemberInterface = portChannelMemberInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelMode(String portChannelMode) {
+            if (portChannelMode == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelMode");
+            }
+            this.portChannelMode = portChannelMode;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticLoadBalance(String portChannelStaticLoadBalance) {
+            if (portChannelStaticLoadBalance == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelStaticLoadBalance");
+            }
+            this.portChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticLoadBalanceVariable(String portChannelStaticLoadBalanceVariable) {
+            if (portChannelStaticLoadBalanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelStaticLoadBalanceVariable");
+            }
+            this.portChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticMemberLinks(List<GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink> portChannelStaticMemberLinks) {
+            if (portChannelStaticMemberLinks == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelStaticMemberLinks");
+            }
+            this.portChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            return this;
+        }
+        public Builder portChannelStaticMemberLinks(GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink... portChannelStaticMemberLinks) {
+            return portChannelStaticMemberLinks(List.of(portChannelStaticMemberLinks));
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticQosAggregate(Boolean portChannelStaticQosAggregate) {
+            if (portChannelStaticQosAggregate == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelStaticQosAggregate");
+            }
+            this.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelStaticQosAggregateVariable(String portChannelStaticQosAggregateVariable) {
+            if (portChannelStaticQosAggregateVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelStaticQosAggregateVariable");
+            }
+            this.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelSubinterface(Boolean portChannelSubinterface) {
+            if (portChannelSubinterface == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelSubinterface");
+            }
+            this.portChannelSubinterface = portChannelSubinterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelSubinterfacePrimaryInterfaceName(String portChannelSubinterfacePrimaryInterfaceName) {
+            if (portChannelSubinterfacePrimaryInterfaceName == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelSubinterfacePrimaryInterfaceName");
+            }
+            this.portChannelSubinterfacePrimaryInterfaceName = portChannelSubinterfacePrimaryInterfaceName;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelSubinterfacePrimaryInterfaceNameVariable(String portChannelSubinterfacePrimaryInterfaceNameVariable) {
+            if (portChannelSubinterfacePrimaryInterfaceNameVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelSubinterfacePrimaryInterfaceNameVariable");
+            }
+            this.portChannelSubinterfacePrimaryInterfaceNameVariable = portChannelSubinterfacePrimaryInterfaceNameVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelSubinterfaceSecondaryInterfaceName(String portChannelSubinterfaceSecondaryInterfaceName) {
+            if (portChannelSubinterfaceSecondaryInterfaceName == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelSubinterfaceSecondaryInterfaceName");
+            }
+            this.portChannelSubinterfaceSecondaryInterfaceName = portChannelSubinterfaceSecondaryInterfaceName;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder portChannelSubinterfaceSecondaryInterfaceNameVariable(String portChannelSubinterfaceSecondaryInterfaceNameVariable) {
+            if (portChannelSubinterfaceSecondaryInterfaceNameVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "portChannelSubinterfaceSecondaryInterfaceNameVariable");
+            }
+            this.portChannelSubinterfaceSecondaryInterfaceNameVariable = portChannelSubinterfaceSecondaryInterfaceNameVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder serviceLanVpnFeatureId(String serviceLanVpnFeatureId) {
             if (serviceLanVpnFeatureId == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "serviceLanVpnFeatureId");
@@ -1913,22 +2405,6 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "tcpMssVariable");
             }
             this.tcpMssVariable = tcpMssVariable;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder tracker(String tracker) {
-            if (tracker == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "tracker");
-            }
-            this.tracker = tracker;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder trackerVariable(String trackerVariable) {
-            if (trackerVariable == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "trackerVariable");
-            }
-            this.trackerVariable = trackerVariable;
             return this;
         }
         @CustomType.Setter
@@ -2084,6 +2560,30 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             _resultValue.mediaTypeVariable = mediaTypeVariable;
             _resultValue.name = name;
             _resultValue.nat64 = nat64;
+            _resultValue.portChannelInterface = portChannelInterface;
+            _resultValue.portChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            _resultValue.portChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            _resultValue.portChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            _resultValue.portChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            _resultValue.portChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            _resultValue.portChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            _resultValue.portChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            _resultValue.portChannelLacpMinBundle = portChannelLacpMinBundle;
+            _resultValue.portChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            _resultValue.portChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            _resultValue.portChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            _resultValue.portChannelMemberInterface = portChannelMemberInterface;
+            _resultValue.portChannelMode = portChannelMode;
+            _resultValue.portChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            _resultValue.portChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            _resultValue.portChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            _resultValue.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            _resultValue.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            _resultValue.portChannelSubinterface = portChannelSubinterface;
+            _resultValue.portChannelSubinterfacePrimaryInterfaceName = portChannelSubinterfacePrimaryInterfaceName;
+            _resultValue.portChannelSubinterfacePrimaryInterfaceNameVariable = portChannelSubinterfacePrimaryInterfaceNameVariable;
+            _resultValue.portChannelSubinterfaceSecondaryInterfaceName = portChannelSubinterfaceSecondaryInterfaceName;
+            _resultValue.portChannelSubinterfaceSecondaryInterfaceNameVariable = portChannelSubinterfaceSecondaryInterfaceNameVariable;
             _resultValue.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             _resultValue.shutdown = shutdown;
             _resultValue.shutdownVariable = shutdownVariable;
@@ -2092,8 +2592,6 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             _resultValue.staticNats = staticNats;
             _resultValue.tcpMss = tcpMss;
             _resultValue.tcpMssVariable = tcpMssVariable;
-            _resultValue.tracker = tracker;
-            _resultValue.trackerVariable = trackerVariable;
             _resultValue.trustsecEnableEnforcedPropogation = trustsecEnableEnforcedPropogation;
             _resultValue.trustsecEnableSgtPropogation = trustsecEnableSgtPropogation;
             _resultValue.trustsecEnforcedSecurityGroupTag = trustsecEnforcedSecurityGroupTag;

@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Application list ID, Attribute conditional on `Type` being equal to `appList`
+        /// Application list ID, Attribute conditional on `Type` equal to `appList`
         /// </summary>
         public readonly string? ApplicationListId;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ApplicationListVersion;
         /// <summary>
-        /// Destination Data Prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
+        /// Destination Data Prefix list ID, Attribute conditional on `Type` equal to `destinationDataPrefixList`
         /// </summary>
         public readonly string? DestinationDataPrefixListId;
         /// <summary>
@@ -30,25 +30,25 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataPrefixListVersion;
         /// <summary>
-        /// Destination IP, Attribute conditional on `Type` being equal to `destinationIp`
+        /// Destination IP, Attribute conditional on `Type` equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` being equal to `destinationPort`
+        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` equal to `destinationPort`
         /// </summary>
         public readonly string? DestinationPort;
         /// <summary>
-        /// Destination region, Attribute conditional on `Type` being equal to `destinationRegion`
+        /// Destination region, Attribute conditional on `Type` equal to `destinationRegion`
         ///   - Choices: `primary-region`, `secondary-region`, `other-region`
         /// </summary>
         public readonly string? DestinationRegion;
         /// <summary>
-        /// DNS request or response, Attribute conditional on `Type` being equal to `Dns`
+        /// DNS request or response, Attribute conditional on `Type` equal to `Dns`
         ///   - Choices: `Request`, `Response`
         /// </summary>
         public readonly string? Dns;
         /// <summary>
-        /// DNS Application list ID, Attribute conditional on `Type` being equal to `dnsAppList`
+        /// DNS Application list ID, Attribute conditional on `Type` equal to `dnsAppList`
         /// </summary>
         public readonly string? DnsApplicationListId;
         /// <summary>
@@ -56,24 +56,24 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DnsApplicationListVersion;
         /// <summary>
-        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
+        /// DSCP value, Attribute conditional on `Type` equal to `Dscp`
         /// </summary>
         public readonly string? Dscp;
         /// <summary>
-        /// ICMP Message, Attribute conditional on `Type` being equal to `icmpMessage`
+        /// ICMP Message, Attribute conditional on `Type` equal to `icmpMessage`
         /// </summary>
         public readonly string? IcmpMessage;
         /// <summary>
-        /// PLP, Attribute conditional on `Type` being equal to `Plp`
+        /// PLP, Attribute conditional on `Type` equal to `Plp`
         ///   - Choices: `Low`, `High`
         /// </summary>
         public readonly string? Plp;
         /// <summary>
-        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `Protocol`
+        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `Type` equal to `Protocol`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>
-        /// Source Data Prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
+        /// Source Data Prefix list ID, Attribute conditional on `Type` equal to `sourceDataPrefixList`
         /// </summary>
         public readonly string? SourceDataPrefixListId;
         /// <summary>
@@ -81,15 +81,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataPrefixListVersion;
         /// <summary>
-        /// Source IP, Attribute conditional on `Type` being equal to `sourceIp`
+        /// Source IP, Attribute conditional on `Type` equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` being equal to `sourcePort`
+        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePort;
         /// <summary>
-        /// Traffic to, Attribute conditional on `Type` being equal to `trafficTo`
+        /// Traffic to, Attribute conditional on `Type` equal to `trafficTo`
         ///   - Choices: `Access`, `Core`, `Service`
         /// </summary>
         public readonly string? TrafficTo;

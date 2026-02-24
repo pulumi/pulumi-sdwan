@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a System Basic Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -77,6 +77,7 @@ import javax.annotation.Nullable;
  *             .maxOmpSessions(24)
  *             .multiTenant(false)
  *             .trackDefaultGateway(true)
+ *             .trackerDiaStabilizeStatus(false)
  *             .adminTechOnFailure(true)
  *             .idleTimeout(10)
  *             .onDemandEnable(true)
@@ -1026,6 +1027,36 @@ public class SystemBasicFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> trackTransportVariable() {
         return Codegen.optional(this.trackTransportVariable);
+    }
+    /**
+     * Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="trackerDiaStabilizeStatus", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> trackerDiaStabilizeStatus;
+
+    /**
+     * @return Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> trackerDiaStabilizeStatus() {
+        return Codegen.optional(this.trackerDiaStabilizeStatus);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="trackerDiaStabilizeStatusVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> trackerDiaStabilizeStatusVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> trackerDiaStabilizeStatusVariable() {
+        return Codegen.optional(this.trackerDiaStabilizeStatusVariable);
     }
     /**
      * Enable transport gateway

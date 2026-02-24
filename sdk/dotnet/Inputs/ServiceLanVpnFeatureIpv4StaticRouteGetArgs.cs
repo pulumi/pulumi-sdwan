@@ -13,20 +13,20 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceLanVpnFeatureIpv4StaticRouteGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Gateway distance, Attribute conditional on `Gateway` being equal to `Null0`
+        /// Gateway distance, Attribute conditional on `Gateway` equal to `Null0`
         ///   - Range: `1`-`255`
         /// </summary>
         [Input("administrativeDistance")]
         public Input<int>? AdministrativeDistance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Gateway` being equal to `Null0`
+        /// Variable name, Attribute conditional on `Gateway` equal to `Null0`
         /// </summary>
         [Input("administrativeDistanceVariable")]
         public Input<string>? AdministrativeDistanceVariable { get; set; }
 
         /// <summary>
-        /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` being equal to `Dhcp`
+        /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` equal to `Dhcp`
         /// </summary>
         [Input("dhcp")]
         public Input<bool>? Dhcp { get; set; }
@@ -42,7 +42,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceGetArgs>? _ipStaticRouteInterfaces;
 
         /// <summary>
-        /// , Attribute conditional on `Gateway` being equal to `staticRouteInterface`
+        /// , Attribute conditional on `Gateway` equal to `staticRouteInterface`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceGetArgs> IpStaticRouteInterfaces
         {
@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerGetArgs>? _nextHopWithTrackers;
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `Gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `Gateway` equal to `nextHop`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerGetArgs> NextHopWithTrackers
         {
@@ -78,7 +78,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopGetArgs>? _nextHops;
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `nextHop`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopGetArgs> NextHops
         {
@@ -87,7 +87,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `Null0`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `Null0`
         /// </summary>
         [Input("null0")]
         public Input<bool>? Null0 { get; set; }
@@ -106,7 +106,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? SubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// IPv4 Route Gateway VPN, Attribute conditional on `Gateway` being equal to `Vpn`
+        /// IPv4 Route Gateway VPN, Attribute conditional on `Gateway` equal to `Vpn`
         /// </summary>
         [Input("vpn")]
         public Input<bool>? Vpn { get; set; }

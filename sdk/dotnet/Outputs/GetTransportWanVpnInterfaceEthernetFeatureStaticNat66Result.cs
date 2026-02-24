@@ -14,6 +14,14 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Result
     {
         /// <summary>
+        /// Egress Interface
+        /// </summary>
+        public readonly bool EgressInterface;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EgressInterfaceVariable;
+        /// <summary>
         /// Source Prefix
         /// </summary>
         public readonly string SourcePrefix;
@@ -40,6 +48,10 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Result(
+            bool egressInterface,
+
+            string egressInterfaceVariable,
+
             string sourcePrefix,
 
             string sourcePrefixVariable,
@@ -52,6 +64,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string translatedSourcePrefixVariable)
         {
+            EgressInterface = egressInterface;
+            EgressInterfaceVariable = egressInterfaceVariable;
             SourcePrefix = sourcePrefix;
             SourcePrefixVariable = sourcePrefixVariable;
             SourceVpnId = sourceVpnId;

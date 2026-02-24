@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv6AclPolicyDefinitionSequenceMatchEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Class map ID, Attribute conditional on `Type` being equal to `Class`
+        /// Class map ID, Attribute conditional on `Type` equal to `Class`
         /// </summary>
         [Input("classMapId")]
         public Input<string>? ClassMapId { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ClassMapVersion { get; set; }
 
         /// <summary>
-        /// Destination dataIPv6 prefix list ID, Attribute conditional on `Type` being equal to `destinationDataIpv6PrefixList`
+        /// Destination dataIPv6 prefix list ID, Attribute conditional on `Type` equal to `destinationDataIpv6PrefixList`
         /// </summary>
         [Input("destinationDataIpv6PrefixListId")]
         public Input<string>? DestinationDataIpv6PrefixListId { get; set; }
@@ -37,40 +37,40 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataIpv6PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IPv6 prefix, Attribute conditional on `Type` being equal to `destinationIpv6`
+        /// Destination IPv6 prefix, Attribute conditional on `Type` equal to `destinationIpv6`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `destinationPort`
+        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` equal to `destinationPort`
         /// </summary>
         [Input("destinationPorts")]
         public Input<string>? DestinationPorts { get; set; }
 
         /// <summary>
-        /// Next header, Attribute conditional on `Type` being equal to `nextHeader`
+        /// Next header, Attribute conditional on `Type` equal to `nextHeader`
         ///   - Range: `0`-`255`
         /// </summary>
         [Input("nextHeader")]
         public Input<int>? NextHeader { get; set; }
 
         /// <summary>
-        /// Packet length, Attribute conditional on `Type` being equal to `packetLength`
+        /// Packet length, Attribute conditional on `Type` equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         [Input("packetLength")]
         public Input<int>? PacketLength { get; set; }
 
         /// <summary>
-        /// PLP - priority, Attribute conditional on `Type` being equal to `Plp`
+        /// PLP - priority, Attribute conditional on `Type` equal to `Plp`
         ///   - Choices: `High`, `Low`
         /// </summary>
         [Input("priority")]
         public Input<string>? Priority { get; set; }
 
         /// <summary>
-        /// Source data IPv6 prefix list ID, Attribute conditional on `Type` being equal to `sourceDataIpv6PrefixList`
+        /// Source data IPv6 prefix list ID, Attribute conditional on `Type` equal to `sourceDataIpv6PrefixList`
         /// </summary>
         [Input("sourceDataIpv6PrefixListId")]
         public Input<string>? SourceDataIpv6PrefixListId { get; set; }
@@ -82,26 +82,26 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataIpv6PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IPv6 prefix, Attribute conditional on `Type` being equal to `sourceIpv6`
+        /// Source IPv6 prefix, Attribute conditional on `Type` equal to `sourceIpv6`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `sourcePort`
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` equal to `sourcePort`
         /// </summary>
         [Input("sourcePorts")]
         public Input<string>? SourcePorts { get; set; }
 
         /// <summary>
-        /// TCP parameters, Attribute conditional on `Type` being equal to `Tcp`
+        /// TCP parameters, Attribute conditional on `Type` equal to `Tcp`
         ///   - Choices: `Syn`
         /// </summary>
         [Input("tcp")]
         public Input<string>? Tcp { get; set; }
 
         /// <summary>
-        /// Traffic class, Attribute conditional on `Type` being equal to `trafficClass`
+        /// Traffic class, Attribute conditional on `Type` equal to `trafficClass`
         ///   - Range: `0`-`63`
         /// </summary>
         [Input("trafficClass")]

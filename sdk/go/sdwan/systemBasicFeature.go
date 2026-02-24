@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a System Basic Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -52,22 +52,23 @@ import (
 //				ControllerGroups: pulumi.IntArray{
 //					pulumi.Int(1),
 //				},
-//				OverlayId:               pulumi.Int(1),
-//				PortOffset:              pulumi.Int(19),
-//				PortHopping:             pulumi.Bool(true),
-//				ControlSessionPps:       pulumi.Int(300),
-//				TrackTransport:          pulumi.Bool(true),
-//				TrackInterfaceTag:       pulumi.Int(2),
-//				ConsoleBaudRate:         pulumi.String("9600"),
-//				MaxOmpSessions:          pulumi.Int(24),
-//				MultiTenant:             pulumi.Bool(false),
-//				TrackDefaultGateway:     pulumi.Bool(true),
-//				AdminTechOnFailure:      pulumi.Bool(true),
-//				IdleTimeout:             pulumi.Int(10),
-//				OnDemandEnable:          pulumi.Bool(true),
-//				OnDemandIdleTimeout:     pulumi.Int(10),
-//				TransportGateway:        pulumi.Bool(false),
-//				EnhancedAppAwareRouting: pulumi.String("aggressive"),
+//				OverlayId:                 pulumi.Int(1),
+//				PortOffset:                pulumi.Int(19),
+//				PortHopping:               pulumi.Bool(true),
+//				ControlSessionPps:         pulumi.Int(300),
+//				TrackTransport:            pulumi.Bool(true),
+//				TrackInterfaceTag:         pulumi.Int(2),
+//				ConsoleBaudRate:           pulumi.String("9600"),
+//				MaxOmpSessions:            pulumi.Int(24),
+//				MultiTenant:               pulumi.Bool(false),
+//				TrackDefaultGateway:       pulumi.Bool(true),
+//				TrackerDiaStabilizeStatus: pulumi.Bool(false),
+//				AdminTechOnFailure:        pulumi.Bool(true),
+//				IdleTimeout:               pulumi.Int(10),
+//				OnDemandEnable:            pulumi.Bool(true),
+//				OnDemandIdleTimeout:       pulumi.Int(10),
+//				TransportGateway:          pulumi.Bool(false),
+//				EnhancedAppAwareRouting:   pulumi.String("aggressive"),
 //				SiteTypes: pulumi.StringArray{
 //					pulumi.String("type-1"),
 //				},
@@ -257,6 +258,11 @@ type SystemBasicFeature struct {
 	TrackTransport pulumi.BoolPtrOutput `pulumi:"trackTransport"`
 	// Variable name
 	TrackTransportVariable pulumi.StringPtrOutput `pulumi:"trackTransportVariable"`
+	// Enable or disable endpoint tracker diaStabilize status
+	//   - Default value: `false`
+	TrackerDiaStabilizeStatus pulumi.BoolPtrOutput `pulumi:"trackerDiaStabilizeStatus"`
+	// Variable name
+	TrackerDiaStabilizeStatusVariable pulumi.StringPtrOutput `pulumi:"trackerDiaStabilizeStatusVariable"`
 	// Enable transport gateway
 	//   - Default value: `false`
 	TransportGateway pulumi.BoolPtrOutput `pulumi:"transportGateway"`
@@ -452,6 +458,11 @@ type systemBasicFeatureState struct {
 	TrackTransport *bool `pulumi:"trackTransport"`
 	// Variable name
 	TrackTransportVariable *string `pulumi:"trackTransportVariable"`
+	// Enable or disable endpoint tracker diaStabilize status
+	//   - Default value: `false`
+	TrackerDiaStabilizeStatus *bool `pulumi:"trackerDiaStabilizeStatus"`
+	// Variable name
+	TrackerDiaStabilizeStatusVariable *string `pulumi:"trackerDiaStabilizeStatusVariable"`
 	// Enable transport gateway
 	//   - Default value: `false`
 	TransportGateway *bool `pulumi:"transportGateway"`
@@ -615,6 +626,11 @@ type SystemBasicFeatureState struct {
 	TrackTransport pulumi.BoolPtrInput
 	// Variable name
 	TrackTransportVariable pulumi.StringPtrInput
+	// Enable or disable endpoint tracker diaStabilize status
+	//   - Default value: `false`
+	TrackerDiaStabilizeStatus pulumi.BoolPtrInput
+	// Variable name
+	TrackerDiaStabilizeStatusVariable pulumi.StringPtrInput
 	// Enable transport gateway
 	//   - Default value: `false`
 	TransportGateway pulumi.BoolPtrInput
@@ -782,6 +798,11 @@ type systemBasicFeatureArgs struct {
 	TrackTransport *bool `pulumi:"trackTransport"`
 	// Variable name
 	TrackTransportVariable *string `pulumi:"trackTransportVariable"`
+	// Enable or disable endpoint tracker diaStabilize status
+	//   - Default value: `false`
+	TrackerDiaStabilizeStatus *bool `pulumi:"trackerDiaStabilizeStatus"`
+	// Variable name
+	TrackerDiaStabilizeStatusVariable *string `pulumi:"trackerDiaStabilizeStatusVariable"`
 	// Enable transport gateway
 	//   - Default value: `false`
 	TransportGateway *bool `pulumi:"transportGateway"`
@@ -944,6 +965,11 @@ type SystemBasicFeatureArgs struct {
 	TrackTransport pulumi.BoolPtrInput
 	// Variable name
 	TrackTransportVariable pulumi.StringPtrInput
+	// Enable or disable endpoint tracker diaStabilize status
+	//   - Default value: `false`
+	TrackerDiaStabilizeStatus pulumi.BoolPtrInput
+	// Variable name
+	TrackerDiaStabilizeStatusVariable pulumi.StringPtrInput
 	// Enable transport gateway
 	//   - Default value: `false`
 	TransportGateway pulumi.BoolPtrInput
@@ -1374,6 +1400,17 @@ func (o SystemBasicFeatureOutput) TrackTransport() pulumi.BoolPtrOutput {
 // Variable name
 func (o SystemBasicFeatureOutput) TrackTransportVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemBasicFeature) pulumi.StringPtrOutput { return v.TrackTransportVariable }).(pulumi.StringPtrOutput)
+}
+
+// Enable or disable endpoint tracker diaStabilize status
+//   - Default value: `false`
+func (o SystemBasicFeatureOutput) TrackerDiaStabilizeStatus() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SystemBasicFeature) pulumi.BoolPtrOutput { return v.TrackerDiaStabilizeStatus }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name
+func (o SystemBasicFeatureOutput) TrackerDiaStabilizeStatusVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemBasicFeature) pulumi.StringPtrOutput { return v.TrackerDiaStabilizeStatusVariable }).(pulumi.StringPtrOutput)
 }
 
 // Enable transport gateway

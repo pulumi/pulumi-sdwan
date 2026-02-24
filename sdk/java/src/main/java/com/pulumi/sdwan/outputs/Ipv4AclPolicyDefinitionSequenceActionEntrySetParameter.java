@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
+     * @return DSCP value, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
     private @Nullable Integer dscp;
     /**
-     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop IP, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     private @Nullable String nextHop;
@@ -33,7 +33,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
 
     private Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter() {}
     /**
-     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
+     * @return DSCP value, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -41,7 +41,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.dscp);
     }
     /**
-     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop IP, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     public Optional<String> nextHop() {

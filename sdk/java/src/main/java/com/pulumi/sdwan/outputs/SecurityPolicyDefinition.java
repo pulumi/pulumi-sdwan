@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityPolicyDefinition {
     /**
-     * @return List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * @return List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
      * 
      */
     private @Nullable List<SecurityPolicyDefinitionEntry> entries;
@@ -39,7 +39,7 @@ public final class SecurityPolicyDefinition {
 
     private SecurityPolicyDefinition() {}
     /**
-     * @return List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * @return List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
      * 
      */
     public List<SecurityPolicyDefinitionEntry> entries() {

@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Other UCSE Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -74,10 +74,10 @@ type OtherUcseFeature struct {
 	// Dedicated
 	//   - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrOutput `pulumi:"accessPortDedicated"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrOutput `pulumi:"accessPortSharedFailoverType"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrOutput `pulumi:"accessPortSharedType"`
 	// Assign priority
@@ -158,10 +158,10 @@ type otherUcseFeatureState struct {
 	// Dedicated
 	//   - Default value: `true`
 	AccessPortDedicated *bool `pulumi:"accessPortDedicated"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType *string `pulumi:"accessPortSharedFailoverType"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType *string `pulumi:"accessPortSharedType"`
 	// Assign priority
@@ -204,10 +204,10 @@ type OtherUcseFeatureState struct {
 	// Dedicated
 	//   - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrInput
 	// Assign priority
@@ -254,10 +254,10 @@ type otherUcseFeatureArgs struct {
 	// Dedicated
 	//   - Default value: `true`
 	AccessPortDedicated *bool `pulumi:"accessPortDedicated"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType *string `pulumi:"accessPortSharedFailoverType"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType *string `pulumi:"accessPortSharedType"`
 	// Assign priority
@@ -299,10 +299,10 @@ type OtherUcseFeatureArgs struct {
 	// Dedicated
 	//   - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	// , Attribute conditional on `accessPortDedicated` equal to `false`
 	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrInput
 	// Assign priority
@@ -432,13 +432,13 @@ func (o OtherUcseFeatureOutput) AccessPortDedicated() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.BoolPtrOutput { return v.AccessPortDedicated }).(pulumi.BoolPtrOutput)
 }
 
-// , Attribute conditional on `accessPortDedicated` being equal to `false`
+// , Attribute conditional on `accessPortDedicated` equal to `false`
 //   - Choices: `ge2`, `te2`
 func (o OtherUcseFeatureOutput) AccessPortSharedFailoverType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AccessPortSharedFailoverType }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `accessPortDedicated` being equal to `false`
+// , Attribute conditional on `accessPortDedicated` equal to `false`
 //   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 func (o OtherUcseFeatureOutput) AccessPortSharedType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AccessPortSharedType }).(pulumi.StringPtrOutput)

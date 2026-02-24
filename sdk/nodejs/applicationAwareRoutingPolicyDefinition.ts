@@ -76,7 +76,7 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
      */
     declare public readonly defaultAction: pulumi.Output<string | undefined>;
     /**
-     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      */
     declare public readonly defaultActionSlaClassListId: pulumi.Output<string | undefined>;
     /**
@@ -157,7 +157,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionState {
      */
     defaultAction?: pulumi.Input<string>;
     /**
-     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      */
     defaultActionSlaClassListId?: pulumi.Input<string>;
     /**
@@ -196,7 +196,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionArgs {
      */
     defaultAction?: pulumi.Input<string>;
     /**
-     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      */
     defaultActionSlaClassListId?: pulumi.Input<string>;
     /**

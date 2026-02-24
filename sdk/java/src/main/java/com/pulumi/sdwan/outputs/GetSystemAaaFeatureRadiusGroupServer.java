@@ -37,7 +37,7 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
      */
     private String authPortVariable;
     /**
-     * @return Set the Radius server shared key
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String key;
@@ -56,6 +56,11 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
      * 
      */
     private String keyTypeVariable;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String keyVariable;
     /**
      * @return Configure how many times to contact this Radius server
      * 
@@ -124,7 +129,7 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
         return this.authPortVariable;
     }
     /**
-     * @return Set the Radius server shared key
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String key() {
@@ -150,6 +155,13 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
      */
     public String keyTypeVariable() {
         return this.keyTypeVariable;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String keyVariable() {
+        return this.keyVariable;
     }
     /**
      * @return Configure how many times to contact this Radius server
@@ -212,6 +224,7 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
         private String keyEnum;
         private String keyType;
         private String keyTypeVariable;
+        private String keyVariable;
         private Integer retransmit;
         private String retransmitVariable;
         private String secretKey;
@@ -230,6 +243,7 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
     	      this.keyEnum = defaults.keyEnum;
     	      this.keyType = defaults.keyType;
     	      this.keyTypeVariable = defaults.keyTypeVariable;
+    	      this.keyVariable = defaults.keyVariable;
     	      this.retransmit = defaults.retransmit;
     	      this.retransmitVariable = defaults.retransmitVariable;
     	      this.secretKey = defaults.secretKey;
@@ -311,6 +325,14 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder keyVariable(String keyVariable) {
+            if (keyVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "keyVariable");
+            }
+            this.keyVariable = keyVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder retransmit(Integer retransmit) {
             if (retransmit == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureRadiusGroupServer", "retransmit");
@@ -369,6 +391,7 @@ public final class GetSystemAaaFeatureRadiusGroupServer {
             _resultValue.keyEnum = keyEnum;
             _resultValue.keyType = keyType;
             _resultValue.keyTypeVariable = keyTypeVariable;
+            _resultValue.keyVariable = keyVariable;
             _resultValue.retransmit = retransmit;
             _resultValue.retransmitVariable = retransmitVariable;
             _resultValue.secretKey = secretKey;

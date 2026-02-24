@@ -128,11 +128,11 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
      */
     declare public readonly helloIntervalVariable: pulumi.Output<string | undefined>;
     /**
-     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     declare public readonly hmacAuthenticationKey: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+     * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     declare public readonly hmacAuthenticationKeyVariable: pulumi.Output<string | undefined>;
     /**
@@ -150,7 +150,7 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
      */
     declare public readonly interfaces: pulumi.Output<outputs.ServiceRoutingEigrpFeatureInterface[] | undefined>;
     /**
-     * Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+     * Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
      */
     declare public readonly md5Keys: pulumi.Output<outputs.ServiceRoutingEigrpFeatureMd5Key[] | undefined>;
     /**
@@ -290,11 +290,11 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     helloIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     hmacAuthenticationKey?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+     * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string>;
     /**
@@ -312,7 +312,7 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterface>[]>;
     /**
-     * Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+     * Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
      */
     md5Keys?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureMd5Key>[]>;
     /**
@@ -384,11 +384,11 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     helloIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     hmacAuthenticationKey?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
+     * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string>;
     /**
@@ -406,7 +406,7 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterface>[]>;
     /**
-     * Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
+     * Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
      */
     md5Keys?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureMd5Key>[]>;
     /**

@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv6AclPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Class map ID, Attribute conditional on `Type` being equal to `Class`
+        /// Class map ID, Attribute conditional on `Type` equal to `Class`
         /// </summary>
         public readonly string? ClassMapId;
         /// <summary>
@@ -22,15 +22,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ClassMapVersion;
         /// <summary>
-        /// Counter name, Attribute conditional on `Type` being equal to `Count`
+        /// Counter name, Attribute conditional on `Type` equal to `Count`
         /// </summary>
         public readonly string? CounterName;
         /// <summary>
-        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
+        /// Enable logging, Attribute conditional on `Type` equal to `Log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// Mirror ID, Attribute conditional on `Type` being equal to `Mirror`
+        /// Mirror ID, Attribute conditional on `Type` equal to `Mirror`
         /// </summary>
         public readonly string? MirrorId;
         /// <summary>
@@ -38,7 +38,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? MirrorVersion;
         /// <summary>
-        /// Policer ID, Attribute conditional on `Type` being equal to `Policer`
+        /// Policer ID, Attribute conditional on `Type` equal to `Policer`
         /// </summary>
         public readonly string? PolicerId;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PolicerVersion;
         /// <summary>
-        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
+        /// List of set parameters, Attribute conditional on `Type` equal to `Set`
         /// </summary>
         public readonly ImmutableArray<Outputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter> SetParameters;
         /// <summary>

@@ -15,44 +15,44 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * @return DSCP, Attribute conditional on `type` being equal to `dscp`
+     * @return DSCP, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
     private @Nullable Integer dscp;
     /**
-     * @return Forwarding class, Attribute conditional on `type` being equal to `forwardingClass`
+     * @return Forwarding class, Attribute conditional on `type` equal to `forwardingClass`
      * 
      */
     private @Nullable String forwardingClass;
     /**
-     * @return Local TLOC list color. Space separated list of colors., Attribute conditional on `type` being equal to `localTlocList`
+     * @return Local TLOC list color. Space separated list of colors., Attribute conditional on `type` equal to `localTlocList`
      * 
      */
     private @Nullable String localTlocListColor;
     /**
-     * @return Local TLOC list encapsulation., Attribute conditional on `type` being equal to `localTlocList`
+     * @return Local TLOC list encapsulation., Attribute conditional on `type` equal to `localTlocList`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      * 
      */
     private @Nullable String localTlocListEncap;
     /**
-     * @return Local TLOC list restrict, Attribute conditional on `type` being equal to `localTlocList`
+     * @return Local TLOC list restrict, Attribute conditional on `type` equal to `localTlocList`
      * 
      */
     private @Nullable Boolean localTlocListRestrict;
     /**
-     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop IP, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     private @Nullable String nextHop;
     /**
-     * @return Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
+     * @return Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` equal to `nextHopLoose`
      * 
      */
     private @Nullable Boolean nextHopLoose;
     /**
-     * @return Policer list ID, Attribute conditional on `type` being equal to `policer`
+     * @return Policer list ID, Attribute conditional on `type` equal to `policer`
      * 
      */
     private @Nullable String policerListId;
@@ -62,7 +62,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     private @Nullable Integer policerListVersion;
     /**
-     * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * @return Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      * 
      */
     private @Nullable String preferredColorGroupListId;
@@ -72,23 +72,23 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     private @Nullable Integer preferredColorGroupListVersion;
     /**
-     * @return Service TLOC color, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC color, Attribute conditional on `type` equal to `service`
      * 
      */
     private @Nullable String serviceTlocColor;
     /**
-     * @return Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      * 
      */
     private @Nullable String serviceTlocEncapsulation;
     /**
-     * @return Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC IP address, Attribute conditional on `type` equal to `service`
      * 
      */
     private @Nullable String serviceTlocIp;
     /**
-     * @return Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC list ID, Attribute conditional on `type` equal to `service`
      * 
      */
     private @Nullable String serviceTlocListId;
@@ -98,45 +98,45 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     private @Nullable Integer serviceTlocListVersion;
     /**
-     * @return Service TLOC Local, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC Local, Attribute conditional on `type` equal to `service`
      * 
      */
     private @Nullable Boolean serviceTlocLocal;
     /**
-     * @return Service TLOC Restrict, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC Restrict, Attribute conditional on `type` equal to `service`
      * 
      */
     private @Nullable Boolean serviceTlocRestrict;
     /**
-     * @return Service type, Attribute conditional on `type` being equal to `service`
+     * @return Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      * 
      */
     private @Nullable String serviceType;
     /**
-     * @return Service VPN ID, Attribute conditional on `type` being equal to `service`
+     * @return Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      * 
      */
     private @Nullable Integer serviceVpnId;
     /**
-     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     private @Nullable String tlocColor;
     /**
-     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      * 
      */
     private @Nullable String tlocEncapsulation;
     /**
-     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     private @Nullable String tlocIp;
     /**
-     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * @return TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     private @Nullable String tlocListId;
@@ -152,7 +152,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     private String type;
     /**
-     * @return DSCP, Attribute conditional on `type` being equal to `vpn`
+     * @return DSCP, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65530`
      * 
      */
@@ -160,7 +160,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
 
     private TrafficDataPolicyDefinitionSequenceActionEntrySetParameter() {}
     /**
-     * @return DSCP, Attribute conditional on `type` being equal to `dscp`
+     * @return DSCP, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -168,21 +168,21 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.dscp);
     }
     /**
-     * @return Forwarding class, Attribute conditional on `type` being equal to `forwardingClass`
+     * @return Forwarding class, Attribute conditional on `type` equal to `forwardingClass`
      * 
      */
     public Optional<String> forwardingClass() {
         return Optional.ofNullable(this.forwardingClass);
     }
     /**
-     * @return Local TLOC list color. Space separated list of colors., Attribute conditional on `type` being equal to `localTlocList`
+     * @return Local TLOC list color. Space separated list of colors., Attribute conditional on `type` equal to `localTlocList`
      * 
      */
     public Optional<String> localTlocListColor() {
         return Optional.ofNullable(this.localTlocListColor);
     }
     /**
-     * @return Local TLOC list encapsulation., Attribute conditional on `type` being equal to `localTlocList`
+     * @return Local TLOC list encapsulation., Attribute conditional on `type` equal to `localTlocList`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      * 
      */
@@ -190,28 +190,28 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.localTlocListEncap);
     }
     /**
-     * @return Local TLOC list restrict, Attribute conditional on `type` being equal to `localTlocList`
+     * @return Local TLOC list restrict, Attribute conditional on `type` equal to `localTlocList`
      * 
      */
     public Optional<Boolean> localTlocListRestrict() {
         return Optional.ofNullable(this.localTlocListRestrict);
     }
     /**
-     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop IP, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     public Optional<String> nextHop() {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
+     * @return Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` equal to `nextHopLoose`
      * 
      */
     public Optional<Boolean> nextHopLoose() {
         return Optional.ofNullable(this.nextHopLoose);
     }
     /**
-     * @return Policer list ID, Attribute conditional on `type` being equal to `policer`
+     * @return Policer list ID, Attribute conditional on `type` equal to `policer`
      * 
      */
     public Optional<String> policerListId() {
@@ -225,7 +225,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.policerListVersion);
     }
     /**
-     * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * @return Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      * 
      */
     public Optional<String> preferredColorGroupListId() {
@@ -239,14 +239,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.preferredColorGroupListVersion);
     }
     /**
-     * @return Service TLOC color, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC color, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<String> serviceTlocColor() {
         return Optional.ofNullable(this.serviceTlocColor);
     }
     /**
-     * @return Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      * 
      */
@@ -254,14 +254,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.serviceTlocEncapsulation);
     }
     /**
-     * @return Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC IP address, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<String> serviceTlocIp() {
         return Optional.ofNullable(this.serviceTlocIp);
     }
     /**
-     * @return Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC list ID, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<String> serviceTlocListId() {
@@ -275,21 +275,21 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.serviceTlocListVersion);
     }
     /**
-     * @return Service TLOC Local, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC Local, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<Boolean> serviceTlocLocal() {
         return Optional.ofNullable(this.serviceTlocLocal);
     }
     /**
-     * @return Service TLOC Restrict, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC Restrict, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<Boolean> serviceTlocRestrict() {
         return Optional.ofNullable(this.serviceTlocRestrict);
     }
     /**
-     * @return Service type, Attribute conditional on `type` being equal to `service`
+     * @return Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      * 
      */
@@ -297,7 +297,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.serviceType);
     }
     /**
-     * @return Service VPN ID, Attribute conditional on `type` being equal to `service`
+     * @return Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      * 
      */
@@ -305,14 +305,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.serviceVpnId);
     }
     /**
-     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<String> tlocColor() {
         return Optional.ofNullable(this.tlocColor);
     }
     /**
-     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      * 
      */
@@ -320,14 +320,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return Optional.ofNullable(this.tlocEncapsulation);
     }
     /**
-     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<String> tlocIp() {
         return Optional.ofNullable(this.tlocIp);
     }
     /**
-     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * @return TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     public Optional<String> tlocListId() {
@@ -349,7 +349,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         return this.type;
     }
     /**
-     * @return DSCP, Attribute conditional on `type` being equal to `vpn`
+     * @return DSCP, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65530`
      * 
      */

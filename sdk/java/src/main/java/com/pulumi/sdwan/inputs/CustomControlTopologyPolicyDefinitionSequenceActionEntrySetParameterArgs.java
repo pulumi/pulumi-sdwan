@@ -19,14 +19,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     public static final CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs Empty = new CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs();
 
     /**
-     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
      * 
      */
     @Import(name="community")
     private @Nullable Output<String> community;
 
     /**
-     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
      * 
      */
     public Optional<Output<String>> community() {
@@ -34,14 +34,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+     * Community additive, Attribute conditional on `type` equal to `communityAdditive`
      * 
      */
     @Import(name="communityAdditive")
     private @Nullable Output<Boolean> communityAdditive;
 
     /**
-     * @return Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+     * @return Community additive, Attribute conditional on `type` equal to `communityAdditive`
      * 
      */
     public Optional<Output<Boolean>> communityAdditive() {
@@ -49,7 +49,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -57,7 +57,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<Integer> ompTag;
 
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -66,7 +66,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Preference, Attribute conditional on `type` being equal to `preference`
+     * Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -74,7 +74,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<Integer> preference;
 
     /**
-     * @return Preference, Attribute conditional on `type` being equal to `preference`
+     * @return Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -83,14 +83,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Service TLOC color, Attribute conditional on `type` being equal to `service`
+     * Service TLOC color, Attribute conditional on `type` equal to `service`
      * 
      */
     @Import(name="serviceTlocColor")
     private @Nullable Output<String> serviceTlocColor;
 
     /**
-     * @return Service TLOC color, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC color, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<Output<String>> serviceTlocColor() {
@@ -98,7 +98,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+     * Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -106,7 +106,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<String> serviceTlocEncapsulation;
 
     /**
-     * @return Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -115,14 +115,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+     * Service TLOC IP address, Attribute conditional on `type` equal to `service`
      * 
      */
     @Import(name="serviceTlocIp")
     private @Nullable Output<String> serviceTlocIp;
 
     /**
-     * @return Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC IP address, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<Output<String>> serviceTlocIp() {
@@ -130,14 +130,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+     * Service TLOC list ID, Attribute conditional on `type` equal to `service`
      * 
      */
     @Import(name="serviceTlocListId")
     private @Nullable Output<String> serviceTlocListId;
 
     /**
-     * @return Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+     * @return Service TLOC list ID, Attribute conditional on `type` equal to `service`
      * 
      */
     public Optional<Output<String>> serviceTlocListId() {
@@ -160,7 +160,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Service type, Attribute conditional on `type` being equal to `service`
+     * Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      * 
      */
@@ -168,7 +168,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<String> serviceType;
 
     /**
-     * @return Service type, Attribute conditional on `type` being equal to `service`
+     * @return Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      * 
      */
@@ -177,7 +177,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * Service VPN ID, Attribute conditional on `type` being equal to `service`
+     * Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      * 
      */
@@ -185,7 +185,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<Integer> serviceVpnId;
 
     /**
-     * @return Service VPN ID, Attribute conditional on `type` being equal to `service`
+     * @return Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      * 
      */
@@ -194,7 +194,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * TLOC action, Attribute conditional on `type` being equal to `tlocAction`
+     * TLOC action, Attribute conditional on `type` equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      * 
      */
@@ -202,7 +202,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<String> tlocAction;
 
     /**
-     * @return TLOC action, Attribute conditional on `type` being equal to `tlocAction`
+     * @return TLOC action, Attribute conditional on `type` equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      * 
      */
@@ -211,14 +211,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     @Import(name="tlocColor")
     private @Nullable Output<String> tlocColor;
 
     /**
-     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<Output<String>> tlocColor() {
@@ -226,7 +226,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -234,7 +234,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     private @Nullable Output<String> tlocEncapsulation;
 
     /**
-     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -243,14 +243,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     @Import(name="tlocIp")
     private @Nullable Output<String> tlocIp;
 
     /**
-     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<Output<String>> tlocIp() {
@@ -258,14 +258,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
     }
 
     /**
-     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     @Import(name="tlocListId")
     private @Nullable Output<String> tlocListId;
 
     /**
-     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * @return TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     public Optional<Output<String>> tlocListId() {
@@ -346,7 +346,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
          * 
          * @return builder
          * 
@@ -357,7 +357,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
          * 
          * @return builder
          * 
@@ -367,7 +367,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param communityAdditive Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+         * @param communityAdditive Community additive, Attribute conditional on `type` equal to `communityAdditive`
          * 
          * @return builder
          * 
@@ -378,7 +378,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param communityAdditive Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+         * @param communityAdditive Community additive, Attribute conditional on `type` equal to `communityAdditive`
          * 
          * @return builder
          * 
@@ -388,7 +388,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
+         * @param ompTag OMP tag, Attribute conditional on `type` equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -400,7 +400,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
+         * @param ompTag OMP tag, Attribute conditional on `type` equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -411,7 +411,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param preference Preference, Attribute conditional on `type` being equal to `preference`
+         * @param preference Preference, Attribute conditional on `type` equal to `preference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -423,7 +423,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param preference Preference, Attribute conditional on `type` being equal to `preference`
+         * @param preference Preference, Attribute conditional on `type` equal to `preference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -434,7 +434,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocColor Service TLOC color, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocColor Service TLOC color, Attribute conditional on `type` equal to `service`
          * 
          * @return builder
          * 
@@ -445,7 +445,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocColor Service TLOC color, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocColor Service TLOC color, Attribute conditional on `type` equal to `service`
          * 
          * @return builder
          * 
@@ -455,7 +455,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocEncapsulation Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocEncapsulation Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
          *   - Choices: `ipsec`, `gre`
          * 
          * @return builder
@@ -467,7 +467,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocEncapsulation Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocEncapsulation Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
          *   - Choices: `ipsec`, `gre`
          * 
          * @return builder
@@ -478,7 +478,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocIp Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocIp Service TLOC IP address, Attribute conditional on `type` equal to `service`
          * 
          * @return builder
          * 
@@ -489,7 +489,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocIp Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocIp Service TLOC IP address, Attribute conditional on `type` equal to `service`
          * 
          * @return builder
          * 
@@ -499,7 +499,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocListId Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocListId Service TLOC list ID, Attribute conditional on `type` equal to `service`
          * 
          * @return builder
          * 
@@ -510,7 +510,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceTlocListId Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+         * @param serviceTlocListId Service TLOC list ID, Attribute conditional on `type` equal to `service`
          * 
          * @return builder
          * 
@@ -541,7 +541,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceType Service type, Attribute conditional on `type` being equal to `service`
+         * @param serviceType Service type, Attribute conditional on `type` equal to `service`
          *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
          * 
          * @return builder
@@ -553,7 +553,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceType Service type, Attribute conditional on `type` being equal to `service`
+         * @param serviceType Service type, Attribute conditional on `type` equal to `service`
          *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
          * 
          * @return builder
@@ -564,7 +564,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceVpnId Service VPN ID, Attribute conditional on `type` being equal to `service`
+         * @param serviceVpnId Service VPN ID, Attribute conditional on `type` equal to `service`
          *   - Range: `0`-`65536`
          * 
          * @return builder
@@ -576,7 +576,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param serviceVpnId Service VPN ID, Attribute conditional on `type` being equal to `service`
+         * @param serviceVpnId Service VPN ID, Attribute conditional on `type` equal to `service`
          *   - Range: `0`-`65536`
          * 
          * @return builder
@@ -587,7 +587,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocAction TLOC action, Attribute conditional on `type` being equal to `tlocAction`
+         * @param tlocAction TLOC action, Attribute conditional on `type` equal to `tlocAction`
          *   - Choices: `strict`, `primary`, `backup`, `ecmp`
          * 
          * @return builder
@@ -599,7 +599,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocAction TLOC action, Attribute conditional on `type` being equal to `tlocAction`
+         * @param tlocAction TLOC action, Attribute conditional on `type` equal to `tlocAction`
          *   - Choices: `strict`, `primary`, `backup`, `ecmp`
          * 
          * @return builder
@@ -610,7 +610,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocColor TLOC color, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocColor TLOC color, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -621,7 +621,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocColor TLOC color, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocColor TLOC color, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -631,7 +631,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
          *   - Choices: `ipsec`, `gre`
          * 
          * @return builder
@@ -643,7 +643,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
          *   - Choices: `ipsec`, `gre`
          * 
          * @return builder
@@ -654,7 +654,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocIp TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocIp TLOC IP address, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -665,7 +665,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocIp TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocIp TLOC IP address, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -675,7 +675,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocListId TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+         * @param tlocListId TLOC list ID, Attribute conditional on `type` equal to `tlocList`
          * 
          * @return builder
          * 
@@ -686,7 +686,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         }
 
         /**
-         * @param tlocListId TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+         * @param tlocListId TLOC list ID, Attribute conditional on `type` equal to `tlocList`
          * 
          * @return builder
          * 

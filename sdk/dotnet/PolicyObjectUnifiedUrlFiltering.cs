@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Policy Object Unified URL Filtering Policy_object.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -62,7 +62,7 @@ namespace Pulumi.Sdwan
     public partial class PolicyObjectUnifiedUrlFiltering : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// , Attribute conditional on `EnableAlerts` being equal to `True`
+        /// , Attribute conditional on `EnableAlerts` equal to `True`
         /// </summary>
         [Output("alerts")]
         public Output<ImmutableArray<string>> Alerts { get; private set; } = null!;
@@ -74,7 +74,7 @@ namespace Pulumi.Sdwan
         public Output<string> BlockPageAction { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `BlockPageAction` being equal to `Text`
+        /// , Attribute conditional on `BlockPageAction` equal to `Text`
         /// </summary>
         [Output("blockPageContents")]
         public Output<string?> BlockPageContents { get; private set; } = null!;
@@ -101,7 +101,7 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `BlockPageAction` being equal to `redirect-url`
+        /// , Attribute conditional on `BlockPageAction` equal to `redirect-url`
         /// </summary>
         [Output("redirectUrl")]
         public Output<string?> RedirectUrl { get; private set; } = null!;
@@ -183,7 +183,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _alerts;
 
         /// <summary>
-        /// , Attribute conditional on `EnableAlerts` being equal to `True`
+        /// , Attribute conditional on `EnableAlerts` equal to `True`
         /// </summary>
         public InputList<string> Alerts
         {
@@ -198,7 +198,7 @@ namespace Pulumi.Sdwan
         public Input<string> BlockPageAction { get; set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `BlockPageAction` being equal to `Text`
+        /// , Attribute conditional on `BlockPageAction` equal to `Text`
         /// </summary>
         [Input("blockPageContents")]
         public Input<string>? BlockPageContents { get; set; }
@@ -225,7 +225,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `BlockPageAction` being equal to `redirect-url`
+        /// , Attribute conditional on `BlockPageAction` equal to `redirect-url`
         /// </summary>
         [Input("redirectUrl")]
         public Input<string>? RedirectUrl { get; set; }
@@ -268,7 +268,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _alerts;
 
         /// <summary>
-        /// , Attribute conditional on `EnableAlerts` being equal to `True`
+        /// , Attribute conditional on `EnableAlerts` equal to `True`
         /// </summary>
         public InputList<string> Alerts
         {
@@ -283,7 +283,7 @@ namespace Pulumi.Sdwan
         public Input<string>? BlockPageAction { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `BlockPageAction` being equal to `Text`
+        /// , Attribute conditional on `BlockPageAction` equal to `Text`
         /// </summary>
         [Input("blockPageContents")]
         public Input<string>? BlockPageContents { get; set; }
@@ -310,7 +310,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `BlockPageAction` being equal to `redirect-url`
+        /// , Attribute conditional on `BlockPageAction` equal to `redirect-url`
         /// </summary>
         [Input("redirectUrl")]
         public Input<string>? RedirectUrl { get; set; }

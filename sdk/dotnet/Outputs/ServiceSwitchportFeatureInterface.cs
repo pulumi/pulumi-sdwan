@@ -41,6 +41,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? DuplexVariable;
         /// <summary>
+        /// Set 802.1x on off
+        ///   - Default value: `True`
+        /// </summary>
+        public readonly bool? EnableDot1x;
+        /// <summary>
         /// Enable Periodic Reauthentication
         /// </summary>
         public readonly bool? EnablePeriodicReauth;
@@ -151,7 +156,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ShutdownVariable;
         /// <summary>
         /// Set interface speed
-        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
         /// </summary>
         public readonly string? Speed;
         /// <summary>
@@ -207,6 +212,8 @@ namespace Pulumi.Sdwan.Outputs
             string? duplex,
 
             string? duplexVariable,
+
+            bool? enableDot1x,
 
             bool? enablePeriodicReauth,
 
@@ -284,6 +291,7 @@ namespace Pulumi.Sdwan.Outputs
             CriticalVlanVariable = criticalVlanVariable;
             Duplex = duplex;
             DuplexVariable = duplexVariable;
+            EnableDot1x = enableDot1x;
             EnablePeriodicReauth = enablePeriodicReauth;
             EnablePeriodicReauthVariable = enablePeriodicReauthVariable;
             EnableVoice = enableVoice;

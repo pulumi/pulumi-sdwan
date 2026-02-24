@@ -15,10 +15,15 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Direction of static NAT translation
-        ///   - Choices: `Inside`, `Outside`
+        ///   - Choices: `Inside`
         ///   - Default value: `Inside`
         /// </summary>
         public readonly string? Direction;
+        /// <summary>
+        /// Enable DualRouter HA Mapping
+        ///   - Default value: `False`
+        /// </summary>
+        public readonly bool? EnableDualRouterHaMapping;
         /// <summary>
         /// Source IP address to be translated
         /// </summary>
@@ -50,6 +55,8 @@ namespace Pulumi.Sdwan.Outputs
         private TransportWanVpnInterfaceEthernetFeatureNewStaticNat(
             string? direction,
 
+            bool? enableDualRouterHaMapping,
+
             string? sourceIp,
 
             string? sourceIpVariable,
@@ -63,6 +70,7 @@ namespace Pulumi.Sdwan.Outputs
             string? translatedIpVariable)
         {
             Direction = direction;
+            EnableDualRouterHaMapping = enableDualRouterHaMapping;
             SourceIp = sourceIp;
             SourceIpVariable = sourceIpVariable;
             SourceVpn = sourceVpn;

@@ -22,6 +22,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string AddressVariable;
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        /// </summary>
+        public readonly bool FollowDualRouterHighAvailability;
+        /// <summary>
         /// Group ID
         /// </summary>
         public readonly int GroupId;
@@ -29,6 +33,14 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string GroupIdVariable;
+        /// <summary>
+        /// Minimum preempt delay in seconds
+        /// </summary>
+        public readonly int MinPreemptDelay;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string MinPreemptDelayVariable;
         /// <summary>
         /// Set priority
         /// </summary>
@@ -72,9 +84,15 @@ namespace Pulumi.Sdwan.Outputs
 
             string addressVariable,
 
+            bool followDualRouterHighAvailability,
+
             int groupId,
 
             string groupIdVariable,
+
+            int minPreemptDelay,
+
+            string minPreemptDelayVariable,
 
             int priority,
 
@@ -96,8 +114,11 @@ namespace Pulumi.Sdwan.Outputs
         {
             Address = address;
             AddressVariable = addressVariable;
+            FollowDualRouterHighAvailability = followDualRouterHighAvailability;
             GroupId = groupId;
             GroupIdVariable = groupIdVariable;
+            MinPreemptDelay = minPreemptDelay;
+            MinPreemptDelayVariable = minPreemptDelayVariable;
             Priority = priority;
             PriorityVariable = priorityVariable;
             SecondaryAddresses = secondaryAddresses;

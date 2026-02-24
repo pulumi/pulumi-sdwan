@@ -178,7 +178,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
     }
 
     /**
-     * length, Attribute conditional on `cableLength` being equal to `long`
+     * length, Attribute conditional on `cableLength` equal to `long`
      *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
      * 
      */
@@ -186,7 +186,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
     private @Nullable Output<String> lengthLong;
 
     /**
-     * @return length, Attribute conditional on `cableLength` being equal to `long`
+     * @return length, Attribute conditional on `cableLength` equal to `long`
      *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
      * 
      */
@@ -195,14 +195,14 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
     }
 
     /**
-     * Variable name, Attribute conditional on `cableLength` being equal to `long`
+     * Variable name, Attribute conditional on `cableLength` equal to `long`
      * 
      */
     @Import(name="lengthLongVariable")
     private @Nullable Output<String> lengthLongVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `cableLength` being equal to `long`
+     * @return Variable name, Attribute conditional on `cableLength` equal to `long`
      * 
      */
     public Optional<Output<String>> lengthLongVariable() {
@@ -210,7 +210,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
     }
 
     /**
-     * length, Attribute conditional on `cableLength` being equal to `short`
+     * length, Attribute conditional on `cableLength` equal to `short`
      *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
      * 
      */
@@ -218,7 +218,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
     private @Nullable Output<String> lengthShort;
 
     /**
-     * @return length, Attribute conditional on `cableLength` being equal to `short`
+     * @return length, Attribute conditional on `cableLength` equal to `short`
      *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
      * 
      */
@@ -227,14 +227,14 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
     }
 
     /**
-     * Variable name, Attribute conditional on `cableLength` being equal to `short`
+     * Variable name, Attribute conditional on `cableLength` equal to `short`
      * 
      */
     @Import(name="lengthShortVariable")
     private @Nullable Output<String> lengthShortVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `cableLength` being equal to `short`
+     * @return Variable name, Attribute conditional on `cableLength` equal to `short`
      * 
      */
     public Optional<Output<String>> lengthShortVariable() {
@@ -629,7 +629,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthLong length, Attribute conditional on `cableLength` being equal to `long`
+         * @param lengthLong length, Attribute conditional on `cableLength` equal to `long`
          *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
          * 
          * @return builder
@@ -641,7 +641,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthLong length, Attribute conditional on `cableLength` being equal to `long`
+         * @param lengthLong length, Attribute conditional on `cableLength` equal to `long`
          *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
          * 
          * @return builder
@@ -652,7 +652,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthLongVariable Variable name, Attribute conditional on `cableLength` being equal to `long`
+         * @param lengthLongVariable Variable name, Attribute conditional on `cableLength` equal to `long`
          * 
          * @return builder
          * 
@@ -663,7 +663,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthLongVariable Variable name, Attribute conditional on `cableLength` being equal to `long`
+         * @param lengthLongVariable Variable name, Attribute conditional on `cableLength` equal to `long`
          * 
          * @return builder
          * 
@@ -673,7 +673,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthShort length, Attribute conditional on `cableLength` being equal to `short`
+         * @param lengthShort length, Attribute conditional on `cableLength` equal to `short`
          *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
          * 
          * @return builder
@@ -685,7 +685,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthShort length, Attribute conditional on `cableLength` being equal to `short`
+         * @param lengthShort length, Attribute conditional on `cableLength` equal to `short`
          *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
          * 
          * @return builder
@@ -696,7 +696,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthShortVariable Variable name, Attribute conditional on `cableLength` being equal to `short`
+         * @param lengthShortVariable Variable name, Attribute conditional on `cableLength` equal to `short`
          * 
          * @return builder
          * 
@@ -707,7 +707,7 @@ public final class TransportT1E1ControllerFeatureEntryArgs extends com.pulumi.re
         }
 
         /**
-         * @param lengthShortVariable Variable name, Attribute conditional on `cableLength` being equal to `short`
+         * @param lengthShortVariable Variable name, Attribute conditional on `cableLength` equal to `short`
          * 
          * @return builder
          * 

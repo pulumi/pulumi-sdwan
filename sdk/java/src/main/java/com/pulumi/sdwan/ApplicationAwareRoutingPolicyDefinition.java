@@ -96,14 +96,14 @@ public class ApplicationAwareRoutingPolicyDefinition extends com.pulumi.resource
         return Codegen.optional(this.defaultAction);
     }
     /**
-     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      * 
      */
     @Export(name="defaultActionSlaClassListId", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultActionSlaClassListId;
 
     /**
-     * @return SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * @return SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      * 
      */
     public Output<Optional<String>> defaultActionSlaClassListId() {

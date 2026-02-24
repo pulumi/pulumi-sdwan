@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Destination data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
+        /// Destination data IPv4 prefix list ID, Attribute conditional on `Type` equal to `destinationDataPrefixList`
         /// </summary>
         [Input("destinationDataIpv4PrefixListId")]
         public Input<string>? DestinationDataIpv4PrefixListId { get; set; }
@@ -25,26 +25,26 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataIpv4PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IP prefix, Attribute conditional on `Type` being equal to `destinationIp`
+        /// Destination IP prefix, Attribute conditional on `Type` equal to `destinationIp`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination IP prefix variable, Attribute conditional on `Type` being equal to `destinationIp`
+        /// Destination IP prefix variable, Attribute conditional on `Type` equal to `destinationIp`
         /// </summary>
         [Input("destinationIpVariable")]
         public Input<string>? DestinationIpVariable { get; set; }
 
         /// <summary>
-        /// Destination port, only `22` and `161` supported, Attribute conditional on `Type` being equal to `destinationPort`
+        /// Destination port, only `22` and `161` supported, Attribute conditional on `Type` equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
         [Input("destinationPort")]
         public Input<int>? DestinationPort { get; set; }
 
         /// <summary>
-        /// Source data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
+        /// Source data IPv4 prefix list ID, Attribute conditional on `Type` equal to `sourceDataPrefixList`
         /// </summary>
         [Input("sourceDataIpv4PrefixListId")]
         public Input<string>? SourceDataIpv4PrefixListId { get; set; }
@@ -56,19 +56,19 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataIpv4PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IP prefix, Attribute conditional on `Type` being equal to `sourceIp`
+        /// Source IP prefix, Attribute conditional on `Type` equal to `sourceIp`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source IP prefix variable, Attribute conditional on `Type` being equal to `sourceIp`
+        /// Source IP prefix variable, Attribute conditional on `Type` equal to `sourceIp`
         /// </summary>
         [Input("sourceIpVariable")]
         public Input<string>? SourceIpVariable { get; set; }
 
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `sourcePort`
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` equal to `sourcePort`
         /// </summary>
         [Input("sourcePorts")]
         public Input<string>? SourcePorts { get; set; }

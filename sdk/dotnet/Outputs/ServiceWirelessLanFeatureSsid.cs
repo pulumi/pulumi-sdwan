@@ -32,11 +32,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? BroadcastSsidVariable;
         /// <summary>
-        /// Set passphrase, Attribute conditional on `SecurityType` being equal to `Personal`
+        /// Set passphrase, Attribute conditional on `SecurityType` equal to `Personal`
         /// </summary>
         public readonly string? Passphrase;
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Personal`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Personal`
         /// </summary>
         public readonly string? PassphraseVariable;
         /// <summary>
@@ -60,29 +60,29 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? RadioTypeVariable;
         /// <summary>
-        /// Set RADIUS server IP, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Set RADIUS server IP, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         public readonly string? RadiusServerIp;
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         public readonly string? RadiusServerIpVariable;
         /// <summary>
-        /// Set RADIUS server authentication port, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Set RADIUS server authentication port, Attribute conditional on `SecurityType` equal to `Enterprise`
         ///   - Range: `1`-`65535`
         ///   - Default value: `1812`
         /// </summary>
         public readonly int? RadiusServerPort;
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         public readonly string? RadiusServerPortVariable;
         /// <summary>
-        /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         public readonly string? RadiusServerSecret;
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         public readonly string? RadiusServerSecretVariable;
         /// <summary>

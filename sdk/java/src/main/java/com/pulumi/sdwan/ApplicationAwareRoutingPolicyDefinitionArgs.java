@@ -37,14 +37,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionArgs extends com.pulum
     }
 
     /**
-     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      * 
      */
     @Import(name="defaultActionSlaClassListId")
     private @Nullable Output<String> defaultActionSlaClassListId;
 
     /**
-     * @return SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * @return SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      * 
      */
     public Optional<Output<String>> defaultActionSlaClassListId() {
@@ -164,7 +164,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionArgs extends com.pulum
         }
 
         /**
-         * @param defaultActionSlaClassListId SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+         * @param defaultActionSlaClassListId SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionArgs extends com.pulum
         }
 
         /**
-         * @param defaultActionSlaClassListId SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+         * @param defaultActionSlaClassListId SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
          * 
          * @return builder
          * 

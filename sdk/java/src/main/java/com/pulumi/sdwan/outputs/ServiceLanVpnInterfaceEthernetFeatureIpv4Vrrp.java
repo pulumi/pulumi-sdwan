@@ -27,6 +27,12 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      */
     private @Nullable String addressVariable;
     /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    private @Nullable Boolean followDualRouterHighAvailability;
+    /**
      * @return Group ID
      *   - Range: `1`-`255`
      * 
@@ -37,6 +43,17 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      * 
      */
     private @Nullable String groupIdVariable;
+    /**
+     * @return Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     * 
+     */
+    private @Nullable Integer minPreemptDelay;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String minPreemptDelayVariable;
     /**
      * @return Set priority
      *   - Range: `1`-`254`
@@ -68,7 +85,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
     private @Nullable String timerVariable;
     /**
      * @return Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`4294967295`
+     *   - Range: `1`-`4294967295`
      * 
      */
     private @Nullable Integer tlocPrefChangeValue;
@@ -106,6 +123,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
         return Optional.ofNullable(this.addressVariable);
     }
     /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Boolean> followDualRouterHighAvailability() {
+        return Optional.ofNullable(this.followDualRouterHighAvailability);
+    }
+    /**
      * @return Group ID
      *   - Range: `1`-`255`
      * 
@@ -119,6 +144,21 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      */
     public Optional<String> groupIdVariable() {
         return Optional.ofNullable(this.groupIdVariable);
+    }
+    /**
+     * @return Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     * 
+     */
+    public Optional<Integer> minPreemptDelay() {
+        return Optional.ofNullable(this.minPreemptDelay);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> minPreemptDelayVariable() {
+        return Optional.ofNullable(this.minPreemptDelayVariable);
     }
     /**
      * @return Set priority
@@ -161,7 +201,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
     }
     /**
      * @return Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`4294967295`
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Integer> tlocPrefChangeValue() {
@@ -202,8 +242,11 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
     public static final class Builder {
         private @Nullable String address;
         private @Nullable String addressVariable;
+        private @Nullable Boolean followDualRouterHighAvailability;
         private @Nullable Integer groupId;
         private @Nullable String groupIdVariable;
+        private @Nullable Integer minPreemptDelay;
+        private @Nullable String minPreemptDelayVariable;
         private @Nullable Integer priority;
         private @Nullable String priorityVariable;
         private @Nullable List<ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress> secondaryAddresses;
@@ -218,8 +261,11 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
     	      Objects.requireNonNull(defaults);
     	      this.address = defaults.address;
     	      this.addressVariable = defaults.addressVariable;
+    	      this.followDualRouterHighAvailability = defaults.followDualRouterHighAvailability;
     	      this.groupId = defaults.groupId;
     	      this.groupIdVariable = defaults.groupIdVariable;
+    	      this.minPreemptDelay = defaults.minPreemptDelay;
+    	      this.minPreemptDelayVariable = defaults.minPreemptDelayVariable;
     	      this.priority = defaults.priority;
     	      this.priorityVariable = defaults.priorityVariable;
     	      this.secondaryAddresses = defaults.secondaryAddresses;
@@ -244,6 +290,12 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
             return this;
         }
         @CustomType.Setter
+        public Builder followDualRouterHighAvailability(@Nullable Boolean followDualRouterHighAvailability) {
+
+            this.followDualRouterHighAvailability = followDualRouterHighAvailability;
+            return this;
+        }
+        @CustomType.Setter
         public Builder groupId(@Nullable Integer groupId) {
 
             this.groupId = groupId;
@@ -253,6 +305,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
         public Builder groupIdVariable(@Nullable String groupIdVariable) {
 
             this.groupIdVariable = groupIdVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder minPreemptDelay(@Nullable Integer minPreemptDelay) {
+
+            this.minPreemptDelay = minPreemptDelay;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder minPreemptDelayVariable(@Nullable String minPreemptDelayVariable) {
+
+            this.minPreemptDelayVariable = minPreemptDelayVariable;
             return this;
         }
         @CustomType.Setter
@@ -319,8 +383,11 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
             final var _resultValue = new ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp();
             _resultValue.address = address;
             _resultValue.addressVariable = addressVariable;
+            _resultValue.followDualRouterHighAvailability = followDualRouterHighAvailability;
             _resultValue.groupId = groupId;
             _resultValue.groupIdVariable = groupIdVariable;
+            _resultValue.minPreemptDelay = minPreemptDelay;
+            _resultValue.minPreemptDelayVariable = minPreemptDelayVariable;
             _resultValue.priority = priority;
             _resultValue.priorityVariable = priorityVariable;
             _resultValue.secondaryAddresses = secondaryAddresses;

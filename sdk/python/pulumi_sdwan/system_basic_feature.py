@@ -82,6 +82,8 @@ class SystemBasicFeatureArgs:
                  track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
                  track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 tracker_dia_stabilize_status: Optional[pulumi.Input[_builtins.bool]] = None,
+                 tracker_dia_stabilize_status_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -178,6 +180,9 @@ class SystemBasicFeatureArgs:
         :param pulumi.Input[_builtins.bool] track_transport: Configure tracking of transport
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] track_transport_variable: Variable name
+        :param pulumi.Input[_builtins.bool] tracker_dia_stabilize_status: Enable or disable endpoint tracker diaStabilize status
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tracker_dia_stabilize_status_variable: Variable name
         :param pulumi.Input[_builtins.bool] transport_gateway: Enable transport gateway
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
@@ -303,6 +308,10 @@ class SystemBasicFeatureArgs:
             pulumi.set(__self__, "track_transport", track_transport)
         if track_transport_variable is not None:
             pulumi.set(__self__, "track_transport_variable", track_transport_variable)
+        if tracker_dia_stabilize_status is not None:
+            pulumi.set(__self__, "tracker_dia_stabilize_status", tracker_dia_stabilize_status)
+        if tracker_dia_stabilize_status_variable is not None:
+            pulumi.set(__self__, "tracker_dia_stabilize_status_variable", tracker_dia_stabilize_status_variable)
         if transport_gateway is not None:
             pulumi.set(__self__, "transport_gateway", transport_gateway)
         if transport_gateway_variable is not None:
@@ -1072,6 +1081,31 @@ class SystemBasicFeatureArgs:
         pulumi.set(self, "track_transport_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatus")
+    def tracker_dia_stabilize_status(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable or disable endpoint tracker diaStabilize status
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status")
+
+    @tracker_dia_stabilize_status.setter
+    def tracker_dia_stabilize_status(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "tracker_dia_stabilize_status", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatusVariable")
+    def tracker_dia_stabilize_status_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status_variable")
+
+    @tracker_dia_stabilize_status_variable.setter
+    def tracker_dia_stabilize_status_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "tracker_dia_stabilize_status_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -1161,6 +1195,8 @@ class _SystemBasicFeatureState:
                  track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
                  track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 tracker_dia_stabilize_status: Optional[pulumi.Input[_builtins.bool]] = None,
+                 tracker_dia_stabilize_status_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None):
@@ -1258,6 +1294,9 @@ class _SystemBasicFeatureState:
         :param pulumi.Input[_builtins.bool] track_transport: Configure tracking of transport
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] track_transport_variable: Variable name
+        :param pulumi.Input[_builtins.bool] tracker_dia_stabilize_status: Enable or disable endpoint tracker diaStabilize status
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tracker_dia_stabilize_status_variable: Variable name
         :param pulumi.Input[_builtins.bool] transport_gateway: Enable transport gateway
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
@@ -1385,6 +1424,10 @@ class _SystemBasicFeatureState:
             pulumi.set(__self__, "track_transport", track_transport)
         if track_transport_variable is not None:
             pulumi.set(__self__, "track_transport_variable", track_transport_variable)
+        if tracker_dia_stabilize_status is not None:
+            pulumi.set(__self__, "tracker_dia_stabilize_status", tracker_dia_stabilize_status)
+        if tracker_dia_stabilize_status_variable is not None:
+            pulumi.set(__self__, "tracker_dia_stabilize_status_variable", tracker_dia_stabilize_status_variable)
         if transport_gateway is not None:
             pulumi.set(__self__, "transport_gateway", transport_gateway)
         if transport_gateway_variable is not None:
@@ -2156,6 +2199,31 @@ class _SystemBasicFeatureState:
         pulumi.set(self, "track_transport_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatus")
+    def tracker_dia_stabilize_status(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable or disable endpoint tracker diaStabilize status
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status")
+
+    @tracker_dia_stabilize_status.setter
+    def tracker_dia_stabilize_status(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "tracker_dia_stabilize_status", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatusVariable")
+    def tracker_dia_stabilize_status_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status_variable")
+
+    @tracker_dia_stabilize_status_variable.setter
+    def tracker_dia_stabilize_status_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "tracker_dia_stabilize_status_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -2260,12 +2328,14 @@ class SystemBasicFeature(pulumi.CustomResource):
                  track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
                  track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 tracker_dia_stabilize_status: Optional[pulumi.Input[_builtins.bool]] = None,
+                 tracker_dia_stabilize_status_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System Basic Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -2300,6 +2370,7 @@ class SystemBasicFeature(pulumi.CustomResource):
             max_omp_sessions=24,
             multi_tenant=False,
             track_default_gateway=True,
+            tracker_dia_stabilize_status=False,
             admin_tech_on_failure=True,
             idle_timeout=10,
             on_demand_enable=True,
@@ -2420,6 +2491,9 @@ class SystemBasicFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] track_transport: Configure tracking of transport
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] track_transport_variable: Variable name
+        :param pulumi.Input[_builtins.bool] tracker_dia_stabilize_status: Enable or disable endpoint tracker diaStabilize status
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tracker_dia_stabilize_status_variable: Variable name
         :param pulumi.Input[_builtins.bool] transport_gateway: Enable transport gateway
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
@@ -2432,7 +2506,7 @@ class SystemBasicFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System Basic Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -2467,6 +2541,7 @@ class SystemBasicFeature(pulumi.CustomResource):
             max_omp_sessions=24,
             multi_tenant=False,
             track_default_gateway=True,
+            tracker_dia_stabilize_status=False,
             admin_tech_on_failure=True,
             idle_timeout=10,
             on_demand_enable=True,
@@ -2569,6 +2644,8 @@ class SystemBasicFeature(pulumi.CustomResource):
                  track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
                  track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 tracker_dia_stabilize_status: Optional[pulumi.Input[_builtins.bool]] = None,
+                 tracker_dia_stabilize_status_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -2643,6 +2720,8 @@ class SystemBasicFeature(pulumi.CustomResource):
             __props__.__dict__["track_interface_tag_variable"] = track_interface_tag_variable
             __props__.__dict__["track_transport"] = track_transport
             __props__.__dict__["track_transport_variable"] = track_transport_variable
+            __props__.__dict__["tracker_dia_stabilize_status"] = tracker_dia_stabilize_status
+            __props__.__dict__["tracker_dia_stabilize_status_variable"] = tracker_dia_stabilize_status_variable
             __props__.__dict__["transport_gateway"] = transport_gateway
             __props__.__dict__["transport_gateway_variable"] = transport_gateway_variable
             __props__.__dict__["version"] = None
@@ -2717,6 +2796,8 @@ class SystemBasicFeature(pulumi.CustomResource):
             track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
             track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
             track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            tracker_dia_stabilize_status: Optional[pulumi.Input[_builtins.bool]] = None,
+            tracker_dia_stabilize_status_variable: Optional[pulumi.Input[_builtins.str]] = None,
             transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
             transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
             version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemBasicFeature':
@@ -2819,6 +2900,9 @@ class SystemBasicFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] track_transport: Configure tracking of transport
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] track_transport_variable: Variable name
+        :param pulumi.Input[_builtins.bool] tracker_dia_stabilize_status: Enable or disable endpoint tracker diaStabilize status
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] tracker_dia_stabilize_status_variable: Variable name
         :param pulumi.Input[_builtins.bool] transport_gateway: Enable transport gateway
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
@@ -2889,6 +2973,8 @@ class SystemBasicFeature(pulumi.CustomResource):
         __props__.__dict__["track_interface_tag_variable"] = track_interface_tag_variable
         __props__.__dict__["track_transport"] = track_transport
         __props__.__dict__["track_transport_variable"] = track_transport_variable
+        __props__.__dict__["tracker_dia_stabilize_status"] = tracker_dia_stabilize_status
+        __props__.__dict__["tracker_dia_stabilize_status_variable"] = tracker_dia_stabilize_status_variable
         __props__.__dict__["transport_gateway"] = transport_gateway
         __props__.__dict__["transport_gateway_variable"] = transport_gateway_variable
         __props__.__dict__["version"] = version
@@ -3412,6 +3498,23 @@ class SystemBasicFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "track_transport_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatus")
+    def tracker_dia_stabilize_status(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable or disable endpoint tracker diaStabilize status
+          - Default value: `false`
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status")
+
+    @_builtins.property
+    @pulumi.getter(name="trackerDiaStabilizeStatusVariable")
+    def tracker_dia_stabilize_status_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tracker_dia_stabilize_status_variable")
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")

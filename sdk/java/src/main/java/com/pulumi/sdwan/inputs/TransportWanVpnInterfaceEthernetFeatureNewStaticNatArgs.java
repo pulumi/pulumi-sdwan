@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs exten
 
     /**
      * Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
+     *   - Choices: `inside`
      *   - Default value: `inside`
      * 
      */
@@ -27,12 +28,29 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs exten
 
     /**
      * @return Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
+     *   - Choices: `inside`
      *   - Default value: `inside`
      * 
      */
     public Optional<Output<String>> direction() {
         return Optional.ofNullable(this.direction);
+    }
+
+    /**
+     * Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="enableDualRouterHaMapping")
+    private @Nullable Output<Boolean> enableDualRouterHaMapping;
+
+    /**
+     * @return Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> enableDualRouterHaMapping() {
+        return Optional.ofNullable(this.enableDualRouterHaMapping);
     }
 
     /**
@@ -133,6 +151,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs exten
 
     private TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs(TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs $) {
         this.direction = $.direction;
+        this.enableDualRouterHaMapping = $.enableDualRouterHaMapping;
         this.sourceIp = $.sourceIp;
         this.sourceIpVariable = $.sourceIpVariable;
         this.sourceVpn = $.sourceVpn;
@@ -161,7 +180,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs exten
 
         /**
          * @param direction Direction of static NAT translation
-         *   - Choices: `inside`, `outside`
+         *   - Choices: `inside`
          *   - Default value: `inside`
          * 
          * @return builder
@@ -174,7 +193,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs exten
 
         /**
          * @param direction Direction of static NAT translation
-         *   - Choices: `inside`, `outside`
+         *   - Choices: `inside`
          *   - Default value: `inside`
          * 
          * @return builder
@@ -182,6 +201,29 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs exten
          */
         public Builder direction(String direction) {
             return direction(Output.of(direction));
+        }
+
+        /**
+         * @param enableDualRouterHaMapping Enable DualRouter HA Mapping
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableDualRouterHaMapping(@Nullable Output<Boolean> enableDualRouterHaMapping) {
+            $.enableDualRouterHaMapping = enableDualRouterHaMapping;
+            return this;
+        }
+
+        /**
+         * @param enableDualRouterHaMapping Enable DualRouter HA Mapping
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableDualRouterHaMapping(Boolean enableDualRouterHaMapping) {
+            return enableDualRouterHaMapping(Output.of(enableDualRouterHaMapping));
         }
 
         /**

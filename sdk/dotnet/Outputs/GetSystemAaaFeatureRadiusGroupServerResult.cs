@@ -34,7 +34,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string AuthPortVariable;
         /// <summary>
-        /// Set the Radius server shared key
+        /// Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         public readonly string Key;
         /// <summary>
@@ -49,6 +49,10 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string KeyTypeVariable;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string KeyVariable;
         /// <summary>
         /// Configure how many times to contact this Radius server
         /// </summary>
@@ -94,6 +98,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string keyTypeVariable,
 
+            string keyVariable,
+
             int retransmit,
 
             string retransmitVariable,
@@ -115,6 +121,7 @@ namespace Pulumi.Sdwan.Outputs
             KeyEnum = keyEnum;
             KeyType = keyType;
             KeyTypeVariable = keyTypeVariable;
+            KeyVariable = keyVariable;
             Retransmit = retransmit;
             RetransmitVariable = retransmitVariable;
             SecretKey = secretKey;

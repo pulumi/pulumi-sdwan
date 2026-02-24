@@ -24,7 +24,7 @@ public final class SystemAaaFeatureUser {
      */
     private @Nullable String nameVariable;
     /**
-     * @return Set the user password
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String password;
@@ -67,7 +67,7 @@ public final class SystemAaaFeatureUser {
         return Optional.ofNullable(this.nameVariable);
     }
     /**
-     * @return Set the user password
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> password() {

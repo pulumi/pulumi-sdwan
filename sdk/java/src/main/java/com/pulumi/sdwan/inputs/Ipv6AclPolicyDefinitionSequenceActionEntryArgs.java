@@ -21,14 +21,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
     public static final Ipv6AclPolicyDefinitionSequenceActionEntryArgs Empty = new Ipv6AclPolicyDefinitionSequenceActionEntryArgs();
 
     /**
-     * Class map ID, Attribute conditional on `type` being equal to `class`
+     * Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     @Import(name="classMapId")
     private @Nullable Output<String> classMapId;
 
     /**
-     * @return Class map ID, Attribute conditional on `type` being equal to `class`
+     * @return Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     public Optional<Output<String>> classMapId() {
@@ -51,14 +51,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
     }
 
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     @Import(name="counterName")
     private @Nullable Output<String> counterName;
 
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     public Optional<Output<String>> counterName() {
@@ -66,14 +66,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
     }
 
     /**
-     * Enable logging, Attribute conditional on `type` being equal to `log`
+     * Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     @Import(name="log")
     private @Nullable Output<Boolean> log;
 
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     public Optional<Output<Boolean>> log() {
@@ -81,14 +81,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
     }
 
     /**
-     * Mirror ID, Attribute conditional on `type` being equal to `mirror`
+     * Mirror ID, Attribute conditional on `type` equal to `mirror`
      * 
      */
     @Import(name="mirrorId")
     private @Nullable Output<String> mirrorId;
 
     /**
-     * @return Mirror ID, Attribute conditional on `type` being equal to `mirror`
+     * @return Mirror ID, Attribute conditional on `type` equal to `mirror`
      * 
      */
     public Optional<Output<String>> mirrorId() {
@@ -111,14 +111,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
     }
 
     /**
-     * Policer ID, Attribute conditional on `type` being equal to `policer`
+     * Policer ID, Attribute conditional on `type` equal to `policer`
      * 
      */
     @Import(name="policerId")
     private @Nullable Output<String> policerId;
 
     /**
-     * @return Policer ID, Attribute conditional on `type` being equal to `policer`
+     * @return Policer ID, Attribute conditional on `type` equal to `policer`
      * 
      */
     public Optional<Output<String>> policerId() {
@@ -141,14 +141,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
     }
 
     /**
-     * List of set parameters, Attribute conditional on `type` being equal to `set`
+     * List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     @Import(name="setParameters")
     private @Nullable Output<List<Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs>> setParameters;
 
     /**
-     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
+     * @return List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     public Optional<Output<List<Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs>>> setParameters() {
@@ -206,7 +206,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param classMapId Class map ID, Attribute conditional on `type` being equal to `class`
+         * @param classMapId Class map ID, Attribute conditional on `type` equal to `class`
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param classMapId Class map ID, Attribute conditional on `type` being equal to `class`
+         * @param classMapId Class map ID, Attribute conditional on `type` equal to `class`
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param counterName Counter name, Attribute conditional on `type` being equal to `count`
+         * @param counterName Counter name, Attribute conditional on `type` equal to `count`
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param counterName Counter name, Attribute conditional on `type` being equal to `count`
+         * @param counterName Counter name, Attribute conditional on `type` equal to `count`
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param log Enable logging, Attribute conditional on `type` being equal to `log`
+         * @param log Enable logging, Attribute conditional on `type` equal to `log`
          * 
          * @return builder
          * 
@@ -280,7 +280,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param log Enable logging, Attribute conditional on `type` being equal to `log`
+         * @param log Enable logging, Attribute conditional on `type` equal to `log`
          * 
          * @return builder
          * 
@@ -290,7 +290,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param mirrorId Mirror ID, Attribute conditional on `type` being equal to `mirror`
+         * @param mirrorId Mirror ID, Attribute conditional on `type` equal to `mirror`
          * 
          * @return builder
          * 
@@ -301,7 +301,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param mirrorId Mirror ID, Attribute conditional on `type` being equal to `mirror`
+         * @param mirrorId Mirror ID, Attribute conditional on `type` equal to `mirror`
          * 
          * @return builder
          * 
@@ -332,7 +332,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param policerId Policer ID, Attribute conditional on `type` being equal to `policer`
+         * @param policerId Policer ID, Attribute conditional on `type` equal to `policer`
          * 
          * @return builder
          * 
@@ -343,7 +343,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param policerId Policer ID, Attribute conditional on `type` being equal to `policer`
+         * @param policerId Policer ID, Attribute conditional on `type` equal to `policer`
          * 
          * @return builder
          * 
@@ -374,7 +374,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
+         * @param setParameters List of set parameters, Attribute conditional on `type` equal to `set`
          * 
          * @return builder
          * 
@@ -385,7 +385,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
+         * @param setParameters List of set parameters, Attribute conditional on `type` equal to `set`
          * 
          * @return builder
          * 
@@ -395,7 +395,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntryArgs extends com.pu
         }
 
         /**
-         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
+         * @param setParameters List of set parameters, Attribute conditional on `type` equal to `set`
          * 
          * @return builder
          * 

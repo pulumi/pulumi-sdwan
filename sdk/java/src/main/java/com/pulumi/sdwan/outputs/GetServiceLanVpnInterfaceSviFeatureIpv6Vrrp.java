@@ -21,6 +21,11 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
      */
     private List<GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress> addresses;
     /**
+     * @return Follow RG state by default when B2B HA is configured
+     * 
+     */
+    private Boolean followDualRouterHighAvailability;
+    /**
      * @return Group ID
      * 
      */
@@ -83,6 +88,13 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
      */
     public List<GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress> addresses() {
         return this.addresses;
+    }
+    /**
+     * @return Follow RG state by default when B2B HA is configured
+     * 
+     */
+    public Boolean followDualRouterHighAvailability() {
+        return this.followDualRouterHighAvailability;
     }
     /**
      * @return Group ID
@@ -172,6 +184,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
     @CustomType.Builder
     public static final class Builder {
         private List<GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress> addresses;
+        private Boolean followDualRouterHighAvailability;
         private Integer groupId;
         private String groupIdVariable;
         private Integer priority;
@@ -187,6 +200,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
         public Builder(GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.addresses = defaults.addresses;
+    	      this.followDualRouterHighAvailability = defaults.followDualRouterHighAvailability;
     	      this.groupId = defaults.groupId;
     	      this.groupIdVariable = defaults.groupIdVariable;
     	      this.priority = defaults.priority;
@@ -210,6 +224,14 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
         }
         public Builder addresses(GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress... addresses) {
             return addresses(List.of(addresses));
+        }
+        @CustomType.Setter
+        public Builder followDualRouterHighAvailability(Boolean followDualRouterHighAvailability) {
+            if (followDualRouterHighAvailability == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp", "followDualRouterHighAvailability");
+            }
+            this.followDualRouterHighAvailability = followDualRouterHighAvailability;
+            return this;
         }
         @CustomType.Setter
         public Builder groupId(Integer groupId) {
@@ -305,6 +327,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
         public GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp build() {
             final var _resultValue = new GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp();
             _resultValue.addresses = addresses;
+            _resultValue.followDualRouterHighAvailability = followDualRouterHighAvailability;
             _resultValue.groupId = groupId;
             _resultValue.groupIdVariable = groupIdVariable;
             _resultValue.priority = priority;

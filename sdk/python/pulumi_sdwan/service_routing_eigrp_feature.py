@@ -59,14 +59,14 @@ class ServiceRoutingEigrpFeatureArgs:
                  - Range: `0`-`65535`
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]] redistributes: Redistribute routes into EIGRP
         """
@@ -250,7 +250,7 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="hmacAuthenticationKey")
     def hmac_authentication_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key")
 
@@ -262,7 +262,7 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
     def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
@@ -312,7 +312,7 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="md5Keys")
     def md5_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]:
         """
-        Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         """
         return pulumi.get(self, "md5_keys")
 
@@ -395,14 +395,14 @@ class _ServiceRoutingEigrpFeatureState:
                  - Range: `0`-`65535`
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]] networks: Configure the networks for EIGRP to advertise
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]] redistributes: Redistribute routes into EIGRP
@@ -580,7 +580,7 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="hmacAuthenticationKey")
     def hmac_authentication_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key")
 
@@ -592,7 +592,7 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
     def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
@@ -642,7 +642,7 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="md5Keys")
     def md5_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]:
         """
-        Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         """
         return pulumi.get(self, "md5_keys")
 
@@ -799,14 +799,14 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  - Range: `0`-`65535`
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]] networks: Configure the networks for EIGRP to advertise
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]] redistributes: Redistribute routes into EIGRP
@@ -986,14 +986,14 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
                  - Range: `0`-`65535`
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
                  - Range: `0`-`65535`
                  - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]] networks: Configure the networks for EIGRP to advertise
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]] redistributes: Redistribute routes into EIGRP
@@ -1115,7 +1115,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="hmacAuthenticationKey")
     def hmac_authentication_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key")
 
@@ -1123,7 +1123,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
     def hmac_authentication_key_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
@@ -1157,7 +1157,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="md5Keys")
     def md5_keys(self) -> pulumi.Output[Optional[Sequence['outputs.ServiceRoutingEigrpFeatureMd5Key']]]:
         """
-        Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         """
         return pulumi.get(self, "md5_keys")
 

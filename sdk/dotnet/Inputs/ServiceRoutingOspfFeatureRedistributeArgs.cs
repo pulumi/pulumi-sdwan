@@ -42,7 +42,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RoutePolicyId { get; set; }
 
         /// <summary>
-        /// Translate Rib Metric, Attribute conditional on `Protocol` being equal to `Omp`
+        /// Translate Rib Metric, Attribute conditional on `Protocol` equal to `Omp`
         ///   - Default value: `False`
         /// </summary>
         [Input("translateRibMetric")]

@@ -1459,7 +1459,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Service LAN VPN Interface SVI Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1515,6 +1515,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                     "track_action": "decrement",
                     "decrement_value": 100,
                 }],
+                "follow_dual_router_high_availability": False,
             }],
             ipv6_vrrps=[{
                 "group_id": 1,
@@ -1529,6 +1530,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                 "secondary_addresses": [{
                     "prefix": "::20/32",
                 }],
+                "follow_dual_router_high_availability": False,
             }],
             enable_dhcpv6=False,
             tcp_mss=1024,
@@ -1608,7 +1610,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service LAN VPN Interface SVI Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1664,6 +1666,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                     "track_action": "decrement",
                     "decrement_value": 100,
                 }],
+                "follow_dual_router_high_availability": False,
             }],
             ipv6_vrrps=[{
                 "group_id": 1,
@@ -1678,6 +1681,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                 "secondary_addresses": [{
                     "prefix": "::20/32",
                 }],
+                "follow_dual_router_high_availability": False,
             }],
             enable_dhcpv6=False,
             tcp_mss=1024,

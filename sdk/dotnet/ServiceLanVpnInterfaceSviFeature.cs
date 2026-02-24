@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Service LAN VPN Interface SVI Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -102,6 +102,7 @@ namespace Pulumi.Sdwan
     ///                         DecrementValue = 100,
     ///                     },
     ///                 },
+    ///                 FollowDualRouterHighAvailability = false,
     ///             },
     ///         },
     ///         Ipv6Vrrps = new[]
@@ -128,6 +129,7 @@ namespace Pulumi.Sdwan
     ///                         Prefix = "::20/32",
     ///                     },
     ///                 },
+    ///                 FollowDualRouterHighAvailability = false,
     ///             },
     ///         },
     ///         EnableDhcpv6 = false,

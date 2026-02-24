@@ -42,7 +42,7 @@ public final class SystemAaaFeatureRadiusGroupServer {
      */
     private @Nullable String authPortVariable;
     /**
-     * @return Set the Radius server shared key
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String key;
@@ -64,6 +64,11 @@ public final class SystemAaaFeatureRadiusGroupServer {
      * 
      */
     private @Nullable String keyTypeVariable;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String keyVariable;
     /**
      * @return Configure how many times to contact this Radius server
      *   - Range: `1`-`100`
@@ -140,7 +145,7 @@ public final class SystemAaaFeatureRadiusGroupServer {
         return Optional.ofNullable(this.authPortVariable);
     }
     /**
-     * @return Set the Radius server shared key
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> key() {
@@ -169,6 +174,13 @@ public final class SystemAaaFeatureRadiusGroupServer {
      */
     public Optional<String> keyTypeVariable() {
         return Optional.ofNullable(this.keyTypeVariable);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> keyVariable() {
+        return Optional.ofNullable(this.keyVariable);
     }
     /**
      * @return Configure how many times to contact this Radius server
@@ -235,6 +247,7 @@ public final class SystemAaaFeatureRadiusGroupServer {
         private @Nullable String keyEnum;
         private @Nullable String keyType;
         private @Nullable String keyTypeVariable;
+        private @Nullable String keyVariable;
         private @Nullable Integer retransmit;
         private @Nullable String retransmitVariable;
         private @Nullable String secretKey;
@@ -253,6 +266,7 @@ public final class SystemAaaFeatureRadiusGroupServer {
     	      this.keyEnum = defaults.keyEnum;
     	      this.keyType = defaults.keyType;
     	      this.keyTypeVariable = defaults.keyTypeVariable;
+    	      this.keyVariable = defaults.keyVariable;
     	      this.retransmit = defaults.retransmit;
     	      this.retransmitVariable = defaults.retransmitVariable;
     	      this.secretKey = defaults.secretKey;
@@ -316,6 +330,12 @@ public final class SystemAaaFeatureRadiusGroupServer {
             return this;
         }
         @CustomType.Setter
+        public Builder keyVariable(@Nullable String keyVariable) {
+
+            this.keyVariable = keyVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder retransmit(@Nullable Integer retransmit) {
 
             this.retransmit = retransmit;
@@ -362,6 +382,7 @@ public final class SystemAaaFeatureRadiusGroupServer {
             _resultValue.keyEnum = keyEnum;
             _resultValue.keyType = keyType;
             _resultValue.keyTypeVariable = keyTypeVariable;
+            _resultValue.keyVariable = keyVariable;
             _resultValue.retransmit = retransmit;
             _resultValue.retransmitVariable = retransmitVariable;
             _resultValue.secretKey = secretKey;

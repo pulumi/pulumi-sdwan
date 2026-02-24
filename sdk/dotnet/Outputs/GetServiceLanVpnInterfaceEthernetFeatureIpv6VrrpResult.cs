@@ -14,6 +14,10 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpResult
     {
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        /// </summary>
+        public readonly bool FollowDualRouterHighAvailability;
+        /// <summary>
         /// Group ID
         /// </summary>
         public readonly int GroupId;
@@ -25,6 +29,14 @@ namespace Pulumi.Sdwan.Outputs
         /// IPv6 VRRP
         /// </summary>
         public readonly ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressResult> Ipv6Addresses;
+        /// <summary>
+        /// Minimum preempt delay in seconds
+        /// </summary>
+        public readonly int MinPreemptDelay;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string MinPreemptDelayVariable;
         /// <summary>
         /// Set priority
         /// </summary>
@@ -48,11 +60,17 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpResult(
+            bool followDualRouterHighAvailability,
+
             int groupId,
 
             string groupIdVariable,
 
             ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressResult> ipv6Addresses,
+
+            int minPreemptDelay,
+
+            string minPreemptDelayVariable,
 
             int priority,
 
@@ -64,9 +82,12 @@ namespace Pulumi.Sdwan.Outputs
 
             bool trackOmp)
         {
+            FollowDualRouterHighAvailability = followDualRouterHighAvailability;
             GroupId = groupId;
             GroupIdVariable = groupIdVariable;
             Ipv6Addresses = ipv6Addresses;
+            MinPreemptDelay = minPreemptDelay;
+            MinPreemptDelayVariable = minPreemptDelayVariable;
             Priority = priority;
             PriorityVariable = priorityVariable;
             Timer = timer;

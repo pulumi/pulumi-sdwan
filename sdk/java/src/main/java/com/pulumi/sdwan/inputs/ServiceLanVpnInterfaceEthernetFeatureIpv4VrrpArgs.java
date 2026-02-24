@@ -51,6 +51,23 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
     }
 
     /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="followDualRouterHighAvailability")
+    private @Nullable Output<Boolean> followDualRouterHighAvailability;
+
+    /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> followDualRouterHighAvailability() {
+        return Optional.ofNullable(this.followDualRouterHighAvailability);
+    }
+
+    /**
      * Group ID
      *   - Range: `1`-`255`
      * 
@@ -80,6 +97,38 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
      */
     public Optional<Output<String>> groupIdVariable() {
         return Optional.ofNullable(this.groupIdVariable);
+    }
+
+    /**
+     * Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     * 
+     */
+    @Import(name="minPreemptDelay")
+    private @Nullable Output<Integer> minPreemptDelay;
+
+    /**
+     * @return Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     * 
+     */
+    public Optional<Output<Integer>> minPreemptDelay() {
+        return Optional.ofNullable(this.minPreemptDelay);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="minPreemptDelayVariable")
+    private @Nullable Output<String> minPreemptDelayVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> minPreemptDelayVariable() {
+        return Optional.ofNullable(this.minPreemptDelayVariable);
     }
 
     /**
@@ -167,7 +216,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
 
     /**
      * Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`4294967295`
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="tlocPrefChangeValue")
@@ -175,7 +224,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
 
     /**
      * @return Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`4294967295`
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> tlocPrefChangeValue() {
@@ -236,8 +285,11 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
     private ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs(ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs $) {
         this.address = $.address;
         this.addressVariable = $.addressVariable;
+        this.followDualRouterHighAvailability = $.followDualRouterHighAvailability;
         this.groupId = $.groupId;
         this.groupIdVariable = $.groupIdVariable;
+        this.minPreemptDelay = $.minPreemptDelay;
+        this.minPreemptDelayVariable = $.minPreemptDelayVariable;
         this.priority = $.priority;
         this.priorityVariable = $.priorityVariable;
         this.secondaryAddresses = $.secondaryAddresses;
@@ -310,6 +362,29 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
         }
 
         /**
+         * @param followDualRouterHighAvailability Follow RG state by default when B2B HA is configured
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder followDualRouterHighAvailability(@Nullable Output<Boolean> followDualRouterHighAvailability) {
+            $.followDualRouterHighAvailability = followDualRouterHighAvailability;
+            return this;
+        }
+
+        /**
+         * @param followDualRouterHighAvailability Follow RG state by default when B2B HA is configured
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder followDualRouterHighAvailability(Boolean followDualRouterHighAvailability) {
+            return followDualRouterHighAvailability(Output.of(followDualRouterHighAvailability));
+        }
+
+        /**
          * @param groupId Group ID
          *   - Range: `1`-`255`
          * 
@@ -351,6 +426,50 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
          */
         public Builder groupIdVariable(String groupIdVariable) {
             return groupIdVariable(Output.of(groupIdVariable));
+        }
+
+        /**
+         * @param minPreemptDelay Minimum preempt delay in seconds
+         *   - Range: `0`-`3600`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelay(@Nullable Output<Integer> minPreemptDelay) {
+            $.minPreemptDelay = minPreemptDelay;
+            return this;
+        }
+
+        /**
+         * @param minPreemptDelay Minimum preempt delay in seconds
+         *   - Range: `0`-`3600`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelay(Integer minPreemptDelay) {
+            return minPreemptDelay(Output.of(minPreemptDelay));
+        }
+
+        /**
+         * @param minPreemptDelayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelayVariable(@Nullable Output<String> minPreemptDelayVariable) {
+            $.minPreemptDelayVariable = minPreemptDelayVariable;
+            return this;
+        }
+
+        /**
+         * @param minPreemptDelayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder minPreemptDelayVariable(String minPreemptDelayVariable) {
+            return minPreemptDelayVariable(Output.of(minPreemptDelayVariable));
         }
 
         /**
@@ -478,7 +597,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
 
         /**
          * @param tlocPrefChangeValue Timer interval for successive advertisements, in milliseconds
-         *   - Range: `100`-`4294967295`
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -490,7 +609,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs extends com
 
         /**
          * @param tlocPrefChangeValue Timer interval for successive advertisements, in milliseconds
-         *   - Range: `100`-`4294967295`
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 

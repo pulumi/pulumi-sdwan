@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv6DeviceAclPolicyDefinitionSequenceActionEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Counter name, Attribute conditional on `Type` being equal to `Count`
+        /// Counter name, Attribute conditional on `Type` equal to `Count`
         /// </summary>
         [Input("counterName")]
         public Input<string>? CounterName { get; set; }

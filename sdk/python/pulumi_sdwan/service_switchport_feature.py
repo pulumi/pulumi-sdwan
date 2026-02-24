@@ -297,7 +297,7 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Service Switchport Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -318,6 +318,7 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
                 "switchport_access_vlan": 1,
                 "switchport_trunk_allowed_vlans": "1",
                 "switchport_trunk_native_vlan": 1,
+                "enable_dot1x": False,
                 "port_control": "auto",
                 "voice_vlan": 1,
                 "pae_enable": True,
@@ -370,7 +371,7 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service Switchport Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -391,6 +392,7 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
                 "switchport_access_vlan": 1,
                 "switchport_trunk_allowed_vlans": "1",
                 "switchport_trunk_native_vlan": 1,
+                "enable_dot1x": False,
                 "port_control": "auto",
                 "voice_vlan": 1,
                 "pae_enable": True,
