@@ -23,6 +23,7 @@ class ClassMapPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ClassMapPolicyObject resource.
+
         :param pulumi.Input[_builtins.int] queue: Queue
                  - Range: `0`-`7`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
@@ -65,6 +66,7 @@ class _ClassMapPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ClassMapPolicyObject resources.
+
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] queue: Queue
                  - Range: `0`-`7`
@@ -146,6 +148,7 @@ class ClassMapPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/classMapPolicyObject:ClassMapPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
@@ -179,6 +182,7 @@ class ClassMapPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/classMapPolicyObject:ClassMapPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ClassMapPolicyObjectArgs args: The arguments to use to populate this resource's properties.

@@ -44,6 +44,7 @@ class ServiceWirelessLanFeatureArgs:
                  username_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceWirelessLanFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] me_dynamic_ip_enabled: ME management IP dynamic allocated by DHCP
         :param pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]] ssids: Configure Wi-Fi SSID profile
@@ -394,6 +395,7 @@ class _ServiceWirelessLanFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceWirelessLanFeature resources.
+
         :param pulumi.Input[_builtins.str] country: Select country
                  - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
@@ -805,6 +807,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] country: Select country
@@ -880,6 +883,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ServiceWirelessLanFeatureArgs args: The arguments to use to populate this resource's properties.

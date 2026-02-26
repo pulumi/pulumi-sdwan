@@ -24,6 +24,7 @@ class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs:
                  service_routing_ospfv3_ipv4_feature_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.str] service_routing_ospfv3_ipv4_feature_id: Service Routing OSPFv3 IPv4 Feature ID
@@ -78,6 +79,7 @@ class _ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature resources.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.str] service_routing_ospfv3_ipv4_feature_id: Service Routing OSPFv3 IPv4 Feature ID
@@ -177,6 +179,7 @@ class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature(pulumi.CustomResourc
         $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -214,6 +217,7 @@ class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature(pulumi.CustomResourc
         ```sh
         $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs args: The arguments to use to populate this resource's properties.

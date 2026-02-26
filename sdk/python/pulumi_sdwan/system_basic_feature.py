@@ -88,6 +88,7 @@ class SystemBasicFeatureArgs:
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemBasicFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] admin_tech_on_failure: Collect admin-tech before reboot due to daemon failure
                  - Default value: `true`
@@ -1202,6 +1203,7 @@ class _SystemBasicFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemBasicFeature resources.
+
         :param pulumi.Input[_builtins.bool] admin_tech_on_failure: Collect admin-tech before reboot due to daemon failure
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] admin_tech_on_failure_variable: Variable name
@@ -2397,6 +2399,7 @@ class SystemBasicFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemBasicFeature:SystemBasicFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] admin_tech_on_failure: Collect admin-tech before reboot due to daemon failure
@@ -2567,6 +2570,7 @@ class SystemBasicFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemBasicFeature:SystemBasicFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemBasicFeatureArgs args: The arguments to use to populate this resource's properties.

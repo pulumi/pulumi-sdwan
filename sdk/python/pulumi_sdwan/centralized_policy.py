@@ -26,6 +26,7 @@ class CentralizedPolicyArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CentralizedPolicy resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the centralized policy
         :param pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] name: The name of the centralized policy
@@ -82,6 +83,7 @@ class _CentralizedPolicyState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CentralizedPolicy resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the centralized policy
         :param pulumi.Input[_builtins.str] name: The name of the centralized policy
@@ -186,6 +188,7 @@ class CentralizedPolicy(pulumi.CustomResource):
         $ pulumi import sdwan:index/centralizedPolicy:CentralizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
@@ -228,6 +231,7 @@ class CentralizedPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/centralizedPolicy:CentralizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CentralizedPolicyArgs args: The arguments to use to populate this resource's properties.

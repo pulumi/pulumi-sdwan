@@ -27,6 +27,7 @@ class PolicyObjectSecurityScalableGroupTagListArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectSecurityScalableGroupTagList resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
@@ -94,6 +95,7 @@ class _PolicyObjectSecurityScalableGroupTagListState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectSecurityScalableGroupTagList resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
@@ -209,6 +211,7 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList example "f6b2c44c-693c-4763-b010-895aa3d236bd,"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -250,6 +253,7 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList example "f6b2c44c-693c-4763-b010-895aa3d236bd,"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectSecurityScalableGroupTagListArgs args: The arguments to use to populate this resource's properties.

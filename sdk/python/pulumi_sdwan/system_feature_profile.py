@@ -23,6 +23,7 @@ class SystemFeatureProfileArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemFeatureProfile resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the system feature profile
         """
@@ -62,6 +63,7 @@ class _SystemFeatureProfileState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SystemFeatureProfile resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the system feature profile
         """
@@ -127,6 +129,7 @@ class SystemFeatureProfile(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemFeatureProfile:SystemFeatureProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -160,6 +163,7 @@ class SystemFeatureProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemFeatureProfile:SystemFeatureProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemFeatureProfileArgs args: The arguments to use to populate this resource's properties.

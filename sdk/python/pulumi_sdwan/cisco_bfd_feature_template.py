@@ -33,6 +33,7 @@ class CiscoBfdFeatureTemplateArgs:
                  poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoBfdFeatureTemplate resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -215,6 +216,7 @@ class _CiscoBfdFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoBfdFeatureTemplate resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]] colors: Set color that identifies the WAN transport tunnel
         :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
                  - Range: `0`-`63`
@@ -463,6 +465,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         $ pulumi import sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
@@ -522,6 +525,7 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CiscoBfdFeatureTemplateArgs args: The arguments to use to populate this resource's properties.

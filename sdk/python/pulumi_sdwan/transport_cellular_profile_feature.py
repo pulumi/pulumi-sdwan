@@ -39,6 +39,7 @@ class TransportCellularProfileFeatureArgs:
                  requires_authentication: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a TransportCellularProfileFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
@@ -345,6 +346,7 @@ class _TransportCellularProfileFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportCellularProfileFeature resources.
+
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
         :param pulumi.Input[_builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` equal to `true`
@@ -702,6 +704,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
@@ -767,6 +770,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TransportCellularProfileFeatureArgs args: The arguments to use to populate this resource's properties.

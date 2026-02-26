@@ -70,6 +70,7 @@ class SystemGlobalFeatureArgs:
                  vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemGlobalFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
                  - Default value: `false`
@@ -910,6 +911,7 @@ class _SystemGlobalFeatureState:
                  vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SystemGlobalFeature resources.
+
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
@@ -1816,6 +1818,7 @@ class SystemGlobalFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemGlobalFeature:SystemGlobalFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
@@ -1946,6 +1949,7 @@ class SystemGlobalFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemGlobalFeature:SystemGlobalFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemGlobalFeatureArgs args: The arguments to use to populate this resource's properties.

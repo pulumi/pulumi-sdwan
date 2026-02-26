@@ -25,6 +25,7 @@ class VpnListPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a VpnListPolicyObject resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['VpnListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
@@ -65,6 +66,7 @@ class _VpnListPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering VpnListPolicyObject resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['VpnListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -146,6 +148,7 @@ class VpnListPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/vpnListPolicyObject:VpnListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnListPolicyObjectEntryArgs', 'VpnListPolicyObjectEntryArgsDict']]]] entries: List of entries
@@ -180,6 +183,7 @@ class VpnListPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/vpnListPolicyObject:VpnListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param VpnListPolicyObjectArgs args: The arguments to use to populate this resource's properties.

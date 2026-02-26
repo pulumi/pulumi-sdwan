@@ -31,6 +31,7 @@ class TransportIpv6TrackerGroupFeatureArgs:
                  tracker_name_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportIpv6TrackerGroupFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -170,6 +171,7 @@ class _TransportIpv6TrackerGroupFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportIpv6TrackerGroupFeature resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -358,6 +360,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -407,6 +410,7 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TransportIpv6TrackerGroupFeatureArgs args: The arguments to use to populate this resource's properties.

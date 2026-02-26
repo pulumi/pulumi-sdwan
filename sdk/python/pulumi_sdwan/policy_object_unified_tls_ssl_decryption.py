@@ -38,6 +38,7 @@ class PolicyObjectUnifiedTlsSslDecryptionArgs:
                  unknown_revocation_status: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedTlsSslDecryption resource.
+
         :param pulumi.Input[_builtins.str] certificate_lifetime: If you have vManage as CA or vManage as intermediate CA, this value should be 1
         :param pulumi.Input[_builtins.str] certificate_revocation_status: If value is none unknown status not required, if value is ocsp then unknown status is required
                  - Choices: `ocsp`, `none`
@@ -300,6 +301,7 @@ class _PolicyObjectUnifiedTlsSslDecryptionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslDecryption resources.
+
         :param pulumi.Input[_builtins.str] certificate_lifetime: If you have vManage as CA or vManage as intermediate CA, this value should be 1
         :param pulumi.Input[_builtins.str] certificate_revocation_status: If value is none unknown status not required, if value is ocsp then unknown status is required
                  - Choices: `ocsp`, `none`
@@ -626,6 +628,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] certificate_lifetime: If you have vManage as CA or vManage as intermediate CA, this value should be 1
@@ -687,6 +690,7 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectUnifiedTlsSslDecryptionArgs args: The arguments to use to populate this resource's properties.

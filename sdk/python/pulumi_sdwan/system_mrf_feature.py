@@ -31,6 +31,7 @@ class SystemMrfFeatureArgs:
                  secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemMrfFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric
@@ -209,6 +210,7 @@ class _SystemMrfFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemMrfFeature resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric
                  - Choices: `enabled`, `enabled-from-bgp-core`
@@ -435,6 +437,7 @@ class SystemMrfFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemMrfFeature:SystemMrfFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -489,6 +492,7 @@ class SystemMrfFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemMrfFeature:SystemMrfFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemMrfFeatureArgs args: The arguments to use to populate this resource's properties.

@@ -26,6 +26,7 @@ class AppProbeClassPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AppProbeClassPolicyObject resource.
+
         :param pulumi.Input[_builtins.str] forwarding_class: Forwarding class name
         :param pulumi.Input[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]] mappings: Color mappings
         :param pulumi.Input[_builtins.str] name: The name of the policy object
@@ -81,6 +82,7 @@ class _AppProbeClassPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AppProbeClassPolicyObject resources.
+
         :param pulumi.Input[_builtins.str] forwarding_class: Forwarding class name
         :param pulumi.Input[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]] mappings: Color mappings
         :param pulumi.Input[_builtins.str] name: The name of the policy object
@@ -180,6 +182,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] forwarding_class: Forwarding class name
@@ -217,6 +220,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AppProbeClassPolicyObjectArgs args: The arguments to use to populate this resource's properties.

@@ -24,6 +24,7 @@ class TagArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Tag resource.
+
         :param pulumi.Input[_builtins.str] description: Tag description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] devices: List of associated devices
         :param pulumi.Input[_builtins.str] name: Tag name
@@ -79,6 +80,7 @@ class _TagState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Tag resources.
+
         :param pulumi.Input[_builtins.str] description: Tag description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] devices: List of associated devices
         :param pulumi.Input[_builtins.str] name: Tag name
@@ -161,6 +163,7 @@ class Tag(pulumi.CustomResource):
         $ pulumi import sdwan:index/tag:Tag example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Tag description
@@ -196,6 +199,7 @@ class Tag(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/tag:Tag example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TagArgs args: The arguments to use to populate this resource's properties.

@@ -29,6 +29,7 @@ class ZoneBasedFirewallPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ZoneBasedFirewallPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -130,6 +131,7 @@ class _ZoneBasedFirewallPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ZoneBasedFirewallPolicyDefinition resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` equal to `security`
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `pass`, `drop`
@@ -292,6 +294,7 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` equal to `security`
@@ -348,6 +351,7 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ZoneBasedFirewallPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

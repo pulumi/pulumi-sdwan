@@ -61,6 +61,7 @@ class ServiceRoutingOspfv3Ipv6FeatureArgs:
                  spf_maximum_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceRoutingOspfv3Ipv6Feature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaArgs']]] areas: Configure OSPFv3 IPv6 area
         :param pulumi.Input[_builtins.bool] default_information_originate: Distribute default external route into OSPF disabled
@@ -715,6 +716,7 @@ class _ServiceRoutingOspfv3Ipv6FeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceRoutingOspfv3Ipv6Feature resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaArgs']]] areas: Configure OSPFv3 IPv6 area
         :param pulumi.Input[_builtins.bool] default_information_originate: Distribute default external route into OSPF disabled
         :param pulumi.Input[_builtins.bool] default_information_originate_always: Always advertise default route
@@ -1451,6 +1453,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
         $ pulumi import sdwan:index/serviceRoutingOspfv3Ipv6Feature:ServiceRoutingOspfv3Ipv6Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingOspfv3Ipv6FeatureAreaArgs', 'ServiceRoutingOspfv3Ipv6FeatureAreaArgsDict']]]] areas: Configure OSPFv3 IPv6 area
@@ -1582,6 +1585,7 @@ class ServiceRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/serviceRoutingOspfv3Ipv6Feature:ServiceRoutingOspfv3Ipv6Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ServiceRoutingOspfv3Ipv6FeatureArgs args: The arguments to use to populate this resource's properties.

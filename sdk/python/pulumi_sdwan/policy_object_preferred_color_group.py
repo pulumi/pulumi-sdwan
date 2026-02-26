@@ -27,6 +27,7 @@ class PolicyObjectPreferredColorGroupArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectPreferredColorGroup resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectPreferredColorGroupEntryArgs']]] entries: Preferred Color Group List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -98,6 +99,7 @@ class _PolicyObjectPreferredColorGroupState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectPreferredColorGroup resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectPreferredColorGroupEntryArgs']]] entries: Preferred Color Group List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -221,6 +223,7 @@ class PolicyObjectPreferredColorGroup(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyObjectPreferredColorGroup:PolicyObjectPreferredColorGroup example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -267,6 +270,7 @@ class PolicyObjectPreferredColorGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyObjectPreferredColorGroup:PolicyObjectPreferredColorGroup example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectPreferredColorGroupArgs args: The arguments to use to populate this resource's properties.

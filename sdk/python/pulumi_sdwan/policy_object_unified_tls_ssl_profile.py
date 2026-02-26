@@ -33,6 +33,7 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
                  url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedTlsSslProfile resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -204,6 +205,7 @@ class _PolicyObjectUnifiedTlsSslProfileState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslProfile resources.
+
         :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
                  - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -432,6 +434,7 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] decrypt_threshold: , Attribute conditional on `reputation` equal to `true`
@@ -482,6 +485,7 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectUnifiedTlsSslProfileArgs args: The arguments to use to populate this resource's properties.

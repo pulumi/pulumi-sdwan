@@ -36,6 +36,7 @@ class SystemNtpFeatureArgs:
                  trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemNtpFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
@@ -256,6 +257,7 @@ class _SystemNtpFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemNtpFeature resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
                  - Default value: `false`
@@ -535,6 +537,7 @@ class SystemNtpFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemNtpFeature:SystemNtpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
@@ -600,6 +603,7 @@ class SystemNtpFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemNtpFeature:SystemNtpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemNtpFeatureArgs args: The arguments to use to populate this resource's properties.

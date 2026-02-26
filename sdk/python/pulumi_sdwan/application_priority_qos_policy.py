@@ -29,6 +29,7 @@ class ApplicationPriorityQosPolicyArgs:
                  target_interfaces_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationPriorityQosPolicy resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] name: The name of the Policy
@@ -133,6 +134,7 @@ class _ApplicationPriorityQosPolicyState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ApplicationPriorityQosPolicy resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
@@ -287,6 +289,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         $ pulumi import sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy
@@ -334,6 +337,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplicationPriorityQosPolicyArgs args: The arguments to use to populate this resource's properties.

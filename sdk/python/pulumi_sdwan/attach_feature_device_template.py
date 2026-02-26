@@ -25,6 +25,7 @@ class AttachFeatureDeviceTemplateArgs:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AttachFeatureDeviceTemplate resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]] devices: Devices
         :param pulumi.Input[_builtins.int] version: The version of the device template
         """
@@ -64,6 +65,7 @@ class _AttachFeatureDeviceTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AttachFeatureDeviceTemplate resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]] devices: Devices
         :param pulumi.Input[_builtins.int] version: The version of the device template
         """
@@ -138,6 +140,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
         $ pulumi import sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd,[C8K-83E4B5EE-52AC-075F-B5E4-0050110680F3,C8K-C38D156C-34E4-909A-15BB-96D0E9D0E808]"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]] devices: Devices
@@ -180,6 +183,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd,[C8K-83E4B5EE-52AC-075F-B5E4-0050110680F3,C8K-C38D156C-34E4-909A-15BB-96D0E9D0E808]"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AttachFeatureDeviceTemplateArgs args: The arguments to use to populate this resource's properties.

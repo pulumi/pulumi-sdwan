@@ -40,6 +40,7 @@ class OtherUcseFeatureArgs:
                  vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a OtherUcseFeature resource.
+
         :param pulumi.Input[_builtins.int] bay: Bay
                  - Range: `0`-`2`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -332,6 +333,7 @@ class _OtherUcseFeatureState:
                  vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering OtherUcseFeature resources.
+
         :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` equal to `false`
@@ -683,6 +685,7 @@ class OtherUcseFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated
@@ -755,6 +758,7 @@ class OtherUcseFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param OtherUcseFeatureArgs args: The arguments to use to populate this resource's properties.
