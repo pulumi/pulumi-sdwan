@@ -34,6 +34,7 @@ class PolicyObjectUnifiedUrlFilteringArgs:
                  url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedUrlFiltering resource.
+
         :param pulumi.Input[_builtins.str] block_page_action: - Choices: `text`, `redirect-url`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] web_categories_action: - Choices: `block`, `allow`
@@ -229,6 +230,7 @@ class _PolicyObjectUnifiedUrlFilteringState:
                  web_reputation: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedUrlFiltering resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` equal to `true`
         :param pulumi.Input[_builtins.str] block_page_action: - Choices: `text`, `redirect-url`
         :param pulumi.Input[_builtins.str] block_page_contents: , Attribute conditional on `block_page_action` equal to `text`
@@ -481,6 +483,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: , Attribute conditional on `enable_alerts` equal to `true`
@@ -533,6 +536,7 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectUnifiedUrlFilteringArgs args: The arguments to use to populate this resource's properties.

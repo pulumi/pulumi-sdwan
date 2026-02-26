@@ -27,6 +27,7 @@ class PolicyObjectClassMapArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectClassMap resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectClassMapEntryArgs']]] entries: class map List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -98,6 +99,7 @@ class _PolicyObjectClassMapState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectClassMap resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectClassMapEntryArgs']]] entries: class map List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -216,6 +218,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyObjectClassMap:PolicyObjectClassMap example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -257,6 +260,7 @@ class PolicyObjectClassMap(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyObjectClassMap:PolicyObjectClassMap example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectClassMapArgs args: The arguments to use to populate this resource's properties.

@@ -33,6 +33,7 @@ class CflowdPolicyDefinitionArgs:
                  tos: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CflowdPolicyDefinition resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
@@ -211,6 +212,7 @@ class _CflowdPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CflowdPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
                  - Range: `30`-`3600`
         :param pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]] collectors: List of collectors
@@ -460,6 +462,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
@@ -522,6 +525,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CflowdPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

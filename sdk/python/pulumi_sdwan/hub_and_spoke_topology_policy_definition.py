@@ -28,6 +28,7 @@ class HubAndSpokeTopologyPolicyDefinitionArgs:
                  vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a HubAndSpokeTopologyPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]] topologies: List of topologies
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -116,6 +117,7 @@ class _HubAndSpokeTopologyPolicyDefinitionState:
                  vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering HubAndSpokeTopologyPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]] topologies: List of topologies
@@ -272,6 +274,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/hubAndSpokeTopologyPolicyDefinition:HubAndSpokeTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -321,6 +324,7 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/hubAndSpokeTopologyPolicyDefinition:HubAndSpokeTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param HubAndSpokeTopologyPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

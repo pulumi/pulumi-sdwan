@@ -25,6 +25,7 @@ class ProtocolListPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ProtocolListPolicyObject resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['ProtocolListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
@@ -65,6 +66,7 @@ class _ProtocolListPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ProtocolListPolicyObject resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['ProtocolListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -146,6 +148,7 @@ class ProtocolListPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ProtocolListPolicyObjectEntryArgs', 'ProtocolListPolicyObjectEntryArgsDict']]]] entries: List of entries
@@ -180,6 +183,7 @@ class ProtocolListPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ProtocolListPolicyObjectArgs args: The arguments to use to populate this resource's properties.

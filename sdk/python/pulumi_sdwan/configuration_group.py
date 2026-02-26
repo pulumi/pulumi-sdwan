@@ -31,6 +31,7 @@ class ConfigurationGroupArgs:
                  topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a ConfigurationGroup resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -169,6 +170,7 @@ class _ConfigurationGroupState:
                  topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ConfigurationGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
@@ -343,6 +345,7 @@ class ConfigurationGroup(pulumi.CustomResource):
         $ pulumi import sdwan:index/configurationGroup:ConfigurationGroup example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -393,6 +396,7 @@ class ConfigurationGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/configurationGroup:ConfigurationGroup example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ConfigurationGroupArgs args: The arguments to use to populate this resource's properties.

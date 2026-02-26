@@ -27,6 +27,7 @@ class RoutePolicyDefinitionArgs:
                  sequences: Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a RoutePolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
                  - Choices: `accept`, `reject`
@@ -102,6 +103,7 @@ class _RoutePolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering RoutePolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
                  - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -246,6 +248,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/routePolicyDefinition:RoutePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
@@ -297,6 +300,7 @@ class RoutePolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/routePolicyDefinition:RoutePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param RoutePolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

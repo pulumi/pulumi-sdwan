@@ -25,6 +25,7 @@ class PolicerPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicerPolicyObject resource.
+
         :param pulumi.Input[_builtins.int] burst: Burst in bytes
                  - Range: `15000`-`10000000`
         :param pulumi.Input[_builtins.str] exceed_action: Exceed action
@@ -101,6 +102,7 @@ class _PolicerPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicerPolicyObject resources.
+
         :param pulumi.Input[_builtins.int] burst: Burst in bytes
                  - Range: `15000`-`10000000`
         :param pulumi.Input[_builtins.str] exceed_action: Exceed action
@@ -220,6 +222,7 @@ class PolicerPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/policerPolicyObject:PolicerPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] burst: Burst in bytes
@@ -259,6 +262,7 @@ class PolicerPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policerPolicyObject:PolicerPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicerPolicyObjectArgs args: The arguments to use to populate this resource's properties.

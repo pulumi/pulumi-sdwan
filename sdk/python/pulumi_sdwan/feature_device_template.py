@@ -32,6 +32,7 @@ class FeatureDeviceTemplateArgs:
                  security_policy_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a FeatureDeviceTemplate resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[_builtins.str] device_role: The device role
@@ -185,6 +186,7 @@ class _FeatureDeviceTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering FeatureDeviceTemplate resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_role: The device role
                  - Choices: `sdwan-edge`, `service-node`
@@ -383,6 +385,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
         $ pulumi import sdwan:index/featureDeviceTemplate:FeatureDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the device template
@@ -428,6 +431,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/featureDeviceTemplate:FeatureDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FeatureDeviceTemplateArgs args: The arguments to use to populate this resource's properties.

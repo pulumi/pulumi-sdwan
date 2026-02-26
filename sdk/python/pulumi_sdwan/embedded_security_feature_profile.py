@@ -23,6 +23,7 @@ class EmbeddedSecurityFeatureProfileArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a EmbeddedSecurityFeatureProfile resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the embedded security feature profile
         """
@@ -62,6 +63,7 @@ class _EmbeddedSecurityFeatureProfileState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering EmbeddedSecurityFeatureProfile resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the embedded security feature profile
         """
@@ -127,6 +129,7 @@ class EmbeddedSecurityFeatureProfile(pulumi.CustomResource):
         $ pulumi import sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -160,6 +163,7 @@ class EmbeddedSecurityFeatureProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param EmbeddedSecurityFeatureProfileArgs args: The arguments to use to populate this resource's properties.

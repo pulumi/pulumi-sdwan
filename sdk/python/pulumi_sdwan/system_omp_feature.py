@@ -82,6 +82,7 @@ class SystemOmpFeatureArgs:
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemOmpFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
                  - Default value: `false`
@@ -1136,6 +1137,7 @@ class _SystemOmpFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemOmpFeature resources.
+
         :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_bgp_variable: Variable name
@@ -2262,6 +2264,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemOmpFeature:SystemOmpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
@@ -2421,6 +2424,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemOmpFeature:SystemOmpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemOmpFeatureArgs args: The arguments to use to populate this resource's properties.

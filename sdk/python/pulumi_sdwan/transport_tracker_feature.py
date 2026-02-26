@@ -42,6 +42,7 @@ class TransportTrackerFeatureArgs:
                  tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportTrackerFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
@@ -406,6 +407,7 @@ class _TransportTrackerFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportTrackerFeature resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
         :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
@@ -822,6 +824,7 @@ class TransportTrackerFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/transportTrackerFeature:TransportTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -896,6 +899,7 @@ class TransportTrackerFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/transportTrackerFeature:TransportTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TransportTrackerFeatureArgs args: The arguments to use to populate this resource's properties.

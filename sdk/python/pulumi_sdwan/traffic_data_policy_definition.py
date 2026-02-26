@@ -27,6 +27,7 @@ class TrafficDataPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a TrafficDataPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceArgs']]] sequences: List of sequences
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
@@ -101,6 +102,7 @@ class _TrafficDataPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TrafficDataPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
                  - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -245,6 +247,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
@@ -296,6 +299,7 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TrafficDataPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

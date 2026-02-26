@@ -38,6 +38,7 @@ class SystemSecurityFeatureArgs:
                  rekey_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemSecurityFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
                  - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
@@ -300,6 +301,7 @@ class _SystemSecurityFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemSecurityFeature resources.
+
         :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
                  - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
                  - Default value: `512`
@@ -630,6 +632,7 @@ class SystemSecurityFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemSecurityFeature:SystemSecurityFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
@@ -711,6 +714,7 @@ class SystemSecurityFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemSecurityFeature:SystemSecurityFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemSecurityFeatureArgs args: The arguments to use to populate this resource's properties.

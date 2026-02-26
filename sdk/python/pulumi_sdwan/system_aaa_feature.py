@@ -40,6 +40,7 @@ class SystemAaaFeatureArgs:
                  users: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None):
         """
         The set of arguments for constructing a SystemAaaFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
         :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
@@ -327,6 +328,7 @@ class _SystemAaaFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemAaaFeature resources.
+
         :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
@@ -715,6 +717,7 @@ class SystemAaaFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemAaaFeature:SystemAaaFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
@@ -827,6 +830,7 @@ class SystemAaaFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemAaaFeature:SystemAaaFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemAaaFeatureArgs args: The arguments to use to populate this resource's properties.

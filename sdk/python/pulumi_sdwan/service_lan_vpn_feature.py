@@ -64,6 +64,7 @@ class ServiceLanVpnFeatureArgs:
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceLanVpnFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv4Args']]] advertise_omp_ipv4s: OMP Advertise IPv4
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv6Args']]] advertise_omp_ipv6s: OMP Advertise IPv6
@@ -718,6 +719,7 @@ class _ServiceLanVpnFeatureState:
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnFeature resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv4Args']]] advertise_omp_ipv4s: OMP Advertise IPv4
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv6Args']]] advertise_omp_ipv6s: OMP Advertise IPv6
         :param pulumi.Input[_builtins.str] config_description: Name
@@ -1514,6 +1516,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureAdvertiseOmpIpv4Args', 'ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict']]]] advertise_omp_ipv4s: OMP Advertise IPv4
@@ -1688,6 +1691,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ServiceLanVpnFeatureArgs args: The arguments to use to populate this resource's properties.

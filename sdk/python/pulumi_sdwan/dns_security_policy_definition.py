@@ -35,6 +35,7 @@ class DnsSecurityPolicyDefinitionArgs:
                  target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]] = None):
         """
         The set of arguments for constructing a DnsSecurityPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] cisco_sig_credentials_feature_template_id: Credentials feature template ID
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.bool] match_all_vpn: Should use match all VPN
@@ -232,6 +233,7 @@ class _DnsSecurityPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering DnsSecurityPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] cisco_sig_credentials_feature_template_id: Credentials feature template ID
         :param pulumi.Input[_builtins.int] cisco_sig_credentials_feature_template_version: Credentials feature template version
         :param pulumi.Input[_builtins.str] custom_dns_server_ip: Only relevant when `umbrella_dns_default` is `false`
@@ -477,6 +479,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] cisco_sig_credentials_feature_template_id: Credentials feature template ID
@@ -525,6 +528,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param DnsSecurityPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

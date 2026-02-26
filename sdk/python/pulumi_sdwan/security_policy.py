@@ -44,6 +44,7 @@ class SecurityPolicyArgs:
                  use_case: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SecurityPolicy resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
         :param pulumi.Input[_builtins.str] audit_trail: Audit trail
@@ -405,6 +406,7 @@ class _SecurityPolicyState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SecurityPolicy resources.
+
         :param pulumi.Input[_builtins.str] audit_trail: Audit trail
                  - Choices: `on`, `off`
         :param pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]] definitions: List of policy definitions
@@ -817,6 +819,7 @@ class SecurityPolicy(pulumi.CustomResource):
         $ pulumi import sdwan:index/securityPolicy:SecurityPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] audit_trail: Audit trail
@@ -889,6 +892,7 @@ class SecurityPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/securityPolicy:SecurityPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SecurityPolicyArgs args: The arguments to use to populate this resource's properties.

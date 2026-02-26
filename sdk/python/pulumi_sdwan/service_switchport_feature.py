@@ -30,6 +30,7 @@ class ServiceSwitchportFeatureArgs:
                  static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]] = None):
         """
         The set of arguments for constructing a ServiceSwitchportFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
                  - Range: `0`-`1000000`
@@ -154,6 +155,7 @@ class _ServiceSwitchportFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceSwitchportFeature resources.
+
         :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
                  - Range: `0`-`1000000`
                  - Default value: `300`
@@ -351,6 +353,7 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/serviceSwitchportFeature:ServiceSwitchportFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
@@ -424,6 +427,7 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/serviceSwitchportFeature:ServiceSwitchportFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ServiceSwitchportFeatureArgs args: The arguments to use to populate this resource's properties.

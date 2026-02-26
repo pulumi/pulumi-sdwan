@@ -56,6 +56,7 @@ class CiscoVpnFeatureTemplateArgs:
                  vpn_name_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoVpnFeatureTemplate resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -608,6 +609,7 @@ class _CiscoVpnFeatureTemplateState:
                  vpn_name_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CiscoVpnFeatureTemplate resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -1368,6 +1370,7 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         $ pulumi import sdwan:index/ciscoVpnFeatureTemplate:CiscoVpnFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
@@ -1593,6 +1596,7 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/ciscoVpnFeatureTemplate:CiscoVpnFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CiscoVpnFeatureTemplateArgs args: The arguments to use to populate this resource's properties.

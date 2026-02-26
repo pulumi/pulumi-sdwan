@@ -46,6 +46,7 @@ class CellularProfileFeatureTemplateArgs:
                  secondary_dns_address_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CellularProfileFeatureTemplate resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
                  - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -464,6 +465,7 @@ class _CellularProfileFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CellularProfileFeatureTemplate resources.
+
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
         :param pulumi.Input[_builtins.str] authentication_type: Set authentication type
@@ -949,6 +951,7 @@ class CellularProfileFeatureTemplate(pulumi.CustomResource):
         $ pulumi import sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
@@ -1022,6 +1025,7 @@ class CellularProfileFeatureTemplate(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularProfileFeatureTemplateArgs args: The arguments to use to populate this resource's properties.

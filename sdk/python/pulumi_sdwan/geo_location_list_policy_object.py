@@ -25,6 +25,7 @@ class GeoLocationListPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a GeoLocationListPolicyObject resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['GeoLocationListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
@@ -65,6 +66,7 @@ class _GeoLocationListPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering GeoLocationListPolicyObject resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['GeoLocationListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -147,6 +149,7 @@ class GeoLocationListPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['GeoLocationListPolicyObjectEntryArgs', 'GeoLocationListPolicyObjectEntryArgsDict']]]] entries: List of entries
@@ -182,6 +185,7 @@ class GeoLocationListPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param GeoLocationListPolicyObjectArgs args: The arguments to use to populate this resource's properties.

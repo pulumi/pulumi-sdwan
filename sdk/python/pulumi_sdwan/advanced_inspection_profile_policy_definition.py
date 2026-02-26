@@ -32,6 +32,7 @@ class AdvancedInspectionProfilePolicyDefinitionArgs:
                  url_filtering_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AdvancedInspectionProfilePolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.str] advanced_malware_protection_id: Advanced malware protection ID
         :param pulumi.Input[_builtins.int] advanced_malware_protection_version: Advanced malware protection version
@@ -218,6 +219,7 @@ class _AdvancedInspectionProfilePolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AdvancedInspectionProfilePolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] advanced_malware_protection_id: Advanced malware protection ID
         :param pulumi.Input[_builtins.int] advanced_malware_protection_version: Advanced malware protection version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
@@ -445,6 +447,7 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] advanced_malware_protection_id: Advanced malware protection ID
@@ -489,6 +492,7 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AdvancedInspectionProfilePolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

@@ -28,6 +28,7 @@ class TransportRoutePolicyFeatureArgs:
                  sequences: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a TransportRoutePolicyFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `reject`, `accept`
@@ -120,6 +121,7 @@ class _TransportRoutePolicyFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportRoutePolicyFeature resources.
+
         :param pulumi.Input[_builtins.str] default_action: Default Action
                  - Choices: `reject`, `accept`
                  - Default value: `reject`
@@ -275,6 +277,7 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/transportRoutePolicyFeature:TransportRoutePolicyFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Default Action
@@ -336,6 +339,7 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/transportRoutePolicyFeature:TransportRoutePolicyFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TransportRoutePolicyFeatureArgs args: The arguments to use to populate this resource's properties.

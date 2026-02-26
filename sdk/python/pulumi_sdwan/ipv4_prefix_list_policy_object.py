@@ -25,6 +25,7 @@ class Ipv4PrefixListPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Ipv4PrefixListPolicyObject resource.
+
         :param pulumi.Input[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
@@ -65,6 +66,7 @@ class _Ipv4PrefixListPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Ipv4PrefixListPolicyObject resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]] entries: List of entries
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -148,6 +150,7 @@ class Ipv4PrefixListPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]] entries: List of entries
@@ -184,6 +187,7 @@ class Ipv4PrefixListPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param Ipv4PrefixListPolicyObjectArgs args: The arguments to use to populate this resource's properties.

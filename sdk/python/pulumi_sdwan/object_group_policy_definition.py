@@ -36,6 +36,7 @@ class ObjectGroupPolicyDefinitionArgs:
                  port_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a ObjectGroupPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] data_fqdn_prefix_list_id: Data FQDN prefix list ID
         :param pulumi.Input[_builtins.int] data_fqdn_prefix_list_version: Data FQDN prefix list version
@@ -284,6 +285,7 @@ class _ObjectGroupPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ObjectGroupPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] data_fqdn_prefix_list_id: Data FQDN prefix list ID
         :param pulumi.Input[_builtins.int] data_fqdn_prefix_list_version: Data FQDN prefix list version
         :param pulumi.Input[_builtins.str] data_ipv4_prefix_list_id: Data IPv4 prefix list ID
@@ -575,6 +577,7 @@ class ObjectGroupPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] data_fqdn_prefix_list_id: Data FQDN prefix list ID
@@ -624,6 +627,7 @@ class ObjectGroupPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ObjectGroupPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

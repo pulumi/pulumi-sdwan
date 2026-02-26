@@ -29,6 +29,7 @@ class ApplicationAwareRoutingPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationAwareRoutingPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]] sequences: List of sequences
         :param pulumi.Input[_builtins.str] default_action: Type of default action
@@ -135,6 +136,7 @@ class _ApplicationAwareRoutingPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ApplicationAwareRoutingPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] default_action: Type of default action
                  - Choices: `slaClass`
         :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
@@ -308,6 +310,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Type of default action
@@ -358,6 +361,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplicationAwareRoutingPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

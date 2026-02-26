@@ -28,6 +28,7 @@ class MeshTopologyPolicyDefinitionArgs:
                  vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a MeshTopologyPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]] regions: List of regions
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -116,6 +117,7 @@ class _MeshTopologyPolicyDefinitionState:
                  vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering MeshTopologyPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]] regions: List of regions
@@ -263,6 +265,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -303,6 +306,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param MeshTopologyPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

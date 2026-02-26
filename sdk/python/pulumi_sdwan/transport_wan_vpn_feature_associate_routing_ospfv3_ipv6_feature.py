@@ -24,6 +24,7 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs:
                  transport_wan_vpn_feature_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] transport_routing_ospfv3_ipv6_feature_id: Transport Routing OSPFv4 IPv6 Feature ID
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
@@ -78,6 +79,7 @@ class _TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature resources.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] transport_routing_ospfv3_ipv6_feature_id: Transport Routing OSPFv4 IPv6 Feature ID
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
@@ -177,6 +179,7 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(pulumi.CustomResou
         $ pulumi import sdwan:index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -214,6 +217,7 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(pulumi.CustomResou
         ```sh
         $ pulumi import sdwan:index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs args: The arguments to use to populate this resource's properties.

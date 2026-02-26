@@ -29,6 +29,7 @@ class PolicyGroupArgs:
                  policy_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a PolicyGroup resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `sdwan`
@@ -133,6 +134,7 @@ class _PolicyGroupState:
                  solution: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyGroup resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
@@ -269,6 +271,7 @@ class PolicyGroup(pulumi.CustomResource):
         $ pulumi import sdwan:index/policyGroup:PolicyGroup example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -312,6 +315,7 @@ class PolicyGroup(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/policyGroup:PolicyGroup example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyGroupArgs args: The arguments to use to populate this resource's properties.

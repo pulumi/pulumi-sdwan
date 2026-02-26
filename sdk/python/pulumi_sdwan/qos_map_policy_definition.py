@@ -26,6 +26,7 @@ class QosMapPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a QosMapPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]] qos_schedulers: List of QoS schedulers
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -82,6 +83,7 @@ class _QosMapPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering QosMapPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]] qos_schedulers: List of QoS schedulers
@@ -201,6 +203,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -243,6 +246,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param QosMapPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

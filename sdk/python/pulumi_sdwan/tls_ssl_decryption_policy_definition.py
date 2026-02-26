@@ -42,6 +42,7 @@ class TlsSslDecryptionPolicyDefinitionArgs:
                  use_default_ca_cert_bundle: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a TlsSslDecryptionPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
         :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status
@@ -378,6 +379,7 @@ class _TlsSslDecryptionPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TlsSslDecryptionPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
         :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status
                  - Choices: `ocsp`, `none`
@@ -778,6 +780,7 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
@@ -864,6 +867,7 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TlsSslDecryptionPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

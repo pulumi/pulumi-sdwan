@@ -30,6 +30,7 @@ class SystemPerformanceMonitoringFeatureArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemPerformanceMonitoringFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
         :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable
@@ -190,6 +191,7 @@ class _SystemPerformanceMonitoringFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemPerformanceMonitoringFeature resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
         :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable
                  - Default value: `false`
@@ -399,6 +401,7 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
@@ -452,6 +455,7 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SystemPerformanceMonitoringFeatureArgs args: The arguments to use to populate this resource's properties.

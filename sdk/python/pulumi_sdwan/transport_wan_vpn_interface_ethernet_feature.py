@@ -247,6 +247,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  xconnect_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportWanVpnInterfaceEthernetFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -4022,6 +4023,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  xconnect_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering TransportWanVpnInterfaceEthernetFeature resources.
+
         :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `0`-`2147483`
                  - Default value: `1200`
@@ -7971,6 +7973,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -8457,6 +8460,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TransportWanVpnInterfaceEthernetFeatureArgs args: The arguments to use to populate this resource's properties.

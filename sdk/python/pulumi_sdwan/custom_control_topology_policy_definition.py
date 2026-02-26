@@ -27,6 +27,7 @@ class CustomControlTopologyPolicyDefinitionArgs:
                  sequences: Optional[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a CustomControlTopologyPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
                  - Choices: `accept`, `reject`
@@ -102,6 +103,7 @@ class _CustomControlTopologyPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CustomControlTopologyPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
                  - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -249,6 +251,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
@@ -303,6 +306,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CustomControlTopologyPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

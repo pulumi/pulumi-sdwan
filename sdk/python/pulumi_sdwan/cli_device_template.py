@@ -26,6 +26,7 @@ class CliDeviceTemplateArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CliDeviceTemplate resource.
+
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
         :param pulumi.Input[_builtins.str] cli_type: CLI type
                  - Choices: `device`, `intend`
@@ -113,6 +114,7 @@ class _CliDeviceTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CliDeviceTemplate resources.
+
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
         :param pulumi.Input[_builtins.str] cli_type: CLI type
                  - Choices: `device`, `intend`
@@ -246,6 +248,7 @@ class CliDeviceTemplate(pulumi.CustomResource):
         $ pulumi import sdwan:index/cliDeviceTemplate:CliDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
@@ -286,6 +289,7 @@ class CliDeviceTemplate(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/cliDeviceTemplate:CliDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CliDeviceTemplateArgs args: The arguments to use to populate this resource's properties.

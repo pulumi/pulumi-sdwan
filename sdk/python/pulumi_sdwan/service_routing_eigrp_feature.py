@@ -43,6 +43,7 @@ class ServiceRoutingEigrpFeatureArgs:
                  route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceRoutingEigrpFeature resource.
+
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]] networks: Configure the networks for EIGRP to advertise
         :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
@@ -380,6 +381,7 @@ class _ServiceRoutingEigrpFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceRoutingEigrpFeature resources.
+
         :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
                  - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
@@ -782,6 +784,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         $ pulumi import sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
@@ -863,6 +866,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ServiceRoutingEigrpFeatureArgs args: The arguments to use to populate this resource's properties.

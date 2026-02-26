@@ -23,6 +23,7 @@ class ApplicationPriorityFeatureProfileArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationPriorityFeatureProfile resource.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the application priority feature profile
         """
@@ -62,6 +63,7 @@ class _ApplicationPriorityFeatureProfileState:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplicationPriorityFeatureProfile resources.
+
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] name: The name of the application priority feature profile
         """
@@ -127,6 +129,7 @@ class ApplicationPriorityFeatureProfile(pulumi.CustomResource):
         $ pulumi import sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
@@ -160,6 +163,7 @@ class ApplicationPriorityFeatureProfile(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplicationPriorityFeatureProfileArgs args: The arguments to use to populate this resource's properties.

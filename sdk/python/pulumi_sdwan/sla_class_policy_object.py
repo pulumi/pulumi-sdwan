@@ -31,6 +31,7 @@ class SlaClassPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SlaClassPolicyObject resource.
+
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
         :param pulumi.Input[_builtins.int] app_probe_class_version: App Probe Class Policy Object version
         :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
@@ -212,6 +213,7 @@ class _SlaClassPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SlaClassPolicyObject resources.
+
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
         :param pulumi.Input[_builtins.int] app_probe_class_version: App Probe Class Policy Object version
         :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
@@ -437,6 +439,7 @@ class SlaClassPolicyObject(pulumi.CustomResource):
         $ pulumi import sdwan:index/slaClassPolicyObject:SlaClassPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
@@ -489,6 +492,7 @@ class SlaClassPolicyObject(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/slaClassPolicyObject:SlaClassPolicyObject example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SlaClassPolicyObjectArgs args: The arguments to use to populate this resource's properties.

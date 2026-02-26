@@ -36,6 +36,7 @@ class LocalizedPolicyArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LocalizedPolicy resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the localized policy
         :param pulumi.Input[_builtins.bool] application_visibility_ipv4: IPv4 application visibility
                  - Default value: `false`
@@ -268,6 +269,7 @@ class _LocalizedPolicyState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering LocalizedPolicy resources.
+
         :param pulumi.Input[_builtins.bool] application_visibility_ipv4: IPv4 application visibility
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] application_visibility_ipv6: IPv6 application visibility
@@ -553,6 +555,7 @@ class LocalizedPolicy(pulumi.CustomResource):
         $ pulumi import sdwan:index/localizedPolicy:LocalizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] application_visibility_ipv4: IPv4 application visibility
@@ -618,6 +621,7 @@ class LocalizedPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/localizedPolicy:LocalizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LocalizedPolicyArgs args: The arguments to use to populate this resource's properties.

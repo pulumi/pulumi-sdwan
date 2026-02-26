@@ -34,6 +34,7 @@ class TlsSslProfilePolicyDefinitionArgs:
                  skip_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TlsSslProfilePolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
         :param pulumi.Input[_builtins.int] allow_url_list_version: Allow URL list version
@@ -254,6 +255,7 @@ class _TlsSslProfilePolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TlsSslProfilePolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
         :param pulumi.Input[_builtins.int] allow_url_list_version: Allow URL list version
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
@@ -520,6 +522,7 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
@@ -572,6 +575,7 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TlsSslProfilePolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

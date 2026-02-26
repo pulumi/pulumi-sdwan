@@ -34,6 +34,7 @@ class DnsSecurityPolicyArgs:
                  target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]] = None):
         """
         The set of arguments for constructing a DnsSecurityPolicy resource.
+
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         :param pulumi.Input[_builtins.bool] dns_crypt: If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
         :param pulumi.Input[_builtins.str] dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
@@ -207,6 +208,7 @@ class _DnsSecurityPolicyState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering DnsSecurityPolicy resources.
+
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.bool] dns_crypt: If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
@@ -437,6 +439,7 @@ class DnsSecurityPolicy(pulumi.CustomResource):
         $ pulumi import sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] child_org_id: String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
@@ -488,6 +491,7 @@ class DnsSecurityPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param DnsSecurityPolicyArgs args: The arguments to use to populate this resource's properties.

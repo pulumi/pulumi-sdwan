@@ -26,6 +26,7 @@ class RuleSetPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a RuleSetPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['RuleSetPolicyDefinitionRuleArgs']]] rules: List of rules
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -81,6 +82,7 @@ class _RuleSetPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering RuleSetPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['RuleSetPolicyDefinitionRuleArgs']]] rules: List of rules
@@ -189,6 +191,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -235,6 +238,7 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param RuleSetPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.

@@ -27,6 +27,7 @@ class Ipv6DeviceAclPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Ipv6DeviceAclPolicyDefinition resource.
+
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceArgs']]] sequences: List of ACL sequences
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
@@ -101,6 +102,7 @@ class _Ipv6DeviceAclPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Ipv6DeviceAclPolicyDefinition resources.
+
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
                  - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
@@ -243,6 +245,7 @@ class Ipv6DeviceAclPolicyDefinition(pulumi.CustomResource):
         $ pulumi import sdwan:index/ipv6DeviceAclPolicyDefinition:Ipv6DeviceAclPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
@@ -292,6 +295,7 @@ class Ipv6DeviceAclPolicyDefinition(pulumi.CustomResource):
         ```sh
         $ pulumi import sdwan:index/ipv6DeviceAclPolicyDefinition:Ipv6DeviceAclPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param Ipv6DeviceAclPolicyDefinitionArgs args: The arguments to use to populate this resource's properties.
