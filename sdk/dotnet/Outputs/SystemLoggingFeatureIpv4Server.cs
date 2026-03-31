@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class SystemLoggingFeatureIpv4Server
     {
         /// <summary>
-        /// Set hostname or IPv4 address of server
+        /// Set IPv4 address of server
         /// </summary>
         public readonly string? HostnameIp;
         /// <summary>
@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? TlsPropertiesProfileVariable;
         /// <summary>
-        /// Set hostname or IPv4 address of server
+        /// Set vpn of server
         ///   - Range: `0`-`65530`
         ///   - Default value: `0`
         /// </summary>

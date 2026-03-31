@@ -5,8 +5,10 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -16,6 +18,16 @@ public final class GetSystemMrfFeatureResult {
      * 
      */
     private String description;
+    /**
+     * @return Enable management region
+     * 
+     */
+    private Boolean enableManagementRegion;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String enableManagementRegionVariable;
     /**
      * @return Enable migration mode to Multi-Region Fabric
      * 
@@ -27,10 +39,30 @@ public final class GetSystemMrfFeatureResult {
      */
     private String featureProfileId;
     /**
+     * @return Variable name
+     * 
+     */
+    private String gatewayPreferenceVariable;
+    /**
+     * @return List of affinity group preferences for VRF
+     * 
+     */
+    private List<Integer> gatewayPreferences;
+    /**
      * @return The id of the Feature
      * 
      */
     private String id;
+    /**
+     * @return Enable management gateway
+     * 
+     */
+    private Boolean managementGateway;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String managementGatewayVariable;
     /**
      * @return Set BGP community during migration from BGP-core based network
      * 
@@ -41,11 +73,6 @@ public final class GetSystemMrfFeatureResult {
      * 
      */
     private String name;
-    /**
-     * @return Set region ID
-     * 
-     */
-    private Integer regionId;
     /**
      * @return Set the role for router
      * 
@@ -71,6 +98,16 @@ public final class GetSystemMrfFeatureResult {
      * 
      */
     private Integer version;
+    /**
+     * @return VRF name for management region
+     * 
+     */
+    private Integer vrfId;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String vrfIdVariable;
 
     private GetSystemMrfFeatureResult() {}
     /**
@@ -79,6 +116,20 @@ public final class GetSystemMrfFeatureResult {
      */
     public String description() {
         return this.description;
+    }
+    /**
+     * @return Enable management region
+     * 
+     */
+    public Boolean enableManagementRegion() {
+        return this.enableManagementRegion;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String enableManagementRegionVariable() {
+        return this.enableManagementRegionVariable;
     }
     /**
      * @return Enable migration mode to Multi-Region Fabric
@@ -95,11 +146,39 @@ public final class GetSystemMrfFeatureResult {
         return this.featureProfileId;
     }
     /**
+     * @return Variable name
+     * 
+     */
+    public String gatewayPreferenceVariable() {
+        return this.gatewayPreferenceVariable;
+    }
+    /**
+     * @return List of affinity group preferences for VRF
+     * 
+     */
+    public List<Integer> gatewayPreferences() {
+        return this.gatewayPreferences;
+    }
+    /**
      * @return The id of the Feature
      * 
      */
     public String id() {
         return this.id;
+    }
+    /**
+     * @return Enable management gateway
+     * 
+     */
+    public Boolean managementGateway() {
+        return this.managementGateway;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String managementGatewayVariable() {
+        return this.managementGatewayVariable;
     }
     /**
      * @return Set BGP community during migration from BGP-core based network
@@ -114,13 +193,6 @@ public final class GetSystemMrfFeatureResult {
      */
     public String name() {
         return this.name;
-    }
-    /**
-     * @return Set region ID
-     * 
-     */
-    public Integer regionId() {
-        return this.regionId;
     }
     /**
      * @return Set the role for router
@@ -157,6 +229,20 @@ public final class GetSystemMrfFeatureResult {
     public Integer version() {
         return this.version;
     }
+    /**
+     * @return VRF name for management region
+     * 
+     */
+    public Integer vrfId() {
+        return this.vrfId;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String vrfIdVariable() {
+        return this.vrfIdVariable;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -168,32 +254,46 @@ public final class GetSystemMrfFeatureResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
+        private Boolean enableManagementRegion;
+        private String enableManagementRegionVariable;
         private String enableMigrationToMrf;
         private String featureProfileId;
+        private String gatewayPreferenceVariable;
+        private List<Integer> gatewayPreferences;
         private String id;
+        private Boolean managementGateway;
+        private String managementGatewayVariable;
         private Integer migrationBgpCommunity;
         private String name;
-        private Integer regionId;
         private String role;
         private String roleVariable;
         private Integer secondaryRegionId;
         private String secondaryRegionIdVariable;
         private Integer version;
+        private Integer vrfId;
+        private String vrfIdVariable;
         public Builder() {}
         public Builder(GetSystemMrfFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.enableManagementRegion = defaults.enableManagementRegion;
+    	      this.enableManagementRegionVariable = defaults.enableManagementRegionVariable;
     	      this.enableMigrationToMrf = defaults.enableMigrationToMrf;
     	      this.featureProfileId = defaults.featureProfileId;
+    	      this.gatewayPreferenceVariable = defaults.gatewayPreferenceVariable;
+    	      this.gatewayPreferences = defaults.gatewayPreferences;
     	      this.id = defaults.id;
+    	      this.managementGateway = defaults.managementGateway;
+    	      this.managementGatewayVariable = defaults.managementGatewayVariable;
     	      this.migrationBgpCommunity = defaults.migrationBgpCommunity;
     	      this.name = defaults.name;
-    	      this.regionId = defaults.regionId;
     	      this.role = defaults.role;
     	      this.roleVariable = defaults.roleVariable;
     	      this.secondaryRegionId = defaults.secondaryRegionId;
     	      this.secondaryRegionIdVariable = defaults.secondaryRegionIdVariable;
     	      this.version = defaults.version;
+    	      this.vrfId = defaults.vrfId;
+    	      this.vrfIdVariable = defaults.vrfIdVariable;
         }
 
         @CustomType.Setter
@@ -202,6 +302,22 @@ public final class GetSystemMrfFeatureResult {
               throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableManagementRegion(Boolean enableManagementRegion) {
+            if (enableManagementRegion == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "enableManagementRegion");
+            }
+            this.enableManagementRegion = enableManagementRegion;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableManagementRegionVariable(String enableManagementRegionVariable) {
+            if (enableManagementRegionVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "enableManagementRegionVariable");
+            }
+            this.enableManagementRegionVariable = enableManagementRegionVariable;
             return this;
         }
         @CustomType.Setter
@@ -221,11 +337,46 @@ public final class GetSystemMrfFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder gatewayPreferenceVariable(String gatewayPreferenceVariable) {
+            if (gatewayPreferenceVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "gatewayPreferenceVariable");
+            }
+            this.gatewayPreferenceVariable = gatewayPreferenceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder gatewayPreferences(List<Integer> gatewayPreferences) {
+            if (gatewayPreferences == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "gatewayPreferences");
+            }
+            this.gatewayPreferences = gatewayPreferences;
+            return this;
+        }
+        public Builder gatewayPreferences(Integer... gatewayPreferences) {
+            return gatewayPreferences(List.of(gatewayPreferences));
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder managementGateway(Boolean managementGateway) {
+            if (managementGateway == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "managementGateway");
+            }
+            this.managementGateway = managementGateway;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder managementGatewayVariable(String managementGatewayVariable) {
+            if (managementGatewayVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "managementGatewayVariable");
+            }
+            this.managementGatewayVariable = managementGatewayVariable;
             return this;
         }
         @CustomType.Setter
@@ -242,14 +393,6 @@ public final class GetSystemMrfFeatureResult {
               throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "name");
             }
             this.name = name;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder regionId(Integer regionId) {
-            if (regionId == null) {
-              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "regionId");
-            }
-            this.regionId = regionId;
             return this;
         }
         @CustomType.Setter
@@ -292,20 +435,43 @@ public final class GetSystemMrfFeatureResult {
             this.version = version;
             return this;
         }
+        @CustomType.Setter
+        public Builder vrfId(Integer vrfId) {
+            if (vrfId == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "vrfId");
+            }
+            this.vrfId = vrfId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder vrfIdVariable(String vrfIdVariable) {
+            if (vrfIdVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemMrfFeatureResult", "vrfIdVariable");
+            }
+            this.vrfIdVariable = vrfIdVariable;
+            return this;
+        }
         public GetSystemMrfFeatureResult build() {
             final var _resultValue = new GetSystemMrfFeatureResult();
             _resultValue.description = description;
+            _resultValue.enableManagementRegion = enableManagementRegion;
+            _resultValue.enableManagementRegionVariable = enableManagementRegionVariable;
             _resultValue.enableMigrationToMrf = enableMigrationToMrf;
             _resultValue.featureProfileId = featureProfileId;
+            _resultValue.gatewayPreferenceVariable = gatewayPreferenceVariable;
+            _resultValue.gatewayPreferences = gatewayPreferences;
             _resultValue.id = id;
+            _resultValue.managementGateway = managementGateway;
+            _resultValue.managementGatewayVariable = managementGatewayVariable;
             _resultValue.migrationBgpCommunity = migrationBgpCommunity;
             _resultValue.name = name;
-            _resultValue.regionId = regionId;
             _resultValue.role = role;
             _resultValue.roleVariable = roleVariable;
             _resultValue.secondaryRegionId = secondaryRegionId;
             _resultValue.secondaryRegionIdVariable = secondaryRegionIdVariable;
             _resultValue.version = version;
+            _resultValue.vrfId = vrfId;
+            _resultValue.vrfIdVariable = vrfIdVariable;
             return _resultValue;
         }
     }

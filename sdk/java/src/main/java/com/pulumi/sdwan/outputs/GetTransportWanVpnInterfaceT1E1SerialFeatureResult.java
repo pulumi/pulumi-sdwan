@@ -116,6 +116,16 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     private String ipv6AddressVariable;
     /**
+     * @return Core Region
+     * 
+     */
+    private String mrfCoreRegionType;
+    /**
+     * @return Enable Core Region
+     * 
+     */
+    private Boolean mrfEnableCoreRegion;
+    /**
      * @return Interface MTU \n\n, in bytes
      * 
      */
@@ -692,6 +702,20 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     public String ipv6AddressVariable() {
         return this.ipv6AddressVariable;
+    }
+    /**
+     * @return Core Region
+     * 
+     */
+    public String mrfCoreRegionType() {
+        return this.mrfCoreRegionType;
+    }
+    /**
+     * @return Enable Core Region
+     * 
+     */
+    public Boolean mrfEnableCoreRegion() {
+        return this.mrfEnableCoreRegion;
     }
     /**
      * @return Interface MTU \n\n, in bytes
@@ -1323,6 +1347,8 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         private String ipv4SubnetMaskVariable;
         private String ipv6Address;
         private String ipv6AddressVariable;
+        private String mrfCoreRegionType;
+        private Boolean mrfEnableCoreRegion;
         private Integer mtu;
         private String mtuVariable;
         private String name;
@@ -1436,6 +1462,8 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
     	      this.ipv4SubnetMaskVariable = defaults.ipv4SubnetMaskVariable;
     	      this.ipv6Address = defaults.ipv6Address;
     	      this.ipv6AddressVariable = defaults.ipv6AddressVariable;
+    	      this.mrfCoreRegionType = defaults.mrfCoreRegionType;
+    	      this.mrfEnableCoreRegion = defaults.mrfEnableCoreRegion;
     	      this.mtu = defaults.mtu;
     	      this.mtuVariable = defaults.mtuVariable;
     	      this.name = defaults.name;
@@ -1721,6 +1749,22 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "ipv6AddressVariable");
             }
             this.ipv6AddressVariable = ipv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder mrfCoreRegionType(String mrfCoreRegionType) {
+            if (mrfCoreRegionType == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "mrfCoreRegionType");
+            }
+            this.mrfCoreRegionType = mrfCoreRegionType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder mrfEnableCoreRegion(Boolean mrfEnableCoreRegion) {
+            if (mrfEnableCoreRegion == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "mrfEnableCoreRegion");
+            }
+            this.mrfEnableCoreRegion = mrfEnableCoreRegion;
             return this;
         }
         @CustomType.Setter
@@ -2436,6 +2480,8 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
             _resultValue.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             _resultValue.ipv6Address = ipv6Address;
             _resultValue.ipv6AddressVariable = ipv6AddressVariable;
+            _resultValue.mrfCoreRegionType = mrfCoreRegionType;
+            _resultValue.mrfEnableCoreRegion = mrfEnableCoreRegion;
             _resultValue.mtu = mtu;
             _resultValue.mtuVariable = mtuVariable;
             _resultValue.name = name;

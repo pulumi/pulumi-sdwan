@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Transport Route Policy Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  *                 .baseAction("reject")
  *                 .protocol("IPV4")
  *                 .actions(TransportRoutePolicyFeatureSequenceActionArgs.builder()
- *                     .asPathPrepend(List.of(65521))
+ *                     .asPathPrepend(List.of("65521"))
  *                     .communityAdditive(false)
  *                     .community(List.of("internet"))
  *                     .localPreference(100)

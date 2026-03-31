@@ -6388,6 +6388,110 @@ export interface EigrpFeatureTemplateKey {
     optional?: pulumi.Input<boolean>;
 }
 
+export interface EmbeddedSecurityNgfwPolicySequence {
+    /**
+     * can be empty array or with type or parameter
+     */
+    actions?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceAction>[]>;
+    /**
+     * - Choices: `pass`, `inspect`, `drop`
+     */
+    baseAction?: pulumi.Input<string>;
+    disableSequence?: pulumi.Input<boolean>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry>[]>;
+    sequenceId?: pulumi.Input<string>;
+    sequenceName?: pulumi.Input<string>;
+    sequenceType?: pulumi.Input<string>;
+}
+
+export interface EmbeddedSecurityNgfwPolicySequenceAction {
+    parameter?: pulumi.Input<string>;
+    parameterId?: pulumi.Input<string>;
+    /**
+     * - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`, `log`, `connectionEvents`
+     */
+    type?: pulumi.Input<string>;
+}
+
+export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
+    appListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    applicationFamilies?: pulumi.Input<pulumi.Input<string>[]>;
+    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationDataPrefixes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    destinationDataPrefixesVariable?: pulumi.Input<string>;
+    destinationFqdnListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationFqdns?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    destinationFqdnsVariable?: pulumi.Input<string>;
+    destinationGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationGeoLocations?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    destinationGeoLocationsVariable?: pulumi.Input<string>;
+    destinationPortListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationPorts?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    destinationPortsVariable?: pulumi.Input<string>;
+    destinationScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    flatAppListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolNameListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolNames?: pulumi.Input<pulumi.Input<string>[]>;
+    protocols?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceDataPrefixes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    sourceDataPrefixesVariable?: pulumi.Input<string>;
+    sourceGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceGeoLocations?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    sourceGeoLocationsVariable?: pulumi.Input<string>;
+    sourceIdentityListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceIdentityUsergroups?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceIdentityUsers?: pulumi.Input<pulumi.Input<string>[]>;
+    sourcePortListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    sourcePortsVariable?: pulumi.Input<string>;
+    sourceScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface EmbeddedSecurityPolicyAssembly {
+    advancedInspectionProfilePolicyId?: pulumi.Input<string>;
+    entries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssemblyEntry>[]>;
+    ngfwPolicyId?: pulumi.Input<string>;
+    sslDecryptionProfileId?: pulumi.Input<string>;
+}
+
+export interface EmbeddedSecurityPolicyAssemblyEntry {
+    /**
+     * - Choices: `self`, `default`, `untrusted`
+     */
+    destinationZone?: pulumi.Input<string>;
+    destinationZoneListId?: pulumi.Input<string>;
+    /**
+     * - Choices: `self`, `default`, `untrusted`
+     */
+    sourceZone?: pulumi.Input<string>;
+    sourceZoneListId?: pulumi.Input<string>;
+}
+
 export interface ExpandedCommunityListPolicyObjectEntry {
     /**
      * Expanded community value, e.g. `100:1000`
@@ -7516,6 +7620,11 @@ export interface PolicyObjectSecurityUrlBlockListEntry {
     pattern?: pulumi.Input<string>;
 }
 
+export interface PolicyObjectSecurityZoneEntry {
+    interface?: pulumi.Input<string>;
+    vpn?: pulumi.Input<string>;
+}
+
 export interface PolicyObjectSlaClassListEntry {
     appProbeClassListId?: pulumi.Input<string>;
     /**
@@ -8264,6 +8373,32 @@ export interface ServiceIpv4AclFeatureSequenceAction {
      */
     acceptSetNextHop?: pulumi.Input<string>;
     /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
+    /**
      * Counter Name
      */
     dropCounterName?: pulumi.Input<string>;
@@ -8380,6 +8515,32 @@ export interface ServiceIpv6AclFeatureSequenceAction {
      * Set Next Hop (IPV6 address)
      */
     acceptSetNextHop?: pulumi.Input<string>;
+    /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
     /**
      * set traffic class number
      *   - Range: `0`-`63`
@@ -9316,7 +9477,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     addressVariable?: pulumi.Input<string>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string>;
     /**
@@ -9413,7 +9574,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
     addressVariable?: pulumi.Input<string>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string>;
     /**
@@ -10037,7 +10198,7 @@ export interface ServiceMulticastFeatureMsdpGroupPeer {
      */
     keepaliveIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set MSDP peer ip password
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     peerAuthenticationPassword?: pulumi.Input<string>;
     /**
@@ -10243,7 +10404,7 @@ export interface ServiceRoutePolicyFeatureSequence {
 }
 
 export interface ServiceRoutePolicyFeatureSequenceAction {
-    asPathPrepends?: pulumi.Input<pulumi.Input<number>[]>;
+    asPathPrepends?: pulumi.Input<pulumi.Input<string>[]>;
     communities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * - Default value: `false`
@@ -10462,7 +10623,7 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
      */
     nextHopSelfVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: pulumi.Input<string>;
     /**
@@ -10545,6 +10706,7 @@ export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     disablePeerThresholdVariable?: pulumi.Input<string>;
     /**
      * Set IPv4 unicast address family
+     *   - Choices: `ipv4-unicast`
      */
     familyType?: pulumi.Input<string>;
     inRoutePolicyId?: pulumi.Input<string>;
@@ -10621,6 +10783,23 @@ export interface ServiceRoutingBgpFeatureIpv4Network {
 
 export interface ServiceRoutingBgpFeatureIpv4Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    metricVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: pulumi.Input<string>;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
      */
@@ -10631,10 +10810,14 @@ export interface ServiceRoutingBgpFeatureIpv4Redistribute {
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6AggregateAddress {
@@ -10753,7 +10936,7 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
      */
     nextHopSelfVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: pulumi.Input<string>;
     /**
@@ -10827,6 +11010,7 @@ export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     disablePeerThresholdVariable?: pulumi.Input<string>;
     /**
      * Set IPv6 unicast address family
+     *   - Choices: `ipv6-unicast`
      */
     familyType?: pulumi.Input<string>;
     inRoutePolicyId?: pulumi.Input<string>;
@@ -10898,6 +11082,23 @@ export interface ServiceRoutingBgpFeatureIpv6Network {
 
 export interface ServiceRoutingBgpFeatureIpv6Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    metricVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: pulumi.Input<string>;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `omp`
      */
@@ -10908,10 +11109,14 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceRoutingEigrpFeatureInterface {
@@ -10965,7 +11170,7 @@ export interface ServiceRoutingEigrpFeatureMd5Key {
      */
     keyIdVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 key
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     keyString?: pulumi.Input<string>;
     /**
@@ -11097,7 +11302,7 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
      */
     lsaRetransmitIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     messageDigestKey?: pulumi.Input<string>;
     /**
@@ -11201,10 +11406,14 @@ export interface ServiceRoutingOspfFeatureRedistribute {
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceRoutingOspfFeatureRouterLsa {
@@ -11391,12 +11600,12 @@ export interface ServiceRoutingOspfv3Ipv4FeatureAreaRange {
 
 export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     /**
-     * Enable NAT DIA for redistributed routes
+     * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      */
     natDia?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      */
     natDiaVariable?: pulumi.Input<string>;
     /**
@@ -12551,6 +12760,7 @@ export interface SystemIpv4DeviceAccessFeatureSequence {
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
      */
     baseAction?: pulumi.Input<string>;
     destinationDataPrefixListId?: pulumi.Input<string>;
@@ -12636,7 +12846,7 @@ export interface SystemIpv6DeviceAccessFeatureSequence {
 
 export interface SystemLoggingFeatureIpv4Server {
     /**
-     * Set hostname or IPv4 address of server
+     * Set IPv4 address of server
      */
     hostnameIp?: pulumi.Input<string>;
     /**
@@ -12688,7 +12898,7 @@ export interface SystemLoggingFeatureIpv4Server {
      */
     tlsPropertiesProfileVariable?: pulumi.Input<string>;
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
@@ -12701,7 +12911,7 @@ export interface SystemLoggingFeatureIpv4Server {
 
 export interface SystemLoggingFeatureIpv6Server {
     /**
-     * Set IPv6 hostname or IPv6 address of server
+     * Set IPv6 address of server
      */
     hostnameIp?: pulumi.Input<string>;
     /**
@@ -12753,7 +12963,7 @@ export interface SystemLoggingFeatureIpv6Server {
      */
     tlsPropertiesProfileVariable?: pulumi.Input<string>;
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
@@ -12796,7 +13006,7 @@ export interface SystemLoggingFeatureTlsProfile {
 export interface SystemNtpFeatureAuthenticationKey {
     /**
      * MD5 authentication key ID
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      */
     keyId?: pulumi.Input<number>;
     /**
@@ -12804,7 +13014,7 @@ export interface SystemNtpFeatureAuthenticationKey {
      */
     keyIdVariable?: pulumi.Input<string>;
     /**
-     * Enter cleartext or AES-encrypted MD5 authentication key
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     md5Value?: pulumi.Input<string>;
     /**
@@ -12816,7 +13026,7 @@ export interface SystemNtpFeatureAuthenticationKey {
 export interface SystemNtpFeatureServer {
     /**
      * Set authentication key for the server
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      */
     authenticationKey?: pulumi.Input<number>;
     /**
@@ -12933,7 +13143,7 @@ export interface SystemSecurityFeatureKey {
      */
     includeTcpOptionsVariable?: pulumi.Input<string>;
     /**
-     * Specify the Key String
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     keyString?: pulumi.Input<string>;
     /**
@@ -13021,9 +13231,13 @@ export interface SystemSnmpFeatureCommunity {
      */
     authorizationVariable?: pulumi.Input<string>;
     /**
-     * Set name of the SNMP community
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     name?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    nameVariable?: pulumi.Input<string>;
     /**
      * Set user label of the SNMP community
      */
@@ -13670,6 +13884,32 @@ export interface TransportIpv4AclFeatureSequenceAction {
      */
     acceptSetNextHop?: pulumi.Input<string>;
     /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
+    /**
      * Counter Name
      */
     dropCounterName?: pulumi.Input<string>;
@@ -13786,6 +14026,32 @@ export interface TransportIpv6AclFeatureSequenceAction {
      * Set Next Hop (IPV6 address)
      */
     acceptSetNextHop?: pulumi.Input<string>;
+    /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
     /**
      * set traffic class number
      *   - Range: `0`-`63`
@@ -14027,7 +14293,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddr
     addressVariable?: pulumi.Input<string>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string>;
     /**
@@ -14069,7 +14335,7 @@ export interface TransportRoutePolicyFeatureSequence {
 }
 
 export interface TransportRoutePolicyFeatureSequenceAction {
-    asPathPrepends?: pulumi.Input<pulumi.Input<number>[]>;
+    asPathPrepends?: pulumi.Input<pulumi.Input<string>[]>;
     communities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * - Default value: `false`
@@ -14297,7 +14563,7 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
      */
     nextHopSelfVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: pulumi.Input<string>;
     /**
@@ -14453,6 +14719,23 @@ export interface TransportRoutingBgpFeatureIpv4Network {
 
 export interface TransportRoutingBgpFeatureIpv4Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    metricVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: pulumi.Input<string>;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `ospfv3`, `nat`
      */
@@ -14580,7 +14863,7 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
      */
     nextHopSelfVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: pulumi.Input<string>;
     /**
@@ -14726,6 +15009,23 @@ export interface TransportRoutingBgpFeatureIpv6Network {
 
 export interface TransportRoutingBgpFeatureIpv6Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    metricVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: pulumi.Input<string>;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`
      */
@@ -14842,7 +15142,7 @@ export interface TransportRoutingOspfFeatureAreaInterface {
      */
     lsaRetransmitIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     messageDigestKey?: pulumi.Input<string>;
     /**
@@ -15131,12 +15431,12 @@ export interface TransportRoutingOspfv3Ipv4FeatureAreaRange {
 
 export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
     /**
-     * Enable NAT DIA for redistributed routes
+     * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      */
     natDia?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      */
     natDiaVariable?: pulumi.Input<string>;
     /**
@@ -15718,7 +16018,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     addressVariable?: pulumi.Input<string>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string>;
     /**

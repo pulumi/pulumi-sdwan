@@ -83,7 +83,7 @@ public final class GetSystemSecurityFeatureKey {
      */
     private String includeTcpOptionsVariable;
     /**
-     * @return Specify the Key String
+     * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String keyString;
@@ -258,7 +258,7 @@ public final class GetSystemSecurityFeatureKey {
         return this.includeTcpOptionsVariable;
     }
     /**
-     * @return Specify the Key String
+     * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String keyString() {

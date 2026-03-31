@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TransportRoutingOspfv3Ipv4FeatureRedistribute {
     /**
-     * @return Enable NAT DIA for redistributed routes
+     * @return Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      * 
      */
     private @Nullable Boolean natDia;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `protocol` equal to `nat-route`
      * 
      */
     private @Nullable String natDiaVariable;
@@ -49,7 +49,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistribute {
 
     private TransportRoutingOspfv3Ipv4FeatureRedistribute() {}
     /**
-     * @return Enable NAT DIA for redistributed routes
+     * @return Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      * 
      */
@@ -57,7 +57,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistribute {
         return Optional.ofNullable(this.natDia);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `protocol` equal to `nat-route`
      * 
      */
     public Optional<String> natDiaVariable() {

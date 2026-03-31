@@ -6,8 +6,10 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,6 +32,38 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * Enable management region
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="enableManagementRegion")
+    private @Nullable Output<Boolean> enableManagementRegion;
+
+    /**
+     * @return Enable management region
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> enableManagementRegion() {
+        return Optional.ofNullable(this.enableManagementRegion);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="enableManagementRegionVariable")
+    private @Nullable Output<String> enableManagementRegionVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> enableManagementRegionVariable() {
+        return Optional.ofNullable(this.enableManagementRegionVariable);
     }
 
     /**
@@ -65,6 +99,68 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * Variable name
+     * 
+     */
+    @Import(name="gatewayPreferenceVariable")
+    private @Nullable Output<String> gatewayPreferenceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> gatewayPreferenceVariable() {
+        return Optional.ofNullable(this.gatewayPreferenceVariable);
+    }
+
+    /**
+     * List of affinity group preferences for VRF
+     * 
+     */
+    @Import(name="gatewayPreferences")
+    private @Nullable Output<List<Integer>> gatewayPreferences;
+
+    /**
+     * @return List of affinity group preferences for VRF
+     * 
+     */
+    public Optional<Output<List<Integer>>> gatewayPreferences() {
+        return Optional.ofNullable(this.gatewayPreferences);
+    }
+
+    /**
+     * Enable management gateway
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="managementGateway")
+    private @Nullable Output<Boolean> managementGateway;
+
+    /**
+     * @return Enable management gateway
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> managementGateway() {
+        return Optional.ofNullable(this.managementGateway);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="managementGatewayVariable")
+    private @Nullable Output<String> managementGatewayVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> managementGatewayVariable() {
+        return Optional.ofNullable(this.managementGatewayVariable);
+    }
+
+    /**
      * Set BGP community during migration from BGP-core based network
      *   - Range: `1`-`4294967295`
      * 
@@ -94,23 +190,6 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
      */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
-    }
-
-    /**
-     * Set region ID
-     *   - Range: `1`-`63`
-     * 
-     */
-    @Import(name="regionId")
-    private @Nullable Output<Integer> regionId;
-
-    /**
-     * @return Set region ID
-     *   - Range: `1`-`63`
-     * 
-     */
-    public Optional<Output<Integer>> regionId() {
-        return Optional.ofNullable(this.regionId);
     }
 
     /**
@@ -177,19 +256,58 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.secondaryRegionIdVariable);
     }
 
+    /**
+     * VRF name for management region
+     *   - Range: `1`-`65531`
+     * 
+     */
+    @Import(name="vrfId")
+    private @Nullable Output<Integer> vrfId;
+
+    /**
+     * @return VRF name for management region
+     *   - Range: `1`-`65531`
+     * 
+     */
+    public Optional<Output<Integer>> vrfId() {
+        return Optional.ofNullable(this.vrfId);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="vrfIdVariable")
+    private @Nullable Output<String> vrfIdVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> vrfIdVariable() {
+        return Optional.ofNullable(this.vrfIdVariable);
+    }
+
     private SystemMrfFeatureArgs() {}
 
     private SystemMrfFeatureArgs(SystemMrfFeatureArgs $) {
         this.description = $.description;
+        this.enableManagementRegion = $.enableManagementRegion;
+        this.enableManagementRegionVariable = $.enableManagementRegionVariable;
         this.enableMigrationToMrf = $.enableMigrationToMrf;
         this.featureProfileId = $.featureProfileId;
+        this.gatewayPreferenceVariable = $.gatewayPreferenceVariable;
+        this.gatewayPreferences = $.gatewayPreferences;
+        this.managementGateway = $.managementGateway;
+        this.managementGatewayVariable = $.managementGatewayVariable;
         this.migrationBgpCommunity = $.migrationBgpCommunity;
         this.name = $.name;
-        this.regionId = $.regionId;
         this.role = $.role;
         this.roleVariable = $.roleVariable;
         this.secondaryRegionId = $.secondaryRegionId;
         this.secondaryRegionIdVariable = $.secondaryRegionIdVariable;
+        this.vrfId = $.vrfId;
+        this.vrfIdVariable = $.vrfIdVariable;
     }
 
     public static Builder builder() {
@@ -229,6 +347,50 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param enableManagementRegion Enable management region
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableManagementRegion(@Nullable Output<Boolean> enableManagementRegion) {
+            $.enableManagementRegion = enableManagementRegion;
+            return this;
+        }
+
+        /**
+         * @param enableManagementRegion Enable management region
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableManagementRegion(Boolean enableManagementRegion) {
+            return enableManagementRegion(Output.of(enableManagementRegion));
+        }
+
+        /**
+         * @param enableManagementRegionVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableManagementRegionVariable(@Nullable Output<String> enableManagementRegionVariable) {
+            $.enableManagementRegionVariable = enableManagementRegionVariable;
+            return this;
+        }
+
+        /**
+         * @param enableManagementRegionVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableManagementRegionVariable(String enableManagementRegionVariable) {
+            return enableManagementRegionVariable(Output.of(enableManagementRegionVariable));
         }
 
         /**
@@ -276,6 +438,102 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
+         * @param gatewayPreferenceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayPreferenceVariable(@Nullable Output<String> gatewayPreferenceVariable) {
+            $.gatewayPreferenceVariable = gatewayPreferenceVariable;
+            return this;
+        }
+
+        /**
+         * @param gatewayPreferenceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayPreferenceVariable(String gatewayPreferenceVariable) {
+            return gatewayPreferenceVariable(Output.of(gatewayPreferenceVariable));
+        }
+
+        /**
+         * @param gatewayPreferences List of affinity group preferences for VRF
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayPreferences(@Nullable Output<List<Integer>> gatewayPreferences) {
+            $.gatewayPreferences = gatewayPreferences;
+            return this;
+        }
+
+        /**
+         * @param gatewayPreferences List of affinity group preferences for VRF
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayPreferences(List<Integer> gatewayPreferences) {
+            return gatewayPreferences(Output.of(gatewayPreferences));
+        }
+
+        /**
+         * @param gatewayPreferences List of affinity group preferences for VRF
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayPreferences(Integer... gatewayPreferences) {
+            return gatewayPreferences(List.of(gatewayPreferences));
+        }
+
+        /**
+         * @param managementGateway Enable management gateway
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGateway(@Nullable Output<Boolean> managementGateway) {
+            $.managementGateway = managementGateway;
+            return this;
+        }
+
+        /**
+         * @param managementGateway Enable management gateway
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGateway(Boolean managementGateway) {
+            return managementGateway(Output.of(managementGateway));
+        }
+
+        /**
+         * @param managementGatewayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGatewayVariable(@Nullable Output<String> managementGatewayVariable) {
+            $.managementGatewayVariable = managementGatewayVariable;
+            return this;
+        }
+
+        /**
+         * @param managementGatewayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGatewayVariable(String managementGatewayVariable) {
+            return managementGatewayVariable(Output.of(managementGatewayVariable));
+        }
+
+        /**
          * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network
          *   - Range: `1`-`4294967295`
          * 
@@ -317,29 +575,6 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder name(String name) {
             return name(Output.of(name));
-        }
-
-        /**
-         * @param regionId Set region ID
-         *   - Range: `1`-`63`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder regionId(@Nullable Output<Integer> regionId) {
-            $.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * @param regionId Set region ID
-         *   - Range: `1`-`63`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder regionId(Integer regionId) {
-            return regionId(Output.of(regionId));
         }
 
         /**
@@ -428,6 +663,50 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder secondaryRegionIdVariable(String secondaryRegionIdVariable) {
             return secondaryRegionIdVariable(Output.of(secondaryRegionIdVariable));
+        }
+
+        /**
+         * @param vrfId VRF name for management region
+         *   - Range: `1`-`65531`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vrfId(@Nullable Output<Integer> vrfId) {
+            $.vrfId = vrfId;
+            return this;
+        }
+
+        /**
+         * @param vrfId VRF name for management region
+         *   - Range: `1`-`65531`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vrfId(Integer vrfId) {
+            return vrfId(Output.of(vrfId));
+        }
+
+        /**
+         * @param vrfIdVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vrfIdVariable(@Nullable Output<String> vrfIdVariable) {
+            $.vrfIdVariable = vrfIdVariable;
+            return this;
+        }
+
+        /**
+         * @param vrfIdVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vrfIdVariable(String vrfIdVariable) {
+            return vrfIdVariable(Output.of(vrfIdVariable));
         }
 
         public SystemMrfFeatureArgs build() {

@@ -37,6 +37,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ApplicationListPolicyObject{}
 	case "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile":
 		r = &ApplicationPriorityFeatureProfile{}
+	case "sdwan:index/applicationPriorityPolicySettingsPolicy:ApplicationPriorityPolicySettingsPolicy":
+		r = &ApplicationPriorityPolicySettingsPolicy{}
 	case "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy":
 		r = &ApplicationPriorityQosPolicy{}
 	case "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy":
@@ -143,6 +145,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &EigrpFeatureTemplate{}
 	case "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile":
 		r = &EmbeddedSecurityFeatureProfile{}
+	case "sdwan:index/embeddedSecurityNgfwPolicy:EmbeddedSecurityNgfwPolicy":
+		r = &EmbeddedSecurityNgfwPolicy{}
+	case "sdwan:index/embeddedSecurityPolicy:EmbeddedSecurityPolicy":
+		r = &EmbeddedSecurityPolicy{}
 	case "sdwan:index/expandedCommunityListPolicyObject:ExpandedCommunityListPolicyObject":
 		r = &ExpandedCommunityListPolicyObject{}
 	case "sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject":
@@ -245,6 +251,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectSecurityUrlAllowList{}
 	case "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList":
 		r = &PolicyObjectSecurityUrlBlockList{}
+	case "sdwan:index/policyObjectSecurityZone:PolicyObjectSecurityZone":
+		r = &PolicyObjectSecurityZone{}
 	case "sdwan:index/policyObjectSlaClassList:PolicyObjectSlaClassList":
 		r = &PolicyObjectSlaClassList{}
 	case "sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList":
@@ -578,6 +586,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/applicationPriorityPolicySettingsPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/applicationPriorityQosPolicy",
 		&module{version},
 	)
@@ -843,6 +856,16 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/embeddedSecurityNgfwPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/embeddedSecurityPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/expandedCommunityListPolicyObject",
 		&module{version},
 	)
@@ -1094,6 +1117,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/policyObjectSecurityUrlBlockList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityZone",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

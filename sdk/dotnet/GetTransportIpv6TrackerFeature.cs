@@ -145,7 +145,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string EndpointApiUrlVariable;
         /// <summary>
-        /// Endpoint DNS Name
+        /// DNS Name
         /// </summary>
         public readonly string EndpointDnsName;
         /// <summary>
@@ -153,7 +153,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string EndpointDnsNameVariable;
         /// <summary>
-        /// Endpoint IP
+        /// IP
         /// </summary>
         public readonly string EndpointIp;
         /// <summary>
@@ -165,19 +165,23 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string EndpointTrackerType;
         /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string EndpointTrackerTypeVariable;
-        /// <summary>
         /// Feature Profile ID
         /// </summary>
         public readonly string FeatureProfileId;
+        /// <summary>
+        /// Probe Interval
+        /// </summary>
+        public readonly int IcmpInterval;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string IcmpIntervalVariable;
         /// <summary>
         /// The id of the Feature
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Interval
+        /// Probe Interval
         /// </summary>
         public readonly int Interval;
         /// <summary>
@@ -243,9 +247,11 @@ namespace Pulumi.Sdwan
 
             string endpointTrackerType,
 
-            string endpointTrackerTypeVariable,
-
             string featureProfileId,
+
+            int icmpInterval,
+
+            string icmpIntervalVariable,
 
             string id,
 
@@ -281,8 +287,9 @@ namespace Pulumi.Sdwan
             EndpointIp = endpointIp;
             EndpointIpVariable = endpointIpVariable;
             EndpointTrackerType = endpointTrackerType;
-            EndpointTrackerTypeVariable = endpointTrackerTypeVariable;
             FeatureProfileId = featureProfileId;
+            IcmpInterval = icmpInterval;
+            IcmpIntervalVariable = icmpIntervalVariable;
             Id = id;
             Interval = interval;
             IntervalVariable = intervalVariable;

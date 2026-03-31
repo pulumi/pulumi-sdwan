@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Service Routing OSPF Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -45,8 +45,9 @@ namespace Pulumi.Sdwan
     ///         {
     ///             new Sdwan.Inputs.ServiceRoutingOspfFeatureRedistributeArgs
     ///             {
-    ///                 Protocol = "static",
+    ///                 Protocol = "omp",
     ///                 NatDia = true,
+    ///                 TranslateRibMetric = false,
     ///             },
     ///         },
     ///         RouterLsas = new[]

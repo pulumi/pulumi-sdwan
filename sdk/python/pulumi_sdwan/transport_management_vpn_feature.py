@@ -580,7 +580,7 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Transport Management VPN Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -657,7 +657,7 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport Management VPN Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

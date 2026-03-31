@@ -51,6 +51,38 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
     }
 
     /**
+     * Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="bgpCommunityNewFormat")
+    private @Nullable Output<Boolean> bgpCommunityNewFormat;
+
+    /**
+     * @return Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> bgpCommunityNewFormat() {
+        return Optional.ofNullable(this.bgpCommunityNewFormat);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="bgpCommunityNewFormatVariable")
+    private @Nullable Output<String> bgpCommunityNewFormatVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> bgpCommunityNewFormatVariable() {
+        return Optional.ofNullable(this.bgpCommunityNewFormatVariable);
+    }
+
+    /**
      * Configure CDP
      *   - Default value: `true`
      * 
@@ -159,6 +191,70 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
      */
     public Optional<Output<String>> domainLookupVariable() {
         return Optional.ofNullable(this.domainLookupVariable);
+    }
+
+    /**
+     * Set Etherchannel load balance hash algorithm
+     *   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+     * 
+     */
+    @Import(name="etherchannelFlowLoadBalance")
+    private @Nullable Output<String> etherchannelFlowLoadBalance;
+
+    /**
+     * @return Set Etherchannel load balance hash algorithm
+     *   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+     * 
+     */
+    public Optional<Output<String>> etherchannelFlowLoadBalance() {
+        return Optional.ofNullable(this.etherchannelFlowLoadBalance);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="etherchannelFlowLoadBalanceVariable")
+    private @Nullable Output<String> etherchannelFlowLoadBalanceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> etherchannelFlowLoadBalanceVariable() {
+        return Optional.ofNullable(this.etherchannelFlowLoadBalanceVariable);
+    }
+
+    /**
+     * Set Etherchannel vlan manual load balance
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="etherchannelVlanLoadBalance")
+    private @Nullable Output<Boolean> etherchannelVlanLoadBalance;
+
+    /**
+     * @return Set Etherchannel vlan manual load balance
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> etherchannelVlanLoadBalance() {
+        return Optional.ofNullable(this.etherchannelVlanLoadBalance);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="etherchannelVlanLoadBalanceVariable")
+    private @Nullable Output<String> etherchannelVlanLoadBalanceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> etherchannelVlanLoadBalanceVariable() {
+        return Optional.ofNullable(this.etherchannelVlanLoadBalanceVariable);
     }
 
     /**
@@ -366,6 +462,38 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
      */
     public Optional<Output<String>> ipSourceRoutingVariable() {
         return Optional.ofNullable(this.ipSourceRoutingVariable);
+    }
+
+    /**
+     * Set LACP system priority
+     *   - Range: `1`-`65535`
+     * 
+     */
+    @Import(name="lacpSystemPriority")
+    private @Nullable Output<Integer> lacpSystemPriority;
+
+    /**
+     * @return Set LACP system priority
+     *   - Range: `1`-`65535`
+     * 
+     */
+    public Optional<Output<Integer>> lacpSystemPriority() {
+        return Optional.ofNullable(this.lacpSystemPriority);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="lacpSystemPriorityVariable")
+    private @Nullable Output<String> lacpSystemPriorityVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> lacpSystemPriorityVariable() {
+        return Optional.ofNullable(this.lacpSystemPriorityVariable);
     }
 
     /**
@@ -806,6 +934,8 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
     private SystemGlobalFeatureArgs(SystemGlobalFeatureArgs $) {
         this.arpProxy = $.arpProxy;
         this.arpProxyVariable = $.arpProxyVariable;
+        this.bgpCommunityNewFormat = $.bgpCommunityNewFormat;
+        this.bgpCommunityNewFormatVariable = $.bgpCommunityNewFormatVariable;
         this.cdp = $.cdp;
         this.cdpVariable = $.cdpVariable;
         this.consoleLogging = $.consoleLogging;
@@ -813,6 +943,10 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
         this.description = $.description;
         this.domainLookup = $.domainLookup;
         this.domainLookupVariable = $.domainLookupVariable;
+        this.etherchannelFlowLoadBalance = $.etherchannelFlowLoadBalance;
+        this.etherchannelFlowLoadBalanceVariable = $.etherchannelFlowLoadBalanceVariable;
+        this.etherchannelVlanLoadBalance = $.etherchannelVlanLoadBalance;
+        this.etherchannelVlanLoadBalanceVariable = $.etherchannelVlanLoadBalanceVariable;
         this.featureProfileId = $.featureProfileId;
         this.ftpPassive = $.ftpPassive;
         this.ftpPassiveVariable = $.ftpPassiveVariable;
@@ -826,6 +960,8 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
         this.ignoreBootpVariable = $.ignoreBootpVariable;
         this.ipSourceRouting = $.ipSourceRouting;
         this.ipSourceRoutingVariable = $.ipSourceRoutingVariable;
+        this.lacpSystemPriority = $.lacpSystemPriority;
+        this.lacpSystemPriorityVariable = $.lacpSystemPriorityVariable;
         this.lineVty = $.lineVty;
         this.lineVtyVariable = $.lineVtyVariable;
         this.lldp = $.lldp;
@@ -915,6 +1051,50 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
          */
         public Builder arpProxyVariable(String arpProxyVariable) {
             return arpProxyVariable(Output.of(arpProxyVariable));
+        }
+
+        /**
+         * @param bgpCommunityNewFormat Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bgpCommunityNewFormat(@Nullable Output<Boolean> bgpCommunityNewFormat) {
+            $.bgpCommunityNewFormat = bgpCommunityNewFormat;
+            return this;
+        }
+
+        /**
+         * @param bgpCommunityNewFormat Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bgpCommunityNewFormat(Boolean bgpCommunityNewFormat) {
+            return bgpCommunityNewFormat(Output.of(bgpCommunityNewFormat));
+        }
+
+        /**
+         * @param bgpCommunityNewFormatVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bgpCommunityNewFormatVariable(@Nullable Output<String> bgpCommunityNewFormatVariable) {
+            $.bgpCommunityNewFormatVariable = bgpCommunityNewFormatVariable;
+            return this;
+        }
+
+        /**
+         * @param bgpCommunityNewFormatVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bgpCommunityNewFormatVariable(String bgpCommunityNewFormatVariable) {
+            return bgpCommunityNewFormatVariable(Output.of(bgpCommunityNewFormatVariable));
         }
 
         /**
@@ -1068,6 +1248,94 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
          */
         public Builder domainLookupVariable(String domainLookupVariable) {
             return domainLookupVariable(Output.of(domainLookupVariable));
+        }
+
+        /**
+         * @param etherchannelFlowLoadBalance Set Etherchannel load balance hash algorithm
+         *   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelFlowLoadBalance(@Nullable Output<String> etherchannelFlowLoadBalance) {
+            $.etherchannelFlowLoadBalance = etherchannelFlowLoadBalance;
+            return this;
+        }
+
+        /**
+         * @param etherchannelFlowLoadBalance Set Etherchannel load balance hash algorithm
+         *   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelFlowLoadBalance(String etherchannelFlowLoadBalance) {
+            return etherchannelFlowLoadBalance(Output.of(etherchannelFlowLoadBalance));
+        }
+
+        /**
+         * @param etherchannelFlowLoadBalanceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelFlowLoadBalanceVariable(@Nullable Output<String> etherchannelFlowLoadBalanceVariable) {
+            $.etherchannelFlowLoadBalanceVariable = etherchannelFlowLoadBalanceVariable;
+            return this;
+        }
+
+        /**
+         * @param etherchannelFlowLoadBalanceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelFlowLoadBalanceVariable(String etherchannelFlowLoadBalanceVariable) {
+            return etherchannelFlowLoadBalanceVariable(Output.of(etherchannelFlowLoadBalanceVariable));
+        }
+
+        /**
+         * @param etherchannelVlanLoadBalance Set Etherchannel vlan manual load balance
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelVlanLoadBalance(@Nullable Output<Boolean> etherchannelVlanLoadBalance) {
+            $.etherchannelVlanLoadBalance = etherchannelVlanLoadBalance;
+            return this;
+        }
+
+        /**
+         * @param etherchannelVlanLoadBalance Set Etherchannel vlan manual load balance
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelVlanLoadBalance(Boolean etherchannelVlanLoadBalance) {
+            return etherchannelVlanLoadBalance(Output.of(etherchannelVlanLoadBalance));
+        }
+
+        /**
+         * @param etherchannelVlanLoadBalanceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelVlanLoadBalanceVariable(@Nullable Output<String> etherchannelVlanLoadBalanceVariable) {
+            $.etherchannelVlanLoadBalanceVariable = etherchannelVlanLoadBalanceVariable;
+            return this;
+        }
+
+        /**
+         * @param etherchannelVlanLoadBalanceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etherchannelVlanLoadBalanceVariable(String etherchannelVlanLoadBalanceVariable) {
+            return etherchannelVlanLoadBalanceVariable(Output.of(etherchannelVlanLoadBalanceVariable));
         }
 
         /**
@@ -1353,6 +1621,50 @@ public final class SystemGlobalFeatureArgs extends com.pulumi.resources.Resource
          */
         public Builder ipSourceRoutingVariable(String ipSourceRoutingVariable) {
             return ipSourceRoutingVariable(Output.of(ipSourceRoutingVariable));
+        }
+
+        /**
+         * @param lacpSystemPriority Set LACP system priority
+         *   - Range: `1`-`65535`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lacpSystemPriority(@Nullable Output<Integer> lacpSystemPriority) {
+            $.lacpSystemPriority = lacpSystemPriority;
+            return this;
+        }
+
+        /**
+         * @param lacpSystemPriority Set LACP system priority
+         *   - Range: `1`-`65535`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lacpSystemPriority(Integer lacpSystemPriority) {
+            return lacpSystemPriority(Output.of(lacpSystemPriority));
+        }
+
+        /**
+         * @param lacpSystemPriorityVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lacpSystemPriorityVariable(@Nullable Output<String> lacpSystemPriorityVariable) {
+            $.lacpSystemPriorityVariable = lacpSystemPriorityVariable;
+            return this;
+        }
+
+        /**
+         * @param lacpSystemPriorityVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lacpSystemPriorityVariable(String lacpSystemPriorityVariable) {
+            return lacpSystemPriorityVariable(Output.of(lacpSystemPriorityVariable));
         }
 
         /**

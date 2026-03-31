@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a System OMP Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -64,6 +64,10 @@ import (
 //				SiteTypes: pulumi.StringArray{
 //					pulumi.String("type-1"),
 //				},
+//				SiteTypesForTransportGateways: pulumi.StringArray{
+//					pulumi.String("type-1"),
+//				},
+//				AspathAutoTranslation: pulumi.Bool(true),
 //			})
 //			if err != nil {
 //				return err
@@ -132,7 +136,7 @@ type SystemOmpFeature struct {
 	// Variable name
 	AdvertiseIpv6BgpVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6BgpVariable"`
 	// Connected
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Connected pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Connected"`
 	// Variable name
 	AdvertiseIpv6ConnectedVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6ConnectedVariable"`
@@ -157,7 +161,7 @@ type SystemOmpFeature struct {
 	// Variable name
 	AdvertiseIpv6OspfVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6OspfVariable"`
 	// Static
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Static pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Static"`
 	// Variable name
 	AdvertiseIpv6StaticVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6StaticVariable"`
@@ -167,6 +171,11 @@ type SystemOmpFeature struct {
 	AdvertisementInterval pulumi.IntPtrOutput `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrOutput `pulumi:"advertisementIntervalVariable"`
+	// Enable BGP AS Path Auto-Translation
+	//   - Default value: `false`
+	AspathAutoTranslation pulumi.BoolPtrOutput `pulumi:"aspathAutoTranslation"`
+	// Variable name
+	AspathAutoTranslationVariable pulumi.StringPtrOutput `pulumi:"aspathAutoTranslationVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
@@ -234,8 +243,12 @@ type SystemOmpFeature struct {
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// Site Types
+	// Site Types for 20.12 backward compatiblity
 	SiteTypes pulumi.StringArrayOutput `pulumi:"siteTypes"`
+	// Variable name
+	SiteTypesForTransportGatewayVariable pulumi.StringPtrOutput `pulumi:"siteTypesForTransportGatewayVariable"`
+	// Site Types
+	SiteTypesForTransportGateways pulumi.StringArrayOutput `pulumi:"siteTypesForTransportGateways"`
 	// Variable name
 	SiteTypesVariable pulumi.StringPtrOutput `pulumi:"siteTypesVariable"`
 	// Transport Gateway Path Behavior
@@ -326,7 +339,7 @@ type systemOmpFeatureState struct {
 	// Variable name
 	AdvertiseIpv6BgpVariable *string `pulumi:"advertiseIpv6BgpVariable"`
 	// Connected
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Connected *bool `pulumi:"advertiseIpv6Connected"`
 	// Variable name
 	AdvertiseIpv6ConnectedVariable *string `pulumi:"advertiseIpv6ConnectedVariable"`
@@ -351,7 +364,7 @@ type systemOmpFeatureState struct {
 	// Variable name
 	AdvertiseIpv6OspfVariable *string `pulumi:"advertiseIpv6OspfVariable"`
 	// Static
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Static *bool `pulumi:"advertiseIpv6Static"`
 	// Variable name
 	AdvertiseIpv6StaticVariable *string `pulumi:"advertiseIpv6StaticVariable"`
@@ -361,6 +374,11 @@ type systemOmpFeatureState struct {
 	AdvertisementInterval *int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable *string `pulumi:"advertisementIntervalVariable"`
+	// Enable BGP AS Path Auto-Translation
+	//   - Default value: `false`
+	AspathAutoTranslation *bool `pulumi:"aspathAutoTranslation"`
+	// Variable name
+	AspathAutoTranslationVariable *string `pulumi:"aspathAutoTranslationVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
@@ -428,8 +446,12 @@ type systemOmpFeatureState struct {
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Site Types
+	// Site Types for 20.12 backward compatiblity
 	SiteTypes []string `pulumi:"siteTypes"`
+	// Variable name
+	SiteTypesForTransportGatewayVariable *string `pulumi:"siteTypesForTransportGatewayVariable"`
+	// Site Types
+	SiteTypesForTransportGateways []string `pulumi:"siteTypesForTransportGateways"`
 	// Variable name
 	SiteTypesVariable *string `pulumi:"siteTypesVariable"`
 	// Transport Gateway Path Behavior
@@ -488,7 +510,7 @@ type SystemOmpFeatureState struct {
 	// Variable name
 	AdvertiseIpv6BgpVariable pulumi.StringPtrInput
 	// Connected
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Connected pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6ConnectedVariable pulumi.StringPtrInput
@@ -513,7 +535,7 @@ type SystemOmpFeatureState struct {
 	// Variable name
 	AdvertiseIpv6OspfVariable pulumi.StringPtrInput
 	// Static
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Static pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6StaticVariable pulumi.StringPtrInput
@@ -523,6 +545,11 @@ type SystemOmpFeatureState struct {
 	AdvertisementInterval pulumi.IntPtrInput
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrInput
+	// Enable BGP AS Path Auto-Translation
+	//   - Default value: `false`
+	AspathAutoTranslation pulumi.BoolPtrInput
+	// Variable name
+	AspathAutoTranslationVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Set maximum number of OMP paths to install in cEdge route table
@@ -590,8 +617,12 @@ type SystemOmpFeatureState struct {
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Site Types
+	// Site Types for 20.12 backward compatiblity
 	SiteTypes pulumi.StringArrayInput
+	// Variable name
+	SiteTypesForTransportGatewayVariable pulumi.StringPtrInput
+	// Site Types
+	SiteTypesForTransportGateways pulumi.StringArrayInput
 	// Variable name
 	SiteTypesVariable pulumi.StringPtrInput
 	// Transport Gateway Path Behavior
@@ -654,7 +685,7 @@ type systemOmpFeatureArgs struct {
 	// Variable name
 	AdvertiseIpv6BgpVariable *string `pulumi:"advertiseIpv6BgpVariable"`
 	// Connected
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Connected *bool `pulumi:"advertiseIpv6Connected"`
 	// Variable name
 	AdvertiseIpv6ConnectedVariable *string `pulumi:"advertiseIpv6ConnectedVariable"`
@@ -679,7 +710,7 @@ type systemOmpFeatureArgs struct {
 	// Variable name
 	AdvertiseIpv6OspfVariable *string `pulumi:"advertiseIpv6OspfVariable"`
 	// Static
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Static *bool `pulumi:"advertiseIpv6Static"`
 	// Variable name
 	AdvertiseIpv6StaticVariable *string `pulumi:"advertiseIpv6StaticVariable"`
@@ -689,6 +720,11 @@ type systemOmpFeatureArgs struct {
 	AdvertisementInterval *int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable *string `pulumi:"advertisementIntervalVariable"`
+	// Enable BGP AS Path Auto-Translation
+	//   - Default value: `false`
+	AspathAutoTranslation *bool `pulumi:"aspathAutoTranslation"`
+	// Variable name
+	AspathAutoTranslationVariable *string `pulumi:"aspathAutoTranslationVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
@@ -756,8 +792,12 @@ type systemOmpFeatureArgs struct {
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Site Types
+	// Site Types for 20.12 backward compatiblity
 	SiteTypes []string `pulumi:"siteTypes"`
+	// Variable name
+	SiteTypesForTransportGatewayVariable *string `pulumi:"siteTypesForTransportGatewayVariable"`
+	// Site Types
+	SiteTypesForTransportGateways []string `pulumi:"siteTypesForTransportGateways"`
 	// Variable name
 	SiteTypesVariable *string `pulumi:"siteTypesVariable"`
 	// Transport Gateway Path Behavior
@@ -815,7 +855,7 @@ type SystemOmpFeatureArgs struct {
 	// Variable name
 	AdvertiseIpv6BgpVariable pulumi.StringPtrInput
 	// Connected
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Connected pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6ConnectedVariable pulumi.StringPtrInput
@@ -840,7 +880,7 @@ type SystemOmpFeatureArgs struct {
 	// Variable name
 	AdvertiseIpv6OspfVariable pulumi.StringPtrInput
 	// Static
-	//   - Default value: `false`
+	//   - Default value: `true`
 	AdvertiseIpv6Static pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6StaticVariable pulumi.StringPtrInput
@@ -850,6 +890,11 @@ type SystemOmpFeatureArgs struct {
 	AdvertisementInterval pulumi.IntPtrInput
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrInput
+	// Enable BGP AS Path Auto-Translation
+	//   - Default value: `false`
+	AspathAutoTranslation pulumi.BoolPtrInput
+	// Variable name
+	AspathAutoTranslationVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Set maximum number of OMP paths to install in cEdge route table
@@ -917,8 +962,12 @@ type SystemOmpFeatureArgs struct {
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Site Types
+	// Site Types for 20.12 backward compatiblity
 	SiteTypes pulumi.StringArrayInput
+	// Variable name
+	SiteTypesForTransportGatewayVariable pulumi.StringPtrInput
+	// Site Types
+	SiteTypesForTransportGateways pulumi.StringArrayInput
 	// Variable name
 	SiteTypesVariable pulumi.StringPtrInput
 	// Transport Gateway Path Behavior
@@ -1115,7 +1164,7 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6BgpVariable() pulumi.StringPtrOutpu
 }
 
 // Connected
-//   - Default value: `false`
+//   - Default value: `true`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Connected() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Connected }).(pulumi.BoolPtrOutput)
 }
@@ -1170,7 +1219,7 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6OspfVariable() pulumi.StringPtrOutp
 }
 
 // Static
-//   - Default value: `false`
+//   - Default value: `true`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Static() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Static }).(pulumi.BoolPtrOutput)
 }
@@ -1190,6 +1239,17 @@ func (o SystemOmpFeatureOutput) AdvertisementInterval() pulumi.IntPtrOutput {
 // Variable name
 func (o SystemOmpFeatureOutput) AdvertisementIntervalVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertisementIntervalVariable }).(pulumi.StringPtrOutput)
+}
+
+// Enable BGP AS Path Auto-Translation
+//   - Default value: `false`
+func (o SystemOmpFeatureOutput) AspathAutoTranslation() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AspathAutoTranslation }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name
+func (o SystemOmpFeatureOutput) AspathAutoTranslationVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AspathAutoTranslationVariable }).(pulumi.StringPtrOutput)
 }
 
 // The description of the Feature
@@ -1334,9 +1394,19 @@ func (o SystemOmpFeatureOutput) ShutdownVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// Site Types
+// Site Types for 20.12 backward compatiblity
 func (o SystemOmpFeatureOutput) SiteTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringArrayOutput { return v.SiteTypes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o SystemOmpFeatureOutput) SiteTypesForTransportGatewayVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.SiteTypesForTransportGatewayVariable }).(pulumi.StringPtrOutput)
+}
+
+// Site Types
+func (o SystemOmpFeatureOutput) SiteTypesForTransportGateways() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringArrayOutput { return v.SiteTypesForTransportGateways }).(pulumi.StringArrayOutput)
 }
 
 // Variable name

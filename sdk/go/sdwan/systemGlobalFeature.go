@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a System Global Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -30,32 +30,36 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewSystemGlobalFeature(ctx, "example", &sdwan.SystemGlobalFeatureArgs{
-//				Name:               pulumi.String("Example"),
-//				Description:        pulumi.String("My Example"),
-//				FeatureProfileId:   pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
-//				HttpServer:         pulumi.Bool(false),
-//				HttpsServer:        pulumi.Bool(false),
-//				FtpPassive:         pulumi.Bool(false),
-//				DomainLookup:       pulumi.Bool(false),
-//				ArpProxy:           pulumi.Bool(false),
-//				RshRcp:             pulumi.Bool(false),
-//				LineVty:            pulumi.Bool(false),
-//				Cdp:                pulumi.Bool(true),
-//				Lldp:               pulumi.Bool(true),
-//				SourceInterface:    pulumi.String("GigabitEthernet0/0/1"),
-//				TcpKeepalivesIn:    pulumi.Bool(true),
-//				TcpKeepalivesOut:   pulumi.Bool(true),
-//				TcpSmallServers:    pulumi.Bool(false),
-//				UdpSmallServers:    pulumi.Bool(false),
-//				ConsoleLogging:     pulumi.Bool(true),
-//				IpSourceRouting:    pulumi.Bool(false),
-//				VtyLineLogging:     pulumi.Bool(false),
-//				SnmpIfindexPersist: pulumi.Bool(true),
-//				IgnoreBootp:        pulumi.Bool(true),
-//				Nat64UdpTimeout:    pulumi.Int(300),
-//				Nat64TcpTimeout:    pulumi.Int(3600),
-//				HttpAuthentication: pulumi.String("aaa"),
-//				SshVersion:         pulumi.String("2"),
+//				Name:                        pulumi.String("Example"),
+//				Description:                 pulumi.String("My Example"),
+//				FeatureProfileId:            pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				HttpServer:                  pulumi.Bool(false),
+//				HttpsServer:                 pulumi.Bool(false),
+//				FtpPassive:                  pulumi.Bool(false),
+//				DomainLookup:                pulumi.Bool(false),
+//				ArpProxy:                    pulumi.Bool(false),
+//				RshRcp:                      pulumi.Bool(false),
+//				LineVty:                     pulumi.Bool(false),
+//				Cdp:                         pulumi.Bool(true),
+//				Lldp:                        pulumi.Bool(true),
+//				SourceInterface:             pulumi.String("GigabitEthernet0/0/1"),
+//				TcpKeepalivesIn:             pulumi.Bool(true),
+//				TcpKeepalivesOut:            pulumi.Bool(true),
+//				TcpSmallServers:             pulumi.Bool(false),
+//				UdpSmallServers:             pulumi.Bool(false),
+//				ConsoleLogging:              pulumi.Bool(true),
+//				IpSourceRouting:             pulumi.Bool(false),
+//				VtyLineLogging:              pulumi.Bool(false),
+//				SnmpIfindexPersist:          pulumi.Bool(true),
+//				IgnoreBootp:                 pulumi.Bool(true),
+//				Nat64UdpTimeout:             pulumi.Int(300),
+//				Nat64TcpTimeout:             pulumi.Int(3600),
+//				HttpAuthentication:          pulumi.String("aaa"),
+//				SshVersion:                  pulumi.String("2"),
+//				LacpSystemPriority:          pulumi.Int(1234),
+//				EtherchannelFlowLoadBalance: pulumi.String("src-ip"),
+//				EtherchannelVlanLoadBalance: pulumi.Bool(true),
+//				BgpCommunityNewFormat:       pulumi.Bool(true),
 //			})
 //			if err != nil {
 //				return err
@@ -83,6 +87,11 @@ type SystemGlobalFeature struct {
 	ArpProxy pulumi.BoolPtrOutput `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrOutput `pulumi:"arpProxyVariable"`
+	// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+	//   - Default value: `false`
+	BgpCommunityNewFormat pulumi.BoolPtrOutput `pulumi:"bgpCommunityNewFormat"`
+	// Variable name
+	BgpCommunityNewFormatVariable pulumi.StringPtrOutput `pulumi:"bgpCommunityNewFormatVariable"`
 	// Configure CDP
 	//   - Default value: `true`
 	Cdp pulumi.BoolPtrOutput `pulumi:"cdp"`
@@ -100,6 +109,16 @@ type SystemGlobalFeature struct {
 	DomainLookup pulumi.BoolPtrOutput `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrOutput `pulumi:"domainLookupVariable"`
+	// Set Etherchannel load balance hash algorithm
+	//   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+	EtherchannelFlowLoadBalance pulumi.StringPtrOutput `pulumi:"etherchannelFlowLoadBalance"`
+	// Variable name
+	EtherchannelFlowLoadBalanceVariable pulumi.StringPtrOutput `pulumi:"etherchannelFlowLoadBalanceVariable"`
+	// Set Etherchannel vlan manual load balance
+	//   - Default value: `false`
+	EtherchannelVlanLoadBalance pulumi.BoolPtrOutput `pulumi:"etherchannelVlanLoadBalance"`
+	// Variable name
+	EtherchannelVlanLoadBalanceVariable pulumi.StringPtrOutput `pulumi:"etherchannelVlanLoadBalanceVariable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Set Passive FTP
@@ -132,6 +151,11 @@ type SystemGlobalFeature struct {
 	IpSourceRouting pulumi.BoolPtrOutput `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrOutput `pulumi:"ipSourceRoutingVariable"`
+	// Set LACP system priority
+	//   - Range: `1`-`65535`
+	LacpSystemPriority pulumi.IntPtrOutput `pulumi:"lacpSystemPriority"`
+	// Variable name
+	LacpSystemPriorityVariable pulumi.StringPtrOutput `pulumi:"lacpSystemPriorityVariable"`
 	// Configure Telnet (Outbound)
 	//   - Default value: `false`
 	LineVty pulumi.BoolPtrOutput `pulumi:"lineVty"`
@@ -242,6 +266,11 @@ type systemGlobalFeatureState struct {
 	ArpProxy *bool `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable *string `pulumi:"arpProxyVariable"`
+	// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+	//   - Default value: `false`
+	BgpCommunityNewFormat *bool `pulumi:"bgpCommunityNewFormat"`
+	// Variable name
+	BgpCommunityNewFormatVariable *string `pulumi:"bgpCommunityNewFormatVariable"`
 	// Configure CDP
 	//   - Default value: `true`
 	Cdp *bool `pulumi:"cdp"`
@@ -259,6 +288,16 @@ type systemGlobalFeatureState struct {
 	DomainLookup *bool `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable *string `pulumi:"domainLookupVariable"`
+	// Set Etherchannel load balance hash algorithm
+	//   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+	EtherchannelFlowLoadBalance *string `pulumi:"etherchannelFlowLoadBalance"`
+	// Variable name
+	EtherchannelFlowLoadBalanceVariable *string `pulumi:"etherchannelFlowLoadBalanceVariable"`
+	// Set Etherchannel vlan manual load balance
+	//   - Default value: `false`
+	EtherchannelVlanLoadBalance *bool `pulumi:"etherchannelVlanLoadBalance"`
+	// Variable name
+	EtherchannelVlanLoadBalanceVariable *string `pulumi:"etherchannelVlanLoadBalanceVariable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// Set Passive FTP
@@ -291,6 +330,11 @@ type systemGlobalFeatureState struct {
 	IpSourceRouting *bool `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable *string `pulumi:"ipSourceRoutingVariable"`
+	// Set LACP system priority
+	//   - Range: `1`-`65535`
+	LacpSystemPriority *int `pulumi:"lacpSystemPriority"`
+	// Variable name
+	LacpSystemPriorityVariable *string `pulumi:"lacpSystemPriorityVariable"`
 	// Configure Telnet (Outbound)
 	//   - Default value: `false`
 	LineVty *bool `pulumi:"lineVty"`
@@ -369,6 +413,11 @@ type SystemGlobalFeatureState struct {
 	ArpProxy pulumi.BoolPtrInput
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrInput
+	// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+	//   - Default value: `false`
+	BgpCommunityNewFormat pulumi.BoolPtrInput
+	// Variable name
+	BgpCommunityNewFormatVariable pulumi.StringPtrInput
 	// Configure CDP
 	//   - Default value: `true`
 	Cdp pulumi.BoolPtrInput
@@ -386,6 +435,16 @@ type SystemGlobalFeatureState struct {
 	DomainLookup pulumi.BoolPtrInput
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrInput
+	// Set Etherchannel load balance hash algorithm
+	//   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+	EtherchannelFlowLoadBalance pulumi.StringPtrInput
+	// Variable name
+	EtherchannelFlowLoadBalanceVariable pulumi.StringPtrInput
+	// Set Etherchannel vlan manual load balance
+	//   - Default value: `false`
+	EtherchannelVlanLoadBalance pulumi.BoolPtrInput
+	// Variable name
+	EtherchannelVlanLoadBalanceVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
 	// Set Passive FTP
@@ -418,6 +477,11 @@ type SystemGlobalFeatureState struct {
 	IpSourceRouting pulumi.BoolPtrInput
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrInput
+	// Set LACP system priority
+	//   - Range: `1`-`65535`
+	LacpSystemPriority pulumi.IntPtrInput
+	// Variable name
+	LacpSystemPriorityVariable pulumi.StringPtrInput
 	// Configure Telnet (Outbound)
 	//   - Default value: `false`
 	LineVty pulumi.BoolPtrInput
@@ -500,6 +564,11 @@ type systemGlobalFeatureArgs struct {
 	ArpProxy *bool `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable *string `pulumi:"arpProxyVariable"`
+	// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+	//   - Default value: `false`
+	BgpCommunityNewFormat *bool `pulumi:"bgpCommunityNewFormat"`
+	// Variable name
+	BgpCommunityNewFormatVariable *string `pulumi:"bgpCommunityNewFormatVariable"`
 	// Configure CDP
 	//   - Default value: `true`
 	Cdp *bool `pulumi:"cdp"`
@@ -517,6 +586,16 @@ type systemGlobalFeatureArgs struct {
 	DomainLookup *bool `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable *string `pulumi:"domainLookupVariable"`
+	// Set Etherchannel load balance hash algorithm
+	//   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+	EtherchannelFlowLoadBalance *string `pulumi:"etherchannelFlowLoadBalance"`
+	// Variable name
+	EtherchannelFlowLoadBalanceVariable *string `pulumi:"etherchannelFlowLoadBalanceVariable"`
+	// Set Etherchannel vlan manual load balance
+	//   - Default value: `false`
+	EtherchannelVlanLoadBalance *bool `pulumi:"etherchannelVlanLoadBalance"`
+	// Variable name
+	EtherchannelVlanLoadBalanceVariable *string `pulumi:"etherchannelVlanLoadBalanceVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Set Passive FTP
@@ -549,6 +628,11 @@ type systemGlobalFeatureArgs struct {
 	IpSourceRouting *bool `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable *string `pulumi:"ipSourceRoutingVariable"`
+	// Set LACP system priority
+	//   - Range: `1`-`65535`
+	LacpSystemPriority *int `pulumi:"lacpSystemPriority"`
+	// Variable name
+	LacpSystemPriorityVariable *string `pulumi:"lacpSystemPriorityVariable"`
 	// Configure Telnet (Outbound)
 	//   - Default value: `false`
 	LineVty *bool `pulumi:"lineVty"`
@@ -626,6 +710,11 @@ type SystemGlobalFeatureArgs struct {
 	ArpProxy pulumi.BoolPtrInput
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrInput
+	// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+	//   - Default value: `false`
+	BgpCommunityNewFormat pulumi.BoolPtrInput
+	// Variable name
+	BgpCommunityNewFormatVariable pulumi.StringPtrInput
 	// Configure CDP
 	//   - Default value: `true`
 	Cdp pulumi.BoolPtrInput
@@ -643,6 +732,16 @@ type SystemGlobalFeatureArgs struct {
 	DomainLookup pulumi.BoolPtrInput
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrInput
+	// Set Etherchannel load balance hash algorithm
+	//   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+	EtherchannelFlowLoadBalance pulumi.StringPtrInput
+	// Variable name
+	EtherchannelFlowLoadBalanceVariable pulumi.StringPtrInput
+	// Set Etherchannel vlan manual load balance
+	//   - Default value: `false`
+	EtherchannelVlanLoadBalance pulumi.BoolPtrInput
+	// Variable name
+	EtherchannelVlanLoadBalanceVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
 	// Set Passive FTP
@@ -675,6 +774,11 @@ type SystemGlobalFeatureArgs struct {
 	IpSourceRouting pulumi.BoolPtrInput
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrInput
+	// Set LACP system priority
+	//   - Range: `1`-`65535`
+	LacpSystemPriority pulumi.IntPtrInput
+	// Variable name
+	LacpSystemPriorityVariable pulumi.StringPtrInput
 	// Configure Telnet (Outbound)
 	//   - Default value: `false`
 	LineVty pulumi.BoolPtrInput
@@ -843,6 +947,17 @@ func (o SystemGlobalFeatureOutput) ArpProxyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.ArpProxyVariable }).(pulumi.StringPtrOutput)
 }
 
+// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+//   - Default value: `false`
+func (o SystemGlobalFeatureOutput) BgpCommunityNewFormat() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.BgpCommunityNewFormat }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name
+func (o SystemGlobalFeatureOutput) BgpCommunityNewFormatVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.BgpCommunityNewFormatVariable }).(pulumi.StringPtrOutput)
+}
+
 // Configure CDP
 //   - Default value: `true`
 func (o SystemGlobalFeatureOutput) Cdp() pulumi.BoolPtrOutput {
@@ -879,6 +994,28 @@ func (o SystemGlobalFeatureOutput) DomainLookup() pulumi.BoolPtrOutput {
 // Variable name
 func (o SystemGlobalFeatureOutput) DomainLookupVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.DomainLookupVariable }).(pulumi.StringPtrOutput)
+}
+
+// Set Etherchannel load balance hash algorithm
+//   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+func (o SystemGlobalFeatureOutput) EtherchannelFlowLoadBalance() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.EtherchannelFlowLoadBalance }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o SystemGlobalFeatureOutput) EtherchannelFlowLoadBalanceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.EtherchannelFlowLoadBalanceVariable }).(pulumi.StringPtrOutput)
+}
+
+// Set Etherchannel vlan manual load balance
+//   - Default value: `false`
+func (o SystemGlobalFeatureOutput) EtherchannelVlanLoadBalance() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.EtherchannelVlanLoadBalance }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name
+func (o SystemGlobalFeatureOutput) EtherchannelVlanLoadBalanceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.EtherchannelVlanLoadBalanceVariable }).(pulumi.StringPtrOutput)
 }
 
 // Feature Profile ID
@@ -950,6 +1087,17 @@ func (o SystemGlobalFeatureOutput) IpSourceRouting() pulumi.BoolPtrOutput {
 // Variable name
 func (o SystemGlobalFeatureOutput) IpSourceRoutingVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.IpSourceRoutingVariable }).(pulumi.StringPtrOutput)
+}
+
+// Set LACP system priority
+//   - Range: `1`-`65535`
+func (o SystemGlobalFeatureOutput) LacpSystemPriority() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.IntPtrOutput { return v.LacpSystemPriority }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SystemGlobalFeatureOutput) LacpSystemPriorityVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.LacpSystemPriorityVariable }).(pulumi.StringPtrOutput)
 }
 
 // Configure Telnet (Outbound)

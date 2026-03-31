@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Transport Route Policy Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -43,7 +43,7 @@ namespace Pulumi.Sdwan
     ///                     {
     ///                         AsPathPrepend = new[]
     ///                         {
-    ///                             65521,
+    ///                             "65521",
     ///                         },
     ///                         CommunityAdditive = false,
     ///                         Community = new[]

@@ -46,6 +46,8 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -158,6 +160,11 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.int] mtu: Interface MTU <68...2000>, in bytes
                  - Range: `576`-`9216`
                  - Default value: `1500`
@@ -284,7 +291,7 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `spoke`, `hub`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -335,6 +342,10 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
             pulumi.set(__self__, "ipv6_address", ipv6_address)
         if ipv6_address_variable is not None:
             pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if mrf_core_region_type is not None:
+            pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
+        if mrf_enable_core_region is not None:
+            pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
         if mtu_variable is not None:
@@ -792,6 +803,33 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     @ipv6_address_variable.setter
     def ipv6_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "ipv6_address_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Core Region
+          - Choices: `core-shared`, `core`
+          - Default value: `core-shared`
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @mrf_core_region_type.setter
+    def mrf_core_region_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "mrf_core_region_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Core Region
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
+
+    @mrf_enable_core_region.setter
+    def mrf_enable_core_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "mrf_enable_core_region", value)
 
     @_builtins.property
     @pulumi.getter
@@ -1814,7 +1852,7 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set tunnel QoS mode
-          - Choices: `spoke`, `hub`
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -1862,6 +1900,8 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1975,6 +2015,11 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.int] mtu: Interface MTU <68...2000>, in bytes
                  - Range: `576`-`9216`
                  - Default value: `1500`
@@ -2102,7 +2147,7 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `spoke`, `hub`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -2154,6 +2199,10 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
             pulumi.set(__self__, "ipv6_address", ipv6_address)
         if ipv6_address_variable is not None:
             pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if mrf_core_region_type is not None:
+            pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
+        if mrf_enable_core_region is not None:
+            pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
         if mtu is not None:
             pulumi.set(__self__, "mtu", mtu)
         if mtu_variable is not None:
@@ -2603,6 +2652,33 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
     @ipv6_address_variable.setter
     def ipv6_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "ipv6_address_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Core Region
+          - Choices: `core-shared`, `core`
+          - Default value: `core-shared`
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @mrf_core_region_type.setter
+    def mrf_core_region_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "mrf_core_region_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Core Region
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
+
+    @mrf_enable_core_region.setter
+    def mrf_enable_core_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "mrf_enable_core_region", value)
 
     @_builtins.property
     @pulumi.getter
@@ -3637,7 +3713,7 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set tunnel QoS mode
-          - Choices: `spoke`, `hub`
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -3700,6 +3776,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -3787,7 +3865,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Transport WAN VPN Interface T1 E1 Serial Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -3812,7 +3890,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
             tunnel_interface=True,
             per_tunnel_qos=True,
             per_tunnel_qos_aggregator=False,
-            tunnel_qos_mode="hub",
+            tunnel_qos_mode="spoke",
             tunnel_interface_color="mpls",
             tunnel_interface_restrict=True,
             tunnel_interface_groups=42949672,
@@ -3896,6 +3974,11 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.int] mtu: Interface MTU <68...2000>, in bytes
                  - Range: `576`-`9216`
                  - Default value: `1500`
@@ -4023,7 +4106,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `spoke`, `hub`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         """
         ...
@@ -4034,7 +4117,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport WAN VPN Interface T1 E1 Serial Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -4059,7 +4142,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
             tunnel_interface=True,
             per_tunnel_qos=True,
             per_tunnel_qos_aggregator=False,
-            tunnel_qos_mode="hub",
+            tunnel_qos_mode="spoke",
             tunnel_interface_color="mpls",
             tunnel_interface_restrict=True,
             tunnel_interface_groups=42949672,
@@ -4155,6 +4238,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -4274,6 +4359,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
             __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
             __props__.__dict__["ipv6_address"] = ipv6_address
             __props__.__dict__["ipv6_address_variable"] = ipv6_address_variable
+            __props__.__dict__["mrf_core_region_type"] = mrf_core_region_type
+            __props__.__dict__["mrf_enable_core_region"] = mrf_enable_core_region
             __props__.__dict__["mtu"] = mtu
             __props__.__dict__["mtu_variable"] = mtu_variable
             __props__.__dict__["name"] = name
@@ -4395,6 +4482,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
             ipv4_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
             ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
             ipv6_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+            mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
             mtu: Optional[pulumi.Input[_builtins.int]] = None,
             mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -4512,6 +4601,11 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.int] mtu: Interface MTU <68...2000>, in bytes
                  - Range: `576`-`9216`
                  - Default value: `1500`
@@ -4639,7 +4733,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `spoke`, `hub`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -4671,6 +4765,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
         __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
         __props__.__dict__["ipv6_address"] = ipv6_address
         __props__.__dict__["ipv6_address_variable"] = ipv6_address_variable
+        __props__.__dict__["mrf_core_region_type"] = mrf_core_region_type
+        __props__.__dict__["mrf_enable_core_region"] = mrf_enable_core_region
         __props__.__dict__["mtu"] = mtu
         __props__.__dict__["mtu_variable"] = mtu_variable
         __props__.__dict__["name"] = name
@@ -4940,6 +5036,25 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "ipv6_address_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Core Region
+          - Choices: `core-shared`, `core`
+          - Default value: `core-shared`
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable Core Region
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
 
     @_builtins.property
     @pulumi.getter
@@ -5646,7 +5761,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
     def tunnel_qos_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set tunnel QoS mode
-          - Choices: `spoke`, `hub`
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 

@@ -136,6 +136,14 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
      */
     readonly ipv6AddressVariable: string;
     /**
+     * Core Region
+     */
+    readonly mrfCoreRegionType: string;
+    /**
+     * Enable Core Region
+     */
+    readonly mrfEnableCoreRegion: boolean;
+    /**
      * Interface MTU \n\n, in bytes
      */
     readonly mtu: number;

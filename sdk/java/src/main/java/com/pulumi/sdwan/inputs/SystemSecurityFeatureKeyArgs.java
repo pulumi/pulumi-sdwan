@@ -238,14 +238,14 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Specify the Key String
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="keyString")
     private @Nullable Output<String> keyString;
 
     /**
-     * @return Specify the Key String
+     * @return Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> keyString() {
@@ -827,7 +827,7 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param keyString Specify the Key String
+         * @param keyString Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -838,7 +838,7 @@ public final class SystemSecurityFeatureKeyArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param keyString Specify the Key String
+         * @param keyString Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

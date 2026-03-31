@@ -172,39 +172,37 @@ type TransportWanVpnInterfaceGreFeature struct {
 	IpsecReplayWindow pulumi.IntPtrOutput `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrOutput `pulumi:"ipsecReplayWindowVariable"`
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	Ipv4Address               pulumi.StringPtrOutput `pulumi:"ipv4Address"`
+	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// Interface MTU <576..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Interface MTU <576..9976>, in bytes
 	//   - Range: `576`-`9976`
 	//   - Default value: `1500`
 	Ipv4Mtu pulumi.IntPtrOutput `pulumi:"ipv4Mtu"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4MtuVariable pulumi.StringPtrOutput `pulumi:"ipv4MtuVariable"`
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
-	// TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// TCP MSS on SYN packets, in bytes
 	//   - Range: `500`-`1460`
 	Ipv4TcpMss pulumi.IntPtrOutput `pulumi:"ipv4TcpMss"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4TcpMssVariable pulumi.StringPtrOutput `pulumi:"ipv4TcpMssVariable"`
-	// Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Assign IPv6 address
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Interface MTU <1280..9976>, in bytes
 	//   - Range: `1280`-`9976`
 	Ipv6Mtu pulumi.IntPtrOutput `pulumi:"ipv6Mtu"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6MtuVariable pulumi.StringPtrOutput `pulumi:"ipv6MtuVariable"`
-	// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// IPv6 TCP MSS on SYN packets, in bytes
 	//   - Range: `40`-`1454`
 	Ipv6TcpMss pulumi.IntPtrOutput `pulumi:"ipv6TcpMss"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6TcpMssVariable pulumi.StringPtrOutput `pulumi:"ipv6TcpMssVariable"`
 	// Tunnel multiplexing state
 	//   - Default value: `false`
@@ -245,9 +243,9 @@ type TransportWanVpnInterfaceGreFeature struct {
 	// Tunnel protection state
 	//   - Default value: `false`
 	TunnelProtection pulumi.BoolPtrOutput `pulumi:"tunnelProtection"`
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaInterface pulumi.StringPtrOutput `pulumi:"tunnelRouteViaInterface"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaInterfaceVariable pulumi.StringPtrOutput `pulumi:"tunnelRouteViaInterfaceVariable"`
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelRouteViaIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelRouteViaIpv4Address"`
@@ -257,17 +255,17 @@ type TransportWanVpnInterfaceGreFeature struct {
 	TunnelRouteViaIpv6Address pulumi.StringPtrOutput `pulumi:"tunnelRouteViaIpv6Address"`
 	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
 	TunnelRouteViaIpv6AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelRouteViaIpv6AddressVariable"`
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaLoopback pulumi.StringPtrOutput `pulumi:"tunnelRouteViaLoopback"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaLoopbackVariable pulumi.StringPtrOutput `pulumi:"tunnelRouteViaLoopbackVariable"`
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterface pulumi.StringPtrOutput `pulumi:"tunnelSourceInterface"`
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterfaceLoopback pulumi.StringPtrOutput `pulumi:"tunnelSourceInterfaceLoopback"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceLoopbackVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceInterfaceLoopbackVariable"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceInterfaceVariable"`
 	// Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelSourceIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4Address"`
@@ -405,39 +403,37 @@ type transportWanVpnInterfaceGreFeatureState struct {
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	Ipv4Address               *string `pulumi:"ipv4Address"`
+	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// Interface MTU <576..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Interface MTU <576..9976>, in bytes
 	//   - Range: `576`-`9976`
 	//   - Default value: `1500`
 	Ipv4Mtu *int `pulumi:"ipv4Mtu"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4MtuVariable *string `pulumi:"ipv4MtuVariable"`
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
-	// TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// TCP MSS on SYN packets, in bytes
 	//   - Range: `500`-`1460`
 	Ipv4TcpMss *int `pulumi:"ipv4TcpMss"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4TcpMssVariable *string `pulumi:"ipv4TcpMssVariable"`
-	// Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Assign IPv6 address
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Interface MTU <1280..9976>, in bytes
 	//   - Range: `1280`-`9976`
 	Ipv6Mtu *int `pulumi:"ipv6Mtu"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6MtuVariable *string `pulumi:"ipv6MtuVariable"`
-	// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// IPv6 TCP MSS on SYN packets, in bytes
 	//   - Range: `40`-`1454`
 	Ipv6TcpMss *int `pulumi:"ipv6TcpMss"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6TcpMssVariable *string `pulumi:"ipv6TcpMssVariable"`
 	// Tunnel multiplexing state
 	//   - Default value: `false`
@@ -478,9 +474,9 @@ type transportWanVpnInterfaceGreFeatureState struct {
 	// Tunnel protection state
 	//   - Default value: `false`
 	TunnelProtection *bool `pulumi:"tunnelProtection"`
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaInterface *string `pulumi:"tunnelRouteViaInterface"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaInterfaceVariable *string `pulumi:"tunnelRouteViaInterfaceVariable"`
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelRouteViaIpv4Address *string `pulumi:"tunnelRouteViaIpv4Address"`
@@ -490,17 +486,17 @@ type transportWanVpnInterfaceGreFeatureState struct {
 	TunnelRouteViaIpv6Address *string `pulumi:"tunnelRouteViaIpv6Address"`
 	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
 	TunnelRouteViaIpv6AddressVariable *string `pulumi:"tunnelRouteViaIpv6AddressVariable"`
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaLoopback *string `pulumi:"tunnelRouteViaLoopback"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaLoopbackVariable *string `pulumi:"tunnelRouteViaLoopbackVariable"`
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterface *string `pulumi:"tunnelSourceInterface"`
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterfaceLoopback *string `pulumi:"tunnelSourceInterfaceLoopback"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceLoopbackVariable *string `pulumi:"tunnelSourceInterfaceLoopbackVariable"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceVariable *string `pulumi:"tunnelSourceInterfaceVariable"`
 	// Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelSourceIpv4Address *string `pulumi:"tunnelSourceIpv4Address"`
@@ -603,39 +599,37 @@ type TransportWanVpnInterfaceGreFeatureState struct {
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	Ipv4Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	Ipv4Address               pulumi.StringPtrInput
+	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// Interface MTU <576..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Interface MTU <576..9976>, in bytes
 	//   - Range: `576`-`9976`
 	//   - Default value: `1500`
 	Ipv4Mtu pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4MtuVariable pulumi.StringPtrInput
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// TCP MSS on SYN packets, in bytes
 	//   - Range: `500`-`1460`
 	Ipv4TcpMss pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4TcpMssVariable pulumi.StringPtrInput
-	// Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Assign IPv6 address
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Interface MTU <1280..9976>, in bytes
 	//   - Range: `1280`-`9976`
 	Ipv6Mtu pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6MtuVariable pulumi.StringPtrInput
-	// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// IPv6 TCP MSS on SYN packets, in bytes
 	//   - Range: `40`-`1454`
 	Ipv6TcpMss pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6TcpMssVariable pulumi.StringPtrInput
 	// Tunnel multiplexing state
 	//   - Default value: `false`
@@ -676,9 +670,9 @@ type TransportWanVpnInterfaceGreFeatureState struct {
 	// Tunnel protection state
 	//   - Default value: `false`
 	TunnelProtection pulumi.BoolPtrInput
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaInterface pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaInterfaceVariable pulumi.StringPtrInput
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelRouteViaIpv4Address pulumi.StringPtrInput
@@ -688,17 +682,17 @@ type TransportWanVpnInterfaceGreFeatureState struct {
 	TunnelRouteViaIpv6Address pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
 	TunnelRouteViaIpv6AddressVariable pulumi.StringPtrInput
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaLoopback pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaLoopbackVariable pulumi.StringPtrInput
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterface pulumi.StringPtrInput
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterfaceLoopback pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceLoopbackVariable pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceVariable pulumi.StringPtrInput
 	// Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelSourceIpv4Address pulumi.StringPtrInput
@@ -805,39 +799,37 @@ type transportWanVpnInterfaceGreFeatureArgs struct {
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	Ipv4Address               *string `pulumi:"ipv4Address"`
+	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// Interface MTU <576..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Interface MTU <576..9976>, in bytes
 	//   - Range: `576`-`9976`
 	//   - Default value: `1500`
 	Ipv4Mtu *int `pulumi:"ipv4Mtu"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4MtuVariable *string `pulumi:"ipv4MtuVariable"`
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
-	// TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// TCP MSS on SYN packets, in bytes
 	//   - Range: `500`-`1460`
 	Ipv4TcpMss *int `pulumi:"ipv4TcpMss"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4TcpMssVariable *string `pulumi:"ipv4TcpMssVariable"`
-	// Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Assign IPv6 address
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Interface MTU <1280..9976>, in bytes
 	//   - Range: `1280`-`9976`
 	Ipv6Mtu *int `pulumi:"ipv6Mtu"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6MtuVariable *string `pulumi:"ipv6MtuVariable"`
-	// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// IPv6 TCP MSS on SYN packets, in bytes
 	//   - Range: `40`-`1454`
 	Ipv6TcpMss *int `pulumi:"ipv6TcpMss"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6TcpMssVariable *string `pulumi:"ipv6TcpMssVariable"`
 	// Tunnel multiplexing state
 	//   - Default value: `false`
@@ -878,9 +870,9 @@ type transportWanVpnInterfaceGreFeatureArgs struct {
 	// Tunnel protection state
 	//   - Default value: `false`
 	TunnelProtection *bool `pulumi:"tunnelProtection"`
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaInterface *string `pulumi:"tunnelRouteViaInterface"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaInterfaceVariable *string `pulumi:"tunnelRouteViaInterfaceVariable"`
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelRouteViaIpv4Address *string `pulumi:"tunnelRouteViaIpv4Address"`
@@ -890,17 +882,17 @@ type transportWanVpnInterfaceGreFeatureArgs struct {
 	TunnelRouteViaIpv6Address *string `pulumi:"tunnelRouteViaIpv6Address"`
 	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
 	TunnelRouteViaIpv6AddressVariable *string `pulumi:"tunnelRouteViaIpv6AddressVariable"`
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaLoopback *string `pulumi:"tunnelRouteViaLoopback"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaLoopbackVariable *string `pulumi:"tunnelRouteViaLoopbackVariable"`
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterface *string `pulumi:"tunnelSourceInterface"`
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterfaceLoopback *string `pulumi:"tunnelSourceInterfaceLoopback"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceLoopbackVariable *string `pulumi:"tunnelSourceInterfaceLoopbackVariable"`
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceVariable *string `pulumi:"tunnelSourceInterfaceVariable"`
 	// Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelSourceIpv4Address *string `pulumi:"tunnelSourceIpv4Address"`
@@ -1002,39 +994,37 @@ type TransportWanVpnInterfaceGreFeatureArgs struct {
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	Ipv4Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	Ipv4Address               pulumi.StringPtrInput
+	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// Interface MTU <576..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Interface MTU <576..9976>, in bytes
 	//   - Range: `576`-`9976`
 	//   - Default value: `1500`
 	Ipv4Mtu pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4MtuVariable pulumi.StringPtrInput
-	// , Attribute conditional on `tunnelMode` equal to `ipv4`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// TCP MSS on SYN packets, in bytes
 	//   - Range: `500`-`1460`
 	Ipv4TcpMss pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	Ipv4TcpMssVariable pulumi.StringPtrInput
-	// Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Assign IPv6 address
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Interface MTU <1280..9976>, in bytes
 	//   - Range: `1280`-`9976`
 	Ipv6Mtu pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6MtuVariable pulumi.StringPtrInput
-	// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// IPv6 TCP MSS on SYN packets, in bytes
 	//   - Range: `40`-`1454`
 	Ipv6TcpMss pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+	// Variable name
 	Ipv6TcpMssVariable pulumi.StringPtrInput
 	// Tunnel multiplexing state
 	//   - Default value: `false`
@@ -1075,9 +1065,9 @@ type TransportWanVpnInterfaceGreFeatureArgs struct {
 	// Tunnel protection state
 	//   - Default value: `false`
 	TunnelProtection pulumi.BoolPtrInput
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaInterface pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaInterfaceVariable pulumi.StringPtrInput
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelRouteViaIpv4Address pulumi.StringPtrInput
@@ -1087,17 +1077,17 @@ type TransportWanVpnInterfaceGreFeatureArgs struct {
 	TunnelRouteViaIpv6Address pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
 	TunnelRouteViaIpv6AddressVariable pulumi.StringPtrInput
-	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 	TunnelRouteViaLoopback pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelRouteViaLoopbackVariable pulumi.StringPtrInput
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterface pulumi.StringPtrInput
-	// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// <1..32 characters> Interface name
 	TunnelSourceInterfaceLoopback pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceLoopbackVariable pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+	// Variable name
 	TunnelSourceInterfaceVariable pulumi.StringPtrInput
 	// Tunnel source IP Address, Attribute conditional on `tunnelMode` equal to `ipv4`
 	TunnelSourceIpv4Address pulumi.StringPtrInput
@@ -1389,78 +1379,76 @@ func (o TransportWanVpnInterfaceGreFeatureOutput) IpsecReplayWindowVariable() pu
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.IpsecReplayWindowVariable }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `tunnelMode` equal to `ipv4`
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <576..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Interface MTU <576..9976>, in bytes
 //   - Range: `576`-`9976`
 //   - Default value: `1500`
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.Ipv4Mtu }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4MtuVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4MtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `tunnelMode` equal to `ipv4`
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4SubnetMaskVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMaskVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+// TCP MSS on SYN packets, in bytes
 //   - Range: `500`-`1460`
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.Ipv4TcpMss }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv4TcpMssVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4TcpMssVariable }).(pulumi.StringPtrOutput)
 }
 
-// Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+// Assign IPv6 address
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv6Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv6AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv6AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+// Interface MTU <1280..9976>, in bytes
 //   - Range: `1280`-`9976`
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv6Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.Ipv6Mtu }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv6MtuVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv6MtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+// IPv6 TCP MSS on SYN packets, in bytes
 //   - Range: `40`-`1454`
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv6TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.Ipv6TcpMss }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) Ipv6TcpMssVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv6TcpMssVariable }).(pulumi.StringPtrOutput)
 }
@@ -1562,12 +1550,12 @@ func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelProtection() pulumi.Bool
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.BoolPtrOutput { return v.TunnelProtection }).(pulumi.BoolPtrOutput)
 }
 
-// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelRouteViaInterface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.TunnelRouteViaInterface }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelRouteViaInterfaceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput {
 		return v.TunnelRouteViaInterfaceVariable
@@ -1598,38 +1586,38 @@ func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelRouteViaIpv6AddressVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelRouteViaLoopback() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.TunnelRouteViaLoopback }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelRouteViaLoopbackVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput {
 		return v.TunnelRouteViaLoopbackVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// <1..32 characters> Interface name
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelSourceInterface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.TunnelSourceInterface }).(pulumi.StringPtrOutput)
 }
 
-// <1..32 characters> Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// <1..32 characters> Interface name
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelSourceInterfaceLoopback() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput {
 		return v.TunnelSourceInterfaceLoopback
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelSourceInterfaceLoopbackVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput {
 		return v.TunnelSourceInterfaceLoopbackVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+// Variable name
 func (o TransportWanVpnInterfaceGreFeatureOutput) TunnelSourceInterfaceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput {
 		return v.TunnelSourceInterfaceVariable

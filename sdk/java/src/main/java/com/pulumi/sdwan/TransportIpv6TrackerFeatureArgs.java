@@ -63,14 +63,14 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * Endpoint DNS Name
+     * DNS Name
      * 
      */
     @Import(name="endpointDnsName")
     private @Nullable Output<String> endpointDnsName;
 
     /**
-     * @return Endpoint DNS Name
+     * @return DNS Name
      * 
      */
     public Optional<Output<String>> endpointDnsName() {
@@ -93,14 +93,14 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * Endpoint IP
+     * IP
      * 
      */
     @Import(name="endpointIp")
     private @Nullable Output<String> endpointIp;
 
     /**
-     * @return Endpoint IP
+     * @return IP
      * 
      */
     public Optional<Output<String>> endpointIp() {
@@ -124,7 +124,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
 
     /**
      * Endpoint Tracker Type
-     *   - Choices: `ipv6-interface`
+     *   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
      *   - Default value: `ipv6-interface`
      * 
      */
@@ -133,27 +133,12 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
 
     /**
      * @return Endpoint Tracker Type
-     *   - Choices: `ipv6-interface`
+     *   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
      *   - Default value: `ipv6-interface`
      * 
      */
     public Optional<Output<String>> endpointTrackerType() {
         return Optional.ofNullable(this.endpointTrackerType);
-    }
-
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="endpointTrackerTypeVariable")
-    private @Nullable Output<String> endpointTrackerTypeVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> endpointTrackerTypeVariable() {
-        return Optional.ofNullable(this.endpointTrackerTypeVariable);
     }
 
     /**
@@ -172,7 +157,41 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * Interval
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     * 
+     */
+    @Import(name="icmpInterval")
+    private @Nullable Output<Integer> icmpInterval;
+
+    /**
+     * @return Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     * 
+     */
+    public Optional<Output<Integer>> icmpInterval() {
+        return Optional.ofNullable(this.icmpInterval);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+     * 
+     */
+    @Import(name="icmpIntervalVariable")
+    private @Nullable Output<String> icmpIntervalVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+     * 
+     */
+    public Optional<Output<String>> icmpIntervalVariable() {
+        return Optional.ofNullable(this.icmpIntervalVariable);
+    }
+
+    /**
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      * 
@@ -181,7 +200,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
     private @Nullable Output<Integer> interval;
 
     /**
-     * @return Interval
+     * @return Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      * 
@@ -191,14 +210,14 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      * 
      */
     @Import(name="intervalVariable")
     private @Nullable Output<String> intervalVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      * 
      */
     public Optional<Output<String>> intervalVariable() {
@@ -363,8 +382,9 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         this.endpointIp = $.endpointIp;
         this.endpointIpVariable = $.endpointIpVariable;
         this.endpointTrackerType = $.endpointTrackerType;
-        this.endpointTrackerTypeVariable = $.endpointTrackerTypeVariable;
         this.featureProfileId = $.featureProfileId;
+        this.icmpInterval = $.icmpInterval;
+        this.icmpIntervalVariable = $.icmpIntervalVariable;
         this.interval = $.interval;
         this.intervalVariable = $.intervalVariable;
         this.multiplier = $.multiplier;
@@ -460,7 +480,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param endpointDnsName Endpoint DNS Name
+         * @param endpointDnsName DNS Name
          * 
          * @return builder
          * 
@@ -471,7 +491,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param endpointDnsName Endpoint DNS Name
+         * @param endpointDnsName DNS Name
          * 
          * @return builder
          * 
@@ -502,7 +522,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param endpointIp Endpoint IP
+         * @param endpointIp IP
          * 
          * @return builder
          * 
@@ -513,7 +533,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param endpointIp Endpoint IP
+         * @param endpointIp IP
          * 
          * @return builder
          * 
@@ -545,7 +565,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
 
         /**
          * @param endpointTrackerType Endpoint Tracker Type
-         *   - Choices: `ipv6-interface`
+         *   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
          *   - Default value: `ipv6-interface`
          * 
          * @return builder
@@ -558,7 +578,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
 
         /**
          * @param endpointTrackerType Endpoint Tracker Type
-         *   - Choices: `ipv6-interface`
+         *   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
          *   - Default value: `ipv6-interface`
          * 
          * @return builder
@@ -566,27 +586,6 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
          */
         public Builder endpointTrackerType(String endpointTrackerType) {
             return endpointTrackerType(Output.of(endpointTrackerType));
-        }
-
-        /**
-         * @param endpointTrackerTypeVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder endpointTrackerTypeVariable(@Nullable Output<String> endpointTrackerTypeVariable) {
-            $.endpointTrackerTypeVariable = endpointTrackerTypeVariable;
-            return this;
-        }
-
-        /**
-         * @param endpointTrackerTypeVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder endpointTrackerTypeVariable(String endpointTrackerTypeVariable) {
-            return endpointTrackerTypeVariable(Output.of(endpointTrackerTypeVariable));
         }
 
         /**
@@ -611,7 +610,53 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param interval Interval
+         * @param icmpInterval Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+         *   - Range: `2`-`1000`
+         *   - Default value: `2`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpInterval(@Nullable Output<Integer> icmpInterval) {
+            $.icmpInterval = icmpInterval;
+            return this;
+        }
+
+        /**
+         * @param icmpInterval Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+         *   - Range: `2`-`1000`
+         *   - Default value: `2`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpInterval(Integer icmpInterval) {
+            return icmpInterval(Output.of(icmpInterval));
+        }
+
+        /**
+         * @param icmpIntervalVariable Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpIntervalVariable(@Nullable Output<String> icmpIntervalVariable) {
+            $.icmpIntervalVariable = icmpIntervalVariable;
+            return this;
+        }
+
+        /**
+         * @param icmpIntervalVariable Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpIntervalVariable(String icmpIntervalVariable) {
+            return icmpIntervalVariable(Output.of(icmpIntervalVariable));
+        }
+
+        /**
+         * @param interval Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
          *   - Range: `20`-`600`
          *   - Default value: `60`
          * 
@@ -624,7 +669,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param interval Interval
+         * @param interval Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
          *   - Range: `20`-`600`
          *   - Default value: `60`
          * 
@@ -636,7 +681,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param intervalVariable Variable name
+         * @param intervalVariable Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
          * 
          * @return builder
          * 
@@ -647,7 +692,7 @@ public final class TransportIpv6TrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param intervalVariable Variable name
+         * @param intervalVariable Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
          * 
          * @return builder
          * 

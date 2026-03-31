@@ -187,7 +187,7 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature(pulumi.
                  __props__=None):
         """
         This resource can manage a Transport WAN VPN Interface Ethernet Feature Associate IPv6 Tracker Feature .
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -228,7 +228,7 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature(pulumi.
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport WAN VPN Interface Ethernet Feature Associate IPv6 Tracker Feature .
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

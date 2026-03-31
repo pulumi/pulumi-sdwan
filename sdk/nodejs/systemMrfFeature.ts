@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a System MRF Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -18,11 +18,13 @@ import * as utilities from "./utilities";
  *     name: "Example",
  *     description: "My Example",
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
- *     regionId: 1,
- *     secondaryRegionId: 2,
  *     role: "edge-router",
  *     enableMigrationToMrf: "enabled",
  *     migrationBgpCommunity: 100,
+ *     enableManagementRegion: true,
+ *     vrfId: 1,
+ *     gatewayPreferences: [1],
+ *     managementGateway: false,
  * });
  * ```
  *
@@ -69,6 +71,15 @@ export class SystemMrfFeature extends pulumi.CustomResource {
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
+     * Enable management region
+     *   - Default value: `false`
+     */
+    declare public readonly enableManagementRegion: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly enableManagementRegionVariable: pulumi.Output<string | undefined>;
+    /**
      * Enable migration mode to Multi-Region Fabric
      *   - Choices: `enabled`, `enabled-from-bgp-core`
      */
@@ -78,6 +89,23 @@ export class SystemMrfFeature extends pulumi.CustomResource {
      */
     declare public readonly featureProfileId: pulumi.Output<string>;
     /**
+     * Variable name
+     */
+    declare public readonly gatewayPreferenceVariable: pulumi.Output<string | undefined>;
+    /**
+     * List of affinity group preferences for VRF
+     */
+    declare public readonly gatewayPreferences: pulumi.Output<number[] | undefined>;
+    /**
+     * Enable management gateway
+     *   - Default value: `false`
+     */
+    declare public readonly managementGateway: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly managementGatewayVariable: pulumi.Output<string | undefined>;
+    /**
      * Set BGP community during migration from BGP-core based network
      *   - Range: `1`-`4294967295`
      */
@@ -86,11 +114,6 @@ export class SystemMrfFeature extends pulumi.CustomResource {
      * The name of the Feature
      */
     declare public readonly name: pulumi.Output<string>;
-    /**
-     * Set region ID
-     *   - Range: `1`-`63`
-     */
-    declare public readonly regionId: pulumi.Output<number | undefined>;
     /**
      * Set the role for router
      *   - Choices: `edge-router`, `border-router`
@@ -113,6 +136,15 @@ export class SystemMrfFeature extends pulumi.CustomResource {
      * The version of the Feature
      */
     declare public /*out*/ readonly version: pulumi.Output<number>;
+    /**
+     * VRF name for management region
+     *   - Range: `1`-`65531`
+     */
+    declare public readonly vrfId: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly vrfIdVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a SystemMrfFeature resource with the given unique name, arguments, and options.
@@ -128,31 +160,45 @@ export class SystemMrfFeature extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as SystemMrfFeatureState | undefined;
             resourceInputs["description"] = state?.description;
+            resourceInputs["enableManagementRegion"] = state?.enableManagementRegion;
+            resourceInputs["enableManagementRegionVariable"] = state?.enableManagementRegionVariable;
             resourceInputs["enableMigrationToMrf"] = state?.enableMigrationToMrf;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["gatewayPreferenceVariable"] = state?.gatewayPreferenceVariable;
+            resourceInputs["gatewayPreferences"] = state?.gatewayPreferences;
+            resourceInputs["managementGateway"] = state?.managementGateway;
+            resourceInputs["managementGatewayVariable"] = state?.managementGatewayVariable;
             resourceInputs["migrationBgpCommunity"] = state?.migrationBgpCommunity;
             resourceInputs["name"] = state?.name;
-            resourceInputs["regionId"] = state?.regionId;
             resourceInputs["role"] = state?.role;
             resourceInputs["roleVariable"] = state?.roleVariable;
             resourceInputs["secondaryRegionId"] = state?.secondaryRegionId;
             resourceInputs["secondaryRegionIdVariable"] = state?.secondaryRegionIdVariable;
             resourceInputs["version"] = state?.version;
+            resourceInputs["vrfId"] = state?.vrfId;
+            resourceInputs["vrfIdVariable"] = state?.vrfIdVariable;
         } else {
             const args = argsOrState as SystemMrfFeatureArgs | undefined;
             if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
             resourceInputs["description"] = args?.description;
+            resourceInputs["enableManagementRegion"] = args?.enableManagementRegion;
+            resourceInputs["enableManagementRegionVariable"] = args?.enableManagementRegionVariable;
             resourceInputs["enableMigrationToMrf"] = args?.enableMigrationToMrf;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["gatewayPreferenceVariable"] = args?.gatewayPreferenceVariable;
+            resourceInputs["gatewayPreferences"] = args?.gatewayPreferences;
+            resourceInputs["managementGateway"] = args?.managementGateway;
+            resourceInputs["managementGatewayVariable"] = args?.managementGatewayVariable;
             resourceInputs["migrationBgpCommunity"] = args?.migrationBgpCommunity;
             resourceInputs["name"] = args?.name;
-            resourceInputs["regionId"] = args?.regionId;
             resourceInputs["role"] = args?.role;
             resourceInputs["roleVariable"] = args?.roleVariable;
             resourceInputs["secondaryRegionId"] = args?.secondaryRegionId;
             resourceInputs["secondaryRegionIdVariable"] = args?.secondaryRegionIdVariable;
+            resourceInputs["vrfId"] = args?.vrfId;
+            resourceInputs["vrfIdVariable"] = args?.vrfIdVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -169,6 +215,15 @@ export interface SystemMrfFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
+     * Enable management region
+     *   - Default value: `false`
+     */
+    enableManagementRegion?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    enableManagementRegionVariable?: pulumi.Input<string>;
+    /**
      * Enable migration mode to Multi-Region Fabric
      *   - Choices: `enabled`, `enabled-from-bgp-core`
      */
@@ -178,6 +233,23 @@ export interface SystemMrfFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
+     * Variable name
+     */
+    gatewayPreferenceVariable?: pulumi.Input<string>;
+    /**
+     * List of affinity group preferences for VRF
+     */
+    gatewayPreferences?: pulumi.Input<pulumi.Input<number>[]>;
+    /**
+     * Enable management gateway
+     *   - Default value: `false`
+     */
+    managementGateway?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    managementGatewayVariable?: pulumi.Input<string>;
+    /**
      * Set BGP community during migration from BGP-core based network
      *   - Range: `1`-`4294967295`
      */
@@ -186,11 +258,6 @@ export interface SystemMrfFeatureState {
      * The name of the Feature
      */
     name?: pulumi.Input<string>;
-    /**
-     * Set region ID
-     *   - Range: `1`-`63`
-     */
-    regionId?: pulumi.Input<number>;
     /**
      * Set the role for router
      *   - Choices: `edge-router`, `border-router`
@@ -213,6 +280,15 @@ export interface SystemMrfFeatureState {
      * The version of the Feature
      */
     version?: pulumi.Input<number>;
+    /**
+     * VRF name for management region
+     *   - Range: `1`-`65531`
+     */
+    vrfId?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    vrfIdVariable?: pulumi.Input<string>;
 }
 
 /**
@@ -224,6 +300,15 @@ export interface SystemMrfFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
+     * Enable management region
+     *   - Default value: `false`
+     */
+    enableManagementRegion?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    enableManagementRegionVariable?: pulumi.Input<string>;
+    /**
      * Enable migration mode to Multi-Region Fabric
      *   - Choices: `enabled`, `enabled-from-bgp-core`
      */
@@ -233,6 +318,23 @@ export interface SystemMrfFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
+     * Variable name
+     */
+    gatewayPreferenceVariable?: pulumi.Input<string>;
+    /**
+     * List of affinity group preferences for VRF
+     */
+    gatewayPreferences?: pulumi.Input<pulumi.Input<number>[]>;
+    /**
+     * Enable management gateway
+     *   - Default value: `false`
+     */
+    managementGateway?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    managementGatewayVariable?: pulumi.Input<string>;
+    /**
      * Set BGP community during migration from BGP-core based network
      *   - Range: `1`-`4294967295`
      */
@@ -241,11 +343,6 @@ export interface SystemMrfFeatureArgs {
      * The name of the Feature
      */
     name?: pulumi.Input<string>;
-    /**
-     * Set region ID
-     *   - Range: `1`-`63`
-     */
-    regionId?: pulumi.Input<number>;
     /**
      * Set the role for router
      *   - Choices: `edge-router`, `border-router`
@@ -264,4 +361,13 @@ export interface SystemMrfFeatureArgs {
      * Variable name
      */
     secondaryRegionIdVariable?: pulumi.Input<string>;
+    /**
+     * VRF name for management region
+     *   - Range: `1`-`65531`
+     */
+    vrfId?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    vrfIdVariable?: pulumi.Input<string>;
 }

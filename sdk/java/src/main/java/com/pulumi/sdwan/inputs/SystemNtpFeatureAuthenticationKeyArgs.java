@@ -18,7 +18,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * MD5 authentication key ID
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="keyId")
@@ -26,7 +26,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
     /**
      * @return MD5 authentication key ID
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> keyId() {
@@ -49,14 +49,14 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
     }
 
     /**
-     * Enter cleartext or AES-encrypted MD5 authentication key
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="md5Value")
     private @Nullable Output<String> md5Value;
 
     /**
-     * @return Enter cleartext or AES-encrypted MD5 authentication key
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> md5Value() {
@@ -107,7 +107,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param keyId MD5 authentication key ID
-         *   - Range: `1`-`65535`
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
 
         /**
          * @param keyId MD5 authentication key ID
-         *   - Range: `1`-`65535`
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
         }
 
         /**
-         * @param md5Value Enter cleartext or AES-encrypted MD5 authentication key
+         * @param md5Value Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
         }
 
         /**
-         * @param md5Value Enter cleartext or AES-encrypted MD5 authentication key
+         * @param md5Value Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

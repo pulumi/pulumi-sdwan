@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a System Global Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -71,6 +71,10 @@ import javax.annotation.Nullable;
  *             .nat64TcpTimeout(3600)
  *             .httpAuthentication("aaa")
  *             .sshVersion("2")
+ *             .lacpSystemPriority(1234)
+ *             .etherchannelFlowLoadBalance("src-ip")
+ *             .etherchannelVlanLoadBalance(true)
+ *             .bgpCommunityNewFormat(true)
  *             .build());
  * 
  *     }
@@ -120,6 +124,36 @@ public class SystemGlobalFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> arpProxyVariable() {
         return Codegen.optional(this.arpProxyVariable);
+    }
+    /**
+     * Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="bgpCommunityNewFormat", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> bgpCommunityNewFormat;
+
+    /**
+     * @return Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> bgpCommunityNewFormat() {
+        return Codegen.optional(this.bgpCommunityNewFormat);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="bgpCommunityNewFormatVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> bgpCommunityNewFormatVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> bgpCommunityNewFormatVariable() {
+        return Codegen.optional(this.bgpCommunityNewFormatVariable);
     }
     /**
      * Configure CDP
@@ -224,6 +258,66 @@ public class SystemGlobalFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> domainLookupVariable() {
         return Codegen.optional(this.domainLookupVariable);
+    }
+    /**
+     * Set Etherchannel load balance hash algorithm
+     *   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+     * 
+     */
+    @Export(name="etherchannelFlowLoadBalance", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> etherchannelFlowLoadBalance;
+
+    /**
+     * @return Set Etherchannel load balance hash algorithm
+     *   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+     * 
+     */
+    public Output<Optional<String>> etherchannelFlowLoadBalance() {
+        return Codegen.optional(this.etherchannelFlowLoadBalance);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="etherchannelFlowLoadBalanceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> etherchannelFlowLoadBalanceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> etherchannelFlowLoadBalanceVariable() {
+        return Codegen.optional(this.etherchannelFlowLoadBalanceVariable);
+    }
+    /**
+     * Set Etherchannel vlan manual load balance
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="etherchannelVlanLoadBalance", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> etherchannelVlanLoadBalance;
+
+    /**
+     * @return Set Etherchannel vlan manual load balance
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> etherchannelVlanLoadBalance() {
+        return Codegen.optional(this.etherchannelVlanLoadBalance);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="etherchannelVlanLoadBalanceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> etherchannelVlanLoadBalanceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> etherchannelVlanLoadBalanceVariable() {
+        return Codegen.optional(this.etherchannelVlanLoadBalanceVariable);
     }
     /**
      * Feature Profile ID
@@ -418,6 +512,36 @@ public class SystemGlobalFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> ipSourceRoutingVariable() {
         return Codegen.optional(this.ipSourceRoutingVariable);
+    }
+    /**
+     * Set LACP system priority
+     *   - Range: `1`-`65535`
+     * 
+     */
+    @Export(name="lacpSystemPriority", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> lacpSystemPriority;
+
+    /**
+     * @return Set LACP system priority
+     *   - Range: `1`-`65535`
+     * 
+     */
+    public Output<Optional<Integer>> lacpSystemPriority() {
+        return Codegen.optional(this.lacpSystemPriority);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="lacpSystemPriorityVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> lacpSystemPriorityVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> lacpSystemPriorityVariable() {
+        return Codegen.optional(this.lacpSystemPriorityVariable);
     }
     /**
      * Configure Telnet (Outbound)

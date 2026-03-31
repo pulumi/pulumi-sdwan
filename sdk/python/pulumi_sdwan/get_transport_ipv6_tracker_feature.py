@@ -26,7 +26,7 @@ class GetTransportIpv6TrackerFeatureResult:
     """
     A collection of values returned by getTransportIpv6TrackerFeature.
     """
-    def __init__(__self__, description=None, endpoint_api_url=None, endpoint_api_url_variable=None, endpoint_dns_name=None, endpoint_dns_name_variable=None, endpoint_ip=None, endpoint_ip_variable=None, endpoint_tracker_type=None, endpoint_tracker_type_variable=None, feature_profile_id=None, id=None, interval=None, interval_variable=None, multiplier=None, multiplier_variable=None, name=None, threshold=None, threshold_variable=None, tracker_name=None, tracker_name_variable=None, tracker_type=None, tracker_type_variable=None, version=None):
+    def __init__(__self__, description=None, endpoint_api_url=None, endpoint_api_url_variable=None, endpoint_dns_name=None, endpoint_dns_name_variable=None, endpoint_ip=None, endpoint_ip_variable=None, endpoint_tracker_type=None, feature_profile_id=None, icmp_interval=None, icmp_interval_variable=None, id=None, interval=None, interval_variable=None, multiplier=None, multiplier_variable=None, name=None, threshold=None, threshold_variable=None, tracker_name=None, tracker_name_variable=None, tracker_type=None, tracker_type_variable=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -51,12 +51,15 @@ class GetTransportIpv6TrackerFeatureResult:
         if endpoint_tracker_type and not isinstance(endpoint_tracker_type, str):
             raise TypeError("Expected argument 'endpoint_tracker_type' to be a str")
         pulumi.set(__self__, "endpoint_tracker_type", endpoint_tracker_type)
-        if endpoint_tracker_type_variable and not isinstance(endpoint_tracker_type_variable, str):
-            raise TypeError("Expected argument 'endpoint_tracker_type_variable' to be a str")
-        pulumi.set(__self__, "endpoint_tracker_type_variable", endpoint_tracker_type_variable)
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if icmp_interval and not isinstance(icmp_interval, int):
+            raise TypeError("Expected argument 'icmp_interval' to be a int")
+        pulumi.set(__self__, "icmp_interval", icmp_interval)
+        if icmp_interval_variable and not isinstance(icmp_interval_variable, str):
+            raise TypeError("Expected argument 'icmp_interval_variable' to be a str")
+        pulumi.set(__self__, "icmp_interval_variable", icmp_interval_variable)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -125,7 +128,7 @@ class GetTransportIpv6TrackerFeatureResult:
     @pulumi.getter(name="endpointDnsName")
     def endpoint_dns_name(self) -> _builtins.str:
         """
-        Endpoint DNS Name
+        DNS Name
         """
         return pulumi.get(self, "endpoint_dns_name")
 
@@ -141,7 +144,7 @@ class GetTransportIpv6TrackerFeatureResult:
     @pulumi.getter(name="endpointIp")
     def endpoint_ip(self) -> _builtins.str:
         """
-        Endpoint IP
+        IP
         """
         return pulumi.get(self, "endpoint_ip")
 
@@ -162,20 +165,28 @@ class GetTransportIpv6TrackerFeatureResult:
         return pulumi.get(self, "endpoint_tracker_type")
 
     @_builtins.property
-    @pulumi.getter(name="endpointTrackerTypeVariable")
-    def endpoint_tracker_type_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "endpoint_tracker_type_variable")
-
-    @_builtins.property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> _builtins.str:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
+
+    @_builtins.property
+    @pulumi.getter(name="icmpInterval")
+    def icmp_interval(self) -> _builtins.int:
+        """
+        Probe Interval
+        """
+        return pulumi.get(self, "icmp_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="icmpIntervalVariable")
+    def icmp_interval_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "icmp_interval_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -189,7 +200,7 @@ class GetTransportIpv6TrackerFeatureResult:
     @pulumi.getter
     def interval(self) -> _builtins.int:
         """
-        Interval
+        Probe Interval
         """
         return pulumi.get(self, "interval")
 
@@ -296,8 +307,9 @@ class AwaitableGetTransportIpv6TrackerFeatureResult(GetTransportIpv6TrackerFeatu
             endpoint_ip=self.endpoint_ip,
             endpoint_ip_variable=self.endpoint_ip_variable,
             endpoint_tracker_type=self.endpoint_tracker_type,
-            endpoint_tracker_type_variable=self.endpoint_tracker_type_variable,
             feature_profile_id=self.feature_profile_id,
+            icmp_interval=self.icmp_interval,
+            icmp_interval_variable=self.icmp_interval_variable,
             id=self.id,
             interval=self.interval,
             interval_variable=self.interval_variable,
@@ -348,8 +360,9 @@ def get_transport_ipv6_tracker_feature(feature_profile_id: Optional[_builtins.st
         endpoint_ip=pulumi.get(__ret__, 'endpoint_ip'),
         endpoint_ip_variable=pulumi.get(__ret__, 'endpoint_ip_variable'),
         endpoint_tracker_type=pulumi.get(__ret__, 'endpoint_tracker_type'),
-        endpoint_tracker_type_variable=pulumi.get(__ret__, 'endpoint_tracker_type_variable'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
+        icmp_interval=pulumi.get(__ret__, 'icmp_interval'),
+        icmp_interval_variable=pulumi.get(__ret__, 'icmp_interval_variable'),
         id=pulumi.get(__ret__, 'id'),
         interval=pulumi.get(__ret__, 'interval'),
         interval_variable=pulumi.get(__ret__, 'interval_variable'),
@@ -397,8 +410,9 @@ def get_transport_ipv6_tracker_feature_output(feature_profile_id: Optional[pulum
         endpoint_ip=pulumi.get(__response__, 'endpoint_ip'),
         endpoint_ip_variable=pulumi.get(__response__, 'endpoint_ip_variable'),
         endpoint_tracker_type=pulumi.get(__response__, 'endpoint_tracker_type'),
-        endpoint_tracker_type_variable=pulumi.get(__response__, 'endpoint_tracker_type_variable'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        icmp_interval=pulumi.get(__response__, 'icmp_interval'),
+        icmp_interval_variable=pulumi.get(__response__, 'icmp_interval_variable'),
         id=pulumi.get(__response__, 'id'),
         interval=pulumi.get(__response__, 'interval'),
         interval_variable=pulumi.get(__response__, 'interval_variable'),

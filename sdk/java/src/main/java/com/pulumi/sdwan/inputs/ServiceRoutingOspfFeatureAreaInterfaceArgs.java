@@ -218,14 +218,14 @@ public final class ServiceRoutingOspfFeatureAreaInterfaceArgs extends com.pulumi
     }
 
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="messageDigestKey")
     private @Nullable Output<String> messageDigestKey;
 
     /**
-     * @return Set MD5 authentication key
+     * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> messageDigestKey() {
@@ -693,7 +693,7 @@ public final class ServiceRoutingOspfFeatureAreaInterfaceArgs extends com.pulumi
         }
 
         /**
-         * @param messageDigestKey Set MD5 authentication key
+         * @param messageDigestKey Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -704,7 +704,7 @@ public final class ServiceRoutingOspfFeatureAreaInterfaceArgs extends com.pulumi
         }
 
         /**
-         * @param messageDigestKey Set MD5 authentication key
+         * @param messageDigestKey Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

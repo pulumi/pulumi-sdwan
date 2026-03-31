@@ -174,6 +174,14 @@ export interface GetSystemOmpFeatureResult {
      */
     readonly advertisementIntervalVariable: string;
     /**
+     * Enable BGP AS Path Auto-Translation
+     */
+    readonly aspathAutoTranslation: boolean;
+    /**
+     * Variable name
+     */
+    readonly aspathAutoTranslationVariable: string;
+    /**
      * The description of the Feature
      */
     readonly description: string;
@@ -278,9 +286,17 @@ export interface GetSystemOmpFeatureResult {
      */
     readonly shutdownVariable: string;
     /**
-     * Site Types
+     * Site Types for 20.12 backward compatiblity
      */
     readonly siteTypes: string[];
+    /**
+     * Variable name
+     */
+    readonly siteTypesForTransportGatewayVariable: string;
+    /**
+     * Site Types
+     */
+    readonly siteTypesForTransportGateways: string[];
     /**
      * Variable name
      */

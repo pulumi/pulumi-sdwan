@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// MD5 authentication key ID
-        ///   - Range: `1`-`65535`
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         public readonly int? KeyId;
         /// <summary>
@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? KeyIdVariable;
         /// <summary>
-        /// Enter cleartext or AES-encrypted MD5 authentication key
+        /// Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         public readonly string? Md5Value;
         /// <summary>

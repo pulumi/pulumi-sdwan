@@ -16,6 +16,7 @@ public final class SystemIpv4DeviceAccessFeatureSequence {
     /**
      * @return Base Action
      *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
      * 
      */
     private @Nullable String baseAction;
@@ -67,6 +68,7 @@ public final class SystemIpv4DeviceAccessFeatureSequence {
     /**
      * @return Base Action
      *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
      * 
      */
     public Optional<String> baseAction() {

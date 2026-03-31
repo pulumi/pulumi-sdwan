@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Transport WAN VPN Interface Cellular Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -30,6 +30,7 @@ namespace Pulumi.Sdwan
     ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
     ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
     ///         Shutdown = true,
+    ///         EnableIpv6 = true,
     ///         InterfaceName = "GigabitEthernet1",
     ///         InterfaceDescription = "WAN",
     ///         Ipv4DhcpHelpers = new[]
@@ -41,8 +42,7 @@ namespace Pulumi.Sdwan
     ///         BandwidthDownstream = 21474836,
     ///         TunnelInterface = true,
     ///         PerTunnelQos = true,
-    ///         TunnelQosMode = "hub",
-    ///         TunnelBandwidthPercent = 82,
+    ///         TunnelQosMode = "spoke",
     ///         TunnelInterfaceBindLoopbackTunnel = "example",
     ///         TunnelInterfaceCarrier = "default",
     ///         TunnelInterfaceColor = "default",
@@ -177,6 +177,18 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
+        /// - Default value: `True`
+        /// </summary>
+        [Output("enableIpv6")]
+        public Output<bool?> EnableIpv6 { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("enableIpv6Variable")]
+        public Output<string?> EnableIpv6Variable { get; private set; } = null!;
+
+        /// <summary>
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
@@ -252,6 +264,21 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("ipv4DhcpHelpers")]
         public Output<ImmutableArray<string>> Ipv4DhcpHelpers { get; private set; } = null!;
+
+        /// <summary>
+        /// Core Region
+        ///   - Choices: `core-shared`, `Core`
+        ///   - Default value: `core-shared`
+        /// </summary>
+        [Output("mrfCoreRegionType")]
+        public Output<string?> MrfCoreRegionType { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable Core Region
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("mrfEnableCoreRegion")]
+        public Output<bool?> MrfEnableCoreRegion { get; private set; } = null!;
 
         /// <summary>
         /// The name of the Feature
@@ -507,20 +534,6 @@ namespace Pulumi.Sdwan
         public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent
-        ///   - Range: `1`-`100`
-        ///   - Default value: `50`
-        /// </summary>
-        [Output("tunnelBandwidthPercent")]
-        public Output<int?> TunnelBandwidthPercent { get; private set; } = null!;
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Output("tunnelBandwidthPercentVariable")]
-        public Output<string?> TunnelBandwidthPercentVariable { get; private set; } = null!;
-
-        /// <summary>
         /// Tunnel Interface on/off
         ///   - Default value: `False`
         /// </summary>
@@ -750,7 +763,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set color for TLOC
-        ///   - Choices: `Default`, `Mpls`, `metro ethernet`, `biz internet`, `public internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
         ///   - Default value: `Mpls`
         /// </summary>
         [Output("tunnelInterfaceColor")]
@@ -955,7 +968,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `Hub`, `Spoke`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Output("tunnelQosMode")]
         public Output<string?> TunnelQosMode { get; private set; } = null!;
@@ -1075,6 +1088,18 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
+        /// - Default value: `True`
+        /// </summary>
+        [Input("enableIpv6")]
+        public Input<bool>? EnableIpv6 { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("enableIpv6Variable")]
+        public Input<string>? EnableIpv6Variable { get; set; }
+
+        /// <summary>
         /// Feature Profile ID
         /// </summary>
         [Input("featureProfileId", required: true)]
@@ -1156,6 +1181,21 @@ namespace Pulumi.Sdwan
             get => _ipv4DhcpHelpers ?? (_ipv4DhcpHelpers = new InputList<string>());
             set => _ipv4DhcpHelpers = value;
         }
+
+        /// <summary>
+        /// Core Region
+        ///   - Choices: `core-shared`, `Core`
+        ///   - Default value: `core-shared`
+        /// </summary>
+        [Input("mrfCoreRegionType")]
+        public Input<string>? MrfCoreRegionType { get; set; }
+
+        /// <summary>
+        /// Enable Core Region
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("mrfEnableCoreRegion")]
+        public Input<bool>? MrfEnableCoreRegion { get; set; }
 
         /// <summary>
         /// The name of the Feature
@@ -1411,20 +1451,6 @@ namespace Pulumi.Sdwan
         public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent
-        ///   - Range: `1`-`100`
-        ///   - Default value: `50`
-        /// </summary>
-        [Input("tunnelBandwidthPercent")]
-        public Input<int>? TunnelBandwidthPercent { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("tunnelBandwidthPercentVariable")]
-        public Input<string>? TunnelBandwidthPercentVariable { get; set; }
-
-        /// <summary>
         /// Tunnel Interface on/off
         ///   - Default value: `False`
         /// </summary>
@@ -1654,7 +1680,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set color for TLOC
-        ///   - Choices: `Default`, `Mpls`, `metro ethernet`, `biz internet`, `public internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
         ///   - Default value: `Mpls`
         /// </summary>
         [Input("tunnelInterfaceColor")]
@@ -1871,7 +1897,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `Hub`, `Spoke`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
@@ -1945,6 +1971,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
+
+        /// <summary>
+        /// - Default value: `True`
+        /// </summary>
+        [Input("enableIpv6")]
+        public Input<bool>? EnableIpv6 { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("enableIpv6Variable")]
+        public Input<string>? EnableIpv6Variable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -2028,6 +2066,21 @@ namespace Pulumi.Sdwan
             get => _ipv4DhcpHelpers ?? (_ipv4DhcpHelpers = new InputList<string>());
             set => _ipv4DhcpHelpers = value;
         }
+
+        /// <summary>
+        /// Core Region
+        ///   - Choices: `core-shared`, `Core`
+        ///   - Default value: `core-shared`
+        /// </summary>
+        [Input("mrfCoreRegionType")]
+        public Input<string>? MrfCoreRegionType { get; set; }
+
+        /// <summary>
+        /// Enable Core Region
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("mrfEnableCoreRegion")]
+        public Input<bool>? MrfEnableCoreRegion { get; set; }
 
         /// <summary>
         /// The name of the Feature
@@ -2283,20 +2336,6 @@ namespace Pulumi.Sdwan
         public Input<string>? TransportWanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// Tunnels Bandwidth Percent
-        ///   - Range: `1`-`100`
-        ///   - Default value: `50`
-        /// </summary>
-        [Input("tunnelBandwidthPercent")]
-        public Input<int>? TunnelBandwidthPercent { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("tunnelBandwidthPercentVariable")]
-        public Input<string>? TunnelBandwidthPercentVariable { get; set; }
-
-        /// <summary>
         /// Tunnel Interface on/off
         ///   - Default value: `False`
         /// </summary>
@@ -2526,7 +2565,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set color for TLOC
-        ///   - Choices: `Default`, `Mpls`, `metro ethernet`, `biz internet`, `public internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
         ///   - Default value: `Mpls`
         /// </summary>
         [Input("tunnelInterfaceColor")]
@@ -2743,7 +2782,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `Hub`, `Spoke`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }

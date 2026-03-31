@@ -539,7 +539,7 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Service Object Tracker Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -597,7 +597,7 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service Object Tracker Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a System MRF Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -30,14 +30,18 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewSystemMrfFeature(ctx, "example", &sdwan.SystemMrfFeatureArgs{
-//				Name:                  pulumi.String("Example"),
-//				Description:           pulumi.String("My Example"),
-//				FeatureProfileId:      pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
-//				RegionId:              pulumi.Int(1),
-//				SecondaryRegionId:     pulumi.Int(2),
-//				Role:                  pulumi.String("edge-router"),
-//				EnableMigrationToMrf:  pulumi.String("enabled"),
-//				MigrationBgpCommunity: pulumi.Int(100),
+//				Name:                   pulumi.String("Example"),
+//				Description:            pulumi.String("My Example"),
+//				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Role:                   pulumi.String("edge-router"),
+//				EnableMigrationToMrf:   pulumi.String("enabled"),
+//				MigrationBgpCommunity:  pulumi.Int(100),
+//				EnableManagementRegion: pulumi.Bool(true),
+//				VrfId:                  pulumi.Int(1),
+//				GatewayPreferences: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				ManagementGateway: pulumi.Bool(false),
 //			})
 //			if err != nil {
 //				return err
@@ -62,19 +66,30 @@ type SystemMrfFeature struct {
 
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
+	// Enable management region
+	//   - Default value: `false`
+	EnableManagementRegion pulumi.BoolPtrOutput `pulumi:"enableManagementRegion"`
+	// Variable name
+	EnableManagementRegionVariable pulumi.StringPtrOutput `pulumi:"enableManagementRegionVariable"`
 	// Enable migration mode to Multi-Region Fabric
 	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrOutput `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
+	// Variable name
+	GatewayPreferenceVariable pulumi.StringPtrOutput `pulumi:"gatewayPreferenceVariable"`
+	// List of affinity group preferences for VRF
+	GatewayPreferences pulumi.IntArrayOutput `pulumi:"gatewayPreferences"`
+	// Enable management gateway
+	//   - Default value: `false`
+	ManagementGateway pulumi.BoolPtrOutput `pulumi:"managementGateway"`
+	// Variable name
+	ManagementGatewayVariable pulumi.StringPtrOutput `pulumi:"managementGatewayVariable"`
 	// Set BGP community during migration from BGP-core based network
 	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrOutput `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set region ID
-	//   - Range: `1`-`63`
-	RegionId pulumi.IntPtrOutput `pulumi:"regionId"`
 	// Set the role for router
 	//   - Choices: `edge-router`, `border-router`
 	Role pulumi.StringPtrOutput `pulumi:"role"`
@@ -87,6 +102,11 @@ type SystemMrfFeature struct {
 	SecondaryRegionIdVariable pulumi.StringPtrOutput `pulumi:"secondaryRegionIdVariable"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
+	// VRF name for management region
+	//   - Range: `1`-`65531`
+	VrfId pulumi.IntPtrOutput `pulumi:"vrfId"`
+	// Variable name
+	VrfIdVariable pulumi.StringPtrOutput `pulumi:"vrfIdVariable"`
 }
 
 // NewSystemMrfFeature registers a new resource with the given unique name, arguments, and options.
@@ -124,19 +144,30 @@ func GetSystemMrfFeature(ctx *pulumi.Context,
 type systemMrfFeatureState struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
+	// Enable management region
+	//   - Default value: `false`
+	EnableManagementRegion *bool `pulumi:"enableManagementRegion"`
+	// Variable name
+	EnableManagementRegionVariable *string `pulumi:"enableManagementRegionVariable"`
 	// Enable migration mode to Multi-Region Fabric
 	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf *string `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
+	// Variable name
+	GatewayPreferenceVariable *string `pulumi:"gatewayPreferenceVariable"`
+	// List of affinity group preferences for VRF
+	GatewayPreferences []int `pulumi:"gatewayPreferences"`
+	// Enable management gateway
+	//   - Default value: `false`
+	ManagementGateway *bool `pulumi:"managementGateway"`
+	// Variable name
+	ManagementGatewayVariable *string `pulumi:"managementGatewayVariable"`
 	// Set BGP community during migration from BGP-core based network
 	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity *int `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set region ID
-	//   - Range: `1`-`63`
-	RegionId *int `pulumi:"regionId"`
 	// Set the role for router
 	//   - Choices: `edge-router`, `border-router`
 	Role *string `pulumi:"role"`
@@ -149,24 +180,40 @@ type systemMrfFeatureState struct {
 	SecondaryRegionIdVariable *string `pulumi:"secondaryRegionIdVariable"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
+	// VRF name for management region
+	//   - Range: `1`-`65531`
+	VrfId *int `pulumi:"vrfId"`
+	// Variable name
+	VrfIdVariable *string `pulumi:"vrfIdVariable"`
 }
 
 type SystemMrfFeatureState struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
+	// Enable management region
+	//   - Default value: `false`
+	EnableManagementRegion pulumi.BoolPtrInput
+	// Variable name
+	EnableManagementRegionVariable pulumi.StringPtrInput
 	// Enable migration mode to Multi-Region Fabric
 	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
+	// Variable name
+	GatewayPreferenceVariable pulumi.StringPtrInput
+	// List of affinity group preferences for VRF
+	GatewayPreferences pulumi.IntArrayInput
+	// Enable management gateway
+	//   - Default value: `false`
+	ManagementGateway pulumi.BoolPtrInput
+	// Variable name
+	ManagementGatewayVariable pulumi.StringPtrInput
 	// Set BGP community during migration from BGP-core based network
 	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set region ID
-	//   - Range: `1`-`63`
-	RegionId pulumi.IntPtrInput
 	// Set the role for router
 	//   - Choices: `edge-router`, `border-router`
 	Role pulumi.StringPtrInput
@@ -179,6 +226,11 @@ type SystemMrfFeatureState struct {
 	SecondaryRegionIdVariable pulumi.StringPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
+	// VRF name for management region
+	//   - Range: `1`-`65531`
+	VrfId pulumi.IntPtrInput
+	// Variable name
+	VrfIdVariable pulumi.StringPtrInput
 }
 
 func (SystemMrfFeatureState) ElementType() reflect.Type {
@@ -188,19 +240,30 @@ func (SystemMrfFeatureState) ElementType() reflect.Type {
 type systemMrfFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
+	// Enable management region
+	//   - Default value: `false`
+	EnableManagementRegion *bool `pulumi:"enableManagementRegion"`
+	// Variable name
+	EnableManagementRegionVariable *string `pulumi:"enableManagementRegionVariable"`
 	// Enable migration mode to Multi-Region Fabric
 	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf *string `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// Variable name
+	GatewayPreferenceVariable *string `pulumi:"gatewayPreferenceVariable"`
+	// List of affinity group preferences for VRF
+	GatewayPreferences []int `pulumi:"gatewayPreferences"`
+	// Enable management gateway
+	//   - Default value: `false`
+	ManagementGateway *bool `pulumi:"managementGateway"`
+	// Variable name
+	ManagementGatewayVariable *string `pulumi:"managementGatewayVariable"`
 	// Set BGP community during migration from BGP-core based network
 	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity *int `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set region ID
-	//   - Range: `1`-`63`
-	RegionId *int `pulumi:"regionId"`
 	// Set the role for router
 	//   - Choices: `edge-router`, `border-router`
 	Role *string `pulumi:"role"`
@@ -211,25 +274,41 @@ type systemMrfFeatureArgs struct {
 	SecondaryRegionId *int `pulumi:"secondaryRegionId"`
 	// Variable name
 	SecondaryRegionIdVariable *string `pulumi:"secondaryRegionIdVariable"`
+	// VRF name for management region
+	//   - Range: `1`-`65531`
+	VrfId *int `pulumi:"vrfId"`
+	// Variable name
+	VrfIdVariable *string `pulumi:"vrfIdVariable"`
 }
 
 // The set of arguments for constructing a SystemMrfFeature resource.
 type SystemMrfFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
+	// Enable management region
+	//   - Default value: `false`
+	EnableManagementRegion pulumi.BoolPtrInput
+	// Variable name
+	EnableManagementRegionVariable pulumi.StringPtrInput
 	// Enable migration mode to Multi-Region Fabric
 	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
+	// Variable name
+	GatewayPreferenceVariable pulumi.StringPtrInput
+	// List of affinity group preferences for VRF
+	GatewayPreferences pulumi.IntArrayInput
+	// Enable management gateway
+	//   - Default value: `false`
+	ManagementGateway pulumi.BoolPtrInput
+	// Variable name
+	ManagementGatewayVariable pulumi.StringPtrInput
 	// Set BGP community during migration from BGP-core based network
 	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set region ID
-	//   - Range: `1`-`63`
-	RegionId pulumi.IntPtrInput
 	// Set the role for router
 	//   - Choices: `edge-router`, `border-router`
 	Role pulumi.StringPtrInput
@@ -240,6 +319,11 @@ type SystemMrfFeatureArgs struct {
 	SecondaryRegionId pulumi.IntPtrInput
 	// Variable name
 	SecondaryRegionIdVariable pulumi.StringPtrInput
+	// VRF name for management region
+	//   - Range: `1`-`65531`
+	VrfId pulumi.IntPtrInput
+	// Variable name
+	VrfIdVariable pulumi.StringPtrInput
 }
 
 func (SystemMrfFeatureArgs) ElementType() reflect.Type {
@@ -334,6 +418,17 @@ func (o SystemMrfFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
+// Enable management region
+//   - Default value: `false`
+func (o SystemMrfFeatureOutput) EnableManagementRegion() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.BoolPtrOutput { return v.EnableManagementRegion }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name
+func (o SystemMrfFeatureOutput) EnableManagementRegionVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.EnableManagementRegionVariable }).(pulumi.StringPtrOutput)
+}
+
 // Enable migration mode to Multi-Region Fabric
 //   - Choices: `enabled`, `enabled-from-bgp-core`
 func (o SystemMrfFeatureOutput) EnableMigrationToMrf() pulumi.StringPtrOutput {
@@ -345,6 +440,27 @@ func (o SystemMrfFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
+// Variable name
+func (o SystemMrfFeatureOutput) GatewayPreferenceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.GatewayPreferenceVariable }).(pulumi.StringPtrOutput)
+}
+
+// List of affinity group preferences for VRF
+func (o SystemMrfFeatureOutput) GatewayPreferences() pulumi.IntArrayOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntArrayOutput { return v.GatewayPreferences }).(pulumi.IntArrayOutput)
+}
+
+// Enable management gateway
+//   - Default value: `false`
+func (o SystemMrfFeatureOutput) ManagementGateway() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.BoolPtrOutput { return v.ManagementGateway }).(pulumi.BoolPtrOutput)
+}
+
+// Variable name
+func (o SystemMrfFeatureOutput) ManagementGatewayVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.ManagementGatewayVariable }).(pulumi.StringPtrOutput)
+}
+
 // Set BGP community during migration from BGP-core based network
 //   - Range: `1`-`4294967295`
 func (o SystemMrfFeatureOutput) MigrationBgpCommunity() pulumi.IntPtrOutput {
@@ -354,12 +470,6 @@ func (o SystemMrfFeatureOutput) MigrationBgpCommunity() pulumi.IntPtrOutput {
 // The name of the Feature
 func (o SystemMrfFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
-}
-
-// Set region ID
-//   - Range: `1`-`63`
-func (o SystemMrfFeatureOutput) RegionId() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntPtrOutput { return v.RegionId }).(pulumi.IntPtrOutput)
 }
 
 // Set the role for router
@@ -387,6 +497,17 @@ func (o SystemMrfFeatureOutput) SecondaryRegionIdVariable() pulumi.StringPtrOutp
 // The version of the Feature
 func (o SystemMrfFeatureOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
+}
+
+// VRF name for management region
+//   - Range: `1`-`65531`
+func (o SystemMrfFeatureOutput) VrfId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntPtrOutput { return v.VrfId }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o SystemMrfFeatureOutput) VrfIdVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.VrfIdVariable }).(pulumi.StringPtrOutput)
 }
 
 type SystemMrfFeatureArrayOutput struct{ *pulumi.OutputState }

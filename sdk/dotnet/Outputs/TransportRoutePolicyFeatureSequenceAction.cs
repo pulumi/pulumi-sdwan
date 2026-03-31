@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Outputs
     [OutputType]
     public sealed class TransportRoutePolicyFeatureSequenceAction
     {
-        public readonly ImmutableArray<int> AsPathPrepends;
+        public readonly ImmutableArray<string> AsPathPrepends;
         public readonly ImmutableArray<string> Communities;
         /// <summary>
         /// - Default value: `False`
@@ -69,7 +69,7 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private TransportRoutePolicyFeatureSequenceAction(
-            ImmutableArray<int> asPathPrepends,
+            ImmutableArray<string> asPathPrepends,
 
             ImmutableArray<string> communities,
 

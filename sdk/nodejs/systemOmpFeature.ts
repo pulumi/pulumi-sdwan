@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a System OMP Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -47,6 +47,8 @@ import * as utilities from "./utilities";
  *     ignoreRegionPathLength: false,
  *     transportGateway: "prefer",
  *     siteTypes: ["type-1"],
+ *     siteTypesForTransportGateways: ["type-1"],
+ *     aspathAutoTranslation: true,
  * });
  * ```
  *
@@ -171,7 +173,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly advertiseIpv6BgpVariable: pulumi.Output<string | undefined>;
     /**
      * Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      */
     declare public readonly advertiseIpv6Connected: pulumi.Output<boolean | undefined>;
     /**
@@ -216,7 +218,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly advertiseIpv6OspfVariable: pulumi.Output<string | undefined>;
     /**
      * Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      */
     declare public readonly advertiseIpv6Static: pulumi.Output<boolean | undefined>;
     /**
@@ -233,6 +235,15 @@ export class SystemOmpFeature extends pulumi.CustomResource {
      * Variable name
      */
     declare public readonly advertisementIntervalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     */
+    declare public readonly aspathAutoTranslation: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly aspathAutoTranslationVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
@@ -351,9 +362,17 @@ export class SystemOmpFeature extends pulumi.CustomResource {
      */
     declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
-     * Site Types
+     * Site Types for 20.12 backward compatiblity
      */
     declare public readonly siteTypes: pulumi.Output<string[] | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly siteTypesForTransportGatewayVariable: pulumi.Output<string | undefined>;
+    /**
+     * Site Types
+     */
+    declare public readonly siteTypesForTransportGateways: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
@@ -417,6 +436,8 @@ export class SystemOmpFeature extends pulumi.CustomResource {
             resourceInputs["advertiseIpv6StaticVariable"] = state?.advertiseIpv6StaticVariable;
             resourceInputs["advertisementInterval"] = state?.advertisementInterval;
             resourceInputs["advertisementIntervalVariable"] = state?.advertisementIntervalVariable;
+            resourceInputs["aspathAutoTranslation"] = state?.aspathAutoTranslation;
+            resourceInputs["aspathAutoTranslationVariable"] = state?.aspathAutoTranslationVariable;
             resourceInputs["description"] = state?.description;
             resourceInputs["ecmpLimit"] = state?.ecmpLimit;
             resourceInputs["ecmpLimitVariable"] = state?.ecmpLimitVariable;
@@ -443,6 +464,8 @@ export class SystemOmpFeature extends pulumi.CustomResource {
             resourceInputs["shutdown"] = state?.shutdown;
             resourceInputs["shutdownVariable"] = state?.shutdownVariable;
             resourceInputs["siteTypes"] = state?.siteTypes;
+            resourceInputs["siteTypesForTransportGatewayVariable"] = state?.siteTypesForTransportGatewayVariable;
+            resourceInputs["siteTypesForTransportGateways"] = state?.siteTypesForTransportGateways;
             resourceInputs["siteTypesVariable"] = state?.siteTypesVariable;
             resourceInputs["transportGateway"] = state?.transportGateway;
             resourceInputs["transportGatewayVariable"] = state?.transportGatewayVariable;
@@ -484,6 +507,8 @@ export class SystemOmpFeature extends pulumi.CustomResource {
             resourceInputs["advertiseIpv6StaticVariable"] = args?.advertiseIpv6StaticVariable;
             resourceInputs["advertisementInterval"] = args?.advertisementInterval;
             resourceInputs["advertisementIntervalVariable"] = args?.advertisementIntervalVariable;
+            resourceInputs["aspathAutoTranslation"] = args?.aspathAutoTranslation;
+            resourceInputs["aspathAutoTranslationVariable"] = args?.aspathAutoTranslationVariable;
             resourceInputs["description"] = args?.description;
             resourceInputs["ecmpLimit"] = args?.ecmpLimit;
             resourceInputs["ecmpLimitVariable"] = args?.ecmpLimitVariable;
@@ -510,6 +535,8 @@ export class SystemOmpFeature extends pulumi.CustomResource {
             resourceInputs["shutdown"] = args?.shutdown;
             resourceInputs["shutdownVariable"] = args?.shutdownVariable;
             resourceInputs["siteTypes"] = args?.siteTypes;
+            resourceInputs["siteTypesForTransportGatewayVariable"] = args?.siteTypesForTransportGatewayVariable;
+            resourceInputs["siteTypesForTransportGateways"] = args?.siteTypesForTransportGateways;
             resourceInputs["siteTypesVariable"] = args?.siteTypesVariable;
             resourceInputs["transportGateway"] = args?.transportGateway;
             resourceInputs["transportGatewayVariable"] = args?.transportGatewayVariable;
@@ -607,7 +634,7 @@ export interface SystemOmpFeatureState {
     advertiseIpv6BgpVariable?: pulumi.Input<string>;
     /**
      * Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      */
     advertiseIpv6Connected?: pulumi.Input<boolean>;
     /**
@@ -652,7 +679,7 @@ export interface SystemOmpFeatureState {
     advertiseIpv6OspfVariable?: pulumi.Input<string>;
     /**
      * Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      */
     advertiseIpv6Static?: pulumi.Input<boolean>;
     /**
@@ -669,6 +696,15 @@ export interface SystemOmpFeatureState {
      * Variable name
      */
     advertisementIntervalVariable?: pulumi.Input<string>;
+    /**
+     * Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     */
+    aspathAutoTranslation?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    aspathAutoTranslationVariable?: pulumi.Input<string>;
     /**
      * The description of the Feature
      */
@@ -787,9 +823,17 @@ export interface SystemOmpFeatureState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Site Types
+     * Site Types for 20.12 backward compatiblity
      */
     siteTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    siteTypesForTransportGatewayVariable?: pulumi.Input<string>;
+    /**
+     * Site Types
+     */
+    siteTypesForTransportGateways?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Variable name
      */
@@ -896,7 +940,7 @@ export interface SystemOmpFeatureArgs {
     advertiseIpv6BgpVariable?: pulumi.Input<string>;
     /**
      * Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      */
     advertiseIpv6Connected?: pulumi.Input<boolean>;
     /**
@@ -941,7 +985,7 @@ export interface SystemOmpFeatureArgs {
     advertiseIpv6OspfVariable?: pulumi.Input<string>;
     /**
      * Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      */
     advertiseIpv6Static?: pulumi.Input<boolean>;
     /**
@@ -958,6 +1002,15 @@ export interface SystemOmpFeatureArgs {
      * Variable name
      */
     advertisementIntervalVariable?: pulumi.Input<string>;
+    /**
+     * Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     */
+    aspathAutoTranslation?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    aspathAutoTranslationVariable?: pulumi.Input<string>;
     /**
      * The description of the Feature
      */
@@ -1076,9 +1129,17 @@ export interface SystemOmpFeatureArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Site Types
+     * Site Types for 20.12 backward compatiblity
      */
     siteTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    siteTypesForTransportGatewayVariable?: pulumi.Input<string>;
+    /**
+     * Site Types
+     */
+    siteTypesForTransportGateways?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Variable name
      */

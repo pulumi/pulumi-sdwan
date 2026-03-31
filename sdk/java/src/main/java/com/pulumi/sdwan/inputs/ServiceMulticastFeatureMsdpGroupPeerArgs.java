@@ -127,14 +127,14 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
     }
 
     /**
-     * Set MSDP peer ip password
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="peerAuthenticationPassword")
     private @Nullable Output<String> peerAuthenticationPassword;
 
     /**
-     * @return Set MSDP peer ip password
+     * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> peerAuthenticationPassword() {
@@ -448,7 +448,7 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
         }
 
         /**
-         * @param peerAuthenticationPassword Set MSDP peer ip password
+         * @param peerAuthenticationPassword Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -459,7 +459,7 @@ public final class ServiceMulticastFeatureMsdpGroupPeerArgs extends com.pulumi.r
         }
 
         /**
-         * @param peerAuthenticationPassword Set MSDP peer ip password
+         * @param peerAuthenticationPassword Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

@@ -22,6 +22,8 @@ class SystemGlobalFeatureArgs:
                  feature_profile_id: pulumi.Input[_builtins.str],
                  arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
                  arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  cdp: Optional[pulumi.Input[_builtins.bool]] = None,
                  cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -29,6 +31,10 @@ class SystemGlobalFeatureArgs:
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
                  domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
                  ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
@@ -41,6 +47,8 @@ class SystemGlobalFeatureArgs:
                  ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
                  ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
+                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
                  line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  lldp: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -75,6 +83,9 @@ class SystemGlobalFeatureArgs:
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
+        :param pulumi.Input[_builtins.bool] bgp_community_new_format: Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] bgp_community_new_format_variable: Variable name
         :param pulumi.Input[_builtins.bool] cdp: Configure CDP
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
@@ -85,6 +96,12 @@ class SystemGlobalFeatureArgs:
         :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance: Set Etherchannel load balance hash algorithm
+                 - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance_variable: Variable name
+        :param pulumi.Input[_builtins.bool] etherchannel_vlan_load_balance: Set Etherchannel vlan manual load balance
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] etherchannel_vlan_load_balance_variable: Variable name
         :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ftp_passive_variable: Variable name
@@ -103,6 +120,9 @@ class SystemGlobalFeatureArgs:
         :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
+        :param pulumi.Input[_builtins.int] lacp_system_priority: Set LACP system priority
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.str] lacp_system_priority_variable: Variable name
         :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
@@ -150,6 +170,10 @@ class SystemGlobalFeatureArgs:
             pulumi.set(__self__, "arp_proxy", arp_proxy)
         if arp_proxy_variable is not None:
             pulumi.set(__self__, "arp_proxy_variable", arp_proxy_variable)
+        if bgp_community_new_format is not None:
+            pulumi.set(__self__, "bgp_community_new_format", bgp_community_new_format)
+        if bgp_community_new_format_variable is not None:
+            pulumi.set(__self__, "bgp_community_new_format_variable", bgp_community_new_format_variable)
         if cdp is not None:
             pulumi.set(__self__, "cdp", cdp)
         if cdp_variable is not None:
@@ -164,6 +188,14 @@ class SystemGlobalFeatureArgs:
             pulumi.set(__self__, "domain_lookup", domain_lookup)
         if domain_lookup_variable is not None:
             pulumi.set(__self__, "domain_lookup_variable", domain_lookup_variable)
+        if etherchannel_flow_load_balance is not None:
+            pulumi.set(__self__, "etherchannel_flow_load_balance", etherchannel_flow_load_balance)
+        if etherchannel_flow_load_balance_variable is not None:
+            pulumi.set(__self__, "etherchannel_flow_load_balance_variable", etherchannel_flow_load_balance_variable)
+        if etherchannel_vlan_load_balance is not None:
+            pulumi.set(__self__, "etherchannel_vlan_load_balance", etherchannel_vlan_load_balance)
+        if etherchannel_vlan_load_balance_variable is not None:
+            pulumi.set(__self__, "etherchannel_vlan_load_balance_variable", etherchannel_vlan_load_balance_variable)
         if ftp_passive is not None:
             pulumi.set(__self__, "ftp_passive", ftp_passive)
         if ftp_passive_variable is not None:
@@ -188,6 +220,10 @@ class SystemGlobalFeatureArgs:
             pulumi.set(__self__, "ip_source_routing", ip_source_routing)
         if ip_source_routing_variable is not None:
             pulumi.set(__self__, "ip_source_routing_variable", ip_source_routing_variable)
+        if lacp_system_priority is not None:
+            pulumi.set(__self__, "lacp_system_priority", lacp_system_priority)
+        if lacp_system_priority_variable is not None:
+            pulumi.set(__self__, "lacp_system_priority_variable", lacp_system_priority_variable)
         if line_vty is not None:
             pulumi.set(__self__, "line_vty", line_vty)
         if line_vty_variable is not None:
@@ -281,6 +317,31 @@ class SystemGlobalFeatureArgs:
         pulumi.set(self, "arp_proxy_variable", value)
 
     @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormat")
+    def bgp_community_new_format(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+          - Default value: `false`
+        """
+        return pulumi.get(self, "bgp_community_new_format")
+
+    @bgp_community_new_format.setter
+    def bgp_community_new_format(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "bgp_community_new_format", value)
+
+    @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormatVariable")
+    def bgp_community_new_format_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "bgp_community_new_format_variable")
+
+    @bgp_community_new_format_variable.setter
+    def bgp_community_new_format_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "bgp_community_new_format_variable", value)
+
+    @_builtins.property
     @pulumi.getter
     def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -366,6 +427,56 @@ class SystemGlobalFeatureArgs:
     @domain_lookup_variable.setter
     def domain_lookup_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "domain_lookup_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalance")
+    def etherchannel_flow_load_balance(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Set Etherchannel load balance hash algorithm
+          - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance")
+
+    @etherchannel_flow_load_balance.setter
+    def etherchannel_flow_load_balance(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "etherchannel_flow_load_balance", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalanceVariable")
+    def etherchannel_flow_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance_variable")
+
+    @etherchannel_flow_load_balance_variable.setter
+    def etherchannel_flow_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "etherchannel_flow_load_balance_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalance")
+    def etherchannel_vlan_load_balance(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Set Etherchannel vlan manual load balance
+          - Default value: `false`
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance")
+
+    @etherchannel_vlan_load_balance.setter
+    def etherchannel_vlan_load_balance(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "etherchannel_vlan_load_balance", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalanceVariable")
+    def etherchannel_vlan_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance_variable")
+
+    @etherchannel_vlan_load_balance_variable.setter
+    def etherchannel_vlan_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "etherchannel_vlan_load_balance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassive")
@@ -516,6 +627,31 @@ class SystemGlobalFeatureArgs:
     @ip_source_routing_variable.setter
     def ip_source_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "ip_source_routing_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriority")
+    def lacp_system_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Set LACP system priority
+          - Range: `1`-`65535`
+        """
+        return pulumi.get(self, "lacp_system_priority")
+
+    @lacp_system_priority.setter
+    def lacp_system_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "lacp_system_priority", value)
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriorityVariable")
+    def lacp_system_priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "lacp_system_priority_variable")
+
+    @lacp_system_priority_variable.setter
+    def lacp_system_priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "lacp_system_priority_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
@@ -861,6 +997,8 @@ class _SystemGlobalFeatureState:
     def __init__(__self__, *,
                  arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
                  arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  cdp: Optional[pulumi.Input[_builtins.bool]] = None,
                  cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -868,6 +1006,10 @@ class _SystemGlobalFeatureState:
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
                  domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
                  ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -881,6 +1023,8 @@ class _SystemGlobalFeatureState:
                  ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
                  ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
+                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
                  line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  lldp: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -915,6 +1059,9 @@ class _SystemGlobalFeatureState:
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
+        :param pulumi.Input[_builtins.bool] bgp_community_new_format: Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] bgp_community_new_format_variable: Variable name
         :param pulumi.Input[_builtins.bool] cdp: Configure CDP
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
@@ -925,6 +1072,12 @@ class _SystemGlobalFeatureState:
         :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance: Set Etherchannel load balance hash algorithm
+                 - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance_variable: Variable name
+        :param pulumi.Input[_builtins.bool] etherchannel_vlan_load_balance: Set Etherchannel vlan manual load balance
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] etherchannel_vlan_load_balance_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
                  - Default value: `false`
@@ -944,6 +1097,9 @@ class _SystemGlobalFeatureState:
         :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
+        :param pulumi.Input[_builtins.int] lacp_system_priority: Set LACP system priority
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.str] lacp_system_priority_variable: Variable name
         :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
@@ -991,6 +1147,10 @@ class _SystemGlobalFeatureState:
             pulumi.set(__self__, "arp_proxy", arp_proxy)
         if arp_proxy_variable is not None:
             pulumi.set(__self__, "arp_proxy_variable", arp_proxy_variable)
+        if bgp_community_new_format is not None:
+            pulumi.set(__self__, "bgp_community_new_format", bgp_community_new_format)
+        if bgp_community_new_format_variable is not None:
+            pulumi.set(__self__, "bgp_community_new_format_variable", bgp_community_new_format_variable)
         if cdp is not None:
             pulumi.set(__self__, "cdp", cdp)
         if cdp_variable is not None:
@@ -1005,6 +1165,14 @@ class _SystemGlobalFeatureState:
             pulumi.set(__self__, "domain_lookup", domain_lookup)
         if domain_lookup_variable is not None:
             pulumi.set(__self__, "domain_lookup_variable", domain_lookup_variable)
+        if etherchannel_flow_load_balance is not None:
+            pulumi.set(__self__, "etherchannel_flow_load_balance", etherchannel_flow_load_balance)
+        if etherchannel_flow_load_balance_variable is not None:
+            pulumi.set(__self__, "etherchannel_flow_load_balance_variable", etherchannel_flow_load_balance_variable)
+        if etherchannel_vlan_load_balance is not None:
+            pulumi.set(__self__, "etherchannel_vlan_load_balance", etherchannel_vlan_load_balance)
+        if etherchannel_vlan_load_balance_variable is not None:
+            pulumi.set(__self__, "etherchannel_vlan_load_balance_variable", etherchannel_vlan_load_balance_variable)
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if ftp_passive is not None:
@@ -1031,6 +1199,10 @@ class _SystemGlobalFeatureState:
             pulumi.set(__self__, "ip_source_routing", ip_source_routing)
         if ip_source_routing_variable is not None:
             pulumi.set(__self__, "ip_source_routing_variable", ip_source_routing_variable)
+        if lacp_system_priority is not None:
+            pulumi.set(__self__, "lacp_system_priority", lacp_system_priority)
+        if lacp_system_priority_variable is not None:
+            pulumi.set(__self__, "lacp_system_priority_variable", lacp_system_priority_variable)
         if line_vty is not None:
             pulumi.set(__self__, "line_vty", line_vty)
         if line_vty_variable is not None:
@@ -1112,6 +1284,31 @@ class _SystemGlobalFeatureState:
     @arp_proxy_variable.setter
     def arp_proxy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "arp_proxy_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormat")
+    def bgp_community_new_format(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+          - Default value: `false`
+        """
+        return pulumi.get(self, "bgp_community_new_format")
+
+    @bgp_community_new_format.setter
+    def bgp_community_new_format(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "bgp_community_new_format", value)
+
+    @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormatVariable")
+    def bgp_community_new_format_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "bgp_community_new_format_variable")
+
+    @bgp_community_new_format_variable.setter
+    def bgp_community_new_format_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "bgp_community_new_format_variable", value)
 
     @_builtins.property
     @pulumi.getter
@@ -1199,6 +1396,56 @@ class _SystemGlobalFeatureState:
     @domain_lookup_variable.setter
     def domain_lookup_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "domain_lookup_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalance")
+    def etherchannel_flow_load_balance(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Set Etherchannel load balance hash algorithm
+          - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance")
+
+    @etherchannel_flow_load_balance.setter
+    def etherchannel_flow_load_balance(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "etherchannel_flow_load_balance", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalanceVariable")
+    def etherchannel_flow_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance_variable")
+
+    @etherchannel_flow_load_balance_variable.setter
+    def etherchannel_flow_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "etherchannel_flow_load_balance_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalance")
+    def etherchannel_vlan_load_balance(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Set Etherchannel vlan manual load balance
+          - Default value: `false`
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance")
+
+    @etherchannel_vlan_load_balance.setter
+    def etherchannel_vlan_load_balance(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "etherchannel_vlan_load_balance", value)
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalanceVariable")
+    def etherchannel_vlan_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance_variable")
+
+    @etherchannel_vlan_load_balance_variable.setter
+    def etherchannel_vlan_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "etherchannel_vlan_load_balance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -1361,6 +1608,31 @@ class _SystemGlobalFeatureState:
     @ip_source_routing_variable.setter
     def ip_source_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "ip_source_routing_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriority")
+    def lacp_system_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Set LACP system priority
+          - Range: `1`-`65535`
+        """
+        return pulumi.get(self, "lacp_system_priority")
+
+    @lacp_system_priority.setter
+    def lacp_system_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "lacp_system_priority", value)
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriorityVariable")
+    def lacp_system_priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "lacp_system_priority_variable")
+
+    @lacp_system_priority_variable.setter
+    def lacp_system_priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "lacp_system_priority_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
@@ -1721,6 +1993,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
                  arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  cdp: Optional[pulumi.Input[_builtins.bool]] = None,
                  cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -1728,6 +2002,10 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
                  domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
                  ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1741,6 +2019,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
                  ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
+                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
                  line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  lldp: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -1771,7 +2051,7 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a System Global Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1805,7 +2085,11 @@ class SystemGlobalFeature(pulumi.CustomResource):
             nat64_udp_timeout=300,
             nat64_tcp_timeout=3600,
             http_authentication="aaa",
-            ssh_version="2")
+            ssh_version="2",
+            lacp_system_priority=1234,
+            etherchannel_flow_load_balance="src-ip",
+            etherchannel_vlan_load_balance=True,
+            bgp_community_new_format=True)
         ```
 
         ## Import
@@ -1824,6 +2108,9 @@ class SystemGlobalFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
+        :param pulumi.Input[_builtins.bool] bgp_community_new_format: Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] bgp_community_new_format_variable: Variable name
         :param pulumi.Input[_builtins.bool] cdp: Configure CDP
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
@@ -1834,6 +2121,12 @@ class SystemGlobalFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance: Set Etherchannel load balance hash algorithm
+                 - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance_variable: Variable name
+        :param pulumi.Input[_builtins.bool] etherchannel_vlan_load_balance: Set Etherchannel vlan manual load balance
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] etherchannel_vlan_load_balance_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
                  - Default value: `false`
@@ -1853,6 +2146,9 @@ class SystemGlobalFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
+        :param pulumi.Input[_builtins.int] lacp_system_priority: Set LACP system priority
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.str] lacp_system_priority_variable: Variable name
         :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
@@ -1903,7 +2199,7 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System Global Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1937,7 +2233,11 @@ class SystemGlobalFeature(pulumi.CustomResource):
             nat64_udp_timeout=300,
             nat64_tcp_timeout=3600,
             http_authentication="aaa",
-            ssh_version="2")
+            ssh_version="2",
+            lacp_system_priority=1234,
+            etherchannel_flow_load_balance="src-ip",
+            etherchannel_vlan_load_balance=True,
+            bgp_community_new_format=True)
         ```
 
         ## Import
@@ -1968,6 +2268,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
                  arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  cdp: Optional[pulumi.Input[_builtins.bool]] = None,
                  cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -1975,6 +2277,10 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
                  domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
                  ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1988,6 +2294,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
                  ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
                  ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
+                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
                  line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  lldp: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -2026,6 +2334,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
 
             __props__.__dict__["arp_proxy"] = arp_proxy
             __props__.__dict__["arp_proxy_variable"] = arp_proxy_variable
+            __props__.__dict__["bgp_community_new_format"] = bgp_community_new_format
+            __props__.__dict__["bgp_community_new_format_variable"] = bgp_community_new_format_variable
             __props__.__dict__["cdp"] = cdp
             __props__.__dict__["cdp_variable"] = cdp_variable
             __props__.__dict__["console_logging"] = console_logging
@@ -2033,6 +2343,10 @@ class SystemGlobalFeature(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["domain_lookup"] = domain_lookup
             __props__.__dict__["domain_lookup_variable"] = domain_lookup_variable
+            __props__.__dict__["etherchannel_flow_load_balance"] = etherchannel_flow_load_balance
+            __props__.__dict__["etherchannel_flow_load_balance_variable"] = etherchannel_flow_load_balance_variable
+            __props__.__dict__["etherchannel_vlan_load_balance"] = etherchannel_vlan_load_balance
+            __props__.__dict__["etherchannel_vlan_load_balance_variable"] = etherchannel_vlan_load_balance_variable
             if feature_profile_id is None and not opts.urn:
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
@@ -2048,6 +2362,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
             __props__.__dict__["ignore_bootp_variable"] = ignore_bootp_variable
             __props__.__dict__["ip_source_routing"] = ip_source_routing
             __props__.__dict__["ip_source_routing_variable"] = ip_source_routing_variable
+            __props__.__dict__["lacp_system_priority"] = lacp_system_priority
+            __props__.__dict__["lacp_system_priority_variable"] = lacp_system_priority_variable
             __props__.__dict__["line_vty"] = line_vty
             __props__.__dict__["line_vty_variable"] = line_vty_variable
             __props__.__dict__["lldp"] = lldp
@@ -2088,6 +2404,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
             arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
+            bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
             cdp: Optional[pulumi.Input[_builtins.bool]] = None,
             cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
             console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -2095,6 +2413,10 @@ class SystemGlobalFeature(pulumi.CustomResource):
             description: Optional[pulumi.Input[_builtins.str]] = None,
             domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
             domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
+            etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
+            etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
             feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
             ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
             ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2108,6 +2430,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
             ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
             ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
             ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
+            lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
             line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
             line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
             lldp: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -2146,6 +2470,9 @@ class SystemGlobalFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
+        :param pulumi.Input[_builtins.bool] bgp_community_new_format: Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] bgp_community_new_format_variable: Variable name
         :param pulumi.Input[_builtins.bool] cdp: Configure CDP
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
@@ -2156,6 +2483,12 @@ class SystemGlobalFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance: Set Etherchannel load balance hash algorithm
+                 - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        :param pulumi.Input[_builtins.str] etherchannel_flow_load_balance_variable: Variable name
+        :param pulumi.Input[_builtins.bool] etherchannel_vlan_load_balance: Set Etherchannel vlan manual load balance
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] etherchannel_vlan_load_balance_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
                  - Default value: `false`
@@ -2175,6 +2508,9 @@ class SystemGlobalFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
+        :param pulumi.Input[_builtins.int] lacp_system_priority: Set LACP system priority
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.str] lacp_system_priority_variable: Variable name
         :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
@@ -2224,6 +2560,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
 
         __props__.__dict__["arp_proxy"] = arp_proxy
         __props__.__dict__["arp_proxy_variable"] = arp_proxy_variable
+        __props__.__dict__["bgp_community_new_format"] = bgp_community_new_format
+        __props__.__dict__["bgp_community_new_format_variable"] = bgp_community_new_format_variable
         __props__.__dict__["cdp"] = cdp
         __props__.__dict__["cdp_variable"] = cdp_variable
         __props__.__dict__["console_logging"] = console_logging
@@ -2231,6 +2569,10 @@ class SystemGlobalFeature(pulumi.CustomResource):
         __props__.__dict__["description"] = description
         __props__.__dict__["domain_lookup"] = domain_lookup
         __props__.__dict__["domain_lookup_variable"] = domain_lookup_variable
+        __props__.__dict__["etherchannel_flow_load_balance"] = etherchannel_flow_load_balance
+        __props__.__dict__["etherchannel_flow_load_balance_variable"] = etherchannel_flow_load_balance_variable
+        __props__.__dict__["etherchannel_vlan_load_balance"] = etherchannel_vlan_load_balance
+        __props__.__dict__["etherchannel_vlan_load_balance_variable"] = etherchannel_vlan_load_balance_variable
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["ftp_passive"] = ftp_passive
         __props__.__dict__["ftp_passive_variable"] = ftp_passive_variable
@@ -2244,6 +2586,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
         __props__.__dict__["ignore_bootp_variable"] = ignore_bootp_variable
         __props__.__dict__["ip_source_routing"] = ip_source_routing
         __props__.__dict__["ip_source_routing_variable"] = ip_source_routing_variable
+        __props__.__dict__["lacp_system_priority"] = lacp_system_priority
+        __props__.__dict__["lacp_system_priority_variable"] = lacp_system_priority_variable
         __props__.__dict__["line_vty"] = line_vty
         __props__.__dict__["line_vty_variable"] = line_vty_variable
         __props__.__dict__["lldp"] = lldp
@@ -2290,6 +2634,23 @@ class SystemGlobalFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "arp_proxy_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormat")
+    def bgp_community_new_format(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+          - Default value: `false`
+        """
+        return pulumi.get(self, "bgp_community_new_format")
+
+    @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormatVariable")
+    def bgp_community_new_format_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "bgp_community_new_format_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -2349,6 +2710,40 @@ class SystemGlobalFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "domain_lookup_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalance")
+    def etherchannel_flow_load_balance(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Set Etherchannel load balance hash algorithm
+          - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalanceVariable")
+    def etherchannel_flow_load_balance_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalance")
+    def etherchannel_vlan_load_balance(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Set Etherchannel vlan manual load balance
+          - Default value: `false`
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalanceVariable")
+    def etherchannel_vlan_load_balance_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance_variable")
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -2459,6 +2854,23 @@ class SystemGlobalFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "ip_source_routing_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriority")
+    def lacp_system_priority(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Set LACP system priority
+          - Range: `1`-`65535`
+        """
+        return pulumi.get(self, "lacp_system_priority")
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriorityVariable")
+    def lacp_system_priority_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "lacp_system_priority_variable")
 
     @_builtins.property
     @pulumi.getter(name="lineVty")

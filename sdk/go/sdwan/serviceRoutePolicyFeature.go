@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Service Route Policy Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -42,8 +42,8 @@ import (
 //						Protocol:   pulumi.String("IPV4"),
 //						Actions: sdwan.ServiceRoutePolicyFeatureSequenceActionArray{
 //							&sdwan.ServiceRoutePolicyFeatureSequenceActionArgs{
-//								AsPathPrepend: []float64{
-//									65521,
+//								AsPathPrepend: []string{
+//									"65521",
 //								},
 //								CommunityAdditive: pulumi.Bool(false),
 //								Community: []string{

@@ -23,10 +23,15 @@ public final class SystemSnmpFeatureCommunity {
      */
     private @Nullable String authorizationVariable;
     /**
-     * @return Set name of the SNMP community
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String name;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String nameVariable;
     /**
      * @return Set user label of the SNMP community
      * 
@@ -60,11 +65,18 @@ public final class SystemSnmpFeatureCommunity {
         return Optional.ofNullable(this.authorizationVariable);
     }
     /**
-     * @return Set name of the SNMP community
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> nameVariable() {
+        return Optional.ofNullable(this.nameVariable);
     }
     /**
      * @return Set user label of the SNMP community
@@ -100,6 +112,7 @@ public final class SystemSnmpFeatureCommunity {
         private @Nullable String authorization;
         private @Nullable String authorizationVariable;
         private @Nullable String name;
+        private @Nullable String nameVariable;
         private @Nullable String userLabel;
         private @Nullable String view;
         private @Nullable String viewVariable;
@@ -109,6 +122,7 @@ public final class SystemSnmpFeatureCommunity {
     	      this.authorization = defaults.authorization;
     	      this.authorizationVariable = defaults.authorizationVariable;
     	      this.name = defaults.name;
+    	      this.nameVariable = defaults.nameVariable;
     	      this.userLabel = defaults.userLabel;
     	      this.view = defaults.view;
     	      this.viewVariable = defaults.viewVariable;
@@ -130,6 +144,12 @@ public final class SystemSnmpFeatureCommunity {
         public Builder name(@Nullable String name) {
 
             this.name = name;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder nameVariable(@Nullable String nameVariable) {
+
+            this.nameVariable = nameVariable;
             return this;
         }
         @CustomType.Setter
@@ -155,6 +175,7 @@ public final class SystemSnmpFeatureCommunity {
             _resultValue.authorization = authorization;
             _resultValue.authorizationVariable = authorizationVariable;
             _resultValue.name = name;
+            _resultValue.nameVariable = nameVariable;
             _resultValue.userLabel = userLabel;
             _resultValue.view = view;
             _resultValue.viewVariable = viewVariable;

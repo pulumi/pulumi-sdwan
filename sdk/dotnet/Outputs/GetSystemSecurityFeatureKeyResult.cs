@@ -70,7 +70,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string IncludeTcpOptionsVariable;
         /// <summary>
-        /// Specify the Key String
+        /// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         public readonly string KeyString;
         /// <summary>

@@ -84,7 +84,7 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
      */
     private @Nullable String lsaRetransmitIntervalVariable;
     /**
-     * @return Set MD5 authentication key
+     * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String messageDigestKey;
@@ -234,7 +234,7 @@ public final class ServiceRoutingOspfFeatureAreaInterface {
         return Optional.ofNullable(this.lsaRetransmitIntervalVariable);
     }
     /**
-     * @return Set MD5 authentication key
+     * @return Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> messageDigestKey() {

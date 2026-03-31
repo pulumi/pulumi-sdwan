@@ -27,7 +27,7 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
     """
     A collection of values returned by getServiceLanVpnInterfaceEthernetFeature.
     """
-    def __init__(__self__, acl_ipv4_egress_policy_id=None, acl_ipv4_ingress_policy_id=None, acl_ipv6_egress_policy_id=None, acl_ipv6_ingress_policy_id=None, acl_shaping_rate=None, acl_shaping_rate_variable=None, arp_timeout=None, arp_timeout_variable=None, arps=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_configuration_type=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_nat=None, ipv4_nat_loopback=None, ipv4_nat_loopback_variable=None, ipv4_nat_overload=None, ipv4_nat_overload_variable=None, ipv4_nat_prefix_length=None, ipv4_nat_prefix_length_variable=None, ipv4_nat_range_end=None, ipv4_nat_range_end_variable=None, ipv4_nat_range_start=None, ipv4_nat_range_start_variable=None, ipv4_nat_tcp_timeout=None, ipv4_nat_tcp_timeout_variable=None, ipv4_nat_udp_timeout=None, ipv4_nat_udp_timeout_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_variable=None, ipv6_configuration_type=None, ipv6_dhcp_helpers=None, ipv6_dhcp_secondary_addresses=None, ipv6_nat=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, port_channel_interface=None, port_channel_lacp_fast_switchover=None, port_channel_lacp_fast_switchover_variable=None, port_channel_lacp_load_balance=None, port_channel_lacp_load_balance_variable=None, port_channel_lacp_max_bundle=None, port_channel_lacp_max_bundle_variable=None, port_channel_lacp_member_links=None, port_channel_lacp_min_bundle=None, port_channel_lacp_min_bundle_variable=None, port_channel_lacp_qos_aggregate=None, port_channel_lacp_qos_aggregate_variable=None, port_channel_member_interface=None, port_channel_mode=None, port_channel_static_load_balance=None, port_channel_static_load_balance_variable=None, port_channel_static_member_links=None, port_channel_static_qos_aggregate=None, port_channel_static_qos_aggregate_variable=None, port_channel_subinterface=None, port_channel_subinterface_primary_interface_name=None, port_channel_subinterface_primary_interface_name_variable=None, port_channel_subinterface_secondary_interface_name=None, port_channel_subinterface_secondary_interface_name_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nats=None, tcp_mss=None, tcp_mss_variable=None, trustsec_enable_enforced_propogation=None, trustsec_enable_sgt_propogation=None, trustsec_enforced_security_group_tag=None, trustsec_enforced_security_group_tag_variable=None, trustsec_propogate=None, trustsec_security_group_tag=None, trustsec_security_group_tag_variable=None, version=None, xconnect=None, xconnect_variable=None):
+    def __init__(__self__, acl_ipv4_egress_policy_id=None, acl_ipv4_ingress_policy_id=None, acl_ipv6_egress_policy_id=None, acl_ipv6_ingress_policy_id=None, acl_shaping_rate=None, acl_shaping_rate_variable=None, arp_timeout=None, arp_timeout_variable=None, arps=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_type=None, ipv4_address_type_variable=None, ipv4_address_variable=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_nat=None, ipv4_nat_loopback=None, ipv4_nat_loopback_variable=None, ipv4_nat_overload=None, ipv4_nat_overload_variable=None, ipv4_nat_prefix_length=None, ipv4_nat_prefix_length_variable=None, ipv4_nat_range_end=None, ipv4_nat_range_end_variable=None, ipv4_nat_range_start=None, ipv4_nat_range_start_variable=None, ipv4_nat_tcp_timeout=None, ipv4_nat_tcp_timeout_variable=None, ipv4_nat_udp_timeout=None, ipv4_nat_udp_timeout_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_type=None, ipv6_address_type_variable=None, ipv6_address_variable=None, ipv6_dhcp_helpers=None, ipv6_dhcp_secondary_addresses=None, ipv6_nat=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, port_channel_interface=None, port_channel_lacp_fast_switchover=None, port_channel_lacp_fast_switchover_variable=None, port_channel_lacp_load_balance=None, port_channel_lacp_load_balance_variable=None, port_channel_lacp_max_bundle=None, port_channel_lacp_max_bundle_variable=None, port_channel_lacp_member_links=None, port_channel_lacp_min_bundle=None, port_channel_lacp_min_bundle_variable=None, port_channel_lacp_qos_aggregate=None, port_channel_lacp_qos_aggregate_variable=None, port_channel_member_interface=None, port_channel_mode=None, port_channel_static_load_balance=None, port_channel_static_load_balance_variable=None, port_channel_static_member_links=None, port_channel_static_qos_aggregate=None, port_channel_static_qos_aggregate_variable=None, port_channel_subinterface=None, port_channel_subinterface_primary_interface_name=None, port_channel_subinterface_primary_interface_name_variable=None, port_channel_subinterface_secondary_interface_name=None, port_channel_subinterface_secondary_interface_name_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nats=None, tcp_mss=None, tcp_mss_variable=None, trustsec_enable_enforced_propogation=None, trustsec_enable_sgt_propogation=None, trustsec_enforced_security_group_tag=None, trustsec_enforced_security_group_tag_variable=None, trustsec_propogate=None, trustsec_security_group_tag=None, trustsec_security_group_tag_variable=None, version=None, xconnect=None, xconnect_variable=None):
         if acl_ipv4_egress_policy_id and not isinstance(acl_ipv4_egress_policy_id, str):
             raise TypeError("Expected argument 'acl_ipv4_egress_policy_id' to be a str")
         pulumi.set(__self__, "acl_ipv4_egress_policy_id", acl_ipv4_egress_policy_id)
@@ -118,12 +118,15 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         if ipv4_address and not isinstance(ipv4_address, str):
             raise TypeError("Expected argument 'ipv4_address' to be a str")
         pulumi.set(__self__, "ipv4_address", ipv4_address)
+        if ipv4_address_type and not isinstance(ipv4_address_type, str):
+            raise TypeError("Expected argument 'ipv4_address_type' to be a str")
+        pulumi.set(__self__, "ipv4_address_type", ipv4_address_type)
+        if ipv4_address_type_variable and not isinstance(ipv4_address_type_variable, str):
+            raise TypeError("Expected argument 'ipv4_address_type_variable' to be a str")
+        pulumi.set(__self__, "ipv4_address_type_variable", ipv4_address_type_variable)
         if ipv4_address_variable and not isinstance(ipv4_address_variable, str):
             raise TypeError("Expected argument 'ipv4_address_variable' to be a str")
         pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
-        if ipv4_configuration_type and not isinstance(ipv4_configuration_type, str):
-            raise TypeError("Expected argument 'ipv4_configuration_type' to be a str")
-        pulumi.set(__self__, "ipv4_configuration_type", ipv4_configuration_type)
         if ipv4_dhcp_distance and not isinstance(ipv4_dhcp_distance, int):
             raise TypeError("Expected argument 'ipv4_dhcp_distance' to be a int")
         pulumi.set(__self__, "ipv4_dhcp_distance", ipv4_dhcp_distance)
@@ -196,12 +199,15 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         if ipv6_address and not isinstance(ipv6_address, str):
             raise TypeError("Expected argument 'ipv6_address' to be a str")
         pulumi.set(__self__, "ipv6_address", ipv6_address)
+        if ipv6_address_type and not isinstance(ipv6_address_type, str):
+            raise TypeError("Expected argument 'ipv6_address_type' to be a str")
+        pulumi.set(__self__, "ipv6_address_type", ipv6_address_type)
+        if ipv6_address_type_variable and not isinstance(ipv6_address_type_variable, str):
+            raise TypeError("Expected argument 'ipv6_address_type_variable' to be a str")
+        pulumi.set(__self__, "ipv6_address_type_variable", ipv6_address_type_variable)
         if ipv6_address_variable and not isinstance(ipv6_address_variable, str):
             raise TypeError("Expected argument 'ipv6_address_variable' to be a str")
         pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
-        if ipv6_configuration_type and not isinstance(ipv6_configuration_type, str):
-            raise TypeError("Expected argument 'ipv6_configuration_type' to be a str")
-        pulumi.set(__self__, "ipv6_configuration_type", ipv6_configuration_type)
         if ipv6_dhcp_helpers and not isinstance(ipv6_dhcp_helpers, list):
             raise TypeError("Expected argument 'ipv6_dhcp_helpers' to be a list")
         pulumi.set(__self__, "ipv6_dhcp_helpers", ipv6_dhcp_helpers)
@@ -591,20 +597,28 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "ipv4_address")
 
     @_builtins.property
+    @pulumi.getter(name="ipv4AddressType")
+    def ipv4_address_type(self) -> _builtins.str:
+        """
+        address type
+        """
+        return pulumi.get(self, "ipv4_address_type")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv4AddressTypeVariable")
+    def ipv4_address_type_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv4_address_type_variable")
+
+    @_builtins.property
     @pulumi.getter(name="ipv4AddressVariable")
     def ipv4_address_variable(self) -> _builtins.str:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_address_variable")
-
-    @_builtins.property
-    @pulumi.getter(name="ipv4ConfigurationType")
-    def ipv4_configuration_type(self) -> _builtins.str:
-        """
-        IPv4 Configuration Type
-        """
-        return pulumi.get(self, "ipv4_configuration_type")
 
     @_builtins.property
     @pulumi.getter(name="ipv4DhcpDistance")
@@ -799,20 +813,28 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "ipv6_address")
 
     @_builtins.property
+    @pulumi.getter(name="ipv6AddressType")
+    def ipv6_address_type(self) -> _builtins.str:
+        """
+        address type
+        """
+        return pulumi.get(self, "ipv6_address_type")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6AddressTypeVariable")
+    def ipv6_address_type_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv6_address_type_variable")
+
+    @_builtins.property
     @pulumi.getter(name="ipv6AddressVariable")
     def ipv6_address_variable(self) -> _builtins.str:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_address_variable")
-
-    @_builtins.property
-    @pulumi.getter(name="ipv6ConfigurationType")
-    def ipv6_configuration_type(self) -> _builtins.str:
-        """
-        IPv6 Configuration Type
-        """
-        return pulumi.get(self, "ipv6_configuration_type")
 
     @_builtins.property
     @pulumi.getter(name="ipv6DhcpHelpers")
@@ -1282,8 +1304,9 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
             ip_mtu=self.ip_mtu,
             ip_mtu_variable=self.ip_mtu_variable,
             ipv4_address=self.ipv4_address,
+            ipv4_address_type=self.ipv4_address_type,
+            ipv4_address_type_variable=self.ipv4_address_type_variable,
             ipv4_address_variable=self.ipv4_address_variable,
-            ipv4_configuration_type=self.ipv4_configuration_type,
             ipv4_dhcp_distance=self.ipv4_dhcp_distance,
             ipv4_dhcp_distance_variable=self.ipv4_dhcp_distance_variable,
             ipv4_dhcp_helper_variable=self.ipv4_dhcp_helper_variable,
@@ -1308,8 +1331,9 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
             ipv4_subnet_mask_variable=self.ipv4_subnet_mask_variable,
             ipv4_vrrps=self.ipv4_vrrps,
             ipv6_address=self.ipv6_address,
+            ipv6_address_type=self.ipv6_address_type,
+            ipv6_address_type_variable=self.ipv6_address_type_variable,
             ipv6_address_variable=self.ipv6_address_variable,
-            ipv6_configuration_type=self.ipv6_configuration_type,
             ipv6_dhcp_helpers=self.ipv6_dhcp_helpers,
             ipv6_dhcp_secondary_addresses=self.ipv6_dhcp_secondary_addresses,
             ipv6_nat=self.ipv6_nat,
@@ -1428,8 +1452,9 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         ip_mtu=pulumi.get(__ret__, 'ip_mtu'),
         ip_mtu_variable=pulumi.get(__ret__, 'ip_mtu_variable'),
         ipv4_address=pulumi.get(__ret__, 'ipv4_address'),
+        ipv4_address_type=pulumi.get(__ret__, 'ipv4_address_type'),
+        ipv4_address_type_variable=pulumi.get(__ret__, 'ipv4_address_type_variable'),
         ipv4_address_variable=pulumi.get(__ret__, 'ipv4_address_variable'),
-        ipv4_configuration_type=pulumi.get(__ret__, 'ipv4_configuration_type'),
         ipv4_dhcp_distance=pulumi.get(__ret__, 'ipv4_dhcp_distance'),
         ipv4_dhcp_distance_variable=pulumi.get(__ret__, 'ipv4_dhcp_distance_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__ret__, 'ipv4_dhcp_helper_variable'),
@@ -1454,8 +1479,9 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         ipv4_subnet_mask_variable=pulumi.get(__ret__, 'ipv4_subnet_mask_variable'),
         ipv4_vrrps=pulumi.get(__ret__, 'ipv4_vrrps'),
         ipv6_address=pulumi.get(__ret__, 'ipv6_address'),
+        ipv6_address_type=pulumi.get(__ret__, 'ipv6_address_type'),
+        ipv6_address_type_variable=pulumi.get(__ret__, 'ipv6_address_type_variable'),
         ipv6_address_variable=pulumi.get(__ret__, 'ipv6_address_variable'),
-        ipv6_configuration_type=pulumi.get(__ret__, 'ipv6_configuration_type'),
         ipv6_dhcp_helpers=pulumi.get(__ret__, 'ipv6_dhcp_helpers'),
         ipv6_dhcp_secondary_addresses=pulumi.get(__ret__, 'ipv6_dhcp_secondary_addresses'),
         ipv6_nat=pulumi.get(__ret__, 'ipv6_nat'),
@@ -1571,8 +1597,9 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: Op
         ip_mtu=pulumi.get(__response__, 'ip_mtu'),
         ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
         ipv4_address=pulumi.get(__response__, 'ipv4_address'),
+        ipv4_address_type=pulumi.get(__response__, 'ipv4_address_type'),
+        ipv4_address_type_variable=pulumi.get(__response__, 'ipv4_address_type_variable'),
         ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
-        ipv4_configuration_type=pulumi.get(__response__, 'ipv4_configuration_type'),
         ipv4_dhcp_distance=pulumi.get(__response__, 'ipv4_dhcp_distance'),
         ipv4_dhcp_distance_variable=pulumi.get(__response__, 'ipv4_dhcp_distance_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
@@ -1597,8 +1624,9 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: Op
         ipv4_subnet_mask_variable=pulumi.get(__response__, 'ipv4_subnet_mask_variable'),
         ipv4_vrrps=pulumi.get(__response__, 'ipv4_vrrps'),
         ipv6_address=pulumi.get(__response__, 'ipv6_address'),
+        ipv6_address_type=pulumi.get(__response__, 'ipv6_address_type'),
+        ipv6_address_type_variable=pulumi.get(__response__, 'ipv6_address_type_variable'),
         ipv6_address_variable=pulumi.get(__response__, 'ipv6_address_variable'),
-        ipv6_configuration_type=pulumi.get(__response__, 'ipv6_configuration_type'),
         ipv6_dhcp_helpers=pulumi.get(__response__, 'ipv6_dhcp_helpers'),
         ipv6_dhcp_secondary_addresses=pulumi.get(__response__, 'ipv6_dhcp_secondary_addresses'),
         ipv6_nat=pulumi.get(__response__, 'ipv6_nat'),

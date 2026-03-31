@@ -27,7 +27,7 @@ public final class GetTransportIpv6TrackerFeatureResult {
      */
     private String endpointApiUrlVariable;
     /**
-     * @return Endpoint DNS Name
+     * @return DNS Name
      * 
      */
     private String endpointDnsName;
@@ -37,7 +37,7 @@ public final class GetTransportIpv6TrackerFeatureResult {
      */
     private String endpointDnsNameVariable;
     /**
-     * @return Endpoint IP
+     * @return IP
      * 
      */
     private String endpointIp;
@@ -52,22 +52,27 @@ public final class GetTransportIpv6TrackerFeatureResult {
      */
     private String endpointTrackerType;
     /**
-     * @return Variable name
-     * 
-     */
-    private String endpointTrackerTypeVariable;
-    /**
      * @return Feature Profile ID
      * 
      */
     private String featureProfileId;
+    /**
+     * @return Probe Interval
+     * 
+     */
+    private Integer icmpInterval;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String icmpIntervalVariable;
     /**
      * @return The id of the Feature
      * 
      */
     private String id;
     /**
-     * @return Interval
+     * @return Probe Interval
      * 
      */
     private Integer interval;
@@ -150,7 +155,7 @@ public final class GetTransportIpv6TrackerFeatureResult {
         return this.endpointApiUrlVariable;
     }
     /**
-     * @return Endpoint DNS Name
+     * @return DNS Name
      * 
      */
     public String endpointDnsName() {
@@ -164,7 +169,7 @@ public final class GetTransportIpv6TrackerFeatureResult {
         return this.endpointDnsNameVariable;
     }
     /**
-     * @return Endpoint IP
+     * @return IP
      * 
      */
     public String endpointIp() {
@@ -185,18 +190,25 @@ public final class GetTransportIpv6TrackerFeatureResult {
         return this.endpointTrackerType;
     }
     /**
-     * @return Variable name
-     * 
-     */
-    public String endpointTrackerTypeVariable() {
-        return this.endpointTrackerTypeVariable;
-    }
-    /**
      * @return Feature Profile ID
      * 
      */
     public String featureProfileId() {
         return this.featureProfileId;
+    }
+    /**
+     * @return Probe Interval
+     * 
+     */
+    public Integer icmpInterval() {
+        return this.icmpInterval;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String icmpIntervalVariable() {
+        return this.icmpIntervalVariable;
     }
     /**
      * @return The id of the Feature
@@ -206,7 +218,7 @@ public final class GetTransportIpv6TrackerFeatureResult {
         return this.id;
     }
     /**
-     * @return Interval
+     * @return Probe Interval
      * 
      */
     public Integer interval() {
@@ -307,8 +319,9 @@ public final class GetTransportIpv6TrackerFeatureResult {
         private String endpointIp;
         private String endpointIpVariable;
         private String endpointTrackerType;
-        private String endpointTrackerTypeVariable;
         private String featureProfileId;
+        private Integer icmpInterval;
+        private String icmpIntervalVariable;
         private String id;
         private Integer interval;
         private String intervalVariable;
@@ -333,8 +346,9 @@ public final class GetTransportIpv6TrackerFeatureResult {
     	      this.endpointIp = defaults.endpointIp;
     	      this.endpointIpVariable = defaults.endpointIpVariable;
     	      this.endpointTrackerType = defaults.endpointTrackerType;
-    	      this.endpointTrackerTypeVariable = defaults.endpointTrackerTypeVariable;
     	      this.featureProfileId = defaults.featureProfileId;
+    	      this.icmpInterval = defaults.icmpInterval;
+    	      this.icmpIntervalVariable = defaults.icmpIntervalVariable;
     	      this.id = defaults.id;
     	      this.interval = defaults.interval;
     	      this.intervalVariable = defaults.intervalVariable;
@@ -415,19 +429,27 @@ public final class GetTransportIpv6TrackerFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder endpointTrackerTypeVariable(String endpointTrackerTypeVariable) {
-            if (endpointTrackerTypeVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportIpv6TrackerFeatureResult", "endpointTrackerTypeVariable");
-            }
-            this.endpointTrackerTypeVariable = endpointTrackerTypeVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder featureProfileId(String featureProfileId) {
             if (featureProfileId == null) {
               throw new MissingRequiredPropertyException("GetTransportIpv6TrackerFeatureResult", "featureProfileId");
             }
             this.featureProfileId = featureProfileId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder icmpInterval(Integer icmpInterval) {
+            if (icmpInterval == null) {
+              throw new MissingRequiredPropertyException("GetTransportIpv6TrackerFeatureResult", "icmpInterval");
+            }
+            this.icmpInterval = icmpInterval;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder icmpIntervalVariable(String icmpIntervalVariable) {
+            if (icmpIntervalVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportIpv6TrackerFeatureResult", "icmpIntervalVariable");
+            }
+            this.icmpIntervalVariable = icmpIntervalVariable;
             return this;
         }
         @CustomType.Setter
@@ -544,8 +566,9 @@ public final class GetTransportIpv6TrackerFeatureResult {
             _resultValue.endpointIp = endpointIp;
             _resultValue.endpointIpVariable = endpointIpVariable;
             _resultValue.endpointTrackerType = endpointTrackerType;
-            _resultValue.endpointTrackerTypeVariable = endpointTrackerTypeVariable;
             _resultValue.featureProfileId = featureProfileId;
+            _resultValue.icmpInterval = icmpInterval;
+            _resultValue.icmpIntervalVariable = icmpIntervalVariable;
             _resultValue.id = id;
             _resultValue.interval = interval;
             _resultValue.intervalVariable = intervalVariable;

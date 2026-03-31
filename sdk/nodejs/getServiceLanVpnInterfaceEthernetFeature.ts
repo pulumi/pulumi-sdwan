@@ -156,13 +156,17 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv4Address: string;
     /**
+     * address type
+     */
+    readonly ipv4AddressType: string;
+    /**
+     * Variable name
+     */
+    readonly ipv4AddressTypeVariable: string;
+    /**
      * Variable name
      */
     readonly ipv4AddressVariable: string;
-    /**
-     * IPv4 Configuration Type
-     */
-    readonly ipv4ConfigurationType: string;
     /**
      * DHCP Distance
      */
@@ -260,13 +264,17 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv6Address: string;
     /**
+     * address type
+     */
+    readonly ipv6AddressType: string;
+    /**
+     * Variable name
+     */
+    readonly ipv6AddressTypeVariable: string;
+    /**
      * Variable name
      */
     readonly ipv6AddressVariable: string;
-    /**
-     * IPv6 Configuration Type
-     */
-    readonly ipv6ConfigurationType: string;
     /**
      * DHCPv6 Helper
      */

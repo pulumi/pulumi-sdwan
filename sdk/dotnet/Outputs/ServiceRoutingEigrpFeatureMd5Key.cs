@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? KeyIdVariable;
         /// <summary>
-        /// Set MD5 key
+        /// Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         public readonly string? KeyString;
         /// <summary>

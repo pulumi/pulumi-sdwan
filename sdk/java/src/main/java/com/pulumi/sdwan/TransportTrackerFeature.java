@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Transport Tracker Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -119,14 +119,14 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.endpointApiUrlVariable);
     }
     /**
-     * Endpoint DNS Name
+     * DNS Name
      * 
      */
     @Export(name="endpointDnsName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> endpointDnsName;
 
     /**
-     * @return Endpoint DNS Name
+     * @return DNS Name
      * 
      */
     public Output<Optional<String>> endpointDnsName() {
@@ -147,14 +147,14 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.endpointDnsNameVariable);
     }
     /**
-     * Endpoint IP
+     * IP
      * 
      */
     @Export(name="endpointIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> endpointIp;
 
     /**
-     * @return Endpoint IP
+     * @return IP
      * 
      */
     public Output<Optional<String>> endpointIp() {
@@ -176,7 +176,7 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
     }
     /**
      * Endpoint Tracker Type
-     *   - Choices: `interface`
+     *   - Choices: `interface`, `interface-icmp`
      *   - Default value: `interface`
      * 
      */
@@ -185,26 +185,12 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
 
     /**
      * @return Endpoint Tracker Type
-     *   - Choices: `interface`
+     *   - Choices: `interface`, `interface-icmp`
      *   - Default value: `interface`
      * 
      */
     public Output<Optional<String>> endpointTrackerType() {
         return Codegen.optional(this.endpointTrackerType);
-    }
-    /**
-     * Variable name
-     * 
-     */
-    @Export(name="endpointTrackerTypeVariable", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> endpointTrackerTypeVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Output<Optional<String>> endpointTrackerTypeVariable() {
-        return Codegen.optional(this.endpointTrackerTypeVariable);
     }
     /**
      * Feature Profile ID
@@ -221,7 +207,39 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
         return this.featureProfileId;
     }
     /**
-     * Interval
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     * 
+     */
+    @Export(name="icmpInterval", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> icmpInterval;
+
+    /**
+     * @return Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     * 
+     */
+    public Output<Optional<Integer>> icmpInterval() {
+        return Codegen.optional(this.icmpInterval);
+    }
+    /**
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     * 
+     */
+    @Export(name="icmpIntervalVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> icmpIntervalVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     * 
+     */
+    public Output<Optional<String>> icmpIntervalVariable() {
+        return Codegen.optional(this.icmpIntervalVariable);
+    }
+    /**
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      * 
@@ -230,7 +248,7 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
     private Output</* @Nullable */ Integer> interval;
 
     /**
-     * @return Interval
+     * @return Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      * 
@@ -239,14 +257,14 @@ public class TransportTrackerFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.interval);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface`
      * 
      */
     @Export(name="intervalVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> intervalVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `endpointTrackerType` equal to `interface`
      * 
      */
     public Output<Optional<String>> intervalVariable() {

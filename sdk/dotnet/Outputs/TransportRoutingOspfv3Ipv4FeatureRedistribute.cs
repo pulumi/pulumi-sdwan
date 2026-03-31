@@ -14,12 +14,12 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TransportRoutingOspfv3Ipv4FeatureRedistribute
     {
         /// <summary>
-        /// Enable NAT DIA for redistributed routes
+        /// Enable NAT DIA for redistributed routes, Attribute conditional on `Protocol` equal to `nat-route`
         ///   - Default value: `True`
         /// </summary>
         public readonly bool? NatDia;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Protocol` equal to `nat-route`
         /// </summary>
         public readonly string? NatDiaVariable;
         /// <summary>

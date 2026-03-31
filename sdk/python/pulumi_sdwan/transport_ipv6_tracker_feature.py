@@ -28,7 +28,8 @@ class TransportIpv6TrackerFeatureArgs:
                  endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 icmp_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 icmp_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  interval: Optional[pulumi.Input[_builtins.int]] = None,
                  interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  multiplier: Optional[pulumi.Input[_builtins.int]] = None,
@@ -47,18 +48,21 @@ class TransportIpv6TrackerFeatureArgs:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
         :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_dns_name: Endpoint DNS Name
+        :param pulumi.Input[_builtins.str] endpoint_dns_name: DNS Name
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
+        :param pulumi.Input[_builtins.str] endpoint_ip: IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
-                 - Choices: `ipv6-interface`
+                 - Choices: `ipv6-interface`, `ipv6-interface-icmp`
                  - Default value: `ipv6-interface`
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] interval: Interval
+        :param pulumi.Input[_builtins.int] icmp_interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+                 - Range: `2`-`1000`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] icmp_interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        :param pulumi.Input[_builtins.int] interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
                  - Range: `20`-`600`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] interval_variable: Variable name
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         :param pulumi.Input[_builtins.int] multiplier: Multiplier
                  - Range: `1`-`10`
                  - Default value: `3`
@@ -92,8 +96,10 @@ class TransportIpv6TrackerFeatureArgs:
             pulumi.set(__self__, "endpoint_ip_variable", endpoint_ip_variable)
         if endpoint_tracker_type is not None:
             pulumi.set(__self__, "endpoint_tracker_type", endpoint_tracker_type)
-        if endpoint_tracker_type_variable is not None:
-            pulumi.set(__self__, "endpoint_tracker_type_variable", endpoint_tracker_type_variable)
+        if icmp_interval is not None:
+            pulumi.set(__self__, "icmp_interval", icmp_interval)
+        if icmp_interval_variable is not None:
+            pulumi.set(__self__, "icmp_interval_variable", icmp_interval_variable)
         if interval is not None:
             pulumi.set(__self__, "interval", interval)
         if interval_variable is not None:
@@ -169,7 +175,7 @@ class TransportIpv6TrackerFeatureArgs:
     @pulumi.getter(name="endpointDnsName")
     def endpoint_dns_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Endpoint DNS Name
+        DNS Name
         """
         return pulumi.get(self, "endpoint_dns_name")
 
@@ -193,7 +199,7 @@ class TransportIpv6TrackerFeatureArgs:
     @pulumi.getter(name="endpointIp")
     def endpoint_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Endpoint IP
+        IP
         """
         return pulumi.get(self, "endpoint_ip")
 
@@ -218,7 +224,7 @@ class TransportIpv6TrackerFeatureArgs:
     def endpoint_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Endpoint Tracker Type
-          - Choices: `ipv6-interface`
+          - Choices: `ipv6-interface`, `ipv6-interface-icmp`
           - Default value: `ipv6-interface`
         """
         return pulumi.get(self, "endpoint_tracker_type")
@@ -228,22 +234,36 @@ class TransportIpv6TrackerFeatureArgs:
         pulumi.set(self, "endpoint_tracker_type", value)
 
     @_builtins.property
-    @pulumi.getter(name="endpointTrackerTypeVariable")
-    def endpoint_tracker_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter(name="icmpInterval")
+    def icmp_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Variable name
+        Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+          - Range: `2`-`1000`
+          - Default value: `2`
         """
-        return pulumi.get(self, "endpoint_tracker_type_variable")
+        return pulumi.get(self, "icmp_interval")
 
-    @endpoint_tracker_type_variable.setter
-    def endpoint_tracker_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "endpoint_tracker_type_variable", value)
+    @icmp_interval.setter
+    def icmp_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "icmp_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="icmpIntervalVariable")
+    def icmp_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        """
+        return pulumi.get(self, "icmp_interval_variable")
+
+    @icmp_interval_variable.setter
+    def icmp_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "icmp_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter
     def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval
+        Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
           - Range: `20`-`600`
           - Default value: `60`
         """
@@ -257,7 +277,7 @@ class TransportIpv6TrackerFeatureArgs:
     @pulumi.getter(name="intervalVariable")
     def interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         """
         return pulumi.get(self, "interval_variable")
 
@@ -391,8 +411,9 @@ class _TransportIpv6TrackerFeatureState:
                  endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 icmp_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 icmp_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  interval: Optional[pulumi.Input[_builtins.int]] = None,
                  interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  multiplier: Optional[pulumi.Input[_builtins.int]] = None,
@@ -411,19 +432,22 @@ class _TransportIpv6TrackerFeatureState:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
         :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_dns_name: Endpoint DNS Name
+        :param pulumi.Input[_builtins.str] endpoint_dns_name: DNS Name
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
+        :param pulumi.Input[_builtins.str] endpoint_ip: IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
-                 - Choices: `ipv6-interface`
+                 - Choices: `ipv6-interface`, `ipv6-interface-icmp`
                  - Default value: `ipv6-interface`
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interval: Interval
+        :param pulumi.Input[_builtins.int] icmp_interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+                 - Range: `2`-`1000`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] icmp_interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        :param pulumi.Input[_builtins.int] interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
                  - Range: `20`-`600`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] interval_variable: Variable name
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         :param pulumi.Input[_builtins.int] multiplier: Multiplier
                  - Range: `1`-`10`
                  - Default value: `3`
@@ -457,10 +481,12 @@ class _TransportIpv6TrackerFeatureState:
             pulumi.set(__self__, "endpoint_ip_variable", endpoint_ip_variable)
         if endpoint_tracker_type is not None:
             pulumi.set(__self__, "endpoint_tracker_type", endpoint_tracker_type)
-        if endpoint_tracker_type_variable is not None:
-            pulumi.set(__self__, "endpoint_tracker_type_variable", endpoint_tracker_type_variable)
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if icmp_interval is not None:
+            pulumi.set(__self__, "icmp_interval", icmp_interval)
+        if icmp_interval_variable is not None:
+            pulumi.set(__self__, "icmp_interval_variable", icmp_interval_variable)
         if interval is not None:
             pulumi.set(__self__, "interval", interval)
         if interval_variable is not None:
@@ -526,7 +552,7 @@ class _TransportIpv6TrackerFeatureState:
     @pulumi.getter(name="endpointDnsName")
     def endpoint_dns_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Endpoint DNS Name
+        DNS Name
         """
         return pulumi.get(self, "endpoint_dns_name")
 
@@ -550,7 +576,7 @@ class _TransportIpv6TrackerFeatureState:
     @pulumi.getter(name="endpointIp")
     def endpoint_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Endpoint IP
+        IP
         """
         return pulumi.get(self, "endpoint_ip")
 
@@ -575,7 +601,7 @@ class _TransportIpv6TrackerFeatureState:
     def endpoint_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Endpoint Tracker Type
-          - Choices: `ipv6-interface`
+          - Choices: `ipv6-interface`, `ipv6-interface-icmp`
           - Default value: `ipv6-interface`
         """
         return pulumi.get(self, "endpoint_tracker_type")
@@ -583,18 +609,6 @@ class _TransportIpv6TrackerFeatureState:
     @endpoint_tracker_type.setter
     def endpoint_tracker_type(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "endpoint_tracker_type", value)
-
-    @_builtins.property
-    @pulumi.getter(name="endpointTrackerTypeVariable")
-    def endpoint_tracker_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "endpoint_tracker_type_variable")
-
-    @endpoint_tracker_type_variable.setter
-    def endpoint_tracker_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "endpoint_tracker_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -609,10 +623,36 @@ class _TransportIpv6TrackerFeatureState:
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
+    @pulumi.getter(name="icmpInterval")
+    def icmp_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+          - Range: `2`-`1000`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "icmp_interval")
+
+    @icmp_interval.setter
+    def icmp_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "icmp_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="icmpIntervalVariable")
+    def icmp_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        """
+        return pulumi.get(self, "icmp_interval_variable")
+
+    @icmp_interval_variable.setter
+    def icmp_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "icmp_interval_variable", value)
+
+    @_builtins.property
     @pulumi.getter
     def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval
+        Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
           - Range: `20`-`600`
           - Default value: `60`
         """
@@ -626,7 +666,7 @@ class _TransportIpv6TrackerFeatureState:
     @pulumi.getter(name="intervalVariable")
     def interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         """
         return pulumi.get(self, "interval_variable")
 
@@ -775,8 +815,9 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
                  endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 icmp_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 icmp_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  interval: Optional[pulumi.Input[_builtins.int]] = None,
                  interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  multiplier: Optional[pulumi.Input[_builtins.int]] = None,
@@ -791,7 +832,7 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Transport IPv6 Tracker Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -830,19 +871,22 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
         :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_dns_name: Endpoint DNS Name
+        :param pulumi.Input[_builtins.str] endpoint_dns_name: DNS Name
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
+        :param pulumi.Input[_builtins.str] endpoint_ip: IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
-                 - Choices: `ipv6-interface`
+                 - Choices: `ipv6-interface`, `ipv6-interface-icmp`
                  - Default value: `ipv6-interface`
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interval: Interval
+        :param pulumi.Input[_builtins.int] icmp_interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+                 - Range: `2`-`1000`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] icmp_interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        :param pulumi.Input[_builtins.int] interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
                  - Range: `20`-`600`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] interval_variable: Variable name
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         :param pulumi.Input[_builtins.int] multiplier: Multiplier
                  - Range: `1`-`10`
                  - Default value: `3`
@@ -867,7 +911,7 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport IPv6 Tracker Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -924,8 +968,9 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
                  endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 icmp_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 icmp_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  interval: Optional[pulumi.Input[_builtins.int]] = None,
                  interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  multiplier: Optional[pulumi.Input[_builtins.int]] = None,
@@ -954,10 +999,11 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
             __props__.__dict__["endpoint_ip"] = endpoint_ip
             __props__.__dict__["endpoint_ip_variable"] = endpoint_ip_variable
             __props__.__dict__["endpoint_tracker_type"] = endpoint_tracker_type
-            __props__.__dict__["endpoint_tracker_type_variable"] = endpoint_tracker_type_variable
             if feature_profile_id is None and not opts.urn:
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
+            __props__.__dict__["icmp_interval"] = icmp_interval
+            __props__.__dict__["icmp_interval_variable"] = icmp_interval_variable
             __props__.__dict__["interval"] = interval
             __props__.__dict__["interval_variable"] = interval_variable
             __props__.__dict__["multiplier"] = multiplier
@@ -988,8 +1034,9 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
             endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
             endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
             endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
             feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
+            icmp_interval: Optional[pulumi.Input[_builtins.int]] = None,
+            icmp_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
             interval: Optional[pulumi.Input[_builtins.int]] = None,
             interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
             multiplier: Optional[pulumi.Input[_builtins.int]] = None,
@@ -1012,19 +1059,22 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
         :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_dns_name: Endpoint DNS Name
+        :param pulumi.Input[_builtins.str] endpoint_dns_name: DNS Name
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
+        :param pulumi.Input[_builtins.str] endpoint_ip: IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
-                 - Choices: `ipv6-interface`
+                 - Choices: `ipv6-interface`, `ipv6-interface-icmp`
                  - Default value: `ipv6-interface`
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interval: Interval
+        :param pulumi.Input[_builtins.int] icmp_interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+                 - Range: `2`-`1000`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] icmp_interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        :param pulumi.Input[_builtins.int] interval: Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
                  - Range: `20`-`600`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] interval_variable: Variable name
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         :param pulumi.Input[_builtins.int] multiplier: Multiplier
                  - Range: `1`-`10`
                  - Default value: `3`
@@ -1054,8 +1104,9 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
         __props__.__dict__["endpoint_ip"] = endpoint_ip
         __props__.__dict__["endpoint_ip_variable"] = endpoint_ip_variable
         __props__.__dict__["endpoint_tracker_type"] = endpoint_tracker_type
-        __props__.__dict__["endpoint_tracker_type_variable"] = endpoint_tracker_type_variable
         __props__.__dict__["feature_profile_id"] = feature_profile_id
+        __props__.__dict__["icmp_interval"] = icmp_interval
+        __props__.__dict__["icmp_interval_variable"] = icmp_interval_variable
         __props__.__dict__["interval"] = interval
         __props__.__dict__["interval_variable"] = interval_variable
         __props__.__dict__["multiplier"] = multiplier
@@ -1098,7 +1149,7 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
     @pulumi.getter(name="endpointDnsName")
     def endpoint_dns_name(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Endpoint DNS Name
+        DNS Name
         """
         return pulumi.get(self, "endpoint_dns_name")
 
@@ -1114,7 +1165,7 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
     @pulumi.getter(name="endpointIp")
     def endpoint_ip(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Endpoint IP
+        IP
         """
         return pulumi.get(self, "endpoint_ip")
 
@@ -1131,18 +1182,10 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
     def endpoint_tracker_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Endpoint Tracker Type
-          - Choices: `ipv6-interface`
+          - Choices: `ipv6-interface`, `ipv6-interface-icmp`
           - Default value: `ipv6-interface`
         """
         return pulumi.get(self, "endpoint_tracker_type")
-
-    @_builtins.property
-    @pulumi.getter(name="endpointTrackerTypeVariable")
-    def endpoint_tracker_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "endpoint_tracker_type_variable")
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -1153,10 +1196,28 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
         return pulumi.get(self, "feature_profile_id")
 
     @_builtins.property
+    @pulumi.getter(name="icmpInterval")
+    def icmp_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+          - Range: `2`-`1000`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "icmp_interval")
+
+    @_builtins.property
+    @pulumi.getter(name="icmpIntervalVariable")
+    def icmp_interval_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface-icmp`
+        """
+        return pulumi.get(self, "icmp_interval_variable")
+
+    @_builtins.property
     @pulumi.getter
     def interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interval
+        Probe Interval, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
           - Range: `20`-`600`
           - Default value: `60`
         """
@@ -1166,7 +1227,7 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
     @pulumi.getter(name="intervalVariable")
     def interval_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `endpoint_tracker_type` equal to `ipv6-interface`
         """
         return pulumi.get(self, "interval_variable")
 

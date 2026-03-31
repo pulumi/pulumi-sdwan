@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class SystemLoggingFeatureIpv4ServerGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set hostname or IPv4 address of server
+        /// Set IPv4 address of server
         /// </summary>
         [Input("hostnameIp")]
         public Input<string>? HostnameIp { get; set; }
@@ -89,7 +89,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? TlsPropertiesProfileVariable { get; set; }
 
         /// <summary>
-        /// Set hostname or IPv4 address of server
+        /// Set vpn of server
         ///   - Range: `0`-`65530`
         ///   - Default value: `0`
         /// </summary>

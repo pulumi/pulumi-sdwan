@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Transport WAN VPN Interface T1 E1 Serial Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -41,7 +41,7 @@ namespace Pulumi.Sdwan
     ///         TunnelInterface = true,
     ///         PerTunnelQos = true,
     ///         PerTunnelQosAggregator = false,
-    ///         TunnelQosMode = "hub",
+    ///         TunnelQosMode = "spoke",
     ///         TunnelInterfaceColor = "mpls",
     ///         TunnelInterfaceRestrict = true,
     ///         TunnelInterfaceGroups = 42949672,
@@ -244,6 +244,21 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("ipv6AddressVariable")]
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Core Region
+        ///   - Choices: `core-shared`, `Core`
+        ///   - Default value: `core-shared`
+        /// </summary>
+        [Output("mrfCoreRegionType")]
+        public Output<string?> MrfCoreRegionType { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable Core Region
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("mrfEnableCoreRegion")]
+        public Output<bool?> MrfEnableCoreRegion { get; private set; } = null!;
 
         /// <summary>
         /// Interface MTU &lt;68...2000&gt;, in bytes
@@ -783,7 +798,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `Spoke`, `Hub`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Output("tunnelQosMode")]
         public Output<string?> TunnelQosMode { get; private set; } = null!;
@@ -980,6 +995,21 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
+
+        /// <summary>
+        /// Core Region
+        ///   - Choices: `core-shared`, `Core`
+        ///   - Default value: `core-shared`
+        /// </summary>
+        [Input("mrfCoreRegionType")]
+        public Input<string>? MrfCoreRegionType { get; set; }
+
+        /// <summary>
+        /// Enable Core Region
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("mrfEnableCoreRegion")]
+        public Input<bool>? MrfEnableCoreRegion { get; set; }
 
         /// <summary>
         /// Interface MTU &lt;68...2000&gt;, in bytes
@@ -1531,7 +1561,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `Spoke`, `Hub`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
@@ -1684,6 +1714,21 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
+
+        /// <summary>
+        /// Core Region
+        ///   - Choices: `core-shared`, `Core`
+        ///   - Default value: `core-shared`
+        /// </summary>
+        [Input("mrfCoreRegionType")]
+        public Input<string>? MrfCoreRegionType { get; set; }
+
+        /// <summary>
+        /// Enable Core Region
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("mrfEnableCoreRegion")]
+        public Input<bool>? MrfEnableCoreRegion { get; set; }
 
         /// <summary>
         /// Interface MTU &lt;68...2000&gt;, in bytes
@@ -2235,7 +2280,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `Spoke`, `Hub`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }

@@ -41,6 +41,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set IPv6 unicast address family
+        ///   - Choices: `ipv6-unicast`
         /// </summary>
         [Input("familyType")]
         public Input<string>? FamilyType { get; set; }

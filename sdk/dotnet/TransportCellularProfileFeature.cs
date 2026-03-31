@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Transport Cellular Profile Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -137,7 +137,7 @@ namespace Pulumi.Sdwan
         public Output<string?> ProfileIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the profile password, Attribute conditional on `RequiresAuthentication` equal to `True`
+        /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Output("profilePassword")]
         public Output<string?> ProfilePassword { get; private set; } = null!;
@@ -302,7 +302,7 @@ namespace Pulumi.Sdwan
         public Input<string>? ProfileIdVariable { get; set; }
 
         /// <summary>
-        /// Set the profile password, Attribute conditional on `RequiresAuthentication` equal to `True`
+        /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePassword")]
         public Input<string>? ProfilePassword { get; set; }
@@ -423,7 +423,7 @@ namespace Pulumi.Sdwan
         public Input<string>? ProfileIdVariable { get; set; }
 
         /// <summary>
-        /// Set the profile password, Attribute conditional on `RequiresAuthentication` equal to `True`
+        /// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePassword")]
         public Input<string>? ProfilePassword { get; set; }

@@ -323,14 +323,14 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborArgs extends com.pulumi.r
     }
 
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return Set MD5 password on TCP connection with BGP peer
+     * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> password() {
@@ -1024,7 +1024,7 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborArgs extends com.pulumi.r
         }
 
         /**
-         * @param password Set MD5 password on TCP connection with BGP peer
+         * @param password Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -1035,7 +1035,7 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborArgs extends com.pulumi.r
         }
 
         /**
-         * @param password Set MD5 password on TCP connection with BGP peer
+         * @param password Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

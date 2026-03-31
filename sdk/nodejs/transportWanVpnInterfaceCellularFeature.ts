@@ -8,7 +8,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Transport WAN VPN Interface Cellular Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -22,6 +22,7 @@ import * as utilities from "./utilities";
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     transportWanVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
  *     shutdown: true,
+ *     enableIpv6: true,
  *     interfaceName: "GigabitEthernet1",
  *     interfaceDescription: "WAN",
  *     ipv4DhcpHelpers: ["1.2.3.4"],
@@ -30,8 +31,7 @@ import * as utilities from "./utilities";
  *     bandwidthDownstream: 21474836,
  *     tunnelInterface: true,
  *     perTunnelQos: true,
- *     tunnelQosMode: "hub",
- *     tunnelBandwidthPercent: 82,
+ *     tunnelQosMode: "spoke",
  *     tunnelInterfaceBindLoopbackTunnel: "example",
  *     tunnelInterfaceCarrier: "default",
  *     tunnelInterfaceColor: "default",
@@ -158,6 +158,14 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
+     * - Default value: `true`
+     */
+    declare public readonly enableIpv6: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly enableIpv6Variable: pulumi.Output<string | undefined>;
+    /**
      * Feature Profile ID
      */
     declare public readonly featureProfileId: pulumi.Output<string>;
@@ -208,6 +216,17 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
      * List of DHCP IPv4 helper addresses (min 1, max 8)
      */
     declare public readonly ipv4DhcpHelpers: pulumi.Output<string[] | undefined>;
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     */
+    declare public readonly mrfCoreRegionType: pulumi.Output<string | undefined>;
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     */
+    declare public readonly mrfEnableCoreRegion: pulumi.Output<boolean | undefined>;
     /**
      * The name of the Feature
      */
@@ -384,16 +403,6 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
      */
     declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
     /**
-     * Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     */
-    declare public readonly tunnelBandwidthPercent: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    declare public readonly tunnelBandwidthPercentVariable: pulumi.Output<string | undefined>;
-    /**
      * Tunnel Interface on/off
      *   - Default value: `false`
      */
@@ -553,7 +562,7 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
     declare public readonly tunnelInterfaceClearDontFragmentVariable: pulumi.Output<string | undefined>;
     /**
      * Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      */
     declare public readonly tunnelInterfaceColor: pulumi.Output<string | undefined>;
@@ -696,7 +705,7 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
     declare public readonly tunnelInterfaceVmanageConnectionPreferenceVariable: pulumi.Output<string | undefined>;
     /**
      * Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      */
     declare public readonly tunnelQosMode: pulumi.Output<string | undefined>;
     /**
@@ -731,6 +740,8 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
             resourceInputs["bandwidthUpstream"] = state?.bandwidthUpstream;
             resourceInputs["bandwidthUpstreamVariable"] = state?.bandwidthUpstreamVariable;
             resourceInputs["description"] = state?.description;
+            resourceInputs["enableIpv6"] = state?.enableIpv6;
+            resourceInputs["enableIpv6Variable"] = state?.enableIpv6Variable;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
             resourceInputs["interfaceDescription"] = state?.interfaceDescription;
             resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
@@ -744,6 +755,8 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
             resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
             resourceInputs["ipv4DhcpHelperVariable"] = state?.ipv4DhcpHelperVariable;
             resourceInputs["ipv4DhcpHelpers"] = state?.ipv4DhcpHelpers;
+            resourceInputs["mrfCoreRegionType"] = state?.mrfCoreRegionType;
+            resourceInputs["mrfEnableCoreRegion"] = state?.mrfEnableCoreRegion;
             resourceInputs["name"] = state?.name;
             resourceInputs["natIpv4"] = state?.natIpv4;
             resourceInputs["natIpv4Variable"] = state?.natIpv4Variable;
@@ -783,8 +796,6 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
             resourceInputs["tracker"] = state?.tracker;
             resourceInputs["trackerVariable"] = state?.trackerVariable;
             resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
-            resourceInputs["tunnelBandwidthPercent"] = state?.tunnelBandwidthPercent;
-            resourceInputs["tunnelBandwidthPercentVariable"] = state?.tunnelBandwidthPercentVariable;
             resourceInputs["tunnelInterface"] = state?.tunnelInterface;
             resourceInputs["tunnelInterfaceAllowAll"] = state?.tunnelInterfaceAllowAll;
             resourceInputs["tunnelInterfaceAllowAllVariable"] = state?.tunnelInterfaceAllowAllVariable;
@@ -872,6 +883,8 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
             resourceInputs["bandwidthUpstream"] = args?.bandwidthUpstream;
             resourceInputs["bandwidthUpstreamVariable"] = args?.bandwidthUpstreamVariable;
             resourceInputs["description"] = args?.description;
+            resourceInputs["enableIpv6"] = args?.enableIpv6;
+            resourceInputs["enableIpv6Variable"] = args?.enableIpv6Variable;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
             resourceInputs["interfaceDescription"] = args?.interfaceDescription;
             resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
@@ -885,6 +898,8 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
             resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
             resourceInputs["ipv4DhcpHelperVariable"] = args?.ipv4DhcpHelperVariable;
             resourceInputs["ipv4DhcpHelpers"] = args?.ipv4DhcpHelpers;
+            resourceInputs["mrfCoreRegionType"] = args?.mrfCoreRegionType;
+            resourceInputs["mrfEnableCoreRegion"] = args?.mrfEnableCoreRegion;
             resourceInputs["name"] = args?.name;
             resourceInputs["natIpv4"] = args?.natIpv4;
             resourceInputs["natIpv4Variable"] = args?.natIpv4Variable;
@@ -924,8 +939,6 @@ export class TransportWanVpnInterfaceCellularFeature extends pulumi.CustomResour
             resourceInputs["tracker"] = args?.tracker;
             resourceInputs["trackerVariable"] = args?.trackerVariable;
             resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
-            resourceInputs["tunnelBandwidthPercent"] = args?.tunnelBandwidthPercent;
-            resourceInputs["tunnelBandwidthPercentVariable"] = args?.tunnelBandwidthPercentVariable;
             resourceInputs["tunnelInterface"] = args?.tunnelInterface;
             resourceInputs["tunnelInterfaceAllowAll"] = args?.tunnelInterfaceAllowAll;
             resourceInputs["tunnelInterfaceAllowAllVariable"] = args?.tunnelInterfaceAllowAllVariable;
@@ -1036,6 +1049,14 @@ export interface TransportWanVpnInterfaceCellularFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
+     * - Default value: `true`
+     */
+    enableIpv6?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    enableIpv6Variable?: pulumi.Input<string>;
+    /**
      * Feature Profile ID
      */
     featureProfileId?: pulumi.Input<string>;
@@ -1086,6 +1107,17 @@ export interface TransportWanVpnInterfaceCellularFeatureState {
      * List of DHCP IPv4 helper addresses (min 1, max 8)
      */
     ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     */
+    mrfCoreRegionType?: pulumi.Input<string>;
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     */
+    mrfEnableCoreRegion?: pulumi.Input<boolean>;
     /**
      * The name of the Feature
      */
@@ -1262,16 +1294,6 @@ export interface TransportWanVpnInterfaceCellularFeatureState {
      */
     transportWanVpnFeatureId?: pulumi.Input<string>;
     /**
-     * Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     */
-    tunnelBandwidthPercent?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    tunnelBandwidthPercentVariable?: pulumi.Input<string>;
-    /**
      * Tunnel Interface on/off
      *   - Default value: `false`
      */
@@ -1431,7 +1453,7 @@ export interface TransportWanVpnInterfaceCellularFeatureState {
     tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string>;
     /**
      * Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      */
     tunnelInterfaceColor?: pulumi.Input<string>;
@@ -1574,7 +1596,7 @@ export interface TransportWanVpnInterfaceCellularFeatureState {
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
      * Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**
@@ -1621,6 +1643,14 @@ export interface TransportWanVpnInterfaceCellularFeatureArgs {
      * The description of the Feature
      */
     description?: pulumi.Input<string>;
+    /**
+     * - Default value: `true`
+     */
+    enableIpv6?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    enableIpv6Variable?: pulumi.Input<string>;
     /**
      * Feature Profile ID
      */
@@ -1672,6 +1702,17 @@ export interface TransportWanVpnInterfaceCellularFeatureArgs {
      * List of DHCP IPv4 helper addresses (min 1, max 8)
      */
     ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     */
+    mrfCoreRegionType?: pulumi.Input<string>;
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     */
+    mrfEnableCoreRegion?: pulumi.Input<boolean>;
     /**
      * The name of the Feature
      */
@@ -1848,16 +1889,6 @@ export interface TransportWanVpnInterfaceCellularFeatureArgs {
      */
     transportWanVpnFeatureId: pulumi.Input<string>;
     /**
-     * Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     */
-    tunnelBandwidthPercent?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    tunnelBandwidthPercentVariable?: pulumi.Input<string>;
-    /**
      * Tunnel Interface on/off
      *   - Default value: `false`
      */
@@ -2017,7 +2048,7 @@ export interface TransportWanVpnInterfaceCellularFeatureArgs {
     tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string>;
     /**
      * Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      */
     tunnelInterfaceColor?: pulumi.Input<string>;
@@ -2160,7 +2191,7 @@ export interface TransportWanVpnInterfaceCellularFeatureArgs {
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
      * Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**

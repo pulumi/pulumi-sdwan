@@ -23,9 +23,13 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? AuthorizationVariable;
         /// <summary>
-        /// Set name of the SNMP community
+        /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         public readonly string? Name;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? NameVariable;
         /// <summary>
         /// Set user label of the SNMP community
         /// </summary>
@@ -47,6 +51,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string? name,
 
+            string? nameVariable,
+
             string? userLabel,
 
             string? view,
@@ -56,6 +62,7 @@ namespace Pulumi.Sdwan.Outputs
             Authorization = authorization;
             AuthorizationVariable = authorizationVariable;
             Name = name;
+            NameVariable = nameVariable;
             UserLabel = userLabel;
             View = view;
             ViewVariable = viewVariable;

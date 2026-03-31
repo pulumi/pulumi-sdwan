@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class SystemNtpFeatureServer {
     /**
      * @return Set authentication key for the server
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     private @Nullable Integer authenticationKey;
@@ -83,7 +83,7 @@ public final class SystemNtpFeatureServer {
     private SystemNtpFeatureServer() {}
     /**
      * @return Set authentication key for the server
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Integer> authenticationKey() {

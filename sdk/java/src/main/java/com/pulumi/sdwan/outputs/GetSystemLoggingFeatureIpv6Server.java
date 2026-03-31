@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetSystemLoggingFeatureIpv6Server {
     /**
-     * @return Set IPv6 hostname or IPv6 address of server
+     * @return Set IPv6 address of server
      * 
      */
     private String hostnameIp;
@@ -73,7 +73,7 @@ public final class GetSystemLoggingFeatureIpv6Server {
      */
     private String tlsPropertiesProfileVariable;
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      * 
      */
     private Integer vpn;
@@ -85,7 +85,7 @@ public final class GetSystemLoggingFeatureIpv6Server {
 
     private GetSystemLoggingFeatureIpv6Server() {}
     /**
-     * @return Set IPv6 hostname or IPv6 address of server
+     * @return Set IPv6 address of server
      * 
      */
     public String hostnameIp() {
@@ -169,7 +169,7 @@ public final class GetSystemLoggingFeatureIpv6Server {
         return this.tlsPropertiesProfileVariable;
     }
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      * 
      */
     public Integer vpn() {

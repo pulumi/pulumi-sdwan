@@ -6388,6 +6388,110 @@ export interface EigrpFeatureTemplateKey {
     optional?: boolean;
 }
 
+export interface EmbeddedSecurityNgfwPolicySequence {
+    /**
+     * can be empty array or with type or parameter
+     */
+    actions?: outputs.EmbeddedSecurityNgfwPolicySequenceAction[];
+    /**
+     * - Choices: `pass`, `inspect`, `drop`
+     */
+    baseAction?: string;
+    disableSequence?: boolean;
+    matchEntries?: outputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry[];
+    sequenceId?: string;
+    sequenceName?: string;
+    sequenceType?: string;
+}
+
+export interface EmbeddedSecurityNgfwPolicySequenceAction {
+    parameter?: string;
+    parameterId?: string;
+    /**
+     * - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`, `log`, `connectionEvents`
+     */
+    type?: string;
+}
+
+export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
+    appListIds?: string[];
+    applicationFamilies?: string[];
+    applications?: string[];
+    destinationDataPrefixListIds?: string[];
+    destinationDataPrefixes?: string[];
+    /**
+     * Variable name
+     */
+    destinationDataPrefixesVariable?: string;
+    destinationFqdnListIds?: string[];
+    destinationFqdns?: string[];
+    /**
+     * Variable name
+     */
+    destinationFqdnsVariable?: string;
+    destinationGeoLocationListIds?: string[];
+    destinationGeoLocations?: string[];
+    /**
+     * Variable name
+     */
+    destinationGeoLocationsVariable?: string;
+    destinationPortListIds?: string[];
+    destinationPorts?: string[];
+    /**
+     * Variable name
+     */
+    destinationPortsVariable?: string;
+    destinationScalableGroupTagListIds?: string[];
+    destinationSecurityGroupListIds?: string[];
+    flatAppListIds?: string[];
+    protocolNameListIds?: string[];
+    protocolNames?: string[];
+    protocols?: string[];
+    sourceDataPrefixListIds?: string[];
+    sourceDataPrefixes?: string[];
+    /**
+     * Variable name
+     */
+    sourceDataPrefixesVariable?: string;
+    sourceGeoLocationListIds?: string[];
+    sourceGeoLocations?: string[];
+    /**
+     * Variable name
+     */
+    sourceGeoLocationsVariable?: string;
+    sourceIdentityListIds?: string[];
+    sourceIdentityUsergroups?: string[];
+    sourceIdentityUsers?: string[];
+    sourcePortListIds?: string[];
+    sourcePorts?: string[];
+    /**
+     * Variable name
+     */
+    sourcePortsVariable?: string;
+    sourceScalableGroupTagListIds?: string[];
+    sourceSecurityGroupListIds?: string[];
+}
+
+export interface EmbeddedSecurityPolicyAssembly {
+    advancedInspectionProfilePolicyId?: string;
+    entries?: outputs.EmbeddedSecurityPolicyAssemblyEntry[];
+    ngfwPolicyId?: string;
+    sslDecryptionProfileId?: string;
+}
+
+export interface EmbeddedSecurityPolicyAssemblyEntry {
+    /**
+     * - Choices: `self`, `default`, `untrusted`
+     */
+    destinationZone?: string;
+    destinationZoneListId?: string;
+    /**
+     * - Choices: `self`, `default`, `untrusted`
+     */
+    sourceZone?: string;
+    sourceZoneListId?: string;
+}
+
 export interface ExpandedCommunityListPolicyObjectEntry {
     /**
      * Expanded community value, e.g. `100:1000`
@@ -12337,6 +12441,98 @@ export interface GetEigrpFeatureTemplateKey {
     optional: boolean;
 }
 
+export interface GetEmbeddedSecurityNgfwPolicySequence {
+    /**
+     * can be empty array or with type or parameter
+     */
+    actions: outputs.GetEmbeddedSecurityNgfwPolicySequenceAction[];
+    baseAction: string;
+    disableSequence: boolean;
+    matchEntries: outputs.GetEmbeddedSecurityNgfwPolicySequenceMatchEntry[];
+    sequenceId: string;
+    sequenceName: string;
+    sequenceType: string;
+}
+
+export interface GetEmbeddedSecurityNgfwPolicySequenceAction {
+    parameter: string;
+    parameterId: string;
+    type: string;
+}
+
+export interface GetEmbeddedSecurityNgfwPolicySequenceMatchEntry {
+    appListIds: string[];
+    applicationFamilies: string[];
+    applications: string[];
+    destinationDataPrefixListIds: string[];
+    destinationDataPrefixes: string[];
+    /**
+     * Variable name
+     */
+    destinationDataPrefixesVariable: string;
+    destinationFqdnListIds: string[];
+    destinationFqdns: string[];
+    /**
+     * Variable name
+     */
+    destinationFqdnsVariable: string;
+    destinationGeoLocationListIds: string[];
+    destinationGeoLocations: string[];
+    /**
+     * Variable name
+     */
+    destinationGeoLocationsVariable: string;
+    destinationPortListIds: string[];
+    destinationPorts: string[];
+    /**
+     * Variable name
+     */
+    destinationPortsVariable: string;
+    destinationScalableGroupTagListIds: string[];
+    destinationSecurityGroupListIds: string[];
+    flatAppListIds: string[];
+    protocolNameListIds: string[];
+    protocolNames: string[];
+    protocols: string[];
+    sourceDataPrefixListIds: string[];
+    sourceDataPrefixes: string[];
+    /**
+     * Variable name
+     */
+    sourceDataPrefixesVariable: string;
+    sourceGeoLocationListIds: string[];
+    sourceGeoLocations: string[];
+    /**
+     * Variable name
+     */
+    sourceGeoLocationsVariable: string;
+    sourceIdentityListIds: string[];
+    sourceIdentityUsergroups: string[];
+    sourceIdentityUsers: string[];
+    sourcePortListIds: string[];
+    sourcePorts: string[];
+    /**
+     * Variable name
+     */
+    sourcePortsVariable: string;
+    sourceScalableGroupTagListIds: string[];
+    sourceSecurityGroupListIds: string[];
+}
+
+export interface GetEmbeddedSecurityPolicyAssembly {
+    advancedInspectionProfilePolicyId: string;
+    entries: outputs.GetEmbeddedSecurityPolicyAssemblyEntry[];
+    ngfwPolicyId: string;
+    sslDecryptionProfileId: string;
+}
+
+export interface GetEmbeddedSecurityPolicyAssemblyEntry {
+    destinationZone: string;
+    destinationZoneListId: string;
+    sourceZone: string;
+    sourceZoneListId: string;
+}
+
 export interface GetExpandedCommunityListPolicyObjectEntry {
     /**
      * Expanded community value, e.g. `100:1000`
@@ -13392,6 +13588,11 @@ export interface GetPolicyObjectSecurityUrlBlockListEntry {
     pattern: string;
 }
 
+export interface GetPolicyObjectSecurityZoneEntry {
+    interface: string;
+    vpn: string;
+}
+
 export interface GetPolicyObjectSlaClassListEntry {
     appProbeClassListId: string;
     fallbackBestTunnelCriteria: string;
@@ -14072,6 +14273,30 @@ export interface GetServiceIpv4AclFeatureSequenceAction {
      */
     acceptSetNextHop: string;
     /**
+     * fallback
+     */
+    acceptSetServiceChainFallback: boolean;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainFallbackVariable: string;
+    /**
+     * Set Service Chain Number
+     */
+    acceptSetServiceChainName: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable: string;
+    /**
+     * Set Service Chain VPN
+     */
+    acceptSetServiceChainVpn: number;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainVpnVariable: string;
+    /**
      * Counter Name
      */
     dropCounterName: string;
@@ -14182,6 +14407,30 @@ export interface GetServiceIpv6AclFeatureSequenceAction {
      * Set Next Hop (IPV6 address)
      */
     acceptSetNextHop: string;
+    /**
+     * fallback
+     */
+    acceptSetServiceChainFallback: boolean;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainFallbackVariable: string;
+    /**
+     * Set Service Chain Number
+     */
+    acceptSetServiceChainName: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable: string;
+    /**
+     * Set Service Chain VPN
+     */
+    acceptSetServiceChainVpn: number;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainVpnVariable: string;
     /**
      * set traffic class number
      */
@@ -15720,7 +15969,7 @@ export interface GetServiceMulticastFeatureMsdpGroupPeer {
      */
     keepaliveIntervalVariable: string;
     /**
-     * Set MSDP peer ip password
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     peerAuthenticationPassword: string;
     /**
@@ -15910,7 +16159,7 @@ export interface GetServiceRoutePolicyFeatureSequence {
 }
 
 export interface GetServiceRoutePolicyFeatureSequenceAction {
-    asPathPrepends: number[];
+    asPathPrepends: string[];
     communities: string[];
     communityAdditive: boolean;
     /**
@@ -16100,7 +16349,7 @@ export interface GetServiceRoutingBgpFeatureIpv4Neighbor {
      */
     nextHopSelfVariable: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password: string;
     /**
@@ -16241,6 +16490,22 @@ export interface GetServiceRoutingBgpFeatureIpv4Network {
 
 export interface GetServiceRoutingBgpFeatureIpv4Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     */
+    metric: number;
+    /**
+     * Variable name
+     */
+    metricVariable: string;
+    /**
+     * Variable name
+     */
+    ospfMatchRouteVariable: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
+     */
+    ospfMatchRoutes: string[];
+    /**
      * Set the protocol to redistribute routes from
      */
     protocol: string;
@@ -16250,9 +16515,13 @@ export interface GetServiceRoutingBgpFeatureIpv4Redistribute {
     protocolVariable: string;
     routePolicyId: string;
     /**
-     * Translate Rib Metric
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
     translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetServiceRoutingBgpFeatureIpv6AggregateAddress {
@@ -16360,7 +16629,7 @@ export interface GetServiceRoutingBgpFeatureIpv6Neighbor {
      */
     nextHopSelfVariable: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password: string;
     /**
@@ -16491,6 +16760,22 @@ export interface GetServiceRoutingBgpFeatureIpv6Network {
 
 export interface GetServiceRoutingBgpFeatureIpv6Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     */
+    metric: number;
+    /**
+     * Variable name
+     */
+    metricVariable: string;
+    /**
+     * Variable name
+     */
+    ospfMatchRouteVariable: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
+     */
+    ospfMatchRoutes: string[];
+    /**
      * Set the protocol to redistribute routes from
      */
     protocol: string;
@@ -16500,9 +16785,13 @@ export interface GetServiceRoutingBgpFeatureIpv6Redistribute {
     protocolVariable: string;
     routePolicyId: string;
     /**
-     * Translate Rib Metric
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
     translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetServiceRoutingEigrpFeatureInterface {
@@ -16551,7 +16840,7 @@ export interface GetServiceRoutingEigrpFeatureMd5Key {
      */
     keyIdVariable: string;
     /**
-     * Set MD5 key
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     keyString: string;
     /**
@@ -16666,7 +16955,7 @@ export interface GetServiceRoutingOspfFeatureAreaInterface {
      */
     lsaRetransmitIntervalVariable: string;
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     messageDigestKey: string;
     /**
@@ -16761,9 +17050,13 @@ export interface GetServiceRoutingOspfFeatureRedistribute {
     protocolVariable: string;
     routePolicyId: string;
     /**
-     * Translate Rib Metric
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
     translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetServiceRoutingOspfFeatureRouterLsa {
@@ -18058,7 +18351,7 @@ export interface GetSystemIpv6DeviceAccessFeatureSequence {
 
 export interface GetSystemLoggingFeatureIpv4Server {
     /**
-     * Set hostname or IPv4 address of server
+     * Set IPv4 address of server
      */
     hostnameIp: string;
     /**
@@ -18106,7 +18399,7 @@ export interface GetSystemLoggingFeatureIpv4Server {
      */
     tlsPropertiesProfileVariable: string;
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      */
     vpn: number;
     /**
@@ -18117,7 +18410,7 @@ export interface GetSystemLoggingFeatureIpv4Server {
 
 export interface GetSystemLoggingFeatureIpv6Server {
     /**
-     * Set IPv6 hostname or IPv6 address of server
+     * Set IPv6 address of server
      */
     hostnameIp: string;
     /**
@@ -18165,7 +18458,7 @@ export interface GetSystemLoggingFeatureIpv6Server {
      */
     tlsPropertiesProfileVariable: string;
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      */
     vpn: number;
     /**
@@ -18211,7 +18504,7 @@ export interface GetSystemNtpFeatureAuthenticationKey {
      */
     keyIdVariable: string;
     /**
-     * Enter cleartext or AES-encrypted MD5 authentication key
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     md5Value: string;
     /**
@@ -18329,7 +18622,7 @@ export interface GetSystemSecurityFeatureKey {
      */
     includeTcpOptionsVariable: string;
     /**
-     * Specify the Key String
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     keyString: string;
     /**
@@ -18411,9 +18704,13 @@ export interface GetSystemSnmpFeatureCommunity {
      */
     authorizationVariable: string;
     /**
-     * Set name of the SNMP community
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
     /**
      * Set user label of the SNMP community
      */
@@ -19017,6 +19314,30 @@ export interface GetTransportIpv4AclFeatureSequenceAction {
      */
     acceptSetNextHop: string;
     /**
+     * fallback
+     */
+    acceptSetServiceChainFallback: boolean;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainFallbackVariable: string;
+    /**
+     * Set Service Chain Number
+     */
+    acceptSetServiceChainName: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable: string;
+    /**
+     * Set Service Chain VPN
+     */
+    acceptSetServiceChainVpn: number;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainVpnVariable: string;
+    /**
      * Counter Name
      */
     dropCounterName: string;
@@ -19127,6 +19448,30 @@ export interface GetTransportIpv6AclFeatureSequenceAction {
      * Set Next Hop (IPV6 address)
      */
     acceptSetNextHop: string;
+    /**
+     * fallback
+     */
+    acceptSetServiceChainFallback: boolean;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainFallbackVariable: string;
+    /**
+     * Set Service Chain Number
+     */
+    acceptSetServiceChainName: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable: string;
+    /**
+     * Set Service Chain VPN
+     */
+    acceptSetServiceChainVpn: number;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainVpnVariable: string;
     /**
      * set traffic class number
      */
@@ -19389,7 +19734,7 @@ export interface GetTransportRoutePolicyFeatureSequence {
 }
 
 export interface GetTransportRoutePolicyFeatureSequenceAction {
-    asPathPrepends: number[];
+    asPathPrepends: string[];
     communities: string[];
     communityAdditive: boolean;
     /**
@@ -19587,7 +19932,7 @@ export interface GetTransportRoutingBgpFeatureIpv4Neighbor {
      */
     nextHopSelfVariable: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password: string;
     /**
@@ -19724,6 +20069,22 @@ export interface GetTransportRoutingBgpFeatureIpv4Network {
 
 export interface GetTransportRoutingBgpFeatureIpv4Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     */
+    metric: number;
+    /**
+     * Variable name
+     */
+    metricVariable: string;
+    /**
+     * Variable name
+     */
+    ospfMatchRouteVariable: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
+     */
+    ospfMatchRoutes: string[];
+    /**
      * Set the protocol to redistribute routes from
      */
     protocol: string;
@@ -19839,7 +20200,7 @@ export interface GetTransportRoutingBgpFeatureIpv6Neighbor {
      */
     nextHopSelfVariable: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password: string;
     /**
@@ -19970,6 +20331,22 @@ export interface GetTransportRoutingBgpFeatureIpv6Network {
 
 export interface GetTransportRoutingBgpFeatureIpv6Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     */
+    metric: number;
+    /**
+     * Variable name
+     */
+    metricVariable: string;
+    /**
+     * Variable name
+     */
+    ospfMatchRouteVariable: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
+     */
+    ospfMatchRoutes: string[];
+    /**
      * Set the protocol to redistribute routes from
      */
     protocol: string;
@@ -20072,7 +20449,7 @@ export interface GetTransportRoutingOspfFeatureAreaInterface {
      */
     lsaRetransmitIntervalVariable: string;
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     messageDigestKey: string;
     /**
@@ -23718,6 +24095,11 @@ export interface PolicyObjectSecurityUrlBlockListEntry {
     pattern?: string;
 }
 
+export interface PolicyObjectSecurityZoneEntry {
+    interface?: string;
+    vpn?: string;
+}
+
 export interface PolicyObjectSlaClassListEntry {
     appProbeClassListId?: string;
     /**
@@ -24466,6 +24848,32 @@ export interface ServiceIpv4AclFeatureSequenceAction {
      */
     acceptSetNextHop?: string;
     /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: boolean;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: string;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: string;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: number;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: string;
+    /**
      * Counter Name
      */
     dropCounterName?: string;
@@ -24582,6 +24990,32 @@ export interface ServiceIpv6AclFeatureSequenceAction {
      * Set Next Hop (IPV6 address)
      */
     acceptSetNextHop?: string;
+    /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: boolean;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: string;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: string;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: number;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: string;
     /**
      * set traffic class number
      *   - Range: `0`-`63`
@@ -25518,7 +25952,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     addressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -25615,7 +26049,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
     addressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -26239,7 +26673,7 @@ export interface ServiceMulticastFeatureMsdpGroupPeer {
      */
     keepaliveIntervalVariable?: string;
     /**
-     * Set MSDP peer ip password
+     * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     peerAuthenticationPassword?: string;
     /**
@@ -26445,7 +26879,7 @@ export interface ServiceRoutePolicyFeatureSequence {
 }
 
 export interface ServiceRoutePolicyFeatureSequenceAction {
-    asPathPrepends?: number[];
+    asPathPrepends?: string[];
     communities?: string[];
     /**
      * - Default value: `false`
@@ -26664,7 +27098,7 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
      */
     nextHopSelfVariable?: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: string;
     /**
@@ -26747,6 +27181,7 @@ export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     disablePeerThresholdVariable?: string;
     /**
      * Set IPv4 unicast address family
+     *   - Choices: `ipv4-unicast`
      */
     familyType?: string;
     inRoutePolicyId?: string;
@@ -26823,6 +27258,23 @@ export interface ServiceRoutingBgpFeatureIpv4Network {
 
 export interface ServiceRoutingBgpFeatureIpv4Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Variable name
+     */
+    metricVariable?: string;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: string[];
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
      */
@@ -26833,10 +27285,14 @@ export interface ServiceRoutingBgpFeatureIpv4Redistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6AggregateAddress {
@@ -26955,7 +27411,7 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
      */
     nextHopSelfVariable?: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: string;
     /**
@@ -27029,6 +27485,7 @@ export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     disablePeerThresholdVariable?: string;
     /**
      * Set IPv6 unicast address family
+     *   - Choices: `ipv6-unicast`
      */
     familyType?: string;
     inRoutePolicyId?: string;
@@ -27100,6 +27557,23 @@ export interface ServiceRoutingBgpFeatureIpv6Network {
 
 export interface ServiceRoutingBgpFeatureIpv6Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    metricVariable?: string;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: string[];
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `omp`
      */
@@ -27110,10 +27584,14 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface ServiceRoutingEigrpFeatureInterface {
@@ -27167,7 +27645,7 @@ export interface ServiceRoutingEigrpFeatureMd5Key {
      */
     keyIdVariable?: string;
     /**
-     * Set MD5 key
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     keyString?: string;
     /**
@@ -27299,7 +27777,7 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
      */
     lsaRetransmitIntervalVariable?: string;
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     messageDigestKey?: string;
     /**
@@ -27403,10 +27881,14 @@ export interface ServiceRoutingOspfFeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface ServiceRoutingOspfFeatureRouterLsa {
@@ -27593,12 +28075,12 @@ export interface ServiceRoutingOspfv3Ipv4FeatureAreaRange {
 
 export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     /**
-     * Enable NAT DIA for redistributed routes
+     * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      */
     natDia?: boolean;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      */
     natDiaVariable?: string;
     /**
@@ -28753,6 +29235,7 @@ export interface SystemIpv4DeviceAccessFeatureSequence {
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
      */
     baseAction?: string;
     destinationDataPrefixListId?: string;
@@ -28838,7 +29321,7 @@ export interface SystemIpv6DeviceAccessFeatureSequence {
 
 export interface SystemLoggingFeatureIpv4Server {
     /**
-     * Set hostname or IPv4 address of server
+     * Set IPv4 address of server
      */
     hostnameIp?: string;
     /**
@@ -28890,7 +29373,7 @@ export interface SystemLoggingFeatureIpv4Server {
      */
     tlsPropertiesProfileVariable?: string;
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
@@ -28903,7 +29386,7 @@ export interface SystemLoggingFeatureIpv4Server {
 
 export interface SystemLoggingFeatureIpv6Server {
     /**
-     * Set IPv6 hostname or IPv6 address of server
+     * Set IPv6 address of server
      */
     hostnameIp?: string;
     /**
@@ -28955,7 +29438,7 @@ export interface SystemLoggingFeatureIpv6Server {
      */
     tlsPropertiesProfileVariable?: string;
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
@@ -28998,7 +29481,7 @@ export interface SystemLoggingFeatureTlsProfile {
 export interface SystemNtpFeatureAuthenticationKey {
     /**
      * MD5 authentication key ID
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      */
     keyId?: number;
     /**
@@ -29006,7 +29489,7 @@ export interface SystemNtpFeatureAuthenticationKey {
      */
     keyIdVariable?: string;
     /**
-     * Enter cleartext or AES-encrypted MD5 authentication key
+     * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     md5Value?: string;
     /**
@@ -29018,7 +29501,7 @@ export interface SystemNtpFeatureAuthenticationKey {
 export interface SystemNtpFeatureServer {
     /**
      * Set authentication key for the server
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      */
     authenticationKey?: number;
     /**
@@ -29135,7 +29618,7 @@ export interface SystemSecurityFeatureKey {
      */
     includeTcpOptionsVariable?: string;
     /**
-     * Specify the Key String
+     * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     keyString?: string;
     /**
@@ -29223,9 +29706,13 @@ export interface SystemSnmpFeatureCommunity {
      */
     authorizationVariable?: string;
     /**
-     * Set name of the SNMP community
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
     /**
      * Set user label of the SNMP community
      */
@@ -29872,6 +30359,32 @@ export interface TransportIpv4AclFeatureSequenceAction {
      */
     acceptSetNextHop?: string;
     /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: boolean;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: string;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: string;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: number;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: string;
+    /**
      * Counter Name
      */
     dropCounterName?: string;
@@ -29988,6 +30501,32 @@ export interface TransportIpv6AclFeatureSequenceAction {
      * Set Next Hop (IPV6 address)
      */
     acceptSetNextHop?: string;
+    /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     */
+    acceptSetServiceChainFallback?: boolean;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainFallbackVariable?: string;
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    acceptSetServiceChainName?: string;
+    /**
+     * Variable name
+     */
+    acceptSetServiceChainNameVariable?: string;
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpn?: number;
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     */
+    acceptSetServiceChainVpnVariable?: string;
     /**
      * set traffic class number
      *   - Range: `0`-`63`
@@ -30229,7 +30768,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddr
     addressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**
@@ -30271,7 +30810,7 @@ export interface TransportRoutePolicyFeatureSequence {
 }
 
 export interface TransportRoutePolicyFeatureSequenceAction {
-    asPathPrepends?: number[];
+    asPathPrepends?: string[];
     communities?: string[];
     /**
      * - Default value: `false`
@@ -30499,7 +31038,7 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
      */
     nextHopSelfVariable?: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: string;
     /**
@@ -30655,6 +31194,23 @@ export interface TransportRoutingBgpFeatureIpv4Network {
 
 export interface TransportRoutingBgpFeatureIpv4Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Variable name
+     */
+    metricVariable?: string;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: string[];
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `ospfv3`, `nat`
      */
@@ -30782,7 +31338,7 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
      */
     nextHopSelfVariable?: string;
     /**
-     * Set MD5 password on TCP connection with BGP peer
+     * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: string;
     /**
@@ -30928,6 +31484,23 @@ export interface TransportRoutingBgpFeatureIpv6Network {
 
 export interface TransportRoutingBgpFeatureIpv6Redistribute {
     /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    metricVariable?: string;
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRouteVariable?: string;
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     */
+    ospfMatchRoutes?: string[];
+    /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`
      */
@@ -31044,7 +31617,7 @@ export interface TransportRoutingOspfFeatureAreaInterface {
      */
     lsaRetransmitIntervalVariable?: string;
     /**
-     * Set MD5 authentication key
+     * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     messageDigestKey?: string;
     /**
@@ -31333,12 +31906,12 @@ export interface TransportRoutingOspfv3Ipv4FeatureAreaRange {
 
 export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
     /**
-     * Enable NAT DIA for redistributed routes
+     * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      */
     natDia?: boolean;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      */
     natDiaVariable?: string;
     /**
@@ -31920,7 +32493,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     addressVariable?: string;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: string;
     /**

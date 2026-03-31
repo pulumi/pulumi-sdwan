@@ -150,15 +150,20 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     private String ipv4Address;
     /**
+     * @return address type
+     * 
+     */
+    private String ipv4AddressType;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv4AddressTypeVariable;
+    /**
      * @return Variable name
      * 
      */
     private String ipv4AddressVariable;
-    /**
-     * @return IPv4 Configuration Type
-     * 
-     */
-    private String ipv4ConfigurationType;
     /**
      * @return DHCP Distance
      * 
@@ -280,15 +285,20 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     private String ipv6Address;
     /**
+     * @return address type
+     * 
+     */
+    private String ipv6AddressType;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6AddressTypeVariable;
+    /**
      * @return Variable name
      * 
      */
     private String ipv6AddressVariable;
-    /**
-     * @return IPv6 Configuration Type
-     * 
-     */
-    private String ipv6ConfigurationType;
     /**
      * @return DHCPv6 Helper
      * 
@@ -741,18 +751,25 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         return this.ipv4Address;
     }
     /**
+     * @return address type
+     * 
+     */
+    public String ipv4AddressType() {
+        return this.ipv4AddressType;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv4AddressTypeVariable() {
+        return this.ipv4AddressTypeVariable;
+    }
+    /**
      * @return Variable name
      * 
      */
     public String ipv4AddressVariable() {
         return this.ipv4AddressVariable;
-    }
-    /**
-     * @return IPv4 Configuration Type
-     * 
-     */
-    public String ipv4ConfigurationType() {
-        return this.ipv4ConfigurationType;
     }
     /**
      * @return DHCP Distance
@@ -923,18 +940,25 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         return this.ipv6Address;
     }
     /**
+     * @return address type
+     * 
+     */
+    public String ipv6AddressType() {
+        return this.ipv6AddressType;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6AddressTypeVariable() {
+        return this.ipv6AddressTypeVariable;
+    }
+    /**
      * @return Variable name
      * 
      */
     public String ipv6AddressVariable() {
         return this.ipv6AddressVariable;
-    }
-    /**
-     * @return IPv6 Configuration Type
-     * 
-     */
-    public String ipv6ConfigurationType() {
-        return this.ipv6ConfigurationType;
     }
     /**
      * @return DHCPv6 Helper
@@ -1349,8 +1373,9 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         private Integer ipMtu;
         private String ipMtuVariable;
         private String ipv4Address;
+        private String ipv4AddressType;
+        private String ipv4AddressTypeVariable;
         private String ipv4AddressVariable;
-        private String ipv4ConfigurationType;
         private Integer ipv4DhcpDistance;
         private String ipv4DhcpDistanceVariable;
         private String ipv4DhcpHelperVariable;
@@ -1375,8 +1400,9 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
         private String ipv4SubnetMaskVariable;
         private List<GetServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp> ipv4Vrrps;
         private String ipv6Address;
+        private String ipv6AddressType;
+        private String ipv6AddressTypeVariable;
         private String ipv6AddressVariable;
-        private String ipv6ConfigurationType;
         private List<GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper> ipv6DhcpHelpers;
         private List<GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress> ipv6DhcpSecondaryAddresses;
         private Boolean ipv6Nat;
@@ -1465,8 +1491,9 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
     	      this.ipMtu = defaults.ipMtu;
     	      this.ipMtuVariable = defaults.ipMtuVariable;
     	      this.ipv4Address = defaults.ipv4Address;
+    	      this.ipv4AddressType = defaults.ipv4AddressType;
+    	      this.ipv4AddressTypeVariable = defaults.ipv4AddressTypeVariable;
     	      this.ipv4AddressVariable = defaults.ipv4AddressVariable;
-    	      this.ipv4ConfigurationType = defaults.ipv4ConfigurationType;
     	      this.ipv4DhcpDistance = defaults.ipv4DhcpDistance;
     	      this.ipv4DhcpDistanceVariable = defaults.ipv4DhcpDistanceVariable;
     	      this.ipv4DhcpHelperVariable = defaults.ipv4DhcpHelperVariable;
@@ -1491,8 +1518,9 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
     	      this.ipv4SubnetMaskVariable = defaults.ipv4SubnetMaskVariable;
     	      this.ipv4Vrrps = defaults.ipv4Vrrps;
     	      this.ipv6Address = defaults.ipv6Address;
+    	      this.ipv6AddressType = defaults.ipv6AddressType;
+    	      this.ipv6AddressTypeVariable = defaults.ipv6AddressTypeVariable;
     	      this.ipv6AddressVariable = defaults.ipv6AddressVariable;
-    	      this.ipv6ConfigurationType = defaults.ipv6ConfigurationType;
     	      this.ipv6DhcpHelpers = defaults.ipv6DhcpHelpers;
     	      this.ipv6DhcpSecondaryAddresses = defaults.ipv6DhcpSecondaryAddresses;
     	      this.ipv6Nat = defaults.ipv6Nat;
@@ -1794,19 +1822,27 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv4AddressType(String ipv4AddressType) {
+            if (ipv4AddressType == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv4AddressType");
+            }
+            this.ipv4AddressType = ipv4AddressType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4AddressTypeVariable(String ipv4AddressTypeVariable) {
+            if (ipv4AddressTypeVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv4AddressTypeVariable");
+            }
+            this.ipv4AddressTypeVariable = ipv4AddressTypeVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv4AddressVariable(String ipv4AddressVariable) {
             if (ipv4AddressVariable == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv4AddressVariable");
             }
             this.ipv4AddressVariable = ipv4AddressVariable;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder ipv4ConfigurationType(String ipv4ConfigurationType) {
-            if (ipv4ConfigurationType == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv4ConfigurationType");
-            }
-            this.ipv4ConfigurationType = ipv4ConfigurationType;
             return this;
         }
         @CustomType.Setter
@@ -2011,19 +2047,27 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv6AddressType(String ipv6AddressType) {
+            if (ipv6AddressType == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv6AddressType");
+            }
+            this.ipv6AddressType = ipv6AddressType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6AddressTypeVariable(String ipv6AddressTypeVariable) {
+            if (ipv6AddressTypeVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv6AddressTypeVariable");
+            }
+            this.ipv6AddressTypeVariable = ipv6AddressTypeVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv6AddressVariable(String ipv6AddressVariable) {
             if (ipv6AddressVariable == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv6AddressVariable");
             }
             this.ipv6AddressVariable = ipv6AddressVariable;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder ipv6ConfigurationType(String ipv6ConfigurationType) {
-            if (ipv6ConfigurationType == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureResult", "ipv6ConfigurationType");
-            }
-            this.ipv6ConfigurationType = ipv6ConfigurationType;
             return this;
         }
         @CustomType.Setter
@@ -2519,8 +2563,9 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             _resultValue.ipMtu = ipMtu;
             _resultValue.ipMtuVariable = ipMtuVariable;
             _resultValue.ipv4Address = ipv4Address;
+            _resultValue.ipv4AddressType = ipv4AddressType;
+            _resultValue.ipv4AddressTypeVariable = ipv4AddressTypeVariable;
             _resultValue.ipv4AddressVariable = ipv4AddressVariable;
-            _resultValue.ipv4ConfigurationType = ipv4ConfigurationType;
             _resultValue.ipv4DhcpDistance = ipv4DhcpDistance;
             _resultValue.ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             _resultValue.ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -2545,8 +2590,9 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureResult {
             _resultValue.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             _resultValue.ipv4Vrrps = ipv4Vrrps;
             _resultValue.ipv6Address = ipv6Address;
+            _resultValue.ipv6AddressType = ipv6AddressType;
+            _resultValue.ipv6AddressTypeVariable = ipv6AddressTypeVariable;
             _resultValue.ipv6AddressVariable = ipv6AddressVariable;
-            _resultValue.ipv6ConfigurationType = ipv6ConfigurationType;
             _resultValue.ipv6DhcpHelpers = ipv6DhcpHelpers;
             _resultValue.ipv6DhcpSecondaryAddresses = ipv6DhcpSecondaryAddresses;
             _resultValue.ipv6Nat = ipv6Nat;

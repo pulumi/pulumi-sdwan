@@ -45,6 +45,11 @@ export type ApplicationPriorityFeatureProfile = import("./applicationPriorityFea
 export const ApplicationPriorityFeatureProfile: typeof import("./applicationPriorityFeatureProfile").ApplicationPriorityFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["ApplicationPriorityFeatureProfile"], () => require("./applicationPriorityFeatureProfile"));
 
+export { ApplicationPriorityPolicySettingsPolicyArgs, ApplicationPriorityPolicySettingsPolicyState } from "./applicationPriorityPolicySettingsPolicy";
+export type ApplicationPriorityPolicySettingsPolicy = import("./applicationPriorityPolicySettingsPolicy").ApplicationPriorityPolicySettingsPolicy;
+export const ApplicationPriorityPolicySettingsPolicy: typeof import("./applicationPriorityPolicySettingsPolicy").ApplicationPriorityPolicySettingsPolicy = null as any;
+utilities.lazyLoad(exports, ["ApplicationPriorityPolicySettingsPolicy"], () => require("./applicationPriorityPolicySettingsPolicy"));
+
 export { ApplicationPriorityQosPolicyArgs, ApplicationPriorityQosPolicyState } from "./applicationPriorityQosPolicy";
 export type ApplicationPriorityQosPolicy = import("./applicationPriorityQosPolicy").ApplicationPriorityQosPolicy;
 export const ApplicationPriorityQosPolicy: typeof import("./applicationPriorityQosPolicy").ApplicationPriorityQosPolicy = null as any;
@@ -310,6 +315,16 @@ export type EmbeddedSecurityFeatureProfile = import("./embeddedSecurityFeaturePr
 export const EmbeddedSecurityFeatureProfile: typeof import("./embeddedSecurityFeatureProfile").EmbeddedSecurityFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["EmbeddedSecurityFeatureProfile"], () => require("./embeddedSecurityFeatureProfile"));
 
+export { EmbeddedSecurityNgfwPolicyArgs, EmbeddedSecurityNgfwPolicyState } from "./embeddedSecurityNgfwPolicy";
+export type EmbeddedSecurityNgfwPolicy = import("./embeddedSecurityNgfwPolicy").EmbeddedSecurityNgfwPolicy;
+export const EmbeddedSecurityNgfwPolicy: typeof import("./embeddedSecurityNgfwPolicy").EmbeddedSecurityNgfwPolicy = null as any;
+utilities.lazyLoad(exports, ["EmbeddedSecurityNgfwPolicy"], () => require("./embeddedSecurityNgfwPolicy"));
+
+export { EmbeddedSecurityPolicyArgs, EmbeddedSecurityPolicyState } from "./embeddedSecurityPolicy";
+export type EmbeddedSecurityPolicy = import("./embeddedSecurityPolicy").EmbeddedSecurityPolicy;
+export const EmbeddedSecurityPolicy: typeof import("./embeddedSecurityPolicy").EmbeddedSecurityPolicy = null as any;
+utilities.lazyLoad(exports, ["EmbeddedSecurityPolicy"], () => require("./embeddedSecurityPolicy"));
+
 export { ExpandedCommunityListPolicyObjectArgs, ExpandedCommunityListPolicyObjectState } from "./expandedCommunityListPolicyObject";
 export type ExpandedCommunityListPolicyObject = import("./expandedCommunityListPolicyObject").ExpandedCommunityListPolicyObject;
 export const ExpandedCommunityListPolicyObject: typeof import("./expandedCommunityListPolicyObject").ExpandedCommunityListPolicyObject = null as any;
@@ -364,6 +379,11 @@ export { GetApplicationPriorityFeatureProfileArgs, GetApplicationPriorityFeature
 export const getApplicationPriorityFeatureProfile: typeof import("./getApplicationPriorityFeatureProfile").getApplicationPriorityFeatureProfile = null as any;
 export const getApplicationPriorityFeatureProfileOutput: typeof import("./getApplicationPriorityFeatureProfile").getApplicationPriorityFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getApplicationPriorityFeatureProfile","getApplicationPriorityFeatureProfileOutput"], () => require("./getApplicationPriorityFeatureProfile"));
+
+export { GetApplicationPriorityPolicySettingsPolicyArgs, GetApplicationPriorityPolicySettingsPolicyResult, GetApplicationPriorityPolicySettingsPolicyOutputArgs } from "./getApplicationPriorityPolicySettingsPolicy";
+export const getApplicationPriorityPolicySettingsPolicy: typeof import("./getApplicationPriorityPolicySettingsPolicy").getApplicationPriorityPolicySettingsPolicy = null as any;
+export const getApplicationPriorityPolicySettingsPolicyOutput: typeof import("./getApplicationPriorityPolicySettingsPolicy").getApplicationPriorityPolicySettingsPolicyOutput = null as any;
+utilities.lazyLoad(exports, ["getApplicationPriorityPolicySettingsPolicy","getApplicationPriorityPolicySettingsPolicyOutput"], () => require("./getApplicationPriorityPolicySettingsPolicy"));
 
 export { GetApplicationPriorityQosPolicyArgs, GetApplicationPriorityQosPolicyResult, GetApplicationPriorityQosPolicyOutputArgs } from "./getApplicationPriorityQosPolicy";
 export const getApplicationPriorityQosPolicy: typeof import("./getApplicationPriorityQosPolicy").getApplicationPriorityQosPolicy = null as any;
@@ -630,6 +650,16 @@ export const getEmbeddedSecurityFeatureProfile: typeof import("./getEmbeddedSecu
 export const getEmbeddedSecurityFeatureProfileOutput: typeof import("./getEmbeddedSecurityFeatureProfile").getEmbeddedSecurityFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getEmbeddedSecurityFeatureProfile","getEmbeddedSecurityFeatureProfileOutput"], () => require("./getEmbeddedSecurityFeatureProfile"));
 
+export { GetEmbeddedSecurityNgfwPolicyArgs, GetEmbeddedSecurityNgfwPolicyResult, GetEmbeddedSecurityNgfwPolicyOutputArgs } from "./getEmbeddedSecurityNgfwPolicy";
+export const getEmbeddedSecurityNgfwPolicy: typeof import("./getEmbeddedSecurityNgfwPolicy").getEmbeddedSecurityNgfwPolicy = null as any;
+export const getEmbeddedSecurityNgfwPolicyOutput: typeof import("./getEmbeddedSecurityNgfwPolicy").getEmbeddedSecurityNgfwPolicyOutput = null as any;
+utilities.lazyLoad(exports, ["getEmbeddedSecurityNgfwPolicy","getEmbeddedSecurityNgfwPolicyOutput"], () => require("./getEmbeddedSecurityNgfwPolicy"));
+
+export { GetEmbeddedSecurityPolicyArgs, GetEmbeddedSecurityPolicyResult, GetEmbeddedSecurityPolicyOutputArgs } from "./getEmbeddedSecurityPolicy";
+export const getEmbeddedSecurityPolicy: typeof import("./getEmbeddedSecurityPolicy").getEmbeddedSecurityPolicy = null as any;
+export const getEmbeddedSecurityPolicyOutput: typeof import("./getEmbeddedSecurityPolicy").getEmbeddedSecurityPolicyOutput = null as any;
+utilities.lazyLoad(exports, ["getEmbeddedSecurityPolicy","getEmbeddedSecurityPolicyOutput"], () => require("./getEmbeddedSecurityPolicy"));
+
 export { GetExpandedCommunityListPolicyObjectArgs, GetExpandedCommunityListPolicyObjectResult, GetExpandedCommunityListPolicyObjectOutputArgs } from "./getExpandedCommunityListPolicyObject";
 export const getExpandedCommunityListPolicyObject: typeof import("./getExpandedCommunityListPolicyObject").getExpandedCommunityListPolicyObject = null as any;
 export const getExpandedCommunityListPolicyObjectOutput: typeof import("./getExpandedCommunityListPolicyObject").getExpandedCommunityListPolicyObjectOutput = null as any;
@@ -884,6 +914,11 @@ export { GetPolicyObjectSecurityUrlBlockListArgs, GetPolicyObjectSecurityUrlBloc
 export const getPolicyObjectSecurityUrlBlockList: typeof import("./getPolicyObjectSecurityUrlBlockList").getPolicyObjectSecurityUrlBlockList = null as any;
 export const getPolicyObjectSecurityUrlBlockListOutput: typeof import("./getPolicyObjectSecurityUrlBlockList").getPolicyObjectSecurityUrlBlockListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectSecurityUrlBlockList","getPolicyObjectSecurityUrlBlockListOutput"], () => require("./getPolicyObjectSecurityUrlBlockList"));
+
+export { GetPolicyObjectSecurityZoneArgs, GetPolicyObjectSecurityZoneResult, GetPolicyObjectSecurityZoneOutputArgs } from "./getPolicyObjectSecurityZone";
+export const getPolicyObjectSecurityZone: typeof import("./getPolicyObjectSecurityZone").getPolicyObjectSecurityZone = null as any;
+export const getPolicyObjectSecurityZoneOutput: typeof import("./getPolicyObjectSecurityZone").getPolicyObjectSecurityZoneOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityZone","getPolicyObjectSecurityZoneOutput"], () => require("./getPolicyObjectSecurityZone"));
 
 export { GetPolicyObjectSlaClassListArgs, GetPolicyObjectSlaClassListResult, GetPolicyObjectSlaClassListOutputArgs } from "./getPolicyObjectSlaClassList";
 export const getPolicyObjectSlaClassList: typeof import("./getPolicyObjectSlaClassList").getPolicyObjectSlaClassList = null as any;
@@ -1775,6 +1810,11 @@ export type PolicyObjectSecurityUrlBlockList = import("./policyObjectSecurityUrl
 export const PolicyObjectSecurityUrlBlockList: typeof import("./policyObjectSecurityUrlBlockList").PolicyObjectSecurityUrlBlockList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectSecurityUrlBlockList"], () => require("./policyObjectSecurityUrlBlockList"));
 
+export { PolicyObjectSecurityZoneArgs, PolicyObjectSecurityZoneState } from "./policyObjectSecurityZone";
+export type PolicyObjectSecurityZone = import("./policyObjectSecurityZone").PolicyObjectSecurityZone;
+export const PolicyObjectSecurityZone: typeof import("./policyObjectSecurityZone").PolicyObjectSecurityZone = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityZone"], () => require("./policyObjectSecurityZone"));
+
 export { PolicyObjectSlaClassListArgs, PolicyObjectSlaClassListState } from "./policyObjectSlaClassList";
 export type PolicyObjectSlaClassList = import("./policyObjectSlaClassList").PolicyObjectSlaClassList;
 export const PolicyObjectSlaClassList: typeof import("./policyObjectSlaClassList").PolicyObjectSlaClassList = null as any;
@@ -2458,6 +2498,8 @@ const _module = {
                 return new ApplicationListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile":
                 return new ApplicationPriorityFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/applicationPriorityPolicySettingsPolicy:ApplicationPriorityPolicySettingsPolicy":
+                return new ApplicationPriorityPolicySettingsPolicy(name, <any>undefined, { urn })
             case "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy":
                 return new ApplicationPriorityQosPolicy(name, <any>undefined, { urn })
             case "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy":
@@ -2564,6 +2606,10 @@ const _module = {
                 return new EigrpFeatureTemplate(name, <any>undefined, { urn })
             case "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile":
                 return new EmbeddedSecurityFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/embeddedSecurityNgfwPolicy:EmbeddedSecurityNgfwPolicy":
+                return new EmbeddedSecurityNgfwPolicy(name, <any>undefined, { urn })
+            case "sdwan:index/embeddedSecurityPolicy:EmbeddedSecurityPolicy":
+                return new EmbeddedSecurityPolicy(name, <any>undefined, { urn })
             case "sdwan:index/expandedCommunityListPolicyObject:ExpandedCommunityListPolicyObject":
                 return new ExpandedCommunityListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject":
@@ -2666,6 +2712,8 @@ const _module = {
                 return new PolicyObjectSecurityUrlAllowList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList":
                 return new PolicyObjectSecurityUrlBlockList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityZone:PolicyObjectSecurityZone":
+                return new PolicyObjectSecurityZone(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSlaClassList:PolicyObjectSlaClassList":
                 return new PolicyObjectSlaClassList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList":
@@ -2939,6 +2987,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/appProbeClassPolicyObject"
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationAwareRoutingPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityPolicySettingsPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityQosPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityTrafficPolicyPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/asPathListPolicyObject", _module)
@@ -2992,6 +3041,8 @@ pulumi.runtime.registerResourceModule("sdwan", "index/dnsSecurityPolicyDefinitio
 pulumi.runtime.registerResourceModule("sdwan", "index/domainListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/eigrpFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/embeddedSecurityFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/embeddedSecurityNgfwPolicy", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/embeddedSecurityPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/expandedCommunityListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/extendedCommunityListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/featureDeviceTemplate", _module)
@@ -3043,6 +3094,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityProtoc
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityScalableGroupTagList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlAllowList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlBlockList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityZone", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSlaClassList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectStandardCommunityList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectTlocList", _module)

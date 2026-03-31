@@ -18,14 +18,14 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
     public static final SystemLoggingFeatureIpv6ServerArgs Empty = new SystemLoggingFeatureIpv6ServerArgs();
 
     /**
-     * Set IPv6 hostname or IPv6 address of server
+     * Set IPv6 address of server
      * 
      */
     @Import(name="hostnameIp")
     private @Nullable Output<String> hostnameIp;
 
     /**
-     * @return Set IPv6 hostname or IPv6 address of server
+     * @return Set IPv6 address of server
      * 
      */
     public Optional<Output<String>> hostnameIp() {
@@ -206,7 +206,7 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
     }
 
     /**
-     * Set hostname or IPv4 address of server
+     * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      * 
@@ -215,7 +215,7 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
     private @Nullable Output<Integer> vpn;
 
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      * 
@@ -277,7 +277,7 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param hostnameIp Set IPv6 hostname or IPv6 address of server
+         * @param hostnameIp Set IPv6 address of server
          * 
          * @return builder
          * 
@@ -288,7 +288,7 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param hostnameIp Set IPv6 hostname or IPv6 address of server
+         * @param hostnameIp Set IPv6 address of server
          * 
          * @return builder
          * 
@@ -537,7 +537,7 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param vpn Set hostname or IPv4 address of server
+         * @param vpn Set vpn of server
          *   - Range: `0`-`65530`
          *   - Default value: `0`
          * 
@@ -550,7 +550,7 @@ public final class SystemLoggingFeatureIpv6ServerArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param vpn Set hostname or IPv4 address of server
+         * @param vpn Set vpn of server
          *   - Range: `0`-`65530`
          *   - Default value: `0`
          * 

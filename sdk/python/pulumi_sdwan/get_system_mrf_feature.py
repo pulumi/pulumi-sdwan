@@ -26,28 +26,43 @@ class GetSystemMrfFeatureResult:
     """
     A collection of values returned by getSystemMrfFeature.
     """
-    def __init__(__self__, description=None, enable_migration_to_mrf=None, feature_profile_id=None, id=None, migration_bgp_community=None, name=None, region_id=None, role=None, role_variable=None, secondary_region_id=None, secondary_region_id_variable=None, version=None):
+    def __init__(__self__, description=None, enable_management_region=None, enable_management_region_variable=None, enable_migration_to_mrf=None, feature_profile_id=None, gateway_preference_variable=None, gateway_preferences=None, id=None, management_gateway=None, management_gateway_variable=None, migration_bgp_community=None, name=None, role=None, role_variable=None, secondary_region_id=None, secondary_region_id_variable=None, version=None, vrf_id=None, vrf_id_variable=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if enable_management_region and not isinstance(enable_management_region, bool):
+            raise TypeError("Expected argument 'enable_management_region' to be a bool")
+        pulumi.set(__self__, "enable_management_region", enable_management_region)
+        if enable_management_region_variable and not isinstance(enable_management_region_variable, str):
+            raise TypeError("Expected argument 'enable_management_region_variable' to be a str")
+        pulumi.set(__self__, "enable_management_region_variable", enable_management_region_variable)
         if enable_migration_to_mrf and not isinstance(enable_migration_to_mrf, str):
             raise TypeError("Expected argument 'enable_migration_to_mrf' to be a str")
         pulumi.set(__self__, "enable_migration_to_mrf", enable_migration_to_mrf)
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if gateway_preference_variable and not isinstance(gateway_preference_variable, str):
+            raise TypeError("Expected argument 'gateway_preference_variable' to be a str")
+        pulumi.set(__self__, "gateway_preference_variable", gateway_preference_variable)
+        if gateway_preferences and not isinstance(gateway_preferences, list):
+            raise TypeError("Expected argument 'gateway_preferences' to be a list")
+        pulumi.set(__self__, "gateway_preferences", gateway_preferences)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
+        if management_gateway and not isinstance(management_gateway, bool):
+            raise TypeError("Expected argument 'management_gateway' to be a bool")
+        pulumi.set(__self__, "management_gateway", management_gateway)
+        if management_gateway_variable and not isinstance(management_gateway_variable, str):
+            raise TypeError("Expected argument 'management_gateway_variable' to be a str")
+        pulumi.set(__self__, "management_gateway_variable", management_gateway_variable)
         if migration_bgp_community and not isinstance(migration_bgp_community, int):
             raise TypeError("Expected argument 'migration_bgp_community' to be a int")
         pulumi.set(__self__, "migration_bgp_community", migration_bgp_community)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
-        if region_id and not isinstance(region_id, int):
-            raise TypeError("Expected argument 'region_id' to be a int")
-        pulumi.set(__self__, "region_id", region_id)
         if role and not isinstance(role, str):
             raise TypeError("Expected argument 'role' to be a str")
         pulumi.set(__self__, "role", role)
@@ -63,6 +78,12 @@ class GetSystemMrfFeatureResult:
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
+        if vrf_id and not isinstance(vrf_id, int):
+            raise TypeError("Expected argument 'vrf_id' to be a int")
+        pulumi.set(__self__, "vrf_id", vrf_id)
+        if vrf_id_variable and not isinstance(vrf_id_variable, str):
+            raise TypeError("Expected argument 'vrf_id_variable' to be a str")
+        pulumi.set(__self__, "vrf_id_variable", vrf_id_variable)
 
     @_builtins.property
     @pulumi.getter
@@ -71,6 +92,22 @@ class GetSystemMrfFeatureResult:
         The description of the Feature
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="enableManagementRegion")
+    def enable_management_region(self) -> _builtins.bool:
+        """
+        Enable management region
+        """
+        return pulumi.get(self, "enable_management_region")
+
+    @_builtins.property
+    @pulumi.getter(name="enableManagementRegionVariable")
+    def enable_management_region_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enable_management_region_variable")
 
     @_builtins.property
     @pulumi.getter(name="enableMigrationToMrf")
@@ -89,12 +126,44 @@ class GetSystemMrfFeatureResult:
         return pulumi.get(self, "feature_profile_id")
 
     @_builtins.property
+    @pulumi.getter(name="gatewayPreferenceVariable")
+    def gateway_preference_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "gateway_preference_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="gatewayPreferences")
+    def gateway_preferences(self) -> Sequence[_builtins.int]:
+        """
+        List of affinity group preferences for VRF
+        """
+        return pulumi.get(self, "gateway_preferences")
+
+    @_builtins.property
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
         The id of the Feature
         """
         return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter(name="managementGateway")
+    def management_gateway(self) -> _builtins.bool:
+        """
+        Enable management gateway
+        """
+        return pulumi.get(self, "management_gateway")
+
+    @_builtins.property
+    @pulumi.getter(name="managementGatewayVariable")
+    def management_gateway_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "management_gateway_variable")
 
     @_builtins.property
     @pulumi.getter(name="migrationBgpCommunity")
@@ -111,14 +180,6 @@ class GetSystemMrfFeatureResult:
         The name of the Feature
         """
         return pulumi.get(self, "name")
-
-    @_builtins.property
-    @pulumi.getter(name="regionId")
-    def region_id(self) -> _builtins.int:
-        """
-        Set region ID
-        """
-        return pulumi.get(self, "region_id")
 
     @_builtins.property
     @pulumi.getter
@@ -160,6 +221,22 @@ class GetSystemMrfFeatureResult:
         """
         return pulumi.get(self, "version")
 
+    @_builtins.property
+    @pulumi.getter(name="vrfId")
+    def vrf_id(self) -> _builtins.int:
+        """
+        VRF name for management region
+        """
+        return pulumi.get(self, "vrf_id")
+
+    @_builtins.property
+    @pulumi.getter(name="vrfIdVariable")
+    def vrf_id_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vrf_id_variable")
+
 
 class AwaitableGetSystemMrfFeatureResult(GetSystemMrfFeatureResult):
     # pylint: disable=using-constant-test
@@ -168,17 +245,24 @@ class AwaitableGetSystemMrfFeatureResult(GetSystemMrfFeatureResult):
             yield self
         return GetSystemMrfFeatureResult(
             description=self.description,
+            enable_management_region=self.enable_management_region,
+            enable_management_region_variable=self.enable_management_region_variable,
             enable_migration_to_mrf=self.enable_migration_to_mrf,
             feature_profile_id=self.feature_profile_id,
+            gateway_preference_variable=self.gateway_preference_variable,
+            gateway_preferences=self.gateway_preferences,
             id=self.id,
+            management_gateway=self.management_gateway,
+            management_gateway_variable=self.management_gateway_variable,
             migration_bgp_community=self.migration_bgp_community,
             name=self.name,
-            region_id=self.region_id,
             role=self.role,
             role_variable=self.role_variable,
             secondary_region_id=self.secondary_region_id,
             secondary_region_id_variable=self.secondary_region_id_variable,
-            version=self.version)
+            version=self.version,
+            vrf_id=self.vrf_id,
+            vrf_id_variable=self.vrf_id_variable)
 
 
 def get_system_mrf_feature(feature_profile_id: Optional[_builtins.str] = None,
@@ -209,17 +293,24 @@ def get_system_mrf_feature(feature_profile_id: Optional[_builtins.str] = None,
 
     return AwaitableGetSystemMrfFeatureResult(
         description=pulumi.get(__ret__, 'description'),
+        enable_management_region=pulumi.get(__ret__, 'enable_management_region'),
+        enable_management_region_variable=pulumi.get(__ret__, 'enable_management_region_variable'),
         enable_migration_to_mrf=pulumi.get(__ret__, 'enable_migration_to_mrf'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
+        gateway_preference_variable=pulumi.get(__ret__, 'gateway_preference_variable'),
+        gateway_preferences=pulumi.get(__ret__, 'gateway_preferences'),
         id=pulumi.get(__ret__, 'id'),
+        management_gateway=pulumi.get(__ret__, 'management_gateway'),
+        management_gateway_variable=pulumi.get(__ret__, 'management_gateway_variable'),
         migration_bgp_community=pulumi.get(__ret__, 'migration_bgp_community'),
         name=pulumi.get(__ret__, 'name'),
-        region_id=pulumi.get(__ret__, 'region_id'),
         role=pulumi.get(__ret__, 'role'),
         role_variable=pulumi.get(__ret__, 'role_variable'),
         secondary_region_id=pulumi.get(__ret__, 'secondary_region_id'),
         secondary_region_id_variable=pulumi.get(__ret__, 'secondary_region_id_variable'),
-        version=pulumi.get(__ret__, 'version'))
+        version=pulumi.get(__ret__, 'version'),
+        vrf_id=pulumi.get(__ret__, 'vrf_id'),
+        vrf_id_variable=pulumi.get(__ret__, 'vrf_id_variable'))
 def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                                   id: Optional[pulumi.Input[_builtins.str]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemMrfFeatureResult]:
@@ -247,14 +338,21 @@ def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[_bui
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemMrfFeature:getSystemMrfFeature', __args__, opts=opts, typ=GetSystemMrfFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemMrfFeatureResult(
         description=pulumi.get(__response__, 'description'),
+        enable_management_region=pulumi.get(__response__, 'enable_management_region'),
+        enable_management_region_variable=pulumi.get(__response__, 'enable_management_region_variable'),
         enable_migration_to_mrf=pulumi.get(__response__, 'enable_migration_to_mrf'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        gateway_preference_variable=pulumi.get(__response__, 'gateway_preference_variable'),
+        gateway_preferences=pulumi.get(__response__, 'gateway_preferences'),
         id=pulumi.get(__response__, 'id'),
+        management_gateway=pulumi.get(__response__, 'management_gateway'),
+        management_gateway_variable=pulumi.get(__response__, 'management_gateway_variable'),
         migration_bgp_community=pulumi.get(__response__, 'migration_bgp_community'),
         name=pulumi.get(__response__, 'name'),
-        region_id=pulumi.get(__response__, 'region_id'),
         role=pulumi.get(__response__, 'role'),
         role_variable=pulumi.get(__response__, 'role_variable'),
         secondary_region_id=pulumi.get(__response__, 'secondary_region_id'),
         secondary_region_id_variable=pulumi.get(__response__, 'secondary_region_id_variable'),
-        version=pulumi.get(__response__, 'version')))
+        version=pulumi.get(__response__, 'version'),
+        vrf_id=pulumi.get(__response__, 'vrf_id'),
+        vrf_id_variable=pulumi.get(__response__, 'vrf_id_variable')))

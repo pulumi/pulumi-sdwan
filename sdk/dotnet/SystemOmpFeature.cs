@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a System OMP Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -60,6 +60,11 @@ namespace Pulumi.Sdwan
     ///         {
     ///             "type-1",
     ///         },
+    ///         SiteTypesForTransportGateways = new[]
+    ///         {
+    ///             "type-1",
+    ///         },
+    ///         AspathAutoTranslation = true,
     ///     });
     /// 
     /// });
@@ -197,7 +202,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `False`
+        ///   - Default value: `True`
         /// </summary>
         [Output("advertiseIpv6Connected")]
         public Output<bool?> AdvertiseIpv6Connected { get; private set; } = null!;
@@ -262,7 +267,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `False`
+        ///   - Default value: `True`
         /// </summary>
         [Output("advertiseIpv6Static")]
         public Output<bool?> AdvertiseIpv6Static { get; private set; } = null!;
@@ -286,6 +291,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("advertisementIntervalVariable")]
         public Output<string?> AdvertisementIntervalVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable BGP AS Path Auto-Translation
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("aspathAutoTranslation")]
+        public Output<bool?> AspathAutoTranslation { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("aspathAutoTranslationVariable")]
+        public Output<string?> AspathAutoTranslationVariable { get; private set; } = null!;
 
         /// <summary>
         /// The description of the Feature
@@ -455,10 +473,22 @@ namespace Pulumi.Sdwan
         public Output<string?> ShutdownVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Site Types
+        /// Site Types for 20.12 backward compatiblity
         /// </summary>
         [Output("siteTypes")]
         public Output<ImmutableArray<string>> SiteTypes { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("siteTypesForTransportGatewayVariable")]
+        public Output<string?> SiteTypesForTransportGatewayVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Site Types
+        /// </summary>
+        [Output("siteTypesForTransportGateways")]
+        public Output<ImmutableArray<string>> SiteTypesForTransportGateways { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -650,7 +680,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `False`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv6Connected")]
         public Input<bool>? AdvertiseIpv6Connected { get; set; }
@@ -715,7 +745,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `False`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv6Static")]
         public Input<bool>? AdvertiseIpv6Static { get; set; }
@@ -739,6 +769,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("advertisementIntervalVariable")]
         public Input<string>? AdvertisementIntervalVariable { get; set; }
+
+        /// <summary>
+        /// Enable BGP AS Path Auto-Translation
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("aspathAutoTranslation")]
+        public Input<bool>? AspathAutoTranslation { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("aspathAutoTranslationVariable")]
+        public Input<string>? AspathAutoTranslationVariable { get; set; }
 
         /// <summary>
         /// The description of the Feature
@@ -911,12 +954,30 @@ namespace Pulumi.Sdwan
         private InputList<string>? _siteTypes;
 
         /// <summary>
-        /// Site Types
+        /// Site Types for 20.12 backward compatiblity
         /// </summary>
         public InputList<string> SiteTypes
         {
             get => _siteTypes ?? (_siteTypes = new InputList<string>());
             set => _siteTypes = value;
+        }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("siteTypesForTransportGatewayVariable")]
+        public Input<string>? SiteTypesForTransportGatewayVariable { get; set; }
+
+        [Input("siteTypesForTransportGateways")]
+        private InputList<string>? _siteTypesForTransportGateways;
+
+        /// <summary>
+        /// Site Types
+        /// </summary>
+        public InputList<string> SiteTypesForTransportGateways
+        {
+            get => _siteTypesForTransportGateways ?? (_siteTypesForTransportGateways = new InputList<string>());
+            set => _siteTypesForTransportGateways = value;
         }
 
         /// <summary>
@@ -1065,7 +1126,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `False`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv6Connected")]
         public Input<bool>? AdvertiseIpv6Connected { get; set; }
@@ -1130,7 +1191,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `False`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv6Static")]
         public Input<bool>? AdvertiseIpv6Static { get; set; }
@@ -1154,6 +1215,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("advertisementIntervalVariable")]
         public Input<string>? AdvertisementIntervalVariable { get; set; }
+
+        /// <summary>
+        /// Enable BGP AS Path Auto-Translation
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("aspathAutoTranslation")]
+        public Input<bool>? AspathAutoTranslation { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("aspathAutoTranslationVariable")]
+        public Input<string>? AspathAutoTranslationVariable { get; set; }
 
         /// <summary>
         /// The description of the Feature
@@ -1326,12 +1400,30 @@ namespace Pulumi.Sdwan
         private InputList<string>? _siteTypes;
 
         /// <summary>
-        /// Site Types
+        /// Site Types for 20.12 backward compatiblity
         /// </summary>
         public InputList<string> SiteTypes
         {
             get => _siteTypes ?? (_siteTypes = new InputList<string>());
             set => _siteTypes = value;
+        }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("siteTypesForTransportGatewayVariable")]
+        public Input<string>? SiteTypesForTransportGatewayVariable { get; set; }
+
+        [Input("siteTypesForTransportGateways")]
+        private InputList<string>? _siteTypesForTransportGateways;
+
+        /// <summary>
+        /// Site Types
+        /// </summary>
+        public InputList<string> SiteTypesForTransportGateways
+        {
+            get => _siteTypesForTransportGateways ?? (_siteTypesForTransportGateways = new InputList<string>());
+            set => _siteTypesForTransportGateways = value;
         }
 
         /// <summary>

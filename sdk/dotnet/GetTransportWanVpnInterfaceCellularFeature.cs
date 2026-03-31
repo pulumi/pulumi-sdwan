@@ -175,6 +175,11 @@ namespace Pulumi.Sdwan
         /// The description of the Feature
         /// </summary>
         public readonly string Description;
+        public readonly bool EnableIpv6;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EnableIpv6Variable;
         /// <summary>
         /// Feature Profile ID
         /// </summary>
@@ -225,6 +230,14 @@ namespace Pulumi.Sdwan
         /// List of DHCP IPv4 helper addresses (min 1, max 8)
         /// </summary>
         public readonly ImmutableArray<string> Ipv4DhcpHelpers;
+        /// <summary>
+        /// Core Region
+        /// </summary>
+        public readonly string MrfCoreRegionType;
+        /// <summary>
+        /// Enable Core Region
+        /// </summary>
+        public readonly bool MrfEnableCoreRegion;
         /// <summary>
         /// The name of the Feature
         /// </summary>
@@ -378,14 +391,6 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Feature ID
         /// </summary>
         public readonly string TransportWanVpnFeatureId;
-        /// <summary>
-        /// Tunnels Bandwidth Percent
-        /// </summary>
-        public readonly int TunnelBandwidthPercent;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string TunnelBandwidthPercentVariable;
         /// <summary>
         /// Tunnel Interface on/off
         /// </summary>
@@ -685,6 +690,10 @@ namespace Pulumi.Sdwan
 
             string description,
 
+            bool enableIpv6,
+
+            string enableIpv6Variable,
+
             string featureProfileId,
 
             string id,
@@ -712,6 +721,10 @@ namespace Pulumi.Sdwan
             string ipv4DhcpHelperVariable,
 
             ImmutableArray<string> ipv4DhcpHelpers,
+
+            string mrfCoreRegionType,
+
+            bool mrfEnableCoreRegion,
 
             string name,
 
@@ -790,10 +803,6 @@ namespace Pulumi.Sdwan
             string trackerVariable,
 
             string transportWanVpnFeatureId,
-
-            int tunnelBandwidthPercent,
-
-            string tunnelBandwidthPercentVariable,
 
             bool tunnelInterface,
 
@@ -943,6 +952,8 @@ namespace Pulumi.Sdwan
             BandwidthUpstream = bandwidthUpstream;
             BandwidthUpstreamVariable = bandwidthUpstreamVariable;
             Description = description;
+            EnableIpv6 = enableIpv6;
+            EnableIpv6Variable = enableIpv6Variable;
             FeatureProfileId = featureProfileId;
             Id = id;
             InterfaceDescription = interfaceDescription;
@@ -957,6 +968,8 @@ namespace Pulumi.Sdwan
             IpMtuVariable = ipMtuVariable;
             Ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
             Ipv4DhcpHelpers = ipv4DhcpHelpers;
+            MrfCoreRegionType = mrfCoreRegionType;
+            MrfEnableCoreRegion = mrfEnableCoreRegion;
             Name = name;
             NatIpv4 = natIpv4;
             NatIpv4Variable = natIpv4Variable;
@@ -996,8 +1009,6 @@ namespace Pulumi.Sdwan
             Tracker = tracker;
             TrackerVariable = trackerVariable;
             TransportWanVpnFeatureId = transportWanVpnFeatureId;
-            TunnelBandwidthPercent = tunnelBandwidthPercent;
-            TunnelBandwidthPercentVariable = tunnelBandwidthPercentVariable;
             TunnelInterface = tunnelInterface;
             TunnelInterfaceAllowAll = tunnelInterfaceAllowAll;
             TunnelInterfaceAllowAllVariable = tunnelInterfaceAllowAllVariable;

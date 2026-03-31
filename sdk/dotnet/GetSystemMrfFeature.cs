@@ -137,6 +137,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Description;
         /// <summary>
+        /// Enable management region
+        /// </summary>
+        public readonly bool EnableManagementRegion;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EnableManagementRegionVariable;
+        /// <summary>
         /// Enable migration mode to Multi-Region Fabric
         /// </summary>
         public readonly string EnableMigrationToMrf;
@@ -145,9 +153,25 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string FeatureProfileId;
         /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string GatewayPreferenceVariable;
+        /// <summary>
+        /// List of affinity group preferences for VRF
+        /// </summary>
+        public readonly ImmutableArray<int> GatewayPreferences;
+        /// <summary>
         /// The id of the Feature
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Enable management gateway
+        /// </summary>
+        public readonly bool ManagementGateway;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string ManagementGatewayVariable;
         /// <summary>
         /// Set BGP community during migration from BGP-core based network
         /// </summary>
@@ -156,10 +180,6 @@ namespace Pulumi.Sdwan
         /// The name of the Feature
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Set region ID
-        /// </summary>
-        public readonly int RegionId;
         /// <summary>
         /// Set the role for router
         /// </summary>
@@ -180,22 +200,40 @@ namespace Pulumi.Sdwan
         /// The version of the Feature
         /// </summary>
         public readonly int Version;
+        /// <summary>
+        /// VRF name for management region
+        /// </summary>
+        public readonly int VrfId;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string VrfIdVariable;
 
         [OutputConstructor]
         private GetSystemMrfFeatureResult(
             string description,
 
+            bool enableManagementRegion,
+
+            string enableManagementRegionVariable,
+
             string enableMigrationToMrf,
 
             string featureProfileId,
 
+            string gatewayPreferenceVariable,
+
+            ImmutableArray<int> gatewayPreferences,
+
             string id,
+
+            bool managementGateway,
+
+            string managementGatewayVariable,
 
             int migrationBgpCommunity,
 
             string name,
-
-            int regionId,
 
             string role,
 
@@ -205,20 +243,31 @@ namespace Pulumi.Sdwan
 
             string secondaryRegionIdVariable,
 
-            int version)
+            int version,
+
+            int vrfId,
+
+            string vrfIdVariable)
         {
             Description = description;
+            EnableManagementRegion = enableManagementRegion;
+            EnableManagementRegionVariable = enableManagementRegionVariable;
             EnableMigrationToMrf = enableMigrationToMrf;
             FeatureProfileId = featureProfileId;
+            GatewayPreferenceVariable = gatewayPreferenceVariable;
+            GatewayPreferences = gatewayPreferences;
             Id = id;
+            ManagementGateway = managementGateway;
+            ManagementGatewayVariable = managementGatewayVariable;
             MigrationBgpCommunity = migrationBgpCommunity;
             Name = name;
-            RegionId = regionId;
             Role = role;
             RoleVariable = roleVariable;
             SecondaryRegionId = secondaryRegionId;
             SecondaryRegionIdVariable = secondaryRegionIdVariable;
             Version = version;
+            VrfId = vrfId;
+            VrfIdVariable = vrfIdVariable;
         }
     }
 }

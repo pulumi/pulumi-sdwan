@@ -49,6 +49,12 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      * 
      */
     private String description;
+    private Boolean enableIpv6;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String enableIpv6Variable;
     /**
      * @return Feature Profile ID
      * 
@@ -111,6 +117,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      * 
      */
     private List<String> ipv4DhcpHelpers;
+    /**
+     * @return Core Region
+     * 
+     */
+    private String mrfCoreRegionType;
+    /**
+     * @return Enable Core Region
+     * 
+     */
+    private Boolean mrfEnableCoreRegion;
     /**
      * @return The name of the Feature
      * 
@@ -302,16 +318,6 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      * 
      */
     private String transportWanVpnFeatureId;
-    /**
-     * @return Tunnels Bandwidth Percent
-     * 
-     */
-    private Integer tunnelBandwidthPercent;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String tunnelBandwidthPercentVariable;
     /**
      * @return Tunnel Interface on/off
      * 
@@ -713,6 +719,16 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     public String description() {
         return this.description;
     }
+    public Boolean enableIpv6() {
+        return this.enableIpv6;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String enableIpv6Variable() {
+        return this.enableIpv6Variable;
+    }
     /**
      * @return Feature Profile ID
      * 
@@ -802,6 +818,20 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     public List<String> ipv4DhcpHelpers() {
         return this.ipv4DhcpHelpers;
+    }
+    /**
+     * @return Core Region
+     * 
+     */
+    public String mrfCoreRegionType() {
+        return this.mrfCoreRegionType;
+    }
+    /**
+     * @return Enable Core Region
+     * 
+     */
+    public Boolean mrfEnableCoreRegion() {
+        return this.mrfEnableCoreRegion;
     }
     /**
      * @return The name of the Feature
@@ -1071,20 +1101,6 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
      */
     public String transportWanVpnFeatureId() {
         return this.transportWanVpnFeatureId;
-    }
-    /**
-     * @return Tunnels Bandwidth Percent
-     * 
-     */
-    public Integer tunnelBandwidthPercent() {
-        return this.tunnelBandwidthPercent;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String tunnelBandwidthPercentVariable() {
-        return this.tunnelBandwidthPercentVariable;
     }
     /**
      * @return Tunnel Interface on/off
@@ -1589,6 +1605,8 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         private Integer bandwidthUpstream;
         private String bandwidthUpstreamVariable;
         private String description;
+        private Boolean enableIpv6;
+        private String enableIpv6Variable;
         private String featureProfileId;
         private String id;
         private String interfaceDescription;
@@ -1603,6 +1621,8 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         private String ipMtuVariable;
         private String ipv4DhcpHelperVariable;
         private List<String> ipv4DhcpHelpers;
+        private String mrfCoreRegionType;
+        private Boolean mrfEnableCoreRegion;
         private String name;
         private Boolean natIpv4;
         private String natIpv4Variable;
@@ -1642,8 +1662,6 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         private String tracker;
         private String trackerVariable;
         private String transportWanVpnFeatureId;
-        private Integer tunnelBandwidthPercent;
-        private String tunnelBandwidthPercentVariable;
         private Boolean tunnelInterface;
         private Boolean tunnelInterfaceAllowAll;
         private String tunnelInterfaceAllowAllVariable;
@@ -1726,6 +1744,8 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     	      this.bandwidthUpstream = defaults.bandwidthUpstream;
     	      this.bandwidthUpstreamVariable = defaults.bandwidthUpstreamVariable;
     	      this.description = defaults.description;
+    	      this.enableIpv6 = defaults.enableIpv6;
+    	      this.enableIpv6Variable = defaults.enableIpv6Variable;
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.id = defaults.id;
     	      this.interfaceDescription = defaults.interfaceDescription;
@@ -1740,6 +1760,8 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     	      this.ipMtuVariable = defaults.ipMtuVariable;
     	      this.ipv4DhcpHelperVariable = defaults.ipv4DhcpHelperVariable;
     	      this.ipv4DhcpHelpers = defaults.ipv4DhcpHelpers;
+    	      this.mrfCoreRegionType = defaults.mrfCoreRegionType;
+    	      this.mrfEnableCoreRegion = defaults.mrfEnableCoreRegion;
     	      this.name = defaults.name;
     	      this.natIpv4 = defaults.natIpv4;
     	      this.natIpv4Variable = defaults.natIpv4Variable;
@@ -1779,8 +1801,6 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     	      this.tracker = defaults.tracker;
     	      this.trackerVariable = defaults.trackerVariable;
     	      this.transportWanVpnFeatureId = defaults.transportWanVpnFeatureId;
-    	      this.tunnelBandwidthPercent = defaults.tunnelBandwidthPercent;
-    	      this.tunnelBandwidthPercentVariable = defaults.tunnelBandwidthPercentVariable;
     	      this.tunnelInterface = defaults.tunnelInterface;
     	      this.tunnelInterfaceAllowAll = defaults.tunnelInterfaceAllowAll;
     	      this.tunnelInterfaceAllowAllVariable = defaults.tunnelInterfaceAllowAllVariable;
@@ -1936,6 +1956,22 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder enableIpv6(Boolean enableIpv6) {
+            if (enableIpv6 == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "enableIpv6");
+            }
+            this.enableIpv6 = enableIpv6;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableIpv6Variable(String enableIpv6Variable) {
+            if (enableIpv6Variable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "enableIpv6Variable");
+            }
+            this.enableIpv6Variable = enableIpv6Variable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder featureProfileId(String featureProfileId) {
             if (featureProfileId == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "featureProfileId");
@@ -2049,6 +2085,22 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         }
         public Builder ipv4DhcpHelpers(String... ipv4DhcpHelpers) {
             return ipv4DhcpHelpers(List.of(ipv4DhcpHelpers));
+        }
+        @CustomType.Setter
+        public Builder mrfCoreRegionType(String mrfCoreRegionType) {
+            if (mrfCoreRegionType == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "mrfCoreRegionType");
+            }
+            this.mrfCoreRegionType = mrfCoreRegionType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder mrfEnableCoreRegion(Boolean mrfEnableCoreRegion) {
+            if (mrfEnableCoreRegion == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "mrfEnableCoreRegion");
+            }
+            this.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
@@ -2360,22 +2412,6 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "transportWanVpnFeatureId");
             }
             this.transportWanVpnFeatureId = transportWanVpnFeatureId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder tunnelBandwidthPercent(Integer tunnelBandwidthPercent) {
-            if (tunnelBandwidthPercent == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelBandwidthPercent");
-            }
-            this.tunnelBandwidthPercent = tunnelBandwidthPercent;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder tunnelBandwidthPercentVariable(String tunnelBandwidthPercentVariable) {
-            if (tunnelBandwidthPercentVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "tunnelBandwidthPercentVariable");
-            }
-            this.tunnelBandwidthPercentVariable = tunnelBandwidthPercentVariable;
             return this;
         }
         @CustomType.Setter
@@ -2948,6 +2984,8 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
             _resultValue.bandwidthUpstream = bandwidthUpstream;
             _resultValue.bandwidthUpstreamVariable = bandwidthUpstreamVariable;
             _resultValue.description = description;
+            _resultValue.enableIpv6 = enableIpv6;
+            _resultValue.enableIpv6Variable = enableIpv6Variable;
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.id = id;
             _resultValue.interfaceDescription = interfaceDescription;
@@ -2962,6 +3000,8 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
             _resultValue.ipMtuVariable = ipMtuVariable;
             _resultValue.ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
             _resultValue.ipv4DhcpHelpers = ipv4DhcpHelpers;
+            _resultValue.mrfCoreRegionType = mrfCoreRegionType;
+            _resultValue.mrfEnableCoreRegion = mrfEnableCoreRegion;
             _resultValue.name = name;
             _resultValue.natIpv4 = natIpv4;
             _resultValue.natIpv4Variable = natIpv4Variable;
@@ -3001,8 +3041,6 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
             _resultValue.tracker = tracker;
             _resultValue.trackerVariable = trackerVariable;
             _resultValue.transportWanVpnFeatureId = transportWanVpnFeatureId;
-            _resultValue.tunnelBandwidthPercent = tunnelBandwidthPercent;
-            _resultValue.tunnelBandwidthPercentVariable = tunnelBandwidthPercentVariable;
             _resultValue.tunnelInterface = tunnelInterface;
             _resultValue.tunnelInterfaceAllowAll = tunnelInterfaceAllowAll;
             _resultValue.tunnelInterfaceAllowAllVariable = tunnelInterfaceAllowAllVariable;

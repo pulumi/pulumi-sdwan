@@ -13,14 +13,14 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TransportRoutingOspfv3Ipv4FeatureRedistributeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable NAT DIA for redistributed routes
+        /// Enable NAT DIA for redistributed routes, Attribute conditional on `Protocol` equal to `nat-route`
         ///   - Default value: `True`
         /// </summary>
         [Input("natDia")]
         public Input<bool>? NatDia { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Protocol` equal to `nat-route`
         /// </summary>
         [Input("natDiaVariable")]
         public Input<string>? NatDiaVariable { get; set; }

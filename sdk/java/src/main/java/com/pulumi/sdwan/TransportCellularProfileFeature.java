@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Transport Cellular Profile Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -267,14 +267,14 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.profileIdVariable);
     }
     /**
-     * Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
      * 
      */
     @Export(name="profilePassword", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> profilePassword;
 
     /**
-     * @return Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+     * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
      * 
      */
     public Output<Optional<String>> profilePassword() {

@@ -230,6 +230,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv6AddressVariable;
         /// <summary>
+        /// Core Region
+        /// </summary>
+        public readonly string MrfCoreRegionType;
+        /// <summary>
+        /// Enable Core Region
+        /// </summary>
+        public readonly bool MrfEnableCoreRegion;
+        /// <summary>
         /// Interface MTU \n\n, in bytes
         /// </summary>
         public readonly int Mtu;
@@ -622,6 +630,10 @@ namespace Pulumi.Sdwan
 
             string ipv6AddressVariable,
 
+            string mrfCoreRegionType,
+
+            bool mrfEnableCoreRegion,
+
             int mtu,
 
             string mtuVariable,
@@ -817,6 +829,8 @@ namespace Pulumi.Sdwan
             Ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             Ipv6Address = ipv6Address;
             Ipv6AddressVariable = ipv6AddressVariable;
+            MrfCoreRegionType = mrfCoreRegionType;
+            MrfEnableCoreRegion = mrfEnableCoreRegion;
             Mtu = mtu;
             MtuVariable = mtuVariable;
             Name = name;

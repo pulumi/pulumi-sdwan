@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceRoutePolicyFeatureSequenceAction {
-    private @Nullable List<Integer> asPathPrepends;
+    private @Nullable List<String> asPathPrepends;
     private @Nullable List<String> communities;
     /**
      * @return - Default value: `false`
@@ -80,7 +80,7 @@ public final class ServiceRoutePolicyFeatureSequenceAction {
     private @Nullable Integer weight;
 
     private ServiceRoutePolicyFeatureSequenceAction() {}
-    public List<Integer> asPathPrepends() {
+    public List<String> asPathPrepends() {
         return this.asPathPrepends == null ? List.of() : this.asPathPrepends;
     }
     public List<String> communities() {
@@ -180,7 +180,7 @@ public final class ServiceRoutePolicyFeatureSequenceAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<Integer> asPathPrepends;
+        private @Nullable List<String> asPathPrepends;
         private @Nullable List<String> communities;
         private @Nullable Boolean communityAdditive;
         private @Nullable String communityVariable;
@@ -212,12 +212,12 @@ public final class ServiceRoutePolicyFeatureSequenceAction {
         }
 
         @CustomType.Setter
-        public Builder asPathPrepends(@Nullable List<Integer> asPathPrepends) {
+        public Builder asPathPrepends(@Nullable List<String> asPathPrepends) {
 
             this.asPathPrepends = asPathPrepends;
             return this;
         }
-        public Builder asPathPrepends(Integer... asPathPrepends) {
+        public Builder asPathPrepends(String... asPathPrepends) {
             return asPathPrepends(List.of(asPathPrepends));
         }
         @CustomType.Setter

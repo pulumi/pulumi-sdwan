@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a System Global Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -51,6 +51,10 @@ namespace Pulumi.Sdwan
     ///         Nat64TcpTimeout = 3600,
     ///         HttpAuthentication = "aaa",
     ///         SshVersion = "2",
+    ///         LacpSystemPriority = 1234,
+    ///         EtherchannelFlowLoadBalance = "src-ip",
+    ///         EtherchannelVlanLoadBalance = true,
+    ///         BgpCommunityNewFormat = true,
     ///     });
     /// 
     /// });
@@ -81,6 +85,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("arpProxyVariable")]
         public Output<string?> ArpProxyVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("bgpCommunityNewFormat")]
+        public Output<bool?> BgpCommunityNewFormat { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("bgpCommunityNewFormatVariable")]
+        public Output<string?> BgpCommunityNewFormatVariable { get; private set; } = null!;
 
         /// <summary>
         /// Configure CDP
@@ -126,6 +143,32 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("domainLookupVariable")]
         public Output<string?> DomainLookupVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Set Etherchannel load balance hash algorithm
+        ///   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `Sdwan`
+        /// </summary>
+        [Output("etherchannelFlowLoadBalance")]
+        public Output<string?> EtherchannelFlowLoadBalance { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("etherchannelFlowLoadBalanceVariable")]
+        public Output<string?> EtherchannelFlowLoadBalanceVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Set Etherchannel vlan manual load balance
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("etherchannelVlanLoadBalance")]
+        public Output<bool?> EtherchannelVlanLoadBalance { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("etherchannelVlanLoadBalanceVariable")]
+        public Output<string?> EtherchannelVlanLoadBalanceVariable { get; private set; } = null!;
 
         /// <summary>
         /// Feature Profile ID
@@ -210,6 +253,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("ipSourceRoutingVariable")]
         public Output<string?> IpSourceRoutingVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Set LACP system priority
+        ///   - Range: `1`-`65535`
+        /// </summary>
+        [Output("lacpSystemPriority")]
+        public Output<int?> LacpSystemPriority { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("lacpSystemPriorityVariable")]
+        public Output<string?> LacpSystemPriorityVariable { get; private set; } = null!;
 
         /// <summary>
         /// Configure Telnet (Outbound)
@@ -453,6 +509,19 @@ namespace Pulumi.Sdwan
         public Input<string>? ArpProxyVariable { get; set; }
 
         /// <summary>
+        /// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("bgpCommunityNewFormat")]
+        public Input<bool>? BgpCommunityNewFormat { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("bgpCommunityNewFormatVariable")]
+        public Input<string>? BgpCommunityNewFormatVariable { get; set; }
+
+        /// <summary>
         /// Configure CDP
         ///   - Default value: `True`
         /// </summary>
@@ -496,6 +565,32 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("domainLookupVariable")]
         public Input<string>? DomainLookupVariable { get; set; }
+
+        /// <summary>
+        /// Set Etherchannel load balance hash algorithm
+        ///   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `Sdwan`
+        /// </summary>
+        [Input("etherchannelFlowLoadBalance")]
+        public Input<string>? EtherchannelFlowLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("etherchannelFlowLoadBalanceVariable")]
+        public Input<string>? EtherchannelFlowLoadBalanceVariable { get; set; }
+
+        /// <summary>
+        /// Set Etherchannel vlan manual load balance
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("etherchannelVlanLoadBalance")]
+        public Input<bool>? EtherchannelVlanLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("etherchannelVlanLoadBalanceVariable")]
+        public Input<string>? EtherchannelVlanLoadBalanceVariable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -580,6 +675,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("ipSourceRoutingVariable")]
         public Input<string>? IpSourceRoutingVariable { get; set; }
+
+        /// <summary>
+        /// Set LACP system priority
+        ///   - Range: `1`-`65535`
+        /// </summary>
+        [Input("lacpSystemPriority")]
+        public Input<int>? LacpSystemPriority { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("lacpSystemPriorityVariable")]
+        public Input<string>? LacpSystemPriorityVariable { get; set; }
 
         /// <summary>
         /// Configure Telnet (Outbound)
@@ -779,6 +887,19 @@ namespace Pulumi.Sdwan
         public Input<string>? ArpProxyVariable { get; set; }
 
         /// <summary>
+        /// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("bgpCommunityNewFormat")]
+        public Input<bool>? BgpCommunityNewFormat { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("bgpCommunityNewFormatVariable")]
+        public Input<string>? BgpCommunityNewFormatVariable { get; set; }
+
+        /// <summary>
         /// Configure CDP
         ///   - Default value: `True`
         /// </summary>
@@ -822,6 +943,32 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("domainLookupVariable")]
         public Input<string>? DomainLookupVariable { get; set; }
+
+        /// <summary>
+        /// Set Etherchannel load balance hash algorithm
+        ///   - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `Sdwan`
+        /// </summary>
+        [Input("etherchannelFlowLoadBalance")]
+        public Input<string>? EtherchannelFlowLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("etherchannelFlowLoadBalanceVariable")]
+        public Input<string>? EtherchannelFlowLoadBalanceVariable { get; set; }
+
+        /// <summary>
+        /// Set Etherchannel vlan manual load balance
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("etherchannelVlanLoadBalance")]
+        public Input<bool>? EtherchannelVlanLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("etherchannelVlanLoadBalanceVariable")]
+        public Input<string>? EtherchannelVlanLoadBalanceVariable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -906,6 +1053,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("ipSourceRoutingVariable")]
         public Input<string>? IpSourceRoutingVariable { get; set; }
+
+        /// <summary>
+        /// Set LACP system priority
+        ///   - Range: `1`-`65535`
+        /// </summary>
+        [Input("lacpSystemPriority")]
+        public Input<int>? LacpSystemPriority { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("lacpSystemPriorityVariable")]
+        public Input<string>? LacpSystemPriorityVariable { get; set; }
 
         /// <summary>
         /// Configure Telnet (Outbound)

@@ -233,7 +233,7 @@ class TransportIpv6AclFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Transport IPv6 ACL Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -296,7 +296,7 @@ class TransportIpv6AclFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport IPv6 ACL Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

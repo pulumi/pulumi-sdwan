@@ -238,6 +238,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv4Address;
         /// <summary>
+        /// address type
+        /// </summary>
+        public readonly string Ipv4AddressType;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv4AddressTypeVariable;
+        /// <summary>
         /// Variable name
         /// </summary>
         public readonly string Ipv4AddressVariable;
@@ -249,10 +257,6 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string Ipv4AutoDetectBandwidthVariable;
-        /// <summary>
-        /// IPv4 Configuration Type
-        /// </summary>
-        public readonly string Ipv4ConfigurationType;
         /// <summary>
         /// DHCP Distance
         /// </summary>
@@ -294,13 +298,17 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv6Address;
         /// <summary>
+        /// address type
+        /// </summary>
+        public readonly string Ipv6AddressType;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv6AddressTypeVariable;
+        /// <summary>
         /// Variable name
         /// </summary>
         public readonly string Ipv6AddressVariable;
-        /// <summary>
-        /// IPv6 Configuration Type
-        /// </summary>
-        public readonly string Ipv6ConfigurationType;
         /// <summary>
         /// Interval for interface load calculation
         /// </summary>
@@ -409,13 +417,15 @@ namespace Pulumi.Sdwan
 
             string ipv4Address,
 
+            string ipv4AddressType,
+
+            string ipv4AddressTypeVariable,
+
             string ipv4AddressVariable,
 
             bool ipv4AutoDetectBandwidth,
 
             string ipv4AutoDetectBandwidthVariable,
-
-            string ipv4ConfigurationType,
 
             int ipv4DhcpDistance,
 
@@ -437,9 +447,11 @@ namespace Pulumi.Sdwan
 
             string ipv6Address,
 
-            string ipv6AddressVariable,
+            string ipv6AddressType,
 
-            string ipv6ConfigurationType,
+            string ipv6AddressTypeVariable,
+
+            string ipv6AddressVariable,
 
             int loadInterval,
 
@@ -495,10 +507,11 @@ namespace Pulumi.Sdwan
             IpMtu = ipMtu;
             IpMtuVariable = ipMtuVariable;
             Ipv4Address = ipv4Address;
+            Ipv4AddressType = ipv4AddressType;
+            Ipv4AddressTypeVariable = ipv4AddressTypeVariable;
             Ipv4AddressVariable = ipv4AddressVariable;
             Ipv4AutoDetectBandwidth = ipv4AutoDetectBandwidth;
             Ipv4AutoDetectBandwidthVariable = ipv4AutoDetectBandwidthVariable;
-            Ipv4ConfigurationType = ipv4ConfigurationType;
             Ipv4DhcpDistance = ipv4DhcpDistance;
             Ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             Ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -509,8 +522,9 @@ namespace Pulumi.Sdwan
             Ipv4SubnetMask = ipv4SubnetMask;
             Ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             Ipv6Address = ipv6Address;
+            Ipv6AddressType = ipv6AddressType;
+            Ipv6AddressTypeVariable = ipv6AddressTypeVariable;
             Ipv6AddressVariable = ipv6AddressVariable;
-            Ipv6ConfigurationType = ipv6ConfigurationType;
             LoadInterval = loadInterval;
             LoadIntervalVariable = loadIntervalVariable;
             MacAddress = macAddress;

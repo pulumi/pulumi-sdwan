@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Transport WAN VPN Interface Cellular Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -55,6 +55,7 @@ import javax.annotation.Nullable;
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
  *             .shutdown(true)
+ *             .enableIpv6(true)
  *             .interfaceName("GigabitEthernet1")
  *             .interfaceDescription("WAN")
  *             .ipv4DhcpHelpers("1.2.3.4")
@@ -63,8 +64,7 @@ import javax.annotation.Nullable;
  *             .bandwidthDownstream(21474836)
  *             .tunnelInterface(true)
  *             .perTunnelQos(true)
- *             .tunnelQosMode("hub")
- *             .tunnelBandwidthPercent(82)
+ *             .tunnelQosMode("spoke")
  *             .tunnelInterfaceBindLoopbackTunnel("example")
  *             .tunnelInterfaceCarrier("default")
  *             .tunnelInterfaceColor("default")
@@ -252,6 +252,34 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
         return Codegen.optional(this.description);
     }
     /**
+     * - Default value: `true`
+     * 
+     */
+    @Export(name="enableIpv6", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> enableIpv6;
+
+    /**
+     * @return - Default value: `true`
+     * 
+     */
+    public Output<Optional<Boolean>> enableIpv6() {
+        return Codegen.optional(this.enableIpv6);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="enableIpv6Variable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> enableIpv6Variable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> enableIpv6Variable() {
+        return Codegen.optional(this.enableIpv6Variable);
+    }
+    /**
      * Feature Profile ID
      * 
      */
@@ -426,6 +454,40 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
      */
     public Output<Optional<List<String>>> ipv4DhcpHelpers() {
         return Codegen.optional(this.ipv4DhcpHelpers);
+    }
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    @Export(name="mrfCoreRegionType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> mrfCoreRegionType;
+
+    /**
+     * @return Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    public Output<Optional<String>> mrfCoreRegionType() {
+        return Codegen.optional(this.mrfCoreRegionType);
+    }
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="mrfEnableCoreRegion", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> mrfEnableCoreRegion;
+
+    /**
+     * @return Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> mrfEnableCoreRegion() {
+        return Codegen.optional(this.mrfEnableCoreRegion);
     }
     /**
      * The name of the Feature
@@ -1012,38 +1074,6 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
         return this.transportWanVpnFeatureId;
     }
     /**
-     * Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     * 
-     */
-    @Export(name="tunnelBandwidthPercent", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> tunnelBandwidthPercent;
-
-    /**
-     * @return Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     * 
-     */
-    public Output<Optional<Integer>> tunnelBandwidthPercent() {
-        return Codegen.optional(this.tunnelBandwidthPercent);
-    }
-    /**
-     * Variable name
-     * 
-     */
-    @Export(name="tunnelBandwidthPercentVariable", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> tunnelBandwidthPercentVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Output<Optional<String>> tunnelBandwidthPercentVariable() {
-        return Codegen.optional(this.tunnelBandwidthPercentVariable);
-    }
-    /**
      * Tunnel Interface on/off
      *   - Default value: `false`
      * 
@@ -1571,7 +1601,7 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
     }
     /**
      * Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
      */
@@ -1580,7 +1610,7 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
 
     /**
      * @return Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
      */
@@ -2043,7 +2073,7 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
     }
     /**
      * Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      * 
      */
     @Export(name="tunnelQosMode", refs={String.class}, tree="[0]")
@@ -2051,7 +2081,7 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
 
     /**
      * @return Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      * 
      */
     public Output<Optional<String>> tunnelQosMode() {

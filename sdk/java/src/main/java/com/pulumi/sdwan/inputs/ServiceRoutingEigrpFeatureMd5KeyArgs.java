@@ -49,14 +49,14 @@ public final class ServiceRoutingEigrpFeatureMd5KeyArgs extends com.pulumi.resou
     }
 
     /**
-     * Set MD5 key
+     * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="keyString")
     private @Nullable Output<String> keyString;
 
     /**
-     * @return Set MD5 key
+     * @return Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> keyString() {
@@ -150,7 +150,7 @@ public final class ServiceRoutingEigrpFeatureMd5KeyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param keyString Set MD5 key
+         * @param keyString Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class ServiceRoutingEigrpFeatureMd5KeyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param keyString Set MD5 key
+         * @param keyString Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 

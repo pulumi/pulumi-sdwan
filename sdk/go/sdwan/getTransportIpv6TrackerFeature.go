@@ -65,23 +65,25 @@ type LookupTransportIpv6TrackerFeatureResult struct {
 	EndpointApiUrl string `pulumi:"endpointApiUrl"`
 	// Variable name
 	EndpointApiUrlVariable string `pulumi:"endpointApiUrlVariable"`
-	// Endpoint DNS Name
+	// DNS Name
 	EndpointDnsName string `pulumi:"endpointDnsName"`
 	// Variable name
 	EndpointDnsNameVariable string `pulumi:"endpointDnsNameVariable"`
-	// Endpoint IP
+	// IP
 	EndpointIp string `pulumi:"endpointIp"`
 	// Variable name
 	EndpointIpVariable string `pulumi:"endpointIpVariable"`
 	// Endpoint Tracker Type
 	EndpointTrackerType string `pulumi:"endpointTrackerType"`
-	// Variable name
-	EndpointTrackerTypeVariable string `pulumi:"endpointTrackerTypeVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
+	// Probe Interval
+	IcmpInterval int `pulumi:"icmpInterval"`
+	// Variable name
+	IcmpIntervalVariable string `pulumi:"icmpIntervalVariable"`
 	// The id of the Feature
 	Id string `pulumi:"id"`
-	// Interval
+	// Probe Interval
 	Interval int `pulumi:"interval"`
 	// Variable name
 	IntervalVariable string `pulumi:"intervalVariable"`
@@ -158,7 +160,7 @@ func (o LookupTransportIpv6TrackerFeatureResultOutput) EndpointApiUrlVariable() 
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.EndpointApiUrlVariable }).(pulumi.StringOutput)
 }
 
-// Endpoint DNS Name
+// DNS Name
 func (o LookupTransportIpv6TrackerFeatureResultOutput) EndpointDnsName() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.EndpointDnsName }).(pulumi.StringOutput)
 }
@@ -168,7 +170,7 @@ func (o LookupTransportIpv6TrackerFeatureResultOutput) EndpointDnsNameVariable()
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.EndpointDnsNameVariable }).(pulumi.StringOutput)
 }
 
-// Endpoint IP
+// IP
 func (o LookupTransportIpv6TrackerFeatureResultOutput) EndpointIp() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.EndpointIp }).(pulumi.StringOutput)
 }
@@ -183,14 +185,19 @@ func (o LookupTransportIpv6TrackerFeatureResultOutput) EndpointTrackerType() pul
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.EndpointTrackerType }).(pulumi.StringOutput)
 }
 
-// Variable name
-func (o LookupTransportIpv6TrackerFeatureResultOutput) EndpointTrackerTypeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.EndpointTrackerTypeVariable }).(pulumi.StringOutput)
-}
-
 // Feature Profile ID
 func (o LookupTransportIpv6TrackerFeatureResultOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.FeatureProfileId }).(pulumi.StringOutput)
+}
+
+// Probe Interval
+func (o LookupTransportIpv6TrackerFeatureResultOutput) IcmpInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) int { return v.IcmpInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupTransportIpv6TrackerFeatureResultOutput) IcmpIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.IcmpIntervalVariable }).(pulumi.StringOutput)
 }
 
 // The id of the Feature
@@ -198,7 +205,7 @@ func (o LookupTransportIpv6TrackerFeatureResultOutput) Id() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interval
+// Probe Interval
 func (o LookupTransportIpv6TrackerFeatureResultOutput) Interval() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTransportIpv6TrackerFeatureResult) int { return v.Interval }).(pulumi.IntOutput)
 }

@@ -48,18 +48,33 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set name of the SNMP community
+     * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Set name of the SNMP community
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="nameVariable")
+    private @Nullable Output<String> nameVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> nameVariable() {
+        return Optional.ofNullable(this.nameVariable);
     }
 
     /**
@@ -113,6 +128,7 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
         this.authorization = $.authorization;
         this.authorizationVariable = $.authorizationVariable;
         this.name = $.name;
+        this.nameVariable = $.nameVariable;
         this.userLabel = $.userLabel;
         this.view = $.view;
         this.viewVariable = $.viewVariable;
@@ -181,7 +197,7 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param name Set name of the SNMP community
+         * @param name Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -192,13 +208,34 @@ public final class SystemSnmpFeatureCommunityArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param name Set name of the SNMP community
+         * @param name Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param nameVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameVariable(@Nullable Output<String> nameVariable) {
+            $.nameVariable = nameVariable;
+            return this;
+        }
+
+        /**
+         * @param nameVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameVariable(String nameVariable) {
+            return nameVariable(Output.of(nameVariable));
         }
 
         /**

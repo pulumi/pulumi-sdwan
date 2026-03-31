@@ -13,10 +13,10 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceRoutePolicyFeatureSequenceActionArgs : global::Pulumi.ResourceArgs
     {
         [Input("asPathPrepends")]
-        private InputList<int>? _asPathPrepends;
-        public InputList<int> AsPathPrepends
+        private InputList<string>? _asPathPrepends;
+        public InputList<string> AsPathPrepends
         {
-            get => _asPathPrepends ?? (_asPathPrepends = new InputList<int>());
+            get => _asPathPrepends ?? (_asPathPrepends = new InputList<string>());
             set => _asPathPrepends = value;
         }
 

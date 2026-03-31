@@ -79,6 +79,100 @@ public final class TransportIpv6AclFeatureSequenceActionArgs extends com.pulumi.
     }
 
     /**
+     * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="acceptSetServiceChainFallback")
+    private @Nullable Output<Boolean> acceptSetServiceChainFallback;
+
+    /**
+     * @return fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> acceptSetServiceChainFallback() {
+        return Optional.ofNullable(this.acceptSetServiceChainFallback);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    @Import(name="acceptSetServiceChainFallbackVariable")
+    private @Nullable Output<String> acceptSetServiceChainFallbackVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    public Optional<Output<String>> acceptSetServiceChainFallbackVariable() {
+        return Optional.ofNullable(this.acceptSetServiceChainFallbackVariable);
+    }
+
+    /**
+     * Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     * 
+     */
+    @Import(name="acceptSetServiceChainName")
+    private @Nullable Output<String> acceptSetServiceChainName;
+
+    /**
+     * @return Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     * 
+     */
+    public Optional<Output<String>> acceptSetServiceChainName() {
+        return Optional.ofNullable(this.acceptSetServiceChainName);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="acceptSetServiceChainNameVariable")
+    private @Nullable Output<String> acceptSetServiceChainNameVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> acceptSetServiceChainNameVariable() {
+        return Optional.ofNullable(this.acceptSetServiceChainNameVariable);
+    }
+
+    /**
+     * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    @Import(name="acceptSetServiceChainVpn")
+    private @Nullable Output<Integer> acceptSetServiceChainVpn;
+
+    /**
+     * @return Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    public Optional<Output<Integer>> acceptSetServiceChainVpn() {
+        return Optional.ofNullable(this.acceptSetServiceChainVpn);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    @Import(name="acceptSetServiceChainVpnVariable")
+    private @Nullable Output<String> acceptSetServiceChainVpnVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    public Optional<Output<String>> acceptSetServiceChainVpnVariable() {
+        return Optional.ofNullable(this.acceptSetServiceChainVpnVariable);
+    }
+
+    /**
      * set traffic class number
      *   - Range: `0`-`63`
      * 
@@ -135,6 +229,12 @@ public final class TransportIpv6AclFeatureSequenceActionArgs extends com.pulumi.
         this.acceptMirrorListId = $.acceptMirrorListId;
         this.acceptPolicerId = $.acceptPolicerId;
         this.acceptSetNextHop = $.acceptSetNextHop;
+        this.acceptSetServiceChainFallback = $.acceptSetServiceChainFallback;
+        this.acceptSetServiceChainFallbackVariable = $.acceptSetServiceChainFallbackVariable;
+        this.acceptSetServiceChainName = $.acceptSetServiceChainName;
+        this.acceptSetServiceChainNameVariable = $.acceptSetServiceChainNameVariable;
+        this.acceptSetServiceChainVpn = $.acceptSetServiceChainVpn;
+        this.acceptSetServiceChainVpnVariable = $.acceptSetServiceChainVpnVariable;
         this.acceptTrafficClass = $.acceptTrafficClass;
         this.dropCounterName = $.dropCounterName;
         this.dropLog = $.dropLog;
@@ -239,6 +339,136 @@ public final class TransportIpv6AclFeatureSequenceActionArgs extends com.pulumi.
          */
         public Builder acceptSetNextHop(String acceptSetNextHop) {
             return acceptSetNextHop(Output.of(acceptSetNextHop));
+        }
+
+        /**
+         * @param acceptSetServiceChainFallback fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainFallback(@Nullable Output<Boolean> acceptSetServiceChainFallback) {
+            $.acceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            return this;
+        }
+
+        /**
+         * @param acceptSetServiceChainFallback fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainFallback(Boolean acceptSetServiceChainFallback) {
+            return acceptSetServiceChainFallback(Output.of(acceptSetServiceChainFallback));
+        }
+
+        /**
+         * @param acceptSetServiceChainFallbackVariable Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainFallbackVariable(@Nullable Output<String> acceptSetServiceChainFallbackVariable) {
+            $.acceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            return this;
+        }
+
+        /**
+         * @param acceptSetServiceChainFallbackVariable Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainFallbackVariable(String acceptSetServiceChainFallbackVariable) {
+            return acceptSetServiceChainFallbackVariable(Output.of(acceptSetServiceChainFallbackVariable));
+        }
+
+        /**
+         * @param acceptSetServiceChainName Set Service Chain Number
+         *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainName(@Nullable Output<String> acceptSetServiceChainName) {
+            $.acceptSetServiceChainName = acceptSetServiceChainName;
+            return this;
+        }
+
+        /**
+         * @param acceptSetServiceChainName Set Service Chain Number
+         *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainName(String acceptSetServiceChainName) {
+            return acceptSetServiceChainName(Output.of(acceptSetServiceChainName));
+        }
+
+        /**
+         * @param acceptSetServiceChainNameVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainNameVariable(@Nullable Output<String> acceptSetServiceChainNameVariable) {
+            $.acceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            return this;
+        }
+
+        /**
+         * @param acceptSetServiceChainNameVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainNameVariable(String acceptSetServiceChainNameVariable) {
+            return acceptSetServiceChainNameVariable(Output.of(acceptSetServiceChainNameVariable));
+        }
+
+        /**
+         * @param acceptSetServiceChainVpn Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainVpn(@Nullable Output<Integer> acceptSetServiceChainVpn) {
+            $.acceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            return this;
+        }
+
+        /**
+         * @param acceptSetServiceChainVpn Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainVpn(Integer acceptSetServiceChainVpn) {
+            return acceptSetServiceChainVpn(Output.of(acceptSetServiceChainVpn));
+        }
+
+        /**
+         * @param acceptSetServiceChainVpnVariable Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainVpnVariable(@Nullable Output<String> acceptSetServiceChainVpnVariable) {
+            $.acceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
+            return this;
+        }
+
+        /**
+         * @param acceptSetServiceChainVpnVariable Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptSetServiceChainVpnVariable(String acceptSetServiceChainVpnVariable) {
+            return acceptSetServiceChainVpnVariable(Output.of(acceptSetServiceChainVpnVariable));
         }
 
         /**

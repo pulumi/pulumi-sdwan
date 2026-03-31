@@ -32,6 +32,30 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string AcceptSetNextHop;
         /// <summary>
+        /// fallback
+        /// </summary>
+        public readonly bool AcceptSetServiceChainFallback;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string AcceptSetServiceChainFallbackVariable;
+        /// <summary>
+        /// Set Service Chain Number
+        /// </summary>
+        public readonly string AcceptSetServiceChainName;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string AcceptSetServiceChainNameVariable;
+        /// <summary>
+        /// Set Service Chain VPN
+        /// </summary>
+        public readonly int AcceptSetServiceChainVpn;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string AcceptSetServiceChainVpnVariable;
+        /// <summary>
         /// Counter Name
         /// </summary>
         public readonly string DropCounterName;
@@ -54,6 +78,18 @@ namespace Pulumi.Sdwan.Outputs
 
             string acceptSetNextHop,
 
+            bool acceptSetServiceChainFallback,
+
+            string acceptSetServiceChainFallbackVariable,
+
+            string acceptSetServiceChainName,
+
+            string acceptSetServiceChainNameVariable,
+
+            int acceptSetServiceChainVpn,
+
+            string acceptSetServiceChainVpnVariable,
+
             string dropCounterName,
 
             bool dropLog)
@@ -64,6 +100,12 @@ namespace Pulumi.Sdwan.Outputs
             AcceptPolicerId = acceptPolicerId;
             AcceptSetDscp = acceptSetDscp;
             AcceptSetNextHop = acceptSetNextHop;
+            AcceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            AcceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            AcceptSetServiceChainName = acceptSetServiceChainName;
+            AcceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            AcceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            AcceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
             DropCounterName = dropCounterName;
             DropLog = dropLog;
         }

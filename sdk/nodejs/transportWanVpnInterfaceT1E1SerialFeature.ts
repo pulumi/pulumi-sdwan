@@ -8,7 +8,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Transport WAN VPN Interface T1 E1 Serial Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -33,7 +33,7 @@ import * as utilities from "./utilities";
  *     tunnelInterface: true,
  *     perTunnelQos: true,
  *     perTunnelQosAggregator: false,
- *     tunnelQosMode: "hub",
+ *     tunnelQosMode: "spoke",
  *     tunnelInterfaceColor: "mpls",
  *     tunnelInterfaceRestrict: true,
  *     tunnelInterfaceGroups: 42949672,
@@ -205,6 +205,17 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
      * Variable name
      */
     declare public readonly ipv6AddressVariable: pulumi.Output<string | undefined>;
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     */
+    declare public readonly mrfCoreRegionType: pulumi.Output<string | undefined>;
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     */
+    declare public readonly mrfEnableCoreRegion: pulumi.Output<boolean | undefined>;
     /**
      * Interface MTU <68...2000>, in bytes
      *   - Range: `576`-`9216`
@@ -579,7 +590,7 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
     declare public readonly tunnelInterfaceVmanageConnectionPreferenceVariable: pulumi.Output<string | undefined>;
     /**
      * Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      */
     declare public readonly tunnelQosMode: pulumi.Output<string | undefined>;
     /**
@@ -628,6 +639,8 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
             resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
             resourceInputs["ipv6Address"] = state?.ipv6Address;
             resourceInputs["ipv6AddressVariable"] = state?.ipv6AddressVariable;
+            resourceInputs["mrfCoreRegionType"] = state?.mrfCoreRegionType;
+            resourceInputs["mrfEnableCoreRegion"] = state?.mrfEnableCoreRegion;
             resourceInputs["mtu"] = state?.mtu;
             resourceInputs["mtuVariable"] = state?.mtuVariable;
             resourceInputs["name"] = state?.name;
@@ -745,6 +758,8 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
             resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
             resourceInputs["ipv6Address"] = args?.ipv6Address;
             resourceInputs["ipv6AddressVariable"] = args?.ipv6AddressVariable;
+            resourceInputs["mrfCoreRegionType"] = args?.mrfCoreRegionType;
+            resourceInputs["mrfEnableCoreRegion"] = args?.mrfEnableCoreRegion;
             resourceInputs["mtu"] = args?.mtu;
             resourceInputs["mtuVariable"] = args?.mtuVariable;
             resourceInputs["name"] = args?.name;
@@ -927,6 +942,17 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureState {
      * Variable name
      */
     ipv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     */
+    mrfCoreRegionType?: pulumi.Input<string>;
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     */
+    mrfEnableCoreRegion?: pulumi.Input<boolean>;
     /**
      * Interface MTU <68...2000>, in bytes
      *   - Range: `576`-`9216`
@@ -1301,7 +1327,7 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureState {
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
      * Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**
@@ -1405,6 +1431,17 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureArgs {
      * Variable name
      */
     ipv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     */
+    mrfCoreRegionType?: pulumi.Input<string>;
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     */
+    mrfEnableCoreRegion?: pulumi.Input<boolean>;
     /**
      * Interface MTU <68...2000>, in bytes
      *   - Range: `576`-`9216`
@@ -1779,7 +1816,7 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureArgs {
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
      * Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**

@@ -78,6 +78,9 @@ type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
 	BandwidthUpstreamVariable string `pulumi:"bandwidthUpstreamVariable"`
 	// The description of the Feature
 	Description string `pulumi:"description"`
+	EnableIpv6  bool   `pulumi:"enableIpv6"`
+	// Variable name
+	EnableIpv6Variable string `pulumi:"enableIpv6Variable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Feature
@@ -104,6 +107,10 @@ type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
 	Ipv4DhcpHelperVariable string `pulumi:"ipv4DhcpHelperVariable"`
 	// List of DHCP IPv4 helper addresses (min 1, max 8)
 	Ipv4DhcpHelpers []string `pulumi:"ipv4DhcpHelpers"`
+	// Core Region
+	MrfCoreRegionType string `pulumi:"mrfCoreRegionType"`
+	// Enable Core Region
+	MrfEnableCoreRegion bool `pulumi:"mrfEnableCoreRegion"`
 	// The name of the Feature
 	Name string `pulumi:"name"`
 	// Network Address Translation on this interface
@@ -181,10 +188,6 @@ type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
 	TrackerVariable string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent
-	TunnelBandwidthPercent int `pulumi:"tunnelBandwidthPercent"`
-	// Variable name
-	TunnelBandwidthPercentVariable string `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	TunnelInterface bool `pulumi:"tunnelInterface"`
 	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
@@ -413,6 +416,15 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) Description()
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) EnableIpv6() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) bool { return v.EnableIpv6 }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) EnableIpv6Variable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.EnableIpv6Variable }).(pulumi.StringOutput)
+}
+
 // Feature Profile ID
 func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.FeatureProfileId }).(pulumi.StringOutput)
@@ -483,6 +495,16 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) Ipv4DhcpHelpe
 // List of DHCP IPv4 helper addresses (min 1, max 8)
 func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) Ipv4DhcpHelpers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) []string { return v.Ipv4DhcpHelpers }).(pulumi.StringArrayOutput)
+}
+
+// Core Region
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) MrfCoreRegionType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.MrfCoreRegionType }).(pulumi.StringOutput)
+}
+
+// Enable Core Region
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) MrfEnableCoreRegion() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) bool { return v.MrfEnableCoreRegion }).(pulumi.BoolOutput)
 }
 
 // The name of the Feature
@@ -693,18 +715,6 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TrackerVariab
 // Transport WAN VPN Feature ID
 func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TransportWanVpnFeatureId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.TransportWanVpnFeatureId }).(pulumi.StringOutput)
-}
-
-// Tunnels Bandwidth Percent
-func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelBandwidthPercent() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) int { return v.TunnelBandwidthPercent }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) TunnelBandwidthPercentVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string {
-		return v.TunnelBandwidthPercentVariable
-	}).(pulumi.StringOutput)
 }
 
 // Tunnel Interface on/off

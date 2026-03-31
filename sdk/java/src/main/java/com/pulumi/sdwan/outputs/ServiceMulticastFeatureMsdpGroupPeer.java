@@ -51,7 +51,7 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
      */
     private @Nullable String keepaliveIntervalVariable;
     /**
-     * @return Set MSDP peer ip password
+     * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String peerAuthenticationPassword;
@@ -147,7 +147,7 @@ public final class ServiceMulticastFeatureMsdpGroupPeer {
         return Optional.ofNullable(this.keepaliveIntervalVariable);
     }
     /**
-     * @return Set MSDP peer ip password
+     * @return Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> peerAuthenticationPassword() {

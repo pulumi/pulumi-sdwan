@@ -57,7 +57,7 @@ class TransportCellularProfileFeatureArgs:
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
@@ -264,7 +264,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -364,7 +364,7 @@ class _TransportCellularProfileFeatureState:
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
@@ -575,7 +575,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -672,7 +672,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Transport Cellular Profile Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -724,7 +724,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
@@ -739,7 +739,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport Cellular Profile Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -888,7 +888,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        :param pulumi.Input[_builtins.str] profile_password: Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` equal to `true`
         :param pulumi.Input[_builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` equal to `true`
@@ -1033,7 +1033,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set the profile password, Attribute conditional on `requires_authentication` equal to `true`
+        Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requires_authentication` equal to `true`
         """
         return pulumi.get(self, "profile_password")
 

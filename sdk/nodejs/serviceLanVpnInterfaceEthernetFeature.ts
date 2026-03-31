@@ -24,7 +24,7 @@ import * as utilities from "./utilities";
  *     shutdown: false,
  *     interfaceName: "GigabitEthernet3",
  *     interfaceDescription: "LAN",
- *     ipv4ConfigurationType: "static",
+ *     ipv4AddressType: "static",
  *     ipv4Address: "1.2.3.4",
  *     ipv4SubnetMask: "0.0.0.0",
  *     ipv4SecondaryAddresses: [{
@@ -32,7 +32,7 @@ import * as utilities from "./utilities";
  *         subnetMask: "0.0.0.0",
  *     }],
  *     ipv4DhcpHelpers: ["1.2.3.4"],
- *     ipv6ConfigurationType: "static",
+ *     ipv6AddressType: "static",
  *     ipv6DhcpHelpers: [{
  *         address: "2001:0:0:1::0",
  *         dhcpv6HelperVpn: 1,
@@ -189,7 +189,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly duplexVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly enableDhcpv6: pulumi.Output<boolean | undefined>;
     /**
@@ -211,13 +211,13 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly interfaceDescriptionVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      */
     declare public readonly interfaceMtu: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      */
     declare public readonly interfaceMtuVariable: pulumi.Output<string | undefined>;
     declare public readonly interfaceName: pulumi.Output<string | undefined>;
@@ -245,27 +245,30 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     declare public readonly ipv4Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     */
+    declare public readonly ipv4AddressType: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     */
+    declare public readonly ipv4AddressTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     */
-    declare public readonly ipv4ConfigurationType: pulumi.Output<string | undefined>;
-    /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
     declare public readonly ipv4DhcpDistance: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      */
     declare public readonly ipv4DhcpDistanceVariable: pulumi.Output<string | undefined>;
     /**
@@ -344,16 +347,16 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly ipv4NatUdpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     declare public readonly ipv4SecondaryAddresses: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress[] | undefined>;
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     declare public readonly ipv4SubnetMask: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     declare public readonly ipv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
@@ -361,25 +364,28 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly ipv4Vrrps: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp[] | undefined>;
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly ipv6Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     */
+    declare public readonly ipv6AddressType: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     */
+    declare public readonly ipv6AddressTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly ipv6AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     */
-    declare public readonly ipv6ConfigurationType: pulumi.Output<string | undefined>;
-    /**
-     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * DHCPv6 Helper, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly ipv6DhcpHelpers: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper[] | undefined>;
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly ipv6DhcpSecondaryAddresses: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress[] | undefined>;
     /**
@@ -388,7 +394,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly ipv6Nat: pulumi.Output<boolean | undefined>;
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     declare public readonly ipv6SecondaryAddresses: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress[] | undefined>;
     /**
@@ -548,7 +554,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
     declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
      * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      */
     declare public readonly speed: pulumi.Output<string | undefined>;
     /**
@@ -655,8 +661,9 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
             resourceInputs["ipMtu"] = state?.ipMtu;
             resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
             resourceInputs["ipv4Address"] = state?.ipv4Address;
+            resourceInputs["ipv4AddressType"] = state?.ipv4AddressType;
+            resourceInputs["ipv4AddressTypeVariable"] = state?.ipv4AddressTypeVariable;
             resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
-            resourceInputs["ipv4ConfigurationType"] = state?.ipv4ConfigurationType;
             resourceInputs["ipv4DhcpDistance"] = state?.ipv4DhcpDistance;
             resourceInputs["ipv4DhcpDistanceVariable"] = state?.ipv4DhcpDistanceVariable;
             resourceInputs["ipv4DhcpHelperVariable"] = state?.ipv4DhcpHelperVariable;
@@ -681,8 +688,9 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
             resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
             resourceInputs["ipv4Vrrps"] = state?.ipv4Vrrps;
             resourceInputs["ipv6Address"] = state?.ipv6Address;
+            resourceInputs["ipv6AddressType"] = state?.ipv6AddressType;
+            resourceInputs["ipv6AddressTypeVariable"] = state?.ipv6AddressTypeVariable;
             resourceInputs["ipv6AddressVariable"] = state?.ipv6AddressVariable;
-            resourceInputs["ipv6ConfigurationType"] = state?.ipv6ConfigurationType;
             resourceInputs["ipv6DhcpHelpers"] = state?.ipv6DhcpHelpers;
             resourceInputs["ipv6DhcpSecondaryAddresses"] = state?.ipv6DhcpSecondaryAddresses;
             resourceInputs["ipv6Nat"] = state?.ipv6Nat;
@@ -775,8 +783,9 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
             resourceInputs["ipMtu"] = args?.ipMtu;
             resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
             resourceInputs["ipv4Address"] = args?.ipv4Address;
+            resourceInputs["ipv4AddressType"] = args?.ipv4AddressType;
+            resourceInputs["ipv4AddressTypeVariable"] = args?.ipv4AddressTypeVariable;
             resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
-            resourceInputs["ipv4ConfigurationType"] = args?.ipv4ConfigurationType;
             resourceInputs["ipv4DhcpDistance"] = args?.ipv4DhcpDistance;
             resourceInputs["ipv4DhcpDistanceVariable"] = args?.ipv4DhcpDistanceVariable;
             resourceInputs["ipv4DhcpHelperVariable"] = args?.ipv4DhcpHelperVariable;
@@ -801,8 +810,9 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
             resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
             resourceInputs["ipv4Vrrps"] = args?.ipv4Vrrps;
             resourceInputs["ipv6Address"] = args?.ipv6Address;
+            resourceInputs["ipv6AddressType"] = args?.ipv6AddressType;
+            resourceInputs["ipv6AddressTypeVariable"] = args?.ipv6AddressTypeVariable;
             resourceInputs["ipv6AddressVariable"] = args?.ipv6AddressVariable;
-            resourceInputs["ipv6ConfigurationType"] = args?.ipv6ConfigurationType;
             resourceInputs["ipv6DhcpHelpers"] = args?.ipv6DhcpHelpers;
             resourceInputs["ipv6DhcpSecondaryAddresses"] = args?.ipv6DhcpSecondaryAddresses;
             resourceInputs["ipv6Nat"] = args?.ipv6Nat;
@@ -917,7 +927,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     duplexVariable?: pulumi.Input<string>;
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     enableDhcpv6?: pulumi.Input<boolean>;
     /**
@@ -939,13 +949,13 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      */
     interfaceMtuVariable?: pulumi.Input<string>;
     interfaceName?: pulumi.Input<string>;
@@ -973,27 +983,30 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipMtuVariable?: pulumi.Input<string>;
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4Address?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     */
+    ipv4AddressType?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     */
+    ipv4AddressTypeVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     */
-    ipv4ConfigurationType?: pulumi.Input<string>;
-    /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      */
     ipv4DhcpDistanceVariable?: pulumi.Input<string>;
     /**
@@ -1072,16 +1085,16 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4NatUdpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
     /**
@@ -1089,25 +1102,28 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp>[]>;
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6Address?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     */
+    ipv6AddressType?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     */
+    ipv6AddressTypeVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     */
-    ipv6ConfigurationType?: pulumi.Input<string>;
-    /**
-     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * DHCPv6 Helper, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6DhcpHelpers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>[]>;
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     ipv6DhcpSecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>[]>;
     /**
@@ -1116,7 +1132,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv6Nat?: pulumi.Input<boolean>;
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>[]>;
     /**
@@ -1276,7 +1292,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
     shutdownVariable?: pulumi.Input<string>;
     /**
      * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      */
     speed?: pulumi.Input<string>;
     /**
@@ -1395,7 +1411,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     duplexVariable?: pulumi.Input<string>;
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     enableDhcpv6?: pulumi.Input<boolean>;
     /**
@@ -1417,13 +1433,13 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      */
     interfaceMtuVariable?: pulumi.Input<string>;
     interfaceName?: pulumi.Input<string>;
@@ -1451,27 +1467,30 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipMtuVariable?: pulumi.Input<string>;
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4Address?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     */
+    ipv4AddressType?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     */
+    ipv4AddressTypeVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     */
-    ipv4ConfigurationType?: pulumi.Input<string>;
-    /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      */
     ipv4DhcpDistanceVariable?: pulumi.Input<string>;
     /**
@@ -1550,16 +1569,16 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4NatUdpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
     /**
@@ -1567,25 +1586,28 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp>[]>;
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6Address?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     */
+    ipv6AddressType?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     */
+    ipv6AddressTypeVariable?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     */
-    ipv6ConfigurationType?: pulumi.Input<string>;
-    /**
-     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * DHCPv6 Helper, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6DhcpHelpers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>[]>;
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      */
     ipv6DhcpSecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>[]>;
     /**
@@ -1594,7 +1616,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv6Nat?: pulumi.Input<boolean>;
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      */
     ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>[]>;
     /**
@@ -1754,7 +1776,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
     shutdownVariable?: pulumi.Input<string>;
     /**
      * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      */
     speed?: pulumi.Input<string>;
     /**

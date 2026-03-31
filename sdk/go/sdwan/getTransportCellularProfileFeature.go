@@ -87,7 +87,7 @@ type LookupTransportCellularProfileFeatureResult struct {
 	ProfileId int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable string `pulumi:"profileIdVariable"`
-	// Set the profile password
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
 	ProfilePassword string `pulumi:"profilePassword"`
 	// Variable name
 	ProfilePasswordVariable string `pulumi:"profilePasswordVariable"`
@@ -207,7 +207,7 @@ func (o LookupTransportCellularProfileFeatureResultOutput) ProfileIdVariable() p
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.ProfileIdVariable }).(pulumi.StringOutput)
 }
 
-// Set the profile password
+// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
 func (o LookupTransportCellularProfileFeatureResultOutput) ProfilePassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.ProfilePassword }).(pulumi.StringOutput)
 }

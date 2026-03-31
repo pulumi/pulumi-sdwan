@@ -23,6 +23,16 @@ public final class GetSystemGlobalFeatureResult {
      */
     private String arpProxyVariable;
     /**
+     * @return Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     * 
+     */
+    private Boolean bgpCommunityNewFormat;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String bgpCommunityNewFormatVariable;
+    /**
      * @return Configure CDP
      * 
      */
@@ -57,6 +67,26 @@ public final class GetSystemGlobalFeatureResult {
      * 
      */
     private String domainLookupVariable;
+    /**
+     * @return Set Etherchannel load balance hash algorithm
+     * 
+     */
+    private String etherchannelFlowLoadBalance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String etherchannelFlowLoadBalanceVariable;
+    /**
+     * @return Set Etherchannel vlan manual load balance
+     * 
+     */
+    private Boolean etherchannelVlanLoadBalance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String etherchannelVlanLoadBalanceVariable;
     /**
      * @return Feature Profile ID
      * 
@@ -127,6 +157,16 @@ public final class GetSystemGlobalFeatureResult {
      * 
      */
     private String ipSourceRoutingVariable;
+    /**
+     * @return Set LACP system priority
+     * 
+     */
+    private Integer lacpSystemPriority;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String lacpSystemPriorityVariable;
     /**
      * @return Configure Telnet (Outbound)
      * 
@@ -284,6 +324,20 @@ public final class GetSystemGlobalFeatureResult {
         return this.arpProxyVariable;
     }
     /**
+     * @return Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     * 
+     */
+    public Boolean bgpCommunityNewFormat() {
+        return this.bgpCommunityNewFormat;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String bgpCommunityNewFormatVariable() {
+        return this.bgpCommunityNewFormatVariable;
+    }
+    /**
      * @return Configure CDP
      * 
      */
@@ -331,6 +385,34 @@ public final class GetSystemGlobalFeatureResult {
      */
     public String domainLookupVariable() {
         return this.domainLookupVariable;
+    }
+    /**
+     * @return Set Etherchannel load balance hash algorithm
+     * 
+     */
+    public String etherchannelFlowLoadBalance() {
+        return this.etherchannelFlowLoadBalance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String etherchannelFlowLoadBalanceVariable() {
+        return this.etherchannelFlowLoadBalanceVariable;
+    }
+    /**
+     * @return Set Etherchannel vlan manual load balance
+     * 
+     */
+    public Boolean etherchannelVlanLoadBalance() {
+        return this.etherchannelVlanLoadBalance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String etherchannelVlanLoadBalanceVariable() {
+        return this.etherchannelVlanLoadBalanceVariable;
     }
     /**
      * @return Feature Profile ID
@@ -429,6 +511,20 @@ public final class GetSystemGlobalFeatureResult {
      */
     public String ipSourceRoutingVariable() {
         return this.ipSourceRoutingVariable;
+    }
+    /**
+     * @return Set LACP system priority
+     * 
+     */
+    public Integer lacpSystemPriority() {
+        return this.lacpSystemPriority;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String lacpSystemPriorityVariable() {
+        return this.lacpSystemPriorityVariable;
     }
     /**
      * @return Configure Telnet (Outbound)
@@ -638,6 +734,8 @@ public final class GetSystemGlobalFeatureResult {
     public static final class Builder {
         private Boolean arpProxy;
         private String arpProxyVariable;
+        private Boolean bgpCommunityNewFormat;
+        private String bgpCommunityNewFormatVariable;
         private Boolean cdp;
         private String cdpVariable;
         private Boolean consoleLogging;
@@ -645,6 +743,10 @@ public final class GetSystemGlobalFeatureResult {
         private String description;
         private Boolean domainLookup;
         private String domainLookupVariable;
+        private String etherchannelFlowLoadBalance;
+        private String etherchannelFlowLoadBalanceVariable;
+        private Boolean etherchannelVlanLoadBalance;
+        private String etherchannelVlanLoadBalanceVariable;
         private String featureProfileId;
         private Boolean ftpPassive;
         private String ftpPassiveVariable;
@@ -659,6 +761,8 @@ public final class GetSystemGlobalFeatureResult {
         private String ignoreBootpVariable;
         private Boolean ipSourceRouting;
         private String ipSourceRoutingVariable;
+        private Integer lacpSystemPriority;
+        private String lacpSystemPriorityVariable;
         private Boolean lineVty;
         private String lineVtyVariable;
         private Boolean lldp;
@@ -692,6 +796,8 @@ public final class GetSystemGlobalFeatureResult {
     	      Objects.requireNonNull(defaults);
     	      this.arpProxy = defaults.arpProxy;
     	      this.arpProxyVariable = defaults.arpProxyVariable;
+    	      this.bgpCommunityNewFormat = defaults.bgpCommunityNewFormat;
+    	      this.bgpCommunityNewFormatVariable = defaults.bgpCommunityNewFormatVariable;
     	      this.cdp = defaults.cdp;
     	      this.cdpVariable = defaults.cdpVariable;
     	      this.consoleLogging = defaults.consoleLogging;
@@ -699,6 +805,10 @@ public final class GetSystemGlobalFeatureResult {
     	      this.description = defaults.description;
     	      this.domainLookup = defaults.domainLookup;
     	      this.domainLookupVariable = defaults.domainLookupVariable;
+    	      this.etherchannelFlowLoadBalance = defaults.etherchannelFlowLoadBalance;
+    	      this.etherchannelFlowLoadBalanceVariable = defaults.etherchannelFlowLoadBalanceVariable;
+    	      this.etherchannelVlanLoadBalance = defaults.etherchannelVlanLoadBalance;
+    	      this.etherchannelVlanLoadBalanceVariable = defaults.etherchannelVlanLoadBalanceVariable;
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.ftpPassive = defaults.ftpPassive;
     	      this.ftpPassiveVariable = defaults.ftpPassiveVariable;
@@ -713,6 +823,8 @@ public final class GetSystemGlobalFeatureResult {
     	      this.ignoreBootpVariable = defaults.ignoreBootpVariable;
     	      this.ipSourceRouting = defaults.ipSourceRouting;
     	      this.ipSourceRoutingVariable = defaults.ipSourceRoutingVariable;
+    	      this.lacpSystemPriority = defaults.lacpSystemPriority;
+    	      this.lacpSystemPriorityVariable = defaults.lacpSystemPriorityVariable;
     	      this.lineVty = defaults.lineVty;
     	      this.lineVtyVariable = defaults.lineVtyVariable;
     	      this.lldp = defaults.lldp;
@@ -757,6 +869,22 @@ public final class GetSystemGlobalFeatureResult {
               throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "arpProxyVariable");
             }
             this.arpProxyVariable = arpProxyVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder bgpCommunityNewFormat(Boolean bgpCommunityNewFormat) {
+            if (bgpCommunityNewFormat == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "bgpCommunityNewFormat");
+            }
+            this.bgpCommunityNewFormat = bgpCommunityNewFormat;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder bgpCommunityNewFormatVariable(String bgpCommunityNewFormatVariable) {
+            if (bgpCommunityNewFormatVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "bgpCommunityNewFormatVariable");
+            }
+            this.bgpCommunityNewFormatVariable = bgpCommunityNewFormatVariable;
             return this;
         }
         @CustomType.Setter
@@ -813,6 +941,38 @@ public final class GetSystemGlobalFeatureResult {
               throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "domainLookupVariable");
             }
             this.domainLookupVariable = domainLookupVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder etherchannelFlowLoadBalance(String etherchannelFlowLoadBalance) {
+            if (etherchannelFlowLoadBalance == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "etherchannelFlowLoadBalance");
+            }
+            this.etherchannelFlowLoadBalance = etherchannelFlowLoadBalance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder etherchannelFlowLoadBalanceVariable(String etherchannelFlowLoadBalanceVariable) {
+            if (etherchannelFlowLoadBalanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "etherchannelFlowLoadBalanceVariable");
+            }
+            this.etherchannelFlowLoadBalanceVariable = etherchannelFlowLoadBalanceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder etherchannelVlanLoadBalance(Boolean etherchannelVlanLoadBalance) {
+            if (etherchannelVlanLoadBalance == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "etherchannelVlanLoadBalance");
+            }
+            this.etherchannelVlanLoadBalance = etherchannelVlanLoadBalance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder etherchannelVlanLoadBalanceVariable(String etherchannelVlanLoadBalanceVariable) {
+            if (etherchannelVlanLoadBalanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "etherchannelVlanLoadBalanceVariable");
+            }
+            this.etherchannelVlanLoadBalanceVariable = etherchannelVlanLoadBalanceVariable;
             return this;
         }
         @CustomType.Setter
@@ -925,6 +1085,22 @@ public final class GetSystemGlobalFeatureResult {
               throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "ipSourceRoutingVariable");
             }
             this.ipSourceRoutingVariable = ipSourceRoutingVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder lacpSystemPriority(Integer lacpSystemPriority) {
+            if (lacpSystemPriority == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "lacpSystemPriority");
+            }
+            this.lacpSystemPriority = lacpSystemPriority;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder lacpSystemPriorityVariable(String lacpSystemPriorityVariable) {
+            if (lacpSystemPriorityVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemGlobalFeatureResult", "lacpSystemPriorityVariable");
+            }
+            this.lacpSystemPriorityVariable = lacpSystemPriorityVariable;
             return this;
         }
         @CustomType.Setter
@@ -1155,6 +1331,8 @@ public final class GetSystemGlobalFeatureResult {
             final var _resultValue = new GetSystemGlobalFeatureResult();
             _resultValue.arpProxy = arpProxy;
             _resultValue.arpProxyVariable = arpProxyVariable;
+            _resultValue.bgpCommunityNewFormat = bgpCommunityNewFormat;
+            _resultValue.bgpCommunityNewFormatVariable = bgpCommunityNewFormatVariable;
             _resultValue.cdp = cdp;
             _resultValue.cdpVariable = cdpVariable;
             _resultValue.consoleLogging = consoleLogging;
@@ -1162,6 +1340,10 @@ public final class GetSystemGlobalFeatureResult {
             _resultValue.description = description;
             _resultValue.domainLookup = domainLookup;
             _resultValue.domainLookupVariable = domainLookupVariable;
+            _resultValue.etherchannelFlowLoadBalance = etherchannelFlowLoadBalance;
+            _resultValue.etherchannelFlowLoadBalanceVariable = etherchannelFlowLoadBalanceVariable;
+            _resultValue.etherchannelVlanLoadBalance = etherchannelVlanLoadBalance;
+            _resultValue.etherchannelVlanLoadBalanceVariable = etherchannelVlanLoadBalanceVariable;
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.ftpPassive = ftpPassive;
             _resultValue.ftpPassiveVariable = ftpPassiveVariable;
@@ -1176,6 +1358,8 @@ public final class GetSystemGlobalFeatureResult {
             _resultValue.ignoreBootpVariable = ignoreBootpVariable;
             _resultValue.ipSourceRouting = ipSourceRouting;
             _resultValue.ipSourceRoutingVariable = ipSourceRoutingVariable;
+            _resultValue.lacpSystemPriority = lacpSystemPriority;
+            _resultValue.lacpSystemPriorityVariable = lacpSystemPriorityVariable;
             _resultValue.lineVty = lineVty;
             _resultValue.lineVtyVariable = lineVtyVariable;
             _resultValue.lldp = lldp;

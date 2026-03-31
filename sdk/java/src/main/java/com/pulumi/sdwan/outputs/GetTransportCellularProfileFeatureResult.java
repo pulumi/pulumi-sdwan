@@ -83,7 +83,7 @@ public final class GetTransportCellularProfileFeatureResult {
      */
     private String profileIdVariable;
     /**
-     * @return Set the profile password
+     * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String profilePassword;
@@ -213,7 +213,7 @@ public final class GetTransportCellularProfileFeatureResult {
         return this.profileIdVariable;
     }
     /**
-     * @return Set the profile password
+     * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String profilePassword() {

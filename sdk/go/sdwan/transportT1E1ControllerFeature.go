@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Transport T1 E1 Controller Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //

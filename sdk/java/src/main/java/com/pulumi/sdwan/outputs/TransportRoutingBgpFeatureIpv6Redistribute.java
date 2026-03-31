@@ -4,13 +4,36 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class TransportRoutingBgpFeatureIpv6Redistribute {
+    /**
+     * @return Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     * 
+     */
+    private @Nullable Integer metric;
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    private @Nullable String metricVariable;
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    private @Nullable String ospfMatchRouteVariable;
+    /**
+     * @return Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    private @Nullable List<String> ospfMatchRoutes;
     /**
      * @return Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`
@@ -25,6 +48,35 @@ public final class TransportRoutingBgpFeatureIpv6Redistribute {
     private @Nullable String routePolicyId;
 
     private TransportRoutingBgpFeatureIpv6Redistribute() {}
+    /**
+     * @return Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     * 
+     */
+    public Optional<Integer> metric() {
+        return Optional.ofNullable(this.metric);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    public Optional<String> metricVariable() {
+        return Optional.ofNullable(this.metricVariable);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    public Optional<String> ospfMatchRouteVariable() {
+        return Optional.ofNullable(this.ospfMatchRouteVariable);
+    }
+    /**
+     * @return Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    public List<String> ospfMatchRoutes() {
+        return this.ospfMatchRoutes == null ? List.of() : this.ospfMatchRoutes;
+    }
     /**
      * @return Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`
@@ -53,17 +105,52 @@ public final class TransportRoutingBgpFeatureIpv6Redistribute {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable Integer metric;
+        private @Nullable String metricVariable;
+        private @Nullable String ospfMatchRouteVariable;
+        private @Nullable List<String> ospfMatchRoutes;
         private @Nullable String protocol;
         private @Nullable String protocolVariable;
         private @Nullable String routePolicyId;
         public Builder() {}
         public Builder(TransportRoutingBgpFeatureIpv6Redistribute defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.metric = defaults.metric;
+    	      this.metricVariable = defaults.metricVariable;
+    	      this.ospfMatchRouteVariable = defaults.ospfMatchRouteVariable;
+    	      this.ospfMatchRoutes = defaults.ospfMatchRoutes;
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
         }
 
+        @CustomType.Setter
+        public Builder metric(@Nullable Integer metric) {
+
+            this.metric = metric;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder metricVariable(@Nullable String metricVariable) {
+
+            this.metricVariable = metricVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ospfMatchRouteVariable(@Nullable String ospfMatchRouteVariable) {
+
+            this.ospfMatchRouteVariable = ospfMatchRouteVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ospfMatchRoutes(@Nullable List<String> ospfMatchRoutes) {
+
+            this.ospfMatchRoutes = ospfMatchRoutes;
+            return this;
+        }
+        public Builder ospfMatchRoutes(String... ospfMatchRoutes) {
+            return ospfMatchRoutes(List.of(ospfMatchRoutes));
+        }
         @CustomType.Setter
         public Builder protocol(@Nullable String protocol) {
 
@@ -84,6 +171,10 @@ public final class TransportRoutingBgpFeatureIpv6Redistribute {
         }
         public TransportRoutingBgpFeatureIpv6Redistribute build() {
             final var _resultValue = new TransportRoutingBgpFeatureIpv6Redistribute();
+            _resultValue.metric = metric;
+            _resultValue.metricVariable = metricVariable;
+            _resultValue.ospfMatchRouteVariable = ospfMatchRouteVariable;
+            _resultValue.ospfMatchRoutes = ospfMatchRoutes;
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;

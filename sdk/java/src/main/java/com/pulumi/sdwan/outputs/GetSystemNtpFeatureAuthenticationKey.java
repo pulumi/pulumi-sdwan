@@ -22,7 +22,7 @@ public final class GetSystemNtpFeatureAuthenticationKey {
      */
     private String keyIdVariable;
     /**
-     * @return Enter cleartext or AES-encrypted MD5 authentication key
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String md5Value;
@@ -48,7 +48,7 @@ public final class GetSystemNtpFeatureAuthenticationKey {
         return this.keyIdVariable;
     }
     /**
-     * @return Enter cleartext or AES-encrypted MD5 authentication key
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String md5Value() {
