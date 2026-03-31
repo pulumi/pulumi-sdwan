@@ -81,6 +81,11 @@ export interface GetTransportWanVpnInterfaceCellularFeatureResult {
      * The description of the Feature
      */
     readonly description: string;
+    readonly enableIpv6: boolean;
+    /**
+     * Variable name
+     */
+    readonly enableIpv6Variable: string;
     /**
      * Feature Profile ID
      */
@@ -131,6 +136,14 @@ export interface GetTransportWanVpnInterfaceCellularFeatureResult {
      * List of DHCP IPv4 helper addresses (min 1, max 8)
      */
     readonly ipv4DhcpHelpers: string[];
+    /**
+     * Core Region
+     */
+    readonly mrfCoreRegionType: string;
+    /**
+     * Enable Core Region
+     */
+    readonly mrfEnableCoreRegion: boolean;
     /**
      * The name of the Feature
      */
@@ -284,14 +297,6 @@ export interface GetTransportWanVpnInterfaceCellularFeatureResult {
      * Transport WAN VPN Feature ID
      */
     readonly transportWanVpnFeatureId: string;
-    /**
-     * Tunnels Bandwidth Percent
-     */
-    readonly tunnelBandwidthPercent: number;
-    /**
-     * Variable name
-     */
-    readonly tunnelBandwidthPercentVariable: string;
     /**
      * Tunnel Interface on/off
      */

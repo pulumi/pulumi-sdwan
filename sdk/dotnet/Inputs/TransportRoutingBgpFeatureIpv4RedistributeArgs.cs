@@ -13,6 +13,37 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TransportRoutingBgpFeatureIpv4RedistributeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+        ///   - Range: `0`-`4294967295`
+        /// </summary>
+        [Input("metric")]
+        public Input<int>? Metric { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("metricVariable")]
+        public Input<string>? MetricVariable { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `Protocol` equal to `Ospf`
+        /// </summary>
+        [Input("ospfMatchRouteVariable")]
+        public Input<string>? OspfMatchRouteVariable { get; set; }
+
+        [Input("ospfMatchRoutes")]
+        private InputList<string>? _ospfMatchRoutes;
+
+        /// <summary>
+        /// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `Protocol` equal to `Ospf`
+        /// </summary>
+        public InputList<string> OspfMatchRoutes
+        {
+            get => _ospfMatchRoutes ?? (_ospfMatchRoutes = new InputList<string>());
+            set => _ospfMatchRoutes = value;
+        }
+
+        /// <summary>
         /// Set the protocol to redistribute routes from
         ///   - Choices: `Static`, `Connected`, `Ospf`, `Ospfv3`, `Nat`
         /// </summary>

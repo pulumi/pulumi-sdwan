@@ -142,7 +142,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? NextHopSelfVariable { get; set; }
 
         /// <summary>
-        /// Set MD5 password on TCP connection with BGP peer
+        /// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         [Input("password")]
         public Input<string>? Password { get; set; }

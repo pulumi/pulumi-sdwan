@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Transport Cellular Profile Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -93,7 +93,7 @@ type TransportCellularProfileFeature struct {
 	ProfileId pulumi.IntPtrOutput `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
-	// Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePassword pulumi.StringPtrOutput `pulumi:"profilePassword"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrOutput `pulumi:"profilePasswordVariable"`
@@ -171,7 +171,7 @@ type transportCellularProfileFeatureState struct {
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
-	// Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePassword *string `pulumi:"profilePassword"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable *string `pulumi:"profilePasswordVariable"`
@@ -217,7 +217,7 @@ type TransportCellularProfileFeatureState struct {
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
-	// Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePassword pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrInput
@@ -267,7 +267,7 @@ type transportCellularProfileFeatureArgs struct {
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
-	// Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePassword *string `pulumi:"profilePassword"`
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable *string `pulumi:"profilePasswordVariable"`
@@ -312,7 +312,7 @@ type TransportCellularProfileFeatureArgs struct {
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
-	// Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+	// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePassword pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrInput
@@ -483,7 +483,7 @@ func (o TransportCellularProfileFeatureOutput) ProfileIdVariable() pulumi.String
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfileIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+// Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
 func (o TransportCellularProfileFeatureOutput) ProfilePassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfilePassword }).(pulumi.StringPtrOutput)
 }

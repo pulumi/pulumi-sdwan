@@ -106,6 +106,10 @@ type LookupTransportWanVpnInterfaceT1E1SerialFeatureResult struct {
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable string `pulumi:"ipv6AddressVariable"`
+	// Core Region
+	MrfCoreRegionType string `pulumi:"mrfCoreRegionType"`
+	// Enable Core Region
+	MrfEnableCoreRegion bool `pulumi:"mrfEnableCoreRegion"`
 	// Interface MTU \n\n, in bytes
 	Mtu int `pulumi:"mtu"`
 	// Variable name
@@ -435,6 +439,16 @@ func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) Ipv6Address
 // Variable name
 func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) Ipv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) string { return v.Ipv6AddressVariable }).(pulumi.StringOutput)
+}
+
+// Core Region
+func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) MrfCoreRegionType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) string { return v.MrfCoreRegionType }).(pulumi.StringOutput)
+}
+
+// Enable Core Region
+func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) MrfEnableCoreRegion() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) bool { return v.MrfEnableCoreRegion }).(pulumi.BoolOutput)
 }
 
 // Interface MTU \n\n, in bytes

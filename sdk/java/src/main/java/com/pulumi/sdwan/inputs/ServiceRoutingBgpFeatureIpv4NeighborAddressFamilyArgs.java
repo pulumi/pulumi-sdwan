@@ -84,6 +84,7 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs extends
 
     /**
      * Set IPv4 unicast address family
+     *   - Choices: `ipv4-unicast`
      * 
      */
     @Import(name="familyType")
@@ -91,6 +92,7 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs extends
 
     /**
      * @return Set IPv4 unicast address family
+     *   - Choices: `ipv4-unicast`
      * 
      */
     public Optional<Output<String>> familyType() {
@@ -425,6 +427,7 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs extends
 
         /**
          * @param familyType Set IPv4 unicast address family
+         *   - Choices: `ipv4-unicast`
          * 
          * @return builder
          * 
@@ -436,6 +439,7 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs extends
 
         /**
          * @param familyType Set IPv4 unicast address family
+         *   - Choices: `ipv4-unicast`
          * 
          * @return builder
          * 

@@ -1184,7 +1184,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Service Routing OSPF Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1210,8 +1210,9 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
             spf_initial_hold_time=1000,
             spf_maximum_hold_time=10000,
             redistributes=[{
-                "protocol": "static",
+                "protocol": "omp",
                 "nat_dia": True,
+                "translate_rib_metric": False,
             }],
             router_lsas=[{
                 "type": "on-startup",
@@ -1315,7 +1316,7 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service Routing OSPF Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1341,8 +1342,9 @@ class ServiceRoutingOspfFeature(pulumi.CustomResource):
             spf_initial_hold_time=1000,
             spf_maximum_hold_time=10000,
             redistributes=[{
-                "protocol": "static",
+                "protocol": "omp",
                 "nat_dia": True,
+                "translate_rib_metric": False,
             }],
             router_lsas=[{
                 "type": "on-startup",

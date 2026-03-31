@@ -144,6 +144,36 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
     }
 
     /**
+     * - Default value: `true`
+     * 
+     */
+    @Import(name="enableIpv6")
+    private @Nullable Output<Boolean> enableIpv6;
+
+    /**
+     * @return - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> enableIpv6() {
+        return Optional.ofNullable(this.enableIpv6);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="enableIpv6Variable")
+    private @Nullable Output<String> enableIpv6Variable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> enableIpv6Variable() {
+        return Optional.ofNullable(this.enableIpv6Variable);
+    }
+
+    /**
      * Feature Profile ID
      * 
      */
@@ -330,6 +360,42 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
      */
     public Optional<Output<List<String>>> ipv4DhcpHelpers() {
         return Optional.ofNullable(this.ipv4DhcpHelpers);
+    }
+
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    @Import(name="mrfCoreRegionType")
+    private @Nullable Output<String> mrfCoreRegionType;
+
+    /**
+     * @return Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    public Optional<Output<String>> mrfCoreRegionType() {
+        return Optional.ofNullable(this.mrfCoreRegionType);
+    }
+
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="mrfEnableCoreRegion")
+    private @Nullable Output<Boolean> mrfEnableCoreRegion;
+
+    /**
+     * @return Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> mrfEnableCoreRegion() {
+        return Optional.ofNullable(this.mrfEnableCoreRegion);
     }
 
     /**
@@ -956,40 +1022,6 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
     }
 
     /**
-     * Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     * 
-     */
-    @Import(name="tunnelBandwidthPercent")
-    private @Nullable Output<Integer> tunnelBandwidthPercent;
-
-    /**
-     * @return Tunnels Bandwidth Percent
-     *   - Range: `1`-`100`
-     *   - Default value: `50`
-     * 
-     */
-    public Optional<Output<Integer>> tunnelBandwidthPercent() {
-        return Optional.ofNullable(this.tunnelBandwidthPercent);
-    }
-
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="tunnelBandwidthPercentVariable")
-    private @Nullable Output<String> tunnelBandwidthPercentVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> tunnelBandwidthPercentVariable() {
-        return Optional.ofNullable(this.tunnelBandwidthPercentVariable);
-    }
-
-    /**
      * Tunnel Interface on/off
      *   - Default value: `false`
      * 
@@ -1552,7 +1584,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
     /**
      * Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
      */
@@ -1561,7 +1593,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
     /**
      * @return Set color for TLOC
-     *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
      */
@@ -2055,7 +2087,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
     /**
      * Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      * 
      */
     @Import(name="tunnelQosMode")
@@ -2063,7 +2095,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
     /**
      * @return Set tunnel QoS mode
-     *   - Choices: `hub`, `spoke`
+     *   - Choices: `spoke`
      * 
      */
     public Optional<Output<String>> tunnelQosMode() {
@@ -2098,6 +2130,8 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         this.bandwidthUpstream = $.bandwidthUpstream;
         this.bandwidthUpstreamVariable = $.bandwidthUpstreamVariable;
         this.description = $.description;
+        this.enableIpv6 = $.enableIpv6;
+        this.enableIpv6Variable = $.enableIpv6Variable;
         this.featureProfileId = $.featureProfileId;
         this.interfaceDescription = $.interfaceDescription;
         this.interfaceDescriptionVariable = $.interfaceDescriptionVariable;
@@ -2111,6 +2145,8 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         this.ipMtuVariable = $.ipMtuVariable;
         this.ipv4DhcpHelperVariable = $.ipv4DhcpHelperVariable;
         this.ipv4DhcpHelpers = $.ipv4DhcpHelpers;
+        this.mrfCoreRegionType = $.mrfCoreRegionType;
+        this.mrfEnableCoreRegion = $.mrfEnableCoreRegion;
         this.name = $.name;
         this.natIpv4 = $.natIpv4;
         this.natIpv4Variable = $.natIpv4Variable;
@@ -2150,8 +2186,6 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         this.tracker = $.tracker;
         this.trackerVariable = $.trackerVariable;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
-        this.tunnelBandwidthPercent = $.tunnelBandwidthPercent;
-        this.tunnelBandwidthPercentVariable = $.tunnelBandwidthPercentVariable;
         this.tunnelInterface = $.tunnelInterface;
         this.tunnelInterfaceAllowAll = $.tunnelInterfaceAllowAll;
         this.tunnelInterfaceAllowAllVariable = $.tunnelInterfaceAllowAllVariable;
@@ -2414,6 +2448,48 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param enableIpv6 - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableIpv6(@Nullable Output<Boolean> enableIpv6) {
+            $.enableIpv6 = enableIpv6;
+            return this;
+        }
+
+        /**
+         * @param enableIpv6 - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableIpv6(Boolean enableIpv6) {
+            return enableIpv6(Output.of(enableIpv6));
+        }
+
+        /**
+         * @param enableIpv6Variable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableIpv6Variable(@Nullable Output<String> enableIpv6Variable) {
+            $.enableIpv6Variable = enableIpv6Variable;
+            return this;
+        }
+
+        /**
+         * @param enableIpv6Variable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableIpv6Variable(String enableIpv6Variable) {
+            return enableIpv6Variable(Output.of(enableIpv6Variable));
         }
 
         /**
@@ -2683,6 +2759,54 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
          */
         public Builder ipv4DhcpHelpers(String... ipv4DhcpHelpers) {
             return ipv4DhcpHelpers(List.of(ipv4DhcpHelpers));
+        }
+
+        /**
+         * @param mrfCoreRegionType Core Region
+         *   - Choices: `core-shared`, `core`
+         *   - Default value: `core-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfCoreRegionType(@Nullable Output<String> mrfCoreRegionType) {
+            $.mrfCoreRegionType = mrfCoreRegionType;
+            return this;
+        }
+
+        /**
+         * @param mrfCoreRegionType Core Region
+         *   - Choices: `core-shared`, `core`
+         *   - Default value: `core-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfCoreRegionType(String mrfCoreRegionType) {
+            return mrfCoreRegionType(Output.of(mrfCoreRegionType));
+        }
+
+        /**
+         * @param mrfEnableCoreRegion Enable Core Region
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableCoreRegion(@Nullable Output<Boolean> mrfEnableCoreRegion) {
+            $.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            return this;
+        }
+
+        /**
+         * @param mrfEnableCoreRegion Enable Core Region
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableCoreRegion(Boolean mrfEnableCoreRegion) {
+            return mrfEnableCoreRegion(Output.of(mrfEnableCoreRegion));
         }
 
         /**
@@ -3543,52 +3667,6 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent
-         *   - Range: `1`-`100`
-         *   - Default value: `50`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tunnelBandwidthPercent(@Nullable Output<Integer> tunnelBandwidthPercent) {
-            $.tunnelBandwidthPercent = tunnelBandwidthPercent;
-            return this;
-        }
-
-        /**
-         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent
-         *   - Range: `1`-`100`
-         *   - Default value: `50`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tunnelBandwidthPercent(Integer tunnelBandwidthPercent) {
-            return tunnelBandwidthPercent(Output.of(tunnelBandwidthPercent));
-        }
-
-        /**
-         * @param tunnelBandwidthPercentVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tunnelBandwidthPercentVariable(@Nullable Output<String> tunnelBandwidthPercentVariable) {
-            $.tunnelBandwidthPercentVariable = tunnelBandwidthPercentVariable;
-            return this;
-        }
-
-        /**
-         * @param tunnelBandwidthPercentVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tunnelBandwidthPercentVariable(String tunnelBandwidthPercentVariable) {
-            return tunnelBandwidthPercentVariable(Output.of(tunnelBandwidthPercentVariable));
-        }
-
-        /**
          * @param tunnelInterface Tunnel Interface on/off
          *   - Default value: `false`
          * 
@@ -4361,7 +4439,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
         /**
          * @param tunnelInterfaceColor Set color for TLOC
-         *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
          *   - Default value: `mpls`
          * 
          * @return builder
@@ -4374,7 +4452,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
         /**
          * @param tunnelInterfaceColor Set color for TLOC
-         *   - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
          *   - Default value: `mpls`
          * 
          * @return builder
@@ -5070,7 +5148,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
         /**
          * @param tunnelQosMode Set tunnel QoS mode
-         *   - Choices: `hub`, `spoke`
+         *   - Choices: `spoke`
          * 
          * @return builder
          * 
@@ -5082,7 +5160,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
 
         /**
          * @param tunnelQosMode Set tunnel QoS mode
-         *   - Choices: `hub`, `spoke`
+         *   - Choices: `spoke`
          * 
          * @return builder
          * 

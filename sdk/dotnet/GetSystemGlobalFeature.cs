@@ -141,6 +141,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string ArpProxyVariable;
         /// <summary>
+        /// Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+        /// </summary>
+        public readonly bool BgpCommunityNewFormat;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string BgpCommunityNewFormatVariable;
+        /// <summary>
         /// Configure CDP
         /// </summary>
         public readonly bool Cdp;
@@ -168,6 +176,22 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string DomainLookupVariable;
+        /// <summary>
+        /// Set Etherchannel load balance hash algorithm
+        /// </summary>
+        public readonly string EtherchannelFlowLoadBalance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EtherchannelFlowLoadBalanceVariable;
+        /// <summary>
+        /// Set Etherchannel vlan manual load balance
+        /// </summary>
+        public readonly bool EtherchannelVlanLoadBalance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EtherchannelVlanLoadBalanceVariable;
         /// <summary>
         /// Feature Profile ID
         /// </summary>
@@ -224,6 +248,14 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string IpSourceRoutingVariable;
+        /// <summary>
+        /// Set LACP system priority
+        /// </summary>
+        public readonly int LacpSystemPriority;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string LacpSystemPriorityVariable;
         /// <summary>
         /// Configure Telnet (Outbound)
         /// </summary>
@@ -343,6 +375,10 @@ namespace Pulumi.Sdwan
 
             string arpProxyVariable,
 
+            bool bgpCommunityNewFormat,
+
+            string bgpCommunityNewFormatVariable,
+
             bool cdp,
 
             string cdpVariable,
@@ -356,6 +392,14 @@ namespace Pulumi.Sdwan
             bool domainLookup,
 
             string domainLookupVariable,
+
+            string etherchannelFlowLoadBalance,
+
+            string etherchannelFlowLoadBalanceVariable,
+
+            bool etherchannelVlanLoadBalance,
+
+            string etherchannelVlanLoadBalanceVariable,
 
             string featureProfileId,
 
@@ -384,6 +428,10 @@ namespace Pulumi.Sdwan
             bool ipSourceRouting,
 
             string ipSourceRoutingVariable,
+
+            int lacpSystemPriority,
+
+            string lacpSystemPriorityVariable,
 
             bool lineVty,
 
@@ -443,6 +491,8 @@ namespace Pulumi.Sdwan
         {
             ArpProxy = arpProxy;
             ArpProxyVariable = arpProxyVariable;
+            BgpCommunityNewFormat = bgpCommunityNewFormat;
+            BgpCommunityNewFormatVariable = bgpCommunityNewFormatVariable;
             Cdp = cdp;
             CdpVariable = cdpVariable;
             ConsoleLogging = consoleLogging;
@@ -450,6 +500,10 @@ namespace Pulumi.Sdwan
             Description = description;
             DomainLookup = domainLookup;
             DomainLookupVariable = domainLookupVariable;
+            EtherchannelFlowLoadBalance = etherchannelFlowLoadBalance;
+            EtherchannelFlowLoadBalanceVariable = etherchannelFlowLoadBalanceVariable;
+            EtherchannelVlanLoadBalance = etherchannelVlanLoadBalance;
+            EtherchannelVlanLoadBalanceVariable = etherchannelVlanLoadBalanceVariable;
             FeatureProfileId = featureProfileId;
             FtpPassive = ftpPassive;
             FtpPassiveVariable = ftpPassiveVariable;
@@ -464,6 +518,8 @@ namespace Pulumi.Sdwan
             IgnoreBootpVariable = ignoreBootpVariable;
             IpSourceRouting = ipSourceRouting;
             IpSourceRoutingVariable = ipSourceRoutingVariable;
+            LacpSystemPriority = lacpSystemPriority;
+            LacpSystemPriorityVariable = lacpSystemPriorityVariable;
             LineVty = lineVty;
             LineVtyVariable = lineVtyVariable;
             Lldp = lldp;

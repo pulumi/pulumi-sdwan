@@ -20,6 +20,7 @@ public final class SystemIpv4DeviceAccessFeatureSequenceArgs extends com.pulumi.
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
      * 
      */
     @Import(name="baseAction")
@@ -28,6 +29,7 @@ public final class SystemIpv4DeviceAccessFeatureSequenceArgs extends com.pulumi.
     /**
      * @return Base Action
      *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
      * 
      */
     public Optional<Output<String>> baseAction() {
@@ -207,6 +209,7 @@ public final class SystemIpv4DeviceAccessFeatureSequenceArgs extends com.pulumi.
         /**
          * @param baseAction Base Action
          *   - Choices: `drop`, `accept`
+         *   - Default value: `accept`
          * 
          * @return builder
          * 
@@ -219,6 +222,7 @@ public final class SystemIpv4DeviceAccessFeatureSequenceArgs extends com.pulumi.
         /**
          * @param baseAction Base Action
          *   - Choices: `drop`, `accept`
+         *   - Default value: `accept`
          * 
          * @return builder
          * 

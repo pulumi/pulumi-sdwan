@@ -54,6 +54,14 @@ export interface GetSystemGlobalFeatureResult {
      */
     readonly arpProxyVariable: string;
     /**
+     * Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+     */
+    readonly bgpCommunityNewFormat: boolean;
+    /**
+     * Variable name
+     */
+    readonly bgpCommunityNewFormatVariable: string;
+    /**
      * Configure CDP
      */
     readonly cdp: boolean;
@@ -81,6 +89,22 @@ export interface GetSystemGlobalFeatureResult {
      * Variable name
      */
     readonly domainLookupVariable: string;
+    /**
+     * Set Etherchannel load balance hash algorithm
+     */
+    readonly etherchannelFlowLoadBalance: string;
+    /**
+     * Variable name
+     */
+    readonly etherchannelFlowLoadBalanceVariable: string;
+    /**
+     * Set Etherchannel vlan manual load balance
+     */
+    readonly etherchannelVlanLoadBalance: boolean;
+    /**
+     * Variable name
+     */
+    readonly etherchannelVlanLoadBalanceVariable: string;
     /**
      * Feature Profile ID
      */
@@ -137,6 +161,14 @@ export interface GetSystemGlobalFeatureResult {
      * Variable name
      */
     readonly ipSourceRoutingVariable: string;
+    /**
+     * Set LACP system priority
+     */
+    readonly lacpSystemPriority: number;
+    /**
+     * Variable name
+     */
+    readonly lacpSystemPriorityVariable: string;
     /**
      * Configure Telnet (Outbound)
      */

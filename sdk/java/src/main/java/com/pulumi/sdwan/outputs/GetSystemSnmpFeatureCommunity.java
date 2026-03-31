@@ -21,10 +21,15 @@ public final class GetSystemSnmpFeatureCommunity {
      */
     private String authorizationVariable;
     /**
-     * @return Set name of the SNMP community
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String name;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String nameVariable;
     /**
      * @return Set user label of the SNMP community
      * 
@@ -57,11 +62,18 @@ public final class GetSystemSnmpFeatureCommunity {
         return this.authorizationVariable;
     }
     /**
-     * @return Set name of the SNMP community
+     * @return Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String nameVariable() {
+        return this.nameVariable;
     }
     /**
      * @return Set user label of the SNMP community
@@ -97,6 +109,7 @@ public final class GetSystemSnmpFeatureCommunity {
         private String authorization;
         private String authorizationVariable;
         private String name;
+        private String nameVariable;
         private String userLabel;
         private String view;
         private String viewVariable;
@@ -106,6 +119,7 @@ public final class GetSystemSnmpFeatureCommunity {
     	      this.authorization = defaults.authorization;
     	      this.authorizationVariable = defaults.authorizationVariable;
     	      this.name = defaults.name;
+    	      this.nameVariable = defaults.nameVariable;
     	      this.userLabel = defaults.userLabel;
     	      this.view = defaults.view;
     	      this.viewVariable = defaults.viewVariable;
@@ -133,6 +147,14 @@ public final class GetSystemSnmpFeatureCommunity {
               throw new MissingRequiredPropertyException("GetSystemSnmpFeatureCommunity", "name");
             }
             this.name = name;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder nameVariable(String nameVariable) {
+            if (nameVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemSnmpFeatureCommunity", "nameVariable");
+            }
+            this.nameVariable = nameVariable;
             return this;
         }
         @CustomType.Setter
@@ -164,6 +186,7 @@ public final class GetSystemSnmpFeatureCommunity {
             _resultValue.authorization = authorization;
             _resultValue.authorizationVariable = authorizationVariable;
             _resultValue.name = name;
+            _resultValue.nameVariable = nameVariable;
             _resultValue.userLabel = userLabel;
             _resultValue.view = view;
             _resultValue.viewVariable = viewVariable;

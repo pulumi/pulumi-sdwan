@@ -261,6 +261,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string AdvertisementIntervalVariable;
         /// <summary>
+        /// Enable BGP AS Path Auto-Translation
+        /// </summary>
+        public readonly bool AspathAutoTranslation;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string AspathAutoTranslationVariable;
+        /// <summary>
         /// The description of the Feature
         /// </summary>
         public readonly string Description;
@@ -365,9 +373,17 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string ShutdownVariable;
         /// <summary>
-        /// Site Types
+        /// Site Types for 20.12 backward compatiblity
         /// </summary>
         public readonly ImmutableArray<string> SiteTypes;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SiteTypesForTransportGatewayVariable;
+        /// <summary>
+        /// Site Types
+        /// </summary>
+        public readonly ImmutableArray<string> SiteTypesForTransportGateways;
         /// <summary>
         /// Variable name
         /// </summary>
@@ -451,6 +467,10 @@ namespace Pulumi.Sdwan
 
             string advertisementIntervalVariable,
 
+            bool aspathAutoTranslation,
+
+            string aspathAutoTranslationVariable,
+
             string description,
 
             int ecmpLimit,
@@ -505,6 +525,10 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<string> siteTypes,
 
+            string siteTypesForTransportGatewayVariable,
+
+            ImmutableArray<string> siteTypesForTransportGateways,
+
             string siteTypesVariable,
 
             string transportGateway,
@@ -545,6 +569,8 @@ namespace Pulumi.Sdwan
             AdvertiseIpv6StaticVariable = advertiseIpv6StaticVariable;
             AdvertisementInterval = advertisementInterval;
             AdvertisementIntervalVariable = advertisementIntervalVariable;
+            AspathAutoTranslation = aspathAutoTranslation;
+            AspathAutoTranslationVariable = aspathAutoTranslationVariable;
             Description = description;
             EcmpLimit = ecmpLimit;
             EcmpLimitVariable = ecmpLimitVariable;
@@ -572,6 +598,8 @@ namespace Pulumi.Sdwan
             Shutdown = shutdown;
             ShutdownVariable = shutdownVariable;
             SiteTypes = siteTypes;
+            SiteTypesForTransportGatewayVariable = siteTypesForTransportGatewayVariable;
+            SiteTypesForTransportGateways = siteTypesForTransportGateways;
             SiteTypesVariable = siteTypesVariable;
             TransportGateway = transportGateway;
             TransportGatewayVariable = transportGatewayVariable;

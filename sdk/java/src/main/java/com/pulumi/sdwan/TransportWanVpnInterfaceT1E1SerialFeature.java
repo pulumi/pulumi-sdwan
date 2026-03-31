@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Transport WAN VPN Interface T1 E1 Serial Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -64,7 +64,7 @@ import javax.annotation.Nullable;
  *             .tunnelInterface(true)
  *             .perTunnelQos(true)
  *             .perTunnelQosAggregator(false)
- *             .tunnelQosMode("hub")
+ *             .tunnelQosMode("spoke")
  *             .tunnelInterfaceColor("mpls")
  *             .tunnelInterfaceRestrict(true)
  *             .tunnelInterfaceGroups(42949672)
@@ -435,6 +435,40 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
      */
     public Output<Optional<String>> ipv6AddressVariable() {
         return Codegen.optional(this.ipv6AddressVariable);
+    }
+    /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    @Export(name="mrfCoreRegionType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> mrfCoreRegionType;
+
+    /**
+     * @return Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    public Output<Optional<String>> mrfCoreRegionType() {
+        return Codegen.optional(this.mrfCoreRegionType);
+    }
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="mrfEnableCoreRegion", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> mrfEnableCoreRegion;
+
+    /**
+     * @return Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> mrfEnableCoreRegion() {
+        return Codegen.optional(this.mrfEnableCoreRegion);
     }
     /**
      * Interface MTU &lt;68...2000&gt;, in bytes
@@ -1674,7 +1708,7 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
     }
     /**
      * Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      * 
      */
     @Export(name="tunnelQosMode", refs={String.class}, tree="[0]")
@@ -1682,7 +1716,7 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
 
     /**
      * @return Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      * 
      */
     public Output<Optional<String>> tunnelQosMode() {

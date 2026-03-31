@@ -14,6 +14,7 @@ from .app_probe_class_policy_object import *
 from .application_aware_routing_policy_definition import *
 from .application_list_policy_object import *
 from .application_priority_feature_profile import *
+from .application_priority_policy_settings_policy import *
 from .application_priority_qos_policy import *
 from .application_priority_traffic_policy_policy import *
 from .as_path_list_policy_object import *
@@ -67,6 +68,8 @@ from .dns_security_policy_definition import *
 from .domain_list_policy_object import *
 from .eigrp_feature_template import *
 from .embedded_security_feature_profile import *
+from .embedded_security_ngfw_policy import *
+from .embedded_security_policy import *
 from .expanded_community_list_policy_object import *
 from .extended_community_list_policy_object import *
 from .feature_device_template import *
@@ -78,6 +81,7 @@ from .get_app_probe_class_policy_object import *
 from .get_application_aware_routing_policy_definition import *
 from .get_application_list_policy_object import *
 from .get_application_priority_feature_profile import *
+from .get_application_priority_policy_settings_policy import *
 from .get_application_priority_qos_policy import *
 from .get_application_priority_traffic_policy_policy import *
 from .get_as_path_list_policy_object import *
@@ -131,6 +135,8 @@ from .get_dns_security_policy_definition import *
 from .get_domain_list_policy_object import *
 from .get_eigrp_feature_template import *
 from .get_embedded_security_feature_profile import *
+from .get_embedded_security_ngfw_policy import *
+from .get_embedded_security_policy import *
 from .get_expanded_community_list_policy_object import *
 from .get_extended_community_list_policy_object import *
 from .get_feature_device_template import *
@@ -182,6 +188,7 @@ from .get_policy_object_security_protocol_list import *
 from .get_policy_object_security_scalable_group_tag_list import *
 from .get_policy_object_security_url_allow_list import *
 from .get_policy_object_security_url_block_list import *
+from .get_policy_object_security_zone import *
 from .get_policy_object_sla_class_list import *
 from .get_policy_object_standard_community_list import *
 from .get_policy_object_tloc_list import *
@@ -360,6 +367,7 @@ from .policy_object_security_protocol_list import *
 from .policy_object_security_scalable_group_tag_list import *
 from .policy_object_security_url_allow_list import *
 from .policy_object_security_url_block_list import *
+from .policy_object_security_zone import *
 from .policy_object_sla_class_list import *
 from .policy_object_standard_community_list import *
 from .policy_object_tloc_list import *
@@ -566,6 +574,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile": "ApplicationPriorityFeatureProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/applicationPriorityPolicySettingsPolicy",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/applicationPriorityPolicySettingsPolicy:ApplicationPriorityPolicySettingsPolicy": "ApplicationPriorityPolicySettingsPolicy"
   }
  },
  {
@@ -994,6 +1010,22 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/embeddedSecurityNgfwPolicy",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/embeddedSecurityNgfwPolicy:EmbeddedSecurityNgfwPolicy": "EmbeddedSecurityNgfwPolicy"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/embeddedSecurityPolicy",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/embeddedSecurityPolicy:EmbeddedSecurityPolicy": "EmbeddedSecurityPolicy"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/expandedCommunityListPolicyObject",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1398,6 +1430,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList": "PolicyObjectSecurityUrlBlockList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityZone",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityZone:PolicyObjectSecurityZone": "PolicyObjectSecurityZone"
   }
  },
  {

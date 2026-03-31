@@ -33,6 +33,8 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  bandwidth_upstream: Optional[pulumi.Input[_builtins.int]] = None,
                  bandwidth_upstream_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 enable_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
@@ -45,6 +47,8 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -83,8 +87,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  tloc_extension_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  tracker: Optional[pulumi.Input[_builtins.str]] = None,
                  tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_bandwidth_percent: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_bandwidth_percent_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  tunnel_interface: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -166,6 +168,8 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] enable_ipv6: - Default value: `true`
+        :param pulumi.Input[_builtins.str] enable_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
                  - Range: `1500`-`9216`
@@ -181,6 +185,11 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat_ipv4: Network Address Translation on this interface
                  - Default value: `false`
@@ -238,10 +247,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent
-                 - Range: `1`-`100`
-                 - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
@@ -296,7 +301,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
-                 - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
@@ -346,7 +351,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `hub`, `spoke`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -371,6 +376,10 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
             pulumi.set(__self__, "bandwidth_upstream_variable", bandwidth_upstream_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if enable_ipv6 is not None:
+            pulumi.set(__self__, "enable_ipv6", enable_ipv6)
+        if enable_ipv6_variable is not None:
+            pulumi.set(__self__, "enable_ipv6_variable", enable_ipv6_variable)
         if interface_description is not None:
             pulumi.set(__self__, "interface_description", interface_description)
         if interface_description_variable is not None:
@@ -395,6 +404,10 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
             pulumi.set(__self__, "ipv4_dhcp_helper_variable", ipv4_dhcp_helper_variable)
         if ipv4_dhcp_helpers is not None:
             pulumi.set(__self__, "ipv4_dhcp_helpers", ipv4_dhcp_helpers)
+        if mrf_core_region_type is not None:
+            pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
+        if mrf_enable_core_region is not None:
+            pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat_ipv4 is not None:
@@ -471,10 +484,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
             pulumi.set(__self__, "tracker", tracker)
         if tracker_variable is not None:
             pulumi.set(__self__, "tracker_variable", tracker_variable)
-        if tunnel_bandwidth_percent is not None:
-            pulumi.set(__self__, "tunnel_bandwidth_percent", tunnel_bandwidth_percent)
-        if tunnel_bandwidth_percent_variable is not None:
-            pulumi.set(__self__, "tunnel_bandwidth_percent_variable", tunnel_bandwidth_percent_variable)
         if tunnel_interface is not None:
             pulumi.set(__self__, "tunnel_interface", tunnel_interface)
         if tunnel_interface_allow_all is not None:
@@ -747,6 +756,30 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         pulumi.set(self, "description", value)
 
     @_builtins.property
+    @pulumi.getter(name="enableIpv6")
+    def enable_ipv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        - Default value: `true`
+        """
+        return pulumi.get(self, "enable_ipv6")
+
+    @enable_ipv6.setter
+    def enable_ipv6(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_ipv6", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableIpv6Variable")
+    def enable_ipv6_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enable_ipv6_variable")
+
+    @enable_ipv6_variable.setter
+    def enable_ipv6_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "enable_ipv6_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="interfaceDescription")
     def interface_description(self) -> Optional[pulumi.Input[_builtins.str]]:
         return pulumi.get(self, "interface_description")
@@ -888,6 +921,33 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     @ipv4_dhcp_helpers.setter
     def ipv4_dhcp_helpers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ipv4_dhcp_helpers", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Core Region
+          - Choices: `core-shared`, `core`
+          - Default value: `core-shared`
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @mrf_core_region_type.setter
+    def mrf_core_region_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "mrf_core_region_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Core Region
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
+
+    @mrf_enable_core_region.setter
+    def mrf_enable_core_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "mrf_enable_core_region", value)
 
     @_builtins.property
     @pulumi.getter
@@ -1365,32 +1425,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         pulumi.set(self, "tracker_variable", value)
 
     @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercent")
-    def tunnel_bandwidth_percent(self) -> Optional[pulumi.Input[_builtins.int]]:
-        """
-        Tunnels Bandwidth Percent
-          - Range: `1`-`100`
-          - Default value: `50`
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent")
-
-    @tunnel_bandwidth_percent.setter
-    def tunnel_bandwidth_percent(self, value: Optional[pulumi.Input[_builtins.int]]):
-        pulumi.set(self, "tunnel_bandwidth_percent", value)
-
-    @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercentVariable")
-    def tunnel_bandwidth_percent_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent_variable")
-
-    @tunnel_bandwidth_percent_variable.setter
-    def tunnel_bandwidth_percent_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "tunnel_bandwidth_percent_variable", value)
-
-    @_builtins.property
     @pulumi.getter(name="tunnelInterface")
     def tunnel_interface(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -1833,7 +1867,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     def tunnel_interface_color(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set color for TLOC
-          - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
           - Default value: `mpls`
         """
         return pulumi.get(self, "tunnel_interface_color")
@@ -2224,7 +2258,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set tunnel QoS mode
-          - Choices: `hub`, `spoke`
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -2258,6 +2292,8 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  bandwidth_upstream: Optional[pulumi.Input[_builtins.int]] = None,
                  bandwidth_upstream_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 enable_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2271,6 +2307,8 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2310,8 +2348,6 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  tracker: Optional[pulumi.Input[_builtins.str]] = None,
                  tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_bandwidth_percent: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_bandwidth_percent_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  tunnel_interface: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2392,6 +2428,8 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] enable_ipv6: - Default value: `true`
+        :param pulumi.Input[_builtins.str] enable_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
@@ -2408,6 +2446,11 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat_ipv4: Network Address Translation on this interface
                  - Default value: `false`
@@ -2466,10 +2509,6 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent
-                 - Range: `1`-`100`
-                 - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
@@ -2524,7 +2563,7 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
-                 - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
@@ -2574,7 +2613,7 @@ class _TransportWanVpnInterfaceCellularFeatureState:
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `hub`, `spoke`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -2598,6 +2637,10 @@ class _TransportWanVpnInterfaceCellularFeatureState:
             pulumi.set(__self__, "bandwidth_upstream_variable", bandwidth_upstream_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if enable_ipv6 is not None:
+            pulumi.set(__self__, "enable_ipv6", enable_ipv6)
+        if enable_ipv6_variable is not None:
+            pulumi.set(__self__, "enable_ipv6_variable", enable_ipv6_variable)
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if interface_description is not None:
@@ -2624,6 +2667,10 @@ class _TransportWanVpnInterfaceCellularFeatureState:
             pulumi.set(__self__, "ipv4_dhcp_helper_variable", ipv4_dhcp_helper_variable)
         if ipv4_dhcp_helpers is not None:
             pulumi.set(__self__, "ipv4_dhcp_helpers", ipv4_dhcp_helpers)
+        if mrf_core_region_type is not None:
+            pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
+        if mrf_enable_core_region is not None:
+            pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat_ipv4 is not None:
@@ -2702,10 +2749,6 @@ class _TransportWanVpnInterfaceCellularFeatureState:
             pulumi.set(__self__, "tracker_variable", tracker_variable)
         if transport_wan_vpn_feature_id is not None:
             pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
-        if tunnel_bandwidth_percent is not None:
-            pulumi.set(__self__, "tunnel_bandwidth_percent", tunnel_bandwidth_percent)
-        if tunnel_bandwidth_percent_variable is not None:
-            pulumi.set(__self__, "tunnel_bandwidth_percent_variable", tunnel_bandwidth_percent_variable)
         if tunnel_interface is not None:
             pulumi.set(__self__, "tunnel_interface", tunnel_interface)
         if tunnel_interface_allow_all is not None:
@@ -2956,6 +2999,30 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         pulumi.set(self, "description", value)
 
     @_builtins.property
+    @pulumi.getter(name="enableIpv6")
+    def enable_ipv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        - Default value: `true`
+        """
+        return pulumi.get(self, "enable_ipv6")
+
+    @enable_ipv6.setter
+    def enable_ipv6(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_ipv6", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enableIpv6Variable")
+    def enable_ipv6_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enable_ipv6_variable")
+
+    @enable_ipv6_variable.setter
+    def enable_ipv6_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "enable_ipv6_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -3109,6 +3176,33 @@ class _TransportWanVpnInterfaceCellularFeatureState:
     @ipv4_dhcp_helpers.setter
     def ipv4_dhcp_helpers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "ipv4_dhcp_helpers", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Core Region
+          - Choices: `core-shared`, `core`
+          - Default value: `core-shared`
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @mrf_core_region_type.setter
+    def mrf_core_region_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "mrf_core_region_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Core Region
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
+
+    @mrf_enable_core_region.setter
+    def mrf_enable_core_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "mrf_enable_core_region", value)
 
     @_builtins.property
     @pulumi.getter
@@ -3598,32 +3692,6 @@ class _TransportWanVpnInterfaceCellularFeatureState:
         pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercent")
-    def tunnel_bandwidth_percent(self) -> Optional[pulumi.Input[_builtins.int]]:
-        """
-        Tunnels Bandwidth Percent
-          - Range: `1`-`100`
-          - Default value: `50`
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent")
-
-    @tunnel_bandwidth_percent.setter
-    def tunnel_bandwidth_percent(self, value: Optional[pulumi.Input[_builtins.int]]):
-        pulumi.set(self, "tunnel_bandwidth_percent", value)
-
-    @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercentVariable")
-    def tunnel_bandwidth_percent_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent_variable")
-
-    @tunnel_bandwidth_percent_variable.setter
-    def tunnel_bandwidth_percent_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "tunnel_bandwidth_percent_variable", value)
-
-    @_builtins.property
     @pulumi.getter(name="tunnelInterface")
     def tunnel_interface(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
@@ -4066,7 +4134,7 @@ class _TransportWanVpnInterfaceCellularFeatureState:
     def tunnel_interface_color(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set color for TLOC
-          - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
           - Default value: `mpls`
         """
         return pulumi.get(self, "tunnel_interface_color")
@@ -4457,7 +4525,7 @@ class _TransportWanVpnInterfaceCellularFeatureState:
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set tunnel QoS mode
-          - Choices: `hub`, `spoke`
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -4506,6 +4574,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  bandwidth_upstream: Optional[pulumi.Input[_builtins.int]] = None,
                  bandwidth_upstream_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 enable_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -4519,6 +4589,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -4558,8 +4630,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  tracker: Optional[pulumi.Input[_builtins.str]] = None,
                  tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_bandwidth_percent: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_bandwidth_percent_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  tunnel_interface: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -4631,7 +4701,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Transport WAN VPN Interface Cellular Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -4645,6 +4715,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             transport_wan_vpn_feature_id="140331f6-5418-4755-a059-13c77eb96037",
             shutdown=True,
+            enable_ipv6=True,
             interface_name="GigabitEthernet1",
             interface_description="WAN",
             ipv4_dhcp_helpers=["1.2.3.4"],
@@ -4653,8 +4724,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             bandwidth_downstream=21474836,
             tunnel_interface=True,
             per_tunnel_qos=True,
-            tunnel_qos_mode="hub",
-            tunnel_bandwidth_percent=82,
+            tunnel_qos_mode="spoke",
             tunnel_interface_bind_loopback_tunnel="example",
             tunnel_interface_carrier="default",
             tunnel_interface_color="default",
@@ -4732,6 +4802,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] enable_ipv6: - Default value: `true`
+        :param pulumi.Input[_builtins.str] enable_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
@@ -4748,6 +4820,11 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat_ipv4: Network Address Translation on this interface
                  - Default value: `false`
@@ -4806,10 +4883,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent
-                 - Range: `1`-`100`
-                 - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
@@ -4864,7 +4937,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
-                 - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
@@ -4914,7 +4987,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `hub`, `spoke`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         """
         ...
@@ -4925,7 +4998,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport WAN VPN Interface Cellular Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -4939,6 +5012,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             transport_wan_vpn_feature_id="140331f6-5418-4755-a059-13c77eb96037",
             shutdown=True,
+            enable_ipv6=True,
             interface_name="GigabitEthernet1",
             interface_description="WAN",
             ipv4_dhcp_helpers=["1.2.3.4"],
@@ -4947,8 +5021,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             bandwidth_downstream=21474836,
             tunnel_interface=True,
             per_tunnel_qos=True,
-            tunnel_qos_mode="hub",
-            tunnel_bandwidth_percent=82,
+            tunnel_qos_mode="spoke",
             tunnel_interface_bind_loopback_tunnel="example",
             tunnel_interface_carrier="default",
             tunnel_interface_color="default",
@@ -5041,6 +5114,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  bandwidth_upstream: Optional[pulumi.Input[_builtins.int]] = None,
                  bandwidth_upstream_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 enable_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enable_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description: Optional[pulumi.Input[_builtins.str]] = None,
                  interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -5054,6 +5129,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -5093,8 +5170,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  tracker: Optional[pulumi.Input[_builtins.str]] = None,
                  tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_bandwidth_percent: Optional[pulumi.Input[_builtins.int]] = None,
-                 tunnel_bandwidth_percent_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  tunnel_interface: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_interface_allow_all_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -5182,6 +5257,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             __props__.__dict__["bandwidth_upstream"] = bandwidth_upstream
             __props__.__dict__["bandwidth_upstream_variable"] = bandwidth_upstream_variable
             __props__.__dict__["description"] = description
+            __props__.__dict__["enable_ipv6"] = enable_ipv6
+            __props__.__dict__["enable_ipv6_variable"] = enable_ipv6_variable
             if feature_profile_id is None and not opts.urn:
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
@@ -5197,6 +5274,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             __props__.__dict__["ip_mtu_variable"] = ip_mtu_variable
             __props__.__dict__["ipv4_dhcp_helper_variable"] = ipv4_dhcp_helper_variable
             __props__.__dict__["ipv4_dhcp_helpers"] = ipv4_dhcp_helpers
+            __props__.__dict__["mrf_core_region_type"] = mrf_core_region_type
+            __props__.__dict__["mrf_enable_core_region"] = mrf_enable_core_region
             __props__.__dict__["name"] = name
             __props__.__dict__["nat_ipv4"] = nat_ipv4
             __props__.__dict__["nat_ipv4_variable"] = nat_ipv4_variable
@@ -5238,8 +5317,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             if transport_wan_vpn_feature_id is None and not opts.urn:
                 raise TypeError("Missing required property 'transport_wan_vpn_feature_id'")
             __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
-            __props__.__dict__["tunnel_bandwidth_percent"] = tunnel_bandwidth_percent
-            __props__.__dict__["tunnel_bandwidth_percent_variable"] = tunnel_bandwidth_percent_variable
             __props__.__dict__["tunnel_interface"] = tunnel_interface
             __props__.__dict__["tunnel_interface_allow_all"] = tunnel_interface_allow_all
             __props__.__dict__["tunnel_interface_allow_all_variable"] = tunnel_interface_allow_all_variable
@@ -5329,6 +5406,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             bandwidth_upstream: Optional[pulumi.Input[_builtins.int]] = None,
             bandwidth_upstream_variable: Optional[pulumi.Input[_builtins.str]] = None,
             description: Optional[pulumi.Input[_builtins.str]] = None,
+            enable_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
+            enable_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
             feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
             interface_description: Optional[pulumi.Input[_builtins.str]] = None,
             interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -5342,6 +5421,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
             ipv4_dhcp_helper_variable: Optional[pulumi.Input[_builtins.str]] = None,
             ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
+            mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             nat_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
             nat_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -5381,8 +5462,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             tracker: Optional[pulumi.Input[_builtins.str]] = None,
             tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
             transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_bandwidth_percent: Optional[pulumi.Input[_builtins.int]] = None,
-            tunnel_bandwidth_percent_variable: Optional[pulumi.Input[_builtins.str]] = None,
             tunnel_interface: Optional[pulumi.Input[_builtins.bool]] = None,
             tunnel_interface_allow_all: Optional[pulumi.Input[_builtins.bool]] = None,
             tunnel_interface_allow_all_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -5467,6 +5546,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] enable_ipv6: - Default value: `true`
+        :param pulumi.Input[_builtins.str] enable_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
@@ -5483,6 +5564,11 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
+        :param pulumi.Input[_builtins.str] mrf_core_region_type: Core Region
+                 - Choices: `core-shared`, `core`
+                 - Default value: `core-shared`
+        :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat_ipv4: Network Address Translation on this interface
                  - Default value: `false`
@@ -5541,10 +5627,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent
-                 - Range: `1`-`100`
-                 - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
@@ -5599,7 +5681,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
-                 - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
                  - Default value: `mpls`
         :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
                  - Default value: `false`
@@ -5649,7 +5731,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
-                 - Choices: `hub`, `spoke`
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -5667,6 +5749,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         __props__.__dict__["bandwidth_upstream"] = bandwidth_upstream
         __props__.__dict__["bandwidth_upstream_variable"] = bandwidth_upstream_variable
         __props__.__dict__["description"] = description
+        __props__.__dict__["enable_ipv6"] = enable_ipv6
+        __props__.__dict__["enable_ipv6_variable"] = enable_ipv6_variable
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["interface_description"] = interface_description
         __props__.__dict__["interface_description_variable"] = interface_description_variable
@@ -5680,6 +5764,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         __props__.__dict__["ip_mtu_variable"] = ip_mtu_variable
         __props__.__dict__["ipv4_dhcp_helper_variable"] = ipv4_dhcp_helper_variable
         __props__.__dict__["ipv4_dhcp_helpers"] = ipv4_dhcp_helpers
+        __props__.__dict__["mrf_core_region_type"] = mrf_core_region_type
+        __props__.__dict__["mrf_enable_core_region"] = mrf_enable_core_region
         __props__.__dict__["name"] = name
         __props__.__dict__["nat_ipv4"] = nat_ipv4
         __props__.__dict__["nat_ipv4_variable"] = nat_ipv4_variable
@@ -5719,8 +5805,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         __props__.__dict__["tracker"] = tracker
         __props__.__dict__["tracker_variable"] = tracker_variable
         __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
-        __props__.__dict__["tunnel_bandwidth_percent"] = tunnel_bandwidth_percent
-        __props__.__dict__["tunnel_bandwidth_percent_variable"] = tunnel_bandwidth_percent_variable
         __props__.__dict__["tunnel_interface"] = tunnel_interface
         __props__.__dict__["tunnel_interface_allow_all"] = tunnel_interface_allow_all
         __props__.__dict__["tunnel_interface_allow_all_variable"] = tunnel_interface_allow_all_variable
@@ -5863,6 +5947,22 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         return pulumi.get(self, "description")
 
     @_builtins.property
+    @pulumi.getter(name="enableIpv6")
+    def enable_ipv6(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        - Default value: `true`
+        """
+        return pulumi.get(self, "enable_ipv6")
+
+    @_builtins.property
+    @pulumi.getter(name="enableIpv6Variable")
+    def enable_ipv6_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enable_ipv6_variable")
+
+    @_builtins.property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> pulumi.Output[_builtins.str]:
         """
@@ -5964,6 +6064,25 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         List of DHCP IPv4 helper addresses (min 1, max 8)
         """
         return pulumi.get(self, "ipv4_dhcp_helpers")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Core Region
+          - Choices: `core-shared`, `core`
+          - Default value: `core-shared`
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable Core Region
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
 
     @_builtins.property
     @pulumi.getter
@@ -6297,24 +6416,6 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
         return pulumi.get(self, "transport_wan_vpn_feature_id")
 
     @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercent")
-    def tunnel_bandwidth_percent(self) -> pulumi.Output[Optional[_builtins.int]]:
-        """
-        Tunnels Bandwidth Percent
-          - Range: `1`-`100`
-          - Default value: `50`
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent")
-
-    @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercentVariable")
-    def tunnel_bandwidth_percent_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent_variable")
-
-    @_builtins.property
     @pulumi.getter(name="tunnelInterface")
     def tunnel_interface(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
@@ -6617,7 +6718,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
     def tunnel_interface_color(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set color for TLOC
-          - Choices: `default`, `mpls`, `metro ethernet`, `biz internet`, `public internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
           - Default value: `mpls`
         """
         return pulumi.get(self, "tunnel_interface_color")
@@ -6884,7 +6985,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
     def tunnel_qos_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set tunnel QoS mode
-          - Choices: `hub`, `spoke`
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 

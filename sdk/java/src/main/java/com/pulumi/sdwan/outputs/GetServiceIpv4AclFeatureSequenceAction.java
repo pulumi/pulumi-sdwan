@@ -35,6 +35,36 @@ public final class GetServiceIpv4AclFeatureSequenceAction {
      */
     private String acceptSetNextHop;
     /**
+     * @return fallback
+     * 
+     */
+    private Boolean acceptSetServiceChainFallback;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String acceptSetServiceChainFallbackVariable;
+    /**
+     * @return Set Service Chain Number
+     * 
+     */
+    private String acceptSetServiceChainName;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String acceptSetServiceChainNameVariable;
+    /**
+     * @return Set Service Chain VPN
+     * 
+     */
+    private Integer acceptSetServiceChainVpn;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String acceptSetServiceChainVpnVariable;
+    /**
      * @return Counter Name
      * 
      */
@@ -81,6 +111,48 @@ public final class GetServiceIpv4AclFeatureSequenceAction {
         return this.acceptSetNextHop;
     }
     /**
+     * @return fallback
+     * 
+     */
+    public Boolean acceptSetServiceChainFallback() {
+        return this.acceptSetServiceChainFallback;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String acceptSetServiceChainFallbackVariable() {
+        return this.acceptSetServiceChainFallbackVariable;
+    }
+    /**
+     * @return Set Service Chain Number
+     * 
+     */
+    public String acceptSetServiceChainName() {
+        return this.acceptSetServiceChainName;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String acceptSetServiceChainNameVariable() {
+        return this.acceptSetServiceChainNameVariable;
+    }
+    /**
+     * @return Set Service Chain VPN
+     * 
+     */
+    public Integer acceptSetServiceChainVpn() {
+        return this.acceptSetServiceChainVpn;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String acceptSetServiceChainVpnVariable() {
+        return this.acceptSetServiceChainVpnVariable;
+    }
+    /**
      * @return Counter Name
      * 
      */
@@ -110,6 +182,12 @@ public final class GetServiceIpv4AclFeatureSequenceAction {
         private String acceptPolicerId;
         private Integer acceptSetDscp;
         private String acceptSetNextHop;
+        private Boolean acceptSetServiceChainFallback;
+        private String acceptSetServiceChainFallbackVariable;
+        private String acceptSetServiceChainName;
+        private String acceptSetServiceChainNameVariable;
+        private Integer acceptSetServiceChainVpn;
+        private String acceptSetServiceChainVpnVariable;
         private String dropCounterName;
         private Boolean dropLog;
         public Builder() {}
@@ -121,6 +199,12 @@ public final class GetServiceIpv4AclFeatureSequenceAction {
     	      this.acceptPolicerId = defaults.acceptPolicerId;
     	      this.acceptSetDscp = defaults.acceptSetDscp;
     	      this.acceptSetNextHop = defaults.acceptSetNextHop;
+    	      this.acceptSetServiceChainFallback = defaults.acceptSetServiceChainFallback;
+    	      this.acceptSetServiceChainFallbackVariable = defaults.acceptSetServiceChainFallbackVariable;
+    	      this.acceptSetServiceChainName = defaults.acceptSetServiceChainName;
+    	      this.acceptSetServiceChainNameVariable = defaults.acceptSetServiceChainNameVariable;
+    	      this.acceptSetServiceChainVpn = defaults.acceptSetServiceChainVpn;
+    	      this.acceptSetServiceChainVpnVariable = defaults.acceptSetServiceChainVpnVariable;
     	      this.dropCounterName = defaults.dropCounterName;
     	      this.dropLog = defaults.dropLog;
         }
@@ -174,6 +258,54 @@ public final class GetServiceIpv4AclFeatureSequenceAction {
             return this;
         }
         @CustomType.Setter
+        public Builder acceptSetServiceChainFallback(Boolean acceptSetServiceChainFallback) {
+            if (acceptSetServiceChainFallback == null) {
+              throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "acceptSetServiceChainFallback");
+            }
+            this.acceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainFallbackVariable(String acceptSetServiceChainFallbackVariable) {
+            if (acceptSetServiceChainFallbackVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "acceptSetServiceChainFallbackVariable");
+            }
+            this.acceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainName(String acceptSetServiceChainName) {
+            if (acceptSetServiceChainName == null) {
+              throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "acceptSetServiceChainName");
+            }
+            this.acceptSetServiceChainName = acceptSetServiceChainName;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainNameVariable(String acceptSetServiceChainNameVariable) {
+            if (acceptSetServiceChainNameVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "acceptSetServiceChainNameVariable");
+            }
+            this.acceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainVpn(Integer acceptSetServiceChainVpn) {
+            if (acceptSetServiceChainVpn == null) {
+              throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "acceptSetServiceChainVpn");
+            }
+            this.acceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainVpnVariable(String acceptSetServiceChainVpnVariable) {
+            if (acceptSetServiceChainVpnVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "acceptSetServiceChainVpnVariable");
+            }
+            this.acceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder dropCounterName(String dropCounterName) {
             if (dropCounterName == null) {
               throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceAction", "dropCounterName");
@@ -197,6 +329,12 @@ public final class GetServiceIpv4AclFeatureSequenceAction {
             _resultValue.acceptPolicerId = acceptPolicerId;
             _resultValue.acceptSetDscp = acceptSetDscp;
             _resultValue.acceptSetNextHop = acceptSetNextHop;
+            _resultValue.acceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            _resultValue.acceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            _resultValue.acceptSetServiceChainName = acceptSetServiceChainName;
+            _resultValue.acceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            _resultValue.acceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            _resultValue.acceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
             _resultValue.dropCounterName = dropCounterName;
             _resultValue.dropLog = dropLog;
             return _resultValue;

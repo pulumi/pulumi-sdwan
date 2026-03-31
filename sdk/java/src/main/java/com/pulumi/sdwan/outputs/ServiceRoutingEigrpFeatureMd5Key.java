@@ -24,7 +24,7 @@ public final class ServiceRoutingEigrpFeatureMd5Key {
      */
     private @Nullable String keyIdVariable;
     /**
-     * @return Set MD5 key
+     * @return Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String keyString;
@@ -51,7 +51,7 @@ public final class ServiceRoutingEigrpFeatureMd5Key {
         return Optional.ofNullable(this.keyIdVariable);
     }
     /**
-     * @return Set MD5 key
+     * @return Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> keyString() {

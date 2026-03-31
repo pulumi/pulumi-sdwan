@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Service Routing OSPF Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -48,8 +48,9 @@ import (
 //				SpfMaximumHoldTime:                    pulumi.Int(10000),
 //				Redistributes: sdwan.ServiceRoutingOspfFeatureRedistributeArray{
 //					&sdwan.ServiceRoutingOspfFeatureRedistributeArgs{
-//						Protocol: pulumi.String("static"),
-//						NatDia:   pulumi.Bool(true),
+//						Protocol:           pulumi.String("omp"),
+//						NatDia:             pulumi.Bool(true),
+//						TranslateRibMetric: pulumi.Bool(false),
 //					},
 //				},
 //				RouterLsas: sdwan.ServiceRoutingOspfFeatureRouterLsaArray{

@@ -19,7 +19,7 @@ public final class SystemNtpFeatureServerArgs extends com.pulumi.resources.Resou
 
     /**
      * Set authentication key for the server
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="authenticationKey")
@@ -27,7 +27,7 @@ public final class SystemNtpFeatureServerArgs extends com.pulumi.resources.Resou
 
     /**
      * @return Set authentication key for the server
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> authenticationKey() {
@@ -246,7 +246,7 @@ public final class SystemNtpFeatureServerArgs extends com.pulumi.resources.Resou
 
         /**
          * @param authenticationKey Set authentication key for the server
-         *   - Range: `1`-`65535`
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class SystemNtpFeatureServerArgs extends com.pulumi.resources.Resou
 
         /**
          * @param authenticationKey Set authentication key for the server
-         *   - Range: `1`-`65535`
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 

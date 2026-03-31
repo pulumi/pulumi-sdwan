@@ -123,6 +123,10 @@ type LookupSystemOmpFeatureResult struct {
 	AdvertisementInterval int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable string `pulumi:"advertisementIntervalVariable"`
+	// Enable BGP AS Path Auto-Translation
+	AspathAutoTranslation bool `pulumi:"aspathAutoTranslation"`
+	// Variable name
+	AspathAutoTranslationVariable string `pulumi:"aspathAutoTranslationVariable"`
 	// The description of the Feature
 	Description string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
@@ -175,8 +179,12 @@ type LookupSystemOmpFeatureResult struct {
 	Shutdown bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable string `pulumi:"shutdownVariable"`
-	// Site Types
+	// Site Types for 20.12 backward compatiblity
 	SiteTypes []string `pulumi:"siteTypes"`
+	// Variable name
+	SiteTypesForTransportGatewayVariable string `pulumi:"siteTypesForTransportGatewayVariable"`
+	// Site Types
+	SiteTypesForTransportGateways []string `pulumi:"siteTypesForTransportGateways"`
 	// Variable name
 	SiteTypesVariable string `pulumi:"siteTypesVariable"`
 	// Transport Gateway Path Behavior
@@ -383,6 +391,16 @@ func (o LookupSystemOmpFeatureResultOutput) AdvertisementIntervalVariable() pulu
 	return o.ApplyT(func(v LookupSystemOmpFeatureResult) string { return v.AdvertisementIntervalVariable }).(pulumi.StringOutput)
 }
 
+// Enable BGP AS Path Auto-Translation
+func (o LookupSystemOmpFeatureResultOutput) AspathAutoTranslation() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSystemOmpFeatureResult) bool { return v.AspathAutoTranslation }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupSystemOmpFeatureResultOutput) AspathAutoTranslationVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemOmpFeatureResult) string { return v.AspathAutoTranslationVariable }).(pulumi.StringOutput)
+}
+
 // The description of the Feature
 func (o LookupSystemOmpFeatureResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemOmpFeatureResult) string { return v.Description }).(pulumi.StringOutput)
@@ -513,9 +531,19 @@ func (o LookupSystemOmpFeatureResultOutput) ShutdownVariable() pulumi.StringOutp
 	return o.ApplyT(func(v LookupSystemOmpFeatureResult) string { return v.ShutdownVariable }).(pulumi.StringOutput)
 }
 
-// Site Types
+// Site Types for 20.12 backward compatiblity
 func (o LookupSystemOmpFeatureResultOutput) SiteTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSystemOmpFeatureResult) []string { return v.SiteTypes }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o LookupSystemOmpFeatureResultOutput) SiteTypesForTransportGatewayVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemOmpFeatureResult) string { return v.SiteTypesForTransportGatewayVariable }).(pulumi.StringOutput)
+}
+
+// Site Types
+func (o LookupSystemOmpFeatureResultOutput) SiteTypesForTransportGateways() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupSystemOmpFeatureResult) []string { return v.SiteTypesForTransportGateways }).(pulumi.StringArrayOutput)
 }
 
 // Variable name

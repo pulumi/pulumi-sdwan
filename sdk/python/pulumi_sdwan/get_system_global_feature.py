@@ -26,13 +26,19 @@ class GetSystemGlobalFeatureResult:
     """
     A collection of values returned by getSystemGlobalFeature.
     """
-    def __init__(__self__, arp_proxy=None, arp_proxy_variable=None, cdp=None, cdp_variable=None, console_logging=None, console_logging_variable=None, description=None, domain_lookup=None, domain_lookup_variable=None, feature_profile_id=None, ftp_passive=None, ftp_passive_variable=None, http_authentication=None, http_authentication_variable=None, http_server=None, http_server_variable=None, https_server=None, https_server_variable=None, id=None, ignore_bootp=None, ignore_bootp_variable=None, ip_source_routing=None, ip_source_routing_variable=None, line_vty=None, line_vty_variable=None, lldp=None, lldp_variable=None, name=None, nat64_tcp_timeout=None, nat64_tcp_timeout_variable=None, nat64_udp_timeout=None, nat64_udp_timeout_variable=None, rsh_rcp=None, rsh_rcp_variable=None, snmp_ifindex_persist=None, snmp_ifindex_persist_variable=None, source_interface=None, source_interface_variable=None, ssh_version=None, ssh_version_variable=None, tcp_keepalives_in=None, tcp_keepalives_in_variable=None, tcp_keepalives_out=None, tcp_keepalives_out_variable=None, tcp_small_servers=None, tcp_small_servers_variable=None, udp_small_servers=None, udp_small_servers_variable=None, version=None, vty_line_logging=None, vty_line_logging_variable=None):
+    def __init__(__self__, arp_proxy=None, arp_proxy_variable=None, bgp_community_new_format=None, bgp_community_new_format_variable=None, cdp=None, cdp_variable=None, console_logging=None, console_logging_variable=None, description=None, domain_lookup=None, domain_lookup_variable=None, etherchannel_flow_load_balance=None, etherchannel_flow_load_balance_variable=None, etherchannel_vlan_load_balance=None, etherchannel_vlan_load_balance_variable=None, feature_profile_id=None, ftp_passive=None, ftp_passive_variable=None, http_authentication=None, http_authentication_variable=None, http_server=None, http_server_variable=None, https_server=None, https_server_variable=None, id=None, ignore_bootp=None, ignore_bootp_variable=None, ip_source_routing=None, ip_source_routing_variable=None, lacp_system_priority=None, lacp_system_priority_variable=None, line_vty=None, line_vty_variable=None, lldp=None, lldp_variable=None, name=None, nat64_tcp_timeout=None, nat64_tcp_timeout_variable=None, nat64_udp_timeout=None, nat64_udp_timeout_variable=None, rsh_rcp=None, rsh_rcp_variable=None, snmp_ifindex_persist=None, snmp_ifindex_persist_variable=None, source_interface=None, source_interface_variable=None, ssh_version=None, ssh_version_variable=None, tcp_keepalives_in=None, tcp_keepalives_in_variable=None, tcp_keepalives_out=None, tcp_keepalives_out_variable=None, tcp_small_servers=None, tcp_small_servers_variable=None, udp_small_servers=None, udp_small_servers_variable=None, version=None, vty_line_logging=None, vty_line_logging_variable=None):
         if arp_proxy and not isinstance(arp_proxy, bool):
             raise TypeError("Expected argument 'arp_proxy' to be a bool")
         pulumi.set(__self__, "arp_proxy", arp_proxy)
         if arp_proxy_variable and not isinstance(arp_proxy_variable, str):
             raise TypeError("Expected argument 'arp_proxy_variable' to be a str")
         pulumi.set(__self__, "arp_proxy_variable", arp_proxy_variable)
+        if bgp_community_new_format and not isinstance(bgp_community_new_format, bool):
+            raise TypeError("Expected argument 'bgp_community_new_format' to be a bool")
+        pulumi.set(__self__, "bgp_community_new_format", bgp_community_new_format)
+        if bgp_community_new_format_variable and not isinstance(bgp_community_new_format_variable, str):
+            raise TypeError("Expected argument 'bgp_community_new_format_variable' to be a str")
+        pulumi.set(__self__, "bgp_community_new_format_variable", bgp_community_new_format_variable)
         if cdp and not isinstance(cdp, bool):
             raise TypeError("Expected argument 'cdp' to be a bool")
         pulumi.set(__self__, "cdp", cdp)
@@ -54,6 +60,18 @@ class GetSystemGlobalFeatureResult:
         if domain_lookup_variable and not isinstance(domain_lookup_variable, str):
             raise TypeError("Expected argument 'domain_lookup_variable' to be a str")
         pulumi.set(__self__, "domain_lookup_variable", domain_lookup_variable)
+        if etherchannel_flow_load_balance and not isinstance(etherchannel_flow_load_balance, str):
+            raise TypeError("Expected argument 'etherchannel_flow_load_balance' to be a str")
+        pulumi.set(__self__, "etherchannel_flow_load_balance", etherchannel_flow_load_balance)
+        if etherchannel_flow_load_balance_variable and not isinstance(etherchannel_flow_load_balance_variable, str):
+            raise TypeError("Expected argument 'etherchannel_flow_load_balance_variable' to be a str")
+        pulumi.set(__self__, "etherchannel_flow_load_balance_variable", etherchannel_flow_load_balance_variable)
+        if etherchannel_vlan_load_balance and not isinstance(etherchannel_vlan_load_balance, bool):
+            raise TypeError("Expected argument 'etherchannel_vlan_load_balance' to be a bool")
+        pulumi.set(__self__, "etherchannel_vlan_load_balance", etherchannel_vlan_load_balance)
+        if etherchannel_vlan_load_balance_variable and not isinstance(etherchannel_vlan_load_balance_variable, str):
+            raise TypeError("Expected argument 'etherchannel_vlan_load_balance_variable' to be a str")
+        pulumi.set(__self__, "etherchannel_vlan_load_balance_variable", etherchannel_vlan_load_balance_variable)
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -96,6 +114,12 @@ class GetSystemGlobalFeatureResult:
         if ip_source_routing_variable and not isinstance(ip_source_routing_variable, str):
             raise TypeError("Expected argument 'ip_source_routing_variable' to be a str")
         pulumi.set(__self__, "ip_source_routing_variable", ip_source_routing_variable)
+        if lacp_system_priority and not isinstance(lacp_system_priority, int):
+            raise TypeError("Expected argument 'lacp_system_priority' to be a int")
+        pulumi.set(__self__, "lacp_system_priority", lacp_system_priority)
+        if lacp_system_priority_variable and not isinstance(lacp_system_priority_variable, str):
+            raise TypeError("Expected argument 'lacp_system_priority_variable' to be a str")
+        pulumi.set(__self__, "lacp_system_priority_variable", lacp_system_priority_variable)
         if line_vty and not isinstance(line_vty, bool):
             raise TypeError("Expected argument 'line_vty' to be a bool")
         pulumi.set(__self__, "line_vty", line_vty)
@@ -198,6 +222,22 @@ class GetSystemGlobalFeatureResult:
         return pulumi.get(self, "arp_proxy_variable")
 
     @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormat")
+    def bgp_community_new_format(self) -> _builtins.bool:
+        """
+        Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
+        """
+        return pulumi.get(self, "bgp_community_new_format")
+
+    @_builtins.property
+    @pulumi.getter(name="bgpCommunityNewFormatVariable")
+    def bgp_community_new_format_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "bgp_community_new_format_variable")
+
+    @_builtins.property
     @pulumi.getter
     def cdp(self) -> _builtins.bool:
         """
@@ -252,6 +292,38 @@ class GetSystemGlobalFeatureResult:
         Variable name
         """
         return pulumi.get(self, "domain_lookup_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalance")
+    def etherchannel_flow_load_balance(self) -> _builtins.str:
+        """
+        Set Etherchannel load balance hash algorithm
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelFlowLoadBalanceVariable")
+    def etherchannel_flow_load_balance_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_flow_load_balance_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalance")
+    def etherchannel_vlan_load_balance(self) -> _builtins.bool:
+        """
+        Set Etherchannel vlan manual load balance
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance")
+
+    @_builtins.property
+    @pulumi.getter(name="etherchannelVlanLoadBalanceVariable")
+    def etherchannel_vlan_load_balance_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "etherchannel_vlan_load_balance_variable")
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -364,6 +436,22 @@ class GetSystemGlobalFeatureResult:
         Variable name
         """
         return pulumi.get(self, "ip_source_routing_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriority")
+    def lacp_system_priority(self) -> _builtins.int:
+        """
+        Set LACP system priority
+        """
+        return pulumi.get(self, "lacp_system_priority")
+
+    @_builtins.property
+    @pulumi.getter(name="lacpSystemPriorityVariable")
+    def lacp_system_priority_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "lacp_system_priority_variable")
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
@@ -598,6 +686,8 @@ class AwaitableGetSystemGlobalFeatureResult(GetSystemGlobalFeatureResult):
         return GetSystemGlobalFeatureResult(
             arp_proxy=self.arp_proxy,
             arp_proxy_variable=self.arp_proxy_variable,
+            bgp_community_new_format=self.bgp_community_new_format,
+            bgp_community_new_format_variable=self.bgp_community_new_format_variable,
             cdp=self.cdp,
             cdp_variable=self.cdp_variable,
             console_logging=self.console_logging,
@@ -605,6 +695,10 @@ class AwaitableGetSystemGlobalFeatureResult(GetSystemGlobalFeatureResult):
             description=self.description,
             domain_lookup=self.domain_lookup,
             domain_lookup_variable=self.domain_lookup_variable,
+            etherchannel_flow_load_balance=self.etherchannel_flow_load_balance,
+            etherchannel_flow_load_balance_variable=self.etherchannel_flow_load_balance_variable,
+            etherchannel_vlan_load_balance=self.etherchannel_vlan_load_balance,
+            etherchannel_vlan_load_balance_variable=self.etherchannel_vlan_load_balance_variable,
             feature_profile_id=self.feature_profile_id,
             ftp_passive=self.ftp_passive,
             ftp_passive_variable=self.ftp_passive_variable,
@@ -619,6 +713,8 @@ class AwaitableGetSystemGlobalFeatureResult(GetSystemGlobalFeatureResult):
             ignore_bootp_variable=self.ignore_bootp_variable,
             ip_source_routing=self.ip_source_routing,
             ip_source_routing_variable=self.ip_source_routing_variable,
+            lacp_system_priority=self.lacp_system_priority,
+            lacp_system_priority_variable=self.lacp_system_priority_variable,
             line_vty=self.line_vty,
             line_vty_variable=self.line_vty_variable,
             lldp=self.lldp,
@@ -678,6 +774,8 @@ def get_system_global_feature(feature_profile_id: Optional[_builtins.str] = None
     return AwaitableGetSystemGlobalFeatureResult(
         arp_proxy=pulumi.get(__ret__, 'arp_proxy'),
         arp_proxy_variable=pulumi.get(__ret__, 'arp_proxy_variable'),
+        bgp_community_new_format=pulumi.get(__ret__, 'bgp_community_new_format'),
+        bgp_community_new_format_variable=pulumi.get(__ret__, 'bgp_community_new_format_variable'),
         cdp=pulumi.get(__ret__, 'cdp'),
         cdp_variable=pulumi.get(__ret__, 'cdp_variable'),
         console_logging=pulumi.get(__ret__, 'console_logging'),
@@ -685,6 +783,10 @@ def get_system_global_feature(feature_profile_id: Optional[_builtins.str] = None
         description=pulumi.get(__ret__, 'description'),
         domain_lookup=pulumi.get(__ret__, 'domain_lookup'),
         domain_lookup_variable=pulumi.get(__ret__, 'domain_lookup_variable'),
+        etherchannel_flow_load_balance=pulumi.get(__ret__, 'etherchannel_flow_load_balance'),
+        etherchannel_flow_load_balance_variable=pulumi.get(__ret__, 'etherchannel_flow_load_balance_variable'),
+        etherchannel_vlan_load_balance=pulumi.get(__ret__, 'etherchannel_vlan_load_balance'),
+        etherchannel_vlan_load_balance_variable=pulumi.get(__ret__, 'etherchannel_vlan_load_balance_variable'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
         ftp_passive=pulumi.get(__ret__, 'ftp_passive'),
         ftp_passive_variable=pulumi.get(__ret__, 'ftp_passive_variable'),
@@ -699,6 +801,8 @@ def get_system_global_feature(feature_profile_id: Optional[_builtins.str] = None
         ignore_bootp_variable=pulumi.get(__ret__, 'ignore_bootp_variable'),
         ip_source_routing=pulumi.get(__ret__, 'ip_source_routing'),
         ip_source_routing_variable=pulumi.get(__ret__, 'ip_source_routing_variable'),
+        lacp_system_priority=pulumi.get(__ret__, 'lacp_system_priority'),
+        lacp_system_priority_variable=pulumi.get(__ret__, 'lacp_system_priority_variable'),
         line_vty=pulumi.get(__ret__, 'line_vty'),
         line_vty_variable=pulumi.get(__ret__, 'line_vty_variable'),
         lldp=pulumi.get(__ret__, 'lldp'),
@@ -755,6 +859,8 @@ def get_system_global_feature_output(feature_profile_id: Optional[pulumi.Input[_
     return __ret__.apply(lambda __response__: GetSystemGlobalFeatureResult(
         arp_proxy=pulumi.get(__response__, 'arp_proxy'),
         arp_proxy_variable=pulumi.get(__response__, 'arp_proxy_variable'),
+        bgp_community_new_format=pulumi.get(__response__, 'bgp_community_new_format'),
+        bgp_community_new_format_variable=pulumi.get(__response__, 'bgp_community_new_format_variable'),
         cdp=pulumi.get(__response__, 'cdp'),
         cdp_variable=pulumi.get(__response__, 'cdp_variable'),
         console_logging=pulumi.get(__response__, 'console_logging'),
@@ -762,6 +868,10 @@ def get_system_global_feature_output(feature_profile_id: Optional[pulumi.Input[_
         description=pulumi.get(__response__, 'description'),
         domain_lookup=pulumi.get(__response__, 'domain_lookup'),
         domain_lookup_variable=pulumi.get(__response__, 'domain_lookup_variable'),
+        etherchannel_flow_load_balance=pulumi.get(__response__, 'etherchannel_flow_load_balance'),
+        etherchannel_flow_load_balance_variable=pulumi.get(__response__, 'etherchannel_flow_load_balance_variable'),
+        etherchannel_vlan_load_balance=pulumi.get(__response__, 'etherchannel_vlan_load_balance'),
+        etherchannel_vlan_load_balance_variable=pulumi.get(__response__, 'etherchannel_vlan_load_balance_variable'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
         ftp_passive=pulumi.get(__response__, 'ftp_passive'),
         ftp_passive_variable=pulumi.get(__response__, 'ftp_passive_variable'),
@@ -776,6 +886,8 @@ def get_system_global_feature_output(feature_profile_id: Optional[pulumi.Input[_
         ignore_bootp_variable=pulumi.get(__response__, 'ignore_bootp_variable'),
         ip_source_routing=pulumi.get(__response__, 'ip_source_routing'),
         ip_source_routing_variable=pulumi.get(__response__, 'ip_source_routing_variable'),
+        lacp_system_priority=pulumi.get(__response__, 'lacp_system_priority'),
+        lacp_system_priority_variable=pulumi.get(__response__, 'lacp_system_priority_variable'),
         line_vty=pulumi.get(__response__, 'line_vty'),
         line_vty_variable=pulumi.get(__response__, 'line_vty_variable'),
         lldp=pulumi.get(__response__, 'lldp'),

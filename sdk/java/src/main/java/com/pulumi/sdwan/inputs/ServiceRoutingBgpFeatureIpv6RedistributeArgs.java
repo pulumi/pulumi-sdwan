@@ -6,7 +6,9 @@ package com.pulumi.sdwan.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,6 +17,68 @@ import javax.annotation.Nullable;
 public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ServiceRoutingBgpFeatureIpv6RedistributeArgs Empty = new ServiceRoutingBgpFeatureIpv6RedistributeArgs();
+
+    /**
+     * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     * 
+     */
+    @Import(name="metric")
+    private @Nullable Output<Integer> metric;
+
+    /**
+     * @return Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+     *   - Range: `0`-`4294967295`
+     * 
+     */
+    public Optional<Output<Integer>> metric() {
+        return Optional.ofNullable(this.metric);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    @Import(name="metricVariable")
+    private @Nullable Output<String> metricVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    public Optional<Output<String>> metricVariable() {
+        return Optional.ofNullable(this.metricVariable);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    @Import(name="ospfMatchRouteVariable")
+    private @Nullable Output<String> ospfMatchRouteVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    public Optional<Output<String>> ospfMatchRouteVariable() {
+        return Optional.ofNullable(this.ospfMatchRouteVariable);
+    }
+
+    /**
+     * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    @Import(name="ospfMatchRoutes")
+    private @Nullable Output<List<String>> ospfMatchRoutes;
+
+    /**
+     * @return Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+     * 
+     */
+    public Optional<Output<List<String>>> ospfMatchRoutes() {
+        return Optional.ofNullable(this.ospfMatchRoutes);
+    }
 
     /**
      * Set the protocol to redistribute routes from
@@ -56,7 +120,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
     }
 
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -64,7 +128,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
     private @Nullable Output<Boolean> translateRibMetric;
 
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -72,13 +136,33 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
         return Optional.ofNullable(this.translateRibMetric);
     }
 
+    /**
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
+     * 
+     */
+    @Import(name="translateRibMetricVariable")
+    private @Nullable Output<String> translateRibMetricVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `protocol` equal to `omp`
+     * 
+     */
+    public Optional<Output<String>> translateRibMetricVariable() {
+        return Optional.ofNullable(this.translateRibMetricVariable);
+    }
+
     private ServiceRoutingBgpFeatureIpv6RedistributeArgs() {}
 
     private ServiceRoutingBgpFeatureIpv6RedistributeArgs(ServiceRoutingBgpFeatureIpv6RedistributeArgs $) {
+        this.metric = $.metric;
+        this.metricVariable = $.metricVariable;
+        this.ospfMatchRouteVariable = $.ospfMatchRouteVariable;
+        this.ospfMatchRoutes = $.ospfMatchRoutes;
         this.protocol = $.protocol;
         this.protocolVariable = $.protocolVariable;
         this.routePolicyId = $.routePolicyId;
         this.translateRibMetric = $.translateRibMetric;
+        this.translateRibMetricVariable = $.translateRibMetricVariable;
     }
 
     public static Builder builder() {
@@ -97,6 +181,102 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
 
         public Builder(ServiceRoutingBgpFeatureIpv6RedistributeArgs defaults) {
             $ = new ServiceRoutingBgpFeatureIpv6RedistributeArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param metric Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+         *   - Range: `0`-`4294967295`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metric(@Nullable Output<Integer> metric) {
+            $.metric = metric;
+            return this;
+        }
+
+        /**
+         * @param metric Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+         *   - Range: `0`-`4294967295`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metric(Integer metric) {
+            return metric(Output.of(metric));
+        }
+
+        /**
+         * @param metricVariable Variable name, Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metricVariable(@Nullable Output<String> metricVariable) {
+            $.metricVariable = metricVariable;
+            return this;
+        }
+
+        /**
+         * @param metricVariable Variable name, Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metricVariable(String metricVariable) {
+            return metricVariable(Output.of(metricVariable));
+        }
+
+        /**
+         * @param ospfMatchRouteVariable Variable name, Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospfMatchRouteVariable(@Nullable Output<String> ospfMatchRouteVariable) {
+            $.ospfMatchRouteVariable = ospfMatchRouteVariable;
+            return this;
+        }
+
+        /**
+         * @param ospfMatchRouteVariable Variable name, Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospfMatchRouteVariable(String ospfMatchRouteVariable) {
+            return ospfMatchRouteVariable(Output.of(ospfMatchRouteVariable));
+        }
+
+        /**
+         * @param ospfMatchRoutes Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospfMatchRoutes(@Nullable Output<List<String>> ospfMatchRoutes) {
+            $.ospfMatchRoutes = ospfMatchRoutes;
+            return this;
+        }
+
+        /**
+         * @param ospfMatchRoutes Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospfMatchRoutes(List<String> ospfMatchRoutes) {
+            return ospfMatchRoutes(Output.of(ospfMatchRoutes));
+        }
+
+        /**
+         * @param ospfMatchRoutes Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospfMatchRoutes(String... ospfMatchRoutes) {
+            return ospfMatchRoutes(List.of(ospfMatchRoutes));
         }
 
         /**
@@ -153,7 +333,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
         }
 
         /**
-         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -165,7 +345,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
         }
 
         /**
-         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -173,6 +353,27 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
          */
         public Builder translateRibMetric(Boolean translateRibMetric) {
             return translateRibMetric(Output.of(translateRibMetric));
+        }
+
+        /**
+         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` equal to `omp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetricVariable(@Nullable Output<String> translateRibMetricVariable) {
+            $.translateRibMetricVariable = translateRibMetricVariable;
+            return this;
+        }
+
+        /**
+         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` equal to `omp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetricVariable(String translateRibMetricVariable) {
+            return translateRibMetricVariable(Output.of(translateRibMetricVariable));
         }
 
         public ServiceRoutingBgpFeatureIpv6RedistributeArgs build() {

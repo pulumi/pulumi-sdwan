@@ -16,6 +16,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Base Action
         ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Accept`
         /// </summary>
         public readonly string? BaseAction;
         public readonly string? DestinationDataPrefixListId;

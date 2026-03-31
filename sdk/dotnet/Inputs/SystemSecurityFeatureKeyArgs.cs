@@ -102,7 +102,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? IncludeTcpOptionsVariable { get; set; }
 
         /// <summary>
-        /// Specify the Key String
+        /// Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         [Input("keyString")]
         public Input<string>? KeyString { get; set; }

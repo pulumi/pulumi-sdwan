@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SystemLoggingFeatureIpv4Server {
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set IPv4 address of server
      * 
      */
     private @Nullable String hostnameIp;
@@ -78,7 +78,7 @@ public final class SystemLoggingFeatureIpv4Server {
      */
     private @Nullable String tlsPropertiesProfileVariable;
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      * 
@@ -92,7 +92,7 @@ public final class SystemLoggingFeatureIpv4Server {
 
     private SystemLoggingFeatureIpv4Server() {}
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set IPv4 address of server
      * 
      */
     public Optional<String> hostnameIp() {
@@ -180,7 +180,7 @@ public final class SystemLoggingFeatureIpv4Server {
         return Optional.ofNullable(this.tlsPropertiesProfileVariable);
     }
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      * 

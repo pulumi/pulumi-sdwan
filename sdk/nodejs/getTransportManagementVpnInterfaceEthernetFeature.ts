@@ -144,6 +144,14 @@ export interface GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv4Address: string;
     /**
+     * address type
+     */
+    readonly ipv4AddressType: string;
+    /**
+     * Variable name
+     */
+    readonly ipv4AddressTypeVariable: string;
+    /**
      * Variable name
      */
     readonly ipv4AddressVariable: string;
@@ -155,10 +163,6 @@ export interface GetTransportManagementVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly ipv4AutoDetectBandwidthVariable: string;
-    /**
-     * IPv4 Configuration Type
-     */
-    readonly ipv4ConfigurationType: string;
     /**
      * DHCP Distance
      */
@@ -200,13 +204,17 @@ export interface GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv6Address: string;
     /**
+     * address type
+     */
+    readonly ipv6AddressType: string;
+    /**
+     * Variable name
+     */
+    readonly ipv6AddressTypeVariable: string;
+    /**
      * Variable name
      */
     readonly ipv6AddressVariable: string;
-    /**
-     * IPv6 Configuration Type
-     */
-    readonly ipv6ConfigurationType: string;
     /**
      * Interval for interface load calculation
      */

@@ -108,14 +108,16 @@ type LookupTransportManagementVpnInterfaceEthernetFeatureResult struct {
 	IpMtuVariable string `pulumi:"ipMtuVariable"`
 	// IP Address
 	Ipv4Address string `pulumi:"ipv4Address"`
+	// address type
+	Ipv4AddressType string `pulumi:"ipv4AddressType"`
+	// Variable name
+	Ipv4AddressTypeVariable string `pulumi:"ipv4AddressTypeVariable"`
 	// Variable name
 	Ipv4AddressVariable string `pulumi:"ipv4AddressVariable"`
 	// Interface auto detect bandwidth
 	Ipv4AutoDetectBandwidth bool `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable string `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type
-	Ipv4ConfigurationType string `pulumi:"ipv4ConfigurationType"`
 	// DHCP Distance
 	Ipv4DhcpDistance int `pulumi:"ipv4DhcpDistance"`
 	// Variable name
@@ -136,10 +138,12 @@ type LookupTransportManagementVpnInterfaceEthernetFeatureResult struct {
 	Ipv4SubnetMaskVariable string `pulumi:"ipv4SubnetMaskVariable"`
 	// IPv6 Address Secondary
 	Ipv6Address string `pulumi:"ipv6Address"`
+	// address type
+	Ipv6AddressType string `pulumi:"ipv6AddressType"`
+	// Variable name
+	Ipv6AddressTypeVariable string `pulumi:"ipv6AddressTypeVariable"`
 	// Variable name
 	Ipv6AddressVariable string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
-	Ipv6ConfigurationType string `pulumi:"ipv6ConfigurationType"`
 	// Interval for interface load calculation
 	LoadInterval int `pulumi:"loadInterval"`
 	// Variable name
@@ -343,6 +347,18 @@ func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4Ad
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string { return v.Ipv4Address }).(pulumi.StringOutput)
 }
 
+// address type
+func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4AddressType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string { return v.Ipv4AddressType }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4AddressTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
+		return v.Ipv4AddressTypeVariable
+	}).(pulumi.StringOutput)
+}
+
 // Variable name
 func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
@@ -361,13 +377,6 @@ func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4Au
 func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4AutoDetectBandwidthVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
 		return v.Ipv4AutoDetectBandwidthVariable
-	}).(pulumi.StringOutput)
-}
-
-// IPv4 Configuration Type
-func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4ConfigurationType() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
-		return v.Ipv4ConfigurationType
 	}).(pulumi.StringOutput)
 }
 
@@ -431,17 +440,22 @@ func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6Ad
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string { return v.Ipv6Address }).(pulumi.StringOutput)
 }
 
+// address type
+func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6AddressType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string { return v.Ipv6AddressType }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6AddressTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
+		return v.Ipv6AddressTypeVariable
+	}).(pulumi.StringOutput)
+}
+
 // Variable name
 func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
 		return v.Ipv6AddressVariable
-	}).(pulumi.StringOutput)
-}
-
-// IPv6 Configuration Type
-func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6ConfigurationType() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
-		return v.Ipv6ConfigurationType
 	}).(pulumi.StringOutput)
 }
 

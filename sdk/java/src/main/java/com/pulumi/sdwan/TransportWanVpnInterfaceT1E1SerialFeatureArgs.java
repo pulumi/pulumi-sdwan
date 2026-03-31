@@ -353,6 +353,42 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
+     * Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    @Import(name="mrfCoreRegionType")
+    private @Nullable Output<String> mrfCoreRegionType;
+
+    /**
+     * @return Core Region
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    public Optional<Output<String>> mrfCoreRegionType() {
+        return Optional.ofNullable(this.mrfCoreRegionType);
+    }
+
+    /**
+     * Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="mrfEnableCoreRegion")
+    private @Nullable Output<Boolean> mrfEnableCoreRegion;
+
+    /**
+     * @return Enable Core Region
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> mrfEnableCoreRegion() {
+        return Optional.ofNullable(this.mrfEnableCoreRegion);
+    }
+
+    /**
      * Interface MTU &lt;68...2000&gt;, in bytes
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
@@ -1672,7 +1708,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
 
     /**
      * Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      * 
      */
     @Import(name="tunnelQosMode")
@@ -1680,7 +1716,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
 
     /**
      * @return Set tunnel QoS mode
-     *   - Choices: `spoke`, `hub`
+     *   - Choices: `spoke`
      * 
      */
     public Optional<Output<String>> tunnelQosMode() {
@@ -1729,6 +1765,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         this.ipv4SubnetMaskVariable = $.ipv4SubnetMaskVariable;
         this.ipv6Address = $.ipv6Address;
         this.ipv6AddressVariable = $.ipv6AddressVariable;
+        this.mrfCoreRegionType = $.mrfCoreRegionType;
+        this.mrfEnableCoreRegion = $.mrfEnableCoreRegion;
         this.mtu = $.mtu;
         this.mtuVariable = $.mtuVariable;
         this.name = $.name;
@@ -2287,6 +2325,54 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
          */
         public Builder ipv6AddressVariable(String ipv6AddressVariable) {
             return ipv6AddressVariable(Output.of(ipv6AddressVariable));
+        }
+
+        /**
+         * @param mrfCoreRegionType Core Region
+         *   - Choices: `core-shared`, `core`
+         *   - Default value: `core-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfCoreRegionType(@Nullable Output<String> mrfCoreRegionType) {
+            $.mrfCoreRegionType = mrfCoreRegionType;
+            return this;
+        }
+
+        /**
+         * @param mrfCoreRegionType Core Region
+         *   - Choices: `core-shared`, `core`
+         *   - Default value: `core-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfCoreRegionType(String mrfCoreRegionType) {
+            return mrfCoreRegionType(Output.of(mrfCoreRegionType));
+        }
+
+        /**
+         * @param mrfEnableCoreRegion Enable Core Region
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableCoreRegion(@Nullable Output<Boolean> mrfEnableCoreRegion) {
+            $.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            return this;
+        }
+
+        /**
+         * @param mrfEnableCoreRegion Enable Core Region
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableCoreRegion(Boolean mrfEnableCoreRegion) {
+            return mrfEnableCoreRegion(Output.of(mrfEnableCoreRegion));
         }
 
         /**
@@ -4121,7 +4207,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
 
         /**
          * @param tunnelQosMode Set tunnel QoS mode
-         *   - Choices: `spoke`, `hub`
+         *   - Choices: `spoke`
          * 
          * @return builder
          * 
@@ -4133,7 +4219,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
 
         /**
          * @param tunnelQosMode Set tunnel QoS mode
-         *   - Choices: `spoke`, `hub`
+         *   - Choices: `spoke`
          * 
          * @return builder
          * 

@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a System MRF Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -28,11 +28,16 @@ namespace Pulumi.Sdwan
     ///         Name = "Example",
     ///         Description = "My Example",
     ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-    ///         RegionId = 1,
-    ///         SecondaryRegionId = 2,
     ///         Role = "edge-router",
     ///         EnableMigrationToMrf = "enabled",
     ///         MigrationBgpCommunity = 100,
+    ///         EnableManagementRegion = true,
+    ///         VrfId = 1,
+    ///         GatewayPreferences = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         ManagementGateway = false,
     ///     });
     /// 
     /// });
@@ -58,6 +63,19 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
+        /// Enable management region
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("enableManagementRegion")]
+        public Output<bool?> EnableManagementRegion { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("enableManagementRegionVariable")]
+        public Output<string?> EnableManagementRegionVariable { get; private set; } = null!;
+
+        /// <summary>
         /// Enable migration mode to Multi-Region Fabric
         ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
@@ -71,6 +89,31 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("gatewayPreferenceVariable")]
+        public Output<string?> GatewayPreferenceVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// List of affinity group preferences for VRF
+        /// </summary>
+        [Output("gatewayPreferences")]
+        public Output<ImmutableArray<int>> GatewayPreferences { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable management gateway
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("managementGateway")]
+        public Output<bool?> ManagementGateway { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("managementGatewayVariable")]
+        public Output<string?> ManagementGatewayVariable { get; private set; } = null!;
+
+        /// <summary>
         /// Set BGP community during migration from BGP-core based network
         ///   - Range: `1`-`4294967295`
         /// </summary>
@@ -82,13 +125,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
-
-        /// <summary>
-        /// Set region ID
-        ///   - Range: `1`-`63`
-        /// </summary>
-        [Output("regionId")]
-        public Output<int?> RegionId { get; private set; } = null!;
 
         /// <summary>
         /// Set the role for router
@@ -121,6 +157,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("version")]
         public Output<int> Version { get; private set; } = null!;
+
+        /// <summary>
+        /// VRF name for management region
+        ///   - Range: `1`-`65531`
+        /// </summary>
+        [Output("vrfId")]
+        public Output<int?> VrfId { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("vrfIdVariable")]
+        public Output<string?> VrfIdVariable { get; private set; } = null!;
 
 
         /// <summary>
@@ -175,6 +224,19 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
+        /// Enable management region
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableManagementRegion")]
+        public Input<bool>? EnableManagementRegion { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("enableManagementRegionVariable")]
+        public Input<string>? EnableManagementRegionVariable { get; set; }
+
+        /// <summary>
         /// Enable migration mode to Multi-Region Fabric
         ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
@@ -188,6 +250,37 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("gatewayPreferenceVariable")]
+        public Input<string>? GatewayPreferenceVariable { get; set; }
+
+        [Input("gatewayPreferences")]
+        private InputList<int>? _gatewayPreferences;
+
+        /// <summary>
+        /// List of affinity group preferences for VRF
+        /// </summary>
+        public InputList<int> GatewayPreferences
+        {
+            get => _gatewayPreferences ?? (_gatewayPreferences = new InputList<int>());
+            set => _gatewayPreferences = value;
+        }
+
+        /// <summary>
+        /// Enable management gateway
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("managementGateway")]
+        public Input<bool>? ManagementGateway { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("managementGatewayVariable")]
+        public Input<string>? ManagementGatewayVariable { get; set; }
+
+        /// <summary>
         /// Set BGP community during migration from BGP-core based network
         ///   - Range: `1`-`4294967295`
         /// </summary>
@@ -199,13 +292,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
-
-        /// <summary>
-        /// Set region ID
-        ///   - Range: `1`-`63`
-        /// </summary>
-        [Input("regionId")]
-        public Input<int>? RegionId { get; set; }
 
         /// <summary>
         /// Set the role for router
@@ -233,6 +319,19 @@ namespace Pulumi.Sdwan
         [Input("secondaryRegionIdVariable")]
         public Input<string>? SecondaryRegionIdVariable { get; set; }
 
+        /// <summary>
+        /// VRF name for management region
+        ///   - Range: `1`-`65531`
+        /// </summary>
+        [Input("vrfId")]
+        public Input<int>? VrfId { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("vrfIdVariable")]
+        public Input<string>? VrfIdVariable { get; set; }
+
         public SystemMrfFeatureArgs()
         {
         }
@@ -248,6 +347,19 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
+        /// Enable management region
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableManagementRegion")]
+        public Input<bool>? EnableManagementRegion { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("enableManagementRegionVariable")]
+        public Input<string>? EnableManagementRegionVariable { get; set; }
+
+        /// <summary>
         /// Enable migration mode to Multi-Region Fabric
         ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
@@ -261,6 +373,37 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("gatewayPreferenceVariable")]
+        public Input<string>? GatewayPreferenceVariable { get; set; }
+
+        [Input("gatewayPreferences")]
+        private InputList<int>? _gatewayPreferences;
+
+        /// <summary>
+        /// List of affinity group preferences for VRF
+        /// </summary>
+        public InputList<int> GatewayPreferences
+        {
+            get => _gatewayPreferences ?? (_gatewayPreferences = new InputList<int>());
+            set => _gatewayPreferences = value;
+        }
+
+        /// <summary>
+        /// Enable management gateway
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("managementGateway")]
+        public Input<bool>? ManagementGateway { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("managementGatewayVariable")]
+        public Input<string>? ManagementGatewayVariable { get; set; }
+
+        /// <summary>
         /// Set BGP community during migration from BGP-core based network
         ///   - Range: `1`-`4294967295`
         /// </summary>
@@ -272,13 +415,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
-
-        /// <summary>
-        /// Set region ID
-        ///   - Range: `1`-`63`
-        /// </summary>
-        [Input("regionId")]
-        public Input<int>? RegionId { get; set; }
 
         /// <summary>
         /// Set the role for router
@@ -311,6 +447,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("version")]
         public Input<int>? Version { get; set; }
+
+        /// <summary>
+        /// VRF name for management region
+        ///   - Range: `1`-`65531`
+        /// </summary>
+        [Input("vrfId")]
+        public Input<int>? VrfId { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("vrfIdVariable")]
+        public Input<string>? VrfIdVariable { get; set; }
 
         public SystemMrfFeatureState()
         {

@@ -50,6 +50,14 @@ export interface GetSystemMrfFeatureResult {
      */
     readonly description: string;
     /**
+     * Enable management region
+     */
+    readonly enableManagementRegion: boolean;
+    /**
+     * Variable name
+     */
+    readonly enableManagementRegionVariable: string;
+    /**
      * Enable migration mode to Multi-Region Fabric
      */
     readonly enableMigrationToMrf: string;
@@ -58,9 +66,25 @@ export interface GetSystemMrfFeatureResult {
      */
     readonly featureProfileId: string;
     /**
+     * Variable name
+     */
+    readonly gatewayPreferenceVariable: string;
+    /**
+     * List of affinity group preferences for VRF
+     */
+    readonly gatewayPreferences: number[];
+    /**
      * The id of the Feature
      */
     readonly id: string;
+    /**
+     * Enable management gateway
+     */
+    readonly managementGateway: boolean;
+    /**
+     * Variable name
+     */
+    readonly managementGatewayVariable: string;
     /**
      * Set BGP community during migration from BGP-core based network
      */
@@ -69,10 +93,6 @@ export interface GetSystemMrfFeatureResult {
      * The name of the Feature
      */
     readonly name: string;
-    /**
-     * Set region ID
-     */
-    readonly regionId: number;
     /**
      * Set the role for router
      */
@@ -93,6 +113,14 @@ export interface GetSystemMrfFeatureResult {
      * The version of the Feature
      */
     readonly version: number;
+    /**
+     * VRF name for management region
+     */
+    readonly vrfId: number;
+    /**
+     * Variable name
+     */
+    readonly vrfIdVariable: string;
 }
 /**
  * This data source can read the System MRF Feature.

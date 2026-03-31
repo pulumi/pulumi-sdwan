@@ -27,7 +27,7 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
     """
     A collection of values returned by getTransportWanVpnInterfaceCellularFeature.
     """
-    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, arps=None, bandwidth_downstream=None, bandwidth_downstream_variable=None, bandwidth_upstream=None, bandwidth_upstream_variable=None, description=None, feature_profile_id=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, name=None, nat_ipv4=None, nat_ipv4_variable=None, nat_tcp_timeout=None, nat_tcp_timeout_variable=None, nat_udp_timeout=None, nat_udp_timeout_variable=None, per_tunnel_qos=None, per_tunnel_qos_variable=None, qos_adaptive=None, qos_adaptive_bandwidth_downstream=None, qos_adaptive_bandwidth_upstream=None, qos_adaptive_default_downstream=None, qos_adaptive_default_downstream_variable=None, qos_adaptive_default_upstream=None, qos_adaptive_default_upstream_variable=None, qos_adaptive_max_downstream=None, qos_adaptive_max_downstream_variable=None, qos_adaptive_max_upstream=None, qos_adaptive_max_upstream_variable=None, qos_adaptive_min_downstream=None, qos_adaptive_min_downstream_variable=None, qos_adaptive_min_upstream=None, qos_adaptive_min_upstream_variable=None, qos_adaptive_period=None, qos_adaptive_period_variable=None, qos_shaping_rate=None, qos_shaping_rate_variable=None, service_provider=None, service_provider_variable=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, tloc_extension=None, tloc_extension_variable=None, tracker=None, tracker_variable=None, transport_wan_vpn_feature_id=None, tunnel_bandwidth_percent=None, tunnel_bandwidth_percent_variable=None, tunnel_interface=None, tunnel_interface_allow_all=None, tunnel_interface_allow_all_variable=None, tunnel_interface_allow_bfd=None, tunnel_interface_allow_bfd_variable=None, tunnel_interface_allow_bgp=None, tunnel_interface_allow_bgp_variable=None, tunnel_interface_allow_dhcp=None, tunnel_interface_allow_dhcp_variable=None, tunnel_interface_allow_dns=None, tunnel_interface_allow_dns_variable=None, tunnel_interface_allow_https=None, tunnel_interface_allow_https_variable=None, tunnel_interface_allow_icmp=None, tunnel_interface_allow_icmp_variable=None, tunnel_interface_allow_netconf=None, tunnel_interface_allow_netconf_variable=None, tunnel_interface_allow_ntp=None, tunnel_interface_allow_ntp_variable=None, tunnel_interface_allow_ospf=None, tunnel_interface_allow_ospf_variable=None, tunnel_interface_allow_snmp=None, tunnel_interface_allow_snmp_variable=None, tunnel_interface_allow_ssh=None, tunnel_interface_allow_ssh_variable=None, tunnel_interface_allow_stun=None, tunnel_interface_allow_stun_variable=None, tunnel_interface_bind_loopback_tunnel=None, tunnel_interface_bind_loopback_tunnel_variable=None, tunnel_interface_border=None, tunnel_interface_border_variable=None, tunnel_interface_carrier=None, tunnel_interface_carrier_variable=None, tunnel_interface_clear_dont_fragment=None, tunnel_interface_clear_dont_fragment_variable=None, tunnel_interface_color=None, tunnel_interface_color_restrict=None, tunnel_interface_color_restrict_variable=None, tunnel_interface_color_variable=None, tunnel_interface_encapsulations=None, tunnel_interface_exclude_controller_group_list_variable=None, tunnel_interface_exclude_controller_group_lists=None, tunnel_interface_groups=None, tunnel_interface_groups_variable=None, tunnel_interface_hello_interval=None, tunnel_interface_hello_interval_variable=None, tunnel_interface_hello_tolerance=None, tunnel_interface_hello_tolerance_variable=None, tunnel_interface_last_resort_circuit=None, tunnel_interface_last_resort_circuit_variable=None, tunnel_interface_low_bandwidth_link=None, tunnel_interface_low_bandwidth_link_variable=None, tunnel_interface_max_control_connections=None, tunnel_interface_max_control_connections_variable=None, tunnel_interface_nat_refresh_interval=None, tunnel_interface_nat_refresh_interval_variable=None, tunnel_interface_network_broadcast=None, tunnel_interface_network_broadcast_variable=None, tunnel_interface_port_hop=None, tunnel_interface_port_hop_variable=None, tunnel_interface_tunnel_tcp_mss=None, tunnel_interface_tunnel_tcp_mss_variable=None, tunnel_interface_vbond_as_stun_server=None, tunnel_interface_vbond_as_stun_server_variable=None, tunnel_interface_vmanage_connection_preference=None, tunnel_interface_vmanage_connection_preference_variable=None, tunnel_qos_mode=None, tunnel_qos_mode_variable=None, version=None):
+    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, arps=None, bandwidth_downstream=None, bandwidth_downstream_variable=None, bandwidth_upstream=None, bandwidth_upstream_variable=None, description=None, enable_ipv6=None, enable_ipv6_variable=None, feature_profile_id=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, mrf_core_region_type=None, mrf_enable_core_region=None, name=None, nat_ipv4=None, nat_ipv4_variable=None, nat_tcp_timeout=None, nat_tcp_timeout_variable=None, nat_udp_timeout=None, nat_udp_timeout_variable=None, per_tunnel_qos=None, per_tunnel_qos_variable=None, qos_adaptive=None, qos_adaptive_bandwidth_downstream=None, qos_adaptive_bandwidth_upstream=None, qos_adaptive_default_downstream=None, qos_adaptive_default_downstream_variable=None, qos_adaptive_default_upstream=None, qos_adaptive_default_upstream_variable=None, qos_adaptive_max_downstream=None, qos_adaptive_max_downstream_variable=None, qos_adaptive_max_upstream=None, qos_adaptive_max_upstream_variable=None, qos_adaptive_min_downstream=None, qos_adaptive_min_downstream_variable=None, qos_adaptive_min_upstream=None, qos_adaptive_min_upstream_variable=None, qos_adaptive_period=None, qos_adaptive_period_variable=None, qos_shaping_rate=None, qos_shaping_rate_variable=None, service_provider=None, service_provider_variable=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, tloc_extension=None, tloc_extension_variable=None, tracker=None, tracker_variable=None, transport_wan_vpn_feature_id=None, tunnel_interface=None, tunnel_interface_allow_all=None, tunnel_interface_allow_all_variable=None, tunnel_interface_allow_bfd=None, tunnel_interface_allow_bfd_variable=None, tunnel_interface_allow_bgp=None, tunnel_interface_allow_bgp_variable=None, tunnel_interface_allow_dhcp=None, tunnel_interface_allow_dhcp_variable=None, tunnel_interface_allow_dns=None, tunnel_interface_allow_dns_variable=None, tunnel_interface_allow_https=None, tunnel_interface_allow_https_variable=None, tunnel_interface_allow_icmp=None, tunnel_interface_allow_icmp_variable=None, tunnel_interface_allow_netconf=None, tunnel_interface_allow_netconf_variable=None, tunnel_interface_allow_ntp=None, tunnel_interface_allow_ntp_variable=None, tunnel_interface_allow_ospf=None, tunnel_interface_allow_ospf_variable=None, tunnel_interface_allow_snmp=None, tunnel_interface_allow_snmp_variable=None, tunnel_interface_allow_ssh=None, tunnel_interface_allow_ssh_variable=None, tunnel_interface_allow_stun=None, tunnel_interface_allow_stun_variable=None, tunnel_interface_bind_loopback_tunnel=None, tunnel_interface_bind_loopback_tunnel_variable=None, tunnel_interface_border=None, tunnel_interface_border_variable=None, tunnel_interface_carrier=None, tunnel_interface_carrier_variable=None, tunnel_interface_clear_dont_fragment=None, tunnel_interface_clear_dont_fragment_variable=None, tunnel_interface_color=None, tunnel_interface_color_restrict=None, tunnel_interface_color_restrict_variable=None, tunnel_interface_color_variable=None, tunnel_interface_encapsulations=None, tunnel_interface_exclude_controller_group_list_variable=None, tunnel_interface_exclude_controller_group_lists=None, tunnel_interface_groups=None, tunnel_interface_groups_variable=None, tunnel_interface_hello_interval=None, tunnel_interface_hello_interval_variable=None, tunnel_interface_hello_tolerance=None, tunnel_interface_hello_tolerance_variable=None, tunnel_interface_last_resort_circuit=None, tunnel_interface_last_resort_circuit_variable=None, tunnel_interface_low_bandwidth_link=None, tunnel_interface_low_bandwidth_link_variable=None, tunnel_interface_max_control_connections=None, tunnel_interface_max_control_connections_variable=None, tunnel_interface_nat_refresh_interval=None, tunnel_interface_nat_refresh_interval_variable=None, tunnel_interface_network_broadcast=None, tunnel_interface_network_broadcast_variable=None, tunnel_interface_port_hop=None, tunnel_interface_port_hop_variable=None, tunnel_interface_tunnel_tcp_mss=None, tunnel_interface_tunnel_tcp_mss_variable=None, tunnel_interface_vbond_as_stun_server=None, tunnel_interface_vbond_as_stun_server_variable=None, tunnel_interface_vmanage_connection_preference=None, tunnel_interface_vmanage_connection_preference_variable=None, tunnel_qos_mode=None, tunnel_qos_mode_variable=None, version=None):
         if acl_ipv4_egress_feature_id and not isinstance(acl_ipv4_egress_feature_id, str):
             raise TypeError("Expected argument 'acl_ipv4_egress_feature_id' to be a str")
         pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
@@ -58,6 +58,12 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if enable_ipv6 and not isinstance(enable_ipv6, bool):
+            raise TypeError("Expected argument 'enable_ipv6' to be a bool")
+        pulumi.set(__self__, "enable_ipv6", enable_ipv6)
+        if enable_ipv6_variable and not isinstance(enable_ipv6_variable, str):
+            raise TypeError("Expected argument 'enable_ipv6_variable' to be a str")
+        pulumi.set(__self__, "enable_ipv6_variable", enable_ipv6_variable)
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -100,6 +106,12 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
         if ipv4_dhcp_helpers and not isinstance(ipv4_dhcp_helpers, list):
             raise TypeError("Expected argument 'ipv4_dhcp_helpers' to be a list")
         pulumi.set(__self__, "ipv4_dhcp_helpers", ipv4_dhcp_helpers)
+        if mrf_core_region_type and not isinstance(mrf_core_region_type, str):
+            raise TypeError("Expected argument 'mrf_core_region_type' to be a str")
+        pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
+        if mrf_enable_core_region and not isinstance(mrf_enable_core_region, bool):
+            raise TypeError("Expected argument 'mrf_enable_core_region' to be a bool")
+        pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
@@ -217,12 +229,6 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
         if transport_wan_vpn_feature_id and not isinstance(transport_wan_vpn_feature_id, str):
             raise TypeError("Expected argument 'transport_wan_vpn_feature_id' to be a str")
         pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
-        if tunnel_bandwidth_percent and not isinstance(tunnel_bandwidth_percent, int):
-            raise TypeError("Expected argument 'tunnel_bandwidth_percent' to be a int")
-        pulumi.set(__self__, "tunnel_bandwidth_percent", tunnel_bandwidth_percent)
-        if tunnel_bandwidth_percent_variable and not isinstance(tunnel_bandwidth_percent_variable, str):
-            raise TypeError("Expected argument 'tunnel_bandwidth_percent_variable' to be a str")
-        pulumi.set(__self__, "tunnel_bandwidth_percent_variable", tunnel_bandwidth_percent_variable)
         if tunnel_interface and not isinstance(tunnel_interface, bool):
             raise TypeError("Expected argument 'tunnel_interface' to be a bool")
         pulumi.set(__self__, "tunnel_interface", tunnel_interface)
@@ -500,6 +506,19 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
         return pulumi.get(self, "description")
 
     @_builtins.property
+    @pulumi.getter(name="enableIpv6")
+    def enable_ipv6(self) -> _builtins.bool:
+        return pulumi.get(self, "enable_ipv6")
+
+    @_builtins.property
+    @pulumi.getter(name="enableIpv6Variable")
+    def enable_ipv6_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enable_ipv6_variable")
+
+    @_builtins.property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> _builtins.str:
         """
@@ -604,6 +623,22 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
         List of DHCP IPv4 helper addresses (min 1, max 8)
         """
         return pulumi.get(self, "ipv4_dhcp_helpers")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> _builtins.str:
+        """
+        Core Region
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> _builtins.bool:
+        """
+        Enable Core Region
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
 
     @_builtins.property
     @pulumi.getter
@@ -913,22 +948,6 @@ class GetTransportWanVpnInterfaceCellularFeatureResult:
         Transport WAN VPN Feature ID
         """
         return pulumi.get(self, "transport_wan_vpn_feature_id")
-
-    @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercent")
-    def tunnel_bandwidth_percent(self) -> _builtins.int:
-        """
-        Tunnels Bandwidth Percent
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent")
-
-    @_builtins.property
-    @pulumi.getter(name="tunnelBandwidthPercentVariable")
-    def tunnel_bandwidth_percent_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterface")
@@ -1499,6 +1518,8 @@ class AwaitableGetTransportWanVpnInterfaceCellularFeatureResult(GetTransportWanV
             bandwidth_upstream=self.bandwidth_upstream,
             bandwidth_upstream_variable=self.bandwidth_upstream_variable,
             description=self.description,
+            enable_ipv6=self.enable_ipv6,
+            enable_ipv6_variable=self.enable_ipv6_variable,
             feature_profile_id=self.feature_profile_id,
             id=self.id,
             interface_description=self.interface_description,
@@ -1513,6 +1534,8 @@ class AwaitableGetTransportWanVpnInterfaceCellularFeatureResult(GetTransportWanV
             ip_mtu_variable=self.ip_mtu_variable,
             ipv4_dhcp_helper_variable=self.ipv4_dhcp_helper_variable,
             ipv4_dhcp_helpers=self.ipv4_dhcp_helpers,
+            mrf_core_region_type=self.mrf_core_region_type,
+            mrf_enable_core_region=self.mrf_enable_core_region,
             name=self.name,
             nat_ipv4=self.nat_ipv4,
             nat_ipv4_variable=self.nat_ipv4_variable,
@@ -1552,8 +1575,6 @@ class AwaitableGetTransportWanVpnInterfaceCellularFeatureResult(GetTransportWanV
             tracker=self.tracker,
             tracker_variable=self.tracker_variable,
             transport_wan_vpn_feature_id=self.transport_wan_vpn_feature_id,
-            tunnel_bandwidth_percent=self.tunnel_bandwidth_percent,
-            tunnel_bandwidth_percent_variable=self.tunnel_bandwidth_percent_variable,
             tunnel_interface=self.tunnel_interface,
             tunnel_interface_allow_all=self.tunnel_interface_allow_all,
             tunnel_interface_allow_all_variable=self.tunnel_interface_allow_all_variable,
@@ -1666,6 +1687,8 @@ def get_transport_wan_vpn_interface_cellular_feature(feature_profile_id: Optiona
         bandwidth_upstream=pulumi.get(__ret__, 'bandwidth_upstream'),
         bandwidth_upstream_variable=pulumi.get(__ret__, 'bandwidth_upstream_variable'),
         description=pulumi.get(__ret__, 'description'),
+        enable_ipv6=pulumi.get(__ret__, 'enable_ipv6'),
+        enable_ipv6_variable=pulumi.get(__ret__, 'enable_ipv6_variable'),
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
         id=pulumi.get(__ret__, 'id'),
         interface_description=pulumi.get(__ret__, 'interface_description'),
@@ -1680,6 +1703,8 @@ def get_transport_wan_vpn_interface_cellular_feature(feature_profile_id: Optiona
         ip_mtu_variable=pulumi.get(__ret__, 'ip_mtu_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__ret__, 'ipv4_dhcp_helper_variable'),
         ipv4_dhcp_helpers=pulumi.get(__ret__, 'ipv4_dhcp_helpers'),
+        mrf_core_region_type=pulumi.get(__ret__, 'mrf_core_region_type'),
+        mrf_enable_core_region=pulumi.get(__ret__, 'mrf_enable_core_region'),
         name=pulumi.get(__ret__, 'name'),
         nat_ipv4=pulumi.get(__ret__, 'nat_ipv4'),
         nat_ipv4_variable=pulumi.get(__ret__, 'nat_ipv4_variable'),
@@ -1719,8 +1744,6 @@ def get_transport_wan_vpn_interface_cellular_feature(feature_profile_id: Optiona
         tracker=pulumi.get(__ret__, 'tracker'),
         tracker_variable=pulumi.get(__ret__, 'tracker_variable'),
         transport_wan_vpn_feature_id=pulumi.get(__ret__, 'transport_wan_vpn_feature_id'),
-        tunnel_bandwidth_percent=pulumi.get(__ret__, 'tunnel_bandwidth_percent'),
-        tunnel_bandwidth_percent_variable=pulumi.get(__ret__, 'tunnel_bandwidth_percent_variable'),
         tunnel_interface=pulumi.get(__ret__, 'tunnel_interface'),
         tunnel_interface_allow_all=pulumi.get(__ret__, 'tunnel_interface_allow_all'),
         tunnel_interface_allow_all_variable=pulumi.get(__ret__, 'tunnel_interface_allow_all_variable'),
@@ -1830,6 +1853,8 @@ def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: 
         bandwidth_upstream=pulumi.get(__response__, 'bandwidth_upstream'),
         bandwidth_upstream_variable=pulumi.get(__response__, 'bandwidth_upstream_variable'),
         description=pulumi.get(__response__, 'description'),
+        enable_ipv6=pulumi.get(__response__, 'enable_ipv6'),
+        enable_ipv6_variable=pulumi.get(__response__, 'enable_ipv6_variable'),
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
         id=pulumi.get(__response__, 'id'),
         interface_description=pulumi.get(__response__, 'interface_description'),
@@ -1844,6 +1869,8 @@ def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: 
         ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
         ipv4_dhcp_helpers=pulumi.get(__response__, 'ipv4_dhcp_helpers'),
+        mrf_core_region_type=pulumi.get(__response__, 'mrf_core_region_type'),
+        mrf_enable_core_region=pulumi.get(__response__, 'mrf_enable_core_region'),
         name=pulumi.get(__response__, 'name'),
         nat_ipv4=pulumi.get(__response__, 'nat_ipv4'),
         nat_ipv4_variable=pulumi.get(__response__, 'nat_ipv4_variable'),
@@ -1883,8 +1910,6 @@ def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: 
         tracker=pulumi.get(__response__, 'tracker'),
         tracker_variable=pulumi.get(__response__, 'tracker_variable'),
         transport_wan_vpn_feature_id=pulumi.get(__response__, 'transport_wan_vpn_feature_id'),
-        tunnel_bandwidth_percent=pulumi.get(__response__, 'tunnel_bandwidth_percent'),
-        tunnel_bandwidth_percent_variable=pulumi.get(__response__, 'tunnel_bandwidth_percent_variable'),
         tunnel_interface=pulumi.get(__response__, 'tunnel_interface'),
         tunnel_interface_allow_all=pulumi.get(__response__, 'tunnel_interface_allow_all'),
         tunnel_interface_allow_all_variable=pulumi.get(__response__, 'tunnel_interface_allow_all_variable'),

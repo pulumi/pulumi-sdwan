@@ -58,7 +58,7 @@ export interface GetTransportTrackerFeatureResult {
      */
     readonly endpointApiUrlVariable: string;
     /**
-     * Endpoint DNS Name
+     * DNS Name
      */
     readonly endpointDnsName: string;
     /**
@@ -66,7 +66,7 @@ export interface GetTransportTrackerFeatureResult {
      */
     readonly endpointDnsNameVariable: string;
     /**
-     * Endpoint IP
+     * IP
      */
     readonly endpointIp: string;
     /**
@@ -78,19 +78,23 @@ export interface GetTransportTrackerFeatureResult {
      */
     readonly endpointTrackerType: string;
     /**
-     * Variable name
-     */
-    readonly endpointTrackerTypeVariable: string;
-    /**
      * Feature Profile ID
      */
     readonly featureProfileId: string;
+    /**
+     * Probe Interval
+     */
+    readonly icmpInterval: number;
+    /**
+     * Variable name
+     */
+    readonly icmpIntervalVariable: string;
     /**
      * The id of the Feature
      */
     readonly id: string;
     /**
-     * Interval
+     * Probe Interval
      */
     readonly interval: number;
     /**

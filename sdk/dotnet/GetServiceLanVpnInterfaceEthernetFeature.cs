@@ -250,13 +250,17 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv4Address;
         /// <summary>
+        /// address type
+        /// </summary>
+        public readonly string Ipv4AddressType;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv4AddressTypeVariable;
+        /// <summary>
         /// Variable name
         /// </summary>
         public readonly string Ipv4AddressVariable;
-        /// <summary>
-        /// IPv4 Configuration Type
-        /// </summary>
-        public readonly string Ipv4ConfigurationType;
         /// <summary>
         /// DHCP Distance
         /// </summary>
@@ -354,13 +358,17 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv6Address;
         /// <summary>
+        /// address type
+        /// </summary>
+        public readonly string Ipv6AddressType;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv6AddressTypeVariable;
+        /// <summary>
         /// Variable name
         /// </summary>
         public readonly string Ipv6AddressVariable;
-        /// <summary>
-        /// IPv6 Configuration Type
-        /// </summary>
-        public readonly string Ipv6ConfigurationType;
         /// <summary>
         /// DHCPv6 Helper
         /// </summary>
@@ -635,9 +643,11 @@ namespace Pulumi.Sdwan
 
             string ipv4Address,
 
-            string ipv4AddressVariable,
+            string ipv4AddressType,
 
-            string ipv4ConfigurationType,
+            string ipv4AddressTypeVariable,
+
+            string ipv4AddressVariable,
 
             int ipv4DhcpDistance,
 
@@ -687,9 +697,11 @@ namespace Pulumi.Sdwan
 
             string ipv6Address,
 
-            string ipv6AddressVariable,
+            string ipv6AddressType,
 
-            string ipv6ConfigurationType,
+            string ipv6AddressTypeVariable,
+
+            string ipv6AddressVariable,
 
             ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperResult> ipv6DhcpHelpers,
 
@@ -831,8 +843,9 @@ namespace Pulumi.Sdwan
             IpMtu = ipMtu;
             IpMtuVariable = ipMtuVariable;
             Ipv4Address = ipv4Address;
+            Ipv4AddressType = ipv4AddressType;
+            Ipv4AddressTypeVariable = ipv4AddressTypeVariable;
             Ipv4AddressVariable = ipv4AddressVariable;
-            Ipv4ConfigurationType = ipv4ConfigurationType;
             Ipv4DhcpDistance = ipv4DhcpDistance;
             Ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             Ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -857,8 +870,9 @@ namespace Pulumi.Sdwan
             Ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             Ipv4Vrrps = ipv4Vrrps;
             Ipv6Address = ipv6Address;
+            Ipv6AddressType = ipv6AddressType;
+            Ipv6AddressTypeVariable = ipv6AddressTypeVariable;
             Ipv6AddressVariable = ipv6AddressVariable;
-            Ipv6ConfigurationType = ipv6ConfigurationType;
             Ipv6DhcpHelpers = ipv6DhcpHelpers;
             Ipv6DhcpSecondaryAddresses = ipv6DhcpSecondaryAddresses;
             Ipv6Nat = ipv6Nat;

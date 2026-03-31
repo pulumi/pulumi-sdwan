@@ -95,7 +95,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? LsaRetransmitIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set MD5 authentication key
+        /// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         [Input("messageDigestKey")]
         public Input<string>? MessageDigestKey { get; set; }

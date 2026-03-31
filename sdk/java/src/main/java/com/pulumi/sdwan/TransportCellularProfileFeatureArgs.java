@@ -222,14 +222,14 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
      * 
      */
     @Import(name="profilePassword")
     private @Nullable Output<String> profilePassword;
 
     /**
-     * @return Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+     * @return Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
      * 
      */
     public Optional<Output<String>> profilePassword() {
@@ -621,7 +621,7 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param profilePassword Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+         * @param profilePassword Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
          * 
          * @return builder
          * 
@@ -632,7 +632,7 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param profilePassword Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
+         * @param profilePassword Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
          * 
          * @return builder
          * 

@@ -308,7 +308,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     @Import(name="advertiseIpv6Connected")
@@ -316,7 +316,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * @return Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Connected() {
@@ -468,7 +468,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     @Import(name="advertiseIpv6Static")
@@ -476,7 +476,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * @return Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Static() {
@@ -530,6 +530,38 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
      */
     public Optional<Output<String>> advertisementIntervalVariable() {
         return Optional.ofNullable(this.advertisementIntervalVariable);
+    }
+
+    /**
+     * Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="aspathAutoTranslation")
+    private @Nullable Output<Boolean> aspathAutoTranslation;
+
+    /**
+     * @return Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> aspathAutoTranslation() {
+        return Optional.ofNullable(this.aspathAutoTranslation);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="aspathAutoTranslationVariable")
+    private @Nullable Output<String> aspathAutoTranslationVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> aspathAutoTranslationVariable() {
+        return Optional.ofNullable(this.aspathAutoTranslationVariable);
     }
 
     /**
@@ -942,18 +974,48 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Site Types
+     * Site Types for 20.12 backward compatiblity
      * 
      */
     @Import(name="siteTypes")
     private @Nullable Output<List<String>> siteTypes;
 
     /**
-     * @return Site Types
+     * @return Site Types for 20.12 backward compatiblity
      * 
      */
     public Optional<Output<List<String>>> siteTypes() {
         return Optional.ofNullable(this.siteTypes);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="siteTypesForTransportGatewayVariable")
+    private @Nullable Output<String> siteTypesForTransportGatewayVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> siteTypesForTransportGatewayVariable() {
+        return Optional.ofNullable(this.siteTypesForTransportGatewayVariable);
+    }
+
+    /**
+     * Site Types
+     * 
+     */
+    @Import(name="siteTypesForTransportGateways")
+    private @Nullable Output<List<String>> siteTypesForTransportGateways;
+
+    /**
+     * @return Site Types
+     * 
+     */
+    public Optional<Output<List<String>>> siteTypesForTransportGateways() {
+        return Optional.ofNullable(this.siteTypesForTransportGateways);
     }
 
     /**
@@ -1053,6 +1115,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         this.advertiseIpv6StaticVariable = $.advertiseIpv6StaticVariable;
         this.advertisementInterval = $.advertisementInterval;
         this.advertisementIntervalVariable = $.advertisementIntervalVariable;
+        this.aspathAutoTranslation = $.aspathAutoTranslation;
+        this.aspathAutoTranslationVariable = $.aspathAutoTranslationVariable;
         this.description = $.description;
         this.ecmpLimit = $.ecmpLimit;
         this.ecmpLimitVariable = $.ecmpLimitVariable;
@@ -1079,6 +1143,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         this.shutdown = $.shutdown;
         this.shutdownVariable = $.shutdownVariable;
         this.siteTypes = $.siteTypes;
+        this.siteTypesForTransportGatewayVariable = $.siteTypesForTransportGatewayVariable;
+        this.siteTypesForTransportGateways = $.siteTypesForTransportGateways;
         this.siteTypesVariable = $.siteTypesVariable;
         this.transportGateway = $.transportGateway;
         this.transportGatewayVariable = $.transportGatewayVariable;
@@ -1501,7 +1567,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param advertiseIpv6Connected Connected
-         *   - Default value: `false`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1513,7 +1579,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param advertiseIpv6Connected Connected
-         *   - Default value: `false`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1721,7 +1787,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param advertiseIpv6Static Static
-         *   - Default value: `false`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1733,7 +1799,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param advertiseIpv6Static Static
-         *   - Default value: `false`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1807,6 +1873,50 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
          */
         public Builder advertisementIntervalVariable(String advertisementIntervalVariable) {
             return advertisementIntervalVariable(Output.of(advertisementIntervalVariable));
+        }
+
+        /**
+         * @param aspathAutoTranslation Enable BGP AS Path Auto-Translation
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aspathAutoTranslation(@Nullable Output<Boolean> aspathAutoTranslation) {
+            $.aspathAutoTranslation = aspathAutoTranslation;
+            return this;
+        }
+
+        /**
+         * @param aspathAutoTranslation Enable BGP AS Path Auto-Translation
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aspathAutoTranslation(Boolean aspathAutoTranslation) {
+            return aspathAutoTranslation(Output.of(aspathAutoTranslation));
+        }
+
+        /**
+         * @param aspathAutoTranslationVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aspathAutoTranslationVariable(@Nullable Output<String> aspathAutoTranslationVariable) {
+            $.aspathAutoTranslationVariable = aspathAutoTranslationVariable;
+            return this;
+        }
+
+        /**
+         * @param aspathAutoTranslationVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aspathAutoTranslationVariable(String aspathAutoTranslationVariable) {
+            return aspathAutoTranslationVariable(Output.of(aspathAutoTranslationVariable));
         }
 
         /**
@@ -2369,7 +2479,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param siteTypes Site Types
+         * @param siteTypes Site Types for 20.12 backward compatiblity
          * 
          * @return builder
          * 
@@ -2380,7 +2490,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param siteTypes Site Types
+         * @param siteTypes Site Types for 20.12 backward compatiblity
          * 
          * @return builder
          * 
@@ -2390,13 +2500,65 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param siteTypes Site Types
+         * @param siteTypes Site Types for 20.12 backward compatiblity
          * 
          * @return builder
          * 
          */
         public Builder siteTypes(String... siteTypes) {
             return siteTypes(List.of(siteTypes));
+        }
+
+        /**
+         * @param siteTypesForTransportGatewayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteTypesForTransportGatewayVariable(@Nullable Output<String> siteTypesForTransportGatewayVariable) {
+            $.siteTypesForTransportGatewayVariable = siteTypesForTransportGatewayVariable;
+            return this;
+        }
+
+        /**
+         * @param siteTypesForTransportGatewayVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteTypesForTransportGatewayVariable(String siteTypesForTransportGatewayVariable) {
+            return siteTypesForTransportGatewayVariable(Output.of(siteTypesForTransportGatewayVariable));
+        }
+
+        /**
+         * @param siteTypesForTransportGateways Site Types
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteTypesForTransportGateways(@Nullable Output<List<String>> siteTypesForTransportGateways) {
+            $.siteTypesForTransportGateways = siteTypesForTransportGateways;
+            return this;
+        }
+
+        /**
+         * @param siteTypesForTransportGateways Site Types
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteTypesForTransportGateways(List<String> siteTypesForTransportGateways) {
+            return siteTypesForTransportGateways(Output.of(siteTypesForTransportGateways));
+        }
+
+        /**
+         * @param siteTypesForTransportGateways Site Types
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteTypesForTransportGateways(String... siteTypesForTransportGateways) {
+            return siteTypesForTransportGateways(List.of(siteTypesForTransportGateways));
         }
 
         /**

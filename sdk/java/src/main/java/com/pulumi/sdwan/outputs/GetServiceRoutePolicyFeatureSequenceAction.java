@@ -13,7 +13,7 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceRoutePolicyFeatureSequenceAction {
-    private List<Integer> asPathPrepends;
+    private List<String> asPathPrepends;
     private List<String> communities;
     private Boolean communityAdditive;
     /**
@@ -68,7 +68,7 @@ public final class GetServiceRoutePolicyFeatureSequenceAction {
     private Integer weight;
 
     private GetServiceRoutePolicyFeatureSequenceAction() {}
-    public List<Integer> asPathPrepends() {
+    public List<String> asPathPrepends() {
         return this.asPathPrepends;
     }
     public List<String> communities() {
@@ -157,7 +157,7 @@ public final class GetServiceRoutePolicyFeatureSequenceAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private List<Integer> asPathPrepends;
+        private List<String> asPathPrepends;
         private List<String> communities;
         private Boolean communityAdditive;
         private String communityVariable;
@@ -189,14 +189,14 @@ public final class GetServiceRoutePolicyFeatureSequenceAction {
         }
 
         @CustomType.Setter
-        public Builder asPathPrepends(List<Integer> asPathPrepends) {
+        public Builder asPathPrepends(List<String> asPathPrepends) {
             if (asPathPrepends == null) {
               throw new MissingRequiredPropertyException("GetServiceRoutePolicyFeatureSequenceAction", "asPathPrepends");
             }
             this.asPathPrepends = asPathPrepends;
             return this;
         }
-        public Builder asPathPrepends(Integer... asPathPrepends) {
+        public Builder asPathPrepends(String... asPathPrepends) {
             return asPathPrepends(List.of(asPathPrepends));
         }
         @CustomType.Setter

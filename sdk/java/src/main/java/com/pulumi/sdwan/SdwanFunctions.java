@@ -24,6 +24,8 @@ import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
+import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyPlainArgs;
 import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyArgs;
 import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyPlainArgs;
 import com.pulumi.sdwan.inputs.GetApplicationPriorityTrafficPolicyPolicyArgs;
@@ -130,6 +132,10 @@ import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
 import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplatePlainArgs;
 import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
+import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyPlainArgs;
+import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
+import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyPlainArgs;
 import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetExtendedCommunityListPolicyObjectArgs;
@@ -232,6 +238,8 @@ import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZonePlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
@@ -499,6 +507,7 @@ import com.pulumi.sdwan.outputs.GetAppProbeClassPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetApplicationAwareRoutingPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetApplicationListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetApplicationPriorityFeatureProfileResult;
+import com.pulumi.sdwan.outputs.GetApplicationPriorityPolicySettingsPolicyResult;
 import com.pulumi.sdwan.outputs.GetApplicationPriorityQosPolicyResult;
 import com.pulumi.sdwan.outputs.GetApplicationPriorityTrafficPolicyPolicyResult;
 import com.pulumi.sdwan.outputs.GetAsPathListPolicyObjectResult;
@@ -552,6 +561,8 @@ import com.pulumi.sdwan.outputs.GetDnsSecurityPolicyResult;
 import com.pulumi.sdwan.outputs.GetDomainListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetEigrpFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetEmbeddedSecurityFeatureProfileResult;
+import com.pulumi.sdwan.outputs.GetEmbeddedSecurityNgfwPolicyResult;
+import com.pulumi.sdwan.outputs.GetEmbeddedSecurityPolicyResult;
 import com.pulumi.sdwan.outputs.GetExpandedCommunityListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetExtendedCommunityListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetFeatureDeviceTemplateResult;
@@ -603,6 +614,7 @@ import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityProtocolListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityScalableGroupTagListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityUrlAllowListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityUrlBlockListResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityZoneResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSlaClassListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectStandardCommunityListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectTlocListResult;
@@ -2136,6 +2148,211 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetApplicationPriorityFeatureProfileResult> getApplicationPriorityFeatureProfilePlain(GetApplicationPriorityFeatureProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", TypeShape.of(GetApplicationPriorityFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Application Priority Policy Settings Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetApplicationPriorityPolicySettingsPolicyResult> getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs args) {
+        return getApplicationPriorityPolicySettingsPolicy(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Application Priority Policy Settings Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetApplicationPriorityPolicySettingsPolicyResult> getApplicationPriorityPolicySettingsPolicyPlain(GetApplicationPriorityPolicySettingsPolicyPlainArgs args) {
+        return getApplicationPriorityPolicySettingsPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Application Priority Policy Settings Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetApplicationPriorityPolicySettingsPolicyResult> getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getApplicationPriorityPolicySettingsPolicy:getApplicationPriorityPolicySettingsPolicy", TypeShape.of(GetApplicationPriorityPolicySettingsPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Application Priority Policy Settings Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetApplicationPriorityPolicySettingsPolicyResult> getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getApplicationPriorityPolicySettingsPolicy:getApplicationPriorityPolicySettingsPolicy", TypeShape.of(GetApplicationPriorityPolicySettingsPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Application Priority Policy Settings Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getApplicationPriorityPolicySettingsPolicy(GetApplicationPriorityPolicySettingsPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetApplicationPriorityPolicySettingsPolicyResult> getApplicationPriorityPolicySettingsPolicyPlain(GetApplicationPriorityPolicySettingsPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getApplicationPriorityPolicySettingsPolicy:getApplicationPriorityPolicySettingsPolicy", TypeShape.of(GetApplicationPriorityPolicySettingsPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Application Priority QoS Policy.
@@ -15325,6 +15542,416 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", TypeShape.of(GetEmbeddedSecurityFeatureProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Embedded Security NGFW Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetEmbeddedSecurityNgfwPolicyResult> getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs args) {
+        return getEmbeddedSecurityNgfwPolicy(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Embedded Security NGFW Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetEmbeddedSecurityNgfwPolicyResult> getEmbeddedSecurityNgfwPolicyPlain(GetEmbeddedSecurityNgfwPolicyPlainArgs args) {
+        return getEmbeddedSecurityNgfwPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Embedded Security NGFW Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetEmbeddedSecurityNgfwPolicyResult> getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", TypeShape.of(GetEmbeddedSecurityNgfwPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Embedded Security NGFW Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetEmbeddedSecurityNgfwPolicyResult> getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", TypeShape.of(GetEmbeddedSecurityNgfwPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Embedded Security NGFW Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityNgfwPolicy(GetEmbeddedSecurityNgfwPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetEmbeddedSecurityNgfwPolicyResult> getEmbeddedSecurityNgfwPolicyPlain(GetEmbeddedSecurityNgfwPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", TypeShape.of(GetEmbeddedSecurityNgfwPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Embedded Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetEmbeddedSecurityPolicyResult> getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs args) {
+        return getEmbeddedSecurityPolicy(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Embedded Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetEmbeddedSecurityPolicyResult> getEmbeddedSecurityPolicyPlain(GetEmbeddedSecurityPolicyPlainArgs args) {
+        return getEmbeddedSecurityPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Embedded Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetEmbeddedSecurityPolicyResult> getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getEmbeddedSecurityPolicy:getEmbeddedSecurityPolicy", TypeShape.of(GetEmbeddedSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Embedded Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetEmbeddedSecurityPolicyResult> getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getEmbeddedSecurityPolicy:getEmbeddedSecurityPolicy", TypeShape.of(GetEmbeddedSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Embedded Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getEmbeddedSecurityPolicy(GetEmbeddedSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetEmbeddedSecurityPolicyResult> getEmbeddedSecurityPolicyPlain(GetEmbeddedSecurityPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getEmbeddedSecurityPolicy:getEmbeddedSecurityPolicy", TypeShape.of(GetEmbeddedSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Expanded Community List Policy Object .
      * 
      * ## Example Usage
@@ -25743,6 +26370,211 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetPolicyObjectSecurityUrlBlockListResult> getPolicyObjectSecurityUrlBlockListPlain(GetPolicyObjectSecurityUrlBlockListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectSecurityUrlBlockList:getPolicyObjectSecurityUrlBlockList", TypeShape.of(GetPolicyObjectSecurityUrlBlockListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Security Zone Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectSecurityZoneResult> getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs args) {
+        return getPolicyObjectSecurityZone(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Security Zone Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectSecurityZoneResult> getPolicyObjectSecurityZonePlain(GetPolicyObjectSecurityZonePlainArgs args) {
+        return getPolicyObjectSecurityZonePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Security Zone Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectSecurityZoneResult> getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectSecurityZone:getPolicyObjectSecurityZone", TypeShape.of(GetPolicyObjectSecurityZoneResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Security Zone Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectSecurityZoneResult> getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectSecurityZone:getPolicyObjectSecurityZone", TypeShape.of(GetPolicyObjectSecurityZoneResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Security Zone Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityZone(GetPolicyObjectSecurityZoneArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectSecurityZoneResult> getPolicyObjectSecurityZonePlain(GetPolicyObjectSecurityZonePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectSecurityZone:getPolicyObjectSecurityZone", TypeShape.of(GetPolicyObjectSecurityZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Policy Object SLA Class List Policy_object.

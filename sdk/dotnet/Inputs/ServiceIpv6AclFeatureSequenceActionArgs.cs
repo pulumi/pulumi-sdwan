@@ -38,6 +38,44 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AcceptSetNextHop { get; set; }
 
         /// <summary>
+        /// fallback, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("acceptSetServiceChainFallback")]
+        public Input<bool>? AcceptSetServiceChainFallback { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        /// </summary>
+        [Input("acceptSetServiceChainFallbackVariable")]
+        public Input<string>? AcceptSetServiceChainFallbackVariable { get; set; }
+
+        /// <summary>
+        /// Set Service Chain Number
+        ///   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        /// </summary>
+        [Input("acceptSetServiceChainName")]
+        public Input<string>? AcceptSetServiceChainName { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("acceptSetServiceChainNameVariable")]
+        public Input<string>? AcceptSetServiceChainNameVariable { get; set; }
+
+        /// <summary>
+        /// Set Service Chain VPN, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        /// </summary>
+        [Input("acceptSetServiceChainVpn")]
+        public Input<int>? AcceptSetServiceChainVpn { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        /// </summary>
+        [Input("acceptSetServiceChainVpnVariable")]
+        public Input<string>? AcceptSetServiceChainVpnVariable { get; set; }
+
+        /// <summary>
         /// set traffic class number
         ///   - Range: `0`-`63`
         /// </summary>

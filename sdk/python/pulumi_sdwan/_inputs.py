@@ -343,6 +343,16 @@ __all__ = [
     'EigrpFeatureTemplateInterfaceSummaryAddressArgsDict',
     'EigrpFeatureTemplateKeyArgs',
     'EigrpFeatureTemplateKeyArgsDict',
+    'EmbeddedSecurityNgfwPolicySequenceArgs',
+    'EmbeddedSecurityNgfwPolicySequenceArgsDict',
+    'EmbeddedSecurityNgfwPolicySequenceActionArgs',
+    'EmbeddedSecurityNgfwPolicySequenceActionArgsDict',
+    'EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs',
+    'EmbeddedSecurityNgfwPolicySequenceMatchEntryArgsDict',
+    'EmbeddedSecurityPolicyAssemblyArgs',
+    'EmbeddedSecurityPolicyAssemblyArgsDict',
+    'EmbeddedSecurityPolicyAssemblyEntryArgs',
+    'EmbeddedSecurityPolicyAssemblyEntryArgsDict',
     'ExpandedCommunityListPolicyObjectEntryArgs',
     'ExpandedCommunityListPolicyObjectEntryArgsDict',
     'ExtendedCommunityListPolicyObjectEntryArgs',
@@ -463,6 +473,8 @@ __all__ = [
     'PolicyObjectSecurityUrlAllowListEntryArgsDict',
     'PolicyObjectSecurityUrlBlockListEntryArgs',
     'PolicyObjectSecurityUrlBlockListEntryArgsDict',
+    'PolicyObjectSecurityZoneEntryArgs',
+    'PolicyObjectSecurityZoneEntryArgsDict',
     'PolicyObjectSlaClassListEntryArgs',
     'PolicyObjectSlaClassListEntryArgsDict',
     'PolicyObjectStandardCommunityListEntryArgs',
@@ -31516,6 +31528,822 @@ class EigrpFeatureTemplateKeyArgs:
         pulumi.set(self, "optional", value)
 
 
+class EmbeddedSecurityNgfwPolicySequenceArgsDict(TypedDict):
+    actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgsDict']]]]
+    """
+    can be empty array or with type or parameter
+    """
+    base_action: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    - Choices: `pass`, `inspect`, `drop`
+    """
+    disable_sequence: NotRequired[pulumi.Input[_builtins.bool]]
+    match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceMatchEntryArgsDict']]]]
+    sequence_id: NotRequired[pulumi.Input[_builtins.str]]
+    sequence_name: NotRequired[pulumi.Input[_builtins.str]]
+    sequence_type: NotRequired[pulumi.Input[_builtins.str]]
+
+@pulumi.input_type
+class EmbeddedSecurityNgfwPolicySequenceArgs:
+    def __init__(__self__, *,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgs']]]] = None,
+                 base_action: Optional[pulumi.Input[_builtins.str]] = None,
+                 disable_sequence: Optional[pulumi.Input[_builtins.bool]] = None,
+                 match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs']]]] = None,
+                 sequence_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 sequence_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 sequence_type: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgs']]] actions: can be empty array or with type or parameter
+        :param pulumi.Input[_builtins.str] base_action: - Choices: `pass`, `inspect`, `drop`
+        """
+        if actions is not None:
+            pulumi.set(__self__, "actions", actions)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if disable_sequence is not None:
+            pulumi.set(__self__, "disable_sequence", disable_sequence)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_name is not None:
+            pulumi.set(__self__, "sequence_name", sequence_name)
+        if sequence_type is not None:
+            pulumi.set(__self__, "sequence_type", sequence_type)
+
+    @_builtins.property
+    @pulumi.getter
+    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgs']]]]:
+        """
+        can be empty array or with type or parameter
+        """
+        return pulumi.get(self, "actions")
+
+    @actions.setter
+    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgs']]]]):
+        pulumi.set(self, "actions", value)
+
+    @_builtins.property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        - Choices: `pass`, `inspect`, `drop`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "base_action", value)
+
+    @_builtins.property
+    @pulumi.getter(name="disableSequence")
+    def disable_sequence(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        return pulumi.get(self, "disable_sequence")
+
+    @disable_sequence.setter
+    def disable_sequence(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "disable_sequence", value)
+
+    @_builtins.property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs']]]]:
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "sequence_id")
+
+    @sequence_id.setter
+    def sequence_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "sequence_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceName")
+    def sequence_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "sequence_name")
+
+    @sequence_name.setter
+    def sequence_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "sequence_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sequenceType")
+    def sequence_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "sequence_type")
+
+    @sequence_type.setter
+    def sequence_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "sequence_type", value)
+
+
+class EmbeddedSecurityNgfwPolicySequenceActionArgsDict(TypedDict):
+    parameter: NotRequired[pulumi.Input[_builtins.str]]
+    parameter_id: NotRequired[pulumi.Input[_builtins.str]]
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`, `log`, `connectionEvents`
+    """
+
+@pulumi.input_type
+class EmbeddedSecurityNgfwPolicySequenceActionArgs:
+    def __init__(__self__, *,
+                 parameter: Optional[pulumi.Input[_builtins.str]] = None,
+                 parameter_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] type: - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`, `log`, `connectionEvents`
+        """
+        if parameter is not None:
+            pulumi.set(__self__, "parameter", parameter)
+        if parameter_id is not None:
+            pulumi.set(__self__, "parameter_id", parameter_id)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
+
+    @_builtins.property
+    @pulumi.getter
+    def parameter(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "parameter")
+
+    @parameter.setter
+    def parameter(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "parameter", value)
+
+    @_builtins.property
+    @pulumi.getter(name="parameterId")
+    def parameter_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "parameter_id")
+
+    @parameter_id.setter
+    def parameter_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "parameter_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`, `log`, `connectionEvents`
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "type", value)
+
+
+class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgsDict(TypedDict):
+    app_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    application_families: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    applications: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_data_prefix_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_data_prefixes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_data_prefixes_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    destination_fqdn_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_fqdns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_fqdns_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    destination_geo_location_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_geo_locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_geo_locations_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    destination_port_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_ports_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    destination_scalable_group_tag_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    destination_security_group_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    flat_app_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    protocol_name_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    protocol_names: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    protocols: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_data_prefix_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_data_prefixes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_data_prefixes_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    source_geo_location_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_geo_locations: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_geo_locations_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    source_identity_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_identity_usergroups: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_identity_users: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_port_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_ports_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    source_scalable_group_tag_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    source_security_group_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+
+@pulumi.input_type
+class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 app_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 application_families: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_data_prefix_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_data_prefixes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_data_prefixes_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_fqdn_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_fqdns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_fqdns_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_geo_location_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_geo_locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_geo_locations_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_port_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_ports_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_scalable_group_tag_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destination_security_group_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 flat_app_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 protocol_name_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 protocol_names: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_data_prefix_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_data_prefixes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_data_prefixes_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_geo_location_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_geo_locations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_geo_locations_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_identity_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_identity_usergroups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_identity_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_port_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_ports_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_scalable_group_tag_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_security_group_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] destination_data_prefixes_variable: Variable name
+        :param pulumi.Input[_builtins.str] destination_fqdns_variable: Variable name
+        :param pulumi.Input[_builtins.str] destination_geo_locations_variable: Variable name
+        :param pulumi.Input[_builtins.str] destination_ports_variable: Variable name
+        :param pulumi.Input[_builtins.str] source_data_prefixes_variable: Variable name
+        :param pulumi.Input[_builtins.str] source_geo_locations_variable: Variable name
+        :param pulumi.Input[_builtins.str] source_ports_variable: Variable name
+        """
+        if app_list_ids is not None:
+            pulumi.set(__self__, "app_list_ids", app_list_ids)
+        if application_families is not None:
+            pulumi.set(__self__, "application_families", application_families)
+        if applications is not None:
+            pulumi.set(__self__, "applications", applications)
+        if destination_data_prefix_list_ids is not None:
+            pulumi.set(__self__, "destination_data_prefix_list_ids", destination_data_prefix_list_ids)
+        if destination_data_prefixes is not None:
+            pulumi.set(__self__, "destination_data_prefixes", destination_data_prefixes)
+        if destination_data_prefixes_variable is not None:
+            pulumi.set(__self__, "destination_data_prefixes_variable", destination_data_prefixes_variable)
+        if destination_fqdn_list_ids is not None:
+            pulumi.set(__self__, "destination_fqdn_list_ids", destination_fqdn_list_ids)
+        if destination_fqdns is not None:
+            pulumi.set(__self__, "destination_fqdns", destination_fqdns)
+        if destination_fqdns_variable is not None:
+            pulumi.set(__self__, "destination_fqdns_variable", destination_fqdns_variable)
+        if destination_geo_location_list_ids is not None:
+            pulumi.set(__self__, "destination_geo_location_list_ids", destination_geo_location_list_ids)
+        if destination_geo_locations is not None:
+            pulumi.set(__self__, "destination_geo_locations", destination_geo_locations)
+        if destination_geo_locations_variable is not None:
+            pulumi.set(__self__, "destination_geo_locations_variable", destination_geo_locations_variable)
+        if destination_port_list_ids is not None:
+            pulumi.set(__self__, "destination_port_list_ids", destination_port_list_ids)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if destination_ports_variable is not None:
+            pulumi.set(__self__, "destination_ports_variable", destination_ports_variable)
+        if destination_scalable_group_tag_list_ids is not None:
+            pulumi.set(__self__, "destination_scalable_group_tag_list_ids", destination_scalable_group_tag_list_ids)
+        if destination_security_group_list_ids is not None:
+            pulumi.set(__self__, "destination_security_group_list_ids", destination_security_group_list_ids)
+        if flat_app_list_ids is not None:
+            pulumi.set(__self__, "flat_app_list_ids", flat_app_list_ids)
+        if protocol_name_list_ids is not None:
+            pulumi.set(__self__, "protocol_name_list_ids", protocol_name_list_ids)
+        if protocol_names is not None:
+            pulumi.set(__self__, "protocol_names", protocol_names)
+        if protocols is not None:
+            pulumi.set(__self__, "protocols", protocols)
+        if source_data_prefix_list_ids is not None:
+            pulumi.set(__self__, "source_data_prefix_list_ids", source_data_prefix_list_ids)
+        if source_data_prefixes is not None:
+            pulumi.set(__self__, "source_data_prefixes", source_data_prefixes)
+        if source_data_prefixes_variable is not None:
+            pulumi.set(__self__, "source_data_prefixes_variable", source_data_prefixes_variable)
+        if source_geo_location_list_ids is not None:
+            pulumi.set(__self__, "source_geo_location_list_ids", source_geo_location_list_ids)
+        if source_geo_locations is not None:
+            pulumi.set(__self__, "source_geo_locations", source_geo_locations)
+        if source_geo_locations_variable is not None:
+            pulumi.set(__self__, "source_geo_locations_variable", source_geo_locations_variable)
+        if source_identity_list_ids is not None:
+            pulumi.set(__self__, "source_identity_list_ids", source_identity_list_ids)
+        if source_identity_usergroups is not None:
+            pulumi.set(__self__, "source_identity_usergroups", source_identity_usergroups)
+        if source_identity_users is not None:
+            pulumi.set(__self__, "source_identity_users", source_identity_users)
+        if source_port_list_ids is not None:
+            pulumi.set(__self__, "source_port_list_ids", source_port_list_ids)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if source_ports_variable is not None:
+            pulumi.set(__self__, "source_ports_variable", source_ports_variable)
+        if source_scalable_group_tag_list_ids is not None:
+            pulumi.set(__self__, "source_scalable_group_tag_list_ids", source_scalable_group_tag_list_ids)
+        if source_security_group_list_ids is not None:
+            pulumi.set(__self__, "source_security_group_list_ids", source_security_group_list_ids)
+
+    @_builtins.property
+    @pulumi.getter(name="appListIds")
+    def app_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "app_list_ids")
+
+    @app_list_ids.setter
+    def app_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "app_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="applicationFamilies")
+    def application_families(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "application_families")
+
+    @application_families.setter
+    def application_families(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "application_families", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "applications")
+
+    @applications.setter
+    def applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "applications", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataPrefixListIds")
+    def destination_data_prefix_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_data_prefix_list_ids")
+
+    @destination_data_prefix_list_ids.setter
+    def destination_data_prefix_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_data_prefix_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataPrefixes")
+    def destination_data_prefixes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_data_prefixes")
+
+    @destination_data_prefixes.setter
+    def destination_data_prefixes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_data_prefixes", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationDataPrefixesVariable")
+    def destination_data_prefixes_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_data_prefixes_variable")
+
+    @destination_data_prefixes_variable.setter
+    def destination_data_prefixes_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_data_prefixes_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdnListIds")
+    def destination_fqdn_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_fqdn_list_ids")
+
+    @destination_fqdn_list_ids.setter
+    def destination_fqdn_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_fqdn_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdns")
+    def destination_fqdns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_fqdns")
+
+    @destination_fqdns.setter
+    def destination_fqdns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_fqdns", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationFqdnsVariable")
+    def destination_fqdns_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_fqdns_variable")
+
+    @destination_fqdns_variable.setter
+    def destination_fqdns_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_fqdns_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocationListIds")
+    def destination_geo_location_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_geo_location_list_ids")
+
+    @destination_geo_location_list_ids.setter
+    def destination_geo_location_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_geo_location_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocations")
+    def destination_geo_locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_geo_locations")
+
+    @destination_geo_locations.setter
+    def destination_geo_locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_geo_locations", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationGeoLocationsVariable")
+    def destination_geo_locations_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_geo_locations_variable")
+
+    @destination_geo_locations_variable.setter
+    def destination_geo_locations_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_geo_locations_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPortListIds")
+    def destination_port_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_port_list_ids")
+
+    @destination_port_list_ids.setter
+    def destination_port_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_port_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_ports")
+
+    @destination_ports.setter
+    def destination_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_ports", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationPortsVariable")
+    def destination_ports_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_ports_variable")
+
+    @destination_ports_variable.setter
+    def destination_ports_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_ports_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationScalableGroupTagListIds")
+    def destination_scalable_group_tag_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_scalable_group_tag_list_ids")
+
+    @destination_scalable_group_tag_list_ids.setter
+    def destination_scalable_group_tag_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_scalable_group_tag_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationSecurityGroupListIds")
+    def destination_security_group_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "destination_security_group_list_ids")
+
+    @destination_security_group_list_ids.setter
+    def destination_security_group_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_security_group_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="flatAppListIds")
+    def flat_app_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "flat_app_list_ids")
+
+    @flat_app_list_ids.setter
+    def flat_app_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "flat_app_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNameListIds")
+    def protocol_name_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "protocol_name_list_ids")
+
+    @protocol_name_list_ids.setter
+    def protocol_name_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "protocol_name_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="protocolNames")
+    def protocol_names(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "protocol_names")
+
+    @protocol_names.setter
+    def protocol_names(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "protocol_names", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "protocols")
+
+    @protocols.setter
+    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "protocols", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataPrefixListIds")
+    def source_data_prefix_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_data_prefix_list_ids")
+
+    @source_data_prefix_list_ids.setter
+    def source_data_prefix_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_data_prefix_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataPrefixes")
+    def source_data_prefixes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_data_prefixes")
+
+    @source_data_prefixes.setter
+    def source_data_prefixes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_data_prefixes", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceDataPrefixesVariable")
+    def source_data_prefixes_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_data_prefixes_variable")
+
+    @source_data_prefixes_variable.setter
+    def source_data_prefixes_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_data_prefixes_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocationListIds")
+    def source_geo_location_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_geo_location_list_ids")
+
+    @source_geo_location_list_ids.setter
+    def source_geo_location_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_geo_location_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocations")
+    def source_geo_locations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_geo_locations")
+
+    @source_geo_locations.setter
+    def source_geo_locations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_geo_locations", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceGeoLocationsVariable")
+    def source_geo_locations_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_geo_locations_variable")
+
+    @source_geo_locations_variable.setter
+    def source_geo_locations_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_geo_locations_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIdentityListIds")
+    def source_identity_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_identity_list_ids")
+
+    @source_identity_list_ids.setter
+    def source_identity_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_identity_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIdentityUsergroups")
+    def source_identity_usergroups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_identity_usergroups")
+
+    @source_identity_usergroups.setter
+    def source_identity_usergroups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_identity_usergroups", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIdentityUsers")
+    def source_identity_users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_identity_users")
+
+    @source_identity_users.setter
+    def source_identity_users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_identity_users", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePortListIds")
+    def source_port_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_port_list_ids")
+
+    @source_port_list_ids.setter
+    def source_port_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_port_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_ports")
+
+    @source_ports.setter
+    def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_ports", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourcePortsVariable")
+    def source_ports_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ports_variable")
+
+    @source_ports_variable.setter
+    def source_ports_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_ports_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceScalableGroupTagListIds")
+    def source_scalable_group_tag_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_scalable_group_tag_list_ids")
+
+    @source_scalable_group_tag_list_ids.setter
+    def source_scalable_group_tag_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_scalable_group_tag_list_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceSecurityGroupListIds")
+    def source_security_group_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "source_security_group_list_ids")
+
+    @source_security_group_list_ids.setter
+    def source_security_group_list_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_security_group_list_ids", value)
+
+
+class EmbeddedSecurityPolicyAssemblyArgsDict(TypedDict):
+    advanced_inspection_profile_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyEntryArgsDict']]]]
+    ngfw_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    ssl_decryption_profile_id: NotRequired[pulumi.Input[_builtins.str]]
+
+@pulumi.input_type
+class EmbeddedSecurityPolicyAssemblyArgs:
+    def __init__(__self__, *,
+                 advanced_inspection_profile_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyEntryArgs']]]] = None,
+                 ngfw_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 ssl_decryption_profile_id: Optional[pulumi.Input[_builtins.str]] = None):
+        if advanced_inspection_profile_policy_id is not None:
+            pulumi.set(__self__, "advanced_inspection_profile_policy_id", advanced_inspection_profile_policy_id)
+        if entries is not None:
+            pulumi.set(__self__, "entries", entries)
+        if ngfw_policy_id is not None:
+            pulumi.set(__self__, "ngfw_policy_id", ngfw_policy_id)
+        if ssl_decryption_profile_id is not None:
+            pulumi.set(__self__, "ssl_decryption_profile_id", ssl_decryption_profile_id)
+
+    @_builtins.property
+    @pulumi.getter(name="advancedInspectionProfilePolicyId")
+    def advanced_inspection_profile_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "advanced_inspection_profile_policy_id")
+
+    @advanced_inspection_profile_policy_id.setter
+    def advanced_inspection_profile_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "advanced_inspection_profile_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyEntryArgs']]]]:
+        return pulumi.get(self, "entries")
+
+    @entries.setter
+    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyEntryArgs']]]]):
+        pulumi.set(self, "entries", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ngfwPolicyId")
+    def ngfw_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "ngfw_policy_id")
+
+    @ngfw_policy_id.setter
+    def ngfw_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ngfw_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sslDecryptionProfileId")
+    def ssl_decryption_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "ssl_decryption_profile_id")
+
+    @ssl_decryption_profile_id.setter
+    def ssl_decryption_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ssl_decryption_profile_id", value)
+
+
+class EmbeddedSecurityPolicyAssemblyEntryArgsDict(TypedDict):
+    destination_zone: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    - Choices: `self`, `default`, `untrusted`
+    """
+    destination_zone_list_id: NotRequired[pulumi.Input[_builtins.str]]
+    source_zone: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    - Choices: `self`, `default`, `untrusted`
+    """
+    source_zone_list_id: NotRequired[pulumi.Input[_builtins.str]]
+
+@pulumi.input_type
+class EmbeddedSecurityPolicyAssemblyEntryArgs:
+    def __init__(__self__, *,
+                 destination_zone: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_zone_list_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_zone: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_zone_list_id: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] destination_zone: - Choices: `self`, `default`, `untrusted`
+        :param pulumi.Input[_builtins.str] source_zone: - Choices: `self`, `default`, `untrusted`
+        """
+        if destination_zone is not None:
+            pulumi.set(__self__, "destination_zone", destination_zone)
+        if destination_zone_list_id is not None:
+            pulumi.set(__self__, "destination_zone_list_id", destination_zone_list_id)
+        if source_zone is not None:
+            pulumi.set(__self__, "source_zone", source_zone)
+        if source_zone_list_id is not None:
+            pulumi.set(__self__, "source_zone_list_id", source_zone_list_id)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationZone")
+    def destination_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        - Choices: `self`, `default`, `untrusted`
+        """
+        return pulumi.get(self, "destination_zone")
+
+    @destination_zone.setter
+    def destination_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_zone", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationZoneListId")
+    def destination_zone_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "destination_zone_list_id")
+
+    @destination_zone_list_id.setter
+    def destination_zone_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_zone_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceZone")
+    def source_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        - Choices: `self`, `default`, `untrusted`
+        """
+        return pulumi.get(self, "source_zone")
+
+    @source_zone.setter
+    def source_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_zone", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceZoneListId")
+    def source_zone_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "source_zone_list_id")
+
+    @source_zone_list_id.setter
+    def source_zone_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_zone_list_id", value)
+
+
 class ExpandedCommunityListPolicyObjectEntryArgsDict(TypedDict):
     community: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -36776,6 +37604,39 @@ class PolicyObjectSecurityUrlBlockListEntryArgs:
         pulumi.set(self, "pattern", value)
 
 
+class PolicyObjectSecurityZoneEntryArgsDict(TypedDict):
+    interface: NotRequired[pulumi.Input[_builtins.str]]
+    vpn: NotRequired[pulumi.Input[_builtins.str]]
+
+@pulumi.input_type
+class PolicyObjectSecurityZoneEntryArgs:
+    def __init__(__self__, *,
+                 interface: Optional[pulumi.Input[_builtins.str]] = None,
+                 vpn: Optional[pulumi.Input[_builtins.str]] = None):
+        if interface is not None:
+            pulumi.set(__self__, "interface", interface)
+        if vpn is not None:
+            pulumi.set(__self__, "vpn", vpn)
+
+    @_builtins.property
+    @pulumi.getter
+    def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "interface")
+
+    @interface.setter
+    def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "interface", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> Optional[pulumi.Input[_builtins.str]]:
+        return pulumi.get(self, "vpn")
+
+    @vpn.setter
+    def vpn(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "vpn", value)
+
+
 class PolicyObjectSlaClassListEntryArgsDict(TypedDict):
     app_probe_class_list_id: NotRequired[pulumi.Input[_builtins.str]]
     fallback_best_tunnel_criteria: NotRequired[pulumi.Input[_builtins.str]]
@@ -40208,6 +41069,32 @@ class ServiceIpv4AclFeatureSequenceActionArgsDict(TypedDict):
     """
     Set Next Hop (IPV4 address)
     """
+    accept_set_service_chain_fallback: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Default value: `false`
+    """
+    accept_set_service_chain_fallback_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Set Service Chain Number
+      - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+    """
+    accept_set_service_chain_name_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    accept_set_service_chain_vpn: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
     drop_counter_name: NotRequired[pulumi.Input[_builtins.str]]
     """
     Counter Name
@@ -40227,6 +41114,12 @@ class ServiceIpv4AclFeatureSequenceActionArgs:
                  accept_policer_id: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_set_dscp: Optional[pulumi.Input[_builtins.int]] = None,
                  accept_set_next_hop: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_fallback: Optional[pulumi.Input[_builtins.bool]] = None,
+                 accept_set_service_chain_fallback_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_vpn: Optional[pulumi.Input[_builtins.int]] = None,
+                 accept_set_service_chain_vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  drop_counter_name: Optional[pulumi.Input[_builtins.str]] = None,
                  drop_log: Optional[pulumi.Input[_builtins.bool]] = None):
         """
@@ -40236,6 +41129,14 @@ class ServiceIpv4AclFeatureSequenceActionArgs:
         :param pulumi.Input[_builtins.int] accept_set_dscp: DSCP number
                  - Range: `0`-`63`
         :param pulumi.Input[_builtins.str] accept_set_next_hop: Set Next Hop (IPV4 address)
+        :param pulumi.Input[_builtins.bool] accept_set_service_chain_fallback: fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_fallback_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name: Set Service Chain Number
+                 - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
+        :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.str] drop_counter_name: Counter Name
         :param pulumi.Input[_builtins.bool] drop_log: Enable Log
                  - Default value: `false`
@@ -40252,6 +41153,18 @@ class ServiceIpv4AclFeatureSequenceActionArgs:
             pulumi.set(__self__, "accept_set_dscp", accept_set_dscp)
         if accept_set_next_hop is not None:
             pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if accept_set_service_chain_fallback is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback", accept_set_service_chain_fallback)
+        if accept_set_service_chain_fallback_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback_variable", accept_set_service_chain_fallback_variable)
+        if accept_set_service_chain_name is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name", accept_set_service_chain_name)
+        if accept_set_service_chain_name_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name_variable", accept_set_service_chain_name_variable)
+        if accept_set_service_chain_vpn is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn", accept_set_service_chain_vpn)
+        if accept_set_service_chain_vpn_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn_variable", accept_set_service_chain_vpn_variable)
         if drop_counter_name is not None:
             pulumi.set(__self__, "drop_counter_name", drop_counter_name)
         if drop_log is not None:
@@ -40324,6 +41237,80 @@ class ServiceIpv4AclFeatureSequenceActionArgs:
     @accept_set_next_hop.setter
     def accept_set_next_hop(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "accept_set_next_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallback")
+    def accept_set_service_chain_fallback(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback")
+
+    @accept_set_service_chain_fallback.setter
+    def accept_set_service_chain_fallback(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "accept_set_service_chain_fallback", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallbackVariable")
+    def accept_set_service_chain_fallback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback_variable")
+
+    @accept_set_service_chain_fallback_variable.setter
+    def accept_set_service_chain_fallback_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_fallback_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainName")
+    def accept_set_service_chain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Set Service Chain Number
+          - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        return pulumi.get(self, "accept_set_service_chain_name")
+
+    @accept_set_service_chain_name.setter
+    def accept_set_service_chain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainNameVariable")
+    def accept_set_service_chain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "accept_set_service_chain_name_variable")
+
+    @accept_set_service_chain_name_variable.setter
+    def accept_set_service_chain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpn")
+    def accept_set_service_chain_vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn")
+
+    @accept_set_service_chain_vpn.setter
+    def accept_set_service_chain_vpn(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "accept_set_service_chain_vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpnVariable")
+    def accept_set_service_chain_vpn_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn_variable")
+
+    @accept_set_service_chain_vpn_variable.setter
+    def accept_set_service_chain_vpn_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_vpn_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dropCounterName")
@@ -40801,6 +41788,32 @@ class ServiceIpv6AclFeatureSequenceActionArgsDict(TypedDict):
     """
     Set Next Hop (IPV6 address)
     """
+    accept_set_service_chain_fallback: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Default value: `false`
+    """
+    accept_set_service_chain_fallback_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Set Service Chain Number
+      - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+    """
+    accept_set_service_chain_name_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    accept_set_service_chain_vpn: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
     accept_traffic_class: NotRequired[pulumi.Input[_builtins.int]]
     """
     set traffic class number
@@ -40824,6 +41837,12 @@ class ServiceIpv6AclFeatureSequenceActionArgs:
                  accept_mirror_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_policer_id: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_set_next_hop: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_fallback: Optional[pulumi.Input[_builtins.bool]] = None,
+                 accept_set_service_chain_fallback_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_vpn: Optional[pulumi.Input[_builtins.int]] = None,
+                 accept_set_service_chain_vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_traffic_class: Optional[pulumi.Input[_builtins.int]] = None,
                  drop_counter_name: Optional[pulumi.Input[_builtins.str]] = None,
                  drop_log: Optional[pulumi.Input[_builtins.bool]] = None):
@@ -40832,6 +41851,14 @@ class ServiceIpv6AclFeatureSequenceActionArgs:
         :param pulumi.Input[_builtins.bool] accept_log: Enable Log
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] accept_set_next_hop: Set Next Hop (IPV6 address)
+        :param pulumi.Input[_builtins.bool] accept_set_service_chain_fallback: fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_fallback_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name: Set Service Chain Number
+                 - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
+        :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.int] accept_traffic_class: set traffic class number
                  - Range: `0`-`63`
         :param pulumi.Input[_builtins.str] drop_counter_name: Counter Name
@@ -40848,6 +41875,18 @@ class ServiceIpv6AclFeatureSequenceActionArgs:
             pulumi.set(__self__, "accept_policer_id", accept_policer_id)
         if accept_set_next_hop is not None:
             pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if accept_set_service_chain_fallback is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback", accept_set_service_chain_fallback)
+        if accept_set_service_chain_fallback_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback_variable", accept_set_service_chain_fallback_variable)
+        if accept_set_service_chain_name is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name", accept_set_service_chain_name)
+        if accept_set_service_chain_name_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name_variable", accept_set_service_chain_name_variable)
+        if accept_set_service_chain_vpn is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn", accept_set_service_chain_vpn)
+        if accept_set_service_chain_vpn_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn_variable", accept_set_service_chain_vpn_variable)
         if accept_traffic_class is not None:
             pulumi.set(__self__, "accept_traffic_class", accept_traffic_class)
         if drop_counter_name is not None:
@@ -40909,6 +41948,80 @@ class ServiceIpv6AclFeatureSequenceActionArgs:
     @accept_set_next_hop.setter
     def accept_set_next_hop(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "accept_set_next_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallback")
+    def accept_set_service_chain_fallback(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback")
+
+    @accept_set_service_chain_fallback.setter
+    def accept_set_service_chain_fallback(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "accept_set_service_chain_fallback", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallbackVariable")
+    def accept_set_service_chain_fallback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback_variable")
+
+    @accept_set_service_chain_fallback_variable.setter
+    def accept_set_service_chain_fallback_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_fallback_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainName")
+    def accept_set_service_chain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Set Service Chain Number
+          - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        return pulumi.get(self, "accept_set_service_chain_name")
+
+    @accept_set_service_chain_name.setter
+    def accept_set_service_chain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainNameVariable")
+    def accept_set_service_chain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "accept_set_service_chain_name_variable")
+
+    @accept_set_service_chain_name_variable.setter
+    def accept_set_service_chain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpn")
+    def accept_set_service_chain_vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn")
+
+    @accept_set_service_chain_vpn.setter
+    def accept_set_service_chain_vpn(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "accept_set_service_chain_vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpnVariable")
+    def accept_set_service_chain_vpn_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn_variable")
+
+    @accept_set_service_chain_vpn_variable.setter
+    def accept_set_service_chain_vpn_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_vpn_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="acceptTrafficClass")
@@ -45334,7 +46447,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict(TypedDic
     subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -45352,7 +46465,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
         :param pulumi.Input[_builtins.str] address: IpV4 Address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if address is not None:
@@ -45393,7 +46506,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
     def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -45785,7 +46898,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict(Type
     subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -45803,7 +46916,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs:
         :param pulumi.Input[_builtins.str] address: Ip Address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if address is not None:
@@ -45844,7 +46957,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs:
     def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -48613,7 +49726,7 @@ class ServiceMulticastFeatureMsdpGroupPeerArgsDict(TypedDict):
     """
     peer_authentication_password: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MSDP peer ip password
+    Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     peer_authentication_password_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -48676,7 +49789,7 @@ class ServiceMulticastFeatureMsdpGroupPeerArgs:
         :param pulumi.Input[_builtins.int] keepalive_interval: Set MSDP peer ip keepalive interval
                  - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] keepalive_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] peer_authentication_password: Set MSDP peer ip password
+        :param pulumi.Input[_builtins.str] peer_authentication_password: Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] peer_authentication_password_variable: Variable name
         :param pulumi.Input[_builtins.str] peer_ip: Set MSDP peer ip
         :param pulumi.Input[_builtins.str] peer_ip_variable: Variable name
@@ -48810,7 +49923,7 @@ class ServiceMulticastFeatureMsdpGroupPeerArgs:
     @pulumi.getter(name="peerAuthenticationPassword")
     def peer_authentication_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MSDP peer ip password
+        Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "peer_authentication_password")
 
@@ -49702,7 +50815,7 @@ class ServiceRoutePolicyFeatureSequenceArgs:
 
 
 class ServiceRoutePolicyFeatureSequenceActionArgsDict(TypedDict):
-    as_path_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
+    as_path_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
     communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
     community_additive: NotRequired[pulumi.Input[_builtins.bool]]
     """
@@ -49759,7 +50872,7 @@ class ServiceRoutePolicyFeatureSequenceActionArgsDict(TypedDict):
 @pulumi.input_type
 class ServiceRoutePolicyFeatureSequenceActionArgs:
     def __init__(__self__, *,
-                 as_path_prepends: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 as_path_prepends: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  communities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  community_additive: Optional[pulumi.Input[_builtins.bool]] = None,
                  community_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -49821,11 +50934,11 @@ class ServiceRoutePolicyFeatureSequenceActionArgs:
 
     @_builtins.property
     @pulumi.getter(name="asPathPrepends")
-    def as_path_prepends(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def as_path_prepends(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "as_path_prepends")
 
     @as_path_prepends.setter
-    def as_path_prepends(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def as_path_prepends(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "as_path_prepends", value)
 
     @_builtins.property
@@ -50488,7 +51601,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     password: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 password on TCP connection with BGP peer
+    Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     password_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -50612,7 +51725,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
-        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer
+        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
@@ -50939,7 +52052,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 password on TCP connection with BGP peer
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "password")
 
@@ -51131,6 +52244,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict(TypedDict):
     family_type: NotRequired[pulumi.Input[_builtins.str]]
     """
     Set IPv4 unicast address family
+      - Choices: `ipv4-unicast`
     """
     in_route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
     out_route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
@@ -51217,6 +52331,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
                  - Default value: `75`
         :param pulumi.Input[_builtins.str] disable_peer_threshold_variable: Variable name, Attribute conditional on `policy_type` equal to `disable-peer`
         :param pulumi.Input[_builtins.str] family_type: Set IPv4 unicast address family
+                 - Choices: `ipv4-unicast`
         :param pulumi.Input[_builtins.str] policy_type: Neighbor received maximum prefix policy is disabled.
                  - Choices: `restart`, `off`, `warning-only`, `disable-peer`
         :param pulumi.Input[_builtins.int] restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` equal to `restart`
@@ -51330,6 +52445,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     def family_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set IPv4 unicast address family
+          - Choices: `ipv4-unicast`
         """
         return pulumi.get(self, "family_type")
 
@@ -51579,6 +52695,23 @@ class ServiceRoutingBgpFeatureIpv4NetworkArgs:
 
 
 class ServiceRoutingBgpFeatureIpv4RedistributeArgsDict(TypedDict):
+    metric: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+      - Range: `0`-`4294967295`
+    """
+    metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    ospf_match_route_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `ospf`
+    """
+    ospf_match_routes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+    """
     protocol: NotRequired[pulumi.Input[_builtins.str]]
     """
     Set the protocol to redistribute routes from
@@ -51591,24 +52724,47 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgsDict(TypedDict):
     route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
     translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+    Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
       - Default value: `false`
+    """
+    translate_rib_metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `omp`
     """
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     def __init__(__self__, *,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
+                 metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_route_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_routes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None,
+                 translate_rib_metric_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.int] metric: Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] metric_variable: Variable name
+        :param pulumi.Input[_builtins.str] ospf_match_route_variable: Variable name, Attribute conditional on `protocol` equal to `ospf`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ospf_match_routes: Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
         :param pulumi.Input[_builtins.str] protocol: Set the protocol to redistribute routes from
                  - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] translate_rib_metric_variable: Variable name, Attribute conditional on `protocol` equal to `omp`
         """
+        if metric is not None:
+            pulumi.set(__self__, "metric", metric)
+        if metric_variable is not None:
+            pulumi.set(__self__, "metric_variable", metric_variable)
+        if ospf_match_route_variable is not None:
+            pulumi.set(__self__, "ospf_match_route_variable", ospf_match_route_variable)
+        if ospf_match_routes is not None:
+            pulumi.set(__self__, "ospf_match_routes", ospf_match_routes)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
         if protocol_variable is not None:
@@ -51617,6 +52773,57 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
         if translate_rib_metric is not None:
             pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
+        if translate_rib_metric_variable is not None:
+            pulumi.set(__self__, "translate_rib_metric_variable", translate_rib_metric_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "metric")
+
+    @metric.setter
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="metricVariable")
+    def metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "metric_variable")
+
+    @metric_variable.setter
+    def metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "metric_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRouteVariable")
+    def ospf_match_route_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_route_variable")
+
+    @ospf_match_route_variable.setter
+    def ospf_match_route_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ospf_match_route_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRoutes")
+    def ospf_match_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_routes")
+
+    @ospf_match_routes.setter
+    def ospf_match_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "ospf_match_routes", value)
 
     @_builtins.property
     @pulumi.getter
@@ -51656,7 +52863,7 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     @pulumi.getter(name="translateRibMetric")
     def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+        Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
           - Default value: `false`
         """
         return pulumi.get(self, "translate_rib_metric")
@@ -51664,6 +52871,18 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     @translate_rib_metric.setter
     def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
         pulumi.set(self, "translate_rib_metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetricVariable")
+    def translate_rib_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `omp`
+        """
+        return pulumi.get(self, "translate_rib_metric_variable")
+
+    @translate_rib_metric_variable.setter
+    def translate_rib_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translate_rib_metric_variable", value)
 
 
 class ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict(TypedDict):
@@ -51889,7 +53108,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     password: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 password on TCP connection with BGP peer
+    Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     password_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -52002,7 +53221,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
-        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer
+        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
@@ -52322,7 +53541,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 password on TCP connection with BGP peer
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "password")
 
@@ -52489,6 +53708,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict(TypedDict):
     family_type: NotRequired[pulumi.Input[_builtins.str]]
     """
     Set IPv6 unicast address family
+      - Choices: `ipv6-unicast`
     """
     in_route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
     out_route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
@@ -52575,6 +53795,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs:
                  - Default value: `75`
         :param pulumi.Input[_builtins.str] disable_peer_threshold_variable: Variable name, Attribute conditional on `policy_type` equal to `disable-peer`
         :param pulumi.Input[_builtins.str] family_type: Set IPv6 unicast address family
+                 - Choices: `ipv6-unicast`
         :param pulumi.Input[_builtins.str] policy_type: Neighbor received maximum prefix policy is disabled.
                  - Choices: `restart`, `off`, `warning-only`, `disable-peer`
         :param pulumi.Input[_builtins.int] restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` equal to `restart`
@@ -52688,6 +53909,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs:
     def family_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Set IPv6 unicast address family
+          - Choices: `ipv6-unicast`
         """
         return pulumi.get(self, "family_type")
 
@@ -52904,6 +54126,23 @@ class ServiceRoutingBgpFeatureIpv6NetworkArgs:
 
 
 class ServiceRoutingBgpFeatureIpv6RedistributeArgsDict(TypedDict):
+    metric: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+      - Range: `0`-`4294967295`
+    """
+    metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `ospf`
+    """
+    ospf_match_route_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `ospf`
+    """
+    ospf_match_routes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+    """
     protocol: NotRequired[pulumi.Input[_builtins.str]]
     """
     Set the protocol to redistribute routes from
@@ -52916,24 +54155,47 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgsDict(TypedDict):
     route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
     translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+    Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
       - Default value: `false`
+    """
+    translate_rib_metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `omp`
     """
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
     def __init__(__self__, *,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
+                 metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_route_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_routes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None,
+                 translate_rib_metric_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.int] metric: Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] metric_variable: Variable name, Attribute conditional on `protocol` equal to `ospf`
+        :param pulumi.Input[_builtins.str] ospf_match_route_variable: Variable name, Attribute conditional on `protocol` equal to `ospf`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ospf_match_routes: Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
         :param pulumi.Input[_builtins.str] protocol: Set the protocol to redistribute routes from
                  - Choices: `static`, `connected`, `ospf`, `omp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] translate_rib_metric_variable: Variable name, Attribute conditional on `protocol` equal to `omp`
         """
+        if metric is not None:
+            pulumi.set(__self__, "metric", metric)
+        if metric_variable is not None:
+            pulumi.set(__self__, "metric_variable", metric_variable)
+        if ospf_match_route_variable is not None:
+            pulumi.set(__self__, "ospf_match_route_variable", ospf_match_route_variable)
+        if ospf_match_routes is not None:
+            pulumi.set(__self__, "ospf_match_routes", ospf_match_routes)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
         if protocol_variable is not None:
@@ -52942,6 +54204,57 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
         if translate_rib_metric is not None:
             pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
+        if translate_rib_metric_variable is not None:
+            pulumi.set(__self__, "translate_rib_metric_variable", translate_rib_metric_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "metric")
+
+    @metric.setter
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="metricVariable")
+    def metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "metric_variable")
+
+    @metric_variable.setter
+    def metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "metric_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRouteVariable")
+    def ospf_match_route_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_route_variable")
+
+    @ospf_match_route_variable.setter
+    def ospf_match_route_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ospf_match_route_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRoutes")
+    def ospf_match_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_routes")
+
+    @ospf_match_routes.setter
+    def ospf_match_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "ospf_match_routes", value)
 
     @_builtins.property
     @pulumi.getter
@@ -52981,7 +54294,7 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
     @pulumi.getter(name="translateRibMetric")
     def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+        Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
           - Default value: `false`
         """
         return pulumi.get(self, "translate_rib_metric")
@@ -52989,6 +54302,18 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
     @translate_rib_metric.setter
     def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
         pulumi.set(self, "translate_rib_metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetricVariable")
+    def translate_rib_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `omp`
+        """
+        return pulumi.get(self, "translate_rib_metric_variable")
+
+    @translate_rib_metric_variable.setter
+    def translate_rib_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translate_rib_metric_variable", value)
 
 
 class ServiceRoutingEigrpFeatureInterfaceArgsDict(TypedDict):
@@ -53197,7 +54522,7 @@ class ServiceRoutingEigrpFeatureMd5KeyArgsDict(TypedDict):
     """
     key_string: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 key
+    Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     key_string_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -53215,7 +54540,7 @@ class ServiceRoutingEigrpFeatureMd5KeyArgs:
         :param pulumi.Input[_builtins.int] key_id: Set MD5 key ID
                  - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] key_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] key_string: Set MD5 key
+        :param pulumi.Input[_builtins.str] key_string: Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] key_string_variable: Variable name
         """
         if key_id is not None:
@@ -53256,7 +54581,7 @@ class ServiceRoutingEigrpFeatureMd5KeyArgs:
     @pulumi.getter(name="keyString")
     def key_string(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 key
+        Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "key_string")
 
@@ -53643,7 +54968,7 @@ class ServiceRoutingOspfFeatureAreaInterfaceArgsDict(TypedDict):
     """
     message_digest_key: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 authentication key
+    Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     message_digest_key_id: NotRequired[pulumi.Input[_builtins.int]]
     """
@@ -53734,7 +55059,7 @@ class ServiceRoutingOspfFeatureAreaInterfaceArgs:
                  - Range: `1`-`65535`
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] lsa_retransmit_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] message_digest_key: Set MD5 authentication key
+        :param pulumi.Input[_builtins.str] message_digest_key: Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.int] message_digest_key_id: Set MD5 message digest key
                  - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] message_digest_key_id_variable: Variable name
@@ -53952,7 +55277,7 @@ class ServiceRoutingOspfFeatureAreaInterfaceArgs:
     @pulumi.getter(name="messageDigestKey")
     def message_digest_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 authentication key
+        Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "message_digest_key")
 
@@ -54273,8 +55598,12 @@ class ServiceRoutingOspfFeatureRedistributeArgsDict(TypedDict):
     route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
     translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+    Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
       - Default value: `false`
+    """
+    translate_rib_metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `omp`
     """
 
 @pulumi.input_type
@@ -54285,7 +55614,8 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None,
+                 translate_rib_metric_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes
                  - Default value: `true`
@@ -54293,8 +55623,9 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
         :param pulumi.Input[_builtins.str] protocol: Set the protocol
                  - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.str] translate_rib_metric_variable: Variable name, Attribute conditional on `protocol` equal to `omp`
         """
         if nat_dia is not None:
             pulumi.set(__self__, "nat_dia", nat_dia)
@@ -54308,6 +55639,8 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
         if translate_rib_metric is not None:
             pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
+        if translate_rib_metric_variable is not None:
+            pulumi.set(__self__, "translate_rib_metric_variable", translate_rib_metric_variable)
 
     @_builtins.property
     @pulumi.getter(name="natDia")
@@ -54372,7 +55705,7 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
     @pulumi.getter(name="translateRibMetric")
     def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
+        Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
           - Default value: `false`
         """
         return pulumi.get(self, "translate_rib_metric")
@@ -54380,6 +55713,18 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
     @translate_rib_metric.setter
     def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
         pulumi.set(self, "translate_rib_metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetricVariable")
+    def translate_rib_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `omp`
+        """
+        return pulumi.get(self, "translate_rib_metric_variable")
+
+    @translate_rib_metric_variable.setter
+    def translate_rib_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translate_rib_metric_variable", value)
 
 
 class ServiceRoutingOspfFeatureRouterLsaArgsDict(TypedDict):
@@ -55245,12 +56590,12 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs:
 class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgsDict(TypedDict):
     nat_dia: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Enable NAT DIA for redistributed routes
+    Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
       - Default value: `true`
     """
     nat_dia_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Variable name
+    Variable name, Attribute conditional on `protocol` equal to `nat-route`
     """
     protocol: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -55283,9 +56628,9 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
                  translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None,
                  translate_rib_metric_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes
+        :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] nat_dia_variable: Variable name
+        :param pulumi.Input[_builtins.str] nat_dia_variable: Variable name, Attribute conditional on `protocol` equal to `nat-route`
         :param pulumi.Input[_builtins.str] protocol: Set the protocol
                  - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
@@ -55312,7 +56657,7 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
     @pulumi.getter(name="natDia")
     def nat_dia(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable NAT DIA for redistributed routes
+        Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
           - Default value: `true`
         """
         return pulumi.get(self, "nat_dia")
@@ -55325,7 +56670,7 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
     @pulumi.getter(name="natDiaVariable")
     def nat_dia_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `protocol` equal to `nat-route`
         """
         return pulumi.get(self, "nat_dia_variable")
 
@@ -60683,6 +62028,7 @@ class SystemIpv4DeviceAccessFeatureSequenceArgsDict(TypedDict):
     """
     Base Action
       - Choices: `drop`, `accept`
+      - Default value: `accept`
     """
     destination_data_prefix_list_id: NotRequired[pulumi.Input[_builtins.str]]
     destination_ip_prefix_list_variable: NotRequired[pulumi.Input[_builtins.str]]
@@ -60737,6 +62083,7 @@ class SystemIpv4DeviceAccessFeatureSequenceArgs:
         """
         :param pulumi.Input[_builtins.str] base_action: Base Action
                  - Choices: `drop`, `accept`
+                 - Default value: `accept`
         :param pulumi.Input[_builtins.str] destination_ip_prefix_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_ip_prefix_lists: Destination Data IP Prefix List
         :param pulumi.Input[_builtins.int] device_access_port: device access protocol
@@ -60776,6 +62123,7 @@ class SystemIpv4DeviceAccessFeatureSequenceArgs:
         """
         Base Action
           - Choices: `drop`, `accept`
+          - Default value: `accept`
         """
         return pulumi.get(self, "base_action")
 
@@ -61126,7 +62474,7 @@ class SystemIpv6DeviceAccessFeatureSequenceArgs:
 class SystemLoggingFeatureIpv4ServerArgsDict(TypedDict):
     hostname_ip: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set hostname or IPv4 address of server
+    Set IPv4 address of server
     """
     hostname_ip_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -61178,7 +62526,7 @@ class SystemLoggingFeatureIpv4ServerArgsDict(TypedDict):
     """
     vpn: NotRequired[pulumi.Input[_builtins.int]]
     """
-    Set hostname or IPv4 address of server
+    Set vpn of server
       - Range: `0`-`65530`
       - Default value: `0`
     """
@@ -61205,7 +62553,7 @@ class SystemLoggingFeatureIpv4ServerArgs:
                  vpn: Optional[pulumi.Input[_builtins.int]] = None,
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] hostname_ip: Set hostname or IPv4 address of server
+        :param pulumi.Input[_builtins.str] hostname_ip: Set IPv4 address of server
         :param pulumi.Input[_builtins.str] hostname_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] priority: Set logging level for messages logged to server
                  - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
@@ -61221,7 +62569,7 @@ class SystemLoggingFeatureIpv4ServerArgs:
         :param pulumi.Input[_builtins.str] tls_properties_custom_profile_variable: Variable name
         :param pulumi.Input[_builtins.str] tls_properties_profile: Configure a TLS profile
         :param pulumi.Input[_builtins.str] tls_properties_profile_variable: Variable name
-        :param pulumi.Input[_builtins.int] vpn: Set hostname or IPv4 address of server
+        :param pulumi.Input[_builtins.int] vpn: Set vpn of server
                  - Range: `0`-`65530`
                  - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
@@ -61259,7 +62607,7 @@ class SystemLoggingFeatureIpv4ServerArgs:
     @pulumi.getter(name="hostnameIp")
     def hostname_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set hostname or IPv4 address of server
+        Set IPv4 address of server
         """
         return pulumi.get(self, "hostname_ip")
 
@@ -61407,7 +62755,7 @@ class SystemLoggingFeatureIpv4ServerArgs:
     @pulumi.getter
     def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set hostname or IPv4 address of server
+        Set vpn of server
           - Range: `0`-`65530`
           - Default value: `0`
         """
@@ -61433,7 +62781,7 @@ class SystemLoggingFeatureIpv4ServerArgs:
 class SystemLoggingFeatureIpv6ServerArgsDict(TypedDict):
     hostname_ip: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set IPv6 hostname or IPv6 address of server
+    Set IPv6 address of server
     """
     hostname_ip_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -61485,7 +62833,7 @@ class SystemLoggingFeatureIpv6ServerArgsDict(TypedDict):
     """
     vpn: NotRequired[pulumi.Input[_builtins.int]]
     """
-    Set hostname or IPv4 address of server
+    Set vpn of server
       - Range: `0`-`65530`
       - Default value: `0`
     """
@@ -61512,7 +62860,7 @@ class SystemLoggingFeatureIpv6ServerArgs:
                  vpn: Optional[pulumi.Input[_builtins.int]] = None,
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] hostname_ip: Set IPv6 hostname or IPv6 address of server
+        :param pulumi.Input[_builtins.str] hostname_ip: Set IPv6 address of server
         :param pulumi.Input[_builtins.str] hostname_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] priority: Set logging level for messages logged to server
                  - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
@@ -61528,7 +62876,7 @@ class SystemLoggingFeatureIpv6ServerArgs:
         :param pulumi.Input[_builtins.str] tls_properties_custom_profile_variable: Variable name
         :param pulumi.Input[_builtins.str] tls_properties_profile: Configure a TLS profile
         :param pulumi.Input[_builtins.str] tls_properties_profile_variable: Variable name
-        :param pulumi.Input[_builtins.int] vpn: Set hostname or IPv4 address of server
+        :param pulumi.Input[_builtins.int] vpn: Set vpn of server
                  - Range: `0`-`65530`
                  - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
@@ -61566,7 +62914,7 @@ class SystemLoggingFeatureIpv6ServerArgs:
     @pulumi.getter(name="hostnameIp")
     def hostname_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set IPv6 hostname or IPv6 address of server
+        Set IPv6 address of server
         """
         return pulumi.get(self, "hostname_ip")
 
@@ -61714,7 +63062,7 @@ class SystemLoggingFeatureIpv6ServerArgs:
     @pulumi.getter
     def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set hostname or IPv4 address of server
+        Set vpn of server
           - Range: `0`-`65530`
           - Default value: `0`
         """
@@ -61876,7 +63224,7 @@ class SystemNtpFeatureAuthenticationKeyArgsDict(TypedDict):
     key_id: NotRequired[pulumi.Input[_builtins.int]]
     """
     MD5 authentication key ID
-      - Range: `1`-`65535`
+      - Range: `1`-`4294967295`
     """
     key_id_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -61884,7 +63232,7 @@ class SystemNtpFeatureAuthenticationKeyArgsDict(TypedDict):
     """
     md5_value: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Enter cleartext or AES-encrypted MD5 authentication key
+    Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     md5_value_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -61900,9 +63248,9 @@ class SystemNtpFeatureAuthenticationKeyArgs:
                  md5_value_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] key_id: MD5 authentication key ID
-                 - Range: `1`-`65535`
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] key_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] md5_value: Enter cleartext or AES-encrypted MD5 authentication key
+        :param pulumi.Input[_builtins.str] md5_value: Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] md5_value_variable: Variable name
         """
         if key_id is not None:
@@ -61919,7 +63267,7 @@ class SystemNtpFeatureAuthenticationKeyArgs:
     def key_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         MD5 authentication key ID
-          - Range: `1`-`65535`
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "key_id")
 
@@ -61943,7 +63291,7 @@ class SystemNtpFeatureAuthenticationKeyArgs:
     @pulumi.getter(name="md5Value")
     def md5_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enter cleartext or AES-encrypted MD5 authentication key
+        Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "md5_value")
 
@@ -61968,7 +63316,7 @@ class SystemNtpFeatureServerArgsDict(TypedDict):
     authentication_key: NotRequired[pulumi.Input[_builtins.int]]
     """
     Set authentication key for the server
-      - Range: `1`-`65535`
+      - Range: `1`-`4294967295`
     """
     authentication_key_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -62037,7 +63385,7 @@ class SystemNtpFeatureServerArgs:
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.int] authentication_key: Set authentication key for the server
-                 - Range: `1`-`65535`
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] authentication_key_variable: Variable name
         :param pulumi.Input[_builtins.str] hostname_ip_address: Set hostname or IP address of server
         :param pulumi.Input[_builtins.str] hostname_ip_address_variable: Variable name
@@ -62085,7 +63433,7 @@ class SystemNtpFeatureServerArgs:
     def authentication_key(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Set authentication key for the server
-          - Range: `1`-`65535`
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "authentication_key")
 
@@ -62295,7 +63643,7 @@ class SystemSecurityFeatureKeyArgsDict(TypedDict):
     """
     key_string: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Specify the Key String
+    Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     key_string_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -62410,7 +63758,7 @@ class SystemSecurityFeatureKeyArgs:
         :param pulumi.Input[_builtins.bool] include_tcp_options: Configure Include TCP Options
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] include_tcp_options_variable: Variable name
-        :param pulumi.Input[_builtins.str] key_string: Specify the Key String
+        :param pulumi.Input[_builtins.str] key_string: Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] key_string_variable: Variable name
         :param pulumi.Input[_builtins.str] name: Select the chain name
         :param pulumi.Input[_builtins.int] receiver_id: Specify the Receiver ID
@@ -62666,7 +64014,7 @@ class SystemSecurityFeatureKeyArgs:
     @pulumi.getter(name="keyString")
     def key_string(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Specify the Key String
+        Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "key_string")
 
@@ -62911,7 +64259,11 @@ class SystemSnmpFeatureCommunityArgsDict(TypedDict):
     """
     name: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set name of the SNMP community
+    Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+    """
+    name_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
     """
     user_label: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -62932,6 +64284,7 @@ class SystemSnmpFeatureCommunityArgs:
                  authorization: Optional[pulumi.Input[_builtins.str]] = None,
                  authorization_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 name_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  user_label: Optional[pulumi.Input[_builtins.str]] = None,
                  view: Optional[pulumi.Input[_builtins.str]] = None,
                  view_variable: Optional[pulumi.Input[_builtins.str]] = None):
@@ -62939,7 +64292,8 @@ class SystemSnmpFeatureCommunityArgs:
         :param pulumi.Input[_builtins.str] authorization: Configure access permissions
                  - Choices: `read-only`, `read-write`
         :param pulumi.Input[_builtins.str] authorization_variable: Variable name
-        :param pulumi.Input[_builtins.str] name: Set name of the SNMP community
+        :param pulumi.Input[_builtins.str] name: Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+        :param pulumi.Input[_builtins.str] name_variable: Variable name
         :param pulumi.Input[_builtins.str] user_label: Set user label of the SNMP community
         :param pulumi.Input[_builtins.str] view: Set name of the SNMP view
         :param pulumi.Input[_builtins.str] view_variable: Variable name
@@ -62950,6 +64304,8 @@ class SystemSnmpFeatureCommunityArgs:
             pulumi.set(__self__, "authorization_variable", authorization_variable)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if name_variable is not None:
+            pulumi.set(__self__, "name_variable", name_variable)
         if user_label is not None:
             pulumi.set(__self__, "user_label", user_label)
         if view is not None:
@@ -62986,13 +64342,25 @@ class SystemSnmpFeatureCommunityArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set name of the SNMP community
+        Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "name")
 
     @name.setter
     def name(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="nameVariable")
+    def name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name_variable")
+
+    @name_variable.setter
+    def name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="userLabel")
@@ -65920,6 +67288,32 @@ class TransportIpv4AclFeatureSequenceActionArgsDict(TypedDict):
     """
     Set Next Hop (IPV4 address)
     """
+    accept_set_service_chain_fallback: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Default value: `false`
+    """
+    accept_set_service_chain_fallback_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Set Service Chain Number
+      - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+    """
+    accept_set_service_chain_name_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    accept_set_service_chain_vpn: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
     drop_counter_name: NotRequired[pulumi.Input[_builtins.str]]
     """
     Counter Name
@@ -65939,6 +67333,12 @@ class TransportIpv4AclFeatureSequenceActionArgs:
                  accept_policer_id: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_set_dscp: Optional[pulumi.Input[_builtins.int]] = None,
                  accept_set_next_hop: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_fallback: Optional[pulumi.Input[_builtins.bool]] = None,
+                 accept_set_service_chain_fallback_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_vpn: Optional[pulumi.Input[_builtins.int]] = None,
+                 accept_set_service_chain_vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  drop_counter_name: Optional[pulumi.Input[_builtins.str]] = None,
                  drop_log: Optional[pulumi.Input[_builtins.bool]] = None):
         """
@@ -65948,6 +67348,14 @@ class TransportIpv4AclFeatureSequenceActionArgs:
         :param pulumi.Input[_builtins.int] accept_set_dscp: DSCP number
                  - Range: `0`-`63`
         :param pulumi.Input[_builtins.str] accept_set_next_hop: Set Next Hop (IPV4 address)
+        :param pulumi.Input[_builtins.bool] accept_set_service_chain_fallback: fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_fallback_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name: Set Service Chain Number
+                 - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
+        :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.str] drop_counter_name: Counter Name
         :param pulumi.Input[_builtins.bool] drop_log: Enable Log
                  - Default value: `false`
@@ -65964,6 +67372,18 @@ class TransportIpv4AclFeatureSequenceActionArgs:
             pulumi.set(__self__, "accept_set_dscp", accept_set_dscp)
         if accept_set_next_hop is not None:
             pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if accept_set_service_chain_fallback is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback", accept_set_service_chain_fallback)
+        if accept_set_service_chain_fallback_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback_variable", accept_set_service_chain_fallback_variable)
+        if accept_set_service_chain_name is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name", accept_set_service_chain_name)
+        if accept_set_service_chain_name_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name_variable", accept_set_service_chain_name_variable)
+        if accept_set_service_chain_vpn is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn", accept_set_service_chain_vpn)
+        if accept_set_service_chain_vpn_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn_variable", accept_set_service_chain_vpn_variable)
         if drop_counter_name is not None:
             pulumi.set(__self__, "drop_counter_name", drop_counter_name)
         if drop_log is not None:
@@ -66036,6 +67456,80 @@ class TransportIpv4AclFeatureSequenceActionArgs:
     @accept_set_next_hop.setter
     def accept_set_next_hop(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "accept_set_next_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallback")
+    def accept_set_service_chain_fallback(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback")
+
+    @accept_set_service_chain_fallback.setter
+    def accept_set_service_chain_fallback(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "accept_set_service_chain_fallback", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallbackVariable")
+    def accept_set_service_chain_fallback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback_variable")
+
+    @accept_set_service_chain_fallback_variable.setter
+    def accept_set_service_chain_fallback_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_fallback_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainName")
+    def accept_set_service_chain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Set Service Chain Number
+          - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        return pulumi.get(self, "accept_set_service_chain_name")
+
+    @accept_set_service_chain_name.setter
+    def accept_set_service_chain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainNameVariable")
+    def accept_set_service_chain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "accept_set_service_chain_name_variable")
+
+    @accept_set_service_chain_name_variable.setter
+    def accept_set_service_chain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpn")
+    def accept_set_service_chain_vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn")
+
+    @accept_set_service_chain_vpn.setter
+    def accept_set_service_chain_vpn(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "accept_set_service_chain_vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpnVariable")
+    def accept_set_service_chain_vpn_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn_variable")
+
+    @accept_set_service_chain_vpn_variable.setter
+    def accept_set_service_chain_vpn_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_vpn_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dropCounterName")
@@ -66513,6 +68007,32 @@ class TransportIpv6AclFeatureSequenceActionArgsDict(TypedDict):
     """
     Set Next Hop (IPV6 address)
     """
+    accept_set_service_chain_fallback: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+      - Default value: `false`
+    """
+    accept_set_service_chain_fallback_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Set Service Chain Number
+      - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+    """
+    accept_set_service_chain_name_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    accept_set_service_chain_vpn: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
+    accept_set_service_chain_vpn_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+    """
     accept_traffic_class: NotRequired[pulumi.Input[_builtins.int]]
     """
     set traffic class number
@@ -66536,6 +68056,12 @@ class TransportIpv6AclFeatureSequenceActionArgs:
                  accept_mirror_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_policer_id: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_set_next_hop: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_fallback: Optional[pulumi.Input[_builtins.bool]] = None,
+                 accept_set_service_chain_fallback_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 accept_set_service_chain_vpn: Optional[pulumi.Input[_builtins.int]] = None,
+                 accept_set_service_chain_vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  accept_traffic_class: Optional[pulumi.Input[_builtins.int]] = None,
                  drop_counter_name: Optional[pulumi.Input[_builtins.str]] = None,
                  drop_log: Optional[pulumi.Input[_builtins.bool]] = None):
@@ -66544,6 +68070,14 @@ class TransportIpv6AclFeatureSequenceActionArgs:
         :param pulumi.Input[_builtins.bool] accept_log: Enable Log
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] accept_set_next_hop: Set Next Hop (IPV6 address)
+        :param pulumi.Input[_builtins.bool] accept_set_service_chain_fallback: fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_fallback_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name: Set Service Chain Number
+                 - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_name_variable: Variable name
+        :param pulumi.Input[_builtins.int] accept_set_service_chain_vpn: Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        :param pulumi.Input[_builtins.str] accept_set_service_chain_vpn_variable: Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
         :param pulumi.Input[_builtins.int] accept_traffic_class: set traffic class number
                  - Range: `0`-`63`
         :param pulumi.Input[_builtins.str] drop_counter_name: Counter Name
@@ -66560,6 +68094,18 @@ class TransportIpv6AclFeatureSequenceActionArgs:
             pulumi.set(__self__, "accept_policer_id", accept_policer_id)
         if accept_set_next_hop is not None:
             pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if accept_set_service_chain_fallback is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback", accept_set_service_chain_fallback)
+        if accept_set_service_chain_fallback_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_fallback_variable", accept_set_service_chain_fallback_variable)
+        if accept_set_service_chain_name is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name", accept_set_service_chain_name)
+        if accept_set_service_chain_name_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_name_variable", accept_set_service_chain_name_variable)
+        if accept_set_service_chain_vpn is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn", accept_set_service_chain_vpn)
+        if accept_set_service_chain_vpn_variable is not None:
+            pulumi.set(__self__, "accept_set_service_chain_vpn_variable", accept_set_service_chain_vpn_variable)
         if accept_traffic_class is not None:
             pulumi.set(__self__, "accept_traffic_class", accept_traffic_class)
         if drop_counter_name is not None:
@@ -66621,6 +68167,80 @@ class TransportIpv6AclFeatureSequenceActionArgs:
     @accept_set_next_hop.setter
     def accept_set_next_hop(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "accept_set_next_hop", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallback")
+    def accept_set_service_chain_fallback(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        fallback, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback")
+
+    @accept_set_service_chain_fallback.setter
+    def accept_set_service_chain_fallback(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "accept_set_service_chain_fallback", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainFallbackVariable")
+    def accept_set_service_chain_fallback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_fallback_variable")
+
+    @accept_set_service_chain_fallback_variable.setter
+    def accept_set_service_chain_fallback_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_fallback_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainName")
+    def accept_set_service_chain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Set Service Chain Number
+          - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        return pulumi.get(self, "accept_set_service_chain_name")
+
+    @accept_set_service_chain_name.setter
+    def accept_set_service_chain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainNameVariable")
+    def accept_set_service_chain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "accept_set_service_chain_name_variable")
+
+    @accept_set_service_chain_name_variable.setter
+    def accept_set_service_chain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_name_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpn")
+    def accept_set_service_chain_vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Set Service Chain VPN, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn")
+
+    @accept_set_service_chain_vpn.setter
+    def accept_set_service_chain_vpn(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "accept_set_service_chain_vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="acceptSetServiceChainVpnVariable")
+    def accept_set_service_chain_vpn_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `accept_set_service_chain_name` being set or `accept_set_service_chain_name_variable` being set
+        """
+        return pulumi.get(self, "accept_set_service_chain_vpn_variable")
+
+    @accept_set_service_chain_vpn_variable.setter
+    def accept_set_service_chain_vpn_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "accept_set_service_chain_vpn_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="acceptTrafficClass")
@@ -67679,7 +69299,7 @@ class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict
     subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -67697,7 +69317,7 @@ class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
         :param pulumi.Input[_builtins.str] address: IpV4 Address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if address is not None:
@@ -67738,7 +69358,7 @@ class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
     def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -67904,7 +69524,7 @@ class TransportRoutePolicyFeatureSequenceArgs:
 
 
 class TransportRoutePolicyFeatureSequenceActionArgsDict(TypedDict):
-    as_path_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
+    as_path_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
     communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
     community_additive: NotRequired[pulumi.Input[_builtins.bool]]
     """
@@ -67961,7 +69581,7 @@ class TransportRoutePolicyFeatureSequenceActionArgsDict(TypedDict):
 @pulumi.input_type
 class TransportRoutePolicyFeatureSequenceActionArgs:
     def __init__(__self__, *,
-                 as_path_prepends: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 as_path_prepends: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  communities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  community_additive: Optional[pulumi.Input[_builtins.bool]] = None,
                  community_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -68023,11 +69643,11 @@ class TransportRoutePolicyFeatureSequenceActionArgs:
 
     @_builtins.property
     @pulumi.getter(name="asPathPrepends")
-    def as_path_prepends(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def as_path_prepends(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "as_path_prepends")
 
     @as_path_prepends.setter
-    def as_path_prepends(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def as_path_prepends(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "as_path_prepends", value)
 
     @_builtins.property
@@ -68699,7 +70319,7 @@ class TransportRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     password: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 password on TCP connection with BGP peer
+    Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     password_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -68823,7 +70443,7 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
-        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer
+        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
@@ -69176,7 +70796,7 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 password on TCP connection with BGP peer
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "password")
 
@@ -69807,6 +71427,23 @@ class TransportRoutingBgpFeatureIpv4NetworkArgs:
 
 
 class TransportRoutingBgpFeatureIpv4RedistributeArgsDict(TypedDict):
+    metric: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+      - Range: `0`-`4294967295`
+    """
+    metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name
+    """
+    ospf_match_route_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `ospf`
+    """
+    ospf_match_routes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+    """
     protocol: NotRequired[pulumi.Input[_builtins.str]]
     """
     Set the protocol to redistribute routes from
@@ -69821,20 +71458,86 @@ class TransportRoutingBgpFeatureIpv4RedistributeArgsDict(TypedDict):
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4RedistributeArgs:
     def __init__(__self__, *,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
+                 metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_route_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_routes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.int] metric: Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] metric_variable: Variable name
+        :param pulumi.Input[_builtins.str] ospf_match_route_variable: Variable name, Attribute conditional on `protocol` equal to `ospf`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ospf_match_routes: Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
         :param pulumi.Input[_builtins.str] protocol: Set the protocol to redistribute routes from
                  - Choices: `static`, `connected`, `ospf`, `ospfv3`, `nat`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
         """
+        if metric is not None:
+            pulumi.set(__self__, "metric", metric)
+        if metric_variable is not None:
+            pulumi.set(__self__, "metric_variable", metric_variable)
+        if ospf_match_route_variable is not None:
+            pulumi.set(__self__, "ospf_match_route_variable", ospf_match_route_variable)
+        if ospf_match_routes is not None:
+            pulumi.set(__self__, "ospf_match_routes", ospf_match_routes)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
         if protocol_variable is not None:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+
+    @_builtins.property
+    @pulumi.getter
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "metric")
+
+    @metric.setter
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="metricVariable")
+    def metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "metric_variable")
+
+    @metric_variable.setter
+    def metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "metric_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRouteVariable")
+    def ospf_match_route_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_route_variable")
+
+    @ospf_match_route_variable.setter
+    def ospf_match_route_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ospf_match_route_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRoutes")
+    def ospf_match_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_routes")
+
+    @ospf_match_routes.setter
+    def ospf_match_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "ospf_match_routes", value)
 
     @_builtins.property
     @pulumi.getter
@@ -70094,7 +71797,7 @@ class TransportRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     password: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 password on TCP connection with BGP peer
+    Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     password_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -70207,7 +71910,7 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
-        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer
+        :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
@@ -70527,7 +72230,7 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 password on TCP connection with BGP peer
+        Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "password")
 
@@ -71112,6 +72815,23 @@ class TransportRoutingBgpFeatureIpv6NetworkArgs:
 
 
 class TransportRoutingBgpFeatureIpv6RedistributeArgsDict(TypedDict):
+    metric: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+      - Range: `0`-`4294967295`
+    """
+    metric_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `ospf`
+    """
+    ospf_match_route_variable: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Variable name, Attribute conditional on `protocol` equal to `ospf`
+    """
+    ospf_match_routes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+    """
     protocol: NotRequired[pulumi.Input[_builtins.str]]
     """
     Set the protocol to redistribute routes from
@@ -71126,20 +72846,86 @@ class TransportRoutingBgpFeatureIpv6RedistributeArgsDict(TypedDict):
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv6RedistributeArgs:
     def __init__(__self__, *,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
+                 metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_route_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 ospf_match_routes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.int] metric: Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] metric_variable: Variable name, Attribute conditional on `protocol` equal to `ospf`
+        :param pulumi.Input[_builtins.str] ospf_match_route_variable: Variable name, Attribute conditional on `protocol` equal to `ospf`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ospf_match_routes: Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
         :param pulumi.Input[_builtins.str] protocol: Set the protocol to redistribute routes from
                  - Choices: `static`, `connected`, `ospf`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
         """
+        if metric is not None:
+            pulumi.set(__self__, "metric", metric)
+        if metric_variable is not None:
+            pulumi.set(__self__, "metric_variable", metric_variable)
+        if ospf_match_route_variable is not None:
+            pulumi.set(__self__, "ospf_match_route_variable", ospf_match_route_variable)
+        if ospf_match_routes is not None:
+            pulumi.set(__self__, "ospf_match_routes", ospf_match_routes)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
         if protocol_variable is not None:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+
+    @_builtins.property
+    @pulumi.getter
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "metric")
+
+    @metric.setter
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "metric", value)
+
+    @_builtins.property
+    @pulumi.getter(name="metricVariable")
+    def metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "metric_variable")
+
+    @metric_variable.setter
+    def metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "metric_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRouteVariable")
+    def ospf_match_route_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_route_variable")
+
+    @ospf_match_route_variable.setter
+    def ospf_match_route_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ospf_match_route_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ospfMatchRoutes")
+    def ospf_match_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
+        """
+        return pulumi.get(self, "ospf_match_routes")
+
+    @ospf_match_routes.setter
+    def ospf_match_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "ospf_match_routes", value)
 
     @_builtins.property
     @pulumi.getter
@@ -71444,7 +73230,7 @@ class TransportRoutingOspfFeatureAreaInterfaceArgsDict(TypedDict):
     """
     message_digest_key: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Set MD5 authentication key
+    Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
     """
     message_digest_key_id: NotRequired[pulumi.Input[_builtins.int]]
     """
@@ -71535,7 +73321,7 @@ class TransportRoutingOspfFeatureAreaInterfaceArgs:
                  - Range: `1`-`65535`
                  - Default value: `5`
         :param pulumi.Input[_builtins.str] lsa_retransmit_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] message_digest_key: Set MD5 authentication key
+        :param pulumi.Input[_builtins.str] message_digest_key: Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.int] message_digest_key_id: Set MD5 message digest key
                  - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] message_digest_key_id_variable: Variable name
@@ -71753,7 +73539,7 @@ class TransportRoutingOspfFeatureAreaInterfaceArgs:
     @pulumi.getter(name="messageDigestKey")
     def message_digest_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set MD5 authentication key
+        Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         """
         return pulumi.get(self, "message_digest_key")
 
@@ -73023,12 +74809,12 @@ class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs:
 class TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict(TypedDict):
     nat_dia: NotRequired[pulumi.Input[_builtins.bool]]
     """
-    Enable NAT DIA for redistributed routes
+    Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
       - Default value: `true`
     """
     nat_dia_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
-    Variable name
+    Variable name, Attribute conditional on `protocol` equal to `nat-route`
     """
     protocol: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -73061,9 +74847,9 @@ class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs:
                  translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None,
                  translate_rib_metric_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes
+        :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] nat_dia_variable: Variable name
+        :param pulumi.Input[_builtins.str] nat_dia_variable: Variable name, Attribute conditional on `protocol` equal to `nat-route`
         :param pulumi.Input[_builtins.str] protocol: Set the protocol
                  - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
@@ -73090,7 +74876,7 @@ class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs:
     @pulumi.getter(name="natDia")
     def nat_dia(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable NAT DIA for redistributed routes
+        Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
           - Default value: `true`
         """
         return pulumi.get(self, "nat_dia")
@@ -73103,7 +74889,7 @@ class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs:
     @pulumi.getter(name="natDiaVariable")
     def nat_dia_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `protocol` equal to `nat-route`
         """
         return pulumi.get(self, "nat_dia_variable")
 
@@ -75738,7 +77524,7 @@ class TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict(TypedD
     subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
     """
     Subnet Mask
-      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+      - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
     """
     subnet_mask_variable: NotRequired[pulumi.Input[_builtins.str]]
     """
@@ -75756,7 +77542,7 @@ class TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
         :param pulumi.Input[_builtins.str] address: IpV4 Address
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         """
         if address is not None:
@@ -75797,7 +77583,7 @@ class TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
     def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 

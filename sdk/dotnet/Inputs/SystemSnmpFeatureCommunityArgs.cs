@@ -26,10 +26,16 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AuthorizationVariable { get; set; }
 
         /// <summary>
-        /// Set name of the SNMP community
+        /// Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("nameVariable")]
+        public Input<string>? NameVariable { get; set; }
 
         /// <summary>
         /// Set user label of the SNMP community

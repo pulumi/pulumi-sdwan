@@ -187,7 +187,7 @@ class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(pulumi.C
                  __props__=None):
         """
         This resource can manage a Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -228,7 +228,7 @@ class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(pulumi.C
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

@@ -73,7 +73,7 @@ import javax.annotation.Nullable;
  *             .shutdown(true)
  *             .interfaceName("GigabitEthernet1")
  *             .interfaceDescription("WAN")
- *             .ipv4ConfigurationType("static")
+ *             .ipv4AddressType("static")
  *             .ipv4Address("1.2.3.4")
  *             .ipv4SubnetMask("0.0.0.0")
  *             .ipv4SecondaryAddresses(TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs.builder()
@@ -81,7 +81,7 @@ import javax.annotation.Nullable;
  *                 .subnetMask("0.0.0.0")
  *                 .build())
  *             .ipv4DhcpHelpers("1.2.3.4")
- *             .ipv6ConfigurationType("static")
+ *             .ipv6AddressType("static")
  *             .ipv6Address("2001:0:0:1::1/64")
  *             .iperfServer("example")
  *             .blockNonSourceIp(false)
@@ -482,14 +482,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.duplexVariable);
     }
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Export(name="enableDhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
@@ -588,7 +588,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -597,7 +597,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -606,14 +606,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.interfaceMtu);
     }
     /**
-     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      * 
      */
     @Export(name="interfaceMtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceMtuVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      * 
      */
     public Output<Optional<String>> interfaceMtuVariable() {
@@ -730,53 +730,65 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.iperfServerVariable);
     }
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Output<Optional<String>> ipv4Address() {
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    @Export(name="ipv4AddressType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ipv4AddressType;
+
+    /**
+     * @return address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    public Output<Optional<String>> ipv4AddressType() {
+        return Codegen.optional(this.ipv4AddressType);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    @Export(name="ipv4AddressTypeVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ipv4AddressTypeVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    public Output<Optional<String>> ipv4AddressTypeVariable() {
+        return Codegen.optional(this.ipv4AddressTypeVariable);
+    }
+    /**
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     * 
-     */
-    @Export(name="ipv4ConfigurationType", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> ipv4ConfigurationType;
-
-    /**
-     * @return IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     * 
-     */
-    public Output<Optional<String>> ipv4ConfigurationType() {
-        return Codegen.optional(this.ipv4ConfigurationType);
-    }
-    /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -785,7 +797,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * @return DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -794,14 +806,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4DhcpDistance);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv4DhcpDistanceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Output<Optional<String>> ipv4DhcpDistanceVariable() {
@@ -836,118 +848,130 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4DhcpHelpers);
     }
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv4SecondaryAddresses", refs={List.class,TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>>> ipv4SecondaryAddresses() {
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
         return Codegen.optional(this.ipv4SubnetMaskVariable);
     }
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv6Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Output<Optional<String>> ipv6Address() {
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    @Export(name="ipv6AddressType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ipv6AddressType;
+
+    /**
+     * @return address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    public Output<Optional<String>> ipv6AddressType() {
+        return Codegen.optional(this.ipv6AddressType);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    @Export(name="ipv6AddressTypeVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ipv6AddressTypeVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    public Output<Optional<String>> ipv6AddressTypeVariable() {
+        return Codegen.optional(this.ipv6AddressTypeVariable);
+    }
+    /**
+     * Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     * 
-     */
-    @Export(name="ipv6ConfigurationType", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> ipv6ConfigurationType;
-
-    /**
-     * @return IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     * 
-     */
-    public Output<Optional<String>> ipv6ConfigurationType() {
-        return Codegen.optional(this.ipv6ConfigurationType);
-    }
-    /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv6DhcpSecondaryAddresses", refs={List.class,TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>>> ipv6DhcpSecondaryAddresses() {
         return Codegen.optional(this.ipv6DhcpSecondaryAddresses);
     }
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Export(name="ipv6SecondaryAddresses", refs={List.class,TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>>> ipv6SecondaryAddresses() {
@@ -2153,7 +2177,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     }
     /**
      * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     @Export(name="speed", refs={String.class}, tree="[0]")
@@ -2161,7 +2185,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
 
     /**
      * @return Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     public Output<Optional<String>> speed() {

@@ -15,6 +15,7 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// Base Action
         ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Accept`
         /// </summary>
         [Input("baseAction")]
         public Input<string>? BaseAction { get; set; }

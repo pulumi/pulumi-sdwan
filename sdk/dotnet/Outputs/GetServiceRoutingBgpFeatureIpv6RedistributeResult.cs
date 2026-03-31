@@ -14,6 +14,22 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetServiceRoutingBgpFeatureIpv6RedistributeResult
     {
         /// <summary>
+        /// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+        /// </summary>
+        public readonly int Metric;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string MetricVariable;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string OspfMatchRouteVariable;
+        /// <summary>
+        /// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
+        /// </summary>
+        public readonly ImmutableArray<string> OspfMatchRoutes;
+        /// <summary>
         /// Set the protocol to redistribute routes from
         /// </summary>
         public readonly string Protocol;
@@ -23,24 +39,43 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string ProtocolVariable;
         public readonly string RoutePolicyId;
         /// <summary>
-        /// Translate Rib Metric
+        /// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
         /// </summary>
         public readonly bool TranslateRibMetric;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TranslateRibMetricVariable;
 
         [OutputConstructor]
         private GetServiceRoutingBgpFeatureIpv6RedistributeResult(
+            int metric,
+
+            string metricVariable,
+
+            string ospfMatchRouteVariable,
+
+            ImmutableArray<string> ospfMatchRoutes,
+
             string protocol,
 
             string protocolVariable,
 
             string routePolicyId,
 
-            bool translateRibMetric)
+            bool translateRibMetric,
+
+            string translateRibMetricVariable)
         {
+            Metric = metric;
+            MetricVariable = metricVariable;
+            OspfMatchRouteVariable = ospfMatchRouteVariable;
+            OspfMatchRoutes = ospfMatchRoutes;
             Protocol = protocol;
             ProtocolVariable = protocolVariable;
             RoutePolicyId = routePolicyId;
             TranslateRibMetric = translateRibMetric;
+            TranslateRibMetricVariable = translateRibMetricVariable;
         }
     }
 }

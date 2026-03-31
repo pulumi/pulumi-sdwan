@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Transport Management VPN Interface Ethernet Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -37,7 +37,7 @@ import (
 //				Shutdown:                        pulumi.Bool(true),
 //				InterfaceName:                   pulumi.String("GigabitEthernet1"),
 //				InterfaceDescription:            pulumi.String("Transport Management VPN Interface Ethernet"),
-//				Ipv4ConfigurationType:           pulumi.String("static"),
+//				Ipv4AddressType:                 pulumi.String("static"),
 //				Ipv4Address:                     pulumi.String("1.2.3.4"),
 //				Ipv4SubnetMask:                  pulumi.String("0.0.0.0"),
 //				Ipv4SecondaryAddresses: sdwan.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{
@@ -51,7 +51,7 @@ import (
 //				},
 //				Ipv4IperfServer:         pulumi.String("example"),
 //				Ipv4AutoDetectBandwidth: pulumi.Bool(false),
-//				Ipv6ConfigurationType:   pulumi.String("static"),
+//				Ipv6AddressType:         pulumi.String("static"),
 //				Ipv6Address:             pulumi.String("2001:0:0:1::/64"),
 //				ArpEntries: sdwan.TransportManagementVpnInterfaceEthernetFeatureArpEntryArray{
 //					&sdwan.TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs{
@@ -112,7 +112,7 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	Duplex pulumi.StringPtrOutput `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable pulumi.StringPtrOutput `pulumi:"duplexVariable"`
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
@@ -144,24 +144,25 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv4AddressType pulumi.StringPtrOutput `pulumi:"ipv4AddressType"`
+	// Variable name
+	Ipv4AddressTypeVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressTypeVariable"`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
 	// Interface auto detect bandwidth
 	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth pulumi.BoolPtrOutput `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable pulumi.StringPtrOutput `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
-	//   - Default value: `dynamic`
-	Ipv4ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrOutput `pulumi:"ipv4DhcpDistance"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
 	Ipv4DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpDistanceVariable"`
 	// Variable name
 	Ipv4DhcpHelperVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpHelperVariable"`
@@ -171,21 +172,22 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	Ipv4IperfServer pulumi.StringPtrOutput `pulumi:"ipv4IperfServer"`
 	// Variable name
 	Ipv4IperfServerVariable pulumi.StringPtrOutput `pulumi:"ipv4IperfServerVariable"`
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SecondaryAddresses TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv6AddressType pulumi.StringPtrOutput `pulumi:"ipv6AddressType"`
+	// Variable name
+	Ipv6AddressTypeVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressTypeVariable"`
+	// Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
-	//   - Choices: `dynamic`, `static`, `none`
-	//   - Default value: `none`
-	Ipv6ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv6ConfigurationType"`
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
 	//   - Default value: `30`
@@ -208,7 +210,7 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed pulumi.StringPtrOutput `pulumi:"speed"`
 	// Variable name
 	SpeedVariable pulumi.StringPtrOutput `pulumi:"speedVariable"`
@@ -278,7 +280,7 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
@@ -310,24 +312,25 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv4AddressType *string `pulumi:"ipv4AddressType"`
+	// Variable name
+	Ipv4AddressTypeVariable *string `pulumi:"ipv4AddressTypeVariable"`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// Interface auto detect bandwidth
 	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth *bool `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable *string `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
-	//   - Default value: `dynamic`
-	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
 	// Variable name
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
@@ -337,21 +340,22 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv4IperfServer *string `pulumi:"ipv4IperfServer"`
 	// Variable name
 	Ipv4IperfServerVariable *string `pulumi:"ipv4IperfServerVariable"`
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SecondaryAddresses []TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv6AddressType *string `pulumi:"ipv6AddressType"`
+	// Variable name
+	Ipv6AddressTypeVariable *string `pulumi:"ipv6AddressTypeVariable"`
+	// Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
-	//   - Choices: `dynamic`, `static`, `none`
-	//   - Default value: `none`
-	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
 	//   - Default value: `30`
@@ -374,7 +378,7 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
@@ -409,7 +413,7 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
@@ -441,24 +445,25 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv4AddressType pulumi.StringPtrInput
+	// Variable name
+	Ipv4AddressTypeVariable pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// Interface auto detect bandwidth
 	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth pulumi.BoolPtrInput
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable pulumi.StringPtrInput
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
-	//   - Default value: `dynamic`
-	Ipv4ConfigurationType pulumi.StringPtrInput
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
@@ -468,21 +473,22 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv4IperfServer pulumi.StringPtrInput
 	// Variable name
 	Ipv4IperfServerVariable pulumi.StringPtrInput
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SecondaryAddresses TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv6AddressType pulumi.StringPtrInput
+	// Variable name
+	Ipv6AddressTypeVariable pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// IPv6 Configuration Type
-	//   - Choices: `dynamic`, `static`, `none`
-	//   - Default value: `none`
-	Ipv6ConfigurationType pulumi.StringPtrInput
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
 	//   - Default value: `30`
@@ -505,7 +511,7 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
@@ -544,7 +550,7 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
@@ -576,24 +582,25 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv4AddressType *string `pulumi:"ipv4AddressType"`
+	// Variable name
+	Ipv4AddressTypeVariable *string `pulumi:"ipv4AddressTypeVariable"`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// Interface auto detect bandwidth
 	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth *bool `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable *string `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
-	//   - Default value: `dynamic`
-	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
 	// Variable name
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
@@ -603,21 +610,22 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4IperfServer *string `pulumi:"ipv4IperfServer"`
 	// Variable name
 	Ipv4IperfServerVariable *string `pulumi:"ipv4IperfServerVariable"`
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SecondaryAddresses []TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv6AddressType *string `pulumi:"ipv6AddressType"`
+	// Variable name
+	Ipv6AddressTypeVariable *string `pulumi:"ipv6AddressTypeVariable"`
+	// Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type
-	//   - Choices: `dynamic`, `static`, `none`
-	//   - Default value: `none`
-	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
 	//   - Default value: `30`
@@ -640,7 +648,7 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
@@ -674,7 +682,7 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
-	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+	// Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
@@ -706,24 +714,25 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv4AddressType pulumi.StringPtrInput
+	// Variable name
+	Ipv4AddressTypeVariable pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// Interface auto detect bandwidth
 	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth pulumi.BoolPtrInput
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable pulumi.StringPtrInput
-	// IPv4 Configuration Type
-	//   - Choices: `dynamic`, `static`
-	//   - Default value: `dynamic`
-	Ipv4ConfigurationType pulumi.StringPtrInput
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
-	//   - Range: `1`-`65536`
+	// DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
+	//   - Range: `1`-`255`
 	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
@@ -733,21 +742,22 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4IperfServer pulumi.StringPtrInput
 	// Variable name
 	Ipv4IperfServerVariable pulumi.StringPtrInput
-	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SecondaryAddresses TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+	// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
-	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+	// address type
+	//   - Choices: `dynamic`, `static`
+	Ipv6AddressType pulumi.StringPtrInput
+	// Variable name
+	Ipv6AddressTypeVariable pulumi.StringPtrInput
+	// Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// IPv6 Configuration Type
-	//   - Choices: `dynamic`, `static`, `none`
-	//   - Default value: `none`
-	Ipv6ConfigurationType pulumi.StringPtrInput
 	// Interval for interface load calculation
 	//   - Range: `30`-`600`
 	//   - Default value: `30`
@@ -770,7 +780,7 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
 	// Set interface speed
-	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
@@ -921,7 +931,7 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) DuplexVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+// Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) EnableDhcpv6() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.EnableDhcpv6 }).(pulumi.BoolPtrOutput)
 }
@@ -1011,12 +1021,27 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) IpMtuVariable() pu
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.IpMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+// IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+// address type
+//   - Choices: `dynamic`, `static`
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AddressType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.Ipv4AddressType
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AddressTypeVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.Ipv4AddressTypeVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4AddressVariable
@@ -1038,23 +1063,14 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AutoDetectBand
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPv4 Configuration Type
-//   - Choices: `dynamic`, `static`
-//   - Default value: `dynamic`
-func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4ConfigurationType() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
-		return v.Ipv4ConfigurationType
-	}).(pulumi.StringPtrOutput)
-}
-
-// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
-//   - Range: `1`-`65536`
+// DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
+//   - Range: `1`-`255`
 //   - Default value: `1`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4DhcpDistance }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+// Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistanceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4DhcpDistanceVariable
@@ -1089,46 +1105,52 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4IperfServerVar
 	}).(pulumi.StringPtrOutput)
 }
 
-// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+// Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4SecondaryAddresses() TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
 		return v.Ipv4SecondaryAddresses
 	}).(TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
 }
 
-// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4SubnetMask
 	}).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+// Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMaskVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4SubnetMaskVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+// IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv6Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
-func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6AddressVariable() pulumi.StringPtrOutput {
+// address type
+//   - Choices: `dynamic`, `static`
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6AddressType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
-		return v.Ipv6AddressVariable
+		return v.Ipv6AddressType
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPv6 Configuration Type
-//   - Choices: `dynamic`, `static`, `none`
-//   - Default value: `none`
-func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6ConfigurationType() pulumi.StringPtrOutput {
+// Variable name
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6AddressTypeVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
-		return v.Ipv6ConfigurationType
+		return v.Ipv6AddressTypeVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6AddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.Ipv6AddressVariable
 	}).(pulumi.StringPtrOutput)
 }
 
@@ -1189,7 +1211,7 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) ShutdownVariable()
 }
 
 // Set interface speed
-//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+//   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Speed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Speed }).(pulumi.StringPtrOutput)
 }

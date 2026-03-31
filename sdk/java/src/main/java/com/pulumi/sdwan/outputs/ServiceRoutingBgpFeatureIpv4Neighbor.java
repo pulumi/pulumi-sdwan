@@ -120,7 +120,7 @@ public final class ServiceRoutingBgpFeatureIpv4Neighbor {
      */
     private @Nullable String nextHopSelfVariable;
     /**
-     * @return Set MD5 password on TCP connection with BGP peer
+     * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String password;
@@ -338,7 +338,7 @@ public final class ServiceRoutingBgpFeatureIpv4Neighbor {
         return Optional.ofNullable(this.nextHopSelfVariable);
     }
     /**
-     * @return Set MD5 password on TCP connection with BGP peer
+     * @return Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> password() {

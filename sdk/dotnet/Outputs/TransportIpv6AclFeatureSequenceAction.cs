@@ -29,6 +29,32 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? AcceptSetNextHop;
         /// <summary>
+        /// fallback, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        ///   - Default value: `False`
+        /// </summary>
+        public readonly bool? AcceptSetServiceChainFallback;
+        /// <summary>
+        /// Variable name, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        /// </summary>
+        public readonly string? AcceptSetServiceChainFallbackVariable;
+        /// <summary>
+        /// Set Service Chain Number
+        ///   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        /// </summary>
+        public readonly string? AcceptSetServiceChainName;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? AcceptSetServiceChainNameVariable;
+        /// <summary>
+        /// Set Service Chain VPN, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        /// </summary>
+        public readonly int? AcceptSetServiceChainVpn;
+        /// <summary>
+        /// Variable name, Attribute conditional on `AcceptSetServiceChainName` being set or `AcceptSetServiceChainNameVariable` being set
+        /// </summary>
+        public readonly string? AcceptSetServiceChainVpnVariable;
+        /// <summary>
         /// set traffic class number
         ///   - Range: `0`-`63`
         /// </summary>
@@ -55,6 +81,18 @@ namespace Pulumi.Sdwan.Outputs
 
             string? acceptSetNextHop,
 
+            bool? acceptSetServiceChainFallback,
+
+            string? acceptSetServiceChainFallbackVariable,
+
+            string? acceptSetServiceChainName,
+
+            string? acceptSetServiceChainNameVariable,
+
+            int? acceptSetServiceChainVpn,
+
+            string? acceptSetServiceChainVpnVariable,
+
             int? acceptTrafficClass,
 
             string? dropCounterName,
@@ -66,6 +104,12 @@ namespace Pulumi.Sdwan.Outputs
             AcceptMirrorListId = acceptMirrorListId;
             AcceptPolicerId = acceptPolicerId;
             AcceptSetNextHop = acceptSetNextHop;
+            AcceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            AcceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            AcceptSetServiceChainName = acceptSetServiceChainName;
+            AcceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            AcceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            AcceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
             AcceptTrafficClass = acceptTrafficClass;
             DropCounterName = dropCounterName;
             DropLog = dropLog;

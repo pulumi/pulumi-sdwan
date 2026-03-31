@@ -52,6 +52,8 @@ class SystemOmpFeatureArgs:
                  advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -77,6 +79,8 @@ class SystemOmpFeatureArgs:
                  shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
@@ -112,7 +116,7 @@ class SystemOmpFeatureArgs:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
                  - Default value: `false`
@@ -127,12 +131,15 @@ class SystemOmpFeatureArgs:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
         :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
                  - Range: `0`-`65535`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
+        :param pulumi.Input[_builtins.bool] aspath_auto_translation: Enable BGP AS Path Auto-Translation
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
                  - Range: `1`-`0`
@@ -174,7 +181,9 @@ class SystemOmpFeatureArgs:
         :param pulumi.Input[_builtins.bool] shutdown: Shutdown
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types for 20.12 backward compatiblity
+        :param pulumi.Input[_builtins.str] site_types_for_transport_gateway_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types_for_transport_gateways: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
                  - Choices: `prefer`, `ecmp-with-direct-path`
@@ -245,6 +254,10 @@ class SystemOmpFeatureArgs:
             pulumi.set(__self__, "advertisement_interval", advertisement_interval)
         if advertisement_interval_variable is not None:
             pulumi.set(__self__, "advertisement_interval_variable", advertisement_interval_variable)
+        if aspath_auto_translation is not None:
+            pulumi.set(__self__, "aspath_auto_translation", aspath_auto_translation)
+        if aspath_auto_translation_variable is not None:
+            pulumi.set(__self__, "aspath_auto_translation_variable", aspath_auto_translation_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if ecmp_limit is not None:
@@ -295,6 +308,10 @@ class SystemOmpFeatureArgs:
             pulumi.set(__self__, "shutdown_variable", shutdown_variable)
         if site_types is not None:
             pulumi.set(__self__, "site_types", site_types)
+        if site_types_for_transport_gateway_variable is not None:
+            pulumi.set(__self__, "site_types_for_transport_gateway_variable", site_types_for_transport_gateway_variable)
+        if site_types_for_transport_gateways is not None:
+            pulumi.set(__self__, "site_types_for_transport_gateways", site_types_for_transport_gateways)
         if site_types_variable is not None:
             pulumi.set(__self__, "site_types_variable", site_types_variable)
         if transport_gateway is not None:
@@ -544,7 +561,7 @@ class SystemOmpFeatureArgs:
     def advertise_ipv6_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Connected
-          - Default value: `false`
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv6_connected")
 
@@ -669,7 +686,7 @@ class SystemOmpFeatureArgs:
     def advertise_ipv6_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Static
-          - Default value: `false`
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv6_static")
 
@@ -714,6 +731,31 @@ class SystemOmpFeatureArgs:
     @advertisement_interval_variable.setter
     def advertisement_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "advertisement_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslation")
+    def aspath_auto_translation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable BGP AS Path Auto-Translation
+          - Default value: `false`
+        """
+        return pulumi.get(self, "aspath_auto_translation")
+
+    @aspath_auto_translation.setter
+    def aspath_auto_translation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "aspath_auto_translation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslationVariable")
+    def aspath_auto_translation_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "aspath_auto_translation_variable")
+
+    @aspath_auto_translation_variable.setter
+    def aspath_auto_translation_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "aspath_auto_translation_variable", value)
 
     @_builtins.property
     @pulumi.getter
@@ -1024,13 +1066,37 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="siteTypes")
     def site_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Site Types
+        Site Types for 20.12 backward compatiblity
         """
         return pulumi.get(self, "site_types")
 
     @site_types.setter
     def site_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "site_types", value)
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGatewayVariable")
+    def site_types_for_transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "site_types_for_transport_gateway_variable")
+
+    @site_types_for_transport_gateway_variable.setter
+    def site_types_for_transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "site_types_for_transport_gateway_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGateways")
+    def site_types_for_transport_gateways(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Site Types
+        """
+        return pulumi.get(self, "site_types_for_transport_gateways")
+
+    @site_types_for_transport_gateways.setter
+    def site_types_for_transport_gateways(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "site_types_for_transport_gateways", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesVariable")
@@ -1105,6 +1171,8 @@ class _SystemOmpFeatureState:
                  advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1131,6 +1199,8 @@ class _SystemOmpFeatureState:
                  shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1166,7 +1236,7 @@ class _SystemOmpFeatureState:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
                  - Default value: `false`
@@ -1181,12 +1251,15 @@ class _SystemOmpFeatureState:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
         :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
                  - Range: `0`-`65535`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
+        :param pulumi.Input[_builtins.bool] aspath_auto_translation: Enable BGP AS Path Auto-Translation
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
                  - Range: `1`-`0`
@@ -1229,7 +1302,9 @@ class _SystemOmpFeatureState:
         :param pulumi.Input[_builtins.bool] shutdown: Shutdown
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types for 20.12 backward compatiblity
+        :param pulumi.Input[_builtins.str] site_types_for_transport_gateway_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types_for_transport_gateways: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
                  - Choices: `prefer`, `ecmp-with-direct-path`
@@ -1300,6 +1375,10 @@ class _SystemOmpFeatureState:
             pulumi.set(__self__, "advertisement_interval", advertisement_interval)
         if advertisement_interval_variable is not None:
             pulumi.set(__self__, "advertisement_interval_variable", advertisement_interval_variable)
+        if aspath_auto_translation is not None:
+            pulumi.set(__self__, "aspath_auto_translation", aspath_auto_translation)
+        if aspath_auto_translation_variable is not None:
+            pulumi.set(__self__, "aspath_auto_translation_variable", aspath_auto_translation_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if ecmp_limit is not None:
@@ -1352,6 +1431,10 @@ class _SystemOmpFeatureState:
             pulumi.set(__self__, "shutdown_variable", shutdown_variable)
         if site_types is not None:
             pulumi.set(__self__, "site_types", site_types)
+        if site_types_for_transport_gateway_variable is not None:
+            pulumi.set(__self__, "site_types_for_transport_gateway_variable", site_types_for_transport_gateway_variable)
+        if site_types_for_transport_gateways is not None:
+            pulumi.set(__self__, "site_types_for_transport_gateways", site_types_for_transport_gateways)
         if site_types_variable is not None:
             pulumi.set(__self__, "site_types_variable", site_types_variable)
         if transport_gateway is not None:
@@ -1591,7 +1674,7 @@ class _SystemOmpFeatureState:
     def advertise_ipv6_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Connected
-          - Default value: `false`
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv6_connected")
 
@@ -1716,7 +1799,7 @@ class _SystemOmpFeatureState:
     def advertise_ipv6_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Static
-          - Default value: `false`
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv6_static")
 
@@ -1761,6 +1844,31 @@ class _SystemOmpFeatureState:
     @advertisement_interval_variable.setter
     def advertisement_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "advertisement_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslation")
+    def aspath_auto_translation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable BGP AS Path Auto-Translation
+          - Default value: `false`
+        """
+        return pulumi.get(self, "aspath_auto_translation")
+
+    @aspath_auto_translation.setter
+    def aspath_auto_translation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "aspath_auto_translation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslationVariable")
+    def aspath_auto_translation_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "aspath_auto_translation_variable")
+
+    @aspath_auto_translation_variable.setter
+    def aspath_auto_translation_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "aspath_auto_translation_variable", value)
 
     @_builtins.property
     @pulumi.getter
@@ -2083,13 +2191,37 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="siteTypes")
     def site_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Site Types
+        Site Types for 20.12 backward compatiblity
         """
         return pulumi.get(self, "site_types")
 
     @site_types.setter
     def site_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "site_types", value)
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGatewayVariable")
+    def site_types_for_transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "site_types_for_transport_gateway_variable")
+
+    @site_types_for_transport_gateway_variable.setter
+    def site_types_for_transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "site_types_for_transport_gateway_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGateways")
+    def site_types_for_transport_gateways(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Site Types
+        """
+        return pulumi.get(self, "site_types_for_transport_gateways")
+
+    @site_types_for_transport_gateways.setter
+    def site_types_for_transport_gateways(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "site_types_for_transport_gateways", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesVariable")
@@ -2179,6 +2311,8 @@ class SystemOmpFeature(pulumi.CustomResource):
                  advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2205,13 +2339,15 @@ class SystemOmpFeature(pulumi.CustomResource):
                  shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System OMP Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -2251,7 +2387,9 @@ class SystemOmpFeature(pulumi.CustomResource):
             advertise_ipv6_isis=True,
             ignore_region_path_length=False,
             transport_gateway="prefer",
-            site_types=["type-1"])
+            site_types=["type-1"],
+            site_types_for_transport_gateways=["type-1"],
+            aspath_auto_translation=True)
         ```
 
         ## Import
@@ -2295,7 +2433,7 @@ class SystemOmpFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
                  - Default value: `false`
@@ -2310,12 +2448,15 @@ class SystemOmpFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
         :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
                  - Range: `0`-`65535`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
+        :param pulumi.Input[_builtins.bool] aspath_auto_translation: Enable BGP AS Path Auto-Translation
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
                  - Range: `1`-`0`
@@ -2358,7 +2499,9 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] shutdown: Shutdown
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types for 20.12 backward compatiblity
+        :param pulumi.Input[_builtins.str] site_types_for_transport_gateway_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types_for_transport_gateways: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
                  - Choices: `prefer`, `ecmp-with-direct-path`
@@ -2372,7 +2515,7 @@ class SystemOmpFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System OMP Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -2412,7 +2555,9 @@ class SystemOmpFeature(pulumi.CustomResource):
             advertise_ipv6_isis=True,
             ignore_region_path_length=False,
             transport_gateway="prefer",
-            site_types=["type-1"])
+            site_types=["type-1"],
+            site_types_for_transport_gateways=["type-1"],
+            aspath_auto_translation=True)
         ```
 
         ## Import
@@ -2473,6 +2618,8 @@ class SystemOmpFeature(pulumi.CustomResource):
                  advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2499,6 +2646,8 @@ class SystemOmpFeature(pulumi.CustomResource):
                  shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
                  transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2543,6 +2692,8 @@ class SystemOmpFeature(pulumi.CustomResource):
             __props__.__dict__["advertise_ipv6_static_variable"] = advertise_ipv6_static_variable
             __props__.__dict__["advertisement_interval"] = advertisement_interval
             __props__.__dict__["advertisement_interval_variable"] = advertisement_interval_variable
+            __props__.__dict__["aspath_auto_translation"] = aspath_auto_translation
+            __props__.__dict__["aspath_auto_translation_variable"] = aspath_auto_translation_variable
             __props__.__dict__["description"] = description
             __props__.__dict__["ecmp_limit"] = ecmp_limit
             __props__.__dict__["ecmp_limit_variable"] = ecmp_limit_variable
@@ -2571,6 +2722,8 @@ class SystemOmpFeature(pulumi.CustomResource):
             __props__.__dict__["shutdown"] = shutdown
             __props__.__dict__["shutdown_variable"] = shutdown_variable
             __props__.__dict__["site_types"] = site_types
+            __props__.__dict__["site_types_for_transport_gateway_variable"] = site_types_for_transport_gateway_variable
+            __props__.__dict__["site_types_for_transport_gateways"] = site_types_for_transport_gateways
             __props__.__dict__["site_types_variable"] = site_types_variable
             __props__.__dict__["transport_gateway"] = transport_gateway
             __props__.__dict__["transport_gateway_variable"] = transport_gateway_variable
@@ -2617,6 +2770,8 @@ class SystemOmpFeature(pulumi.CustomResource):
             advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
             advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
             advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
+            aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
             description: Optional[pulumi.Input[_builtins.str]] = None,
             ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
             ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2643,6 +2798,8 @@ class SystemOmpFeature(pulumi.CustomResource):
             shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
             shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
             site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+            site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
             transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
             transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2682,7 +2839,7 @@ class SystemOmpFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
                  - Default value: `false`
@@ -2697,12 +2854,15 @@ class SystemOmpFeature(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
         :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
-                 - Default value: `false`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
         :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
                  - Range: `0`-`65535`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
+        :param pulumi.Input[_builtins.bool] aspath_auto_translation: Enable BGP AS Path Auto-Translation
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
                  - Range: `1`-`0`
@@ -2745,7 +2905,9 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] shutdown: Shutdown
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types for 20.12 backward compatiblity
+        :param pulumi.Input[_builtins.str] site_types_for_transport_gateway_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types_for_transport_gateways: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
                  - Choices: `prefer`, `ecmp-with-direct-path`
@@ -2788,6 +2950,8 @@ class SystemOmpFeature(pulumi.CustomResource):
         __props__.__dict__["advertise_ipv6_static_variable"] = advertise_ipv6_static_variable
         __props__.__dict__["advertisement_interval"] = advertisement_interval
         __props__.__dict__["advertisement_interval_variable"] = advertisement_interval_variable
+        __props__.__dict__["aspath_auto_translation"] = aspath_auto_translation
+        __props__.__dict__["aspath_auto_translation_variable"] = aspath_auto_translation_variable
         __props__.__dict__["description"] = description
         __props__.__dict__["ecmp_limit"] = ecmp_limit
         __props__.__dict__["ecmp_limit_variable"] = ecmp_limit_variable
@@ -2814,6 +2978,8 @@ class SystemOmpFeature(pulumi.CustomResource):
         __props__.__dict__["shutdown"] = shutdown
         __props__.__dict__["shutdown_variable"] = shutdown_variable
         __props__.__dict__["site_types"] = site_types
+        __props__.__dict__["site_types_for_transport_gateway_variable"] = site_types_for_transport_gateway_variable
+        __props__.__dict__["site_types_for_transport_gateways"] = site_types_for_transport_gateways
         __props__.__dict__["site_types_variable"] = site_types_variable
         __props__.__dict__["transport_gateway"] = transport_gateway
         __props__.__dict__["transport_gateway_variable"] = transport_gateway_variable
@@ -2978,7 +3144,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def advertise_ipv6_connected(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Connected
-          - Default value: `false`
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv6_connected")
 
@@ -3063,7 +3229,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def advertise_ipv6_static(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Static
-          - Default value: `false`
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv6_static")
 
@@ -3092,6 +3258,23 @@ class SystemOmpFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "advertisement_interval_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslation")
+    def aspath_auto_translation(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable BGP AS Path Auto-Translation
+          - Default value: `false`
+        """
+        return pulumi.get(self, "aspath_auto_translation")
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslationVariable")
+    def aspath_auto_translation_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "aspath_auto_translation_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -3314,9 +3497,25 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="siteTypes")
     def site_types(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        Site Types
+        Site Types for 20.12 backward compatiblity
         """
         return pulumi.get(self, "site_types")
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGatewayVariable")
+    def site_types_for_transport_gateway_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "site_types_for_transport_gateway_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGateways")
+    def site_types_for_transport_gateways(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Site Types
+        """
+        return pulumi.get(self, "site_types_for_transport_gateways")
 
     @_builtins.property
     @pulumi.getter(name="siteTypesVariable")

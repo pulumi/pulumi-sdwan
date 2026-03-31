@@ -34,6 +34,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? DisablePeerThresholdVariable;
         /// <summary>
         /// Set IPv4 unicast address family
+        ///   - Choices: `ipv4-unicast`
         /// </summary>
         public readonly string? FamilyType;
         public readonly string? InRoutePolicyId;

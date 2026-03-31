@@ -26,7 +26,7 @@ class GetSystemOmpFeatureResult:
     """
     A collection of values returned by getSystemOmpFeature.
     """
-    def __init__(__self__, advertise_ipv4_bgp=None, advertise_ipv4_bgp_variable=None, advertise_ipv4_connected=None, advertise_ipv4_connected_variable=None, advertise_ipv4_eigrp=None, advertise_ipv4_eigrp_variable=None, advertise_ipv4_isis=None, advertise_ipv4_isis_variable=None, advertise_ipv4_lisp=None, advertise_ipv4_lisp_variable=None, advertise_ipv4_ospf=None, advertise_ipv4_ospf_v3=None, advertise_ipv4_ospf_v3_variable=None, advertise_ipv4_ospf_variable=None, advertise_ipv4_static=None, advertise_ipv4_static_variable=None, advertise_ipv6_bgp=None, advertise_ipv6_bgp_variable=None, advertise_ipv6_connected=None, advertise_ipv6_connected_variable=None, advertise_ipv6_eigrp=None, advertise_ipv6_eigrp_variable=None, advertise_ipv6_isis=None, advertise_ipv6_isis_variable=None, advertise_ipv6_lisp=None, advertise_ipv6_lisp_variable=None, advertise_ipv6_ospf=None, advertise_ipv6_ospf_variable=None, advertise_ipv6_static=None, advertise_ipv6_static_variable=None, advertisement_interval=None, advertisement_interval_variable=None, description=None, ecmp_limit=None, ecmp_limit_variable=None, eor_timer=None, eor_timer_variable=None, feature_profile_id=None, graceful_restart=None, graceful_restart_timer=None, graceful_restart_timer_variable=None, graceful_restart_variable=None, holdtime=None, holdtime_variable=None, id=None, ignore_region_path_length=None, ignore_region_path_length_variable=None, name=None, omp_admin_distance_ipv4=None, omp_admin_distance_ipv4_variable=None, omp_admin_distance_ipv6=None, omp_admin_distance_ipv6_variable=None, overlay_as=None, overlay_as_variable=None, paths_advertised_per_prefix=None, paths_advertised_per_prefix_variable=None, shutdown=None, shutdown_variable=None, site_types=None, site_types_variable=None, transport_gateway=None, transport_gateway_variable=None, version=None):
+    def __init__(__self__, advertise_ipv4_bgp=None, advertise_ipv4_bgp_variable=None, advertise_ipv4_connected=None, advertise_ipv4_connected_variable=None, advertise_ipv4_eigrp=None, advertise_ipv4_eigrp_variable=None, advertise_ipv4_isis=None, advertise_ipv4_isis_variable=None, advertise_ipv4_lisp=None, advertise_ipv4_lisp_variable=None, advertise_ipv4_ospf=None, advertise_ipv4_ospf_v3=None, advertise_ipv4_ospf_v3_variable=None, advertise_ipv4_ospf_variable=None, advertise_ipv4_static=None, advertise_ipv4_static_variable=None, advertise_ipv6_bgp=None, advertise_ipv6_bgp_variable=None, advertise_ipv6_connected=None, advertise_ipv6_connected_variable=None, advertise_ipv6_eigrp=None, advertise_ipv6_eigrp_variable=None, advertise_ipv6_isis=None, advertise_ipv6_isis_variable=None, advertise_ipv6_lisp=None, advertise_ipv6_lisp_variable=None, advertise_ipv6_ospf=None, advertise_ipv6_ospf_variable=None, advertise_ipv6_static=None, advertise_ipv6_static_variable=None, advertisement_interval=None, advertisement_interval_variable=None, aspath_auto_translation=None, aspath_auto_translation_variable=None, description=None, ecmp_limit=None, ecmp_limit_variable=None, eor_timer=None, eor_timer_variable=None, feature_profile_id=None, graceful_restart=None, graceful_restart_timer=None, graceful_restart_timer_variable=None, graceful_restart_variable=None, holdtime=None, holdtime_variable=None, id=None, ignore_region_path_length=None, ignore_region_path_length_variable=None, name=None, omp_admin_distance_ipv4=None, omp_admin_distance_ipv4_variable=None, omp_admin_distance_ipv6=None, omp_admin_distance_ipv6_variable=None, overlay_as=None, overlay_as_variable=None, paths_advertised_per_prefix=None, paths_advertised_per_prefix_variable=None, shutdown=None, shutdown_variable=None, site_types=None, site_types_for_transport_gateway_variable=None, site_types_for_transport_gateways=None, site_types_variable=None, transport_gateway=None, transport_gateway_variable=None, version=None):
         if advertise_ipv4_bgp and not isinstance(advertise_ipv4_bgp, bool):
             raise TypeError("Expected argument 'advertise_ipv4_bgp' to be a bool")
         pulumi.set(__self__, "advertise_ipv4_bgp", advertise_ipv4_bgp)
@@ -123,6 +123,12 @@ class GetSystemOmpFeatureResult:
         if advertisement_interval_variable and not isinstance(advertisement_interval_variable, str):
             raise TypeError("Expected argument 'advertisement_interval_variable' to be a str")
         pulumi.set(__self__, "advertisement_interval_variable", advertisement_interval_variable)
+        if aspath_auto_translation and not isinstance(aspath_auto_translation, bool):
+            raise TypeError("Expected argument 'aspath_auto_translation' to be a bool")
+        pulumi.set(__self__, "aspath_auto_translation", aspath_auto_translation)
+        if aspath_auto_translation_variable and not isinstance(aspath_auto_translation_variable, str):
+            raise TypeError("Expected argument 'aspath_auto_translation_variable' to be a str")
+        pulumi.set(__self__, "aspath_auto_translation_variable", aspath_auto_translation_variable)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -204,6 +210,12 @@ class GetSystemOmpFeatureResult:
         if site_types and not isinstance(site_types, list):
             raise TypeError("Expected argument 'site_types' to be a list")
         pulumi.set(__self__, "site_types", site_types)
+        if site_types_for_transport_gateway_variable and not isinstance(site_types_for_transport_gateway_variable, str):
+            raise TypeError("Expected argument 'site_types_for_transport_gateway_variable' to be a str")
+        pulumi.set(__self__, "site_types_for_transport_gateway_variable", site_types_for_transport_gateway_variable)
+        if site_types_for_transport_gateways and not isinstance(site_types_for_transport_gateways, list):
+            raise TypeError("Expected argument 'site_types_for_transport_gateways' to be a list")
+        pulumi.set(__self__, "site_types_for_transport_gateways", site_types_for_transport_gateways)
         if site_types_variable and not isinstance(site_types_variable, str):
             raise TypeError("Expected argument 'site_types_variable' to be a str")
         pulumi.set(__self__, "site_types_variable", site_types_variable)
@@ -474,6 +486,22 @@ class GetSystemOmpFeatureResult:
         return pulumi.get(self, "advertisement_interval_variable")
 
     @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslation")
+    def aspath_auto_translation(self) -> _builtins.bool:
+        """
+        Enable BGP AS Path Auto-Translation
+        """
+        return pulumi.get(self, "aspath_auto_translation")
+
+    @_builtins.property
+    @pulumi.getter(name="aspathAutoTranslationVariable")
+    def aspath_auto_translation_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "aspath_auto_translation_variable")
+
+    @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
@@ -685,9 +713,25 @@ class GetSystemOmpFeatureResult:
     @pulumi.getter(name="siteTypes")
     def site_types(self) -> Sequence[_builtins.str]:
         """
-        Site Types
+        Site Types for 20.12 backward compatiblity
         """
         return pulumi.get(self, "site_types")
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGatewayVariable")
+    def site_types_for_transport_gateway_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "site_types_for_transport_gateway_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="siteTypesForTransportGateways")
+    def site_types_for_transport_gateways(self) -> Sequence[_builtins.str]:
+        """
+        Site Types
+        """
+        return pulumi.get(self, "site_types_for_transport_gateways")
 
     @_builtins.property
     @pulumi.getter(name="siteTypesVariable")
@@ -760,6 +804,8 @@ class AwaitableGetSystemOmpFeatureResult(GetSystemOmpFeatureResult):
             advertise_ipv6_static_variable=self.advertise_ipv6_static_variable,
             advertisement_interval=self.advertisement_interval,
             advertisement_interval_variable=self.advertisement_interval_variable,
+            aspath_auto_translation=self.aspath_auto_translation,
+            aspath_auto_translation_variable=self.aspath_auto_translation_variable,
             description=self.description,
             ecmp_limit=self.ecmp_limit,
             ecmp_limit_variable=self.ecmp_limit_variable,
@@ -787,6 +833,8 @@ class AwaitableGetSystemOmpFeatureResult(GetSystemOmpFeatureResult):
             shutdown=self.shutdown,
             shutdown_variable=self.shutdown_variable,
             site_types=self.site_types,
+            site_types_for_transport_gateway_variable=self.site_types_for_transport_gateway_variable,
+            site_types_for_transport_gateways=self.site_types_for_transport_gateways,
             site_types_variable=self.site_types_variable,
             transport_gateway=self.transport_gateway,
             transport_gateway_variable=self.transport_gateway_variable,
@@ -852,6 +900,8 @@ def get_system_omp_feature(feature_profile_id: Optional[_builtins.str] = None,
         advertise_ipv6_static_variable=pulumi.get(__ret__, 'advertise_ipv6_static_variable'),
         advertisement_interval=pulumi.get(__ret__, 'advertisement_interval'),
         advertisement_interval_variable=pulumi.get(__ret__, 'advertisement_interval_variable'),
+        aspath_auto_translation=pulumi.get(__ret__, 'aspath_auto_translation'),
+        aspath_auto_translation_variable=pulumi.get(__ret__, 'aspath_auto_translation_variable'),
         description=pulumi.get(__ret__, 'description'),
         ecmp_limit=pulumi.get(__ret__, 'ecmp_limit'),
         ecmp_limit_variable=pulumi.get(__ret__, 'ecmp_limit_variable'),
@@ -879,6 +929,8 @@ def get_system_omp_feature(feature_profile_id: Optional[_builtins.str] = None,
         shutdown=pulumi.get(__ret__, 'shutdown'),
         shutdown_variable=pulumi.get(__ret__, 'shutdown_variable'),
         site_types=pulumi.get(__ret__, 'site_types'),
+        site_types_for_transport_gateway_variable=pulumi.get(__ret__, 'site_types_for_transport_gateway_variable'),
+        site_types_for_transport_gateways=pulumi.get(__ret__, 'site_types_for_transport_gateways'),
         site_types_variable=pulumi.get(__ret__, 'site_types_variable'),
         transport_gateway=pulumi.get(__ret__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__ret__, 'transport_gateway_variable'),
@@ -941,6 +993,8 @@ def get_system_omp_feature_output(feature_profile_id: Optional[pulumi.Input[_bui
         advertise_ipv6_static_variable=pulumi.get(__response__, 'advertise_ipv6_static_variable'),
         advertisement_interval=pulumi.get(__response__, 'advertisement_interval'),
         advertisement_interval_variable=pulumi.get(__response__, 'advertisement_interval_variable'),
+        aspath_auto_translation=pulumi.get(__response__, 'aspath_auto_translation'),
+        aspath_auto_translation_variable=pulumi.get(__response__, 'aspath_auto_translation_variable'),
         description=pulumi.get(__response__, 'description'),
         ecmp_limit=pulumi.get(__response__, 'ecmp_limit'),
         ecmp_limit_variable=pulumi.get(__response__, 'ecmp_limit_variable'),
@@ -968,6 +1022,8 @@ def get_system_omp_feature_output(feature_profile_id: Optional[pulumi.Input[_bui
         shutdown=pulumi.get(__response__, 'shutdown'),
         shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
         site_types=pulumi.get(__response__, 'site_types'),
+        site_types_for_transport_gateway_variable=pulumi.get(__response__, 'site_types_for_transport_gateway_variable'),
+        site_types_for_transport_gateways=pulumi.get(__response__, 'site_types_for_transport_gateways'),
         site_types_variable=pulumi.get(__response__, 'site_types_variable'),
         transport_gateway=pulumi.get(__response__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__response__, 'transport_gateway_variable'),

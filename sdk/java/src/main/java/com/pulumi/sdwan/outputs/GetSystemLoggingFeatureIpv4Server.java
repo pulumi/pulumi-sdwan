@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetSystemLoggingFeatureIpv4Server {
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set IPv4 address of server
      * 
      */
     private String hostnameIp;
@@ -73,7 +73,7 @@ public final class GetSystemLoggingFeatureIpv4Server {
      */
     private String tlsPropertiesProfileVariable;
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      * 
      */
     private Integer vpn;
@@ -85,7 +85,7 @@ public final class GetSystemLoggingFeatureIpv4Server {
 
     private GetSystemLoggingFeatureIpv4Server() {}
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set IPv4 address of server
      * 
      */
     public String hostnameIp() {
@@ -169,7 +169,7 @@ public final class GetSystemLoggingFeatureIpv4Server {
         return this.tlsPropertiesProfileVariable;
     }
     /**
-     * @return Set hostname or IPv4 address of server
+     * @return Set vpn of server
      * 
      */
     public Integer vpn() {

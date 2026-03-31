@@ -38,6 +38,38 @@ public final class ServiceIpv4AclFeatureSequenceAction {
      */
     private @Nullable String acceptSetNextHop;
     /**
+     * @return fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     * 
+     */
+    private @Nullable Boolean acceptSetServiceChainFallback;
+    /**
+     * @return Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    private @Nullable String acceptSetServiceChainFallbackVariable;
+    /**
+     * @return Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     * 
+     */
+    private @Nullable String acceptSetServiceChainName;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String acceptSetServiceChainNameVariable;
+    /**
+     * @return Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    private @Nullable Integer acceptSetServiceChainVpn;
+    /**
+     * @return Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    private @Nullable String acceptSetServiceChainVpnVariable;
+    /**
      * @return Counter Name
      * 
      */
@@ -87,6 +119,50 @@ public final class ServiceIpv4AclFeatureSequenceAction {
         return Optional.ofNullable(this.acceptSetNextHop);
     }
     /**
+     * @return fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Boolean> acceptSetServiceChainFallback() {
+        return Optional.ofNullable(this.acceptSetServiceChainFallback);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    public Optional<String> acceptSetServiceChainFallbackVariable() {
+        return Optional.ofNullable(this.acceptSetServiceChainFallbackVariable);
+    }
+    /**
+     * @return Set Service Chain Number
+     *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     * 
+     */
+    public Optional<String> acceptSetServiceChainName() {
+        return Optional.ofNullable(this.acceptSetServiceChainName);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> acceptSetServiceChainNameVariable() {
+        return Optional.ofNullable(this.acceptSetServiceChainNameVariable);
+    }
+    /**
+     * @return Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    public Optional<Integer> acceptSetServiceChainVpn() {
+        return Optional.ofNullable(this.acceptSetServiceChainVpn);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
+     * 
+     */
+    public Optional<String> acceptSetServiceChainVpnVariable() {
+        return Optional.ofNullable(this.acceptSetServiceChainVpnVariable);
+    }
+    /**
      * @return Counter Name
      * 
      */
@@ -117,6 +193,12 @@ public final class ServiceIpv4AclFeatureSequenceAction {
         private @Nullable String acceptPolicerId;
         private @Nullable Integer acceptSetDscp;
         private @Nullable String acceptSetNextHop;
+        private @Nullable Boolean acceptSetServiceChainFallback;
+        private @Nullable String acceptSetServiceChainFallbackVariable;
+        private @Nullable String acceptSetServiceChainName;
+        private @Nullable String acceptSetServiceChainNameVariable;
+        private @Nullable Integer acceptSetServiceChainVpn;
+        private @Nullable String acceptSetServiceChainVpnVariable;
         private @Nullable String dropCounterName;
         private @Nullable Boolean dropLog;
         public Builder() {}
@@ -128,6 +210,12 @@ public final class ServiceIpv4AclFeatureSequenceAction {
     	      this.acceptPolicerId = defaults.acceptPolicerId;
     	      this.acceptSetDscp = defaults.acceptSetDscp;
     	      this.acceptSetNextHop = defaults.acceptSetNextHop;
+    	      this.acceptSetServiceChainFallback = defaults.acceptSetServiceChainFallback;
+    	      this.acceptSetServiceChainFallbackVariable = defaults.acceptSetServiceChainFallbackVariable;
+    	      this.acceptSetServiceChainName = defaults.acceptSetServiceChainName;
+    	      this.acceptSetServiceChainNameVariable = defaults.acceptSetServiceChainNameVariable;
+    	      this.acceptSetServiceChainVpn = defaults.acceptSetServiceChainVpn;
+    	      this.acceptSetServiceChainVpnVariable = defaults.acceptSetServiceChainVpnVariable;
     	      this.dropCounterName = defaults.dropCounterName;
     	      this.dropLog = defaults.dropLog;
         }
@@ -169,6 +257,42 @@ public final class ServiceIpv4AclFeatureSequenceAction {
             return this;
         }
         @CustomType.Setter
+        public Builder acceptSetServiceChainFallback(@Nullable Boolean acceptSetServiceChainFallback) {
+
+            this.acceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainFallbackVariable(@Nullable String acceptSetServiceChainFallbackVariable) {
+
+            this.acceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainName(@Nullable String acceptSetServiceChainName) {
+
+            this.acceptSetServiceChainName = acceptSetServiceChainName;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainNameVariable(@Nullable String acceptSetServiceChainNameVariable) {
+
+            this.acceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainVpn(@Nullable Integer acceptSetServiceChainVpn) {
+
+            this.acceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder acceptSetServiceChainVpnVariable(@Nullable String acceptSetServiceChainVpnVariable) {
+
+            this.acceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder dropCounterName(@Nullable String dropCounterName) {
 
             this.dropCounterName = dropCounterName;
@@ -188,6 +312,12 @@ public final class ServiceIpv4AclFeatureSequenceAction {
             _resultValue.acceptPolicerId = acceptPolicerId;
             _resultValue.acceptSetDscp = acceptSetDscp;
             _resultValue.acceptSetNextHop = acceptSetNextHop;
+            _resultValue.acceptSetServiceChainFallback = acceptSetServiceChainFallback;
+            _resultValue.acceptSetServiceChainFallbackVariable = acceptSetServiceChainFallbackVariable;
+            _resultValue.acceptSetServiceChainName = acceptSetServiceChainName;
+            _resultValue.acceptSetServiceChainNameVariable = acceptSetServiceChainNameVariable;
+            _resultValue.acceptSetServiceChainVpn = acceptSetServiceChainVpn;
+            _resultValue.acceptSetServiceChainVpnVariable = acceptSetServiceChainVpnVariable;
             _resultValue.dropCounterName = dropCounterName;
             _resultValue.dropLog = dropLog;
             return _resultValue;

@@ -17,7 +17,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
     public static final TransportRoutingOspfv3Ipv4FeatureRedistributeArgs Empty = new TransportRoutingOspfv3Ipv4FeatureRedistributeArgs();
 
     /**
-     * Enable NAT DIA for redistributed routes
+     * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      * 
      */
@@ -25,7 +25,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
     private @Nullable Output<Boolean> natDia;
 
     /**
-     * @return Enable NAT DIA for redistributed routes
+     * @return Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      * 
      */
@@ -34,14 +34,14 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      * 
      */
     @Import(name="natDiaVariable")
     private @Nullable Output<String> natDiaVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `protocol` equal to `nat-route`
      * 
      */
     public Optional<Output<String>> natDiaVariable() {
@@ -150,7 +150,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
         }
 
         /**
-         * @param natDia Enable NAT DIA for redistributed routes
+         * @param natDia Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
          *   - Default value: `true`
          * 
          * @return builder
@@ -162,7 +162,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
         }
 
         /**
-         * @param natDia Enable NAT DIA for redistributed routes
+         * @param natDia Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
          *   - Default value: `true`
          * 
          * @return builder
@@ -173,7 +173,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
         }
 
         /**
-         * @param natDiaVariable Variable name
+         * @param natDiaVariable Variable name, Attribute conditional on `protocol` equal to `nat-route`
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs extends com
         }
 
         /**
-         * @param natDiaVariable Variable name
+         * @param natDiaVariable Variable name, Attribute conditional on `protocol` equal to `nat-route`
          * 
          * @return builder
          * 

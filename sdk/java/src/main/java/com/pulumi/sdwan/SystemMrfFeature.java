@@ -10,14 +10,16 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.sdwan.SystemMrfFeatureArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.SystemMrfFeatureState;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * This resource can manage a System MRF Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -47,11 +49,13 @@ import javax.annotation.Nullable;
  *             .name("Example")
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .regionId(1)
- *             .secondaryRegionId(2)
  *             .role("edge-router")
  *             .enableMigrationToMrf("enabled")
  *             .migrationBgpCommunity(100)
+ *             .enableManagementRegion(true)
+ *             .vrfId(1)
+ *             .gatewayPreferences(1)
+ *             .managementGateway(false)
  *             .build());
  * 
  *     }
@@ -87,6 +91,36 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
+     * Enable management region
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="enableManagementRegion", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> enableManagementRegion;
+
+    /**
+     * @return Enable management region
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> enableManagementRegion() {
+        return Codegen.optional(this.enableManagementRegion);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="enableManagementRegionVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> enableManagementRegionVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> enableManagementRegionVariable() {
+        return Codegen.optional(this.enableManagementRegionVariable);
+    }
+    /**
      * Enable migration mode to Multi-Region Fabric
      *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
@@ -117,6 +151,64 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
+     * Variable name
+     * 
+     */
+    @Export(name="gatewayPreferenceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> gatewayPreferenceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> gatewayPreferenceVariable() {
+        return Codegen.optional(this.gatewayPreferenceVariable);
+    }
+    /**
+     * List of affinity group preferences for VRF
+     * 
+     */
+    @Export(name="gatewayPreferences", refs={List.class,Integer.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<Integer>> gatewayPreferences;
+
+    /**
+     * @return List of affinity group preferences for VRF
+     * 
+     */
+    public Output<Optional<List<Integer>>> gatewayPreferences() {
+        return Codegen.optional(this.gatewayPreferences);
+    }
+    /**
+     * Enable management gateway
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="managementGateway", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> managementGateway;
+
+    /**
+     * @return Enable management gateway
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> managementGateway() {
+        return Codegen.optional(this.managementGateway);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="managementGatewayVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> managementGatewayVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> managementGatewayVariable() {
+        return Codegen.optional(this.managementGatewayVariable);
+    }
+    /**
      * Set BGP community during migration from BGP-core based network
      *   - Range: `1`-`4294967295`
      * 
@@ -145,22 +237,6 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<String> name() {
         return this.name;
-    }
-    /**
-     * Set region ID
-     *   - Range: `1`-`63`
-     * 
-     */
-    @Export(name="regionId", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> regionId;
-
-    /**
-     * @return Set region ID
-     *   - Range: `1`-`63`
-     * 
-     */
-    public Output<Optional<Integer>> regionId() {
-        return Codegen.optional(this.regionId);
     }
     /**
      * Set the role for router
@@ -235,6 +311,36 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Integer> version() {
         return this.version;
+    }
+    /**
+     * VRF name for management region
+     *   - Range: `1`-`65531`
+     * 
+     */
+    @Export(name="vrfId", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> vrfId;
+
+    /**
+     * @return VRF name for management region
+     *   - Range: `1`-`65531`
+     * 
+     */
+    public Output<Optional<Integer>> vrfId() {
+        return Codegen.optional(this.vrfId);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="vrfIdVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> vrfIdVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> vrfIdVariable() {
+        return Codegen.optional(this.vrfIdVariable);
     }
 
     /**

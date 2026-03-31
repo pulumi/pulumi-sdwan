@@ -37,6 +37,7 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     private @Nullable String disablePeerThresholdVariable;
     /**
      * @return Set IPv6 unicast address family
+     *   - Choices: `ipv6-unicast`
      * 
      */
     private @Nullable String familyType;
@@ -140,6 +141,7 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     }
     /**
      * @return Set IPv6 unicast address family
+     *   - Choices: `ipv6-unicast`
      * 
      */
     public Optional<String> familyType() {

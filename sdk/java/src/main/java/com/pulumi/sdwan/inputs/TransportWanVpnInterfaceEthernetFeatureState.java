@@ -313,14 +313,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Import(name="enableDhcpv6")
     private @Nullable Output<Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Optional<Output<Boolean>> enableDhcpv6() {
@@ -427,7 +427,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -436,7 +436,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -446,14 +446,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      * 
      */
     @Import(name="interfaceMtuVariable")
     private @Nullable Output<String> interfaceMtuVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
      * 
      */
     public Optional<Output<String>> interfaceMtuVariable() {
@@ -579,14 +579,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -594,14 +594,46 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    @Import(name="ipv4AddressType")
+    private @Nullable Output<String> ipv4AddressType;
+
+    /**
+     * @return address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    public Optional<Output<String>> ipv4AddressType() {
+        return Optional.ofNullable(this.ipv4AddressType);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    @Import(name="ipv4AddressTypeVariable")
+    private @Nullable Output<String> ipv4AddressTypeVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    public Optional<Output<String>> ipv4AddressTypeVariable() {
+        return Optional.ofNullable(this.ipv4AddressTypeVariable);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -609,26 +641,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     * 
-     */
-    @Import(name="ipv4ConfigurationType")
-    private @Nullable Output<String> ipv4ConfigurationType;
-
-    /**
-     * @return IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `dynamic`
-     * 
-     */
-    public Optional<Output<String>> ipv4ConfigurationType() {
-        return Optional.ofNullable(this.ipv4ConfigurationType);
-    }
-
-    /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -637,7 +650,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * @return DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -647,14 +660,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv4DhcpDistanceVariable")
     private @Nullable Output<String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Optional<Output<String>> ipv4DhcpDistanceVariable() {
@@ -692,14 +705,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv4SecondaryAddresses")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>>> ipv4SecondaryAddresses() {
@@ -707,16 +720,16 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -724,14 +737,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -739,14 +752,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -754,14 +767,46 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    @Import(name="ipv6AddressType")
+    private @Nullable Output<String> ipv6AddressType;
+
+    /**
+     * @return address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`
+     * 
+     */
+    public Optional<Output<String>> ipv6AddressType() {
+        return Optional.ofNullable(this.ipv6AddressType);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    @Import(name="ipv6AddressTypeVariable")
+    private @Nullable Output<String> ipv6AddressTypeVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     * 
+     */
+    public Optional<Output<String>> ipv6AddressTypeVariable() {
+        return Optional.ofNullable(this.ipv6AddressTypeVariable);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -769,33 +814,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     * 
-     */
-    @Import(name="ipv6ConfigurationType")
-    private @Nullable Output<String> ipv6ConfigurationType;
-
-    /**
-     * @return IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-     *   - Choices: `dynamic`, `static`, `none`
-     *   - Default value: `none`
-     * 
-     */
-    public Optional<Output<String>> ipv6ConfigurationType() {
-        return Optional.ofNullable(this.ipv6ConfigurationType);
-    }
-
-    /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv6DhcpSecondaryAddresses")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>>> ipv6DhcpSecondaryAddresses() {
@@ -803,14 +829,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
     }
 
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     @Import(name="ipv6SecondaryAddresses")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>>> ipv6SecondaryAddresses() {
@@ -2097,7 +2123,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
 
     /**
      * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     @Import(name="speed")
@@ -2105,7 +2131,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
 
     /**
      * @return Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -3607,8 +3633,9 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         this.iperfServer = $.iperfServer;
         this.iperfServerVariable = $.iperfServerVariable;
         this.ipv4Address = $.ipv4Address;
+        this.ipv4AddressType = $.ipv4AddressType;
+        this.ipv4AddressTypeVariable = $.ipv4AddressTypeVariable;
         this.ipv4AddressVariable = $.ipv4AddressVariable;
-        this.ipv4ConfigurationType = $.ipv4ConfigurationType;
         this.ipv4DhcpDistance = $.ipv4DhcpDistance;
         this.ipv4DhcpDistanceVariable = $.ipv4DhcpDistanceVariable;
         this.ipv4DhcpHelperVariable = $.ipv4DhcpHelperVariable;
@@ -3617,8 +3644,9 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         this.ipv4SubnetMask = $.ipv4SubnetMask;
         this.ipv4SubnetMaskVariable = $.ipv4SubnetMaskVariable;
         this.ipv6Address = $.ipv6Address;
+        this.ipv6AddressType = $.ipv6AddressType;
+        this.ipv6AddressTypeVariable = $.ipv6AddressTypeVariable;
         this.ipv6AddressVariable = $.ipv6AddressVariable;
-        this.ipv6ConfigurationType = $.ipv6ConfigurationType;
         this.ipv6DhcpSecondaryAddresses = $.ipv6DhcpSecondaryAddresses;
         this.ipv6SecondaryAddresses = $.ipv6SecondaryAddresses;
         this.loadInterval = $.loadInterval;
@@ -4210,7 +4238,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4221,7 +4249,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4368,7 +4396,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
          *   - Range: `1500`-`9216`
          *   - Default value: `1500`
          * 
@@ -4381,7 +4409,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
          *   - Range: `1500`-`9216`
          *   - Default value: `1500`
          * 
@@ -4393,7 +4421,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
          * 
          * @return builder
          * 
@@ -4404,7 +4432,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `interfaceName` not containing `.`
          * 
          * @return builder
          * 
@@ -4576,7 +4604,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4587,7 +4615,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4597,7 +4625,51 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4AddressType address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4AddressType(@Nullable Output<String> ipv4AddressType) {
+            $.ipv4AddressType = ipv4AddressType;
+            return this;
+        }
+
+        /**
+         * @param ipv4AddressType address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4AddressType(String ipv4AddressType) {
+            return ipv4AddressType(Output.of(ipv4AddressType));
+        }
+
+        /**
+         * @param ipv4AddressTypeVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4AddressTypeVariable(@Nullable Output<String> ipv4AddressTypeVariable) {
+            $.ipv4AddressTypeVariable = ipv4AddressTypeVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv4AddressTypeVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4AddressTypeVariable(String ipv4AddressTypeVariable) {
+            return ipv4AddressTypeVariable(Output.of(ipv4AddressTypeVariable));
+        }
+
+        /**
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4608,7 +4680,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4618,32 +4690,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-         *   - Choices: `dynamic`, `static`, `none`
-         *   - Default value: `dynamic`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4ConfigurationType(@Nullable Output<String> ipv4ConfigurationType) {
-            $.ipv4ConfigurationType = ipv4ConfigurationType;
-            return this;
-        }
-
-        /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-         *   - Choices: `dynamic`, `static`, `none`
-         *   - Default value: `dynamic`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4ConfigurationType(String ipv4ConfigurationType) {
-            return ipv4ConfigurationType(Output.of(ipv4ConfigurationType));
-        }
-
-        /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
          *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
@@ -4656,7 +4703,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
          *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
@@ -4668,7 +4715,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4679,7 +4726,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4AddressType` equal to `dynamic` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4741,7 +4788,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4752,7 +4799,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4762,7 +4809,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4772,8 +4819,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -4784,8 +4831,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
-         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -4795,7 +4842,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4806,7 +4853,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4AddressType` equal to `static` or `ipv4AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4816,7 +4863,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4827,7 +4874,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4837,7 +4884,51 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6AddressType address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6AddressType(@Nullable Output<String> ipv6AddressType) {
+            $.ipv6AddressType = ipv6AddressType;
+            return this;
+        }
+
+        /**
+         * @param ipv6AddressType address type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6AddressType(String ipv6AddressType) {
+            return ipv6AddressType(Output.of(ipv6AddressType));
+        }
+
+        /**
+         * @param ipv6AddressTypeVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6AddressTypeVariable(@Nullable Output<String> ipv6AddressTypeVariable) {
+            $.ipv6AddressTypeVariable = ipv6AddressTypeVariable;
+            return this;
+        }
+
+        /**
+         * @param ipv6AddressTypeVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6AddressTypeVariable(String ipv6AddressTypeVariable) {
+            return ipv6AddressTypeVariable(Output.of(ipv6AddressTypeVariable));
+        }
+
+        /**
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4848,7 +4939,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4858,32 +4949,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-         *   - Choices: `dynamic`, `static`, `none`
-         *   - Default value: `none`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv6ConfigurationType(@Nullable Output<String> ipv6ConfigurationType) {
-            $.ipv6ConfigurationType = ipv6ConfigurationType;
-            return this;
-        }
-
-        /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
-         *   - Choices: `dynamic`, `static`, `none`
-         *   - Default value: `none`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv6ConfigurationType(String ipv6ConfigurationType) {
-            return ipv6ConfigurationType(Output.of(ipv6ConfigurationType));
-        }
-
-        /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4894,7 +4960,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4904,7 +4970,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `dynamic` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4914,7 +4980,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4925,7 +4991,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -4935,7 +5001,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6AddressType` equal to `static` or `ipv6AddressTypeVariable` being set
          * 
          * @return builder
          * 
@@ -6754,7 +6820,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
 
         /**
          * @param speed Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -6766,7 +6832,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureState extends com.pulu
 
         /**
          * @param speed Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
          * 
          * @return builder
          * 

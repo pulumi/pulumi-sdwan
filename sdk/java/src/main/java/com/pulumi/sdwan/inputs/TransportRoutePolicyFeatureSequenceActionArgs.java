@@ -19,9 +19,9 @@ public final class TransportRoutePolicyFeatureSequenceActionArgs extends com.pul
     public static final TransportRoutePolicyFeatureSequenceActionArgs Empty = new TransportRoutePolicyFeatureSequenceActionArgs();
 
     @Import(name="asPathPrepends")
-    private @Nullable Output<List<Integer>> asPathPrepends;
+    private @Nullable Output<List<String>> asPathPrepends;
 
-    public Optional<Output<List<Integer>>> asPathPrepends() {
+    public Optional<Output<List<String>>> asPathPrepends() {
         return Optional.ofNullable(this.asPathPrepends);
     }
 
@@ -247,16 +247,16 @@ public final class TransportRoutePolicyFeatureSequenceActionArgs extends com.pul
             $ = new TransportRoutePolicyFeatureSequenceActionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder asPathPrepends(@Nullable Output<List<Integer>> asPathPrepends) {
+        public Builder asPathPrepends(@Nullable Output<List<String>> asPathPrepends) {
             $.asPathPrepends = asPathPrepends;
             return this;
         }
 
-        public Builder asPathPrepends(List<Integer> asPathPrepends) {
+        public Builder asPathPrepends(List<String> asPathPrepends) {
             return asPathPrepends(Output.of(asPathPrepends));
         }
 
-        public Builder asPathPrepends(Integer... asPathPrepends) {
+        public Builder asPathPrepends(String... asPathPrepends) {
             return asPathPrepends(List.of(asPathPrepends));
         }
 

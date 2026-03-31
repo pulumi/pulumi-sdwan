@@ -14,6 +14,22 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetTransportRoutingBgpFeatureIpv6RedistributeResult
     {
         /// <summary>
+        /// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
+        /// </summary>
+        public readonly int Metric;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string MetricVariable;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string OspfMatchRouteVariable;
+        /// <summary>
+        /// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
+        /// </summary>
+        public readonly ImmutableArray<string> OspfMatchRoutes;
+        /// <summary>
         /// Set the protocol to redistribute routes from
         /// </summary>
         public readonly string Protocol;
@@ -25,12 +41,24 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetTransportRoutingBgpFeatureIpv6RedistributeResult(
+            int metric,
+
+            string metricVariable,
+
+            string ospfMatchRouteVariable,
+
+            ImmutableArray<string> ospfMatchRoutes,
+
             string protocol,
 
             string protocolVariable,
 
             string routePolicyId)
         {
+            Metric = metric;
+            MetricVariable = metricVariable;
+            OspfMatchRouteVariable = ospfMatchRouteVariable;
+            OspfMatchRoutes = ospfMatchRoutes;
             Protocol = protocol;
             ProtocolVariable = protocolVariable;
             RoutePolicyId = routePolicyId;

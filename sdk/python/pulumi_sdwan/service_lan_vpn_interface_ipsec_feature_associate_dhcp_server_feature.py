@@ -187,7 +187,7 @@ class ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(pulumi.Custom
                  __props__=None):
         """
         This resource can manage a Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -228,7 +228,7 @@ class ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(pulumi.Custom
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

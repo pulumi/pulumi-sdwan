@@ -102,7 +102,7 @@ export interface GetTransportCellularProfileFeatureResult {
      */
     readonly profileIdVariable: string;
     /**
-     * Set the profile password
+     * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     readonly profilePassword: string;
     /**

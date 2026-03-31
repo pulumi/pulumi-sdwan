@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetSystemLoggingFeatureIpv6ServerResult
     {
         /// <summary>
-        /// Set IPv6 hostname or IPv6 address of server
+        /// Set IPv6 address of server
         /// </summary>
         public readonly string HostnameIp;
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string TlsPropertiesProfileVariable;
         /// <summary>
-        /// Set hostname or IPv4 address of server
+        /// Set vpn of server
         /// </summary>
         public readonly int Vpn;
         /// <summary>

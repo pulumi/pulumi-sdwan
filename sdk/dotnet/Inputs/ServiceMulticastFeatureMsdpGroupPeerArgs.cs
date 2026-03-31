@@ -57,7 +57,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? KeepaliveIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set MSDP peer ip password
+        /// Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         [Input("peerAuthenticationPassword")]
         public Input<string>? PeerAuthenticationPassword { get; set; }

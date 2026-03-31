@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set authentication key for the server
-        ///   - Range: `1`-`65535`
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         public readonly int? AuthenticationKey;
         /// <summary>

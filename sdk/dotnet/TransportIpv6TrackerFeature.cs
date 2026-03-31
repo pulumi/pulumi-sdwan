@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Transport IPv6 Tracker Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -74,7 +74,7 @@ namespace Pulumi.Sdwan
         public Output<string?> EndpointApiUrlVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Endpoint DNS Name
+        /// DNS Name
         /// </summary>
         [Output("endpointDnsName")]
         public Output<string?> EndpointDnsName { get; private set; } = null!;
@@ -86,7 +86,7 @@ namespace Pulumi.Sdwan
         public Output<string?> EndpointDnsNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Endpoint IP
+        /// IP
         /// </summary>
         [Output("endpointIp")]
         public Output<string?> EndpointIp { get; private set; } = null!;
@@ -99,17 +99,11 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Endpoint Tracker Type
-        ///   - Choices: `ipv6-interface`
+        ///   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
         ///   - Default value: `ipv6-interface`
         /// </summary>
         [Output("endpointTrackerType")]
         public Output<string?> EndpointTrackerType { get; private set; } = null!;
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Output("endpointTrackerTypeVariable")]
-        public Output<string?> EndpointTrackerTypeVariable { get; private set; } = null!;
 
         /// <summary>
         /// Feature Profile ID
@@ -118,7 +112,21 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Interval
+        /// Probe Interval, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface-icmp`
+        ///   - Range: `2`-`1000`
+        ///   - Default value: `2`
+        /// </summary>
+        [Output("icmpInterval")]
+        public Output<int?> IcmpInterval { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface-icmp`
+        /// </summary>
+        [Output("icmpIntervalVariable")]
+        public Output<string?> IcmpIntervalVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Probe Interval, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface`
         ///   - Range: `20`-`600`
         ///   - Default value: `60`
         /// </summary>
@@ -126,7 +134,7 @@ namespace Pulumi.Sdwan
         public Output<int?> Interval { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface`
         /// </summary>
         [Output("intervalVariable")]
         public Output<string?> IntervalVariable { get; private set; } = null!;
@@ -262,7 +270,7 @@ namespace Pulumi.Sdwan
         public Input<string>? EndpointApiUrlVariable { get; set; }
 
         /// <summary>
-        /// Endpoint DNS Name
+        /// DNS Name
         /// </summary>
         [Input("endpointDnsName")]
         public Input<string>? EndpointDnsName { get; set; }
@@ -274,7 +282,7 @@ namespace Pulumi.Sdwan
         public Input<string>? EndpointDnsNameVariable { get; set; }
 
         /// <summary>
-        /// Endpoint IP
+        /// IP
         /// </summary>
         [Input("endpointIp")]
         public Input<string>? EndpointIp { get; set; }
@@ -287,17 +295,11 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Endpoint Tracker Type
-        ///   - Choices: `ipv6-interface`
+        ///   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
         ///   - Default value: `ipv6-interface`
         /// </summary>
         [Input("endpointTrackerType")]
         public Input<string>? EndpointTrackerType { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("endpointTrackerTypeVariable")]
-        public Input<string>? EndpointTrackerTypeVariable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -306,7 +308,21 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Interval
+        /// Probe Interval, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface-icmp`
+        ///   - Range: `2`-`1000`
+        ///   - Default value: `2`
+        /// </summary>
+        [Input("icmpInterval")]
+        public Input<int>? IcmpInterval { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface-icmp`
+        /// </summary>
+        [Input("icmpIntervalVariable")]
+        public Input<string>? IcmpIntervalVariable { get; set; }
+
+        /// <summary>
+        /// Probe Interval, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface`
         ///   - Range: `20`-`600`
         ///   - Default value: `60`
         /// </summary>
@@ -314,7 +330,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Interval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface`
         /// </summary>
         [Input("intervalVariable")]
         public Input<string>? IntervalVariable { get; set; }
@@ -406,7 +422,7 @@ namespace Pulumi.Sdwan
         public Input<string>? EndpointApiUrlVariable { get; set; }
 
         /// <summary>
-        /// Endpoint DNS Name
+        /// DNS Name
         /// </summary>
         [Input("endpointDnsName")]
         public Input<string>? EndpointDnsName { get; set; }
@@ -418,7 +434,7 @@ namespace Pulumi.Sdwan
         public Input<string>? EndpointDnsNameVariable { get; set; }
 
         /// <summary>
-        /// Endpoint IP
+        /// IP
         /// </summary>
         [Input("endpointIp")]
         public Input<string>? EndpointIp { get; set; }
@@ -431,17 +447,11 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Endpoint Tracker Type
-        ///   - Choices: `ipv6-interface`
+        ///   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
         ///   - Default value: `ipv6-interface`
         /// </summary>
         [Input("endpointTrackerType")]
         public Input<string>? EndpointTrackerType { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("endpointTrackerTypeVariable")]
-        public Input<string>? EndpointTrackerTypeVariable { get; set; }
 
         /// <summary>
         /// Feature Profile ID
@@ -450,7 +460,21 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Interval
+        /// Probe Interval, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface-icmp`
+        ///   - Range: `2`-`1000`
+        ///   - Default value: `2`
+        /// </summary>
+        [Input("icmpInterval")]
+        public Input<int>? IcmpInterval { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface-icmp`
+        /// </summary>
+        [Input("icmpIntervalVariable")]
+        public Input<string>? IcmpIntervalVariable { get; set; }
+
+        /// <summary>
+        /// Probe Interval, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface`
         ///   - Range: `20`-`600`
         ///   - Default value: `60`
         /// </summary>
@@ -458,7 +482,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Interval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `EndpointTrackerType` equal to `ipv6-interface`
         /// </summary>
         [Input("intervalVariable")]
         public Input<string>? IntervalVariable { get; set; }

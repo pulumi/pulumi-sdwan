@@ -295,20 +295,17 @@ namespace Pulumi.Sdwan
         [Output("ipsecReplayWindowVariable")]
         public Output<string?> IpsecReplayWindowVariable { get; private set; } = null!;
 
-        /// <summary>
-        /// , Attribute conditional on `TunnelMode` equal to `Ipv4`
-        /// </summary>
         [Output("ipv4Address")]
         public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("ipv4AddressVariable")]
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Interface MTU &lt;576..9976&gt;, in bytes
         ///   - Range: `576`-`9976`
         ///   - Default value: `1500`
         /// </summary>
@@ -316,71 +313,70 @@ namespace Pulumi.Sdwan
         public Output<int?> Ipv4Mtu { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("ipv4MtuVariable")]
         public Output<string?> Ipv4MtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `TunnelMode` equal to `Ipv4`
-        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("ipv4SubnetMaskVariable")]
         public Output<string?> Ipv4SubnetMaskVariable { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// TCP MSS on SYN packets, in bytes
         ///   - Range: `500`-`1460`
         /// </summary>
         [Output("ipv4TcpMss")]
         public Output<int?> Ipv4TcpMss { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("ipv4TcpMssVariable")]
         public Output<string?> Ipv4TcpMssVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Assign IPv6 address, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Assign IPv6 address
         /// </summary>
         [Output("ipv6Address")]
         public Output<string?> Ipv6Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Output("ipv6AddressVariable")]
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Interface MTU &lt;1280..9976&gt;, in bytes
         ///   - Range: `1280`-`9976`
         /// </summary>
         [Output("ipv6Mtu")]
         public Output<int?> Ipv6Mtu { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Output("ipv6MtuVariable")]
         public Output<string?> Ipv6MtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// IPv6 TCP MSS on SYN packets, in bytes
         ///   - Range: `40`-`1454`
         /// </summary>
         [Output("ipv6TcpMss")]
         public Output<int?> Ipv6TcpMss { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Output("ipv6TcpMssVariable")]
         public Output<string?> Ipv6TcpMssVariable { get; private set; } = null!;
@@ -489,13 +485,13 @@ namespace Pulumi.Sdwan
         public Output<bool?> TunnelProtection { get; private set; } = null!;
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Output("tunnelRouteViaInterface")]
         public Output<string?> TunnelRouteViaInterface { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("tunnelRouteViaInterfaceVariable")]
         public Output<string?> TunnelRouteViaInterfaceVariable { get; private set; } = null!;
@@ -525,37 +521,37 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelRouteViaIpv6AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Output("tunnelRouteViaLoopback")]
         public Output<string?> TunnelRouteViaLoopback { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("tunnelRouteViaLoopbackVariable")]
         public Output<string?> TunnelRouteViaLoopbackVariable { get; private set; } = null!;
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name
         /// </summary>
         [Output("tunnelSourceInterface")]
         public Output<string?> TunnelSourceInterface { get; private set; } = null!;
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name
         /// </summary>
         [Output("tunnelSourceInterfaceLoopback")]
         public Output<string?> TunnelSourceInterfaceLoopback { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("tunnelSourceInterfaceLoopbackVariable")]
         public Output<string?> TunnelSourceInterfaceLoopbackVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Output("tunnelSourceInterfaceVariable")]
         public Output<string?> TunnelSourceInterfaceVariable { get; private set; } = null!;
@@ -856,20 +852,17 @@ namespace Pulumi.Sdwan
         [Input("ipsecReplayWindowVariable")]
         public Input<string>? IpsecReplayWindowVariable { get; set; }
 
-        /// <summary>
-        /// , Attribute conditional on `TunnelMode` equal to `Ipv4`
-        /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Interface MTU &lt;576..9976&gt;, in bytes
         ///   - Range: `576`-`9976`
         ///   - Default value: `1500`
         /// </summary>
@@ -877,71 +870,70 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4Mtu { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4MtuVariable")]
         public Input<string>? Ipv4MtuVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `TunnelMode` equal to `Ipv4`
-        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// TCP MSS on SYN packets, in bytes
         ///   - Range: `500`-`1460`
         /// </summary>
         [Input("ipv4TcpMss")]
         public Input<int>? Ipv4TcpMss { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4TcpMssVariable")]
         public Input<string>? Ipv4TcpMssVariable { get; set; }
 
         /// <summary>
-        /// Assign IPv6 address, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Assign IPv6 address
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Interface MTU &lt;1280..9976&gt;, in bytes
         ///   - Range: `1280`-`9976`
         /// </summary>
         [Input("ipv6Mtu")]
         public Input<int>? Ipv6Mtu { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Input("ipv6MtuVariable")]
         public Input<string>? Ipv6MtuVariable { get; set; }
 
         /// <summary>
-        /// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// IPv6 TCP MSS on SYN packets, in bytes
         ///   - Range: `40`-`1454`
         /// </summary>
         [Input("ipv6TcpMss")]
         public Input<int>? Ipv6TcpMss { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Input("ipv6TcpMssVariable")]
         public Input<string>? Ipv6TcpMssVariable { get; set; }
@@ -1050,13 +1042,13 @@ namespace Pulumi.Sdwan
         public Input<bool>? TunnelProtection { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Input("tunnelRouteViaInterface")]
         public Input<string>? TunnelRouteViaInterface { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelRouteViaInterfaceVariable")]
         public Input<string>? TunnelRouteViaInterfaceVariable { get; set; }
@@ -1086,37 +1078,37 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelRouteViaIpv6AddressVariable { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Input("tunnelRouteViaLoopback")]
         public Input<string>? TunnelRouteViaLoopback { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelRouteViaLoopbackVariable")]
         public Input<string>? TunnelRouteViaLoopbackVariable { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name
         /// </summary>
         [Input("tunnelSourceInterface")]
         public Input<string>? TunnelSourceInterface { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name
         /// </summary>
         [Input("tunnelSourceInterfaceLoopback")]
         public Input<string>? TunnelSourceInterfaceLoopback { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelSourceInterfaceLoopbackVariable")]
         public Input<string>? TunnelSourceInterfaceLoopbackVariable { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelSourceInterfaceVariable")]
         public Input<string>? TunnelSourceInterfaceVariable { get; set; }
@@ -1373,20 +1365,17 @@ namespace Pulumi.Sdwan
         [Input("ipsecReplayWindowVariable")]
         public Input<string>? IpsecReplayWindowVariable { get; set; }
 
-        /// <summary>
-        /// , Attribute conditional on `TunnelMode` equal to `Ipv4`
-        /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Interface MTU &lt;576..9976&gt;, in bytes
         ///   - Range: `576`-`9976`
         ///   - Default value: `1500`
         /// </summary>
@@ -1394,71 +1383,70 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4Mtu { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4MtuVariable")]
         public Input<string>? Ipv4MtuVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `TunnelMode` equal to `Ipv4`
-        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// TCP MSS on SYN packets, in bytes
         ///   - Range: `500`-`1460`
         /// </summary>
         [Input("ipv4TcpMss")]
         public Input<int>? Ipv4TcpMss { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("ipv4TcpMssVariable")]
         public Input<string>? Ipv4TcpMssVariable { get; set; }
 
         /// <summary>
-        /// Assign IPv6 address, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Assign IPv6 address
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Interface MTU &lt;1280..9976&gt;, in bytes
         ///   - Range: `1280`-`9976`
         /// </summary>
         [Input("ipv6Mtu")]
         public Input<int>? Ipv6Mtu { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Input("ipv6MtuVariable")]
         public Input<string>? Ipv6MtuVariable { get; set; }
 
         /// <summary>
-        /// IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// IPv6 TCP MSS on SYN packets, in bytes
         ///   - Range: `40`-`1454`
         /// </summary>
         [Input("ipv6TcpMss")]
         public Input<int>? Ipv6TcpMss { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv6`
+        /// Variable name
         /// </summary>
         [Input("ipv6TcpMssVariable")]
         public Input<string>? Ipv6TcpMssVariable { get; set; }
@@ -1567,13 +1555,13 @@ namespace Pulumi.Sdwan
         public Input<bool>? TunnelProtection { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Input("tunnelRouteViaInterface")]
         public Input<string>? TunnelRouteViaInterface { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelRouteViaInterfaceVariable")]
         public Input<string>? TunnelRouteViaInterfaceVariable { get; set; }
@@ -1603,37 +1591,37 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelRouteViaIpv6AddressVariable { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Input("tunnelRouteViaLoopback")]
         public Input<string>? TunnelRouteViaLoopback { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelRouteViaLoopbackVariable")]
         public Input<string>? TunnelRouteViaLoopbackVariable { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name
         /// </summary>
         [Input("tunnelSourceInterface")]
         public Input<string>? TunnelSourceInterface { get; set; }
 
         /// <summary>
-        /// &lt;1..32 characters&gt; Interface name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// &lt;1..32 characters&gt; Interface name
         /// </summary>
         [Input("tunnelSourceInterfaceLoopback")]
         public Input<string>? TunnelSourceInterfaceLoopback { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelSourceInterfaceLoopbackVariable")]
         public Input<string>? TunnelSourceInterfaceLoopbackVariable { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelMode` equal to `Ipv4`
+        /// Variable name
         /// </summary>
         [Input("tunnelSourceInterfaceVariable")]
         public Input<string>? TunnelSourceInterfaceVariable { get; set; }

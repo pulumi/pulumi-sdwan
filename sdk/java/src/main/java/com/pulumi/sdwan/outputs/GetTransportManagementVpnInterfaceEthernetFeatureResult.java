@@ -128,6 +128,16 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     private String ipv4Address;
     /**
+     * @return address type
+     * 
+     */
+    private String ipv4AddressType;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv4AddressTypeVariable;
+    /**
      * @return Variable name
      * 
      */
@@ -142,11 +152,6 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String ipv4AutoDetectBandwidthVariable;
-    /**
-     * @return IPv4 Configuration Type
-     * 
-     */
-    private String ipv4ConfigurationType;
     /**
      * @return DHCP Distance
      * 
@@ -198,15 +203,20 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     private String ipv6Address;
     /**
+     * @return address type
+     * 
+     */
+    private String ipv6AddressType;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6AddressTypeVariable;
+    /**
      * @return Variable name
      * 
      */
     private String ipv6AddressVariable;
-    /**
-     * @return IPv6 Configuration Type
-     * 
-     */
-    private String ipv6ConfigurationType;
     /**
      * @return Interval for interface load calculation
      * 
@@ -441,6 +451,20 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
         return this.ipv4Address;
     }
     /**
+     * @return address type
+     * 
+     */
+    public String ipv4AddressType() {
+        return this.ipv4AddressType;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv4AddressTypeVariable() {
+        return this.ipv4AddressTypeVariable;
+    }
+    /**
      * @return Variable name
      * 
      */
@@ -460,13 +484,6 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
      */
     public String ipv4AutoDetectBandwidthVariable() {
         return this.ipv4AutoDetectBandwidthVariable;
-    }
-    /**
-     * @return IPv4 Configuration Type
-     * 
-     */
-    public String ipv4ConfigurationType() {
-        return this.ipv4ConfigurationType;
     }
     /**
      * @return DHCP Distance
@@ -539,18 +556,25 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
         return this.ipv6Address;
     }
     /**
+     * @return address type
+     * 
+     */
+    public String ipv6AddressType() {
+        return this.ipv6AddressType;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6AddressTypeVariable() {
+        return this.ipv6AddressTypeVariable;
+    }
+    /**
      * @return Variable name
      * 
      */
     public String ipv6AddressVariable() {
         return this.ipv6AddressVariable;
-    }
-    /**
-     * @return IPv6 Configuration Type
-     * 
-     */
-    public String ipv6ConfigurationType() {
-        return this.ipv6ConfigurationType;
     }
     /**
      * @return Interval for interface load calculation
@@ -687,10 +711,11 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
         private Integer ipMtu;
         private String ipMtuVariable;
         private String ipv4Address;
+        private String ipv4AddressType;
+        private String ipv4AddressTypeVariable;
         private String ipv4AddressVariable;
         private Boolean ipv4AutoDetectBandwidth;
         private String ipv4AutoDetectBandwidthVariable;
-        private String ipv4ConfigurationType;
         private Integer ipv4DhcpDistance;
         private String ipv4DhcpDistanceVariable;
         private String ipv4DhcpHelperVariable;
@@ -701,8 +726,9 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
         private String ipv4SubnetMask;
         private String ipv4SubnetMaskVariable;
         private String ipv6Address;
+        private String ipv6AddressType;
+        private String ipv6AddressTypeVariable;
         private String ipv6AddressVariable;
-        private String ipv6ConfigurationType;
         private Integer loadInterval;
         private String loadIntervalVariable;
         private String macAddress;
@@ -745,10 +771,11 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
     	      this.ipMtu = defaults.ipMtu;
     	      this.ipMtuVariable = defaults.ipMtuVariable;
     	      this.ipv4Address = defaults.ipv4Address;
+    	      this.ipv4AddressType = defaults.ipv4AddressType;
+    	      this.ipv4AddressTypeVariable = defaults.ipv4AddressTypeVariable;
     	      this.ipv4AddressVariable = defaults.ipv4AddressVariable;
     	      this.ipv4AutoDetectBandwidth = defaults.ipv4AutoDetectBandwidth;
     	      this.ipv4AutoDetectBandwidthVariable = defaults.ipv4AutoDetectBandwidthVariable;
-    	      this.ipv4ConfigurationType = defaults.ipv4ConfigurationType;
     	      this.ipv4DhcpDistance = defaults.ipv4DhcpDistance;
     	      this.ipv4DhcpDistanceVariable = defaults.ipv4DhcpDistanceVariable;
     	      this.ipv4DhcpHelperVariable = defaults.ipv4DhcpHelperVariable;
@@ -759,8 +786,9 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
     	      this.ipv4SubnetMask = defaults.ipv4SubnetMask;
     	      this.ipv4SubnetMaskVariable = defaults.ipv4SubnetMaskVariable;
     	      this.ipv6Address = defaults.ipv6Address;
+    	      this.ipv6AddressType = defaults.ipv6AddressType;
+    	      this.ipv6AddressTypeVariable = defaults.ipv6AddressTypeVariable;
     	      this.ipv6AddressVariable = defaults.ipv6AddressVariable;
-    	      this.ipv6ConfigurationType = defaults.ipv6ConfigurationType;
     	      this.loadInterval = defaults.loadInterval;
     	      this.loadIntervalVariable = defaults.loadIntervalVariable;
     	      this.macAddress = defaults.macAddress;
@@ -974,6 +1002,22 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv4AddressType(String ipv4AddressType) {
+            if (ipv4AddressType == null) {
+              throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv4AddressType");
+            }
+            this.ipv4AddressType = ipv4AddressType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4AddressTypeVariable(String ipv4AddressTypeVariable) {
+            if (ipv4AddressTypeVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv4AddressTypeVariable");
+            }
+            this.ipv4AddressTypeVariable = ipv4AddressTypeVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv4AddressVariable(String ipv4AddressVariable) {
             if (ipv4AddressVariable == null) {
               throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv4AddressVariable");
@@ -995,14 +1039,6 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv4AutoDetectBandwidthVariable");
             }
             this.ipv4AutoDetectBandwidthVariable = ipv4AutoDetectBandwidthVariable;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder ipv4ConfigurationType(String ipv4ConfigurationType) {
-            if (ipv4ConfigurationType == null) {
-              throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv4ConfigurationType");
-            }
-            this.ipv4ConfigurationType = ipv4ConfigurationType;
             return this;
         }
         @CustomType.Setter
@@ -1092,19 +1128,27 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv6AddressType(String ipv6AddressType) {
+            if (ipv6AddressType == null) {
+              throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv6AddressType");
+            }
+            this.ipv6AddressType = ipv6AddressType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6AddressTypeVariable(String ipv6AddressTypeVariable) {
+            if (ipv6AddressTypeVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv6AddressTypeVariable");
+            }
+            this.ipv6AddressTypeVariable = ipv6AddressTypeVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv6AddressVariable(String ipv6AddressVariable) {
             if (ipv6AddressVariable == null) {
               throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv6AddressVariable");
             }
             this.ipv6AddressVariable = ipv6AddressVariable;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder ipv6ConfigurationType(String ipv6ConfigurationType) {
-            if (ipv6ConfigurationType == null) {
-              throw new MissingRequiredPropertyException("GetTransportManagementVpnInterfaceEthernetFeatureResult", "ipv6ConfigurationType");
-            }
-            this.ipv6ConfigurationType = ipv6ConfigurationType;
             return this;
         }
         @CustomType.Setter
@@ -1253,10 +1297,11 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
             _resultValue.ipMtu = ipMtu;
             _resultValue.ipMtuVariable = ipMtuVariable;
             _resultValue.ipv4Address = ipv4Address;
+            _resultValue.ipv4AddressType = ipv4AddressType;
+            _resultValue.ipv4AddressTypeVariable = ipv4AddressTypeVariable;
             _resultValue.ipv4AddressVariable = ipv4AddressVariable;
             _resultValue.ipv4AutoDetectBandwidth = ipv4AutoDetectBandwidth;
             _resultValue.ipv4AutoDetectBandwidthVariable = ipv4AutoDetectBandwidthVariable;
-            _resultValue.ipv4ConfigurationType = ipv4ConfigurationType;
             _resultValue.ipv4DhcpDistance = ipv4DhcpDistance;
             _resultValue.ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             _resultValue.ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -1267,8 +1312,9 @@ public final class GetTransportManagementVpnInterfaceEthernetFeatureResult {
             _resultValue.ipv4SubnetMask = ipv4SubnetMask;
             _resultValue.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             _resultValue.ipv6Address = ipv6Address;
+            _resultValue.ipv6AddressType = ipv6AddressType;
+            _resultValue.ipv6AddressTypeVariable = ipv6AddressTypeVariable;
             _resultValue.ipv6AddressVariable = ipv6AddressVariable;
-            _resultValue.ipv6ConfigurationType = ipv6ConfigurationType;
             _resultValue.loadInterval = loadInterval;
             _resultValue.loadIntervalVariable = loadIntervalVariable;
             _resultValue.macAddress = macAddress;

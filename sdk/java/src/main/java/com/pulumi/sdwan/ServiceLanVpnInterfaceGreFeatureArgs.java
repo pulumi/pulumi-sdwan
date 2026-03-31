@@ -557,30 +557,22 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         return Optional.ofNullable(this.ipsecReplayWindowVariable);
     }
 
-    /**
-     * , Attribute conditional on `tunnelMode` equal to `ipv4`
-     * 
-     */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
-    /**
-     * @return , Attribute conditional on `tunnelMode` equal to `ipv4`
-     * 
-     */
     public Optional<Output<String>> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -588,7 +580,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Interface MTU &lt;576..9976&gt;, in bytes
      *   - Range: `576`-`9976`
      *   - Default value: `1500`
      * 
@@ -597,7 +589,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     private @Nullable Output<Integer> ipv4Mtu;
 
     /**
-     * @return Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Interface MTU &lt;576..9976&gt;, in bytes
      *   - Range: `576`-`9976`
      *   - Default value: `1500`
      * 
@@ -607,14 +599,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="ipv4MtuVariable")
     private @Nullable Output<String> ipv4MtuVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv4MtuVariable() {
@@ -622,16 +614,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * , Attribute conditional on `tunnelMode` equal to `ipv4`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return , Attribute conditional on `tunnelMode` equal to `ipv4`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -639,14 +629,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -654,7 +644,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      * 
      */
@@ -662,7 +652,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     private @Nullable Output<Integer> ipv4TcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      * 
      */
@@ -671,14 +661,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="ipv4TcpMssVariable")
     private @Nullable Output<String> ipv4TcpMssVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv4TcpMssVariable() {
@@ -686,14 +676,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Assign IPv6 address
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Assign IPv6 address
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -701,14 +691,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Variable name
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -716,7 +706,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Interface MTU &lt;1280..9976&gt;, in bytes
      *   - Range: `1280`-`9976`
      * 
      */
@@ -724,7 +714,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     private @Nullable Output<Integer> ipv6Mtu;
 
     /**
-     * @return Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Interface MTU &lt;1280..9976&gt;, in bytes
      *   - Range: `1280`-`9976`
      * 
      */
@@ -733,14 +723,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Variable name
      * 
      */
     @Import(name="ipv6MtuVariable")
     private @Nullable Output<String> ipv6MtuVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv6MtuVariable() {
@@ -748,7 +738,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * IPv6 TCP MSS on SYN packets, in bytes
      *   - Range: `40`-`1454`
      * 
      */
@@ -756,7 +746,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     private @Nullable Output<Integer> ipv6TcpMss;
 
     /**
-     * @return IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return IPv6 TCP MSS on SYN packets, in bytes
      *   - Range: `40`-`1454`
      * 
      */
@@ -765,14 +755,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Variable name
      * 
      */
     @Import(name="ipv6TcpMssVariable")
     private @Nullable Output<String> ipv6TcpMssVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> ipv6TcpMssVariable() {
@@ -1002,14 +992,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     @Import(name="tunnelRouteViaInterface")
     private @Nullable Output<String> tunnelRouteViaInterface;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     public Optional<Output<String>> tunnelRouteViaInterface() {
@@ -1017,14 +1007,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="tunnelRouteViaInterfaceVariable")
     private @Nullable Output<String> tunnelRouteViaInterfaceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> tunnelRouteViaInterfaceVariable() {
@@ -1092,14 +1082,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     @Import(name="tunnelRouteViaLoopback")
     private @Nullable Output<String> tunnelRouteViaLoopback;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     public Optional<Output<String>> tunnelRouteViaLoopback() {
@@ -1107,14 +1097,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="tunnelRouteViaLoopbackVariable")
     private @Nullable Output<String> tunnelRouteViaLoopbackVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> tunnelRouteViaLoopbackVariable() {
@@ -1122,14 +1112,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name
      * 
      */
     @Import(name="tunnelSourceInterface")
     private @Nullable Output<String> tunnelSourceInterface;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name
      * 
      */
     public Optional<Output<String>> tunnelSourceInterface() {
@@ -1137,14 +1127,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name
      * 
      */
     @Import(name="tunnelSourceInterfaceLoopback")
     private @Nullable Output<String> tunnelSourceInterfaceLoopback;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name
      * 
      */
     public Optional<Output<String>> tunnelSourceInterfaceLoopback() {
@@ -1152,14 +1142,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="tunnelSourceInterfaceLoopbackVariable")
     private @Nullable Output<String> tunnelSourceInterfaceLoopbackVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> tunnelSourceInterfaceLoopbackVariable() {
@@ -1167,14 +1157,14 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Import(name="tunnelSourceInterfaceVariable")
     private @Nullable Output<String> tunnelSourceInterfaceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Optional<Output<String>> tunnelSourceInterfaceVariable() {
@@ -2078,29 +2068,17 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
             return ipsecReplayWindowVariable(Output.of(ipsecReplayWindowVariable));
         }
 
-        /**
-         * @param ipv4Address , Attribute conditional on `tunnelMode` equal to `ipv4`
-         * 
-         * @return builder
-         * 
-         */
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
 
-        /**
-         * @param ipv4Address , Attribute conditional on `tunnelMode` equal to `ipv4`
-         * 
-         * @return builder
-         * 
-         */
         public Builder ipv4Address(String ipv4Address) {
             return ipv4Address(Output.of(ipv4Address));
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4AddressVariable Variable name
          * 
          * @return builder
          * 
@@ -2111,7 +2089,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4AddressVariable Variable name
          * 
          * @return builder
          * 
@@ -2121,7 +2099,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4Mtu Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4Mtu Interface MTU &lt;576..9976&gt;, in bytes
          *   - Range: `576`-`9976`
          *   - Default value: `1500`
          * 
@@ -2134,7 +2112,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4Mtu Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4Mtu Interface MTU &lt;576..9976&gt;, in bytes
          *   - Range: `576`-`9976`
          *   - Default value: `1500`
          * 
@@ -2146,7 +2124,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4MtuVariable Variable name
          * 
          * @return builder
          * 
@@ -2157,7 +2135,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4MtuVariable Variable name
          * 
          * @return builder
          * 
@@ -2167,8 +2145,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4SubnetMask , Attribute conditional on `tunnelMode` equal to `ipv4`
-         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2179,8 +2156,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4SubnetMask , Attribute conditional on `tunnelMode` equal to `ipv4`
-         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2190,7 +2166,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4SubnetMaskVariable Variable name
          * 
          * @return builder
          * 
@@ -2201,7 +2177,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4SubnetMaskVariable Variable name
          * 
          * @return builder
          * 
@@ -2211,7 +2187,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4TcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4TcpMss TCP MSS on SYN packets, in bytes
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -2223,7 +2199,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4TcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4TcpMss TCP MSS on SYN packets, in bytes
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -2234,7 +2210,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4TcpMssVariable Variable name
          * 
          * @return builder
          * 
@@ -2245,7 +2221,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param ipv4TcpMssVariable Variable name
          * 
          * @return builder
          * 
@@ -2255,7 +2231,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6Address Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6Address Assign IPv6 address
          * 
          * @return builder
          * 
@@ -2266,7 +2242,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6Address Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6Address Assign IPv6 address
          * 
          * @return builder
          * 
@@ -2276,7 +2252,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6AddressVariable Variable name
          * 
          * @return builder
          * 
@@ -2287,7 +2263,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6AddressVariable Variable name
          * 
          * @return builder
          * 
@@ -2297,7 +2273,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6Mtu Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6Mtu Interface MTU &lt;1280..9976&gt;, in bytes
          *   - Range: `1280`-`9976`
          * 
          * @return builder
@@ -2309,7 +2285,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6Mtu Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6Mtu Interface MTU &lt;1280..9976&gt;, in bytes
          *   - Range: `1280`-`9976`
          * 
          * @return builder
@@ -2320,7 +2296,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6MtuVariable Variable name
          * 
          * @return builder
          * 
@@ -2331,7 +2307,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6MtuVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6MtuVariable Variable name
          * 
          * @return builder
          * 
@@ -2341,7 +2317,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6TcpMss IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6TcpMss IPv6 TCP MSS on SYN packets, in bytes
          *   - Range: `40`-`1454`
          * 
          * @return builder
@@ -2353,7 +2329,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6TcpMss IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6TcpMss IPv6 TCP MSS on SYN packets, in bytes
          *   - Range: `40`-`1454`
          * 
          * @return builder
@@ -2364,7 +2340,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6TcpMssVariable Variable name
          * 
          * @return builder
          * 
@@ -2375,7 +2351,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv6TcpMssVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+         * @param ipv6TcpMssVariable Variable name
          * 
          * @return builder
          * 
@@ -2691,7 +2667,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaInterface &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaInterface &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
          * 
          * @return builder
          * 
@@ -2702,7 +2678,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaInterface &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaInterface &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
          * 
          * @return builder
          * 
@@ -2712,7 +2688,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaInterfaceVariable Variable name
          * 
          * @return builder
          * 
@@ -2723,7 +2699,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaInterfaceVariable Variable name
          * 
          * @return builder
          * 
@@ -2817,7 +2793,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
          * 
          * @return builder
          * 
@@ -2828,7 +2804,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaLoopback &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
          * 
          * @return builder
          * 
@@ -2838,7 +2814,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaLoopbackVariable Variable name
          * 
          * @return builder
          * 
@@ -2849,7 +2825,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelRouteViaLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelRouteViaLoopbackVariable Variable name
          * 
          * @return builder
          * 
@@ -2859,7 +2835,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name
          * 
          * @return builder
          * 
@@ -2870,7 +2846,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterface &lt;1..32 characters&gt; Interface name
          * 
          * @return builder
          * 
@@ -2880,7 +2856,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name
          * 
          * @return builder
          * 
@@ -2891,7 +2867,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterfaceLoopback &lt;1..32 characters&gt; Interface name
          * 
          * @return builder
          * 
@@ -2901,7 +2877,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterfaceLoopbackVariable Variable name
          * 
          * @return builder
          * 
@@ -2912,7 +2888,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterfaceLoopbackVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterfaceLoopbackVariable Variable name
          * 
          * @return builder
          * 
@@ -2922,7 +2898,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterfaceVariable Variable name
          * 
          * @return builder
          * 
@@ -2933,7 +2909,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tunnelSourceInterfaceVariable Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+         * @param tunnelSourceInterfaceVariable Variable name
          * 
          * @return builder
          * 

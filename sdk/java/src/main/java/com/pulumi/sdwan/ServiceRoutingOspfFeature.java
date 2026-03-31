@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Service Routing OSPF Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -69,8 +69,9 @@ import javax.annotation.Nullable;
  *             .spfInitialHoldTime(1000)
  *             .spfMaximumHoldTime(10000)
  *             .redistributes(ServiceRoutingOspfFeatureRedistributeArgs.builder()
- *                 .protocol("static")
+ *                 .protocol("omp")
  *                 .natDia(true)
+ *                 .translateRibMetric(false)
  *                 .build())
  *             .routerLsas(ServiceRoutingOspfFeatureRouterLsaArgs.builder()
  *                 .type("on-startup")

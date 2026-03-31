@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a System OMP Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -78,6 +78,8 @@ import javax.annotation.Nullable;
  *             .ignoreRegionPathLength(false)
  *             .transportGateway("prefer")
  *             .siteTypes("type-1")
+ *             .siteTypesForTransportGateways("type-1")
+ *             .aspathAutoTranslation(true)
  *             .build());
  * 
  *     }
@@ -370,7 +372,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     @Export(name="advertiseIpv6Connected", refs={Boolean.class}, tree="[0]")
@@ -378,7 +380,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Connected
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Connected() {
@@ -520,7 +522,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     @Export(name="advertiseIpv6Static", refs={Boolean.class}, tree="[0]")
@@ -528,7 +530,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Static
-     *   - Default value: `false`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Static() {
@@ -579,6 +581,36 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> advertisementIntervalVariable() {
         return Codegen.optional(this.advertisementIntervalVariable);
+    }
+    /**
+     * Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="aspathAutoTranslation", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> aspathAutoTranslation;
+
+    /**
+     * @return Enable BGP AS Path Auto-Translation
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> aspathAutoTranslation() {
+        return Codegen.optional(this.aspathAutoTranslation);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="aspathAutoTranslationVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aspathAutoTranslationVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> aspathAutoTranslationVariable() {
+        return Codegen.optional(this.aspathAutoTranslationVariable);
     }
     /**
      * The description of the Feature
@@ -965,18 +997,46 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * Site Types
+     * Site Types for 20.12 backward compatiblity
      * 
      */
     @Export(name="siteTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> siteTypes;
 
     /**
-     * @return Site Types
+     * @return Site Types for 20.12 backward compatiblity
      * 
      */
     public Output<Optional<List<String>>> siteTypes() {
         return Codegen.optional(this.siteTypes);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="siteTypesForTransportGatewayVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> siteTypesForTransportGatewayVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> siteTypesForTransportGatewayVariable() {
+        return Codegen.optional(this.siteTypesForTransportGatewayVariable);
+    }
+    /**
+     * Site Types
+     * 
+     */
+    @Export(name="siteTypesForTransportGateways", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> siteTypesForTransportGateways;
+
+    /**
+     * @return Site Types
+     * 
+     */
+    public Output<Optional<List<String>>> siteTypesForTransportGateways() {
+        return Codegen.optional(this.siteTypesForTransportGateways);
     }
     /**
      * Variable name

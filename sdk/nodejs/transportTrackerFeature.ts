@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Transport Tracker Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -81,7 +81,7 @@ export class TransportTrackerFeature extends pulumi.CustomResource {
      */
     declare public readonly endpointApiUrlVariable: pulumi.Output<string | undefined>;
     /**
-     * Endpoint DNS Name
+     * DNS Name
      */
     declare public readonly endpointDnsName: pulumi.Output<string | undefined>;
     /**
@@ -89,7 +89,7 @@ export class TransportTrackerFeature extends pulumi.CustomResource {
      */
     declare public readonly endpointDnsNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Endpoint IP
+     * IP
      */
     declare public readonly endpointIp: pulumi.Output<string | undefined>;
     /**
@@ -98,26 +98,32 @@ export class TransportTrackerFeature extends pulumi.CustomResource {
     declare public readonly endpointIpVariable: pulumi.Output<string | undefined>;
     /**
      * Endpoint Tracker Type
-     *   - Choices: `interface`
+     *   - Choices: `interface`, `interface-icmp`
      *   - Default value: `interface`
      */
     declare public readonly endpointTrackerType: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    declare public readonly endpointTrackerTypeVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
     declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Interval
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     */
+    declare public readonly icmpInterval: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     */
+    declare public readonly icmpIntervalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
     declare public readonly interval: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface`
      */
     declare public readonly intervalVariable: pulumi.Output<string | undefined>;
     /**
@@ -188,8 +194,9 @@ export class TransportTrackerFeature extends pulumi.CustomResource {
             resourceInputs["endpointIp"] = state?.endpointIp;
             resourceInputs["endpointIpVariable"] = state?.endpointIpVariable;
             resourceInputs["endpointTrackerType"] = state?.endpointTrackerType;
-            resourceInputs["endpointTrackerTypeVariable"] = state?.endpointTrackerTypeVariable;
             resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["icmpInterval"] = state?.icmpInterval;
+            resourceInputs["icmpIntervalVariable"] = state?.icmpIntervalVariable;
             resourceInputs["interval"] = state?.interval;
             resourceInputs["intervalVariable"] = state?.intervalVariable;
             resourceInputs["multiplier"] = state?.multiplier;
@@ -215,8 +222,9 @@ export class TransportTrackerFeature extends pulumi.CustomResource {
             resourceInputs["endpointIp"] = args?.endpointIp;
             resourceInputs["endpointIpVariable"] = args?.endpointIpVariable;
             resourceInputs["endpointTrackerType"] = args?.endpointTrackerType;
-            resourceInputs["endpointTrackerTypeVariable"] = args?.endpointTrackerTypeVariable;
             resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["icmpInterval"] = args?.icmpInterval;
+            resourceInputs["icmpIntervalVariable"] = args?.icmpIntervalVariable;
             resourceInputs["interval"] = args?.interval;
             resourceInputs["intervalVariable"] = args?.intervalVariable;
             resourceInputs["multiplier"] = args?.multiplier;
@@ -252,7 +260,7 @@ export interface TransportTrackerFeatureState {
      */
     endpointApiUrlVariable?: pulumi.Input<string>;
     /**
-     * Endpoint DNS Name
+     * DNS Name
      */
     endpointDnsName?: pulumi.Input<string>;
     /**
@@ -260,7 +268,7 @@ export interface TransportTrackerFeatureState {
      */
     endpointDnsNameVariable?: pulumi.Input<string>;
     /**
-     * Endpoint IP
+     * IP
      */
     endpointIp?: pulumi.Input<string>;
     /**
@@ -269,26 +277,32 @@ export interface TransportTrackerFeatureState {
     endpointIpVariable?: pulumi.Input<string>;
     /**
      * Endpoint Tracker Type
-     *   - Choices: `interface`
+     *   - Choices: `interface`, `interface-icmp`
      *   - Default value: `interface`
      */
     endpointTrackerType?: pulumi.Input<string>;
-    /**
-     * Variable name
-     */
-    endpointTrackerTypeVariable?: pulumi.Input<string>;
     /**
      * Feature Profile ID
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Interval
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     */
+    icmpInterval?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     */
+    icmpIntervalVariable?: pulumi.Input<string>;
+    /**
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
     interval?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface`
      */
     intervalVariable?: pulumi.Input<string>;
     /**
@@ -356,7 +370,7 @@ export interface TransportTrackerFeatureArgs {
      */
     endpointApiUrlVariable?: pulumi.Input<string>;
     /**
-     * Endpoint DNS Name
+     * DNS Name
      */
     endpointDnsName?: pulumi.Input<string>;
     /**
@@ -364,7 +378,7 @@ export interface TransportTrackerFeatureArgs {
      */
     endpointDnsNameVariable?: pulumi.Input<string>;
     /**
-     * Endpoint IP
+     * IP
      */
     endpointIp?: pulumi.Input<string>;
     /**
@@ -373,26 +387,32 @@ export interface TransportTrackerFeatureArgs {
     endpointIpVariable?: pulumi.Input<string>;
     /**
      * Endpoint Tracker Type
-     *   - Choices: `interface`
+     *   - Choices: `interface`, `interface-icmp`
      *   - Default value: `interface`
      */
     endpointTrackerType?: pulumi.Input<string>;
-    /**
-     * Variable name
-     */
-    endpointTrackerTypeVariable?: pulumi.Input<string>;
     /**
      * Feature Profile ID
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Interval
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     *   - Range: `2`-`1000`
+     *   - Default value: `2`
+     */
+    icmpInterval?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface-icmp`
+     */
+    icmpIntervalVariable?: pulumi.Input<string>;
+    /**
+     * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
     interval?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `endpointTrackerType` equal to `interface`
      */
     intervalVariable?: pulumi.Input<string>;
     /**

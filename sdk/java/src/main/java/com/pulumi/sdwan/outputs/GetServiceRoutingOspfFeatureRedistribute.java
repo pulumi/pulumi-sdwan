@@ -33,10 +33,15 @@ public final class GetServiceRoutingOspfFeatureRedistribute {
     private String protocolVariable;
     private String routePolicyId;
     /**
-     * @return Translate Rib Metric
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      * 
      */
     private Boolean translateRibMetric;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String translateRibMetricVariable;
 
     private GetServiceRoutingOspfFeatureRedistribute() {}
     /**
@@ -71,11 +76,18 @@ public final class GetServiceRoutingOspfFeatureRedistribute {
         return this.routePolicyId;
     }
     /**
-     * @return Translate Rib Metric
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      * 
      */
     public Boolean translateRibMetric() {
         return this.translateRibMetric;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String translateRibMetricVariable() {
+        return this.translateRibMetricVariable;
     }
 
     public static Builder builder() {
@@ -93,6 +105,7 @@ public final class GetServiceRoutingOspfFeatureRedistribute {
         private String protocolVariable;
         private String routePolicyId;
         private Boolean translateRibMetric;
+        private String translateRibMetricVariable;
         public Builder() {}
         public Builder(GetServiceRoutingOspfFeatureRedistribute defaults) {
     	      Objects.requireNonNull(defaults);
@@ -102,6 +115,7 @@ public final class GetServiceRoutingOspfFeatureRedistribute {
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
     	      this.translateRibMetric = defaults.translateRibMetric;
+    	      this.translateRibMetricVariable = defaults.translateRibMetricVariable;
         }
 
         @CustomType.Setter
@@ -152,6 +166,14 @@ public final class GetServiceRoutingOspfFeatureRedistribute {
             this.translateRibMetric = translateRibMetric;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetricVariable(String translateRibMetricVariable) {
+            if (translateRibMetricVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingOspfFeatureRedistribute", "translateRibMetricVariable");
+            }
+            this.translateRibMetricVariable = translateRibMetricVariable;
+            return this;
+        }
         public GetServiceRoutingOspfFeatureRedistribute build() {
             final var _resultValue = new GetServiceRoutingOspfFeatureRedistribute();
             _resultValue.natDia = natDia;
@@ -160,6 +182,7 @@ public final class GetServiceRoutingOspfFeatureRedistribute {
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
             _resultValue.translateRibMetric = translateRibMetric;
+            _resultValue.translateRibMetricVariable = translateRibMetricVariable;
             return _resultValue;
         }
     }

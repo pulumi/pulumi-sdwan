@@ -258,7 +258,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Application Priority QoS Policy.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -307,7 +307,7 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Application Priority QoS Policy.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class SystemNtpFeatureAuthenticationKey {
     /**
      * @return MD5 authentication key ID
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     private @Nullable Integer keyId;
@@ -24,7 +24,7 @@ public final class SystemNtpFeatureAuthenticationKey {
      */
     private @Nullable String keyIdVariable;
     /**
-     * @return Enter cleartext or AES-encrypted MD5 authentication key
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private @Nullable String md5Value;
@@ -37,7 +37,7 @@ public final class SystemNtpFeatureAuthenticationKey {
     private SystemNtpFeatureAuthenticationKey() {}
     /**
      * @return MD5 authentication key ID
-     *   - Range: `1`-`65535`
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Integer> keyId() {
@@ -51,7 +51,7 @@ public final class SystemNtpFeatureAuthenticationKey {
         return Optional.ofNullable(this.keyIdVariable);
     }
     /**
-     * @return Enter cleartext or AES-encrypted MD5 authentication key
+     * @return Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<String> md5Value() {

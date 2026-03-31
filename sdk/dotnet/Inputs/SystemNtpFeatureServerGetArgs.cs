@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set authentication key for the server
-        ///   - Range: `1`-`65535`
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("authenticationKey")]
         public Input<int>? AuthenticationKey { get; set; }

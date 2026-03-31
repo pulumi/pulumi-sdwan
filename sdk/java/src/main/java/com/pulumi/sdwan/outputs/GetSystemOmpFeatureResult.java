@@ -174,6 +174,16 @@ public final class GetSystemOmpFeatureResult {
      */
     private String advertisementIntervalVariable;
     /**
+     * @return Enable BGP AS Path Auto-Translation
+     * 
+     */
+    private Boolean aspathAutoTranslation;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String aspathAutoTranslationVariable;
+    /**
      * @return The description of the Feature
      * 
      */
@@ -304,10 +314,20 @@ public final class GetSystemOmpFeatureResult {
      */
     private String shutdownVariable;
     /**
-     * @return Site Types
+     * @return Site Types for 20.12 backward compatiblity
      * 
      */
     private List<String> siteTypes;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String siteTypesForTransportGatewayVariable;
+    /**
+     * @return Site Types
+     * 
+     */
+    private List<String> siteTypesForTransportGateways;
     /**
      * @return Variable name
      * 
@@ -555,6 +575,20 @@ public final class GetSystemOmpFeatureResult {
         return this.advertisementIntervalVariable;
     }
     /**
+     * @return Enable BGP AS Path Auto-Translation
+     * 
+     */
+    public Boolean aspathAutoTranslation() {
+        return this.aspathAutoTranslation;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String aspathAutoTranslationVariable() {
+        return this.aspathAutoTranslationVariable;
+    }
+    /**
      * @return The description of the Feature
      * 
      */
@@ -737,11 +771,25 @@ public final class GetSystemOmpFeatureResult {
         return this.shutdownVariable;
     }
     /**
-     * @return Site Types
+     * @return Site Types for 20.12 backward compatiblity
      * 
      */
     public List<String> siteTypes() {
         return this.siteTypes;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String siteTypesForTransportGatewayVariable() {
+        return this.siteTypesForTransportGatewayVariable;
+    }
+    /**
+     * @return Site Types
+     * 
+     */
+    public List<String> siteTypesForTransportGateways() {
+        return this.siteTypesForTransportGateways;
     }
     /**
      * @return Variable name
@@ -813,6 +861,8 @@ public final class GetSystemOmpFeatureResult {
         private String advertiseIpv6StaticVariable;
         private Integer advertisementInterval;
         private String advertisementIntervalVariable;
+        private Boolean aspathAutoTranslation;
+        private String aspathAutoTranslationVariable;
         private String description;
         private Integer ecmpLimit;
         private String ecmpLimitVariable;
@@ -840,6 +890,8 @@ public final class GetSystemOmpFeatureResult {
         private Boolean shutdown;
         private String shutdownVariable;
         private List<String> siteTypes;
+        private String siteTypesForTransportGatewayVariable;
+        private List<String> siteTypesForTransportGateways;
         private String siteTypesVariable;
         private String transportGateway;
         private String transportGatewayVariable;
@@ -879,6 +931,8 @@ public final class GetSystemOmpFeatureResult {
     	      this.advertiseIpv6StaticVariable = defaults.advertiseIpv6StaticVariable;
     	      this.advertisementInterval = defaults.advertisementInterval;
     	      this.advertisementIntervalVariable = defaults.advertisementIntervalVariable;
+    	      this.aspathAutoTranslation = defaults.aspathAutoTranslation;
+    	      this.aspathAutoTranslationVariable = defaults.aspathAutoTranslationVariable;
     	      this.description = defaults.description;
     	      this.ecmpLimit = defaults.ecmpLimit;
     	      this.ecmpLimitVariable = defaults.ecmpLimitVariable;
@@ -906,6 +960,8 @@ public final class GetSystemOmpFeatureResult {
     	      this.shutdown = defaults.shutdown;
     	      this.shutdownVariable = defaults.shutdownVariable;
     	      this.siteTypes = defaults.siteTypes;
+    	      this.siteTypesForTransportGatewayVariable = defaults.siteTypesForTransportGatewayVariable;
+    	      this.siteTypesForTransportGateways = defaults.siteTypesForTransportGateways;
     	      this.siteTypesVariable = defaults.siteTypesVariable;
     	      this.transportGateway = defaults.transportGateway;
     	      this.transportGatewayVariable = defaults.transportGatewayVariable;
@@ -1169,6 +1225,22 @@ public final class GetSystemOmpFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder aspathAutoTranslation(Boolean aspathAutoTranslation) {
+            if (aspathAutoTranslation == null) {
+              throw new MissingRequiredPropertyException("GetSystemOmpFeatureResult", "aspathAutoTranslation");
+            }
+            this.aspathAutoTranslation = aspathAutoTranslation;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aspathAutoTranslationVariable(String aspathAutoTranslationVariable) {
+            if (aspathAutoTranslationVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemOmpFeatureResult", "aspathAutoTranslationVariable");
+            }
+            this.aspathAutoTranslationVariable = aspathAutoTranslationVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder description(String description) {
             if (description == null) {
               throw new MissingRequiredPropertyException("GetSystemOmpFeatureResult", "description");
@@ -1388,6 +1460,25 @@ public final class GetSystemOmpFeatureResult {
             return siteTypes(List.of(siteTypes));
         }
         @CustomType.Setter
+        public Builder siteTypesForTransportGatewayVariable(String siteTypesForTransportGatewayVariable) {
+            if (siteTypesForTransportGatewayVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemOmpFeatureResult", "siteTypesForTransportGatewayVariable");
+            }
+            this.siteTypesForTransportGatewayVariable = siteTypesForTransportGatewayVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder siteTypesForTransportGateways(List<String> siteTypesForTransportGateways) {
+            if (siteTypesForTransportGateways == null) {
+              throw new MissingRequiredPropertyException("GetSystemOmpFeatureResult", "siteTypesForTransportGateways");
+            }
+            this.siteTypesForTransportGateways = siteTypesForTransportGateways;
+            return this;
+        }
+        public Builder siteTypesForTransportGateways(String... siteTypesForTransportGateways) {
+            return siteTypesForTransportGateways(List.of(siteTypesForTransportGateways));
+        }
+        @CustomType.Setter
         public Builder siteTypesVariable(String siteTypesVariable) {
             if (siteTypesVariable == null) {
               throw new MissingRequiredPropertyException("GetSystemOmpFeatureResult", "siteTypesVariable");
@@ -1453,6 +1544,8 @@ public final class GetSystemOmpFeatureResult {
             _resultValue.advertiseIpv6StaticVariable = advertiseIpv6StaticVariable;
             _resultValue.advertisementInterval = advertisementInterval;
             _resultValue.advertisementIntervalVariable = advertisementIntervalVariable;
+            _resultValue.aspathAutoTranslation = aspathAutoTranslation;
+            _resultValue.aspathAutoTranslationVariable = aspathAutoTranslationVariable;
             _resultValue.description = description;
             _resultValue.ecmpLimit = ecmpLimit;
             _resultValue.ecmpLimitVariable = ecmpLimitVariable;
@@ -1480,6 +1573,8 @@ public final class GetSystemOmpFeatureResult {
             _resultValue.shutdown = shutdown;
             _resultValue.shutdownVariable = shutdownVariable;
             _resultValue.siteTypes = siteTypes;
+            _resultValue.siteTypesForTransportGatewayVariable = siteTypesForTransportGatewayVariable;
+            _resultValue.siteTypesForTransportGateways = siteTypesForTransportGateways;
             _resultValue.siteTypesVariable = siteTypesVariable;
             _resultValue.transportGateway = transportGateway;
             _resultValue.transportGatewayVariable = transportGatewayVariable;

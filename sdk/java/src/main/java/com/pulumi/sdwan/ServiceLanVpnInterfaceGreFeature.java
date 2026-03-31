@@ -602,36 +602,28 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
     public Output<Optional<String>> ipsecReplayWindowVariable() {
         return Codegen.optional(this.ipsecReplayWindowVariable);
     }
-    /**
-     * , Attribute conditional on `tunnelMode` equal to `ipv4`
-     * 
-     */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4Address;
 
-    /**
-     * @return , Attribute conditional on `tunnelMode` equal to `ipv4`
-     * 
-     */
     public Output<Optional<String>> ipv4Address() {
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Interface MTU &lt;576..9976&gt;, in bytes
      *   - Range: `576`-`9976`
      *   - Default value: `1500`
      * 
@@ -640,7 +632,7 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
     private Output</* @Nullable */ Integer> ipv4Mtu;
 
     /**
-     * @return Interface MTU &lt;576..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Interface MTU &lt;576..9976&gt;, in bytes
      *   - Range: `576`-`9976`
      *   - Default value: `1500`
      * 
@@ -649,51 +641,49 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv4Mtu);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="ipv4MtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4MtuVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv4MtuVariable() {
         return Codegen.optional(this.ipv4MtuVariable);
     }
     /**
-     * , Attribute conditional on `tunnelMode` equal to `ipv4`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return , Attribute conditional on `tunnelMode` equal to `ipv4`
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
         return Codegen.optional(this.ipv4SubnetMaskVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      * 
      */
@@ -701,7 +691,7 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
     private Output</* @Nullable */ Integer> ipv4TcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      * 
      */
@@ -709,49 +699,49 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv4TcpMss);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="ipv4TcpMssVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4TcpMssVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv4TcpMssVariable() {
         return Codegen.optional(this.ipv4TcpMssVariable);
     }
     /**
-     * Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Assign IPv6 address
      * 
      */
     @Export(name="ipv6Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6Address;
 
     /**
-     * @return Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Assign IPv6 address
      * 
      */
     public Output<Optional<String>> ipv6Address() {
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Variable name
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Interface MTU &lt;1280..9976&gt;, in bytes
      *   - Range: `1280`-`9976`
      * 
      */
@@ -759,7 +749,7 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
     private Output</* @Nullable */ Integer> ipv6Mtu;
 
     /**
-     * @return Interface MTU &lt;1280..9976&gt;, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Interface MTU &lt;1280..9976&gt;, in bytes
      *   - Range: `1280`-`9976`
      * 
      */
@@ -767,21 +757,21 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv6Mtu);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Variable name
      * 
      */
     @Export(name="ipv6MtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6MtuVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv6MtuVariable() {
         return Codegen.optional(this.ipv6MtuVariable);
     }
     /**
-     * IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * IPv6 TCP MSS on SYN packets, in bytes
      *   - Range: `40`-`1454`
      * 
      */
@@ -789,7 +779,7 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
     private Output</* @Nullable */ Integer> ipv6TcpMss;
 
     /**
-     * @return IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return IPv6 TCP MSS on SYN packets, in bytes
      *   - Range: `40`-`1454`
      * 
      */
@@ -797,14 +787,14 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv6TcpMss);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * Variable name
      * 
      */
     @Export(name="ipv6TcpMssVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6TcpMssVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> ipv6TcpMssVariable() {
@@ -1019,28 +1009,28 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelProtection);
     }
     /**
-     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     @Export(name="tunnelRouteViaInterface", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelRouteViaInterface;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     public Output<Optional<String>> tunnelRouteViaInterface() {
         return Codegen.optional(this.tunnelRouteViaInterface);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="tunnelRouteViaInterfaceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelRouteViaInterfaceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> tunnelRouteViaInterfaceVariable() {
@@ -1103,84 +1093,84 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelRouteViaIpv6AddressVariable);
     }
     /**
-     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     @Export(name="tunnelRouteViaLoopback", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelRouteViaLoopback;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
      * 
      */
     public Output<Optional<String>> tunnelRouteViaLoopback() {
         return Codegen.optional(this.tunnelRouteViaLoopback);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="tunnelRouteViaLoopbackVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelRouteViaLoopbackVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> tunnelRouteViaLoopbackVariable() {
         return Codegen.optional(this.tunnelRouteViaLoopbackVariable);
     }
     /**
-     * &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name
      * 
      */
     @Export(name="tunnelSourceInterface", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelSourceInterface;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name
      * 
      */
     public Output<Optional<String>> tunnelSourceInterface() {
         return Codegen.optional(this.tunnelSourceInterface);
     }
     /**
-     * &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * &lt;1..32 characters&gt; Interface name
      * 
      */
     @Export(name="tunnelSourceInterfaceLoopback", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelSourceInterfaceLoopback;
 
     /**
-     * @return &lt;1..32 characters&gt; Interface name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return &lt;1..32 characters&gt; Interface name
      * 
      */
     public Output<Optional<String>> tunnelSourceInterfaceLoopback() {
         return Codegen.optional(this.tunnelSourceInterfaceLoopback);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="tunnelSourceInterfaceLoopbackVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelSourceInterfaceLoopbackVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> tunnelSourceInterfaceLoopbackVariable() {
         return Codegen.optional(this.tunnelSourceInterfaceLoopbackVariable);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * Variable name
      * 
      */
     @Export(name="tunnelSourceInterfaceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelSourceInterfaceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     * @return Variable name
      * 
      */
     public Output<Optional<String>> tunnelSourceInterfaceVariable() {
