@@ -70,6 +70,9 @@
             "sdwan_application_priority_feature_profile": {
                 "current": "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile"
             },
+            "sdwan_application_priority_policy_settings_policy": {
+                "current": "sdwan:index/applicationPriorityPolicySettingsPolicy:ApplicationPriorityPolicySettingsPolicy"
+            },
             "sdwan_application_priority_qos_policy": {
                 "current": "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy",
                 "fields": {
@@ -1261,6 +1264,127 @@
             "sdwan_embedded_security_feature_profile": {
                 "current": "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile"
             },
+            "sdwan_embedded_security_ngfw_policy": {
+                "current": "sdwan:index/embeddedSecurityNgfwPolicy:EmbeddedSecurityNgfwPolicy",
+                "fields": {
+                    "sequences": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "actions": {
+                                    "maxItemsOne": false
+                                },
+                                "match_entries": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "app_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "application_families": {
+                                                "maxItemsOne": false
+                                            },
+                                            "applications": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_data_prefix_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_data_prefixes": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_fqdn_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_fqdns": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_geo_location_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_geo_locations": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_port_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_ports": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_scalable_group_tag_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_security_group_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "flat_app_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "protocol_name_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "protocol_names": {
+                                                "maxItemsOne": false
+                                            },
+                                            "protocols": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_data_prefix_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_data_prefixes": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_geo_location_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_geo_locations": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_identity_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_identity_usergroups": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_identity_users": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_port_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_ports": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_scalable_group_tag_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_security_group_list_ids": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "sdwan_embedded_security_policy": {
+                "current": "sdwan:index/embeddedSecurityPolicy:EmbeddedSecurityPolicy",
+                "fields": {
+                    "assembly": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "entries": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "sdwan_expanded_community_list_policy_object": {
                 "current": "sdwan:index/expandedCommunityListPolicyObject:ExpandedCommunityListPolicyObject",
                 "fields": {
@@ -1783,6 +1907,14 @@
             },
             "sdwan_policy_object_security_url_block_list": {
                 "current": "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList",
+                "fields": {
+                    "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_security_zone": {
+                "current": "sdwan:index/policyObjectSecurityZone:PolicyObjectSecurityZone",
                 "fields": {
                     "entries": {
                         "maxItemsOne": false
@@ -2489,7 +2621,14 @@
                         "maxItemsOne": false
                     },
                     "ipv4_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "ipv6_aggregate_addresses": {
                         "maxItemsOne": false
@@ -2508,7 +2647,14 @@
                         "maxItemsOne": false
                     },
                     "ipv6_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -2848,7 +2994,12 @@
                 }
             },
             "sdwan_system_mrf_feature": {
-                "current": "sdwan:index/systemMrfFeature:SystemMrfFeature"
+                "current": "sdwan:index/systemMrfFeature:SystemMrfFeature",
+                "fields": {
+                    "gateway_preference": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "sdwan_system_ntp_feature": {
                 "current": "sdwan:index/systemNtpFeature:SystemNtpFeature",
@@ -2868,6 +3019,9 @@
                 "current": "sdwan:index/systemOmpFeature:SystemOmpFeature",
                 "fields": {
                     "site_types": {
+                        "maxItemsOne": false
+                    },
+                    "site_types_for_transport_gateway": {
                         "maxItemsOne": false
                     }
                 }
@@ -3208,7 +3362,14 @@
                         "maxItemsOne": false
                     },
                     "ipv4_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "ipv6_aggregate_addresses": {
                         "maxItemsOne": false
@@ -3227,7 +3388,14 @@
                         "maxItemsOne": false
                     },
                     "ipv6_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "mpls_interfaces": {
                         "maxItemsOne": false
@@ -3916,6 +4084,9 @@
             },
             "sdwan_application_priority_feature_profile": {
                 "current": "sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile"
+            },
+            "sdwan_application_priority_policy_settings_policy": {
+                "current": "sdwan:index/getApplicationPriorityPolicySettingsPolicy:getApplicationPriorityPolicySettingsPolicy"
             },
             "sdwan_application_priority_qos_policy": {
                 "current": "sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy",
@@ -5108,6 +5279,127 @@
             "sdwan_embedded_security_feature_profile": {
                 "current": "sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile"
             },
+            "sdwan_embedded_security_ngfw_policy": {
+                "current": "sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy",
+                "fields": {
+                    "sequences": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "actions": {
+                                    "maxItemsOne": false
+                                },
+                                "match_entries": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "app_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "application_families": {
+                                                "maxItemsOne": false
+                                            },
+                                            "applications": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_data_prefix_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_data_prefixes": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_fqdn_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_fqdns": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_geo_location_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_geo_locations": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_port_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_ports": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_scalable_group_tag_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "destination_security_group_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "flat_app_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "protocol_name_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "protocol_names": {
+                                                "maxItemsOne": false
+                                            },
+                                            "protocols": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_data_prefix_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_data_prefixes": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_geo_location_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_geo_locations": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_identity_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_identity_usergroups": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_identity_users": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_port_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_ports": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_scalable_group_tag_list_ids": {
+                                                "maxItemsOne": false
+                                            },
+                                            "source_security_group_list_ids": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "sdwan_embedded_security_policy": {
+                "current": "sdwan:index/getEmbeddedSecurityPolicy:getEmbeddedSecurityPolicy",
+                "fields": {
+                    "assembly": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "entries": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "sdwan_expanded_community_list_policy_object": {
                 "current": "sdwan:index/getExpandedCommunityListPolicyObject:getExpandedCommunityListPolicyObject",
                 "fields": {
@@ -5630,6 +5922,14 @@
             },
             "sdwan_policy_object_security_url_block_list": {
                 "current": "sdwan:index/getPolicyObjectSecurityUrlBlockList:getPolicyObjectSecurityUrlBlockList",
+                "fields": {
+                    "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_security_zone": {
+                "current": "sdwan:index/getPolicyObjectSecurityZone:getPolicyObjectSecurityZone",
                 "fields": {
                     "entries": {
                         "maxItemsOne": false
@@ -6336,7 +6636,14 @@
                         "maxItemsOne": false
                     },
                     "ipv4_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "ipv6_aggregate_addresses": {
                         "maxItemsOne": false
@@ -6355,7 +6662,14 @@
                         "maxItemsOne": false
                     },
                     "ipv6_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -6695,7 +7009,12 @@
                 }
             },
             "sdwan_system_mrf_feature": {
-                "current": "sdwan:index/getSystemMrfFeature:getSystemMrfFeature"
+                "current": "sdwan:index/getSystemMrfFeature:getSystemMrfFeature",
+                "fields": {
+                    "gateway_preference": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "sdwan_system_ntp_feature": {
                 "current": "sdwan:index/getSystemNtpFeature:getSystemNtpFeature",
@@ -6715,6 +7034,9 @@
                 "current": "sdwan:index/getSystemOmpFeature:getSystemOmpFeature",
                 "fields": {
                     "site_types": {
+                        "maxItemsOne": false
+                    },
+                    "site_types_for_transport_gateway": {
                         "maxItemsOne": false
                     }
                 }
@@ -7055,7 +7377,14 @@
                         "maxItemsOne": false
                     },
                     "ipv4_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "ipv6_aggregate_addresses": {
                         "maxItemsOne": false
@@ -7074,7 +7403,14 @@
                         "maxItemsOne": false
                     },
                     "ipv6_redistributes": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ospf_match_route": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "mpls_interfaces": {
                         "maxItemsOne": false
