@@ -662,35 +662,35 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4Nat);
     }
     /**
-     * NAT Inside Source Loopback Interface
+     * NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatLoopback", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatLoopback;
 
     /**
-     * @return NAT Inside Source Loopback Interface
+     * @return NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatLoopback() {
         return Codegen.optional(this.ipv4NatLoopback);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatLoopbackVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatLoopbackVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatLoopbackVariable() {
         return Codegen.optional(this.ipv4NatLoopbackVariable);
     }
     /**
-     * NAT Overload
+     * NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -698,7 +698,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Boolean> ipv4NatOverload;
 
     /**
-     * @return NAT Overload
+     * @return NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -706,21 +706,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatOverload);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatOverloadVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatOverloadVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatOverloadVariable() {
         return Codegen.optional(this.ipv4NatOverloadVariable);
     }
     /**
-     * NAT Pool Prefix Length
+     * NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -728,7 +728,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> ipv4NatPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length
+     * @return NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -736,77 +736,77 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatPrefixLength);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatPrefixLengthVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatPrefixLengthVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatPrefixLengthVariable() {
         return Codegen.optional(this.ipv4NatPrefixLengthVariable);
     }
     /**
-     * NAT Pool Range End
+     * NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatRangeEnd", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatRangeEnd;
 
     /**
-     * @return NAT Pool Range End
+     * @return NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatRangeEnd() {
         return Codegen.optional(this.ipv4NatRangeEnd);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatRangeEndVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatRangeEndVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatRangeEndVariable() {
         return Codegen.optional(this.ipv4NatRangeEndVariable);
     }
     /**
-     * NAT Pool Range Start
+     * NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatRangeStart", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatRangeStart;
 
     /**
-     * @return NAT Pool Range Start
+     * @return NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatRangeStart() {
         return Codegen.optional(this.ipv4NatRangeStart);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatRangeStartVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatRangeStartVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatRangeStartVariable() {
         return Codegen.optional(this.ipv4NatRangeStartVariable);
     }
     /**
-     * Set NAT TCP session timeout, in minutes
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -815,7 +815,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> ipv4NatTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes
+     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -824,21 +824,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatTcpTimeout);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatTcpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatTcpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatTcpTimeoutVariable() {
         return Codegen.optional(this.ipv4NatTcpTimeoutVariable);
     }
     /**
-     * Set NAT UDP session timeout, in minutes
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -847,7 +847,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ Integer> ipv4NatUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes
+     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -856,14 +856,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatUdpTimeout);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4NatUdpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatUdpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4NatUdpTimeoutVariable() {
@@ -1195,6 +1195,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     }
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     @Export(name="portChannelLacpFastSwitchover", refs={Boolean.class}, tree="[0]")
@@ -1202,6 +1203,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
 
     /**
      * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> portChannelLacpFastSwitchover() {
@@ -1327,6 +1329,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     }
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     @Export(name="portChannelLacpQosAggregate", refs={Boolean.class}, tree="[0]")
@@ -1334,6 +1337,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> portChannelLacpQosAggregate() {
@@ -1431,6 +1435,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     }
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     @Export(name="portChannelStaticQosAggregate", refs={Boolean.class}, tree="[0]")
@@ -1438,6 +1443,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> portChannelStaticQosAggregate() {
@@ -1600,14 +1606,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.speedVariable);
     }
     /**
-     * static NAT
+     * static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="staticNats", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureStaticNat.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureStaticNat>> staticNats;
 
     /**
-     * @return static NAT
+     * @return static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureStaticNat>>> staticNats() {

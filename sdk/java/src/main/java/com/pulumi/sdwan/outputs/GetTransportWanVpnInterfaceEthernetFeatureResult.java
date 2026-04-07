@@ -322,6 +322,16 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private Boolean mrfEnableCoreRegion;
     /**
+     * @return Enable Secondary Region
+     * 
+     */
+    private Boolean mrfEnableSecondaryRegion;
+    /**
+     * @return Enable secondary region
+     * 
+     */
+    private String mrfSecondaryRegionType;
+    /**
      * @return The name of the Feature
      * 
      */
@@ -1560,6 +1570,20 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.mrfEnableCoreRegion;
     }
     /**
+     * @return Enable Secondary Region
+     * 
+     */
+    public Boolean mrfEnableSecondaryRegion() {
+        return this.mrfEnableSecondaryRegion;
+    }
+    /**
+     * @return Enable secondary region
+     * 
+     */
+    public String mrfSecondaryRegionType() {
+        return this.mrfSecondaryRegionType;
+    }
+    /**
      * @return The name of the Feature
      * 
      */
@@ -2773,6 +2797,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String mediaTypeVariable;
         private String mrfCoreRegionType;
         private Boolean mrfEnableCoreRegion;
+        private Boolean mrfEnableSecondaryRegion;
+        private String mrfSecondaryRegionType;
         private String name;
         private Boolean nat64;
         private Boolean nat66;
@@ -3004,6 +3030,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.mediaTypeVariable = defaults.mediaTypeVariable;
     	      this.mrfCoreRegionType = defaults.mrfCoreRegionType;
     	      this.mrfEnableCoreRegion = defaults.mrfEnableCoreRegion;
+    	      this.mrfEnableSecondaryRegion = defaults.mrfEnableSecondaryRegion;
+    	      this.mrfSecondaryRegionType = defaults.mrfSecondaryRegionType;
     	      this.name = defaults.name;
     	      this.nat64 = defaults.nat64;
     	      this.nat66 = defaults.nat66;
@@ -3695,6 +3723,22 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "mrfEnableCoreRegion");
             }
             this.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder mrfEnableSecondaryRegion(Boolean mrfEnableSecondaryRegion) {
+            if (mrfEnableSecondaryRegion == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "mrfEnableSecondaryRegion");
+            }
+            this.mrfEnableSecondaryRegion = mrfEnableSecondaryRegion;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder mrfSecondaryRegionType(String mrfSecondaryRegionType) {
+            if (mrfSecondaryRegionType == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "mrfSecondaryRegionType");
+            }
+            this.mrfSecondaryRegionType = mrfSecondaryRegionType;
             return this;
         }
         @CustomType.Setter
@@ -5102,6 +5146,8 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.mediaTypeVariable = mediaTypeVariable;
             _resultValue.mrfCoreRegionType = mrfCoreRegionType;
             _resultValue.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            _resultValue.mrfEnableSecondaryRegion = mrfEnableSecondaryRegion;
+            _resultValue.mrfSecondaryRegionType = mrfSecondaryRegionType;
             _resultValue.name = name;
             _resultValue.nat64 = nat64;
             _resultValue.nat66 = nat66;

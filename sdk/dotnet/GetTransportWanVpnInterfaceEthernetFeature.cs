@@ -386,6 +386,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly bool MrfEnableCoreRegion;
         /// <summary>
+        /// Enable Secondary Region
+        /// </summary>
+        public readonly bool MrfEnableSecondaryRegion;
+        /// <summary>
+        /// Enable secondary region
+        /// </summary>
+        public readonly string MrfSecondaryRegionType;
+        /// <summary>
         /// The name of the Feature
         /// </summary>
         public readonly string Name;
@@ -1166,6 +1174,10 @@ namespace Pulumi.Sdwan
 
             bool mrfEnableCoreRegion,
 
+            bool mrfEnableSecondaryRegion,
+
+            string mrfSecondaryRegionType,
+
             string name,
 
             bool nat64,
@@ -1558,6 +1570,8 @@ namespace Pulumi.Sdwan
             MediaTypeVariable = mediaTypeVariable;
             MrfCoreRegionType = mrfCoreRegionType;
             MrfEnableCoreRegion = mrfEnableCoreRegion;
+            MrfEnableSecondaryRegion = mrfEnableSecondaryRegion;
+            MrfSecondaryRegionType = mrfSecondaryRegionType;
             Name = name;
             Nat64 = nat64;
             Nat66 = nat66;

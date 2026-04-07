@@ -1102,6 +1102,40 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.mrfEnableCoreRegion);
     }
     /**
+     * Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="mrfEnableSecondaryRegion", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> mrfEnableSecondaryRegion;
+
+    /**
+     * @return Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> mrfEnableSecondaryRegion() {
+        return Codegen.optional(this.mrfEnableSecondaryRegion);
+    }
+    /**
+     * Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     * 
+     */
+    @Export(name="mrfSecondaryRegionType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> mrfSecondaryRegionType;
+
+    /**
+     * @return Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     * 
+     */
+    public Output<Optional<String>> mrfSecondaryRegionType() {
+        return Codegen.optional(this.mrfSecondaryRegionType);
+    }
+    /**
      * The name of the Feature
      * 
      */
@@ -1553,6 +1587,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     }
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     @Export(name="portChannelLacpFastSwitchover", refs={Boolean.class}, tree="[0]")
@@ -1560,6 +1595,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
 
     /**
      * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> portChannelLacpFastSwitchover() {
@@ -1685,6 +1721,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     }
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     @Export(name="portChannelLacpQosAggregate", refs={Boolean.class}, tree="[0]")
@@ -1692,6 +1729,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> portChannelLacpQosAggregate() {
@@ -1789,6 +1827,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     }
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     @Export(name="portChannelStaticQosAggregate", refs={Boolean.class}, tree="[0]")
@@ -1796,6 +1835,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> portChannelStaticQosAggregate() {
@@ -2334,7 +2374,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.transportWanVpnFeatureId;
     }
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -2343,7 +2383,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelBandwidthPercent;
 
     /**
-     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -2352,14 +2392,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelBandwidthPercent);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      * 
      */
     @Export(name="tunnelBandwidthPercentVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelBandwidthPercentVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      * 
      */
     public Output<Optional<String>> tunnelBandwidthPercentVariable() {

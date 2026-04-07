@@ -285,65 +285,65 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly ipv4Nat: pulumi.Output<boolean | undefined>;
     /**
-     * NAT Inside Source Loopback Interface
+     * NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatLoopback: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatLoopbackVariable: pulumi.Output<string | undefined>;
     /**
-     * NAT Overload
+     * NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      */
     declare public readonly ipv4NatOverload: pulumi.Output<boolean | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatOverloadVariable: pulumi.Output<string | undefined>;
     /**
-     * NAT Pool Prefix Length
+     * NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      */
     declare public readonly ipv4NatPrefixLength: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatPrefixLengthVariable: pulumi.Output<string | undefined>;
     /**
-     * NAT Pool Range End
+     * NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatRangeEnd: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatRangeEndVariable: pulumi.Output<string | undefined>;
     /**
-     * NAT Pool Range Start
+     * NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatRangeStart: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatRangeStartVariable: pulumi.Output<string | undefined>;
     /**
-     * Set NAT TCP session timeout, in minutes
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      */
     declare public readonly ipv4NatTcpTimeout: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatTcpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
-     * Set NAT UDP session timeout, in minutes
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      */
     declare public readonly ipv4NatUdpTimeout: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly ipv4NatUdpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
@@ -444,6 +444,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
     declare public readonly portChannelInterface: pulumi.Output<boolean | undefined>;
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      */
     declare public readonly portChannelLacpFastSwitchover: pulumi.Output<boolean | undefined>;
     /**
@@ -483,6 +484,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
     declare public readonly portChannelLacpMinBundleVariable: pulumi.Output<string | undefined>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      */
     declare public readonly portChannelLacpQosAggregate: pulumi.Output<boolean | undefined>;
     /**
@@ -514,6 +516,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
     declare public readonly portChannelStaticMemberLinks: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink[] | undefined>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      */
     declare public readonly portChannelStaticQosAggregate: pulumi.Output<boolean | undefined>;
     /**
@@ -562,7 +565,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
      */
     declare public readonly speedVariable: pulumi.Output<string | undefined>;
     /**
-     * static NAT
+     * static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     declare public readonly staticNats: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat[] | undefined>;
     /**
@@ -1023,65 +1026,65 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4Nat?: pulumi.Input<boolean>;
     /**
-     * NAT Inside Source Loopback Interface
+     * NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatLoopback?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatLoopbackVariable?: pulumi.Input<string>;
     /**
-     * NAT Overload
+     * NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      */
     ipv4NatOverload?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatOverloadVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Prefix Length
+     * NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      */
     ipv4NatPrefixLength?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatPrefixLengthVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Range End
+     * NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeEnd?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeEndVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Range Start
+     * NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeStart?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeStartVariable?: pulumi.Input<string>;
     /**
-     * Set NAT TCP session timeout, in minutes
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      */
     ipv4NatTcpTimeout?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatTcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Set NAT UDP session timeout, in minutes
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      */
     ipv4NatUdpTimeout?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatUdpTimeoutVariable?: pulumi.Input<string>;
     /**
@@ -1182,6 +1185,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
     portChannelInterface?: pulumi.Input<boolean>;
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      */
     portChannelLacpFastSwitchover?: pulumi.Input<boolean>;
     /**
@@ -1221,6 +1225,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
     portChannelLacpMinBundleVariable?: pulumi.Input<string>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      */
     portChannelLacpQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -1252,6 +1257,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
     portChannelStaticMemberLinks?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>[]>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      */
     portChannelStaticQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -1300,7 +1306,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     speedVariable?: pulumi.Input<string>;
     /**
-     * static NAT
+     * static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>[]>;
     /**
@@ -1507,65 +1513,65 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4Nat?: pulumi.Input<boolean>;
     /**
-     * NAT Inside Source Loopback Interface
+     * NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatLoopback?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatLoopbackVariable?: pulumi.Input<string>;
     /**
-     * NAT Overload
+     * NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      */
     ipv4NatOverload?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatOverloadVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Prefix Length
+     * NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      */
     ipv4NatPrefixLength?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatPrefixLengthVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Range End
+     * NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeEnd?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeEndVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Range Start
+     * NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeStart?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatRangeStartVariable?: pulumi.Input<string>;
     /**
-     * Set NAT TCP session timeout, in minutes
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      */
     ipv4NatTcpTimeout?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatTcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Set NAT UDP session timeout, in minutes
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      */
     ipv4NatUdpTimeout?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     ipv4NatUdpTimeoutVariable?: pulumi.Input<string>;
     /**
@@ -1666,6 +1672,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
     portChannelInterface?: pulumi.Input<boolean>;
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      */
     portChannelLacpFastSwitchover?: pulumi.Input<boolean>;
     /**
@@ -1705,6 +1712,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
     portChannelLacpMinBundleVariable?: pulumi.Input<string>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      */
     portChannelLacpQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -1736,6 +1744,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
     portChannelStaticMemberLinks?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>[]>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      */
     portChannelStaticQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -1784,7 +1793,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     speedVariable?: pulumi.Input<string>;
     /**
-     * static NAT
+     * static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      */
     staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>[]>;
     /**

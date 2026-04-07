@@ -977,6 +977,42 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
+     * Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="mrfEnableSecondaryRegion")
+    private @Nullable Output<Boolean> mrfEnableSecondaryRegion;
+
+    /**
+     * @return Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> mrfEnableSecondaryRegion() {
+        return Optional.ofNullable(this.mrfEnableSecondaryRegion);
+    }
+
+    /**
+     * Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     * 
+     */
+    @Import(name="mrfSecondaryRegionType")
+    private @Nullable Output<String> mrfSecondaryRegionType;
+
+    /**
+     * @return Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     * 
+     */
+    public Optional<Output<String>> mrfSecondaryRegionType() {
+        return Optional.ofNullable(this.mrfSecondaryRegionType);
+    }
+
+    /**
      * The name of the Feature
      * 
      */
@@ -1458,6 +1494,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     @Import(name="portChannelLacpFastSwitchover")
@@ -1465,6 +1502,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     /**
      * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> portChannelLacpFastSwitchover() {
@@ -1599,6 +1637,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     @Import(name="portChannelLacpQosAggregate")
@@ -1606,6 +1645,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> portChannelLacpQosAggregate() {
@@ -1710,6 +1750,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     @Import(name="portChannelStaticQosAggregate")
@@ -1717,6 +1758,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> portChannelStaticQosAggregate() {
@@ -2292,7 +2334,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -2301,7 +2343,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelBandwidthPercent;
 
     /**
-     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -2311,14 +2353,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      * 
      */
     @Import(name="tunnelBandwidthPercentVariable")
     private @Nullable Output<String> tunnelBandwidthPercentVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      * 
      */
     public Optional<Output<String>> tunnelBandwidthPercentVariable() {
@@ -3643,6 +3685,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.mediaTypeVariable = $.mediaTypeVariable;
         this.mrfCoreRegionType = $.mrfCoreRegionType;
         this.mrfEnableCoreRegion = $.mrfEnableCoreRegion;
+        this.mrfEnableSecondaryRegion = $.mrfEnableSecondaryRegion;
+        this.mrfSecondaryRegionType = $.mrfSecondaryRegionType;
         this.name = $.name;
         this.nat64 = $.nat64;
         this.nat66 = $.nat66;
@@ -5176,6 +5220,54 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
+         * @param mrfEnableSecondaryRegion Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableSecondaryRegion(@Nullable Output<Boolean> mrfEnableSecondaryRegion) {
+            $.mrfEnableSecondaryRegion = mrfEnableSecondaryRegion;
+            return this;
+        }
+
+        /**
+         * @param mrfEnableSecondaryRegion Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableSecondaryRegion(Boolean mrfEnableSecondaryRegion) {
+            return mrfEnableSecondaryRegion(Output.of(mrfEnableSecondaryRegion));
+        }
+
+        /**
+         * @param mrfSecondaryRegionType Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `secondary-shared`, `secondary-only`
+         *   - Default value: `secondary-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfSecondaryRegionType(@Nullable Output<String> mrfSecondaryRegionType) {
+            $.mrfSecondaryRegionType = mrfSecondaryRegionType;
+            return this;
+        }
+
+        /**
+         * @param mrfSecondaryRegionType Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `secondary-shared`, `secondary-only`
+         *   - Default value: `secondary-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfSecondaryRegionType(String mrfSecondaryRegionType) {
+            return mrfSecondaryRegionType(Output.of(mrfSecondaryRegionType));
+        }
+
+        /**
          * @param name The name of the Feature
          * 
          * @return builder
@@ -5867,6 +5959,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         /**
          * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5878,6 +5971,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         /**
          * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6072,6 +6166,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         /**
          * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6083,6 +6178,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         /**
          * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6235,6 +6331,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         /**
          * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6246,6 +6343,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         /**
          * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -7059,7 +7157,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
          *   - Range: `1`-`100`
          *   - Default value: `50`
          * 
@@ -7072,7 +7170,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
          *   - Range: `1`-`100`
          *   - Default value: `50`
          * 
@@ -7084,7 +7182,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
          * 
          * @return builder
          * 
@@ -7095,7 +7193,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
          * 
          * @return builder
          * 

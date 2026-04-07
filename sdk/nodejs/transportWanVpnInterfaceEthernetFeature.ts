@@ -450,6 +450,17 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      */
     declare public readonly mrfEnableCoreRegion: pulumi.Output<boolean | undefined>;
     /**
+     * Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly mrfEnableSecondaryRegion: pulumi.Output<boolean | undefined>;
+    /**
+     * Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     */
+    declare public readonly mrfSecondaryRegionType: pulumi.Output<string | undefined>;
+    /**
      * The name of the Feature
      */
     declare public readonly name: pulumi.Output<string>;
@@ -586,6 +597,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
     declare public readonly portChannelInterface: pulumi.Output<boolean | undefined>;
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      */
     declare public readonly portChannelLacpFastSwitchover: pulumi.Output<boolean | undefined>;
     /**
@@ -625,6 +637,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
     declare public readonly portChannelLacpMinBundleVariable: pulumi.Output<string | undefined>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      */
     declare public readonly portChannelLacpQosAggregate: pulumi.Output<boolean | undefined>;
     /**
@@ -656,6 +669,7 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
     declare public readonly portChannelStaticMemberLinks: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink[] | undefined>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      */
     declare public readonly portChannelStaticQosAggregate: pulumi.Output<boolean | undefined>;
     /**
@@ -817,13 +831,13 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
      */
     declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      */
     declare public readonly tunnelBandwidthPercent: pulumi.Output<number | undefined>;
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      */
     declare public readonly tunnelBandwidthPercentVariable: pulumi.Output<string | undefined>;
     /**
@@ -1260,6 +1274,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["mediaTypeVariable"] = state?.mediaTypeVariable;
             resourceInputs["mrfCoreRegionType"] = state?.mrfCoreRegionType;
             resourceInputs["mrfEnableCoreRegion"] = state?.mrfEnableCoreRegion;
+            resourceInputs["mrfEnableSecondaryRegion"] = state?.mrfEnableSecondaryRegion;
+            resourceInputs["mrfSecondaryRegionType"] = state?.mrfSecondaryRegionType;
             resourceInputs["name"] = state?.name;
             resourceInputs["nat64"] = state?.nat64;
             resourceInputs["nat66"] = state?.nat66;
@@ -1495,6 +1511,8 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             resourceInputs["mediaTypeVariable"] = args?.mediaTypeVariable;
             resourceInputs["mrfCoreRegionType"] = args?.mrfCoreRegionType;
             resourceInputs["mrfEnableCoreRegion"] = args?.mrfEnableCoreRegion;
+            resourceInputs["mrfEnableSecondaryRegion"] = args?.mrfEnableSecondaryRegion;
+            resourceInputs["mrfSecondaryRegionType"] = args?.mrfSecondaryRegionType;
             resourceInputs["name"] = args?.name;
             resourceInputs["nat64"] = args?.nat64;
             resourceInputs["nat66"] = args?.nat66;
@@ -1928,6 +1946,17 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     mrfEnableCoreRegion?: pulumi.Input<boolean>;
     /**
+     * Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     */
+    mrfEnableSecondaryRegion?: pulumi.Input<boolean>;
+    /**
+     * Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     */
+    mrfSecondaryRegionType?: pulumi.Input<string>;
+    /**
      * The name of the Feature
      */
     name?: pulumi.Input<string>;
@@ -2064,6 +2093,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
     portChannelInterface?: pulumi.Input<boolean>;
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      */
     portChannelLacpFastSwitchover?: pulumi.Input<boolean>;
     /**
@@ -2103,6 +2133,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
     portChannelLacpMinBundleVariable?: pulumi.Input<string>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      */
     portChannelLacpQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -2134,6 +2165,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
     portChannelStaticMemberLinks?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>[]>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      */
     portChannelStaticQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -2295,13 +2327,13 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     transportWanVpnFeatureId?: pulumi.Input<string>;
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      */
     tunnelBandwidthPercent?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      */
     tunnelBandwidthPercentVariable?: pulumi.Input<string>;
     /**
@@ -2926,6 +2958,17 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     mrfEnableCoreRegion?: pulumi.Input<boolean>;
     /**
+     * Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     */
+    mrfEnableSecondaryRegion?: pulumi.Input<boolean>;
+    /**
+     * Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `secondary-shared`, `secondary-only`
+     *   - Default value: `secondary-shared`
+     */
+    mrfSecondaryRegionType?: pulumi.Input<string>;
+    /**
      * The name of the Feature
      */
     name?: pulumi.Input<string>;
@@ -3062,6 +3105,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
     portChannelInterface?: pulumi.Input<boolean>;
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      */
     portChannelLacpFastSwitchover?: pulumi.Input<boolean>;
     /**
@@ -3101,6 +3145,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
     portChannelLacpMinBundleVariable?: pulumi.Input<string>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      */
     portChannelLacpQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -3132,6 +3177,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
     portChannelStaticMemberLinks?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>[]>;
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      */
     portChannelStaticQosAggregate?: pulumi.Input<boolean>;
     /**
@@ -3293,13 +3339,13 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     transportWanVpnFeatureId: pulumi.Input<string>;
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      */
     tunnelBandwidthPercent?: pulumi.Input<number>;
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
      */
     tunnelBandwidthPercentVariable?: pulumi.Input<string>;
     /**

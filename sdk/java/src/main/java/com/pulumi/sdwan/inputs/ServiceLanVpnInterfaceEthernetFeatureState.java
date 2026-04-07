@@ -564,14 +564,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Inside Source Loopback Interface
+     * NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatLoopback")
     private @Nullable Output<String> ipv4NatLoopback;
 
     /**
-     * @return NAT Inside Source Loopback Interface
+     * @return NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatLoopback() {
@@ -579,14 +579,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatLoopbackVariable")
     private @Nullable Output<String> ipv4NatLoopbackVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatLoopbackVariable() {
@@ -594,7 +594,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Overload
+     * NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -602,7 +602,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> ipv4NatOverload;
 
     /**
-     * @return NAT Overload
+     * @return NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -611,14 +611,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatOverloadVariable")
     private @Nullable Output<String> ipv4NatOverloadVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatOverloadVariable() {
@@ -626,7 +626,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Pool Prefix Length
+     * NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -634,7 +634,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> ipv4NatPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length
+     * @return NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -643,14 +643,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatPrefixLengthVariable")
     private @Nullable Output<String> ipv4NatPrefixLengthVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatPrefixLengthVariable() {
@@ -658,14 +658,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Pool Range End
+     * NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatRangeEnd")
     private @Nullable Output<String> ipv4NatRangeEnd;
 
     /**
-     * @return NAT Pool Range End
+     * @return NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatRangeEnd() {
@@ -673,14 +673,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatRangeEndVariable")
     private @Nullable Output<String> ipv4NatRangeEndVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatRangeEndVariable() {
@@ -688,14 +688,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Pool Range Start
+     * NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatRangeStart")
     private @Nullable Output<String> ipv4NatRangeStart;
 
     /**
-     * @return NAT Pool Range Start
+     * @return NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatRangeStart() {
@@ -703,14 +703,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatRangeStartVariable")
     private @Nullable Output<String> ipv4NatRangeStartVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatRangeStartVariable() {
@@ -718,7 +718,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Set NAT TCP session timeout, in minutes
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -727,7 +727,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> ipv4NatTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes
+     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -737,14 +737,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatTcpTimeoutVariable")
     private @Nullable Output<String> ipv4NatTcpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatTcpTimeoutVariable() {
@@ -752,7 +752,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Set NAT UDP session timeout, in minutes
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -761,7 +761,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> ipv4NatUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes
+     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -771,14 +771,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4NatUdpTimeoutVariable")
     private @Nullable Output<String> ipv4NatUdpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4NatUdpTimeoutVariable() {
@@ -1133,6 +1133,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
     /**
      * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     @Import(name="portChannelLacpFastSwitchover")
@@ -1140,6 +1141,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
     /**
      * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> portChannelLacpFastSwitchover() {
@@ -1274,6 +1276,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     @Import(name="portChannelLacpQosAggregate")
@@ -1281,6 +1284,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> portChannelLacpQosAggregate() {
@@ -1385,6 +1389,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
     /**
      * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     @Import(name="portChannelStaticQosAggregate")
@@ -1392,6 +1397,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
     /**
      * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> portChannelStaticQosAggregate() {
@@ -1566,14 +1572,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * static NAT
+     * static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="staticNats")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs>> staticNats;
 
     /**
-     * @return static NAT
+     * @return static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs>>> staticNats() {
@@ -2661,7 +2667,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatLoopback NAT Inside Source Loopback Interface
+         * @param ipv4NatLoopback NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2672,7 +2678,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatLoopback NAT Inside Source Loopback Interface
+         * @param ipv4NatLoopback NAT Inside Source Loopback Interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2682,7 +2688,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatLoopbackVariable Variable name
+         * @param ipv4NatLoopbackVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2693,7 +2699,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatLoopbackVariable Variable name
+         * @param ipv4NatLoopbackVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2703,7 +2709,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatOverload NAT Overload
+         * @param ipv4NatOverload NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -2715,7 +2721,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatOverload NAT Overload
+         * @param ipv4NatOverload NAT Overload, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -2726,7 +2732,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatOverloadVariable Variable name
+         * @param ipv4NatOverloadVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2737,7 +2743,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatOverloadVariable Variable name
+         * @param ipv4NatOverloadVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2747,7 +2753,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatPrefixLength NAT Pool Prefix Length
+         * @param ipv4NatPrefixLength NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`32`
          * 
          * @return builder
@@ -2759,7 +2765,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatPrefixLength NAT Pool Prefix Length
+         * @param ipv4NatPrefixLength NAT Pool Prefix Length, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`32`
          * 
          * @return builder
@@ -2770,7 +2776,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatPrefixLengthVariable Variable name
+         * @param ipv4NatPrefixLengthVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2781,7 +2787,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatPrefixLengthVariable Variable name
+         * @param ipv4NatPrefixLengthVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2791,7 +2797,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeEnd NAT Pool Range End
+         * @param ipv4NatRangeEnd NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2802,7 +2808,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeEnd NAT Pool Range End
+         * @param ipv4NatRangeEnd NAT Pool Range End, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2812,7 +2818,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeEndVariable Variable name
+         * @param ipv4NatRangeEndVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2823,7 +2829,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeEndVariable Variable name
+         * @param ipv4NatRangeEndVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2833,7 +2839,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeStart NAT Pool Range Start
+         * @param ipv4NatRangeStart NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2844,7 +2850,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeStart NAT Pool Range Start
+         * @param ipv4NatRangeStart NAT Pool Range Start, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2854,7 +2860,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeStartVariable Variable name
+         * @param ipv4NatRangeStartVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2865,7 +2871,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatRangeStartVariable Variable name
+         * @param ipv4NatRangeStartVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2875,7 +2881,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes
+         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `60`
          * 
@@ -2888,7 +2894,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes
+         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `60`
          * 
@@ -2900,7 +2906,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatTcpTimeoutVariable Variable name
+         * @param ipv4NatTcpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2911,7 +2917,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatTcpTimeoutVariable Variable name
+         * @param ipv4NatTcpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2921,7 +2927,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes
+         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `1`
          * 
@@ -2934,7 +2940,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes
+         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `1`
          * 
@@ -2946,7 +2952,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatUdpTimeoutVariable Variable name
+         * @param ipv4NatUdpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2957,7 +2963,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatUdpTimeoutVariable Variable name
+         * @param ipv4NatUdpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3506,6 +3512,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
         /**
          * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3517,6 +3524,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
         /**
          * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3711,6 +3719,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
         /**
          * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3722,6 +3731,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
         /**
          * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3874,6 +3884,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
         /**
          * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3885,6 +3896,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
 
         /**
          * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4127,7 +4139,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param staticNats static NAT
+         * @param staticNats static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4138,7 +4150,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param staticNats static NAT
+         * @param staticNats static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4148,7 +4160,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param staticNats static NAT
+         * @param staticNats static NAT, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 

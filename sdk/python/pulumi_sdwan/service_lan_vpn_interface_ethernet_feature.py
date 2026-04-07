@@ -183,26 +183,26 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `1`
-        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
+        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -234,6 +234,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -246,6 +247,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -256,6 +258,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs']]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: Port Channel Sub Interface on/off, Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] port_channel_subinterface_primary_interface_name: , Attribute conditional on `port_channel_interface` equal to `true` and `port_channel_subinterface` equal to `true`
@@ -267,7 +270,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] speed: Set interface speed, Attribute conditional on `port_channel_interface` not equal to `true`
                  - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]] static_nats: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]] static_nats: static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -966,7 +969,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatLoopback")
     def ipv4_nat_loopback(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Inside Source Loopback Interface
+        NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_loopback")
 
@@ -978,7 +981,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatLoopbackVariable")
     def ipv4_nat_loopback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_loopback_variable")
 
@@ -990,7 +993,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatOverload")
     def ipv4_nat_overload(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT Overload
+        NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Default value: `true`
         """
         return pulumi.get(self, "ipv4_nat_overload")
@@ -1003,7 +1006,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatOverloadVariable")
     def ipv4_nat_overload_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_overload_variable")
 
@@ -1015,7 +1018,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatPrefixLength")
     def ipv4_nat_prefix_length(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        NAT Pool Prefix Length
+        NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length")
@@ -1028,7 +1031,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatPrefixLengthVariable")
     def ipv4_nat_prefix_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length_variable")
 
@@ -1040,7 +1043,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatRangeEnd")
     def ipv4_nat_range_end(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range End
+        NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_end")
 
@@ -1052,7 +1055,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatRangeEndVariable")
     def ipv4_nat_range_end_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_end_variable")
 
@@ -1064,7 +1067,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatRangeStart")
     def ipv4_nat_range_start(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range Start
+        NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_start")
 
@@ -1076,7 +1079,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatRangeStartVariable")
     def ipv4_nat_range_start_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_start_variable")
 
@@ -1088,7 +1091,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatTcpTimeout")
     def ipv4_nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes
+        Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`8947`
           - Default value: `60`
         """
@@ -1102,7 +1105,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatTcpTimeoutVariable")
     def ipv4_nat_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_tcp_timeout_variable")
 
@@ -1114,7 +1117,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes
+        Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`8947`
           - Default value: `1`
         """
@@ -1128,7 +1131,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatUdpTimeoutVariable")
     def ipv4_nat_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_udp_timeout_variable")
 
@@ -1413,6 +1416,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     def port_channel_lacp_fast_switchover(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `false`
         """
         return pulumi.get(self, "port_channel_lacp_fast_switchover")
 
@@ -1524,6 +1528,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     def port_channel_lacp_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_lacp_qos_aggregate")
 
@@ -1611,6 +1616,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     def port_channel_static_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_static_qos_aggregate")
 
@@ -1743,7 +1749,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="staticNats")
     def static_nats(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]]]:
         """
-        static NAT
+        static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "static_nats")
 
@@ -2054,26 +2060,26 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `1`
-        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
+        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -2105,6 +2111,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -2117,6 +2124,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -2127,6 +2135,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs']]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: Port Channel Sub Interface on/off, Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] port_channel_subinterface_primary_interface_name: , Attribute conditional on `port_channel_interface` equal to `true` and `port_channel_subinterface` equal to `true`
@@ -2139,7 +2148,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] speed: Set interface speed, Attribute conditional on `port_channel_interface` not equal to `true`
                  - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]] static_nats: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]] static_nats: static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -2831,7 +2840,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatLoopback")
     def ipv4_nat_loopback(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Inside Source Loopback Interface
+        NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_loopback")
 
@@ -2843,7 +2852,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatLoopbackVariable")
     def ipv4_nat_loopback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_loopback_variable")
 
@@ -2855,7 +2864,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatOverload")
     def ipv4_nat_overload(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT Overload
+        NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Default value: `true`
         """
         return pulumi.get(self, "ipv4_nat_overload")
@@ -2868,7 +2877,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatOverloadVariable")
     def ipv4_nat_overload_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_overload_variable")
 
@@ -2880,7 +2889,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatPrefixLength")
     def ipv4_nat_prefix_length(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        NAT Pool Prefix Length
+        NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length")
@@ -2893,7 +2902,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatPrefixLengthVariable")
     def ipv4_nat_prefix_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length_variable")
 
@@ -2905,7 +2914,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatRangeEnd")
     def ipv4_nat_range_end(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range End
+        NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_end")
 
@@ -2917,7 +2926,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatRangeEndVariable")
     def ipv4_nat_range_end_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_end_variable")
 
@@ -2929,7 +2938,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatRangeStart")
     def ipv4_nat_range_start(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range Start
+        NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_start")
 
@@ -2941,7 +2950,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatRangeStartVariable")
     def ipv4_nat_range_start_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_start_variable")
 
@@ -2953,7 +2962,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatTcpTimeout")
     def ipv4_nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes
+        Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`8947`
           - Default value: `60`
         """
@@ -2967,7 +2976,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatTcpTimeoutVariable")
     def ipv4_nat_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_tcp_timeout_variable")
 
@@ -2979,7 +2988,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes
+        Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`8947`
           - Default value: `1`
         """
@@ -2993,7 +3002,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatUdpTimeoutVariable")
     def ipv4_nat_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_udp_timeout_variable")
 
@@ -3278,6 +3287,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     def port_channel_lacp_fast_switchover(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `false`
         """
         return pulumi.get(self, "port_channel_lacp_fast_switchover")
 
@@ -3389,6 +3399,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     def port_channel_lacp_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_lacp_qos_aggregate")
 
@@ -3476,6 +3487,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     def port_channel_static_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_static_qos_aggregate")
 
@@ -3620,7 +3632,7 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="staticNats")
     def static_nats(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]]]:
         """
-        static NAT
+        static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "static_nats")
 
@@ -4051,26 +4063,26 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `1`
-        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
+        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -4102,6 +4114,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -4114,6 +4127,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -4124,6 +4138,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: Port Channel Sub Interface on/off, Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] port_channel_subinterface_primary_interface_name: , Attribute conditional on `port_channel_interface` equal to `true` and `port_channel_subinterface` equal to `true`
@@ -4136,7 +4151,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speed: Set interface speed, Attribute conditional on `port_channel_interface` not equal to `true`
                  - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs', 'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict']]]] static_nats: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs', 'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict']]]] static_nats: static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -4697,26 +4712,26 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+        :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `60`
-        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+        :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `1`-`8947`
                  - Default value: `1`
-        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
+        :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_address_type` equal to `static` or `ipv4_address_type_variable` being set
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -4748,6 +4763,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -4760,6 +4776,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -4770,6 +4787,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: Port Channel Sub Interface on/off, Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.str] port_channel_subinterface_primary_interface_name: , Attribute conditional on `port_channel_interface` equal to `true` and `port_channel_subinterface` equal to `true`
@@ -4782,7 +4800,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] speed: Set interface speed, Attribute conditional on `port_channel_interface` not equal to `true`
                  - Choices: `10`, `100`, `1000`, `2500`, `5000`, `10000`, `25000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name, Attribute conditional on `port_channel_interface` not equal to `true`
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs', 'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict']]]] static_nats: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs', 'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict']]]] static_nats: static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -5217,7 +5235,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatLoopback")
     def ipv4_nat_loopback(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Inside Source Loopback Interface
+        NAT Inside Source Loopback Interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_loopback")
 
@@ -5225,7 +5243,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatLoopbackVariable")
     def ipv4_nat_loopback_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_loopback_variable")
 
@@ -5233,7 +5251,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatOverload")
     def ipv4_nat_overload(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        NAT Overload
+        NAT Overload, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Default value: `true`
         """
         return pulumi.get(self, "ipv4_nat_overload")
@@ -5242,7 +5260,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatOverloadVariable")
     def ipv4_nat_overload_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_overload_variable")
 
@@ -5250,7 +5268,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatPrefixLength")
     def ipv4_nat_prefix_length(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        NAT Pool Prefix Length
+        NAT Pool Prefix Length, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length")
@@ -5259,7 +5277,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatPrefixLengthVariable")
     def ipv4_nat_prefix_length_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length_variable")
 
@@ -5267,7 +5285,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatRangeEnd")
     def ipv4_nat_range_end(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Pool Range End
+        NAT Pool Range End, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_end")
 
@@ -5275,7 +5293,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatRangeEndVariable")
     def ipv4_nat_range_end_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_end_variable")
 
@@ -5283,7 +5301,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatRangeStart")
     def ipv4_nat_range_start(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Pool Range Start
+        NAT Pool Range Start, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_start")
 
@@ -5291,7 +5309,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatRangeStartVariable")
     def ipv4_nat_range_start_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_range_start_variable")
 
@@ -5299,7 +5317,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatTcpTimeout")
     def ipv4_nat_tcp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes
+        Set NAT TCP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`8947`
           - Default value: `60`
         """
@@ -5309,7 +5327,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatTcpTimeoutVariable")
     def ipv4_nat_tcp_timeout_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_tcp_timeout_variable")
 
@@ -5317,7 +5335,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes
+        Set NAT UDP session timeout, in minutes, Attribute conditional on `port_channel_member_interface` not equal to `true`
           - Range: `1`-`8947`
           - Default value: `1`
         """
@@ -5327,7 +5345,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatUdpTimeoutVariable")
     def ipv4_nat_udp_timeout_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "ipv4_nat_udp_timeout_variable")
 
@@ -5520,6 +5538,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     def port_channel_lacp_fast_switchover(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `false`
         """
         return pulumi.get(self, "port_channel_lacp_fast_switchover")
 
@@ -5595,6 +5614,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     def port_channel_lacp_qos_aggregate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_lacp_qos_aggregate")
 
@@ -5654,6 +5674,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     def port_channel_static_qos_aggregate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_static_qos_aggregate")
 
@@ -5750,7 +5771,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="staticNats")
     def static_nats(self) -> pulumi.Output[Optional[Sequence['outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat']]]:
         """
-        static NAT
+        static NAT, Attribute conditional on `port_channel_member_interface` not equal to `true`
         """
         return pulumi.get(self, "static_nats")
 

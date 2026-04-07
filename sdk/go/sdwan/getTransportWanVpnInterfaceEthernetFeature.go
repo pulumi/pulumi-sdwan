@@ -184,6 +184,10 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	MrfCoreRegionType string `pulumi:"mrfCoreRegionType"`
 	// Enable Core Region
 	MrfEnableCoreRegion bool `pulumi:"mrfEnableCoreRegion"`
+	// Enable Secondary Region
+	MrfEnableSecondaryRegion bool `pulumi:"mrfEnableSecondaryRegion"`
+	// Enable secondary region
+	MrfSecondaryRegionType string `pulumi:"mrfSecondaryRegionType"`
 	// The name of the Feature
 	Name string `pulumi:"name"`
 	// NAT64 on this interface
@@ -880,6 +884,16 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) MrfCoreRegion
 // Enable Core Region
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) MrfEnableCoreRegion() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.MrfEnableCoreRegion }).(pulumi.BoolOutput)
+}
+
+// Enable Secondary Region
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) MrfEnableSecondaryRegion() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) bool { return v.MrfEnableSecondaryRegion }).(pulumi.BoolOutput)
+}
+
+// Enable secondary region
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) MrfSecondaryRegionType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.MrfSecondaryRegionType }).(pulumi.StringOutput)
 }
 
 // The name of the Feature

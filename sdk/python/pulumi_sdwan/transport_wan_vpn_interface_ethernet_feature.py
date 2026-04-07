@@ -85,6 +85,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  media_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_enable_secondary_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_secondary_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat64: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat66: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -332,6 +334,11 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  - Default value: `core-shared`
         :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.bool] mrf_enable_secondary_region: Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] mrf_secondary_region_type: Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Choices: `secondary-shared`, `secondary-only`
+                 - Default value: `secondary-shared`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` equal to `true`
                  - Default value: `false`
@@ -378,6 +385,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -390,6 +398,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -400,6 +409,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs']]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -449,10 +459,10 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -699,6 +709,10 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
         if mrf_enable_core_region is not None:
             pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
+        if mrf_enable_secondary_region is not None:
+            pulumi.set(__self__, "mrf_enable_secondary_region", mrf_enable_secondary_region)
+        if mrf_secondary_region_type is not None:
+            pulumi.set(__self__, "mrf_secondary_region_type", mrf_secondary_region_type)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat64 is not None:
@@ -1799,6 +1813,33 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         pulumi.set(self, "mrf_enable_core_region", value)
 
     @_builtins.property
+    @pulumi.getter(name="mrfEnableSecondaryRegion")
+    def mrf_enable_secondary_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_secondary_region")
+
+    @mrf_enable_secondary_region.setter
+    def mrf_enable_secondary_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "mrf_enable_secondary_region", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfSecondaryRegionType")
+    def mrf_secondary_region_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Choices: `secondary-shared`, `secondary-only`
+          - Default value: `secondary-shared`
+        """
+        return pulumi.get(self, "mrf_secondary_region_type")
+
+    @mrf_secondary_region_type.setter
+    def mrf_secondary_region_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "mrf_secondary_region_type", value)
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -2178,6 +2219,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     def port_channel_lacp_fast_switchover(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `false`
         """
         return pulumi.get(self, "port_channel_lacp_fast_switchover")
 
@@ -2289,6 +2331,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     def port_channel_lacp_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_lacp_qos_aggregate")
 
@@ -2376,6 +2419,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     def port_channel_static_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_static_qos_aggregate")
 
@@ -2821,7 +2865,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelBandwidthPercent")
     def tunnel_bandwidth_percent(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
           - Range: `1`-`100`
           - Default value: `50`
         """
@@ -2835,7 +2879,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelBandwidthPercentVariable")
     def tunnel_bandwidth_percent_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
@@ -3887,6 +3931,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  media_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_enable_secondary_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_secondary_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat64: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat66: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -4135,6 +4181,11 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  - Default value: `core-shared`
         :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.bool] mrf_enable_secondary_region: Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] mrf_secondary_region_type: Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Choices: `secondary-shared`, `secondary-only`
+                 - Default value: `secondary-shared`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` equal to `true`
                  - Default value: `false`
@@ -4181,6 +4232,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -4193,6 +4245,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -4203,6 +4256,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs']]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -4253,10 +4307,10 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -4504,6 +4558,10 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
         if mrf_enable_core_region is not None:
             pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
+        if mrf_enable_secondary_region is not None:
+            pulumi.set(__self__, "mrf_enable_secondary_region", mrf_enable_secondary_region)
+        if mrf_secondary_region_type is not None:
+            pulumi.set(__self__, "mrf_secondary_region_type", mrf_secondary_region_type)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat64 is not None:
@@ -5596,6 +5654,33 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "mrf_enable_core_region", value)
 
     @_builtins.property
+    @pulumi.getter(name="mrfEnableSecondaryRegion")
+    def mrf_enable_secondary_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_secondary_region")
+
+    @mrf_enable_secondary_region.setter
+    def mrf_enable_secondary_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "mrf_enable_secondary_region", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mrfSecondaryRegionType")
+    def mrf_secondary_region_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Choices: `secondary-shared`, `secondary-only`
+          - Default value: `secondary-shared`
+        """
+        return pulumi.get(self, "mrf_secondary_region_type")
+
+    @mrf_secondary_region_type.setter
+    def mrf_secondary_region_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "mrf_secondary_region_type", value)
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -5975,6 +6060,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     def port_channel_lacp_fast_switchover(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `false`
         """
         return pulumi.get(self, "port_channel_lacp_fast_switchover")
 
@@ -6086,6 +6172,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     def port_channel_lacp_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_lacp_qos_aggregate")
 
@@ -6173,6 +6260,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     def port_channel_static_qos_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_static_qos_aggregate")
 
@@ -6630,7 +6718,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelBandwidthPercent")
     def tunnel_bandwidth_percent(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
           - Range: `1`-`100`
           - Default value: `50`
         """
@@ -6644,7 +6732,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelBandwidthPercentVariable")
     def tunnel_bandwidth_percent_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
@@ -7711,6 +7799,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  media_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_enable_secondary_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_secondary_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat64: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat66: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -8115,6 +8205,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Default value: `core-shared`
         :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.bool] mrf_enable_secondary_region: Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] mrf_secondary_region_type: Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Choices: `secondary-shared`, `secondary-only`
+                 - Default value: `secondary-shared`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` equal to `true`
                  - Default value: `false`
@@ -8161,6 +8256,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -8173,6 +8269,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -8183,6 +8280,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -8233,10 +8331,10 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -8598,6 +8696,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  media_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_enable_secondary_region: Optional[pulumi.Input[_builtins.bool]] = None,
+                 mrf_secondary_region_type: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat64: Optional[pulumi.Input[_builtins.bool]] = None,
                  nat66: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -8835,6 +8935,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["media_type_variable"] = media_type_variable
             __props__.__dict__["mrf_core_region_type"] = mrf_core_region_type
             __props__.__dict__["mrf_enable_core_region"] = mrf_enable_core_region
+            __props__.__dict__["mrf_enable_secondary_region"] = mrf_enable_secondary_region
+            __props__.__dict__["mrf_secondary_region_type"] = mrf_secondary_region_type
             __props__.__dict__["name"] = name
             __props__.__dict__["nat64"] = nat64
             __props__.__dict__["nat66"] = nat66
@@ -9074,6 +9176,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             media_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
             mrf_core_region_type: Optional[pulumi.Input[_builtins.str]] = None,
             mrf_enable_core_region: Optional[pulumi.Input[_builtins.bool]] = None,
+            mrf_enable_secondary_region: Optional[pulumi.Input[_builtins.bool]] = None,
+            mrf_secondary_region_type: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             nat64: Optional[pulumi.Input[_builtins.bool]] = None,
             nat66: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -9326,6 +9430,11 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Default value: `core-shared`
         :param pulumi.Input[_builtins.bool] mrf_enable_core_region: Enable Core Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
                  - Default value: `false`
+        :param pulumi.Input[_builtins.bool] mrf_enable_secondary_region: Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] mrf_secondary_region_type: Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+                 - Choices: `secondary-shared`, `secondary-only`
+                 - Default value: `secondary-shared`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` equal to `true`
                  - Default value: `false`
@@ -9372,6 +9481,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] port_channel_interface: Port-Channel interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_fast_switchover: Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] port_channel_lacp_fast_switchover_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.str] port_channel_lacp_load_balance: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
                  - Choices: `flow`, `vlan`
@@ -9384,6 +9494,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] port_channel_lacp_min_bundle_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_lacp_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_lacp_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `lacp`
         :param pulumi.Input[_builtins.bool] port_channel_member_interface: Port-Channel member interface on/off
                  - Default value: `false`
@@ -9394,6 +9505,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] port_channel_static_load_balance_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs', 'TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgsDict']]]] port_channel_static_member_links: Configure Port-Channel member links, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_static_qos_aggregate: Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] port_channel_static_qos_aggregate_variable: Variable name, Attribute conditional on `port_channel_mode` equal to `static`
         :param pulumi.Input[_builtins.bool] port_channel_subinterface: , Attribute conditional on `port_channel_interface` equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -9444,10 +9556,10 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name, Attribute conditional on `port_channel_member_interface` not equal to `true`
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
                  - Range: `1`-`100`
                  - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off
                  - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `port_channel_member_interface` not equal to `true`
@@ -9636,6 +9748,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["media_type_variable"] = media_type_variable
         __props__.__dict__["mrf_core_region_type"] = mrf_core_region_type
         __props__.__dict__["mrf_enable_core_region"] = mrf_enable_core_region
+        __props__.__dict__["mrf_enable_secondary_region"] = mrf_enable_secondary_region
+        __props__.__dict__["mrf_secondary_region_type"] = mrf_secondary_region_type
         __props__.__dict__["name"] = name
         __props__.__dict__["nat64"] = nat64
         __props__.__dict__["nat66"] = nat66
@@ -10313,6 +10427,25 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         return pulumi.get(self, "mrf_enable_core_region")
 
     @_builtins.property
+    @pulumi.getter(name="mrfEnableSecondaryRegion")
+    def mrf_enable_secondary_region(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Enable Secondary Region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "mrf_enable_secondary_region")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfSecondaryRegionType")
+    def mrf_secondary_region_type(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Enable secondary region, Attribute conditional on `port_channel_member_interface` not equal to `true`
+          - Choices: `secondary-shared`, `secondary-only`
+          - Default value: `secondary-shared`
+        """
+        return pulumi.get(self, "mrf_secondary_region_type")
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
@@ -10572,6 +10705,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     def port_channel_lacp_fast_switchover(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Eanble lacp fast switchover, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `false`
         """
         return pulumi.get(self, "port_channel_lacp_fast_switchover")
 
@@ -10647,6 +10781,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     def port_channel_lacp_qos_aggregate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `lacp`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_lacp_qos_aggregate")
 
@@ -10706,6 +10841,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     def port_channel_static_qos_aggregate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
         Enable QoS Port-Channel aggregate, Attribute conditional on `port_channel_mode` equal to `static`
+          - Default value: `true`
         """
         return pulumi.get(self, "port_channel_static_qos_aggregate")
 
@@ -11015,7 +11151,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelBandwidthPercent")
     def tunnel_bandwidth_percent(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true`
+        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
           - Range: `1`-`100`
           - Default value: `50`
         """
@@ -11025,7 +11161,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelBandwidthPercentVariable")
     def tunnel_bandwidth_percent_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `tunnel_interface` equal to `true`
+        Variable name, Attribute conditional on `tunnel_interface` equal to `true` and `tunnel_qos_mode` equal to `hub`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
