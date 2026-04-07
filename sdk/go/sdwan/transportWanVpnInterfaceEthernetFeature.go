@@ -349,6 +349,13 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	MrfEnableCoreRegion pulumi.BoolPtrOutput `pulumi:"mrfEnableCoreRegion"`
+	// Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableSecondaryRegion pulumi.BoolPtrOutput `pulumi:"mrfEnableSecondaryRegion"`
+	// Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `secondary-shared`, `secondary-only`
+	//   - Default value: `secondary-shared`
+	MrfSecondaryRegionType pulumi.StringPtrOutput `pulumi:"mrfSecondaryRegionType"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
 	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
@@ -425,6 +432,7 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	//   - Default value: `false`
 	PortChannelInterface pulumi.BoolPtrOutput `pulumi:"portChannelInterface"`
 	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `false`
 	PortChannelLacpFastSwitchover pulumi.BoolPtrOutput `pulumi:"portChannelLacpFastSwitchover"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpFastSwitchoverVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpFastSwitchoverVariable"`
@@ -446,6 +454,7 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpMinBundleVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpMinBundleVariable"`
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `true`
 	PortChannelLacpQosAggregate pulumi.BoolPtrOutput `pulumi:"portChannelLacpQosAggregate"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpQosAggregateVariable pulumi.StringPtrOutput `pulumi:"portChannelLacpQosAggregateVariable"`
@@ -463,6 +472,7 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput `pulumi:"portChannelStaticMemberLinks"`
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Default value: `true`
 	PortChannelStaticQosAggregate pulumi.BoolPtrOutput `pulumi:"portChannelStaticQosAggregate"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticQosAggregateVariable pulumi.StringPtrOutput `pulumi:"portChannelStaticQosAggregateVariable"`
@@ -550,11 +560,11 @@ type TransportWanVpnInterfaceEthernetFeature struct {
 	TrackerVariable pulumi.StringPtrOutput `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrOutput `pulumi:"tunnelBandwidthPercent"`
-	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	TunnelBandwidthPercentVariable pulumi.StringPtrOutput `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	//   - Default value: `false`
@@ -937,6 +947,13 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	MrfEnableCoreRegion *bool `pulumi:"mrfEnableCoreRegion"`
+	// Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableSecondaryRegion *bool `pulumi:"mrfEnableSecondaryRegion"`
+	// Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `secondary-shared`, `secondary-only`
+	//   - Default value: `secondary-shared`
+	MrfSecondaryRegionType *string `pulumi:"mrfSecondaryRegionType"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
@@ -1013,6 +1030,7 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	//   - Default value: `false`
 	PortChannelInterface *bool `pulumi:"portChannelInterface"`
 	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `false`
 	PortChannelLacpFastSwitchover *bool `pulumi:"portChannelLacpFastSwitchover"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpFastSwitchoverVariable *string `pulumi:"portChannelLacpFastSwitchoverVariable"`
@@ -1034,6 +1052,7 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpMinBundleVariable *string `pulumi:"portChannelLacpMinBundleVariable"`
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `true`
 	PortChannelLacpQosAggregate *bool `pulumi:"portChannelLacpQosAggregate"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpQosAggregateVariable *string `pulumi:"portChannelLacpQosAggregateVariable"`
@@ -1051,6 +1070,7 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticMemberLinks []TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink `pulumi:"portChannelStaticMemberLinks"`
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Default value: `true`
 	PortChannelStaticQosAggregate *bool `pulumi:"portChannelStaticQosAggregate"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticQosAggregateVariable *string `pulumi:"portChannelStaticQosAggregateVariable"`
@@ -1138,11 +1158,11 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent *int `pulumi:"tunnelBandwidthPercent"`
-	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	TunnelBandwidthPercentVariable *string `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	//   - Default value: `false`
@@ -1490,6 +1510,13 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	MrfEnableCoreRegion pulumi.BoolPtrInput
+	// Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableSecondaryRegion pulumi.BoolPtrInput
+	// Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `secondary-shared`, `secondary-only`
+	//   - Default value: `secondary-shared`
+	MrfSecondaryRegionType pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
@@ -1566,6 +1593,7 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	//   - Default value: `false`
 	PortChannelInterface pulumi.BoolPtrInput
 	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `false`
 	PortChannelLacpFastSwitchover pulumi.BoolPtrInput
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpFastSwitchoverVariable pulumi.StringPtrInput
@@ -1587,6 +1615,7 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpMinBundleVariable pulumi.StringPtrInput
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `true`
 	PortChannelLacpQosAggregate pulumi.BoolPtrInput
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpQosAggregateVariable pulumi.StringPtrInput
@@ -1604,6 +1633,7 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Default value: `true`
 	PortChannelStaticQosAggregate pulumi.BoolPtrInput
 	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticQosAggregateVariable pulumi.StringPtrInput
@@ -1691,11 +1721,11 @@ type TransportWanVpnInterfaceEthernetFeatureState struct {
 	TrackerVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringPtrInput
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	TunnelBandwidthPercentVariable pulumi.StringPtrInput
 	// Tunnel Interface on/off
 	//   - Default value: `false`
@@ -2047,6 +2077,13 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	MrfEnableCoreRegion *bool `pulumi:"mrfEnableCoreRegion"`
+	// Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableSecondaryRegion *bool `pulumi:"mrfEnableSecondaryRegion"`
+	// Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `secondary-shared`, `secondary-only`
+	//   - Default value: `secondary-shared`
+	MrfSecondaryRegionType *string `pulumi:"mrfSecondaryRegionType"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
@@ -2123,6 +2160,7 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	//   - Default value: `false`
 	PortChannelInterface *bool `pulumi:"portChannelInterface"`
 	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `false`
 	PortChannelLacpFastSwitchover *bool `pulumi:"portChannelLacpFastSwitchover"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpFastSwitchoverVariable *string `pulumi:"portChannelLacpFastSwitchoverVariable"`
@@ -2144,6 +2182,7 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpMinBundleVariable *string `pulumi:"portChannelLacpMinBundleVariable"`
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `true`
 	PortChannelLacpQosAggregate *bool `pulumi:"portChannelLacpQosAggregate"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpQosAggregateVariable *string `pulumi:"portChannelLacpQosAggregateVariable"`
@@ -2161,6 +2200,7 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticMemberLinks []TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink `pulumi:"portChannelStaticMemberLinks"`
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Default value: `true`
 	PortChannelStaticQosAggregate *bool `pulumi:"portChannelStaticQosAggregate"`
 	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticQosAggregateVariable *string `pulumi:"portChannelStaticQosAggregateVariable"`
@@ -2248,11 +2288,11 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent *int `pulumi:"tunnelBandwidthPercent"`
-	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	TunnelBandwidthPercentVariable *string `pulumi:"tunnelBandwidthPercentVariable"`
 	// Tunnel Interface on/off
 	//   - Default value: `false`
@@ -2599,6 +2639,13 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	// Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
 	//   - Default value: `false`
 	MrfEnableCoreRegion pulumi.BoolPtrInput
+	// Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Default value: `false`
+	MrfEnableSecondaryRegion pulumi.BoolPtrInput
+	// Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+	//   - Choices: `secondary-shared`, `secondary-only`
+	//   - Default value: `secondary-shared`
+	MrfSecondaryRegionType pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
@@ -2675,6 +2722,7 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	//   - Default value: `false`
 	PortChannelInterface pulumi.BoolPtrInput
 	// Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `false`
 	PortChannelLacpFastSwitchover pulumi.BoolPtrInput
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpFastSwitchoverVariable pulumi.StringPtrInput
@@ -2696,6 +2744,7 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpMinBundleVariable pulumi.StringPtrInput
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+	//   - Default value: `true`
 	PortChannelLacpQosAggregate pulumi.BoolPtrInput
 	// Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
 	PortChannelLacpQosAggregateVariable pulumi.StringPtrInput
@@ -2713,6 +2762,7 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	// Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticMemberLinks TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput
 	// Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+	//   - Default value: `true`
 	PortChannelStaticQosAggregate pulumi.BoolPtrInput
 	// Variable name, Attribute conditional on `portChannelMode` equal to `static`
 	PortChannelStaticQosAggregateVariable pulumi.StringPtrInput
@@ -2800,11 +2850,11 @@ type TransportWanVpnInterfaceEthernetFeatureArgs struct {
 	TrackerVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringInput
-	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+	// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	//   - Range: `1`-`100`
 	//   - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrInput
-	// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+	// Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 	TunnelBandwidthPercentVariable pulumi.StringPtrInput
 	// Tunnel Interface on/off
 	//   - Default value: `false`
@@ -3471,6 +3521,23 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) MrfEnableCoreRegion() pul
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.MrfEnableCoreRegion }).(pulumi.BoolPtrOutput)
 }
 
+// Enable Secondary Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Default value: `false`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) MrfEnableSecondaryRegion() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
+		return v.MrfEnableSecondaryRegion
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Enable secondary region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+//   - Choices: `secondary-shared`, `secondary-only`
+//   - Default value: `secondary-shared`
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) MrfSecondaryRegionType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.MrfSecondaryRegionType
+	}).(pulumi.StringPtrOutput)
+}
+
 // The name of the Feature
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
@@ -3653,6 +3720,7 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelInterface() pu
 }
 
 // Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+//   - Default value: `false`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpFastSwitchover() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.PortChannelLacpFastSwitchover
@@ -3719,6 +3787,7 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpMinBundleV
 }
 
 // Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+//   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelLacpQosAggregate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.PortChannelLacpQosAggregate
@@ -3769,6 +3838,7 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticMemberLi
 }
 
 // Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+//   - Default value: `true`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) PortChannelStaticQosAggregate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.PortChannelStaticQosAggregate
@@ -4011,14 +4081,14 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) TransportWanVpnFeatureId(
 	}).(pulumi.StringOutput)
 }
 
-// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
+// Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 //   - Range: `1`-`100`
 //   - Default value: `50`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelBandwidthPercent() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TunnelBandwidthPercent }).(pulumi.IntPtrOutput)
 }
 
-// Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+// Variable name, Attribute conditional on `tunnelInterface` equal to `true` and `tunnelQosMode` equal to `hub`
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) TunnelBandwidthPercentVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.TunnelBandwidthPercentVariable

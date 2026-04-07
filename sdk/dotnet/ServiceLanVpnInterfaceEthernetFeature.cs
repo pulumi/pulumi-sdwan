@@ -379,69 +379,69 @@ namespace Pulumi.Sdwan
         public Output<bool?> Ipv4Nat { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatLoopback")]
         public Output<string?> Ipv4NatLoopback { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatLoopbackVariable")]
         public Output<string?> Ipv4NatLoopbackVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Overload
+        /// NAT Overload, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Output("ipv4NatOverload")]
         public Output<bool?> Ipv4NatOverload { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatOverloadVariable")]
         public Output<string?> Ipv4NatOverloadVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Prefix Length
+        /// NAT Pool Prefix Length, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`32`
         /// </summary>
         [Output("ipv4NatPrefixLength")]
         public Output<int?> Ipv4NatPrefixLength { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatPrefixLengthVariable")]
         public Output<string?> Ipv4NatPrefixLengthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Range End
+        /// NAT Pool Range End, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatRangeEnd")]
         public Output<string?> Ipv4NatRangeEnd { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatRangeEndVariable")]
         public Output<string?> Ipv4NatRangeEndVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Range Start
+        /// NAT Pool Range Start, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatRangeStart")]
         public Output<string?> Ipv4NatRangeStart { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatRangeStartVariable")]
         public Output<string?> Ipv4NatRangeStartVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `60`
         /// </summary>
@@ -449,13 +449,13 @@ namespace Pulumi.Sdwan
         public Output<int?> Ipv4NatTcpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatTcpTimeoutVariable")]
         public Output<string?> Ipv4NatTcpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
         /// </summary>
@@ -463,7 +463,7 @@ namespace Pulumi.Sdwan
         public Output<int?> Ipv4NatUdpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4NatUdpTimeoutVariable")]
         public Output<string?> Ipv4NatUdpTimeoutVariable { get; private set; } = null!;
@@ -610,6 +610,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `False`
         /// </summary>
         [Output("portChannelLacpFastSwitchover")]
         public Output<bool?> PortChannelLacpFastSwitchover { get; private set; } = null!;
@@ -667,6 +668,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `True`
         /// </summary>
         [Output("portChannelLacpQosAggregate")]
         public Output<bool?> PortChannelLacpQosAggregate { get; private set; } = null!;
@@ -712,6 +714,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Default value: `True`
         /// </summary>
         [Output("portChannelStaticQosAggregate")]
         public Output<bool?> PortChannelStaticQosAggregate { get; private set; } = null!;
@@ -784,7 +787,7 @@ namespace Pulumi.Sdwan
         public Output<string?> SpeedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// static NAT
+        /// static NAT, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("staticNats")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>> StaticNats { get; private set; } = null!;
@@ -1143,69 +1146,69 @@ namespace Pulumi.Sdwan
         public Input<bool>? Ipv4Nat { get; set; }
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatLoopback")]
         public Input<string>? Ipv4NatLoopback { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatLoopbackVariable")]
         public Input<string>? Ipv4NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload
+        /// NAT Overload, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("ipv4NatOverload")]
         public Input<bool>? Ipv4NatOverload { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatOverloadVariable")]
         public Input<string>? Ipv4NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length
+        /// NAT Pool Prefix Length, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv4NatPrefixLength")]
         public Input<int>? Ipv4NatPrefixLength { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatPrefixLengthVariable")]
         public Input<string>? Ipv4NatPrefixLengthVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range End
+        /// NAT Pool Range End, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeEnd")]
         public Input<string>? Ipv4NatRangeEnd { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeEndVariable")]
         public Input<string>? Ipv4NatRangeEndVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range Start
+        /// NAT Pool Range Start, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeStart")]
         public Input<string>? Ipv4NatRangeStart { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeStartVariable")]
         public Input<string>? Ipv4NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `60`
         /// </summary>
@@ -1213,13 +1216,13 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4NatTcpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatTcpTimeoutVariable")]
         public Input<string>? Ipv4NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
         /// </summary>
@@ -1227,7 +1230,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4NatUdpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatUdpTimeoutVariable")]
         public Input<string>? Ipv4NatUdpTimeoutVariable { get; set; }
@@ -1410,6 +1413,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `False`
         /// </summary>
         [Input("portChannelLacpFastSwitchover")]
         public Input<bool>? PortChannelLacpFastSwitchover { get; set; }
@@ -1473,6 +1477,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelLacpQosAggregate")]
         public Input<bool>? PortChannelLacpQosAggregate { get; set; }
@@ -1524,6 +1529,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelStaticQosAggregate")]
         public Input<bool>? PortChannelStaticQosAggregate { get; set; }
@@ -1599,7 +1605,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs>? _staticNats;
 
         /// <summary>
-        /// static NAT
+        /// static NAT, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs> StaticNats
         {
@@ -1917,69 +1923,69 @@ namespace Pulumi.Sdwan
         public Input<bool>? Ipv4Nat { get; set; }
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatLoopback")]
         public Input<string>? Ipv4NatLoopback { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatLoopbackVariable")]
         public Input<string>? Ipv4NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload
+        /// NAT Overload, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("ipv4NatOverload")]
         public Input<bool>? Ipv4NatOverload { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatOverloadVariable")]
         public Input<string>? Ipv4NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length
+        /// NAT Pool Prefix Length, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv4NatPrefixLength")]
         public Input<int>? Ipv4NatPrefixLength { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatPrefixLengthVariable")]
         public Input<string>? Ipv4NatPrefixLengthVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range End
+        /// NAT Pool Range End, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeEnd")]
         public Input<string>? Ipv4NatRangeEnd { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeEndVariable")]
         public Input<string>? Ipv4NatRangeEndVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range Start
+        /// NAT Pool Range Start, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeStart")]
         public Input<string>? Ipv4NatRangeStart { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatRangeStartVariable")]
         public Input<string>? Ipv4NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `60`
         /// </summary>
@@ -1987,13 +1993,13 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4NatTcpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatTcpTimeoutVariable")]
         public Input<string>? Ipv4NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
         /// </summary>
@@ -2001,7 +2007,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4NatUdpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4NatUdpTimeoutVariable")]
         public Input<string>? Ipv4NatUdpTimeoutVariable { get; set; }
@@ -2184,6 +2190,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `False`
         /// </summary>
         [Input("portChannelLacpFastSwitchover")]
         public Input<bool>? PortChannelLacpFastSwitchover { get; set; }
@@ -2247,6 +2254,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelLacpQosAggregate")]
         public Input<bool>? PortChannelLacpQosAggregate { get; set; }
@@ -2298,6 +2306,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelStaticQosAggregate")]
         public Input<bool>? PortChannelStaticQosAggregate { get; set; }
@@ -2373,7 +2382,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNatGetArgs>? _staticNats;
 
         /// <summary>
-        /// static NAT
+        /// static NAT, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNatGetArgs> StaticNats
         {

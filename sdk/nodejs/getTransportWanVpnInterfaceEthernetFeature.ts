@@ -292,6 +292,14 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly mrfEnableCoreRegion: boolean;
     /**
+     * Enable Secondary Region
+     */
+    readonly mrfEnableSecondaryRegion: boolean;
+    /**
+     * Enable secondary region
+     */
+    readonly mrfSecondaryRegionType: string;
+    /**
      * The name of the Feature
      */
     readonly name: string;

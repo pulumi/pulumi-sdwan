@@ -599,6 +599,21 @@ namespace Pulumi.Sdwan
         public Output<bool?> MrfEnableCoreRegion { get; private set; } = null!;
 
         /// <summary>
+        /// Enable Secondary Region, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("mrfEnableSecondaryRegion")]
+        public Output<bool?> MrfEnableSecondaryRegion { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable secondary region, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Choices: `secondary-shared`, `secondary-only`
+        ///   - Default value: `secondary-shared`
+        /// </summary>
+        [Output("mrfSecondaryRegionType")]
+        public Output<string?> MrfSecondaryRegionType { get; private set; } = null!;
+
+        /// <summary>
         /// The name of the Feature
         /// </summary>
         [Output("name")]
@@ -795,6 +810,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `False`
         /// </summary>
         [Output("portChannelLacpFastSwitchover")]
         public Output<bool?> PortChannelLacpFastSwitchover { get; private set; } = null!;
@@ -852,6 +868,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `True`
         /// </summary>
         [Output("portChannelLacpQosAggregate")]
         public Output<bool?> PortChannelLacpQosAggregate { get; private set; } = null!;
@@ -897,6 +914,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Default value: `True`
         /// </summary>
         [Output("portChannelStaticQosAggregate")]
         public Output<bool?> PortChannelStaticQosAggregate { get; private set; } = null!;
@@ -1132,7 +1150,7 @@ namespace Pulumi.Sdwan
         public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
         ///   - Range: `1`-`100`
         ///   - Default value: `50`
         /// </summary>
@@ -1140,7 +1158,7 @@ namespace Pulumi.Sdwan
         public Output<int?> TunnelBandwidthPercent { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True`
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
         /// </summary>
         [Output("tunnelBandwidthPercentVariable")]
         public Output<string?> TunnelBandwidthPercentVariable { get; private set; } = null!;
@@ -2121,6 +2139,21 @@ namespace Pulumi.Sdwan
         public Input<bool>? MrfEnableCoreRegion { get; set; }
 
         /// <summary>
+        /// Enable Secondary Region, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("mrfEnableSecondaryRegion")]
+        public Input<bool>? MrfEnableSecondaryRegion { get; set; }
+
+        /// <summary>
+        /// Enable secondary region, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Choices: `secondary-shared`, `secondary-only`
+        ///   - Default value: `secondary-shared`
+        /// </summary>
+        [Input("mrfSecondaryRegionType")]
+        public Input<string>? MrfSecondaryRegionType { get; set; }
+
+        /// <summary>
         /// The name of the Feature
         /// </summary>
         [Input("name")]
@@ -2335,6 +2368,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `False`
         /// </summary>
         [Input("portChannelLacpFastSwitchover")]
         public Input<bool>? PortChannelLacpFastSwitchover { get; set; }
@@ -2398,6 +2432,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelLacpQosAggregate")]
         public Input<bool>? PortChannelLacpQosAggregate { get; set; }
@@ -2449,6 +2484,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelStaticQosAggregate")]
         public Input<bool>? PortChannelStaticQosAggregate { get; set; }
@@ -2696,7 +2732,7 @@ namespace Pulumi.Sdwan
         public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
         ///   - Range: `1`-`100`
         ///   - Default value: `50`
         /// </summary>
@@ -2704,7 +2740,7 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelBandwidthPercent { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True`
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
         /// </summary>
         [Input("tunnelBandwidthPercentVariable")]
         public Input<string>? TunnelBandwidthPercentVariable { get; set; }
@@ -3653,6 +3689,21 @@ namespace Pulumi.Sdwan
         public Input<bool>? MrfEnableCoreRegion { get; set; }
 
         /// <summary>
+        /// Enable Secondary Region, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("mrfEnableSecondaryRegion")]
+        public Input<bool>? MrfEnableSecondaryRegion { get; set; }
+
+        /// <summary>
+        /// Enable secondary region, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Choices: `secondary-shared`, `secondary-only`
+        ///   - Default value: `secondary-shared`
+        /// </summary>
+        [Input("mrfSecondaryRegionType")]
+        public Input<string>? MrfSecondaryRegionType { get; set; }
+
+        /// <summary>
         /// The name of the Feature
         /// </summary>
         [Input("name")]
@@ -3867,6 +3918,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `False`
         /// </summary>
         [Input("portChannelLacpFastSwitchover")]
         public Input<bool>? PortChannelLacpFastSwitchover { get; set; }
@@ -3930,6 +3982,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelLacpQosAggregate")]
         public Input<bool>? PortChannelLacpQosAggregate { get; set; }
@@ -3981,6 +4034,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portChannelStaticQosAggregate")]
         public Input<bool>? PortChannelStaticQosAggregate { get; set; }
@@ -4228,7 +4282,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TransportWanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
         ///   - Range: `1`-`100`
         ///   - Default value: `50`
         /// </summary>
@@ -4236,7 +4290,7 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelBandwidthPercent { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True`
+        /// Variable name, Attribute conditional on `TunnelInterface` equal to `True` and `TunnelQosMode` equal to `Hub`
         /// </summary>
         [Input("tunnelBandwidthPercentVariable")]
         public Input<string>? TunnelBandwidthPercentVariable { get; set; }
