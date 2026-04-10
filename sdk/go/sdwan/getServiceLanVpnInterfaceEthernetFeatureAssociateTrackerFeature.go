@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(ctx, &sdwan.LookupServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs{
+//			_, err := sdwan.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(ctx, &sdwan.LookupServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs{
 //				FeatureProfileId:                        "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //				ServiceLanVpnFeatureId:                  "140331f6-5418-4755-a059-13c77eb96037",
 //				ServiceLanVpnInterfaceEthernetFeatureId: "140331f6-5418-4755-a059-13c77eb96037",

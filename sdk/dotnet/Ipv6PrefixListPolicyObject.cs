@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Ipv6PrefixListPolicyObject("example", new()
+    ///     var example = new Sdwan.Index.Ipv6PrefixListPolicyObject("example", new()
     ///     {
     ///         Name = "Example",
     ///         Entries = new[]

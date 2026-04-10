@@ -19,14 +19,29 @@ __all__ = ['ActivateCentralizedPolicyArgs', 'ActivateCentralizedPolicy']
 @pulumi.input_type
 class ActivateCentralizedPolicyArgs:
     def __init__(__self__, *,
+                 activate_centralized_policy_id: pulumi.Input[_builtins.str],
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a ActivateCentralizedPolicy resource.
 
+        :param pulumi.Input[_builtins.str] activate_centralized_policy_id: The ID of the centralized policy
         :param pulumi.Input[_builtins.int] version: The version of the centralized policy
         """
+        pulumi.set(__self__, "activate_centralized_policy_id", activate_centralized_policy_id)
         if version is not None:
             pulumi.set(__self__, "version", version)
+
+    @_builtins.property
+    @pulumi.getter(name="activateCentralizedPolicyId")
+    def activate_centralized_policy_id(self) -> pulumi.Input[_builtins.str]:
+        """
+        The ID of the centralized policy
+        """
+        return pulumi.get(self, "activate_centralized_policy_id")
+
+    @activate_centralized_policy_id.setter
+    def activate_centralized_policy_id(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "activate_centralized_policy_id", value)
 
     @_builtins.property
     @pulumi.getter
@@ -44,14 +59,30 @@ class ActivateCentralizedPolicyArgs:
 @pulumi.input_type
 class _ActivateCentralizedPolicyState:
     def __init__(__self__, *,
+                 activate_centralized_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ActivateCentralizedPolicy resources.
 
+        :param pulumi.Input[_builtins.str] activate_centralized_policy_id: The ID of the centralized policy
         :param pulumi.Input[_builtins.int] version: The version of the centralized policy
         """
+        if activate_centralized_policy_id is not None:
+            pulumi.set(__self__, "activate_centralized_policy_id", activate_centralized_policy_id)
         if version is not None:
             pulumi.set(__self__, "version", version)
+
+    @_builtins.property
+    @pulumi.getter(name="activateCentralizedPolicyId")
+    def activate_centralized_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The ID of the centralized policy
+        """
+        return pulumi.get(self, "activate_centralized_policy_id")
+
+    @activate_centralized_policy_id.setter
+    def activate_centralized_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "activate_centralized_policy_id", value)
 
     @_builtins.property
     @pulumi.getter
@@ -72,6 +103,7 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 activate_centralized_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
         """
@@ -83,7 +115,7 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
         import pulumi
         import pulumi_sdwan as sdwan
 
-        example = sdwan.ActivateCentralizedPolicy("example", id=policy1["id"])
+        example = sdwan.ActivateCentralizedPolicy("example", activate_centralized_policy_id=policy1["id"])
         ```
 
         ## Import
@@ -97,13 +129,14 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[_builtins.str] activate_centralized_policy_id: The ID of the centralized policy
         :param pulumi.Input[_builtins.int] version: The version of the centralized policy
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[ActivateCentralizedPolicyArgs] = None,
+                 args: ActivateCentralizedPolicyArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can activate a centralized policy.
@@ -114,7 +147,7 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
         import pulumi
         import pulumi_sdwan as sdwan
 
-        example = sdwan.ActivateCentralizedPolicy("example", id=policy1["id"])
+        example = sdwan.ActivateCentralizedPolicy("example", activate_centralized_policy_id=policy1["id"])
         ```
 
         ## Import
@@ -141,6 +174,7 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 activate_centralized_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -151,6 +185,9 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = ActivateCentralizedPolicyArgs.__new__(ActivateCentralizedPolicyArgs)
 
+            if activate_centralized_policy_id is None and not opts.urn:
+                raise TypeError("Missing required property 'activate_centralized_policy_id'")
+            __props__.__dict__["activate_centralized_policy_id"] = activate_centralized_policy_id
             __props__.__dict__["version"] = version
         super(ActivateCentralizedPolicy, __self__).__init__(
             'sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy',
@@ -162,6 +199,7 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
+            activate_centralized_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
             version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ActivateCentralizedPolicy':
         """
         Get an existing ActivateCentralizedPolicy resource's state with the given name, id, and optional extra
@@ -170,14 +208,24 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[_builtins.str] activate_centralized_policy_id: The ID of the centralized policy
         :param pulumi.Input[_builtins.int] version: The version of the centralized policy
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _ActivateCentralizedPolicyState.__new__(_ActivateCentralizedPolicyState)
 
+        __props__.__dict__["activate_centralized_policy_id"] = activate_centralized_policy_id
         __props__.__dict__["version"] = version
         return ActivateCentralizedPolicy(resource_name, opts=opts, __props__=__props__)
+
+    @_builtins.property
+    @pulumi.getter(name="activateCentralizedPolicyId")
+    def activate_centralized_policy_id(self) -> pulumi.Output[_builtins.str]:
+        """
+        The ID of the centralized policy
+        """
+        return pulumi.get(self, "activate_centralized_policy_id")
 
     @_builtins.property
     @pulumi.getter

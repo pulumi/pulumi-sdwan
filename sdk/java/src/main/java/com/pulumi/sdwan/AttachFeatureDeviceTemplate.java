@@ -12,6 +12,7 @@ import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateState;
 import com.pulumi.sdwan.outputs.AttachFeatureDeviceTemplateDevice;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var example = new AttachFeatureDeviceTemplate("example", AttachFeatureDeviceTemplateArgs.builder()
- *             .id(DT1.id())
+ *             .attachFeatureDeviceTemplateId(DT1.id())
  *             .devices(AttachFeatureDeviceTemplateDeviceArgs.builder()
  *                 .id("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE")
  *                 .variables(Map.ofEntries(
@@ -75,6 +76,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate")
 public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomResource {
+    /**
+     * The ID of the device template
+     * 
+     */
+    @Export(name="attachFeatureDeviceTemplateId", refs={String.class}, tree="[0]")
+    private Output<String> attachFeatureDeviceTemplateId;
+
+    /**
+     * @return The ID of the device template
+     * 
+     */
+    public Output<String> attachFeatureDeviceTemplateId() {
+        return this.attachFeatureDeviceTemplateId;
+    }
     /**
      * Devices
      * 

@@ -5,7 +5,9 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,6 +16,21 @@ import javax.annotation.Nullable;
 public final class ActivateCentralizedPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ActivateCentralizedPolicyArgs Empty = new ActivateCentralizedPolicyArgs();
+
+    /**
+     * The ID of the centralized policy
+     * 
+     */
+    @Import(name="activateCentralizedPolicyId", required=true)
+    private Output<String> activateCentralizedPolicyId;
+
+    /**
+     * @return The ID of the centralized policy
+     * 
+     */
+    public Output<String> activateCentralizedPolicyId() {
+        return this.activateCentralizedPolicyId;
+    }
 
     /**
      * The version of the centralized policy
@@ -33,6 +50,7 @@ public final class ActivateCentralizedPolicyArgs extends com.pulumi.resources.Re
     private ActivateCentralizedPolicyArgs() {}
 
     private ActivateCentralizedPolicyArgs(ActivateCentralizedPolicyArgs $) {
+        this.activateCentralizedPolicyId = $.activateCentralizedPolicyId;
         this.version = $.version;
     }
 
@@ -52,6 +70,27 @@ public final class ActivateCentralizedPolicyArgs extends com.pulumi.resources.Re
 
         public Builder(ActivateCentralizedPolicyArgs defaults) {
             $ = new ActivateCentralizedPolicyArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param activateCentralizedPolicyId The ID of the centralized policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activateCentralizedPolicyId(Output<String> activateCentralizedPolicyId) {
+            $.activateCentralizedPolicyId = activateCentralizedPolicyId;
+            return this;
+        }
+
+        /**
+         * @param activateCentralizedPolicyId The ID of the centralized policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activateCentralizedPolicyId(String activateCentralizedPolicyId) {
+            return activateCentralizedPolicyId(Output.of(activateCentralizedPolicyId));
         }
 
         /**
@@ -76,6 +115,9 @@ public final class ActivateCentralizedPolicyArgs extends com.pulumi.resources.Re
         }
 
         public ActivateCentralizedPolicyArgs build() {
+            if ($.activateCentralizedPolicyId == null) {
+                throw new MissingRequiredPropertyException("ActivateCentralizedPolicyArgs", "activateCentralizedPolicyId");
+            }
             return $;
         }
     }

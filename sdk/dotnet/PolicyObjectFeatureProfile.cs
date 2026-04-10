@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.PolicyObjectFeatureProfile("example", new()
+    ///     var example = new Sdwan.Index.PolicyObjectFeatureProfile("example", new()
     ///     {
     ///         Name = "POLICY_OBJECT_FP_1",
     ///         Description = "My policy object feature profile 1",

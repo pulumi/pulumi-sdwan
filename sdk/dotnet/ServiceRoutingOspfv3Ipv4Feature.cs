@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.ServiceRoutingOspfv3Ipv4Feature("example", new()
+    ///     var example = new Sdwan.Index.ServiceRoutingOspfv3Ipv4Feature("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupServiceIpv4AclFeature(ctx, &sdwan.LookupServiceIpv4AclFeatureArgs{
+//			_, err := sdwan.GetServiceIpv4AclFeature(ctx, &sdwan.LookupServiceIpv4AclFeatureArgs{
 //				Id:               "f6b2c44c-693c-4763-b010-895aa3d236bd",
 //				FeatureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //			}, nil)

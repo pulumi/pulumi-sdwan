@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.SystemIpv4DeviceAccessFeature("example", new()
+    ///     var example = new Sdwan.Index.SystemIpv4DeviceAccessFeature("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

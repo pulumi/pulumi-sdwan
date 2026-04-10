@@ -11,6 +11,7 @@ import com.pulumi.sdwan.ActivateCentralizedPolicyArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.ActivateCentralizedPolicyState;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -42,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var example = new ActivateCentralizedPolicy("example", ActivateCentralizedPolicyArgs.builder()
- *             .id(POLICY1.id())
+ *             .activateCentralizedPolicyId(POLICY1.id())
  *             .build());
  * 
  *     }
@@ -61,6 +62,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy")
 public class ActivateCentralizedPolicy extends com.pulumi.resources.CustomResource {
+    /**
+     * The ID of the centralized policy
+     * 
+     */
+    @Export(name="activateCentralizedPolicyId", refs={String.class}, tree="[0]")
+    private Output<String> activateCentralizedPolicyId;
+
+    /**
+     * @return The ID of the centralized policy
+     * 
+     */
+    public Output<String> activateCentralizedPolicyId() {
+        return this.activateCentralizedPolicyId;
+    }
     /**
      * The version of the centralized policy
      * 
@@ -88,7 +103,7 @@ public class ActivateCentralizedPolicy extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ActivateCentralizedPolicy(java.lang.String name, @Nullable ActivateCentralizedPolicyArgs args) {
+    public ActivateCentralizedPolicy(java.lang.String name, ActivateCentralizedPolicyArgs args) {
         this(name, args, null);
     }
     /**
@@ -97,7 +112,7 @@ public class ActivateCentralizedPolicy extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ActivateCentralizedPolicy(java.lang.String name, @Nullable ActivateCentralizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ActivateCentralizedPolicy(java.lang.String name, ActivateCentralizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -105,7 +120,7 @@ public class ActivateCentralizedPolicy extends com.pulumi.resources.CustomResour
         super("sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static ActivateCentralizedPolicyArgs makeArgs(@Nullable ActivateCentralizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static ActivateCentralizedPolicyArgs makeArgs(ActivateCentralizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

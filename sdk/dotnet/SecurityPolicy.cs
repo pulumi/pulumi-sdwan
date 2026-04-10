@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.SecurityPolicy("example", new()
+    ///     var example = new Sdwan.Index.SecurityPolicy("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "Example",

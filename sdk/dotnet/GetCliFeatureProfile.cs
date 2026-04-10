@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetCliFeatureProfile.Invoke(new()
+        ///     var example = Sdwan.Index.GetCliFeatureProfile.Invoke(new()
         ///     {
         ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
         ///     });
@@ -48,7 +48,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetCliFeatureProfile.Invoke(new()
+        ///     var example = Sdwan.Index.GetCliFeatureProfile.Invoke(new()
         ///     {
         ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
         ///     });
@@ -72,7 +72,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetCliFeatureProfile.Invoke(new()
+        ///     var example = Sdwan.Index.GetCliFeatureProfile.Invoke(new()
         ///     {
         ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
         ///     });

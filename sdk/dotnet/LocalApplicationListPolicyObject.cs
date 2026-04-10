@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.LocalApplicationListPolicyObject("example", new()
+    ///     var example = new Sdwan.Index.LocalApplicationListPolicyObject("example", new()
     ///     {
     ///         Name = "Example",
     ///         Entries = new[]

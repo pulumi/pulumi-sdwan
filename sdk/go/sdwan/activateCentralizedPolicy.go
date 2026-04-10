@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -28,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewActivateCentralizedPolicy(ctx, "example", &sdwan.ActivateCentralizedPolicyArgs{
-//				Id: POLICY1.Id,
+//				ActivateCentralizedPolicyId: pulumi.Any(POLICY1.Id),
 //			})
 //			if err != nil {
 //				return err
@@ -49,6 +50,8 @@ import (
 type ActivateCentralizedPolicy struct {
 	pulumi.CustomResourceState
 
+	// The ID of the centralized policy
+	ActivateCentralizedPolicyId pulumi.StringOutput `pulumi:"activateCentralizedPolicyId"`
 	// The version of the centralized policy
 	Version pulumi.IntPtrOutput `pulumi:"version"`
 }
@@ -57,9 +60,12 @@ type ActivateCentralizedPolicy struct {
 func NewActivateCentralizedPolicy(ctx *pulumi.Context,
 	name string, args *ActivateCentralizedPolicyArgs, opts ...pulumi.ResourceOption) (*ActivateCentralizedPolicy, error) {
 	if args == nil {
-		args = &ActivateCentralizedPolicyArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.ActivateCentralizedPolicyId == nil {
+		return nil, errors.New("invalid value for required argument 'ActivateCentralizedPolicyId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ActivateCentralizedPolicy
 	err := ctx.RegisterResource("sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy", name, args, &resource, opts...)
@@ -83,11 +89,15 @@ func GetActivateCentralizedPolicy(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ActivateCentralizedPolicy resources.
 type activateCentralizedPolicyState struct {
+	// The ID of the centralized policy
+	ActivateCentralizedPolicyId *string `pulumi:"activateCentralizedPolicyId"`
 	// The version of the centralized policy
 	Version *int `pulumi:"version"`
 }
 
 type ActivateCentralizedPolicyState struct {
+	// The ID of the centralized policy
+	ActivateCentralizedPolicyId pulumi.StringPtrInput
 	// The version of the centralized policy
 	Version pulumi.IntPtrInput
 }
@@ -97,12 +107,16 @@ func (ActivateCentralizedPolicyState) ElementType() reflect.Type {
 }
 
 type activateCentralizedPolicyArgs struct {
+	// The ID of the centralized policy
+	ActivateCentralizedPolicyId string `pulumi:"activateCentralizedPolicyId"`
 	// The version of the centralized policy
 	Version *int `pulumi:"version"`
 }
 
 // The set of arguments for constructing a ActivateCentralizedPolicy resource.
 type ActivateCentralizedPolicyArgs struct {
+	// The ID of the centralized policy
+	ActivateCentralizedPolicyId pulumi.StringInput
 	// The version of the centralized policy
 	Version pulumi.IntPtrInput
 }
@@ -192,6 +206,11 @@ func (o ActivateCentralizedPolicyOutput) ToActivateCentralizedPolicyOutput() Act
 
 func (o ActivateCentralizedPolicyOutput) ToActivateCentralizedPolicyOutputWithContext(ctx context.Context) ActivateCentralizedPolicyOutput {
 	return o
+}
+
+// The ID of the centralized policy
+func (o ActivateCentralizedPolicyOutput) ActivateCentralizedPolicyId() pulumi.StringOutput {
+	return o.ApplyT(func(v *ActivateCentralizedPolicy) pulumi.StringOutput { return v.ActivateCentralizedPolicyId }).(pulumi.StringOutput)
 }
 
 // The version of the centralized policy

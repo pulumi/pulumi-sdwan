@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as sdwan from "@pulumi/sdwan";
  *
  * const example = new sdwan.AttachFeatureDeviceTemplate("example", {
- *     id: DT1.id,
+ *     attachFeatureDeviceTemplateId: DT1.id,
  *     devices: [{
  *         id: "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE",
  *         variables: {
@@ -68,6 +68,10 @@ export class AttachFeatureDeviceTemplate extends pulumi.CustomResource {
     }
 
     /**
+     * The ID of the device template
+     */
+    declare public readonly attachFeatureDeviceTemplateId: pulumi.Output<string>;
+    /**
      * Devices
      */
     declare public readonly devices: pulumi.Output<outputs.AttachFeatureDeviceTemplateDevice[]>;
@@ -89,13 +93,18 @@ export class AttachFeatureDeviceTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AttachFeatureDeviceTemplateState | undefined;
+            resourceInputs["attachFeatureDeviceTemplateId"] = state?.attachFeatureDeviceTemplateId;
             resourceInputs["devices"] = state?.devices;
             resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as AttachFeatureDeviceTemplateArgs | undefined;
+            if (args?.attachFeatureDeviceTemplateId === undefined && !opts.urn) {
+                throw new Error("Missing required property 'attachFeatureDeviceTemplateId'");
+            }
             if (args?.devices === undefined && !opts.urn) {
                 throw new Error("Missing required property 'devices'");
             }
+            resourceInputs["attachFeatureDeviceTemplateId"] = args?.attachFeatureDeviceTemplateId;
             resourceInputs["devices"] = args?.devices;
             resourceInputs["version"] = args?.version;
         }
@@ -108,6 +117,10 @@ export class AttachFeatureDeviceTemplate extends pulumi.CustomResource {
  * Input properties used for looking up and filtering AttachFeatureDeviceTemplate resources.
  */
 export interface AttachFeatureDeviceTemplateState {
+    /**
+     * The ID of the device template
+     */
+    attachFeatureDeviceTemplateId?: pulumi.Input<string>;
     /**
      * Devices
      */
@@ -122,6 +135,10 @@ export interface AttachFeatureDeviceTemplateState {
  * The set of arguments for constructing a AttachFeatureDeviceTemplate resource.
  */
 export interface AttachFeatureDeviceTemplateArgs {
+    /**
+     * The ID of the device template
+     */
+    attachFeatureDeviceTemplateId: pulumi.Input<string>;
     /**
      * Devices
      */
