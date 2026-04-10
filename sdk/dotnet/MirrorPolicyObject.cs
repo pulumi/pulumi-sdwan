@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.MirrorPolicyObject("example", new()
+    ///     var example = new Sdwan.Index.MirrorPolicyObject("example", new()
     ///     {
     ///         Name = "Example",
     ///         RemoteDestinationIp = "10.1.1.1",

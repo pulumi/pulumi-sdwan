@@ -13,7 +13,7 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as sdwan from "@pulumi/sdwan";
  *
- * const example = new sdwan.ActivateCentralizedPolicy("example", {id: POLICY1.id});
+ * const example = new sdwan.ActivateCentralizedPolicy("example", {activateCentralizedPolicyId: POLICY1.id});
  * ```
  *
  * ## Import
@@ -53,6 +53,10 @@ export class ActivateCentralizedPolicy extends pulumi.CustomResource {
     }
 
     /**
+     * The ID of the centralized policy
+     */
+    declare public readonly activateCentralizedPolicyId: pulumi.Output<string>;
+    /**
      * The version of the centralized policy
      */
     declare public readonly version: pulumi.Output<number | undefined>;
@@ -64,15 +68,20 @@ export class ActivateCentralizedPolicy extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: ActivateCentralizedPolicyArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: ActivateCentralizedPolicyArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: ActivateCentralizedPolicyArgs | ActivateCentralizedPolicyState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ActivateCentralizedPolicyState | undefined;
+            resourceInputs["activateCentralizedPolicyId"] = state?.activateCentralizedPolicyId;
             resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ActivateCentralizedPolicyArgs | undefined;
+            if (args?.activateCentralizedPolicyId === undefined && !opts.urn) {
+                throw new Error("Missing required property 'activateCentralizedPolicyId'");
+            }
+            resourceInputs["activateCentralizedPolicyId"] = args?.activateCentralizedPolicyId;
             resourceInputs["version"] = args?.version;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -85,6 +94,10 @@ export class ActivateCentralizedPolicy extends pulumi.CustomResource {
  */
 export interface ActivateCentralizedPolicyState {
     /**
+     * The ID of the centralized policy
+     */
+    activateCentralizedPolicyId?: pulumi.Input<string>;
+    /**
      * The version of the centralized policy
      */
     version?: pulumi.Input<number>;
@@ -94,6 +107,10 @@ export interface ActivateCentralizedPolicyState {
  * The set of arguments for constructing a ActivateCentralizedPolicy resource.
  */
 export interface ActivateCentralizedPolicyArgs {
+    /**
+     * The ID of the centralized policy
+     */
+    activateCentralizedPolicyId: pulumi.Input<string>;
     /**
      * The version of the centralized policy
      */

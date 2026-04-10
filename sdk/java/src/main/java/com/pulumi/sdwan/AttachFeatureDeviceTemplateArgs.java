@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDeviceArgs;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,6 +18,21 @@ import javax.annotation.Nullable;
 public final class AttachFeatureDeviceTemplateArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AttachFeatureDeviceTemplateArgs Empty = new AttachFeatureDeviceTemplateArgs();
+
+    /**
+     * The ID of the device template
+     * 
+     */
+    @Import(name="attachFeatureDeviceTemplateId", required=true)
+    private Output<String> attachFeatureDeviceTemplateId;
+
+    /**
+     * @return The ID of the device template
+     * 
+     */
+    public Output<String> attachFeatureDeviceTemplateId() {
+        return this.attachFeatureDeviceTemplateId;
+    }
 
     /**
      * Devices
@@ -51,6 +67,7 @@ public final class AttachFeatureDeviceTemplateArgs extends com.pulumi.resources.
     private AttachFeatureDeviceTemplateArgs() {}
 
     private AttachFeatureDeviceTemplateArgs(AttachFeatureDeviceTemplateArgs $) {
+        this.attachFeatureDeviceTemplateId = $.attachFeatureDeviceTemplateId;
         this.devices = $.devices;
         this.version = $.version;
     }
@@ -71,6 +88,27 @@ public final class AttachFeatureDeviceTemplateArgs extends com.pulumi.resources.
 
         public Builder(AttachFeatureDeviceTemplateArgs defaults) {
             $ = new AttachFeatureDeviceTemplateArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param attachFeatureDeviceTemplateId The ID of the device template
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachFeatureDeviceTemplateId(Output<String> attachFeatureDeviceTemplateId) {
+            $.attachFeatureDeviceTemplateId = attachFeatureDeviceTemplateId;
+            return this;
+        }
+
+        /**
+         * @param attachFeatureDeviceTemplateId The ID of the device template
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachFeatureDeviceTemplateId(String attachFeatureDeviceTemplateId) {
+            return attachFeatureDeviceTemplateId(Output.of(attachFeatureDeviceTemplateId));
         }
 
         /**
@@ -126,6 +164,9 @@ public final class AttachFeatureDeviceTemplateArgs extends com.pulumi.resources.
         }
 
         public AttachFeatureDeviceTemplateArgs build() {
+            if ($.attachFeatureDeviceTemplateId == null) {
+                throw new MissingRequiredPropertyException("AttachFeatureDeviceTemplateArgs", "attachFeatureDeviceTemplateId");
+            }
             if ($.devices == null) {
                 throw new MissingRequiredPropertyException("AttachFeatureDeviceTemplateArgs", "devices");
             }

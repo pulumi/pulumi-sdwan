@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupCiscoVpnFeatureTemplate(ctx, &sdwan.LookupCiscoVpnFeatureTemplateArgs{
+//			_, err := sdwan.GetCiscoVpnFeatureTemplate(ctx, &sdwan.LookupCiscoVpnFeatureTemplateArgs{
 //				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {

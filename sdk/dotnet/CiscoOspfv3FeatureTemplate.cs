@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.CiscoOspfv3FeatureTemplate("example", new()
+    ///     var example = new Sdwan.Index.CiscoOspfv3FeatureTemplate("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

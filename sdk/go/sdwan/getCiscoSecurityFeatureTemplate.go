@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupCiscoSecurityFeatureTemplate(ctx, &sdwan.LookupCiscoSecurityFeatureTemplateArgs{
+//			_, err := sdwan.GetCiscoSecurityFeatureTemplate(ctx, &sdwan.LookupCiscoSecurityFeatureTemplateArgs{
 //				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {

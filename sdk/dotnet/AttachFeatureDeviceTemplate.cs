@@ -22,9 +22,9 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.AttachFeatureDeviceTemplate("example", new()
+    ///     var example = new Sdwan.Index.AttachFeatureDeviceTemplate("example", new()
     ///     {
-    ///         Id = DT1.Id,
+    ///         AttachFeatureDeviceTemplateId = DT1.Id,
     ///         Devices = new[]
     ///         {
     ///             new Sdwan.Inputs.AttachFeatureDeviceTemplateDeviceArgs
@@ -57,6 +57,12 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate")]
     public partial class AttachFeatureDeviceTemplate : global::Pulumi.CustomResource
     {
+        /// <summary>
+        /// The ID of the device template
+        /// </summary>
+        [Output("attachFeatureDeviceTemplateId")]
+        public Output<string> AttachFeatureDeviceTemplateId { get; private set; } = null!;
+
         /// <summary>
         /// Devices
         /// </summary>
@@ -115,6 +121,12 @@ namespace Pulumi.Sdwan
 
     public sealed class AttachFeatureDeviceTemplateArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// The ID of the device template
+        /// </summary>
+        [Input("attachFeatureDeviceTemplateId", required: true)]
+        public Input<string> AttachFeatureDeviceTemplateId { get; set; } = null!;
+
         [Input("devices", required: true)]
         private InputList<Inputs.AttachFeatureDeviceTemplateDeviceArgs>? _devices;
 
@@ -141,6 +153,12 @@ namespace Pulumi.Sdwan
 
     public sealed class AttachFeatureDeviceTemplateState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// The ID of the device template
+        /// </summary>
+        [Input("attachFeatureDeviceTemplateId")]
+        public Input<string>? AttachFeatureDeviceTemplateId { get; set; }
+
         [Input("devices")]
         private InputList<Inputs.AttachFeatureDeviceTemplateDeviceGetArgs>? _devices;
 

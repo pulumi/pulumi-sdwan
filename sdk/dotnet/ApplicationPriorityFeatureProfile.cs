@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.ApplicationPriorityFeatureProfile("example", new()
+    ///     var example = new Sdwan.Index.ApplicationPriorityFeatureProfile("example", new()
     ///     {
     ///         Name = "APPLICATION_PRIORITY_FP_1",
     ///         Description = "My application priority feature profile 1",

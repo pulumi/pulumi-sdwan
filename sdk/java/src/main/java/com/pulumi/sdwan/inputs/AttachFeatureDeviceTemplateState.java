@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDeviceArgs;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,6 +17,21 @@ import javax.annotation.Nullable;
 public final class AttachFeatureDeviceTemplateState extends com.pulumi.resources.ResourceArgs {
 
     public static final AttachFeatureDeviceTemplateState Empty = new AttachFeatureDeviceTemplateState();
+
+    /**
+     * The ID of the device template
+     * 
+     */
+    @Import(name="attachFeatureDeviceTemplateId")
+    private @Nullable Output<String> attachFeatureDeviceTemplateId;
+
+    /**
+     * @return The ID of the device template
+     * 
+     */
+    public Optional<Output<String>> attachFeatureDeviceTemplateId() {
+        return Optional.ofNullable(this.attachFeatureDeviceTemplateId);
+    }
 
     /**
      * Devices
@@ -50,6 +66,7 @@ public final class AttachFeatureDeviceTemplateState extends com.pulumi.resources
     private AttachFeatureDeviceTemplateState() {}
 
     private AttachFeatureDeviceTemplateState(AttachFeatureDeviceTemplateState $) {
+        this.attachFeatureDeviceTemplateId = $.attachFeatureDeviceTemplateId;
         this.devices = $.devices;
         this.version = $.version;
     }
@@ -70,6 +87,27 @@ public final class AttachFeatureDeviceTemplateState extends com.pulumi.resources
 
         public Builder(AttachFeatureDeviceTemplateState defaults) {
             $ = new AttachFeatureDeviceTemplateState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param attachFeatureDeviceTemplateId The ID of the device template
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachFeatureDeviceTemplateId(@Nullable Output<String> attachFeatureDeviceTemplateId) {
+            $.attachFeatureDeviceTemplateId = attachFeatureDeviceTemplateId;
+            return this;
+        }
+
+        /**
+         * @param attachFeatureDeviceTemplateId The ID of the device template
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachFeatureDeviceTemplateId(String attachFeatureDeviceTemplateId) {
+            return attachFeatureDeviceTemplateId(Output.of(attachFeatureDeviceTemplateId));
         }
 
         /**

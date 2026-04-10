@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.SigSecurityFeatureProfile("example", new()
+    ///     var example = new Sdwan.Index.SigSecurityFeatureProfile("example", new()
     ///     {
     ///         Name = "SIG_SECURITY_FP_1",
     ///         Description = "My sig security feature profile 1",

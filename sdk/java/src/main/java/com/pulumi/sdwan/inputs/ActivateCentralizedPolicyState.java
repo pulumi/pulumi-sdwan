@@ -6,6 +6,7 @@ package com.pulumi.sdwan.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,6 +15,21 @@ import javax.annotation.Nullable;
 public final class ActivateCentralizedPolicyState extends com.pulumi.resources.ResourceArgs {
 
     public static final ActivateCentralizedPolicyState Empty = new ActivateCentralizedPolicyState();
+
+    /**
+     * The ID of the centralized policy
+     * 
+     */
+    @Import(name="activateCentralizedPolicyId")
+    private @Nullable Output<String> activateCentralizedPolicyId;
+
+    /**
+     * @return The ID of the centralized policy
+     * 
+     */
+    public Optional<Output<String>> activateCentralizedPolicyId() {
+        return Optional.ofNullable(this.activateCentralizedPolicyId);
+    }
 
     /**
      * The version of the centralized policy
@@ -33,6 +49,7 @@ public final class ActivateCentralizedPolicyState extends com.pulumi.resources.R
     private ActivateCentralizedPolicyState() {}
 
     private ActivateCentralizedPolicyState(ActivateCentralizedPolicyState $) {
+        this.activateCentralizedPolicyId = $.activateCentralizedPolicyId;
         this.version = $.version;
     }
 
@@ -52,6 +69,27 @@ public final class ActivateCentralizedPolicyState extends com.pulumi.resources.R
 
         public Builder(ActivateCentralizedPolicyState defaults) {
             $ = new ActivateCentralizedPolicyState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param activateCentralizedPolicyId The ID of the centralized policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activateCentralizedPolicyId(@Nullable Output<String> activateCentralizedPolicyId) {
+            $.activateCentralizedPolicyId = activateCentralizedPolicyId;
+            return this;
+        }
+
+        /**
+         * @param activateCentralizedPolicyId The ID of the centralized policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activateCentralizedPolicyId(String activateCentralizedPolicyId) {
+            return activateCentralizedPolicyId(Output.of(activateCentralizedPolicyId));
         }
 
         /**

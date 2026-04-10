@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetDevice.Invoke(new()
+        ///     var example = Sdwan.Index.GetDevice.Invoke(new()
         ///     {
         ///         SerialNumber = "12B53B6E42654E01B98C77C347CE216E",
         ///         Name = "Controller01",
@@ -49,7 +49,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetDevice.Invoke(new()
+        ///     var example = Sdwan.Index.GetDevice.Invoke(new()
         ///     {
         ///         SerialNumber = "12B53B6E42654E01B98C77C347CE216E",
         ///         Name = "Controller01",
@@ -74,7 +74,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetDevice.Invoke(new()
+        ///     var example = Sdwan.Index.GetDevice.Invoke(new()
         ///     {
         ///         SerialNumber = "12B53B6E42654E01B98C77C347CE216E",
         ///         Name = "Controller01",

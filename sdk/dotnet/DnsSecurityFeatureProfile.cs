@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.DnsSecurityFeatureProfile("example", new()
+    ///     var example = new Sdwan.Index.DnsSecurityFeatureProfile("example", new()
     ///     {
     ///         Name = "DNS_SECURITY_FP_1",
     ///         Description = "My dns security feature profile 1",

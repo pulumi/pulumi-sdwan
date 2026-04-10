@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.TransportWanVpnInterfaceT1E1SerialFeature("example", new()
+    ///     var example = new Sdwan.Index.TransportWanVpnInterfaceT1E1SerialFeature("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

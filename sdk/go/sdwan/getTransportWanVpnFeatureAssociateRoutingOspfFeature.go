@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupTransportWanVpnFeatureAssociateRoutingOspfFeature(ctx, &sdwan.LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs{
+//			_, err := sdwan.GetTransportWanVpnFeatureAssociateRoutingOspfFeature(ctx, &sdwan.LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs{
 //				FeatureProfileId:         "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //				TransportWanVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
 //				Id:                       "f6b2c44c-693c-4763-b010-895aa3d236bd",

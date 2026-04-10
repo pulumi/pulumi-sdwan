@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupIpv4PrefixListPolicyObject(ctx, &sdwan.LookupIpv4PrefixListPolicyObjectArgs{
+//			_, err := sdwan.GetIpv4PrefixListPolicyObject(ctx, &sdwan.LookupIpv4PrefixListPolicyObjectArgs{
 //				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
 //			}, nil)
 //			if err != nil {

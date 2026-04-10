@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupStandardCommunityListPolicyObject(ctx, &sdwan.LookupStandardCommunityListPolicyObjectArgs{
+//			_, err := sdwan.GetStandardCommunityListPolicyObject(ctx, &sdwan.LookupStandardCommunityListPolicyObjectArgs{
 //				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
 //			}, nil)
 //			if err != nil {

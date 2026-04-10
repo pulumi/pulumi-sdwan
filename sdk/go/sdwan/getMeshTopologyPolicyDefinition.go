@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupMeshTopologyPolicyDefinition(ctx, &sdwan.LookupMeshTopologyPolicyDefinitionArgs{
+//			_, err := sdwan.GetMeshTopologyPolicyDefinition(ctx, &sdwan.LookupMeshTopologyPolicyDefinitionArgs{
 //				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
 //			}, nil)
 //			if err != nil {

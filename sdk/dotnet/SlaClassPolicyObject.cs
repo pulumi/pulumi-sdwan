@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.SlaClassPolicyObject("example", new()
+    ///     var example = new Sdwan.Index.SlaClassPolicyObject("example", new()
     ///     {
     ///         Name = "Example",
     ///         Jitter = 100,

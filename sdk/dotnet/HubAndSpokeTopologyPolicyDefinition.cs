@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.HubAndSpokeTopologyPolicyDefinition("example", new()
+    ///     var example = new Sdwan.Index.HubAndSpokeTopologyPolicyDefinition("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My description",

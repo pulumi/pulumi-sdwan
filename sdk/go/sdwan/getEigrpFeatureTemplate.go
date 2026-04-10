@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupEigrpFeatureTemplate(ctx, &sdwan.LookupEigrpFeatureTemplateArgs{
+//			_, err := sdwan.GetEigrpFeatureTemplate(ctx, &sdwan.LookupEigrpFeatureTemplateArgs{
 //				Id: pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //			}, nil)
 //			if err != nil {

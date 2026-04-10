@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetAllowUrlListPolicyObject.Invoke(new()
+        ///     var example = Sdwan.Index.GetAllowUrlListPolicyObject.Invoke(new()
         ///     {
         ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
         ///     });
@@ -48,7 +48,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetAllowUrlListPolicyObject.Invoke(new()
+        ///     var example = Sdwan.Index.GetAllowUrlListPolicyObject.Invoke(new()
         ///     {
         ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
         ///     });
@@ -72,7 +72,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.GetAllowUrlListPolicyObject.Invoke(new()
+        ///     var example = Sdwan.Index.GetAllowUrlListPolicyObject.Invoke(new()
         ///     {
         ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
         ///     });

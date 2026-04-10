@@ -29,7 +29,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewAttachFeatureDeviceTemplate(ctx, "example", &sdwan.AttachFeatureDeviceTemplateArgs{
-//				Id: DT1.Id,
+//				AttachFeatureDeviceTemplateId: pulumi.Any(DT1.Id),
 //				Devices: sdwan.AttachFeatureDeviceTemplateDeviceArray{
 //					&sdwan.AttachFeatureDeviceTemplateDeviceArgs{
 //						Id: pulumi.String("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE"),
@@ -63,6 +63,8 @@ import (
 type AttachFeatureDeviceTemplate struct {
 	pulumi.CustomResourceState
 
+	// The ID of the device template
+	AttachFeatureDeviceTemplateId pulumi.StringOutput `pulumi:"attachFeatureDeviceTemplateId"`
 	// Devices
 	Devices AttachFeatureDeviceTemplateDeviceArrayOutput `pulumi:"devices"`
 	// The version of the device template
@@ -76,6 +78,9 @@ func NewAttachFeatureDeviceTemplate(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.AttachFeatureDeviceTemplateId == nil {
+		return nil, errors.New("invalid value for required argument 'AttachFeatureDeviceTemplateId'")
+	}
 	if args.Devices == nil {
 		return nil, errors.New("invalid value for required argument 'Devices'")
 	}
@@ -102,6 +107,8 @@ func GetAttachFeatureDeviceTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AttachFeatureDeviceTemplate resources.
 type attachFeatureDeviceTemplateState struct {
+	// The ID of the device template
+	AttachFeatureDeviceTemplateId *string `pulumi:"attachFeatureDeviceTemplateId"`
 	// Devices
 	Devices []AttachFeatureDeviceTemplateDevice `pulumi:"devices"`
 	// The version of the device template
@@ -109,6 +116,8 @@ type attachFeatureDeviceTemplateState struct {
 }
 
 type AttachFeatureDeviceTemplateState struct {
+	// The ID of the device template
+	AttachFeatureDeviceTemplateId pulumi.StringPtrInput
 	// Devices
 	Devices AttachFeatureDeviceTemplateDeviceArrayInput
 	// The version of the device template
@@ -120,6 +129,8 @@ func (AttachFeatureDeviceTemplateState) ElementType() reflect.Type {
 }
 
 type attachFeatureDeviceTemplateArgs struct {
+	// The ID of the device template
+	AttachFeatureDeviceTemplateId string `pulumi:"attachFeatureDeviceTemplateId"`
 	// Devices
 	Devices []AttachFeatureDeviceTemplateDevice `pulumi:"devices"`
 	// The version of the device template
@@ -128,6 +139,8 @@ type attachFeatureDeviceTemplateArgs struct {
 
 // The set of arguments for constructing a AttachFeatureDeviceTemplate resource.
 type AttachFeatureDeviceTemplateArgs struct {
+	// The ID of the device template
+	AttachFeatureDeviceTemplateId pulumi.StringInput
 	// Devices
 	Devices AttachFeatureDeviceTemplateDeviceArrayInput
 	// The version of the device template
@@ -219,6 +232,11 @@ func (o AttachFeatureDeviceTemplateOutput) ToAttachFeatureDeviceTemplateOutput()
 
 func (o AttachFeatureDeviceTemplateOutput) ToAttachFeatureDeviceTemplateOutputWithContext(ctx context.Context) AttachFeatureDeviceTemplateOutput {
 	return o
+}
+
+// The ID of the device template
+func (o AttachFeatureDeviceTemplateOutput) AttachFeatureDeviceTemplateId() pulumi.StringOutput {
+	return o.ApplyT(func(v *AttachFeatureDeviceTemplate) pulumi.StringOutput { return v.AttachFeatureDeviceTemplateId }).(pulumi.StringOutput)
 }
 
 // Devices

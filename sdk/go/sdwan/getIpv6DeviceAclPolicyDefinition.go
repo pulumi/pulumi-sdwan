@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.LookupIpv6DeviceAclPolicyDefinition(ctx, &sdwan.LookupIpv6DeviceAclPolicyDefinitionArgs{
+//			_, err := sdwan.GetIpv6DeviceAclPolicyDefinition(ctx, &sdwan.LookupIpv6DeviceAclPolicyDefinitionArgs{
 //				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
 //			}, nil)
 //			if err != nil {

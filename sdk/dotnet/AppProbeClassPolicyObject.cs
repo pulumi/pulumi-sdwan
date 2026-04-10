@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.AppProbeClassPolicyObject("example", new()
+    ///     var example = new Sdwan.Index.AppProbeClassPolicyObject("example", new()
     ///     {
     ///         Name = "Example",
     ///         ForwardingClass = "FC1",

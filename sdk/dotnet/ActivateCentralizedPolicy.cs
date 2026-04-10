@@ -22,9 +22,9 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.ActivateCentralizedPolicy("example", new()
+    ///     var example = new Sdwan.Index.ActivateCentralizedPolicy("example", new()
     ///     {
-    ///         Id = POLICY1.Id,
+    ///         ActivateCentralizedPolicyId = POLICY1.Id,
     ///     });
     /// 
     /// });
@@ -42,6 +42,12 @@ namespace Pulumi.Sdwan
     public partial class ActivateCentralizedPolicy : global::Pulumi.CustomResource
     {
         /// <summary>
+        /// The ID of the centralized policy
+        /// </summary>
+        [Output("activateCentralizedPolicyId")]
+        public Output<string> ActivateCentralizedPolicyId { get; private set; } = null!;
+
+        /// <summary>
         /// The version of the centralized policy
         /// </summary>
         [Output("version")]
@@ -55,7 +61,7 @@ namespace Pulumi.Sdwan
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public ActivateCentralizedPolicy(string name, ActivateCentralizedPolicyArgs? args = null, CustomResourceOptions? options = null)
+        public ActivateCentralizedPolicy(string name, ActivateCentralizedPolicyArgs args, CustomResourceOptions? options = null)
             : base("sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy", name, args ?? new ActivateCentralizedPolicyArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -94,6 +100,12 @@ namespace Pulumi.Sdwan
     public sealed class ActivateCentralizedPolicyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// The ID of the centralized policy
+        /// </summary>
+        [Input("activateCentralizedPolicyId", required: true)]
+        public Input<string> ActivateCentralizedPolicyId { get; set; } = null!;
+
+        /// <summary>
         /// The version of the centralized policy
         /// </summary>
         [Input("version")]
@@ -107,6 +119,12 @@ namespace Pulumi.Sdwan
 
     public sealed class ActivateCentralizedPolicyState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// The ID of the centralized policy
+        /// </summary>
+        [Input("activateCentralizedPolicyId")]
+        public Input<string>? ActivateCentralizedPolicyId { get; set; }
+
         /// <summary>
         /// The version of the centralized policy
         /// </summary>
