@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.Index.GetVedgeInventory.Invoke();
+        ///     var example = Sdwan.GetVedgeInventory.Invoke();
         /// 
         /// });
         /// ```
@@ -45,7 +45,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.Index.GetVedgeInventory.Invoke();
+        ///     var example = Sdwan.GetVedgeInventory.Invoke();
         /// 
         /// });
         /// ```
@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.Index.GetVedgeInventory.Invoke();
+        ///     var example = Sdwan.GetVedgeInventory.Invoke();
         /// 
         /// });
         /// ```

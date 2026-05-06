@@ -34,8 +34,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TlsSslDecryptionPolicyDefinition;
  * import com.pulumi.sdwan.TlsSslDecryptionPolicyDefinitionArgs;
  * import com.pulumi.sdwan.inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  *                 .ruleId(4)
  *                 .ruleName("Example")
  *                 .ruleType("sslDecryption")
- *                 .sourceAndDestinationConfiguration(List.of(Map.ofEntries(
+ *                 .sourceAndDestinationConfiguration(Arrays.asList(Map.ofEntries(
  *                     Map.entry("option", "destinationIp"),
  *                     Map.entry("value", "10.0.0.0/12")
  *                 )))

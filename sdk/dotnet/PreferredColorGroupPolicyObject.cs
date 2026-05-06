@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.PreferredColorGroupPolicyObject("example", new()
+    ///     var example = new Sdwan.PreferredColorGroupPolicyObject("example", new()
     ///     {
     ///         Name = "Example",
     ///         PrimaryColorPreference = "blue bronze",

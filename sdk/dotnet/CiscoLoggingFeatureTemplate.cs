@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.CiscoLoggingFeatureTemplate("example", new()
+    ///     var example = new Sdwan.CiscoLoggingFeatureTemplate("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

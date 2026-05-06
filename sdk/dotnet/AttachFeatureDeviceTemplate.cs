@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.AttachFeatureDeviceTemplate("example", new()
+    ///     var example = new Sdwan.AttachFeatureDeviceTemplate("example", new()
     ///     {
     ///         AttachFeatureDeviceTemplateId = DT1.Id,
     ///         Devices = new[]

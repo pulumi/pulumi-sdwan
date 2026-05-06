@@ -38,8 +38,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.CiscoLoggingFeatureTemplateTlsProfileArgs;
  * import com.pulumi.sdwan.inputs.CiscoLoggingFeatureTemplateIpv4ServerArgs;
  * import com.pulumi.sdwan.inputs.CiscoLoggingFeatureTemplateIpv6ServerArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -62,7 +62,7 @@ import javax.annotation.Nullable;
  *                 .name("PROF1")
  *                 .version("TLSv1.2")
  *                 .authenticationType("Server")
- *                 .ciphersuiteList(List.of("aes-128-cbc-sha"))
+ *                 .ciphersuiteList(Arrays.asList("aes-128-cbc-sha"))
  *                 .build())
  *             .ipv4Servers(CiscoLoggingFeatureTemplateIpv4ServerArgs.builder()
  *                 .hostnameIp("2.2.2.2")

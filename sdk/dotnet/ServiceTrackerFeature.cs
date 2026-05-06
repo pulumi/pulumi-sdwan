@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.ServiceTrackerFeature("example", new()
+    ///     var example = new Sdwan.ServiceTrackerFeature("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

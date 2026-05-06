@@ -33,8 +33,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.PolicyObjectPreferredColorGroup;
  * import com.pulumi.sdwan.PolicyObjectPreferredColorGroupArgs;
  * import com.pulumi.sdwan.inputs.PolicyObjectPreferredColorGroupEntryArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -51,11 +51,11 @@ import javax.annotation.Nullable;
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .entries(PolicyObjectPreferredColorGroupEntryArgs.builder()
- *                 .primaryColorPreference(List.of("default"))
+ *                 .primaryColorPreference(Arrays.asList("default"))
  *                 .primaryPathPreference("direct-path")
- *                 .secondaryColorPreference(List.of("bronze"))
+ *                 .secondaryColorPreference(Arrays.asList("bronze"))
  *                 .secondaryPathPreference("all-paths")
- *                 .tertiaryColorPreference(List.of("blue"))
+ *                 .tertiaryColorPreference(Arrays.asList("blue"))
  *                 .tertiaryPathPreference("all-paths")
  *                 .build())
  *             .build());
