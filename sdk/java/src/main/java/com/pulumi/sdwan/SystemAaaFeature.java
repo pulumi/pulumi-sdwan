@@ -42,8 +42,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.SystemAaaFeatureTacacsGroupArgs;
  * import com.pulumi.sdwan.inputs.SystemAaaFeatureAccountingRuleArgs;
  * import com.pulumi.sdwan.inputs.SystemAaaFeatureAuthorizationRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -105,7 +105,7 @@ import javax.annotation.Nullable;
  *                 .method("commands")
  *                 .level("15")
  *                 .startStop(true)
- *                 .group(List.of("RGROUP1"))
+ *                 .group(Arrays.asList("RGROUP1"))
  *                 .build())
  *             .authorizationConsole(true)
  *             .authorizationConfigCommands(true)
@@ -113,7 +113,7 @@ import javax.annotation.Nullable;
  *                 .ruleId("1")
  *                 .method("commands")
  *                 .level("15")
- *                 .group(List.of("RGROUP1"))
+ *                 .group(Arrays.asList("RGROUP1"))
  *                 .ifAuthenticated(true)
  *                 .build())
  *             .build());

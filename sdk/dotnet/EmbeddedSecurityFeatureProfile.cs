@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.EmbeddedSecurityFeatureProfile("example", new()
+    ///     var example = new Sdwan.EmbeddedSecurityFeatureProfile("example", new()
     ///     {
     ///         Name = "EMBEDDED_SECURITY_FP_1",
     ///         Description = "My embedded security feature profile 1",

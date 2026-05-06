@@ -33,8 +33,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TransportRoutePolicyFeature;
  * import com.pulumi.sdwan.TransportRoutePolicyFeatureArgs;
  * import com.pulumi.sdwan.inputs.TransportRoutePolicyFeatureSequenceArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -57,9 +57,9 @@ import javax.annotation.Nullable;
  *                 .baseAction("reject")
  *                 .protocol("IPV4")
  *                 .actions(TransportRoutePolicyFeatureSequenceActionArgs.builder()
- *                     .asPathPrepend(List.of("65521"))
+ *                     .asPathPrepend(Arrays.asList("65521"))
  *                     .communityAdditive(false)
- *                     .community(List.of("internet"))
+ *                     .community(Arrays.asList("internet"))
  *                     .localPreference(100)
  *                     .metric(20)
  *                     .metricType("type1")

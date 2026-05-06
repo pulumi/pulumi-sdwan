@@ -35,8 +35,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.SwitchportFeatureTemplateArgs;
  * import com.pulumi.sdwan.inputs.SwitchportFeatureTemplateInterfaceArgs;
  * import com.pulumi.sdwan.inputs.SwitchportFeatureTemplateStaticMacAddressArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -66,7 +66,7 @@ import javax.annotation.Nullable;
  *                 .switchportTrunkNativeVlan(100)
  *                 .dot1xEnable(true)
  *                 .dot1xPortControl("auto")
- *                 .dot1xAuthenticationOrder(List.of("dot1x"))
+ *                 .dot1xAuthenticationOrder(Arrays.asList("dot1x"))
  *                 .voiceVlan(200)
  *                 .dot1xPaeEnable(true)
  *                 .dot1xMacAuthenticationBypass(true)

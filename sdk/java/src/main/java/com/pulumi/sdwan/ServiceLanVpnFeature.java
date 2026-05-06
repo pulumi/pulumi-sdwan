@@ -69,8 +69,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4ExportRouteTargetArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6ImportRouteTargetArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6ExportRouteTargetArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -131,13 +131,13 @@ import javax.annotation.Nullable;
  *             .greRoutes(ServiceLanVpnFeatureGreRouteArgs.builder()
  *                 .networkAddress("1.2.3.4")
  *                 .subnetMask("0.0.0.0")
- *                 .interface_(List.of("gre01"))
+ *                 .interface_(Arrays.asList("gre01"))
  *                 .vpn(0)
  *                 .build())
  *             .ipsecRoutes(ServiceLanVpnFeatureIpsecRouteArgs.builder()
  *                 .networkAddress("1.2.3.4")
  *                 .subnetMask("0.0.0.0")
- *                 .interface_(List.of("ipsec01"))
+ *                 .interface_(Arrays.asList("ipsec01"))
  *                 .build())
  *             .natPools(ServiceLanVpnFeatureNatPoolArgs.builder()
  *                 .natPoolName(1)
