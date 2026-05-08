@@ -159,39 +159,39 @@ export interface PolicyObjectUnifiedIntrusionPreventionState {
     /**
      * Can be one of the enum value
      */
-    customSignature?: pulumi.Input<boolean>;
+    customSignature?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Can be one of the enum value
      *   - Choices: `detection`, `protection`
      */
-    inspectionMode?: pulumi.Input<string>;
-    ipsSignatureAllowListId?: pulumi.Input<string>;
+    inspectionMode?: pulumi.Input<string | undefined>;
+    ipsSignatureAllowListId?: pulumi.Input<string | undefined>;
     /**
      * Can be one of the enum value
      *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      */
-    logLevel?: pulumi.Input<string>;
+    logLevel?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Can be one of the enum value
      *   - Choices: `balanced`, `connectivity`, `security`
      */
-    signatureSet?: pulumi.Input<string>;
+    signatureSet?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -201,11 +201,11 @@ export interface PolicyObjectUnifiedIntrusionPreventionArgs {
     /**
      * Can be one of the enum value
      */
-    customSignature?: pulumi.Input<boolean>;
+    customSignature?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -215,7 +215,7 @@ export interface PolicyObjectUnifiedIntrusionPreventionArgs {
      *   - Choices: `detection`, `protection`
      */
     inspectionMode: pulumi.Input<string>;
-    ipsSignatureAllowListId?: pulumi.Input<string>;
+    ipsSignatureAllowListId?: pulumi.Input<string | undefined>;
     /**
      * Can be one of the enum value
      *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
@@ -224,7 +224,7 @@ export interface PolicyObjectUnifiedIntrusionPreventionArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Can be one of the enum value
      *   - Choices: `balanced`, `connectivity`, `security`

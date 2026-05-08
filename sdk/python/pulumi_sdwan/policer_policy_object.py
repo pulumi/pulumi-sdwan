@@ -22,7 +22,7 @@ class PolicerPolicyObjectArgs:
                  burst: pulumi.Input[_builtins.int],
                  exceed_action: pulumi.Input[_builtins.str],
                  rate: pulumi.Input[_builtins.int],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicerPolicyObject resource.
 
@@ -81,25 +81,25 @@ class PolicerPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _PolicerPolicyObjectState:
     def __init__(__self__, *,
-                 burst: Optional[pulumi.Input[_builtins.int]] = None,
-                 exceed_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rate: Optional[pulumi.Input[_builtins.int]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 burst: pulumi.Input[Optional[_builtins.int]] = None,
+                 exceed_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rate: pulumi.Input[Optional[_builtins.int]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicerPolicyObject resources.
 
@@ -125,7 +125,7 @@ class _PolicerPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def burst(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def burst(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Burst in bytes
           - Range: `15000`-`10000000`
@@ -133,12 +133,12 @@ class _PolicerPolicyObjectState:
         return pulumi.get(self, "burst")
 
     @burst.setter
-    def burst(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def burst(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "burst", value)
 
     @_builtins.property
     @pulumi.getter(name="exceedAction")
-    def exceed_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exceed_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Exceed action
           - Choices: `drop`, `remark`
@@ -146,24 +146,24 @@ class _PolicerPolicyObjectState:
         return pulumi.get(self, "exceed_action")
 
     @exceed_action.setter
-    def exceed_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exceed_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exceed_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rate(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rate(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Rate in bps
           - Range: `8`-`100000000000`
@@ -171,19 +171,19 @@ class _PolicerPolicyObjectState:
         return pulumi.get(self, "rate")
 
     @rate.setter
-    def rate(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rate(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rate", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -193,10 +193,10 @@ class PolicerPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 burst: Optional[pulumi.Input[_builtins.int]] = None,
-                 exceed_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rate: Optional[pulumi.Input[_builtins.int]] = None,
+                 burst: pulumi.Input[Optional[_builtins.int]] = None,
+                 exceed_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rate: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Policer Policy Object .
@@ -279,10 +279,10 @@ class PolicerPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 burst: Optional[pulumi.Input[_builtins.int]] = None,
-                 exceed_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rate: Optional[pulumi.Input[_builtins.int]] = None,
+                 burst: pulumi.Input[Optional[_builtins.int]] = None,
+                 exceed_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rate: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -313,11 +313,11 @@ class PolicerPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            burst: Optional[pulumi.Input[_builtins.int]] = None,
-            exceed_action: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            rate: Optional[pulumi.Input[_builtins.int]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'PolicerPolicyObject':
+            burst: pulumi.Input[Optional[_builtins.int]] = None,
+            exceed_action: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rate: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicerPolicyObject':
         """
         Get an existing PolicerPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

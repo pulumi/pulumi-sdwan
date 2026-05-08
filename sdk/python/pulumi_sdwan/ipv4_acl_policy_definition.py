@@ -23,8 +23,8 @@ class Ipv4AclPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  sequences: pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]],
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Ipv4AclPolicyDefinition resource.
 
@@ -67,7 +67,7 @@ class Ipv4AclPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default action, either `accept` or `drop`
           - Choices: `accept`, `drop`
@@ -75,31 +75,31 @@ class Ipv4AclPolicyDefinitionArgs:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _Ipv4AclPolicyDefinitionState:
     def __init__(__self__, *,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Ipv4AclPolicyDefinition resources.
 
@@ -126,7 +126,7 @@ class _Ipv4AclPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default action, either `accept` or `drop`
           - Choices: `accept`, `drop`
@@ -134,67 +134,67 @@ class _Ipv4AclPolicyDefinitionState:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]]]:
+    def sequences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]]]:
         """
         List of ACL sequences
         """
         return pulumi.get(self, "sequences")
 
     @sequences.setter
-    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]]]):
+    def sequences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceArgs']]]]):
         pulumi.set(self, "sequences", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -204,10 +204,10 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a IPv4 ACL Policy Definition .
@@ -318,10 +318,10 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -351,12 +351,12 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_action: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'Ipv4AclPolicyDefinition':
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4AclPolicyDefinitionSequenceArgs', 'Ipv4AclPolicyDefinitionSequenceArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'Ipv4AclPolicyDefinition':
         """
         Get an existing Ipv4AclPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

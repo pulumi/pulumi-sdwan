@@ -23,7 +23,7 @@ class CliDeviceTemplateArgs:
                  cli_type: pulumi.Input[_builtins.str],
                  description: pulumi.Input[_builtins.str],
                  device_type: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CliDeviceTemplate resource.
 
@@ -92,26 +92,26 @@ class CliDeviceTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the device template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _CliDeviceTemplateState:
     def __init__(__self__, *,
-                 cli_configuration: Optional[pulumi.Input[_builtins.str]] = None,
-                 cli_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 cli_configuration: pulumi.Input[Optional[_builtins.str]] = None,
+                 cli_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CliDeviceTemplate resources.
 
@@ -138,19 +138,19 @@ class _CliDeviceTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="cliConfiguration")
-    def cli_configuration(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cli_configuration(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CLI configuration
         """
         return pulumi.get(self, "cli_configuration")
 
     @cli_configuration.setter
-    def cli_configuration(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cli_configuration(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cli_configuration", value)
 
     @_builtins.property
     @pulumi.getter(name="cliType")
-    def cli_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cli_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CLI type
           - Choices: `device`, `intend`
@@ -158,55 +158,55 @@ class _CliDeviceTemplateState:
         return pulumi.get(self, "cli_type")
 
     @cli_type.setter
-    def cli_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cli_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cli_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the device template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceType")
-    def device_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device type (e.g., `vedge-ISR-4331`)
         """
         return pulumi.get(self, "device_type")
 
     @device_type.setter
-    def device_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the device template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -216,11 +216,11 @@ class CliDeviceTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cli_configuration: Optional[pulumi.Input[_builtins.str]] = None,
-                 cli_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 cli_configuration: pulumi.Input[Optional[_builtins.str]] = None,
+                 cli_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a CLI Device Template .
@@ -306,11 +306,11 @@ class CliDeviceTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cli_configuration: Optional[pulumi.Input[_builtins.str]] = None,
-                 cli_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 cli_configuration: pulumi.Input[Optional[_builtins.str]] = None,
+                 cli_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -344,12 +344,12 @@ class CliDeviceTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cli_configuration: Optional[pulumi.Input[_builtins.str]] = None,
-            cli_type: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_type: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CliDeviceTemplate':
+            cli_configuration: pulumi.Input[Optional[_builtins.str]] = None,
+            cli_type: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_type: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CliDeviceTemplate':
         """
         Get an existing CliDeviceTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

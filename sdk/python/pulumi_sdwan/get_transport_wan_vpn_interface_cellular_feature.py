@@ -1813,9 +1813,9 @@ def get_transport_wan_vpn_interface_cellular_feature(feature_profile_id: Optiona
         tunnel_qos_mode=pulumi.get(__ret__, 'tunnel_qos_mode'),
         tunnel_qos_mode_variable=pulumi.get(__ret__, 'tunnel_qos_mode_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                            id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                            transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                            id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                            transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnInterfaceCellularFeatureResult]:
     """
     This data source can read the Transport WAN VPN Interface Cellular Feature.

@@ -127,23 +127,23 @@ export interface SystemCaCertificateFeatureState {
     /**
      * Thirdparty CA Certificate List
      */
-    certificates?: pulumi.Input<pulumi.Input<inputs.SystemCaCertificateFeatureCertificate>[]>;
+    certificates?: pulumi.Input<pulumi.Input<inputs.SystemCaCertificateFeatureCertificate>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -153,11 +153,11 @@ export interface SystemCaCertificateFeatureArgs {
     /**
      * Thirdparty CA Certificate List
      */
-    certificates?: pulumi.Input<pulumi.Input<inputs.SystemCaCertificateFeatureCertificate>[]>;
+    certificates?: pulumi.Input<pulumi.Input<inputs.SystemCaCertificateFeatureCertificate>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -165,5 +165,5 @@ export interface SystemCaCertificateFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

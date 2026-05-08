@@ -22,15 +22,15 @@ __all__ = ['SystemBfdFeatureArgs', 'SystemBfdFeature']
 class SystemBfdFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemBfdFeature resource.
 
@@ -82,19 +82,19 @@ class SystemBfdFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]:
+    def colors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]:
         """
         Set color that identifies the WAN transport tunnel
         """
         return pulumi.get(self, "colors")
 
     @colors.setter
-    def colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]):
+    def colors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]):
         pulumi.set(self, "colors", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscp")
-    def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_dscp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `0`-`63`
           - Default value: `48`
@@ -102,36 +102,36 @@ class SystemBfdFeatureArgs:
         return pulumi.get(self, "default_dscp")
 
     @default_dscp.setter
-    def default_dscp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_dscp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscpVariable")
-    def default_dscp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_dscp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_dscp_variable")
 
     @default_dscp_variable.setter
-    def default_dscp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_dscp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_dscp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `1`-`6`
           - Default value: `6`
@@ -139,36 +139,36 @@ class SystemBfdFeatureArgs:
         return pulumi.get(self, "multiplier")
 
     @multiplier.setter
-    def multiplier(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multiplier", value)
 
     @_builtins.property
     @pulumi.getter(name="multiplierVariable")
-    def multiplier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multiplier_variable")
 
     @multiplier_variable.setter
-    def multiplier_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multiplier_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pollInterval")
-    def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def poll_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `1`-`4294967295`
           - Default value: `600000`
@@ -176,36 +176,36 @@ class SystemBfdFeatureArgs:
         return pulumi.get(self, "poll_interval")
 
     @poll_interval.setter
-    def poll_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def poll_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "poll_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="pollIntervalVariable")
-    def poll_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def poll_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "poll_interval_variable")
 
     @poll_interval_variable.setter
-    def poll_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def poll_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "poll_interval_variable", value)
 
 
 @pulumi.input_type
 class _SystemBfdFeatureState:
     def __init__(__self__, *,
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemBfdFeature resources.
 
@@ -249,19 +249,19 @@ class _SystemBfdFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]:
+    def colors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]:
         """
         Set color that identifies the WAN transport tunnel
         """
         return pulumi.get(self, "colors")
 
     @colors.setter
-    def colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]):
+    def colors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]]]):
         pulumi.set(self, "colors", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscp")
-    def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_dscp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `0`-`63`
           - Default value: `48`
@@ -269,48 +269,48 @@ class _SystemBfdFeatureState:
         return pulumi.get(self, "default_dscp")
 
     @default_dscp.setter
-    def default_dscp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_dscp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscpVariable")
-    def default_dscp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_dscp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_dscp_variable")
 
     @default_dscp_variable.setter
-    def default_dscp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_dscp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_dscp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `1`-`6`
           - Default value: `6`
@@ -318,36 +318,36 @@ class _SystemBfdFeatureState:
         return pulumi.get(self, "multiplier")
 
     @multiplier.setter
-    def multiplier(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multiplier", value)
 
     @_builtins.property
     @pulumi.getter(name="multiplierVariable")
-    def multiplier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multiplier_variable")
 
     @multiplier_variable.setter
-    def multiplier_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multiplier_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pollInterval")
-    def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def poll_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `1`-`4294967295`
           - Default value: `600000`
@@ -355,31 +355,31 @@ class _SystemBfdFeatureState:
         return pulumi.get(self, "poll_interval")
 
     @poll_interval.setter
-    def poll_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def poll_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "poll_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="pollIntervalVariable")
-    def poll_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def poll_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "poll_interval_variable")
 
     @poll_interval_variable.setter
-    def poll_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def poll_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "poll_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -389,16 +389,16 @@ class SystemBfdFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System BFD Feature.
@@ -511,16 +511,16 @@ class SystemBfdFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -553,17 +553,17 @@ class SystemBfdFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            colors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]]] = None,
-            default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-            default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-            multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemBfdFeature':
+            colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]]] = None,
+            default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+            default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+            multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemBfdFeature':
         """
         Get an existing SystemBfdFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

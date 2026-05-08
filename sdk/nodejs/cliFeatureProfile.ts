@@ -100,11 +100,11 @@ export interface CliFeatureProfileState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the cli feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -118,5 +118,5 @@ export interface CliFeatureProfileArgs {
     /**
      * The name of the cli feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

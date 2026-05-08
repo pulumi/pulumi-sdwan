@@ -178,7 +178,7 @@ def get_configuration_group(id: Optional[_builtins.str] = None,
         solution=pulumi.get(__ret__, 'solution'),
         topology_devices=pulumi.get(__ret__, 'topology_devices'),
         topology_site_devices=pulumi.get(__ret__, 'topology_site_devices'))
-def get_configuration_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_configuration_group_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConfigurationGroupResult]:
     """
     This data source can read the Configuration Group .

@@ -23,10 +23,10 @@ class PolicyGroupArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  solution: pulumi.Input[_builtins.str],
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a PolicyGroup resource.
 
@@ -76,62 +76,62 @@ class PolicyGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]:
         """
         List of devices
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileIds")
-    def feature_profile_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_profile_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of feature profile IDs
         """
         return pulumi.get(self, "feature_profile_ids")
 
     @feature_profile_ids.setter
-    def feature_profile_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_profile_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_profile_ids", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="policyVersions")
-    def policy_versions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def policy_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of all associated policy versions
         """
         return pulumi.get(self, "policy_versions")
 
     @policy_versions.setter
-    def policy_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def policy_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "policy_versions", value)
 
 
 @pulumi.input_type
 class _PolicyGroupState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 solution: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 solution: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyGroup resources.
 
@@ -158,67 +158,67 @@ class _PolicyGroupState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]:
         """
         List of devices
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileIds")
-    def feature_profile_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_profile_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of feature profile IDs
         """
         return pulumi.get(self, "feature_profile_ids")
 
     @feature_profile_ids.setter
-    def feature_profile_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_profile_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_profile_ids", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="policyVersions")
-    def policy_versions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def policy_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of all associated policy versions
         """
         return pulumi.get(self, "policy_versions")
 
     @policy_versions.setter
-    def policy_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def policy_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "policy_versions", value)
 
     @_builtins.property
     @pulumi.getter
-    def solution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def solution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type of solution
           - Choices: `sdwan`
@@ -226,7 +226,7 @@ class _PolicyGroupState:
         return pulumi.get(self, "solution")
 
     @solution.setter
-    def solution(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def solution(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "solution", value)
 
 
@@ -236,12 +236,12 @@ class PolicyGroup(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 solution: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 solution: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Policy Group .
@@ -332,12 +332,12 @@ class PolicyGroup(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 solution: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 solution: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -367,12 +367,12 @@ class PolicyGroup(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
-            feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            policy_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            solution: Optional[pulumi.Input[_builtins.str]] = None) -> 'PolicyGroup':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['PolicyGroupDeviceArgs', 'PolicyGroupDeviceArgsDict']]]]] = None,
+            feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            solution: pulumi.Input[Optional[_builtins.str]] = None) -> 'PolicyGroup':
         """
         Get an existing PolicyGroup resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

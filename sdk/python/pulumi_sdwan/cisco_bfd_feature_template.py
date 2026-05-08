@@ -23,14 +23,14 @@ class CiscoBfdFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoBfdFeatureTemplate resource.
 
@@ -98,19 +98,19 @@ class CiscoBfdFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]:
+    def colors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]:
         """
         Set color that identifies the WAN transport tunnel
         """
         return pulumi.get(self, "colors")
 
     @colors.setter
-    def colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]):
+    def colors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]):
         pulumi.set(self, "colors", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscp")
-    def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_dscp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set default DSCP value for BFD packets
           - Range: `0`-`63`
@@ -119,24 +119,24 @@ class CiscoBfdFeatureTemplateArgs:
         return pulumi.get(self, "default_dscp")
 
     @default_dscp.setter
-    def default_dscp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_dscp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscpVariable")
-    def default_dscp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_dscp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_dscp_variable")
 
     @default_dscp_variable.setter
-    def default_dscp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_dscp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_dscp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the number of polling intervals used to determine tunnel SLA class
           - Range: `1`-`6`
@@ -145,36 +145,36 @@ class CiscoBfdFeatureTemplateArgs:
         return pulumi.get(self, "multiplier")
 
     @multiplier.setter
-    def multiplier(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multiplier", value)
 
     @_builtins.property
     @pulumi.getter(name="multiplierVariable")
-    def multiplier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multiplier_variable")
 
     @multiplier_variable.setter
-    def multiplier_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multiplier_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pollInterval")
-    def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def poll_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often BFD polls tunnels to collect packet latency, loss, and statistics
           - Range: `1`-`4294967295`
@@ -183,37 +183,37 @@ class CiscoBfdFeatureTemplateArgs:
         return pulumi.get(self, "poll_interval")
 
     @poll_interval.setter
-    def poll_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def poll_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "poll_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="pollIntervalVariable")
-    def poll_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def poll_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "poll_interval_variable")
 
     @poll_interval_variable.setter
-    def poll_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def poll_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "poll_interval_variable", value)
 
 
 @pulumi.input_type
 class _CiscoBfdFeatureTemplateState:
     def __init__(__self__, *,
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoBfdFeatureTemplate resources.
 
@@ -264,19 +264,19 @@ class _CiscoBfdFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]:
+    def colors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]:
         """
         Set color that identifies the WAN transport tunnel
         """
         return pulumi.get(self, "colors")
 
     @colors.setter
-    def colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]):
+    def colors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]]]):
         pulumi.set(self, "colors", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscp")
-    def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_dscp(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set default DSCP value for BFD packets
           - Range: `0`-`63`
@@ -285,36 +285,36 @@ class _CiscoBfdFeatureTemplateState:
         return pulumi.get(self, "default_dscp")
 
     @default_dscp.setter
-    def default_dscp(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_dscp(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultDscpVariable")
-    def default_dscp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_dscp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_dscp_variable")
 
     @default_dscp_variable.setter
-    def default_dscp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_dscp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_dscp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -322,12 +322,12 @@ class _CiscoBfdFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the number of polling intervals used to determine tunnel SLA class
           - Range: `1`-`6`
@@ -336,36 +336,36 @@ class _CiscoBfdFeatureTemplateState:
         return pulumi.get(self, "multiplier")
 
     @multiplier.setter
-    def multiplier(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multiplier", value)
 
     @_builtins.property
     @pulumi.getter(name="multiplierVariable")
-    def multiplier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multiplier_variable")
 
     @multiplier_variable.setter
-    def multiplier_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multiplier_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pollInterval")
-    def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def poll_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often BFD polls tunnels to collect packet latency, loss, and statistics
           - Range: `1`-`4294967295`
@@ -374,43 +374,43 @@ class _CiscoBfdFeatureTemplateState:
         return pulumi.get(self, "poll_interval")
 
     @poll_interval.setter
-    def poll_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def poll_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "poll_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="pollIntervalVariable")
-    def poll_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def poll_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "poll_interval_variable")
 
     @poll_interval_variable.setter
-    def poll_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def poll_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "poll_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -420,16 +420,16 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco BFD feature template.
@@ -542,16 +542,16 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 colors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
-                 default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
+                 default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -587,18 +587,18 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            colors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
-            default_dscp: Optional[pulumi.Input[_builtins.int]] = None,
-            default_dscp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-            multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            poll_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            poll_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoBfdFeatureTemplate':
+            colors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]]] = None,
+            default_dscp: pulumi.Input[Optional[_builtins.int]] = None,
+            default_dscp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+            multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            poll_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            poll_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoBfdFeatureTemplate':
         """
         Get an existing CiscoBfdFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

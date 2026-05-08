@@ -23,33 +23,33 @@ class CedgeAaaFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]] = None,
-                 dot1x_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 dot1x_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_clients: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]] = None,
-                 radius_dynamic_author_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 radius_dynamic_author_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]] = None,
-                 radius_trustsec_cts_authorization_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_cts_authorization_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 server_groups_priority_order: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]] = None):
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]] = None,
+                 dot1x_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dot1x_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_clients: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]] = None,
+                 radius_dynamic_author_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 radius_dynamic_author_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]] = None,
+                 radius_trustsec_cts_authorization_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_cts_authorization_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 server_groups_priority_order: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]] = None):
         """
         The set of arguments for constructing a CedgeAaaFeatureTemplate resource.
 
@@ -179,19 +179,19 @@ class CedgeAaaFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="accountingRules")
-    def accounting_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]:
+    def accounting_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]:
         """
         Configure the accounting rules
         """
         return pulumi.get(self, "accounting_rules")
 
     @accounting_rules.setter
-    def accounting_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]):
+    def accounting_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]):
         pulumi.set(self, "accounting_rules", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommands")
-    def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_config_commands(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For configuration mode commands.
           - Default value: `false`
@@ -199,24 +199,24 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "authorization_config_commands")
 
     @authorization_config_commands.setter
-    def authorization_config_commands(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_config_commands(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_config_commands", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommandsVariable")
-    def authorization_config_commands_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_config_commands_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_config_commands_variable")
 
     @authorization_config_commands_variable.setter
-    def authorization_config_commands_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_config_commands_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_config_commands_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsole")
-    def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_console(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For enabling console authorization
           - Default value: `false`
@@ -224,36 +224,36 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "authorization_console")
 
     @authorization_console.setter
-    def authorization_console(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_console(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_console", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsoleVariable")
-    def authorization_console_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_console_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_console_variable")
 
     @authorization_console_variable.setter
-    def authorization_console_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_console_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_console_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationRules")
-    def authorization_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]:
+    def authorization_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]:
         """
         Configure the Authorization Rules
         """
         return pulumi.get(self, "authorization_rules")
 
     @authorization_rules.setter
-    def authorization_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]):
+    def authorization_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]):
         pulumi.set(self, "authorization_rules", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAccounting")
-    def dot1x_accounting(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dot1x_accounting(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accounting configurations parameters
           - Default value: `false`
@@ -261,24 +261,24 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "dot1x_accounting")
 
     @dot1x_accounting.setter
-    def dot1x_accounting(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dot1x_accounting(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dot1x_accounting", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAccountingVariable")
-    def dot1x_accounting_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dot1x_accounting_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dot1x_accounting_variable")
 
     @dot1x_accounting_variable.setter
-    def dot1x_accounting_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dot1x_accounting_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dot1x_accounting_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAuthentication")
-    def dot1x_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dot1x_authentication(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Authentication configurations parameters
           - Default value: `false`
@@ -286,48 +286,48 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "dot1x_authentication")
 
     @dot1x_authentication.setter
-    def dot1x_authentication(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dot1x_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dot1x_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAuthenticationVariable")
-    def dot1x_authentication_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dot1x_authentication_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dot1x_authentication_variable")
 
     @dot1x_authentication_variable.setter
-    def dot1x_authentication_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dot1x_authentication_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dot1x_authentication_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusClients")
-    def radius_clients(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]:
+    def radius_clients(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]:
         """
         Specify a RADIUS client
         """
         return pulumi.get(self, "radius_clients")
 
     @radius_clients.setter
-    def radius_clients(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]):
+    def radius_clients(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]):
         pulumi.set(self, "radius_clients", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationType")
-    def radius_dynamic_author_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authentication Type
           - Choices: `any`, `all`, `session-key`
@@ -336,24 +336,24 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "radius_dynamic_author_authentication_type")
 
     @radius_dynamic_author_authentication_type.setter
-    def radius_dynamic_author_authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationTypeVariable")
-    def radius_dynamic_author_authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_authentication_type_variable")
 
     @radius_dynamic_author_authentication_type_variable.setter
-    def radius_dynamic_author_authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorDomainStripping")
-    def radius_dynamic_author_domain_stripping(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_domain_stripping(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Domain Stripping
           - Choices: `yes`, `no`, `right-to-left`
@@ -362,24 +362,24 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "radius_dynamic_author_domain_stripping")
 
     @radius_dynamic_author_domain_stripping.setter
-    def radius_dynamic_author_domain_stripping(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_domain_stripping(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_domain_stripping", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorDomainStrippingVariable")
-    def radius_dynamic_author_domain_stripping_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_domain_stripping_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_domain_stripping_variable")
 
     @radius_dynamic_author_domain_stripping_variable.setter
-    def radius_dynamic_author_domain_stripping_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_domain_stripping_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_domain_stripping_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorPort")
-    def radius_dynamic_author_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def radius_dynamic_author_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Specify Radius Dynamic Author Port
           - Range: `0`-`65535`
@@ -388,96 +388,96 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "radius_dynamic_author_port")
 
     @radius_dynamic_author_port.setter
-    def radius_dynamic_author_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def radius_dynamic_author_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "radius_dynamic_author_port", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorPortVariable")
-    def radius_dynamic_author_port_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_port_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_port_variable")
 
     @radius_dynamic_author_port_variable.setter
-    def radius_dynamic_author_port_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_port_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_port_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorServerKey")
-    def radius_dynamic_author_server_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_server_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Specify a radius dynamic author server-key
         """
         return pulumi.get(self, "radius_dynamic_author_server_key")
 
     @radius_dynamic_author_server_key.setter
-    def radius_dynamic_author_server_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_server_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_server_key", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorServerKeyVariable")
-    def radius_dynamic_author_server_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_server_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_server_key_variable")
 
     @radius_dynamic_author_server_key_variable.setter
-    def radius_dynamic_author_server_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_server_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_server_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusServerGroups")
-    def radius_server_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]:
+    def radius_server_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]:
         """
         Configure the Radius serverGroup
         """
         return pulumi.get(self, "radius_server_groups")
 
     @radius_server_groups.setter
-    def radius_server_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]):
+    def radius_server_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]):
         pulumi.set(self, "radius_server_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusTrustsecCtsAuthorizationList")
-    def radius_trustsec_cts_authorization_list(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_trustsec_cts_authorization_list(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CTS Authorization List
         """
         return pulumi.get(self, "radius_trustsec_cts_authorization_list")
 
     @radius_trustsec_cts_authorization_list.setter
-    def radius_trustsec_cts_authorization_list(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_trustsec_cts_authorization_list(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_trustsec_cts_authorization_list", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusTrustsecCtsAuthorizationListVariable")
-    def radius_trustsec_cts_authorization_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_trustsec_cts_authorization_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_trustsec_cts_authorization_list_variable")
 
     @radius_trustsec_cts_authorization_list_variable.setter
-    def radius_trustsec_cts_authorization_list_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_trustsec_cts_authorization_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_trustsec_cts_authorization_list_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusTrustsecGroup")
-    def radius_trustsec_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_trustsec_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RADIUS trustsec group
         """
         return pulumi.get(self, "radius_trustsec_group")
 
     @radius_trustsec_group.setter
-    def radius_trustsec_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_trustsec_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_trustsec_group", value)
 
     @_builtins.property
     @pulumi.getter(name="serverGroupsPriorityOrder")
-    def server_groups_priority_order(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def server_groups_priority_order(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ServerGroups priority order
           - Default value: `local`
@@ -485,68 +485,68 @@ class CedgeAaaFeatureTemplateArgs:
         return pulumi.get(self, "server_groups_priority_order")
 
     @server_groups_priority_order.setter
-    def server_groups_priority_order(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def server_groups_priority_order(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "server_groups_priority_order", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsServerGroups")
-    def tacacs_server_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]:
+    def tacacs_server_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]:
         """
         Configure the TACACS serverGroup
         """
         return pulumi.get(self, "tacacs_server_groups")
 
     @tacacs_server_groups.setter
-    def tacacs_server_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]):
+    def tacacs_server_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]):
         pulumi.set(self, "tacacs_server_groups", value)
 
     @_builtins.property
     @pulumi.getter
-    def users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]:
+    def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]:
         """
         Create local login account
         """
         return pulumi.get(self, "users")
 
     @users.setter
-    def users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]):
+    def users(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]):
         pulumi.set(self, "users", value)
 
 
 @pulumi.input_type
 class _CedgeAaaFeatureTemplateState:
     def __init__(__self__, *,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dot1x_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 dot1x_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_clients: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]] = None,
-                 radius_dynamic_author_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 radius_dynamic_author_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]] = None,
-                 radius_trustsec_cts_authorization_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_cts_authorization_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 server_groups_priority_order: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dot1x_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dot1x_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_clients: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]] = None,
+                 radius_dynamic_author_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 radius_dynamic_author_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]] = None,
+                 radius_trustsec_cts_authorization_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_cts_authorization_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 server_groups_priority_order: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CedgeAaaFeatureTemplate resources.
 
@@ -659,19 +659,19 @@ class _CedgeAaaFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="accountingRules")
-    def accounting_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]:
+    def accounting_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]:
         """
         Configure the accounting rules
         """
         return pulumi.get(self, "accounting_rules")
 
     @accounting_rules.setter
-    def accounting_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]):
+    def accounting_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]]]):
         pulumi.set(self, "accounting_rules", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommands")
-    def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_config_commands(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For configuration mode commands.
           - Default value: `false`
@@ -679,24 +679,24 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "authorization_config_commands")
 
     @authorization_config_commands.setter
-    def authorization_config_commands(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_config_commands(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_config_commands", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommandsVariable")
-    def authorization_config_commands_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_config_commands_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_config_commands_variable")
 
     @authorization_config_commands_variable.setter
-    def authorization_config_commands_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_config_commands_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_config_commands_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsole")
-    def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_console(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For enabling console authorization
           - Default value: `false`
@@ -704,48 +704,48 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "authorization_console")
 
     @authorization_console.setter
-    def authorization_console(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_console(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_console", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsoleVariable")
-    def authorization_console_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_console_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_console_variable")
 
     @authorization_console_variable.setter
-    def authorization_console_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_console_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_console_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationRules")
-    def authorization_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]:
+    def authorization_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]:
         """
         Configure the Authorization Rules
         """
         return pulumi.get(self, "authorization_rules")
 
     @authorization_rules.setter
-    def authorization_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]):
+    def authorization_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]]]):
         pulumi.set(self, "authorization_rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -753,12 +753,12 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAccounting")
-    def dot1x_accounting(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dot1x_accounting(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accounting configurations parameters
           - Default value: `false`
@@ -766,24 +766,24 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "dot1x_accounting")
 
     @dot1x_accounting.setter
-    def dot1x_accounting(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dot1x_accounting(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dot1x_accounting", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAccountingVariable")
-    def dot1x_accounting_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dot1x_accounting_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dot1x_accounting_variable")
 
     @dot1x_accounting_variable.setter
-    def dot1x_accounting_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dot1x_accounting_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dot1x_accounting_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAuthentication")
-    def dot1x_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dot1x_authentication(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Authentication configurations parameters
           - Default value: `false`
@@ -791,48 +791,48 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "dot1x_authentication")
 
     @dot1x_authentication.setter
-    def dot1x_authentication(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dot1x_authentication(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dot1x_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="dot1xAuthenticationVariable")
-    def dot1x_authentication_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dot1x_authentication_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dot1x_authentication_variable")
 
     @dot1x_authentication_variable.setter
-    def dot1x_authentication_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dot1x_authentication_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dot1x_authentication_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusClients")
-    def radius_clients(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]:
+    def radius_clients(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]:
         """
         Specify a RADIUS client
         """
         return pulumi.get(self, "radius_clients")
 
     @radius_clients.setter
-    def radius_clients(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]):
+    def radius_clients(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]]]):
         pulumi.set(self, "radius_clients", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationType")
-    def radius_dynamic_author_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Authentication Type
           - Choices: `any`, `all`, `session-key`
@@ -841,24 +841,24 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "radius_dynamic_author_authentication_type")
 
     @radius_dynamic_author_authentication_type.setter
-    def radius_dynamic_author_authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationTypeVariable")
-    def radius_dynamic_author_authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_authentication_type_variable")
 
     @radius_dynamic_author_authentication_type_variable.setter
-    def radius_dynamic_author_authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorDomainStripping")
-    def radius_dynamic_author_domain_stripping(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_domain_stripping(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Domain Stripping
           - Choices: `yes`, `no`, `right-to-left`
@@ -867,24 +867,24 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "radius_dynamic_author_domain_stripping")
 
     @radius_dynamic_author_domain_stripping.setter
-    def radius_dynamic_author_domain_stripping(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_domain_stripping(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_domain_stripping", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorDomainStrippingVariable")
-    def radius_dynamic_author_domain_stripping_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_domain_stripping_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_domain_stripping_variable")
 
     @radius_dynamic_author_domain_stripping_variable.setter
-    def radius_dynamic_author_domain_stripping_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_domain_stripping_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_domain_stripping_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorPort")
-    def radius_dynamic_author_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def radius_dynamic_author_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Specify Radius Dynamic Author Port
           - Range: `0`-`65535`
@@ -893,96 +893,96 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "radius_dynamic_author_port")
 
     @radius_dynamic_author_port.setter
-    def radius_dynamic_author_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def radius_dynamic_author_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "radius_dynamic_author_port", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorPortVariable")
-    def radius_dynamic_author_port_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_port_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_port_variable")
 
     @radius_dynamic_author_port_variable.setter
-    def radius_dynamic_author_port_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_port_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_port_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorServerKey")
-    def radius_dynamic_author_server_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_server_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Specify a radius dynamic author server-key
         """
         return pulumi.get(self, "radius_dynamic_author_server_key")
 
     @radius_dynamic_author_server_key.setter
-    def radius_dynamic_author_server_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_server_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_server_key", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusDynamicAuthorServerKeyVariable")
-    def radius_dynamic_author_server_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_dynamic_author_server_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_dynamic_author_server_key_variable")
 
     @radius_dynamic_author_server_key_variable.setter
-    def radius_dynamic_author_server_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_dynamic_author_server_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_dynamic_author_server_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusServerGroups")
-    def radius_server_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]:
+    def radius_server_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]:
         """
         Configure the Radius serverGroup
         """
         return pulumi.get(self, "radius_server_groups")
 
     @radius_server_groups.setter
-    def radius_server_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]):
+    def radius_server_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupArgs']]]]):
         pulumi.set(self, "radius_server_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusTrustsecCtsAuthorizationList")
-    def radius_trustsec_cts_authorization_list(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_trustsec_cts_authorization_list(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         CTS Authorization List
         """
         return pulumi.get(self, "radius_trustsec_cts_authorization_list")
 
     @radius_trustsec_cts_authorization_list.setter
-    def radius_trustsec_cts_authorization_list(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_trustsec_cts_authorization_list(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_trustsec_cts_authorization_list", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusTrustsecCtsAuthorizationListVariable")
-    def radius_trustsec_cts_authorization_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_trustsec_cts_authorization_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_trustsec_cts_authorization_list_variable")
 
     @radius_trustsec_cts_authorization_list_variable.setter
-    def radius_trustsec_cts_authorization_list_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_trustsec_cts_authorization_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_trustsec_cts_authorization_list_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusTrustsecGroup")
-    def radius_trustsec_group(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_trustsec_group(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         RADIUS trustsec group
         """
         return pulumi.get(self, "radius_trustsec_group")
 
     @radius_trustsec_group.setter
-    def radius_trustsec_group(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_trustsec_group(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_trustsec_group", value)
 
     @_builtins.property
     @pulumi.getter(name="serverGroupsPriorityOrder")
-    def server_groups_priority_order(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def server_groups_priority_order(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ServerGroups priority order
           - Default value: `local`
@@ -990,55 +990,55 @@ class _CedgeAaaFeatureTemplateState:
         return pulumi.get(self, "server_groups_priority_order")
 
     @server_groups_priority_order.setter
-    def server_groups_priority_order(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def server_groups_priority_order(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "server_groups_priority_order", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsServerGroups")
-    def tacacs_server_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]:
+    def tacacs_server_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]:
         """
         Configure the TACACS serverGroup
         """
         return pulumi.get(self, "tacacs_server_groups")
 
     @tacacs_server_groups.setter
-    def tacacs_server_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]):
+    def tacacs_server_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]]]):
         pulumi.set(self, "tacacs_server_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]:
+    def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]:
         """
         Create local login account
         """
         return pulumi.get(self, "users")
 
     @users.setter
-    def users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]):
+    def users(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]]]):
         pulumi.set(self, "users", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1048,35 +1048,35 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dot1x_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 dot1x_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_clients: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]]] = None,
-                 radius_dynamic_author_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 radius_dynamic_author_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict']]]]] = None,
-                 radius_trustsec_cts_authorization_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_cts_authorization_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 server_groups_priority_order: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dot1x_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dot1x_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_clients: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]]] = None,
+                 radius_dynamic_author_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 radius_dynamic_author_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict']]]]] = None,
+                 radius_trustsec_cts_authorization_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_cts_authorization_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 server_groups_priority_order: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a cEdge AAA feature template.
@@ -1335,35 +1335,35 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dot1x_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 dot1x_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dot1x_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_clients: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]]] = None,
-                 radius_dynamic_author_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_domain_stripping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 radius_dynamic_author_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_dynamic_author_server_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict']]]]] = None,
-                 radius_trustsec_cts_authorization_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_cts_authorization_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_trustsec_group: Optional[pulumi.Input[_builtins.str]] = None,
-                 server_groups_priority_order: Optional[pulumi.Input[_builtins.str]] = None,
-                 tacacs_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dot1x_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dot1x_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dot1x_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_clients: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]]] = None,
+                 radius_dynamic_author_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_domain_stripping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 radius_dynamic_author_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_dynamic_author_server_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict']]]]] = None,
+                 radius_trustsec_cts_authorization_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_cts_authorization_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_trustsec_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 server_groups_priority_order: pulumi.Input[Optional[_builtins.str]] = None,
+                 tacacs_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1418,37 +1418,37 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]]] = None,
-            authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-            authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-            authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dot1x_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-            dot1x_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            dot1x_authentication: Optional[pulumi.Input[_builtins.bool]] = None,
-            dot1x_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_clients: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]]] = None,
-            radius_dynamic_author_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_dynamic_author_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_dynamic_author_domain_stripping: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_dynamic_author_domain_stripping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_dynamic_author_port: Optional[pulumi.Input[_builtins.int]] = None,
-            radius_dynamic_author_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_dynamic_author_server_key: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_dynamic_author_server_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict']]]]] = None,
-            radius_trustsec_cts_authorization_list: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_trustsec_cts_authorization_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_trustsec_group: Optional[pulumi.Input[_builtins.str]] = None,
-            server_groups_priority_order: Optional[pulumi.Input[_builtins.str]] = None,
-            tacacs_server_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CedgeAaaFeatureTemplate':
+            accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]]] = None,
+            authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dot1x_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+            dot1x_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            dot1x_authentication: pulumi.Input[Optional[_builtins.bool]] = None,
+            dot1x_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_clients: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]]] = None,
+            radius_dynamic_author_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_domain_stripping: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_domain_stripping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_port: pulumi.Input[Optional[_builtins.int]] = None,
+            radius_dynamic_author_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_server_key: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_dynamic_author_server_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusServerGroupArgs', 'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict']]]]] = None,
+            radius_trustsec_cts_authorization_list: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_trustsec_cts_authorization_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_trustsec_group: pulumi.Input[Optional[_builtins.str]] = None,
+            server_groups_priority_order: pulumi.Input[Optional[_builtins.str]] = None,
+            tacacs_server_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CedgeAaaFeatureTemplate':
         """
         Get an existing CedgeAaaFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

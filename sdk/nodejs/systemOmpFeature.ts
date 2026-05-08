@@ -555,302 +555,302 @@ export interface SystemOmpFeatureState {
      * BGP
      *   - Default value: `false`
      */
-    advertiseIpv4Bgp?: pulumi.Input<boolean>;
+    advertiseIpv4Bgp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4BgpVariable?: pulumi.Input<string>;
+    advertiseIpv4BgpVariable?: pulumi.Input<string | undefined>;
     /**
      * Connected
      *   - Default value: `true`
      */
-    advertiseIpv4Connected?: pulumi.Input<boolean>;
+    advertiseIpv4Connected?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4ConnectedVariable?: pulumi.Input<string>;
+    advertiseIpv4ConnectedVariable?: pulumi.Input<string | undefined>;
     /**
      * EIGRP
      *   - Default value: `false`
      */
-    advertiseIpv4Eigrp?: pulumi.Input<boolean>;
+    advertiseIpv4Eigrp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4EigrpVariable?: pulumi.Input<string>;
+    advertiseIpv4EigrpVariable?: pulumi.Input<string | undefined>;
     /**
      * ISIS
      *   - Default value: `false`
      */
-    advertiseIpv4Isis?: pulumi.Input<boolean>;
+    advertiseIpv4Isis?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4IsisVariable?: pulumi.Input<string>;
+    advertiseIpv4IsisVariable?: pulumi.Input<string | undefined>;
     /**
      * LISP
      *   - Default value: `false`
      */
-    advertiseIpv4Lisp?: pulumi.Input<boolean>;
+    advertiseIpv4Lisp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4LispVariable?: pulumi.Input<string>;
+    advertiseIpv4LispVariable?: pulumi.Input<string | undefined>;
     /**
      * OSPF
      *   - Default value: `false`
      */
-    advertiseIpv4Ospf?: pulumi.Input<boolean>;
+    advertiseIpv4Ospf?: pulumi.Input<boolean | undefined>;
     /**
      * OSPFV3
      *   - Default value: `false`
      */
-    advertiseIpv4OspfV3?: pulumi.Input<boolean>;
+    advertiseIpv4OspfV3?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4OspfV3Variable?: pulumi.Input<string>;
+    advertiseIpv4OspfV3Variable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4OspfVariable?: pulumi.Input<string>;
+    advertiseIpv4OspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Static
      *   - Default value: `true`
      */
-    advertiseIpv4Static?: pulumi.Input<boolean>;
+    advertiseIpv4Static?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4StaticVariable?: pulumi.Input<string>;
+    advertiseIpv4StaticVariable?: pulumi.Input<string | undefined>;
     /**
      * BGP
      *   - Default value: `false`
      */
-    advertiseIpv6Bgp?: pulumi.Input<boolean>;
+    advertiseIpv6Bgp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6BgpVariable?: pulumi.Input<string>;
+    advertiseIpv6BgpVariable?: pulumi.Input<string | undefined>;
     /**
      * Connected
      *   - Default value: `true`
      */
-    advertiseIpv6Connected?: pulumi.Input<boolean>;
+    advertiseIpv6Connected?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6ConnectedVariable?: pulumi.Input<string>;
+    advertiseIpv6ConnectedVariable?: pulumi.Input<string | undefined>;
     /**
      * EIGRP
      *   - Default value: `false`
      */
-    advertiseIpv6Eigrp?: pulumi.Input<boolean>;
+    advertiseIpv6Eigrp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6EigrpVariable?: pulumi.Input<string>;
+    advertiseIpv6EigrpVariable?: pulumi.Input<string | undefined>;
     /**
      * ISIS
      *   - Default value: `false`
      */
-    advertiseIpv6Isis?: pulumi.Input<boolean>;
+    advertiseIpv6Isis?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6IsisVariable?: pulumi.Input<string>;
+    advertiseIpv6IsisVariable?: pulumi.Input<string | undefined>;
     /**
      * LISP
      *   - Default value: `false`
      */
-    advertiseIpv6Lisp?: pulumi.Input<boolean>;
+    advertiseIpv6Lisp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6LispVariable?: pulumi.Input<string>;
+    advertiseIpv6LispVariable?: pulumi.Input<string | undefined>;
     /**
      * OSPF
      *   - Default value: `false`
      */
-    advertiseIpv6Ospf?: pulumi.Input<boolean>;
+    advertiseIpv6Ospf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6OspfVariable?: pulumi.Input<string>;
+    advertiseIpv6OspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Static
      *   - Default value: `true`
      */
-    advertiseIpv6Static?: pulumi.Input<boolean>;
+    advertiseIpv6Static?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6StaticVariable?: pulumi.Input<string>;
+    advertiseIpv6StaticVariable?: pulumi.Input<string | undefined>;
     /**
      * Advertisement Interval (seconds)
      *   - Range: `0`-`65535`
      *   - Default value: `1`
      */
-    advertisementInterval?: pulumi.Input<number>;
+    advertisementInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    advertisementIntervalVariable?: pulumi.Input<string>;
+    advertisementIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable BGP AS Path Auto-Translation
      *   - Default value: `false`
      */
-    aspathAutoTranslation?: pulumi.Input<boolean>;
+    aspathAutoTranslation?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    aspathAutoTranslationVariable?: pulumi.Input<string>;
+    aspathAutoTranslationVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
      *   - Range: `1`-`0`
      *   - Default value: `4`
      */
-    ecmpLimit?: pulumi.Input<number>;
+    ecmpLimit?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ecmpLimitVariable?: pulumi.Input<string>;
+    ecmpLimitVariable?: pulumi.Input<string | undefined>;
     /**
      * EOR Timer
      *   - Range: `1`-`3600`
      *   - Default value: `300`
      */
-    eorTimer?: pulumi.Input<number>;
+    eorTimer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    eorTimerVariable?: pulumi.Input<string>;
+    eorTimerVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Graceful Restart for OMP
      *   - Default value: `true`
      */
-    gracefulRestart?: pulumi.Input<boolean>;
+    gracefulRestart?: pulumi.Input<boolean | undefined>;
     /**
      * Graceful Restart Timer (seconds)
      *   - Range: `1`-`604800`
      *   - Default value: `43200`
      */
-    gracefulRestartTimer?: pulumi.Input<number>;
+    gracefulRestartTimer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gracefulRestartTimerVariable?: pulumi.Input<string>;
+    gracefulRestartTimerVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    gracefulRestartVariable?: pulumi.Input<string>;
+    gracefulRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Hold Time (seconds)
      *   - Default value: `60`
      */
-    holdtime?: pulumi.Input<number>;
+    holdtime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdtimeVariable?: pulumi.Input<string>;
+    holdtimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Treat hierarchical and direct (secondary region) paths equally
      *   - Default value: `false`
      */
-    ignoreRegionPathLength?: pulumi.Input<boolean>;
+    ignoreRegionPathLength?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ignoreRegionPathLengthVariable?: pulumi.Input<string>;
+    ignoreRegionPathLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * OMP Admin Distance IPv4
      *   - Range: `1`-`255`
      *   - Default value: `251`
      */
-    ompAdminDistanceIpv4?: pulumi.Input<number>;
+    ompAdminDistanceIpv4?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * OMP Admin Distance IPv6
      *   - Range: `1`-`255`
      *   - Default value: `251`
      */
-    ompAdminDistanceIpv6?: pulumi.Input<number>;
+    ompAdminDistanceIpv6?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Overlay AS Number
      *   - Range: `1`-`4294967295`
      */
-    overlayAs?: pulumi.Input<number>;
+    overlayAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    overlayAsVariable?: pulumi.Input<string>;
+    overlayAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Number of Paths Advertised per Prefix
      *   - Range: `1`-`16`
      *   - Default value: `4`
      */
-    pathsAdvertisedPerPrefix?: pulumi.Input<number>;
+    pathsAdvertisedPerPrefix?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pathsAdvertisedPerPrefixVariable?: pulumi.Input<string>;
+    pathsAdvertisedPerPrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Shutdown
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Site Types for 20.12 backward compatiblity
      */
-    siteTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    siteTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    siteTypesForTransportGatewayVariable?: pulumi.Input<string>;
+    siteTypesForTransportGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * Site Types
      */
-    siteTypesForTransportGateways?: pulumi.Input<pulumi.Input<string>[]>;
+    siteTypesForTransportGateways?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    siteTypesVariable?: pulumi.Input<string>;
+    siteTypesVariable?: pulumi.Input<string | undefined>;
     /**
      * Transport Gateway Path Behavior
      *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
-    transportGateway?: pulumi.Input<string>;
+    transportGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    transportGatewayVariable?: pulumi.Input<string>;
+    transportGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -861,180 +861,180 @@ export interface SystemOmpFeatureArgs {
      * BGP
      *   - Default value: `false`
      */
-    advertiseIpv4Bgp?: pulumi.Input<boolean>;
+    advertiseIpv4Bgp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4BgpVariable?: pulumi.Input<string>;
+    advertiseIpv4BgpVariable?: pulumi.Input<string | undefined>;
     /**
      * Connected
      *   - Default value: `true`
      */
-    advertiseIpv4Connected?: pulumi.Input<boolean>;
+    advertiseIpv4Connected?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4ConnectedVariable?: pulumi.Input<string>;
+    advertiseIpv4ConnectedVariable?: pulumi.Input<string | undefined>;
     /**
      * EIGRP
      *   - Default value: `false`
      */
-    advertiseIpv4Eigrp?: pulumi.Input<boolean>;
+    advertiseIpv4Eigrp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4EigrpVariable?: pulumi.Input<string>;
+    advertiseIpv4EigrpVariable?: pulumi.Input<string | undefined>;
     /**
      * ISIS
      *   - Default value: `false`
      */
-    advertiseIpv4Isis?: pulumi.Input<boolean>;
+    advertiseIpv4Isis?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4IsisVariable?: pulumi.Input<string>;
+    advertiseIpv4IsisVariable?: pulumi.Input<string | undefined>;
     /**
      * LISP
      *   - Default value: `false`
      */
-    advertiseIpv4Lisp?: pulumi.Input<boolean>;
+    advertiseIpv4Lisp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4LispVariable?: pulumi.Input<string>;
+    advertiseIpv4LispVariable?: pulumi.Input<string | undefined>;
     /**
      * OSPF
      *   - Default value: `false`
      */
-    advertiseIpv4Ospf?: pulumi.Input<boolean>;
+    advertiseIpv4Ospf?: pulumi.Input<boolean | undefined>;
     /**
      * OSPFV3
      *   - Default value: `false`
      */
-    advertiseIpv4OspfV3?: pulumi.Input<boolean>;
+    advertiseIpv4OspfV3?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4OspfV3Variable?: pulumi.Input<string>;
+    advertiseIpv4OspfV3Variable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4OspfVariable?: pulumi.Input<string>;
+    advertiseIpv4OspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Static
      *   - Default value: `true`
      */
-    advertiseIpv4Static?: pulumi.Input<boolean>;
+    advertiseIpv4Static?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv4StaticVariable?: pulumi.Input<string>;
+    advertiseIpv4StaticVariable?: pulumi.Input<string | undefined>;
     /**
      * BGP
      *   - Default value: `false`
      */
-    advertiseIpv6Bgp?: pulumi.Input<boolean>;
+    advertiseIpv6Bgp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6BgpVariable?: pulumi.Input<string>;
+    advertiseIpv6BgpVariable?: pulumi.Input<string | undefined>;
     /**
      * Connected
      *   - Default value: `true`
      */
-    advertiseIpv6Connected?: pulumi.Input<boolean>;
+    advertiseIpv6Connected?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6ConnectedVariable?: pulumi.Input<string>;
+    advertiseIpv6ConnectedVariable?: pulumi.Input<string | undefined>;
     /**
      * EIGRP
      *   - Default value: `false`
      */
-    advertiseIpv6Eigrp?: pulumi.Input<boolean>;
+    advertiseIpv6Eigrp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6EigrpVariable?: pulumi.Input<string>;
+    advertiseIpv6EigrpVariable?: pulumi.Input<string | undefined>;
     /**
      * ISIS
      *   - Default value: `false`
      */
-    advertiseIpv6Isis?: pulumi.Input<boolean>;
+    advertiseIpv6Isis?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6IsisVariable?: pulumi.Input<string>;
+    advertiseIpv6IsisVariable?: pulumi.Input<string | undefined>;
     /**
      * LISP
      *   - Default value: `false`
      */
-    advertiseIpv6Lisp?: pulumi.Input<boolean>;
+    advertiseIpv6Lisp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6LispVariable?: pulumi.Input<string>;
+    advertiseIpv6LispVariable?: pulumi.Input<string | undefined>;
     /**
      * OSPF
      *   - Default value: `false`
      */
-    advertiseIpv6Ospf?: pulumi.Input<boolean>;
+    advertiseIpv6Ospf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6OspfVariable?: pulumi.Input<string>;
+    advertiseIpv6OspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Static
      *   - Default value: `true`
      */
-    advertiseIpv6Static?: pulumi.Input<boolean>;
+    advertiseIpv6Static?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    advertiseIpv6StaticVariable?: pulumi.Input<string>;
+    advertiseIpv6StaticVariable?: pulumi.Input<string | undefined>;
     /**
      * Advertisement Interval (seconds)
      *   - Range: `0`-`65535`
      *   - Default value: `1`
      */
-    advertisementInterval?: pulumi.Input<number>;
+    advertisementInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    advertisementIntervalVariable?: pulumi.Input<string>;
+    advertisementIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable BGP AS Path Auto-Translation
      *   - Default value: `false`
      */
-    aspathAutoTranslation?: pulumi.Input<boolean>;
+    aspathAutoTranslation?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    aspathAutoTranslationVariable?: pulumi.Input<string>;
+    aspathAutoTranslationVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
      *   - Range: `1`-`0`
      *   - Default value: `4`
      */
-    ecmpLimit?: pulumi.Input<number>;
+    ecmpLimit?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ecmpLimitVariable?: pulumi.Input<string>;
+    ecmpLimitVariable?: pulumi.Input<string | undefined>;
     /**
      * EOR Timer
      *   - Range: `1`-`3600`
      *   - Default value: `300`
      */
-    eorTimer?: pulumi.Input<number>;
+    eorTimer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    eorTimerVariable?: pulumi.Input<string>;
+    eorTimerVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -1043,114 +1043,114 @@ export interface SystemOmpFeatureArgs {
      * Graceful Restart for OMP
      *   - Default value: `true`
      */
-    gracefulRestart?: pulumi.Input<boolean>;
+    gracefulRestart?: pulumi.Input<boolean | undefined>;
     /**
      * Graceful Restart Timer (seconds)
      *   - Range: `1`-`604800`
      *   - Default value: `43200`
      */
-    gracefulRestartTimer?: pulumi.Input<number>;
+    gracefulRestartTimer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gracefulRestartTimerVariable?: pulumi.Input<string>;
+    gracefulRestartTimerVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    gracefulRestartVariable?: pulumi.Input<string>;
+    gracefulRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Hold Time (seconds)
      *   - Default value: `60`
      */
-    holdtime?: pulumi.Input<number>;
+    holdtime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdtimeVariable?: pulumi.Input<string>;
+    holdtimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Treat hierarchical and direct (secondary region) paths equally
      *   - Default value: `false`
      */
-    ignoreRegionPathLength?: pulumi.Input<boolean>;
+    ignoreRegionPathLength?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ignoreRegionPathLengthVariable?: pulumi.Input<string>;
+    ignoreRegionPathLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * OMP Admin Distance IPv4
      *   - Range: `1`-`255`
      *   - Default value: `251`
      */
-    ompAdminDistanceIpv4?: pulumi.Input<number>;
+    ompAdminDistanceIpv4?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * OMP Admin Distance IPv6
      *   - Range: `1`-`255`
      *   - Default value: `251`
      */
-    ompAdminDistanceIpv6?: pulumi.Input<number>;
+    ompAdminDistanceIpv6?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Overlay AS Number
      *   - Range: `1`-`4294967295`
      */
-    overlayAs?: pulumi.Input<number>;
+    overlayAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    overlayAsVariable?: pulumi.Input<string>;
+    overlayAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Number of Paths Advertised per Prefix
      *   - Range: `1`-`16`
      *   - Default value: `4`
      */
-    pathsAdvertisedPerPrefix?: pulumi.Input<number>;
+    pathsAdvertisedPerPrefix?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pathsAdvertisedPerPrefixVariable?: pulumi.Input<string>;
+    pathsAdvertisedPerPrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Shutdown
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Site Types for 20.12 backward compatiblity
      */
-    siteTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    siteTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    siteTypesForTransportGatewayVariable?: pulumi.Input<string>;
+    siteTypesForTransportGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * Site Types
      */
-    siteTypesForTransportGateways?: pulumi.Input<pulumi.Input<string>[]>;
+    siteTypesForTransportGateways?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    siteTypesVariable?: pulumi.Input<string>;
+    siteTypesVariable?: pulumi.Input<string | undefined>;
     /**
      * Transport Gateway Path Behavior
      *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
-    transportGateway?: pulumi.Input<string>;
+    transportGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    transportGatewayVariable?: pulumi.Input<string>;
+    transportGatewayVariable?: pulumi.Input<string | undefined>;
 }

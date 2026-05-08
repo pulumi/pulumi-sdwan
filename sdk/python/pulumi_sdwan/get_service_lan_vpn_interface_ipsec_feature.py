@@ -992,9 +992,9 @@ def get_service_lan_vpn_interface_ipsec_feature(feature_profile_id: Optional[_bu
         tunnel_source_ipv6_address=pulumi.get(__ret__, 'tunnel_source_ipv6_address'),
         tunnel_source_ipv6_address_variable=pulumi.get(__ret__, 'tunnel_source_ipv6_address_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                       id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                       service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                       id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                       service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnInterfaceIpsecFeatureResult]:
     """
     This data source can read the Service LAN VPN Interface IPSec Feature.

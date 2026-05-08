@@ -229,81 +229,81 @@ export interface OtherUcseFeatureState {
      * Dedicated
      *   - Default value: `true`
      */
-    accessPortDedicated?: pulumi.Input<boolean>;
+    accessPortDedicated?: pulumi.Input<boolean | undefined>;
     /**
      * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      */
-    accessPortSharedFailoverType?: pulumi.Input<string>;
+    accessPortSharedFailoverType?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
-    accessPortSharedType?: pulumi.Input<string>;
+    accessPortSharedType?: pulumi.Input<string | undefined>;
     /**
      * Assign priority
      *   - Range: `0`-`7`
      */
-    assignPriority?: pulumi.Input<number>;
+    assignPriority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    assignPriorityVariable?: pulumi.Input<string>;
+    assignPriorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Bay
      *   - Range: `0`-`2`
      */
-    bay?: pulumi.Input<number>;
+    bay?: pulumi.Input<number | undefined>;
     /**
      * Assign default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    defaultGatewayVariable?: pulumi.Input<string>;
+    defaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.OtherUcseFeatureInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.OtherUcseFeatureInterface>[] | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Slot
      *   - Range: `0`-`3`
      */
-    slot?: pulumi.Input<number>;
+    slot?: pulumi.Input<number | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Assign Vlan Id
      *   - Range: `2`-`4095`
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vlanIdVariable?: pulumi.Input<string>;
+    vlanIdVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -314,26 +314,26 @@ export interface OtherUcseFeatureArgs {
      * Dedicated
      *   - Default value: `true`
      */
-    accessPortDedicated?: pulumi.Input<boolean>;
+    accessPortDedicated?: pulumi.Input<boolean | undefined>;
     /**
      * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      */
-    accessPortSharedFailoverType?: pulumi.Input<string>;
+    accessPortSharedFailoverType?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
-    accessPortSharedType?: pulumi.Input<string>;
+    accessPortSharedType?: pulumi.Input<string | undefined>;
     /**
      * Assign priority
      *   - Range: `0`-`7`
      */
-    assignPriority?: pulumi.Input<number>;
+    assignPriority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    assignPriorityVariable?: pulumi.Input<string>;
+    assignPriorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Bay
      *   - Range: `0`-`2`
@@ -342,15 +342,15 @@ export interface OtherUcseFeatureArgs {
     /**
      * Assign default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    defaultGatewayVariable?: pulumi.Input<string>;
+    defaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -358,19 +358,19 @@ export interface OtherUcseFeatureArgs {
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.OtherUcseFeatureInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.OtherUcseFeatureInterface>[] | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Slot
      *   - Range: `0`-`3`
@@ -380,9 +380,9 @@ export interface OtherUcseFeatureArgs {
      * Assign Vlan Id
      *   - Range: `2`-`4095`
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vlanIdVariable?: pulumi.Input<string>;
+    vlanIdVariable?: pulumi.Input<string | undefined>;
 }

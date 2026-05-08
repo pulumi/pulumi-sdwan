@@ -20,20 +20,20 @@ __all__ = ['TransportGpsFeatureArgs', 'TransportGpsFeature']
 class TransportGpsFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 gps_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 nmea_destination_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nmea_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 gps_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 nmea_destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nmea_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportGpsFeature resource.
 
@@ -102,19 +102,19 @@ class TransportGpsFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsEnable")
-    def gps_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def gps_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable/disable GPS
           - Default value: `false`
@@ -122,24 +122,24 @@ class TransportGpsFeatureArgs:
         return pulumi.get(self, "gps_enable")
 
     @gps_enable.setter
-    def gps_enable(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def gps_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "gps_enable", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsEnableVariable")
-    def gps_enable_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gps_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "gps_enable_variable")
 
     @gps_enable_variable.setter
-    def gps_enable_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gps_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gps_enable_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsMode")
-    def gps_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gps_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Select GPS mode
           - Choices: `ms-based`, `standalone`
@@ -148,60 +148,60 @@ class TransportGpsFeatureArgs:
         return pulumi.get(self, "gps_mode")
 
     @gps_mode.setter
-    def gps_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gps_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gps_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsModeVariable")
-    def gps_mode_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gps_mode_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "gps_mode_variable")
 
     @gps_mode_variable.setter
-    def gps_mode_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gps_mode_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gps_mode_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationAddress")
-    def nmea_destination_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_destination_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Destination address
         """
         return pulumi.get(self, "nmea_destination_address")
 
     @nmea_destination_address.setter
-    def nmea_destination_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_destination_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_destination_address", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationAddressVariable")
-    def nmea_destination_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_destination_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_destination_address_variable")
 
     @nmea_destination_address_variable.setter
-    def nmea_destination_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_destination_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_destination_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationPort")
-    def nmea_destination_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nmea_destination_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Destination port
           - Range: `1`-`65535`
@@ -209,24 +209,24 @@ class TransportGpsFeatureArgs:
         return pulumi.get(self, "nmea_destination_port")
 
     @nmea_destination_port.setter
-    def nmea_destination_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nmea_destination_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nmea_destination_port", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationPortVariable")
-    def nmea_destination_port_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_destination_port_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_destination_port_variable")
 
     @nmea_destination_port_variable.setter
-    def nmea_destination_port_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_destination_port_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_destination_port_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaEnable")
-    def nmea_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def nmea_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable/disable NMEA data
           - Default value: `false`
@@ -234,65 +234,65 @@ class TransportGpsFeatureArgs:
         return pulumi.get(self, "nmea_enable")
 
     @nmea_enable.setter
-    def nmea_enable(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def nmea_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "nmea_enable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaEnableVariable")
-    def nmea_enable_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_enable_variable")
 
     @nmea_enable_variable.setter
-    def nmea_enable_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_enable_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaSourceAddress")
-    def nmea_source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_source_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Source address
         """
         return pulumi.get(self, "nmea_source_address")
 
     @nmea_source_address.setter
-    def nmea_source_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_source_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_source_address", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaSourceAddressVariable")
-    def nmea_source_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_source_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_source_address_variable")
 
     @nmea_source_address_variable.setter
-    def nmea_source_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_source_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_source_address_variable", value)
 
 
 @pulumi.input_type
 class _TransportGpsFeatureState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 gps_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 nmea_destination_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nmea_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 gps_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 nmea_destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nmea_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportGpsFeature resources.
 
@@ -353,31 +353,31 @@ class _TransportGpsFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsEnable")
-    def gps_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def gps_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable/disable GPS
           - Default value: `false`
@@ -385,24 +385,24 @@ class _TransportGpsFeatureState:
         return pulumi.get(self, "gps_enable")
 
     @gps_enable.setter
-    def gps_enable(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def gps_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "gps_enable", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsEnableVariable")
-    def gps_enable_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gps_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "gps_enable_variable")
 
     @gps_enable_variable.setter
-    def gps_enable_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gps_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gps_enable_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsMode")
-    def gps_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gps_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Select GPS mode
           - Choices: `ms-based`, `standalone`
@@ -411,60 +411,60 @@ class _TransportGpsFeatureState:
         return pulumi.get(self, "gps_mode")
 
     @gps_mode.setter
-    def gps_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gps_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gps_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="gpsModeVariable")
-    def gps_mode_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gps_mode_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "gps_mode_variable")
 
     @gps_mode_variable.setter
-    def gps_mode_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gps_mode_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gps_mode_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationAddress")
-    def nmea_destination_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_destination_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Destination address
         """
         return pulumi.get(self, "nmea_destination_address")
 
     @nmea_destination_address.setter
-    def nmea_destination_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_destination_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_destination_address", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationAddressVariable")
-    def nmea_destination_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_destination_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_destination_address_variable")
 
     @nmea_destination_address_variable.setter
-    def nmea_destination_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_destination_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_destination_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationPort")
-    def nmea_destination_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nmea_destination_port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Destination port
           - Range: `1`-`65535`
@@ -472,24 +472,24 @@ class _TransportGpsFeatureState:
         return pulumi.get(self, "nmea_destination_port")
 
     @nmea_destination_port.setter
-    def nmea_destination_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nmea_destination_port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nmea_destination_port", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaDestinationPortVariable")
-    def nmea_destination_port_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_destination_port_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_destination_port_variable")
 
     @nmea_destination_port_variable.setter
-    def nmea_destination_port_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_destination_port_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_destination_port_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaEnable")
-    def nmea_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def nmea_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable/disable NMEA data
           - Default value: `false`
@@ -497,55 +497,55 @@ class _TransportGpsFeatureState:
         return pulumi.get(self, "nmea_enable")
 
     @nmea_enable.setter
-    def nmea_enable(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def nmea_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "nmea_enable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaEnableVariable")
-    def nmea_enable_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_enable_variable")
 
     @nmea_enable_variable.setter
-    def nmea_enable_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_enable_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaSourceAddress")
-    def nmea_source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_source_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Source address
         """
         return pulumi.get(self, "nmea_source_address")
 
     @nmea_source_address.setter
-    def nmea_source_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_source_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_source_address", value)
 
     @_builtins.property
     @pulumi.getter(name="nmeaSourceAddressVariable")
-    def nmea_source_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nmea_source_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nmea_source_address_variable")
 
     @nmea_source_address_variable.setter
-    def nmea_source_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nmea_source_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nmea_source_address_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -555,21 +555,21 @@ class TransportGpsFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 gps_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 nmea_destination_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nmea_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 gps_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 nmea_destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nmea_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Transport GPS Feature.
@@ -681,21 +681,21 @@ class TransportGpsFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 gps_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 gps_mode_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_destination_port: Optional[pulumi.Input[_builtins.int]] = None,
-                 nmea_destination_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nmea_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 nmea_source_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 gps_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+                 nmea_destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nmea_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 nmea_source_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -733,22 +733,22 @@ class TransportGpsFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            gps_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-            gps_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            gps_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            gps_mode_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            nmea_destination_address: Optional[pulumi.Input[_builtins.str]] = None,
-            nmea_destination_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            nmea_destination_port: Optional[pulumi.Input[_builtins.int]] = None,
-            nmea_destination_port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            nmea_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-            nmea_enable_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            nmea_source_address: Optional[pulumi.Input[_builtins.str]] = None,
-            nmea_source_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'TransportGpsFeature':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            gps_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            gps_mode_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_destination_address: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_destination_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_destination_port: pulumi.Input[Optional[_builtins.int]] = None,
+            nmea_destination_port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            nmea_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_source_address: pulumi.Input[Optional[_builtins.str]] = None,
+            nmea_source_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TransportGpsFeature':
         """
         Get an existing TransportGpsFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

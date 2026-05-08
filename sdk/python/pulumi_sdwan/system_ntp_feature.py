@@ -22,18 +22,18 @@ __all__ = ['SystemNtpFeatureArgs', 'SystemNtpFeature']
 class SystemNtpFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]] = None,
-                 authoritative_ntp_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authoritative_ntp_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]] = None,
+                 authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemNtpFeature resource.
 
@@ -93,19 +93,19 @@ class SystemNtpFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationKeys")
-    def authentication_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]:
+    def authentication_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]:
         """
         Set MD5 authentication key
         """
         return pulumi.get(self, "authentication_keys")
 
     @authentication_keys.setter
-    def authentication_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]):
+    def authentication_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]):
         pulumi.set(self, "authentication_keys", value)
 
     @_builtins.property
     @pulumi.getter(name="authoritativeNtpServer")
-    def authoritative_ntp_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authoritative_ntp_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable device as NTP Leader
           - Default value: `false`
@@ -113,84 +113,84 @@ class SystemNtpFeatureArgs:
         return pulumi.get(self, "authoritative_ntp_server")
 
     @authoritative_ntp_server.setter
-    def authoritative_ntp_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authoritative_ntp_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authoritative_ntp_server", value)
 
     @_builtins.property
     @pulumi.getter(name="authoritativeNtpServerVariable")
-    def authoritative_ntp_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authoritative_ntp_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authoritative_ntp_server_variable")
 
     @authoritative_ntp_server_variable.setter
-    def authoritative_ntp_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authoritative_ntp_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authoritative_ntp_server_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]:
+    def servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]:
         """
         Configure NTP servers
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]):
+    def servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterface")
-    def source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable device as NTP Leader
         """
         return pulumi.get(self, "source_interface")
 
     @source_interface.setter
-    def source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterfaceVariable")
-    def source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "source_interface_variable")
 
     @source_interface_variable.setter
-    def source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def stratum(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Enable device as NTP Leader
           - Range: `1`-`15`
@@ -198,63 +198,63 @@ class SystemNtpFeatureArgs:
         return pulumi.get(self, "stratum")
 
     @stratum.setter
-    def stratum(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def stratum(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "stratum", value)
 
     @_builtins.property
     @pulumi.getter(name="stratumVariable")
-    def stratum_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def stratum_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "stratum_variable")
 
     @stratum_variable.setter
-    def stratum_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def stratum_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "stratum_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeys")
-    def trusted_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def trusted_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Designate authentication key as trustworthy
         """
         return pulumi.get(self, "trusted_keys")
 
     @trusted_keys.setter
-    def trusted_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def trusted_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "trusted_keys", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeysVariable")
-    def trusted_keys_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trusted_keys_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "trusted_keys_variable")
 
     @trusted_keys_variable.setter
-    def trusted_keys_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trusted_keys_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trusted_keys_variable", value)
 
 
 @pulumi.input_type
 class _SystemNtpFeatureState:
     def __init__(__self__, *,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]] = None,
-                 authoritative_ntp_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authoritative_ntp_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]] = None,
+                 authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemNtpFeature resources.
 
@@ -306,19 +306,19 @@ class _SystemNtpFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationKeys")
-    def authentication_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]:
+    def authentication_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]:
         """
         Set MD5 authentication key
         """
         return pulumi.get(self, "authentication_keys")
 
     @authentication_keys.setter
-    def authentication_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]):
+    def authentication_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]]):
         pulumi.set(self, "authentication_keys", value)
 
     @_builtins.property
     @pulumi.getter(name="authoritativeNtpServer")
-    def authoritative_ntp_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authoritative_ntp_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable device as NTP Leader
           - Default value: `false`
@@ -326,96 +326,96 @@ class _SystemNtpFeatureState:
         return pulumi.get(self, "authoritative_ntp_server")
 
     @authoritative_ntp_server.setter
-    def authoritative_ntp_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authoritative_ntp_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authoritative_ntp_server", value)
 
     @_builtins.property
     @pulumi.getter(name="authoritativeNtpServerVariable")
-    def authoritative_ntp_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authoritative_ntp_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authoritative_ntp_server_variable")
 
     @authoritative_ntp_server_variable.setter
-    def authoritative_ntp_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authoritative_ntp_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authoritative_ntp_server_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]:
+    def servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]:
         """
         Configure NTP servers
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]):
+    def servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterface")
-    def source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable device as NTP Leader
         """
         return pulumi.get(self, "source_interface")
 
     @source_interface.setter
-    def source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterfaceVariable")
-    def source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "source_interface_variable")
 
     @source_interface_variable.setter
-    def source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def stratum(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Enable device as NTP Leader
           - Range: `1`-`15`
@@ -423,55 +423,55 @@ class _SystemNtpFeatureState:
         return pulumi.get(self, "stratum")
 
     @stratum.setter
-    def stratum(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def stratum(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "stratum", value)
 
     @_builtins.property
     @pulumi.getter(name="stratumVariable")
-    def stratum_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def stratum_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "stratum_variable")
 
     @stratum_variable.setter
-    def stratum_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def stratum_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "stratum_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeys")
-    def trusted_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def trusted_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Designate authentication key as trustworthy
         """
         return pulumi.get(self, "trusted_keys")
 
     @trusted_keys.setter
-    def trusted_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def trusted_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "trusted_keys", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeysVariable")
-    def trusted_keys_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trusted_keys_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "trusted_keys_variable")
 
     @trusted_keys_variable.setter
-    def trusted_keys_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trusted_keys_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trusted_keys_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -481,19 +481,19 @@ class SystemNtpFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
-                 authoritative_ntp_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authoritative_ntp_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
+                 authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System NTP Feature.
@@ -620,19 +620,19 @@ class SystemNtpFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
-                 authoritative_ntp_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authoritative_ntp_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
+                 authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -668,20 +668,20 @@ class SystemNtpFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
-            authoritative_ntp_server: Optional[pulumi.Input[_builtins.bool]] = None,
-            authoritative_ntp_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
-            source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            stratum: Optional[pulumi.Input[_builtins.int]] = None,
-            stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-            trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemNtpFeature':
+            authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]]] = None,
+            authoritative_ntp_server: pulumi.Input[Optional[_builtins.bool]] = None,
+            authoritative_ntp_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]]] = None,
+            source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            stratum: pulumi.Input[Optional[_builtins.int]] = None,
+            stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemNtpFeature':
         """
         Get an existing SystemNtpFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -230,78 +230,78 @@ export class PolicyObjectUnifiedTlsSslDecryption extends pulumi.CustomResource {
  * Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslDecryption resources.
  */
 export interface PolicyObjectUnifiedTlsSslDecryptionState {
-    bundleString?: pulumi.Input<string>;
+    bundleString?: pulumi.Input<string | undefined>;
     /**
      * If you have vManage as CA or vManage as intermediate CA, this value should be 1
      */
-    certificateLifetime?: pulumi.Input<string>;
+    certificateLifetime?: pulumi.Input<string | undefined>;
     /**
      * If value is none unknown status not required, if value is ocsp then unknown status is required
      *   - Choices: `ocsp`, `none`
      */
-    certificateRevocationStatus?: pulumi.Input<string>;
-    defaultCaCertificateBundle?: pulumi.Input<boolean>;
+    certificateRevocationStatus?: pulumi.Input<string | undefined>;
+    defaultCaCertificateBundle?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `P256`, `P384`, `P521`
      */
-    ecKeyType?: pulumi.Input<string>;
+    ecKeyType?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `decrypt`, `drop`
      */
-    expiredCertificate?: pulumi.Input<string>;
+    expiredCertificate?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `close`, `open`
      */
-    failureMode?: pulumi.Input<string>;
+    failureMode?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
-    fileName?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
+    fileName?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `TLSv1`, `TLSv1.1`, `TLSv1.2`
      */
-    minimalTlsVer?: pulumi.Input<string>;
+    minimalTlsVer?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `1024`, `2048`, `4096`
      */
-    rsaKeypairModules?: pulumi.Input<string>;
+    rsaKeypairModules?: pulumi.Input<string | undefined>;
     /**
      * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      */
-    unknownRevocationStatus?: pulumi.Input<string>;
+    unknownRevocationStatus?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `no-decrypt`, `drop`
      */
-    unsupportedCipherSuites?: pulumi.Input<string>;
+    unsupportedCipherSuites?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `no-decrypt`, `drop`
      */
-    unsupportedProtocolVersions?: pulumi.Input<string>;
+    unsupportedProtocolVersions?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `decrypt`, `drop`
      */
-    untrustedCertificate?: pulumi.Input<string>;
+    untrustedCertificate?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
  * The set of arguments for constructing a PolicyObjectUnifiedTlsSslDecryption resource.
  */
 export interface PolicyObjectUnifiedTlsSslDecryptionArgs {
-    bundleString?: pulumi.Input<string>;
+    bundleString?: pulumi.Input<string | undefined>;
     /**
      * If you have vManage as CA or vManage as intermediate CA, this value should be 1
      */
@@ -311,11 +311,11 @@ export interface PolicyObjectUnifiedTlsSslDecryptionArgs {
      *   - Choices: `ocsp`, `none`
      */
     certificateRevocationStatus: pulumi.Input<string>;
-    defaultCaCertificateBundle?: pulumi.Input<boolean>;
+    defaultCaCertificateBundle?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `P256`, `P384`, `P521`
      */
@@ -332,7 +332,7 @@ export interface PolicyObjectUnifiedTlsSslDecryptionArgs {
      * Feature Profile ID
      */
     featureProfileId: pulumi.Input<string>;
-    fileName?: pulumi.Input<string>;
+    fileName?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `TLSv1`, `TLSv1.1`, `TLSv1.2`
      */
@@ -340,7 +340,7 @@ export interface PolicyObjectUnifiedTlsSslDecryptionArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `1024`, `2048`, `4096`
      */
@@ -349,7 +349,7 @@ export interface PolicyObjectUnifiedTlsSslDecryptionArgs {
      * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      */
-    unknownRevocationStatus?: pulumi.Input<string>;
+    unknownRevocationStatus?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `no-decrypt`, `drop`
      */

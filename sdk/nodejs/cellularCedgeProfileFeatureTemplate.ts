@@ -219,85 +219,85 @@ export interface CellularCedgeProfileFeatureTemplateState {
     /**
      * Set access point name
      */
-    accessPointName?: pulumi.Input<string>;
+    accessPointName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessPointNameVariable?: pulumi.Input<string>;
+    accessPointNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set authentication type
      *   - Choices: `none`, `pap`, `chap`, `papChap`
      *   - Default value: `none`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * No Overwrite
      */
-    noOverwrite?: pulumi.Input<boolean>;
+    noOverwrite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noOverwriteVariable?: pulumi.Input<string>;
+    noOverwriteVariable?: pulumi.Input<string | undefined>;
     /**
      * Set packet data network type
      *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
      *   - Default value: `ipv4`
      */
-    packetDataNetworkType?: pulumi.Input<string>;
+    packetDataNetworkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    packetDataNetworkTypeVariable?: pulumi.Input<string>;
+    packetDataNetworkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Profile ID
      *   - Range: `1`-`16`
      */
-    profileId?: pulumi.Input<number>;
+    profileId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    profileIdVariable?: pulumi.Input<string>;
+    profileIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile password
      */
-    profilePassword?: pulumi.Input<string>;
+    profilePassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profilePasswordVariable?: pulumi.Input<string>;
+    profilePasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile username
      */
-    profileUsername?: pulumi.Input<string>;
+    profileUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profileUsernameVariable?: pulumi.Input<string>;
+    profileUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -307,21 +307,21 @@ export interface CellularCedgeProfileFeatureTemplateArgs {
     /**
      * Set access point name
      */
-    accessPointName?: pulumi.Input<string>;
+    accessPointName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessPointNameVariable?: pulumi.Input<string>;
+    accessPointNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set authentication type
      *   - Choices: `none`, `pap`, `chap`, `papChap`
      *   - Default value: `none`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -334,48 +334,48 @@ export interface CellularCedgeProfileFeatureTemplateArgs {
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * No Overwrite
      */
-    noOverwrite?: pulumi.Input<boolean>;
+    noOverwrite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noOverwriteVariable?: pulumi.Input<string>;
+    noOverwriteVariable?: pulumi.Input<string | undefined>;
     /**
      * Set packet data network type
      *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
      *   - Default value: `ipv4`
      */
-    packetDataNetworkType?: pulumi.Input<string>;
+    packetDataNetworkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    packetDataNetworkTypeVariable?: pulumi.Input<string>;
+    packetDataNetworkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Profile ID
      *   - Range: `1`-`16`
      */
-    profileId?: pulumi.Input<number>;
+    profileId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    profileIdVariable?: pulumi.Input<string>;
+    profileIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile password
      */
-    profilePassword?: pulumi.Input<string>;
+    profilePassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profilePasswordVariable?: pulumi.Input<string>;
+    profilePasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile username
      */
-    profileUsername?: pulumi.Input<string>;
+    profileUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profileUsernameVariable?: pulumi.Input<string>;
+    profileUsernameVariable?: pulumi.Input<string | undefined>;
 }

@@ -21,11 +21,11 @@ class CiscoBannerFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoBannerFeatureTemplate resource.
 
@@ -78,77 +78,77 @@ class CiscoBannerFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def login(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set message to display before login prompt
         """
         return pulumi.get(self, "login")
 
     @login.setter
-    def login(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login", value)
 
     @_builtins.property
     @pulumi.getter(name="loginVariable")
-    def login_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "login_variable")
 
     @login_variable.setter
-    def login_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def motd(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set message to display after a user logs in
         """
         return pulumi.get(self, "motd")
 
     @motd.setter
-    def motd(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd", value)
 
     @_builtins.property
     @pulumi.getter(name="motdVariable")
-    def motd_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "motd_variable")
 
     @motd_variable.setter
-    def motd_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _CiscoBannerFeatureTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoBannerFeatureTemplate resources.
 
@@ -184,19 +184,19 @@ class _CiscoBannerFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -204,91 +204,91 @@ class _CiscoBannerFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def login(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set message to display before login prompt
         """
         return pulumi.get(self, "login")
 
     @login.setter
-    def login(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login", value)
 
     @_builtins.property
     @pulumi.getter(name="loginVariable")
-    def login_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "login_variable")
 
     @login_variable.setter
-    def login_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def motd(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set message to display after a user logs in
         """
         return pulumi.get(self, "motd")
 
     @motd.setter
-    def motd(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd", value)
 
     @_builtins.property
     @pulumi.getter(name="motdVariable")
-    def motd_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "motd_variable")
 
     @motd_variable.setter
-    def motd_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -298,13 +298,13 @@ class CiscoBannerFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco Banner feature template.
@@ -392,13 +392,13 @@ class CiscoBannerFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -431,15 +431,15 @@ class CiscoBannerFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            login: Optional[pulumi.Input[_builtins.str]] = None,
-            login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            motd: Optional[pulumi.Input[_builtins.str]] = None,
-            motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoBannerFeatureTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            login: pulumi.Input[Optional[_builtins.str]] = None,
+            login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            motd: pulumi.Input[Optional[_builtins.str]] = None,
+            motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoBannerFeatureTemplate':
         """
         Get an existing CiscoBannerFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

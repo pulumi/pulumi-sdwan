@@ -161,47 +161,47 @@ export interface SystemPerformanceMonitoringFeatureState {
     /**
      * Application groups to be monitored
      */
-    appPerfMonitorAppGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    appPerfMonitorAppGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Application performance monitoring enable or disable
      *   - Default value: `false`
      */
-    appPerfMonitorEnabled?: pulumi.Input<boolean>;
+    appPerfMonitorEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * UMTS event driven monitoring enable or disable
      *   - Default value: `false`
      */
-    eventDrivenConfigEnabled?: pulumi.Input<boolean>;
+    eventDrivenConfigEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * UMTS events
      */
-    eventDrivenEvents?: pulumi.Input<pulumi.Input<string>[]>;
+    eventDrivenEvents?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * UMTS monitoring enable or disable
      *   - Default value: `false`
      */
-    monitoringConfigEnabled?: pulumi.Input<boolean>;
+    monitoringConfigEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * UMTS monitoring interval(Minutes)
      *   - Choices: `30`, `60`
      */
-    monitoringConfigInterval?: pulumi.Input<string>;
+    monitoringConfigInterval?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -211,25 +211,25 @@ export interface SystemPerformanceMonitoringFeatureArgs {
     /**
      * Application groups to be monitored
      */
-    appPerfMonitorAppGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    appPerfMonitorAppGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Application performance monitoring enable or disable
      *   - Default value: `false`
      */
-    appPerfMonitorEnabled?: pulumi.Input<boolean>;
+    appPerfMonitorEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * UMTS event driven monitoring enable or disable
      *   - Default value: `false`
      */
-    eventDrivenConfigEnabled?: pulumi.Input<boolean>;
+    eventDrivenConfigEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * UMTS events
      */
-    eventDrivenEvents?: pulumi.Input<pulumi.Input<string>[]>;
+    eventDrivenEvents?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Feature Profile ID
      */
@@ -238,14 +238,14 @@ export interface SystemPerformanceMonitoringFeatureArgs {
      * UMTS monitoring enable or disable
      *   - Default value: `false`
      */
-    monitoringConfigEnabled?: pulumi.Input<boolean>;
+    monitoringConfigEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * UMTS monitoring interval(Minutes)
      *   - Choices: `30`, `60`
      */
-    monitoringConfigInterval?: pulumi.Input<string>;
+    monitoringConfigInterval?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

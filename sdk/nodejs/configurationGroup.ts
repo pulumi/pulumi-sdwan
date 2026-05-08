@@ -152,37 +152,37 @@ export interface ConfigurationGroupState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of devices
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[]>;
+    devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[] | undefined>;
     /**
      * List of feature profile IDs
      */
-    featureProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
+    featureProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of all associated feature versions
      */
-    featureVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    featureVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the configuration group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Type of solution
      *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      */
-    solution?: pulumi.Input<string>;
+    solution?: pulumi.Input<string | undefined>;
     /**
      * List of topology device types
      */
-    topologyDevices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDevice>[]>;
+    topologyDevices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDevice>[] | undefined>;
     /**
      * Number of devices per site
      *   - Range: `1`-`20`
      */
-    topologySiteDevices?: pulumi.Input<number>;
+    topologySiteDevices?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -196,19 +196,19 @@ export interface ConfigurationGroupArgs {
     /**
      * List of devices
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[]>;
+    devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[] | undefined>;
     /**
      * List of feature profile IDs
      */
-    featureProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
+    featureProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of all associated feature versions
      */
-    featureVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    featureVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the configuration group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Type of solution
      *   - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -217,10 +217,10 @@ export interface ConfigurationGroupArgs {
     /**
      * List of topology device types
      */
-    topologyDevices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDevice>[]>;
+    topologyDevices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDevice>[] | undefined>;
     /**
      * Number of devices per site
      *   - Range: `1`-`20`
      */
-    topologySiteDevices?: pulumi.Input<number>;
+    topologySiteDevices?: pulumi.Input<number | undefined>;
 }

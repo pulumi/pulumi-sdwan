@@ -1223,716 +1223,716 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplateState {
     /**
      * Apply ACL
      */
-    accessLists?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateAccessList>[]>;
+    accessLists?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateAccessList>[] | undefined>;
     /**
      * Interface downstream bandwidth capacity, in kbps
      *   - Range: `1`-`2147483647`
      */
-    bandwidthDownstream?: pulumi.Input<number>;
+    bandwidthDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    bandwidthDownstreamVariable?: pulumi.Input<string>;
+    bandwidthDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface upstream bandwidth capacity, in kbps
      *   - Range: `1`-`2147483647`
      */
-    bandwidthUpstream?: pulumi.Input<number>;
+    bandwidthUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    bandwidthUpstreamVariable?: pulumi.Input<string>;
+    bandwidthUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * CHAP Hostname
      */
-    chapHostname?: pulumi.Input<string>;
+    chapHostname?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    chapHostnameVariable?: pulumi.Input<string>;
+    chapHostnameVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify ppp chap authentication Password
      */
-    chapPppAuthPassword?: pulumi.Input<string>;
+    chapPppAuthPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    chapPppAuthPasswordVariable?: pulumi.Input<string>;
+    chapPppAuthPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable core region
      *   - Choices: `core`, `core-shared`
      *   - Default value: `core`
      */
-    coreRegion?: pulumi.Input<string>;
+    coreRegion?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    coreRegionVariable?: pulumi.Input<string>;
+    coreRegionVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Dialer IP Negotiated
      *   - Default value: `false`
      */
-    dialerAddressNegotiated?: pulumi.Input<boolean>;
+    dialerAddressNegotiated?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dialerAddressNegotiatedVariable?: pulumi.Input<string>;
+    dialerAddressNegotiatedVariable?: pulumi.Input<string | undefined>;
     /**
      * Dialer pool number
      *   - Range: `100`-`255`
      */
-    dialerPoolNumber?: pulumi.Input<number>;
+    dialerPoolNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dialerPoolNumberVariable?: pulumi.Input<string>;
+    dialerPoolNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Dialer TCP MSS on SYN packets, in bytes
      *   - Range: `552`-`1960`
      */
-    dialerTcpMss?: pulumi.Input<number>;
+    dialerTcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dialerTcpMssVariable?: pulumi.Input<string>;
+    dialerTcpMssVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable core region
      *   - Default value: `false`
      */
-    enableCoreRegion?: pulumi.Input<boolean>;
+    enableCoreRegion?: pulumi.Input<boolean | undefined>;
     /**
      * Encapsulation VLAN id
      *   - Range: `1`-`4094`
      */
-    encap?: pulumi.Input<number>;
+    encap?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    encapVariable?: pulumi.Input<string>;
+    encapVariable?: pulumi.Input<string | undefined>;
     /**
      * Ethernet Interface/Sub Interface Name including sub interface number
      */
-    ethernetInterfaceName?: pulumi.Input<string>;
+    ethernetInterfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ethernetInterfaceNameVariable?: pulumi.Input<string>;
+    ethernetInterfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Directed-Broadcast
      *   - Default value: `false`
      */
-    ipDirectedBroadcast?: pulumi.Input<boolean>;
+    ipDirectedBroadcast?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipDirectedBroadcastVariable?: pulumi.Input<string>;
+    ipDirectedBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
      * IP MTU <576..2000>, in bytes
      *   - Range: `576`-`2000`
      *   - Default value: `1500`
      */
-    ipMtuForDialerInterface?: pulumi.Input<number>;
+    ipMtuForDialerInterface?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipMtuForDialerInterfaceVariable?: pulumi.Input<string>;
+    ipMtuForDialerInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Network Address Translation on this interface
      *   - Default value: `false`
      */
-    nat?: pulumi.Input<boolean>;
+    nat?: pulumi.Input<boolean | undefined>;
     /**
      * Block inbound ICMP error messages
      *   - Default value: `true`
      */
-    natBlockIcmpError?: pulumi.Input<boolean>;
+    natBlockIcmpError?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natBlockIcmpErrorVariable?: pulumi.Input<string>;
+    natBlockIcmpErrorVariable?: pulumi.Input<string | undefined>;
     /**
      * Set port-forwarding rules for NAT on this interface
      */
-    natPortForwards?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateNatPortForward>[]>;
+    natPortForwards?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateNatPortForward>[] | undefined>;
     /**
      * Set NAT refresh mode
      *   - Choices: `outbound`, `bi-directional`
      *   - Default value: `outbound`
      */
-    natRefreshMode?: pulumi.Input<string>;
+    natRefreshMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    natRefreshModeVariable?: pulumi.Input<string>;
+    natRefreshModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Respond to ping requests to NAT interface ip address from the public side
      *   - Default value: `false`
      */
-    natResponseToPing?: pulumi.Input<boolean>;
+    natResponseToPing?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natResponseToPingVariable?: pulumi.Input<string>;
+    natResponseToPingVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NAT TCP session timeout, in minutes
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      */
-    natTcpTimeout?: pulumi.Input<number>;
+    natTcpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natTcpTimeoutVariable?: pulumi.Input<string>;
+    natTcpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NAT UDP session timeout, in minutes
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      */
-    natUdpTimeout?: pulumi.Input<number>;
+    natUdpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natUdpTimeoutVariable?: pulumi.Input<string>;
+    natUdpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * PAP outbound Password
      */
-    papPassword?: pulumi.Input<boolean>;
+    papPassword?: pulumi.Input<boolean | undefined>;
     /**
      * Specify ppp pap authentication Password
      */
-    papPppAuthPassword?: pulumi.Input<string>;
+    papPppAuthPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    papPppAuthPasswordVariable?: pulumi.Input<string>;
+    papPppAuthPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * PAP outbound Sent Username
      */
-    papUsername?: pulumi.Input<string>;
+    papUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    papUsernameVariable?: pulumi.Input<string>;
+    papUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * Per-tunnel Qos
      *   - Default value: `false`
      */
-    perTunnelQos?: pulumi.Input<boolean>;
+    perTunnelQos?: pulumi.Input<boolean | undefined>;
     /**
      * Per-tunnel QoS Aggregator
      *   - Default value: `false`
      */
-    perTunnelQosAggregator?: pulumi.Input<boolean>;
+    perTunnelQosAggregator?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    perTunnelQosAggregatorVariable?: pulumi.Input<string>;
+    perTunnelQosAggregatorVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    perTunnelQosVariable?: pulumi.Input<string>;
+    perTunnelQosVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable policer
      */
-    policers?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplatePolicer>[]>;
+    policers?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplatePolicer>[] | undefined>;
     /**
      * PPP Link Authentication Protocol
      *   - Choices: `chap`, `pap`
      */
-    pppAuthenticationProtocol?: pulumi.Input<string>;
+    pppAuthenticationProtocol?: pulumi.Input<string | undefined>;
     /**
      * PPP Authentication Protocol PAP
      *   - Default value: `false`
      */
-    pppAuthenticationProtocolPap?: pulumi.Input<boolean>;
+    pppAuthenticationProtocolPap?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    pppAuthenticationProtocolVariable?: pulumi.Input<string>;
+    pppAuthenticationProtocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Authenticate remote on incoming call only
      *   - Choices: `callin`, `false`
      *   - Default value: `callin`
      */
-    pppAuthenticationType?: pulumi.Input<string>;
+    pppAuthenticationType?: pulumi.Input<string | undefined>;
     /**
      * Maximum MRU to be negotiated during PPP LCP negotiation
      *   - Range: `64`-`1792`
      */
-    pppMaximumPayload?: pulumi.Input<number>;
+    pppMaximumPayload?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pppMaximumPayloadVariable?: pulumi.Input<string>;
+    pppMaximumPayloadVariable?: pulumi.Input<string | undefined>;
     /**
      * Adaptive QoS default downstream bandwidth
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveBandwidthDownstream?: pulumi.Input<number>;
+    qosAdaptiveBandwidthDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveBandwidthDownstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveBandwidthDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Adaptive QoS default upstream bandwidth
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveBandwidthUpstream?: pulumi.Input<number>;
+    qosAdaptiveBandwidthUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveBandwidthUpstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveBandwidthUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Downstream max bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMaxDownstream?: pulumi.Input<number>;
+    qosAdaptiveMaxDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMaxDownstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMaxDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Upstream max bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMaxUpstream?: pulumi.Input<number>;
+    qosAdaptiveMaxUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMaxUpstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMaxUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Downstream min bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMinDownstream?: pulumi.Input<number>;
+    qosAdaptiveMinDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMinDownstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMinDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Upstream min bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMinUpstream?: pulumi.Input<number>;
+    qosAdaptiveMinUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMinUpstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMinUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Periodic timer for adaptive QoS in minutes
      *   - Range: `1`-`720`
      *   - Default value: `15`
      */
-    qosAdaptivePeriod?: pulumi.Input<number>;
+    qosAdaptivePeriod?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptivePeriodVariable?: pulumi.Input<string>;
+    qosAdaptivePeriodVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of QoS map
      */
-    qosMap?: pulumi.Input<string>;
+    qosMap?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    qosMapVariable?: pulumi.Input<string>;
+    qosMapVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of VPN QoS map
      */
-    qosMapVpn?: pulumi.Input<string>;
+    qosMapVpn?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    qosMapVpnVariable?: pulumi.Input<string>;
+    qosMapVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable secondary region
      *   - Choices: `off`, `secondary-only`, `secondary-shared`
      *   - Default value: `off`
      */
-    secondaryRegion?: pulumi.Input<string>;
+    secondaryRegion?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryRegionVariable?: pulumi.Input<string>;
+    secondaryRegionVariable?: pulumi.Input<string | undefined>;
     /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      *   - Range: `8`-`100000000`
      */
-    shapingRate?: pulumi.Input<number>;
+    shapingRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    shapingRateVariable?: pulumi.Input<string>;
+    shapingRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Extends a local TLOC to a remote node only for vpn 0
      */
-    tlocExtension?: pulumi.Input<string>;
+    tlocExtension?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tlocExtensionVariable?: pulumi.Input<string>;
+    tlocExtensionVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    trackers?: pulumi.Input<pulumi.Input<string>[]>;
+    trackers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allow all traffic. Overrides all other allow-service options if allow-service all is set
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowAll?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowAll?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowAllVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowAllVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/deny BGP
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowBgp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowBgp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowBgpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowBgpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny DHCP
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowDhcp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowDhcp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowDhcpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowDhcpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny DNS
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowDns?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowDns?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowDnsVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowDnsVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny Https
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowHttps?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowHttps?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowHttpsVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowHttpsVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny ICMP
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowIcmp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowIcmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowIcmpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowIcmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny NETCONF
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowNetconf?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowNetconf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowNetconfVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowNetconfVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny NTP
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowNtp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowNtp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowNtpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowNtpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny OSPF
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowOspf?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowOspf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowOspfVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowOspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny SNMP
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowSnmp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowSnmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowSnmpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowSnmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny SSH
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowSsh?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowSsh?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowSshVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowSshVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny STUN
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowStun?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowStun?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowStunVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowStunVariable?: pulumi.Input<string | undefined>;
     /**
      * Bind loopback tunnel interface to a physical interface
      */
-    tunnelInterfaceBindLoopbackTunnel?: pulumi.Input<string>;
+    tunnelInterfaceBindLoopbackTunnel?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceBindLoopbackTunnelVariable?: pulumi.Input<string>;
+    tunnelInterfaceBindLoopbackTunnelVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TLOC as border TLOC
      *   - Default value: `false`
      */
-    tunnelInterfaceBorder?: pulumi.Input<boolean>;
+    tunnelInterfaceBorder?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceBorderVariable?: pulumi.Input<string>;
+    tunnelInterfaceBorderVariable?: pulumi.Input<string | undefined>;
     /**
      * Set carrier for TLOC
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      *   - Default value: `default`
      */
-    tunnelInterfaceCarrier?: pulumi.Input<string>;
+    tunnelInterfaceCarrier?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceCarrierVariable?: pulumi.Input<string>;
+    tunnelInterfaceCarrierVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
      *   - Default value: `false`
      */
-    tunnelInterfaceClearDontFragment?: pulumi.Input<boolean>;
+    tunnelInterfaceClearDontFragment?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string>;
+    tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string | undefined>;
     /**
      * Set color for TLOC
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `default`
      */
-    tunnelInterfaceColor?: pulumi.Input<string>;
+    tunnelInterfaceColor?: pulumi.Input<string | undefined>;
     /**
      * Restrict this TLOC behavior
      *   - Default value: `false`
      */
-    tunnelInterfaceColorRestrict?: pulumi.Input<boolean>;
+    tunnelInterfaceColorRestrict?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceColorVariable?: pulumi.Input<string>;
+    tunnelInterfaceColorVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow Control Connection
      *   - Default value: `true`
      */
-    tunnelInterfaceControlConnections?: pulumi.Input<boolean>;
+    tunnelInterfaceControlConnections?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceControlConnectionsVariable?: pulumi.Input<string>;
+    tunnelInterfaceControlConnectionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Encapsulation for TLOC
      */
-    tunnelInterfaceEncapsulations?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulation>[]>;
+    tunnelInterfaceEncapsulations?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulation>[] | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceExcludeControllerGroupListVariable?: pulumi.Input<string>;
+    tunnelInterfaceExcludeControllerGroupListVariable?: pulumi.Input<string | undefined>;
     /**
      * Exclude the following controller groups defined in this list
      */
-    tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[]>;
+    tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * List of groups
      */
-    tunnelInterfaceGroups?: pulumi.Input<pulumi.Input<number>[]>;
+    tunnelInterfaceGroups?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceGroupsVariable?: pulumi.Input<string>;
+    tunnelInterfaceGroupsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time period of control hello packets <100..600000> milli seconds
      *   - Range: `100`-`600000`
      *   - Default value: `1000`
      */
-    tunnelInterfaceHelloInterval?: pulumi.Input<number>;
+    tunnelInterfaceHelloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceHelloIntervalVariable?: pulumi.Input<string>;
+    tunnelInterfaceHelloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set tolerance of control hello packets <12..6000> seconds
      *   - Range: `12`-`6000`
      *   - Default value: `12`
      */
-    tunnelInterfaceHelloTolerance?: pulumi.Input<number>;
+    tunnelInterfaceHelloTolerance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceHelloToleranceVariable?: pulumi.Input<string>;
+    tunnelInterfaceHelloToleranceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TLOC as last resort
      *   - Default value: `false`
      */
-    tunnelInterfaceLastResortCircuit?: pulumi.Input<boolean>;
+    tunnelInterfaceLastResortCircuit?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceLastResortCircuitVariable?: pulumi.Input<string>;
+    tunnelInterfaceLastResortCircuitVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface as a low-bandwidth circuit
      *   - Default value: `false`
      */
-    tunnelInterfaceLowBandwidthLink?: pulumi.Input<boolean>;
+    tunnelInterfaceLowBandwidthLink?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceLowBandwidthLinkVariable?: pulumi.Input<string>;
+    tunnelInterfaceLowBandwidthLinkVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the maximum number of control connections for this TLOC
      *   - Range: `0`-`8`
      */
-    tunnelInterfaceMaxControlConnections?: pulumi.Input<number>;
+    tunnelInterfaceMaxControlConnections?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceMaxControlConnectionsVariable?: pulumi.Input<string>;
+    tunnelInterfaceMaxControlConnectionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time period of nat refresh packets <1...60> seconds
      *   - Range: `1`-`60`
      *   - Default value: `5`
      */
-    tunnelInterfaceNatRefreshInterval?: pulumi.Input<number>;
+    tunnelInterfaceNatRefreshInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceNatRefreshIntervalVariable?: pulumi.Input<string>;
+    tunnelInterfaceNatRefreshIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Accept and respond to network-prefix-directed broadcasts)
      *   - Default value: `false`
      */
-    tunnelInterfaceNetworkBroadcast?: pulumi.Input<boolean>;
+    tunnelInterfaceNetworkBroadcast?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string>;
+    tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
      * Disallow port hopping on the tunnel interface
      *   - Default value: `true`
      */
-    tunnelInterfacePortHop?: pulumi.Input<boolean>;
+    tunnelInterfacePortHop?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfacePortHopVariable?: pulumi.Input<string>;
+    tunnelInterfacePortHopVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tunnelInterfaceTunnelTcpMss?: pulumi.Input<number>;
+    tunnelInterfaceTunnelTcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceTunnelTcpMssVariable?: pulumi.Input<string>;
+    tunnelInterfaceTunnelTcpMssVariable?: pulumi.Input<string | undefined>;
     /**
      * Put this wan interface in STUN mode only
      *   - Default value: `false`
      */
-    tunnelInterfaceVbondAsStunServer?: pulumi.Input<boolean>;
+    tunnelInterfaceVbondAsStunServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceVbondAsStunServerVariable?: pulumi.Input<string>;
+    tunnelInterfaceVbondAsStunServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface preference for control connection to vManage <0..8>
      *   - Range: `0`-`8`
      *   - Default value: `5`
      */
-    tunnelInterfaceVmanageConnectionPreference?: pulumi.Input<number>;
+    tunnelInterfaceVmanageConnectionPreference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
+    tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set tunnel QoS mode
      *   - Choices: `spoke`
      */
-    tunnelQosMode?: pulumi.Input<string>;
+    tunnelQosMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelQosModeVariable?: pulumi.Input<string>;
+    tunnelQosModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Dialer IP Unnumbered Loopback interface name
      */
-    unnumberedLoopbackInterface?: pulumi.Input<string>;
+    unnumberedLoopbackInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    unnumberedLoopbackInterfaceVariable?: pulumi.Input<string>;
+    unnumberedLoopbackInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Name of rewrite rule
      */
-    writeRule?: pulumi.Input<string>;
+    writeRule?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    writeRuleVariable?: pulumi.Input<string>;
+    writeRuleVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -1942,51 +1942,51 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplateArgs {
     /**
      * Apply ACL
      */
-    accessLists?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateAccessList>[]>;
+    accessLists?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateAccessList>[] | undefined>;
     /**
      * Interface downstream bandwidth capacity, in kbps
      *   - Range: `1`-`2147483647`
      */
-    bandwidthDownstream?: pulumi.Input<number>;
+    bandwidthDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    bandwidthDownstreamVariable?: pulumi.Input<string>;
+    bandwidthDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface upstream bandwidth capacity, in kbps
      *   - Range: `1`-`2147483647`
      */
-    bandwidthUpstream?: pulumi.Input<number>;
+    bandwidthUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    bandwidthUpstreamVariable?: pulumi.Input<string>;
+    bandwidthUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * CHAP Hostname
      */
-    chapHostname?: pulumi.Input<string>;
+    chapHostname?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    chapHostnameVariable?: pulumi.Input<string>;
+    chapHostnameVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify ppp chap authentication Password
      */
-    chapPppAuthPassword?: pulumi.Input<string>;
+    chapPppAuthPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    chapPppAuthPasswordVariable?: pulumi.Input<string>;
+    chapPppAuthPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable core region
      *   - Choices: `core`, `core-shared`
      *   - Default value: `core`
      */
-    coreRegion?: pulumi.Input<string>;
+    coreRegion?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    coreRegionVariable?: pulumi.Input<string>;
+    coreRegionVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -2000,648 +2000,648 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplateArgs {
      * Dialer IP Negotiated
      *   - Default value: `false`
      */
-    dialerAddressNegotiated?: pulumi.Input<boolean>;
+    dialerAddressNegotiated?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dialerAddressNegotiatedVariable?: pulumi.Input<string>;
+    dialerAddressNegotiatedVariable?: pulumi.Input<string | undefined>;
     /**
      * Dialer pool number
      *   - Range: `100`-`255`
      */
-    dialerPoolNumber?: pulumi.Input<number>;
+    dialerPoolNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dialerPoolNumberVariable?: pulumi.Input<string>;
+    dialerPoolNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Dialer TCP MSS on SYN packets, in bytes
      *   - Range: `552`-`1960`
      */
-    dialerTcpMss?: pulumi.Input<number>;
+    dialerTcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dialerTcpMssVariable?: pulumi.Input<string>;
+    dialerTcpMssVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable core region
      *   - Default value: `false`
      */
-    enableCoreRegion?: pulumi.Input<boolean>;
+    enableCoreRegion?: pulumi.Input<boolean | undefined>;
     /**
      * Encapsulation VLAN id
      *   - Range: `1`-`4094`
      */
-    encap?: pulumi.Input<number>;
+    encap?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    encapVariable?: pulumi.Input<string>;
+    encapVariable?: pulumi.Input<string | undefined>;
     /**
      * Ethernet Interface/Sub Interface Name including sub interface number
      */
-    ethernetInterfaceName?: pulumi.Input<string>;
+    ethernetInterfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ethernetInterfaceNameVariable?: pulumi.Input<string>;
+    ethernetInterfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Directed-Broadcast
      *   - Default value: `false`
      */
-    ipDirectedBroadcast?: pulumi.Input<boolean>;
+    ipDirectedBroadcast?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipDirectedBroadcastVariable?: pulumi.Input<string>;
+    ipDirectedBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
      * IP MTU <576..2000>, in bytes
      *   - Range: `576`-`2000`
      *   - Default value: `1500`
      */
-    ipMtuForDialerInterface?: pulumi.Input<number>;
+    ipMtuForDialerInterface?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipMtuForDialerInterfaceVariable?: pulumi.Input<string>;
+    ipMtuForDialerInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Network Address Translation on this interface
      *   - Default value: `false`
      */
-    nat?: pulumi.Input<boolean>;
+    nat?: pulumi.Input<boolean | undefined>;
     /**
      * Block inbound ICMP error messages
      *   - Default value: `true`
      */
-    natBlockIcmpError?: pulumi.Input<boolean>;
+    natBlockIcmpError?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natBlockIcmpErrorVariable?: pulumi.Input<string>;
+    natBlockIcmpErrorVariable?: pulumi.Input<string | undefined>;
     /**
      * Set port-forwarding rules for NAT on this interface
      */
-    natPortForwards?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateNatPortForward>[]>;
+    natPortForwards?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateNatPortForward>[] | undefined>;
     /**
      * Set NAT refresh mode
      *   - Choices: `outbound`, `bi-directional`
      *   - Default value: `outbound`
      */
-    natRefreshMode?: pulumi.Input<string>;
+    natRefreshMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    natRefreshModeVariable?: pulumi.Input<string>;
+    natRefreshModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Respond to ping requests to NAT interface ip address from the public side
      *   - Default value: `false`
      */
-    natResponseToPing?: pulumi.Input<boolean>;
+    natResponseToPing?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natResponseToPingVariable?: pulumi.Input<string>;
+    natResponseToPingVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NAT TCP session timeout, in minutes
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      */
-    natTcpTimeout?: pulumi.Input<number>;
+    natTcpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natTcpTimeoutVariable?: pulumi.Input<string>;
+    natTcpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NAT UDP session timeout, in minutes
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      */
-    natUdpTimeout?: pulumi.Input<number>;
+    natUdpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natUdpTimeoutVariable?: pulumi.Input<string>;
+    natUdpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * PAP outbound Password
      */
-    papPassword?: pulumi.Input<boolean>;
+    papPassword?: pulumi.Input<boolean | undefined>;
     /**
      * Specify ppp pap authentication Password
      */
-    papPppAuthPassword?: pulumi.Input<string>;
+    papPppAuthPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    papPppAuthPasswordVariable?: pulumi.Input<string>;
+    papPppAuthPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * PAP outbound Sent Username
      */
-    papUsername?: pulumi.Input<string>;
+    papUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    papUsernameVariable?: pulumi.Input<string>;
+    papUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * Per-tunnel Qos
      *   - Default value: `false`
      */
-    perTunnelQos?: pulumi.Input<boolean>;
+    perTunnelQos?: pulumi.Input<boolean | undefined>;
     /**
      * Per-tunnel QoS Aggregator
      *   - Default value: `false`
      */
-    perTunnelQosAggregator?: pulumi.Input<boolean>;
+    perTunnelQosAggregator?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    perTunnelQosAggregatorVariable?: pulumi.Input<string>;
+    perTunnelQosAggregatorVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    perTunnelQosVariable?: pulumi.Input<string>;
+    perTunnelQosVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable policer
      */
-    policers?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplatePolicer>[]>;
+    policers?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplatePolicer>[] | undefined>;
     /**
      * PPP Link Authentication Protocol
      *   - Choices: `chap`, `pap`
      */
-    pppAuthenticationProtocol?: pulumi.Input<string>;
+    pppAuthenticationProtocol?: pulumi.Input<string | undefined>;
     /**
      * PPP Authentication Protocol PAP
      *   - Default value: `false`
      */
-    pppAuthenticationProtocolPap?: pulumi.Input<boolean>;
+    pppAuthenticationProtocolPap?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    pppAuthenticationProtocolVariable?: pulumi.Input<string>;
+    pppAuthenticationProtocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Authenticate remote on incoming call only
      *   - Choices: `callin`, `false`
      *   - Default value: `callin`
      */
-    pppAuthenticationType?: pulumi.Input<string>;
+    pppAuthenticationType?: pulumi.Input<string | undefined>;
     /**
      * Maximum MRU to be negotiated during PPP LCP negotiation
      *   - Range: `64`-`1792`
      */
-    pppMaximumPayload?: pulumi.Input<number>;
+    pppMaximumPayload?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pppMaximumPayloadVariable?: pulumi.Input<string>;
+    pppMaximumPayloadVariable?: pulumi.Input<string | undefined>;
     /**
      * Adaptive QoS default downstream bandwidth
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveBandwidthDownstream?: pulumi.Input<number>;
+    qosAdaptiveBandwidthDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveBandwidthDownstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveBandwidthDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Adaptive QoS default upstream bandwidth
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveBandwidthUpstream?: pulumi.Input<number>;
+    qosAdaptiveBandwidthUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveBandwidthUpstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveBandwidthUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Downstream max bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMaxDownstream?: pulumi.Input<number>;
+    qosAdaptiveMaxDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMaxDownstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMaxDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Upstream max bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMaxUpstream?: pulumi.Input<number>;
+    qosAdaptiveMaxUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMaxUpstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMaxUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Downstream min bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMinDownstream?: pulumi.Input<number>;
+    qosAdaptiveMinDownstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMinDownstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMinDownstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Upstream min bandwidth limit
      *   - Range: `8`-`100000000`
      */
-    qosAdaptiveMinUpstream?: pulumi.Input<number>;
+    qosAdaptiveMinUpstream?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptiveMinUpstreamVariable?: pulumi.Input<string>;
+    qosAdaptiveMinUpstreamVariable?: pulumi.Input<string | undefined>;
     /**
      * Periodic timer for adaptive QoS in minutes
      *   - Range: `1`-`720`
      *   - Default value: `15`
      */
-    qosAdaptivePeriod?: pulumi.Input<number>;
+    qosAdaptivePeriod?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    qosAdaptivePeriodVariable?: pulumi.Input<string>;
+    qosAdaptivePeriodVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of QoS map
      */
-    qosMap?: pulumi.Input<string>;
+    qosMap?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    qosMapVariable?: pulumi.Input<string>;
+    qosMapVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of VPN QoS map
      */
-    qosMapVpn?: pulumi.Input<string>;
+    qosMapVpn?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    qosMapVpnVariable?: pulumi.Input<string>;
+    qosMapVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable secondary region
      *   - Choices: `off`, `secondary-only`, `secondary-shared`
      *   - Default value: `off`
      */
-    secondaryRegion?: pulumi.Input<string>;
+    secondaryRegion?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryRegionVariable?: pulumi.Input<string>;
+    secondaryRegionVariable?: pulumi.Input<string | undefined>;
     /**
      * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
      *   - Range: `8`-`100000000`
      */
-    shapingRate?: pulumi.Input<number>;
+    shapingRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    shapingRateVariable?: pulumi.Input<string>;
+    shapingRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Extends a local TLOC to a remote node only for vpn 0
      */
-    tlocExtension?: pulumi.Input<string>;
+    tlocExtension?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tlocExtensionVariable?: pulumi.Input<string>;
+    tlocExtensionVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    trackers?: pulumi.Input<pulumi.Input<string>[]>;
+    trackers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allow all traffic. Overrides all other allow-service options if allow-service all is set
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowAll?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowAll?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowAllVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowAllVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/deny BGP
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowBgp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowBgp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowBgpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowBgpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny DHCP
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowDhcp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowDhcp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowDhcpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowDhcpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny DNS
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowDns?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowDns?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowDnsVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowDnsVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny Https
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowHttps?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowHttps?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowHttpsVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowHttpsVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny ICMP
      *   - Default value: `true`
      */
-    tunnelInterfaceAllowIcmp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowIcmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowIcmpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowIcmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny NETCONF
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowNetconf?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowNetconf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowNetconfVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowNetconfVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny NTP
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowNtp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowNtp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowNtpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowNtpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny OSPF
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowOspf?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowOspf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowOspfVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowOspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny SNMP
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowSnmp?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowSnmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowSnmpVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowSnmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny SSH
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowSsh?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowSsh?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowSshVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowSshVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow/Deny STUN
      *   - Default value: `false`
      */
-    tunnelInterfaceAllowStun?: pulumi.Input<boolean>;
+    tunnelInterfaceAllowStun?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceAllowStunVariable?: pulumi.Input<string>;
+    tunnelInterfaceAllowStunVariable?: pulumi.Input<string | undefined>;
     /**
      * Bind loopback tunnel interface to a physical interface
      */
-    tunnelInterfaceBindLoopbackTunnel?: pulumi.Input<string>;
+    tunnelInterfaceBindLoopbackTunnel?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceBindLoopbackTunnelVariable?: pulumi.Input<string>;
+    tunnelInterfaceBindLoopbackTunnelVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TLOC as border TLOC
      *   - Default value: `false`
      */
-    tunnelInterfaceBorder?: pulumi.Input<boolean>;
+    tunnelInterfaceBorder?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceBorderVariable?: pulumi.Input<string>;
+    tunnelInterfaceBorderVariable?: pulumi.Input<string | undefined>;
     /**
      * Set carrier for TLOC
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      *   - Default value: `default`
      */
-    tunnelInterfaceCarrier?: pulumi.Input<string>;
+    tunnelInterfaceCarrier?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceCarrierVariable?: pulumi.Input<string>;
+    tunnelInterfaceCarrierVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
      *   - Default value: `false`
      */
-    tunnelInterfaceClearDontFragment?: pulumi.Input<boolean>;
+    tunnelInterfaceClearDontFragment?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string>;
+    tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string | undefined>;
     /**
      * Set color for TLOC
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `default`
      */
-    tunnelInterfaceColor?: pulumi.Input<string>;
+    tunnelInterfaceColor?: pulumi.Input<string | undefined>;
     /**
      * Restrict this TLOC behavior
      *   - Default value: `false`
      */
-    tunnelInterfaceColorRestrict?: pulumi.Input<boolean>;
+    tunnelInterfaceColorRestrict?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceColorVariable?: pulumi.Input<string>;
+    tunnelInterfaceColorVariable?: pulumi.Input<string | undefined>;
     /**
      * Allow Control Connection
      *   - Default value: `true`
      */
-    tunnelInterfaceControlConnections?: pulumi.Input<boolean>;
+    tunnelInterfaceControlConnections?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceControlConnectionsVariable?: pulumi.Input<string>;
+    tunnelInterfaceControlConnectionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Encapsulation for TLOC
      */
-    tunnelInterfaceEncapsulations?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulation>[]>;
+    tunnelInterfaceEncapsulations?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulation>[] | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceExcludeControllerGroupListVariable?: pulumi.Input<string>;
+    tunnelInterfaceExcludeControllerGroupListVariable?: pulumi.Input<string | undefined>;
     /**
      * Exclude the following controller groups defined in this list
      */
-    tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[]>;
+    tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * List of groups
      */
-    tunnelInterfaceGroups?: pulumi.Input<pulumi.Input<number>[]>;
+    tunnelInterfaceGroups?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceGroupsVariable?: pulumi.Input<string>;
+    tunnelInterfaceGroupsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time period of control hello packets <100..600000> milli seconds
      *   - Range: `100`-`600000`
      *   - Default value: `1000`
      */
-    tunnelInterfaceHelloInterval?: pulumi.Input<number>;
+    tunnelInterfaceHelloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceHelloIntervalVariable?: pulumi.Input<string>;
+    tunnelInterfaceHelloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set tolerance of control hello packets <12..6000> seconds
      *   - Range: `12`-`6000`
      *   - Default value: `12`
      */
-    tunnelInterfaceHelloTolerance?: pulumi.Input<number>;
+    tunnelInterfaceHelloTolerance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceHelloToleranceVariable?: pulumi.Input<string>;
+    tunnelInterfaceHelloToleranceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TLOC as last resort
      *   - Default value: `false`
      */
-    tunnelInterfaceLastResortCircuit?: pulumi.Input<boolean>;
+    tunnelInterfaceLastResortCircuit?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceLastResortCircuitVariable?: pulumi.Input<string>;
+    tunnelInterfaceLastResortCircuitVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface as a low-bandwidth circuit
      *   - Default value: `false`
      */
-    tunnelInterfaceLowBandwidthLink?: pulumi.Input<boolean>;
+    tunnelInterfaceLowBandwidthLink?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceLowBandwidthLinkVariable?: pulumi.Input<string>;
+    tunnelInterfaceLowBandwidthLinkVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the maximum number of control connections for this TLOC
      *   - Range: `0`-`8`
      */
-    tunnelInterfaceMaxControlConnections?: pulumi.Input<number>;
+    tunnelInterfaceMaxControlConnections?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceMaxControlConnectionsVariable?: pulumi.Input<string>;
+    tunnelInterfaceMaxControlConnectionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time period of nat refresh packets <1...60> seconds
      *   - Range: `1`-`60`
      *   - Default value: `5`
      */
-    tunnelInterfaceNatRefreshInterval?: pulumi.Input<number>;
+    tunnelInterfaceNatRefreshInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceNatRefreshIntervalVariable?: pulumi.Input<string>;
+    tunnelInterfaceNatRefreshIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Accept and respond to network-prefix-directed broadcasts)
      *   - Default value: `false`
      */
-    tunnelInterfaceNetworkBroadcast?: pulumi.Input<boolean>;
+    tunnelInterfaceNetworkBroadcast?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string>;
+    tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
      * Disallow port hopping on the tunnel interface
      *   - Default value: `true`
      */
-    tunnelInterfacePortHop?: pulumi.Input<boolean>;
+    tunnelInterfacePortHop?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfacePortHopVariable?: pulumi.Input<string>;
+    tunnelInterfacePortHopVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tunnelInterfaceTunnelTcpMss?: pulumi.Input<number>;
+    tunnelInterfaceTunnelTcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceTunnelTcpMssVariable?: pulumi.Input<string>;
+    tunnelInterfaceTunnelTcpMssVariable?: pulumi.Input<string | undefined>;
     /**
      * Put this wan interface in STUN mode only
      *   - Default value: `false`
      */
-    tunnelInterfaceVbondAsStunServer?: pulumi.Input<boolean>;
+    tunnelInterfaceVbondAsStunServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceVbondAsStunServerVariable?: pulumi.Input<string>;
+    tunnelInterfaceVbondAsStunServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface preference for control connection to vManage <0..8>
      *   - Range: `0`-`8`
      *   - Default value: `5`
      */
-    tunnelInterfaceVmanageConnectionPreference?: pulumi.Input<number>;
+    tunnelInterfaceVmanageConnectionPreference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
+    tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set tunnel QoS mode
      *   - Choices: `spoke`
      */
-    tunnelQosMode?: pulumi.Input<string>;
+    tunnelQosMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelQosModeVariable?: pulumi.Input<string>;
+    tunnelQosModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Dialer IP Unnumbered Loopback interface name
      */
-    unnumberedLoopbackInterface?: pulumi.Input<string>;
+    unnumberedLoopbackInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    unnumberedLoopbackInterfaceVariable?: pulumi.Input<string>;
+    unnumberedLoopbackInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of rewrite rule
      */
-    writeRule?: pulumi.Input<string>;
+    writeRule?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    writeRuleVariable?: pulumi.Input<string>;
+    writeRuleVariable?: pulumi.Input<string | undefined>;
 }

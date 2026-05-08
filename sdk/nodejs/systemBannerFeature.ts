@@ -135,29 +135,29 @@ export interface SystemBannerFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
-    login?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
+    login?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    loginVariable?: pulumi.Input<string>;
-    motd?: pulumi.Input<string>;
+    loginVariable?: pulumi.Input<string | undefined>;
+    motd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    motdVariable?: pulumi.Input<string>;
+    motdVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -167,23 +167,23 @@ export interface SystemBannerFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
     featureProfileId: pulumi.Input<string>;
-    login?: pulumi.Input<string>;
+    login?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    loginVariable?: pulumi.Input<string>;
-    motd?: pulumi.Input<string>;
+    loginVariable?: pulumi.Input<string | undefined>;
+    motd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    motdVariable?: pulumi.Input<string>;
+    motdVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

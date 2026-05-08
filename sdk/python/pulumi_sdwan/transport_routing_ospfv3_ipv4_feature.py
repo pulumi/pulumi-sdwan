@@ -22,43 +22,43 @@ __all__ = ['TransportRoutingOspfv3Ipv4FeatureArgs', 'TransportRoutingOspfv3Ipv4F
 class TransportRoutingOspfv3Ipv4FeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]] = None,
-                 reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rfc1583_compatible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rfc1583_compatible_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_on_startup_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 router_lsa_on_startup_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_calculation_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_initial_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_initial_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_maximum_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_maximum_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]] = None,
+                 reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_on_startup_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 router_lsa_on_startup_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_initial_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_maximum_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_maximum_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportRoutingOspfv3Ipv4Feature resource.
 
@@ -211,55 +211,55 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]:
+    def areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]:
         """
         Configure OSPFv3 IPv4 area
         """
         return pulumi.get(self, "areas")
 
     @areas.setter
-    def areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]):
+    def areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]):
         pulumi.set(self, "areas", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginate")
-    def default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF disabled
         """
         return pulumi.get(self, "default_information_originate")
 
     @default_information_originate.setter
-    def default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlways")
-    def default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
         """
         return pulumi.get(self, "default_information_originate_always")
 
     @default_information_originate_always.setter
-    def default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlwaysVariable")
-    def default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_always_variable")
 
     @default_information_originate_always_variable.setter
-    def default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetric")
-    def default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -267,12 +267,12 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "default_information_originate_metric")
 
     @default_information_originate_metric.setter
-    def default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricType")
-    def default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route metric type
           - Choices: `type1`, `type2`
@@ -280,48 +280,48 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "default_information_originate_metric_type")
 
     @default_information_originate_metric_type.setter
-    def default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricTypeVariable")
-    def default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_type_variable")
 
     @default_information_originate_metric_type_variable.setter
-    def default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricVariable")
-    def default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_variable")
 
     @default_information_originate_metric_variable.setter
-    def default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Distance
           - Range: `1`-`255`
@@ -330,12 +330,12 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "distance")
 
     @distance.setter
-    def distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternal")
-    def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`254`
@@ -344,24 +344,24 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "distance_external")
 
     @distance_external.setter
-    def distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternalVariable")
-    def distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_external_variable")
 
     @distance_external_variable.setter
-    def distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterArea")
-    def distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`254`
@@ -370,24 +370,24 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "distance_inter_area")
 
     @distance_inter_area.setter
-    def distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterAreaVariable")
-    def distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_inter_area_variable")
 
     @distance_inter_area_variable.setter
-    def distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraArea")
-    def distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`254`
@@ -396,36 +396,36 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "distance_intra_area")
 
     @distance_intra_area.setter
-    def distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraAreaVariable")
-    def distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_intra_area_variable")
 
     @distance_intra_area_variable.setter
-    def distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceVariable")
-    def distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_variable")
 
     @distance_variable.setter
-    def distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Table map filtered or not
           - Default value: `false`
@@ -433,48 +433,48 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter(name="filterVariable")
-    def filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "filter_variable")
 
     @filter_variable.setter
-    def filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]:
+    def redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "redistributes")
 
     @redistributes.setter
-    def redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]):
+    def redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]):
         pulumi.set(self, "redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="referenceBandwidth")
-    def reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -483,24 +483,24 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "reference_bandwidth")
 
     @reference_bandwidth.setter
-    def reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="referenceBandwidthVariable")
-    def reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "reference_bandwidth_variable")
 
     @reference_bandwidth_variable.setter
-    def reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rfc1583Compatible")
-    def rfc1583_compatible(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rfc1583_compatible(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -508,69 +508,69 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "rfc1583_compatible")
 
     @rfc1583_compatible.setter
-    def rfc1583_compatible(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rfc1583_compatible(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rfc1583_compatible", value)
 
     @_builtins.property
     @pulumi.getter(name="rfc1583CompatibleVariable")
-    def rfc1583_compatible_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rfc1583_compatible_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rfc1583_compatible_variable")
 
     @rfc1583_compatible_variable.setter
-    def rfc1583_compatible_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rfc1583_compatible_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rfc1583_compatible_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
-    def route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "route_policy_id")
 
     @route_policy_id.setter
-    def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerLsaAction")
-    def router_lsa_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_lsa_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Not advertise maximum metric Router LSA policy by default
         """
         return pulumi.get(self, "router_lsa_action")
 
     @router_lsa_action.setter
-    def router_lsa_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_lsa_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_lsa_action", value)
 
     @_builtins.property
     @pulumi.getter(name="routerLsaOnStartupTime")
-    def router_lsa_on_startup_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def router_lsa_on_startup_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how long to advertise maximum metric after router boot up
           - Range: `5`-`86400`
@@ -578,24 +578,24 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "router_lsa_on_startup_time")
 
     @router_lsa_on_startup_time.setter
-    def router_lsa_on_startup_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def router_lsa_on_startup_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "router_lsa_on_startup_time", value)
 
     @_builtins.property
     @pulumi.getter(name="routerLsaOnStartupTimeVariable")
-    def router_lsa_on_startup_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_lsa_on_startup_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_lsa_on_startup_time_variable")
 
     @router_lsa_on_startup_time_variable.setter
-    def router_lsa_on_startup_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_lsa_on_startup_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_lsa_on_startup_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="spfCalculationDelay")
-    def spf_calculation_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def spf_calculation_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `1`-`600000`
@@ -604,24 +604,24 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "spf_calculation_delay")
 
     @spf_calculation_delay.setter
-    def spf_calculation_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def spf_calculation_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "spf_calculation_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="spfCalculationDelayVariable")
-    def spf_calculation_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spf_calculation_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spf_calculation_delay_variable")
 
     @spf_calculation_delay_variable.setter
-    def spf_calculation_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spf_calculation_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spf_calculation_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="spfInitialHoldTime")
-    def spf_initial_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def spf_initial_hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -630,24 +630,24 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "spf_initial_hold_time")
 
     @spf_initial_hold_time.setter
-    def spf_initial_hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def spf_initial_hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "spf_initial_hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="spfInitialHoldTimeVariable")
-    def spf_initial_hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spf_initial_hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spf_initial_hold_time_variable")
 
     @spf_initial_hold_time_variable.setter
-    def spf_initial_hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spf_initial_hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spf_initial_hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="spfMaximumHoldTime")
-    def spf_maximum_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def spf_maximum_hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -656,64 +656,64 @@ class TransportRoutingOspfv3Ipv4FeatureArgs:
         return pulumi.get(self, "spf_maximum_hold_time")
 
     @spf_maximum_hold_time.setter
-    def spf_maximum_hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def spf_maximum_hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "spf_maximum_hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="spfMaximumHoldTimeVariable")
-    def spf_maximum_hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spf_maximum_hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spf_maximum_hold_time_variable")
 
     @spf_maximum_hold_time_variable.setter
-    def spf_maximum_hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spf_maximum_hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spf_maximum_hold_time_variable", value)
 
 
 @pulumi.input_type
 class _TransportRoutingOspfv3Ipv4FeatureState:
     def __init__(__self__, *,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]] = None,
-                 reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rfc1583_compatible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rfc1583_compatible_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_on_startup_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 router_lsa_on_startup_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_calculation_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_initial_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_initial_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_maximum_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_maximum_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]] = None,
+                 reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_on_startup_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 router_lsa_on_startup_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_initial_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_maximum_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_maximum_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportRoutingOspfv3Ipv4Feature resources.
 
@@ -858,55 +858,55 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]:
+    def areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]:
         """
         Configure OSPFv3 IPv4 area
         """
         return pulumi.get(self, "areas")
 
     @areas.setter
-    def areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]):
+    def areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaArgs']]]]):
         pulumi.set(self, "areas", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginate")
-    def default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF disabled
         """
         return pulumi.get(self, "default_information_originate")
 
     @default_information_originate.setter
-    def default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlways")
-    def default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
         """
         return pulumi.get(self, "default_information_originate_always")
 
     @default_information_originate_always.setter
-    def default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlwaysVariable")
-    def default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_always_variable")
 
     @default_information_originate_always_variable.setter
-    def default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetric")
-    def default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -914,12 +914,12 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "default_information_originate_metric")
 
     @default_information_originate_metric.setter
-    def default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricType")
-    def default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route metric type
           - Choices: `type1`, `type2`
@@ -927,48 +927,48 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "default_information_originate_metric_type")
 
     @default_information_originate_metric_type.setter
-    def default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricTypeVariable")
-    def default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_type_variable")
 
     @default_information_originate_metric_type_variable.setter
-    def default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricVariable")
-    def default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_variable")
 
     @default_information_originate_metric_variable.setter
-    def default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Distance
           - Range: `1`-`255`
@@ -977,12 +977,12 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "distance")
 
     @distance.setter
-    def distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternal")
-    def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`254`
@@ -991,24 +991,24 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "distance_external")
 
     @distance_external.setter
-    def distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternalVariable")
-    def distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_external_variable")
 
     @distance_external_variable.setter
-    def distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterArea")
-    def distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`254`
@@ -1017,24 +1017,24 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "distance_inter_area")
 
     @distance_inter_area.setter
-    def distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterAreaVariable")
-    def distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_inter_area_variable")
 
     @distance_inter_area_variable.setter
-    def distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraArea")
-    def distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`254`
@@ -1043,48 +1043,48 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "distance_intra_area")
 
     @distance_intra_area.setter
-    def distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraAreaVariable")
-    def distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_intra_area_variable")
 
     @distance_intra_area_variable.setter
-    def distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceVariable")
-    def distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_variable")
 
     @distance_variable.setter
-    def distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Table map filtered or not
           - Default value: `false`
@@ -1092,48 +1092,48 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter(name="filterVariable")
-    def filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "filter_variable")
 
     @filter_variable.setter
-    def filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]:
+    def redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "redistributes")
 
     @redistributes.setter
-    def redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]):
+    def redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs']]]]):
         pulumi.set(self, "redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="referenceBandwidth")
-    def reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -1142,24 +1142,24 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "reference_bandwidth")
 
     @reference_bandwidth.setter
-    def reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="referenceBandwidthVariable")
-    def reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "reference_bandwidth_variable")
 
     @reference_bandwidth_variable.setter
-    def reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rfc1583Compatible")
-    def rfc1583_compatible(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rfc1583_compatible(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -1167,69 +1167,69 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "rfc1583_compatible")
 
     @rfc1583_compatible.setter
-    def rfc1583_compatible(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rfc1583_compatible(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rfc1583_compatible", value)
 
     @_builtins.property
     @pulumi.getter(name="rfc1583CompatibleVariable")
-    def rfc1583_compatible_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rfc1583_compatible_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rfc1583_compatible_variable")
 
     @rfc1583_compatible_variable.setter
-    def rfc1583_compatible_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rfc1583_compatible_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rfc1583_compatible_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
-    def route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "route_policy_id")
 
     @route_policy_id.setter
-    def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerLsaAction")
-    def router_lsa_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_lsa_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Not advertise maximum metric Router LSA policy by default
         """
         return pulumi.get(self, "router_lsa_action")
 
     @router_lsa_action.setter
-    def router_lsa_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_lsa_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_lsa_action", value)
 
     @_builtins.property
     @pulumi.getter(name="routerLsaOnStartupTime")
-    def router_lsa_on_startup_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def router_lsa_on_startup_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how long to advertise maximum metric after router boot up
           - Range: `5`-`86400`
@@ -1237,24 +1237,24 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "router_lsa_on_startup_time")
 
     @router_lsa_on_startup_time.setter
-    def router_lsa_on_startup_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def router_lsa_on_startup_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "router_lsa_on_startup_time", value)
 
     @_builtins.property
     @pulumi.getter(name="routerLsaOnStartupTimeVariable")
-    def router_lsa_on_startup_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_lsa_on_startup_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_lsa_on_startup_time_variable")
 
     @router_lsa_on_startup_time_variable.setter
-    def router_lsa_on_startup_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_lsa_on_startup_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_lsa_on_startup_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="spfCalculationDelay")
-    def spf_calculation_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def spf_calculation_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `1`-`600000`
@@ -1263,24 +1263,24 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "spf_calculation_delay")
 
     @spf_calculation_delay.setter
-    def spf_calculation_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def spf_calculation_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "spf_calculation_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="spfCalculationDelayVariable")
-    def spf_calculation_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spf_calculation_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spf_calculation_delay_variable")
 
     @spf_calculation_delay_variable.setter
-    def spf_calculation_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spf_calculation_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spf_calculation_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="spfInitialHoldTime")
-    def spf_initial_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def spf_initial_hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -1289,24 +1289,24 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "spf_initial_hold_time")
 
     @spf_initial_hold_time.setter
-    def spf_initial_hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def spf_initial_hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "spf_initial_hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="spfInitialHoldTimeVariable")
-    def spf_initial_hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spf_initial_hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spf_initial_hold_time_variable")
 
     @spf_initial_hold_time_variable.setter
-    def spf_initial_hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spf_initial_hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spf_initial_hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="spfMaximumHoldTime")
-    def spf_maximum_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def spf_maximum_hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -1315,31 +1315,31 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         return pulumi.get(self, "spf_maximum_hold_time")
 
     @spf_maximum_hold_time.setter
-    def spf_maximum_hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def spf_maximum_hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "spf_maximum_hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="spfMaximumHoldTimeVariable")
-    def spf_maximum_hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spf_maximum_hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spf_maximum_hold_time_variable")
 
     @spf_maximum_hold_time_variable.setter
-    def spf_maximum_hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spf_maximum_hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spf_maximum_hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1349,44 +1349,44 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
-                 reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rfc1583_compatible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rfc1583_compatible_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_on_startup_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 router_lsa_on_startup_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_calculation_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_initial_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_initial_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_maximum_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_maximum_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
+                 reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_on_startup_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 router_lsa_on_startup_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_initial_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_maximum_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_maximum_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Transport Routing OSPFv3 IPv4 Feature.
@@ -1606,44 +1606,44 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
-                 reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rfc1583_compatible: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rfc1583_compatible_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_lsa_on_startup_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 router_lsa_on_startup_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_calculation_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_initial_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_initial_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spf_maximum_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 spf_maximum_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
+                 reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_lsa_on_startup_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 router_lsa_on_startup_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_initial_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spf_maximum_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 spf_maximum_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1704,45 +1704,45 @@ class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
-            default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-            default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-            default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-            default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            distance: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
-            reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-            reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            rfc1583_compatible: Optional[pulumi.Input[_builtins.bool]] = None,
-            rfc1583_compatible_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            router_lsa_action: Optional[pulumi.Input[_builtins.str]] = None,
-            router_lsa_on_startup_time: Optional[pulumi.Input[_builtins.int]] = None,
-            router_lsa_on_startup_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None,
-            spf_calculation_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            spf_initial_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-            spf_initial_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            spf_maximum_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-            spf_maximum_hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'TransportRoutingOspfv3Ipv4Feature':
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureAreaArgs', 'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict']]]]] = None,
+            default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+            default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            distance: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportRoutingOspfv3Ipv4FeatureRedistributeArgs', 'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict']]]]] = None,
+            reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rfc1583_compatible: pulumi.Input[Optional[_builtins.bool]] = None,
+            rfc1583_compatible_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            router_lsa_action: pulumi.Input[Optional[_builtins.str]] = None,
+            router_lsa_on_startup_time: pulumi.Input[Optional[_builtins.int]] = None,
+            router_lsa_on_startup_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spf_calculation_delay: pulumi.Input[Optional[_builtins.int]] = None,
+            spf_calculation_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spf_initial_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            spf_initial_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spf_maximum_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            spf_maximum_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TransportRoutingOspfv3Ipv4Feature':
         """
         Get an existing TransportRoutingOspfv3Ipv4Feature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

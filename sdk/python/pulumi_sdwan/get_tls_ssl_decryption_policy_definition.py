@@ -334,7 +334,7 @@ def get_tls_ssl_decryption_policy_definition(id: Optional[_builtins.str] = None,
         url_rules=pulumi.get(__ret__, 'url_rules'),
         use_default_ca_cert_bundle=pulumi.get(__ret__, 'use_default_ca_cert_bundle'),
         version=pulumi.get(__ret__, 'version'))
-def get_tls_ssl_decryption_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_tls_ssl_decryption_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTlsSslDecryptionPolicyDefinitionResult]:
     """
     This data source can read the TLS SSL Decryption Policy Definition .

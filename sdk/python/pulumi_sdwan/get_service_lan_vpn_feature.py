@@ -609,8 +609,8 @@ def get_service_lan_vpn_feature(feature_profile_id: Optional[_builtins.str] = No
         version=pulumi.get(__ret__, 'version'),
         vpn=pulumi.get(__ret__, 'vpn'),
         vpn_variable=pulumi.get(__ret__, 'vpn_variable'))
-def get_service_lan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                       id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_lan_vpn_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                       id: pulumi.Input[Optional[_builtins.str]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnFeatureResult]:
     """
     This data source can read the Service LAN VPN Feature.

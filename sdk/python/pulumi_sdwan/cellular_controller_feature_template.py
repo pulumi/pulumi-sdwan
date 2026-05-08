@@ -23,18 +23,18 @@ class CellularControllerFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 cellular_interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cellular_interface_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]] = None,
-                 firmware_auto_sim: Optional[pulumi.Input[_builtins.bool]] = None,
-                 firmware_auto_sim_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_sim_slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 primary_sim_slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_retries_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 cellular_interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cellular_interface_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_profiles: pulumi.Input[Optional[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]] = None,
+                 firmware_auto_sim: pulumi.Input[Optional[_builtins.bool]] = None,
+                 firmware_auto_sim_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_sim_slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 primary_sim_slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CellularControllerFeatureTemplate resource.
 
@@ -112,43 +112,43 @@ class CellularControllerFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="cellularInterfaceId")
-    def cellular_interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cellular_interface_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Cellular interface name
         """
         return pulumi.get(self, "cellular_interface_id")
 
     @cellular_interface_id.setter
-    def cellular_interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cellular_interface_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cellular_interface_id", value)
 
     @_builtins.property
     @pulumi.getter(name="cellularInterfaceIdVariable")
-    def cellular_interface_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cellular_interface_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "cellular_interface_id_variable")
 
     @cellular_interface_id_variable.setter
-    def cellular_interface_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cellular_interface_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cellular_interface_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dataProfiles")
-    def data_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]:
+    def data_profiles(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]:
         """
         Data Profile List
         """
         return pulumi.get(self, "data_profiles")
 
     @data_profiles.setter
-    def data_profiles(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]):
+    def data_profiles(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]):
         pulumi.set(self, "data_profiles", value)
 
     @_builtins.property
     @pulumi.getter(name="firmwareAutoSim")
-    def firmware_auto_sim(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def firmware_auto_sim(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable/Disable Firmware Auto Sim
           - Default value: `true`
@@ -156,36 +156,36 @@ class CellularControllerFeatureTemplateArgs:
         return pulumi.get(self, "firmware_auto_sim")
 
     @firmware_auto_sim.setter
-    def firmware_auto_sim(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def firmware_auto_sim(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "firmware_auto_sim", value)
 
     @_builtins.property
     @pulumi.getter(name="firmwareAutoSimVariable")
-    def firmware_auto_sim_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def firmware_auto_sim_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "firmware_auto_sim_variable")
 
     @firmware_auto_sim_variable.setter
-    def firmware_auto_sim_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def firmware_auto_sim_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "firmware_auto_sim_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="primarySimSlot")
-    def primary_sim_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def primary_sim_slot(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set primary SIM slot
           - Range: `0`-`255`
@@ -193,24 +193,24 @@ class CellularControllerFeatureTemplateArgs:
         return pulumi.get(self, "primary_sim_slot")
 
     @primary_sim_slot.setter
-    def primary_sim_slot(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def primary_sim_slot(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "primary_sim_slot", value)
 
     @_builtins.property
     @pulumi.getter(name="primarySimSlotVariable")
-    def primary_sim_slot_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_sim_slot_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "primary_sim_slot_variable")
 
     @primary_sim_slot_variable.setter
-    def primary_sim_slot_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_sim_slot_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_sim_slot_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverRetries")
-    def sim_failover_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sim_failover_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set SIM failover retries
           - Range: `0`-`65535`
@@ -218,24 +218,24 @@ class CellularControllerFeatureTemplateArgs:
         return pulumi.get(self, "sim_failover_retries")
 
     @sim_failover_retries.setter
-    def sim_failover_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sim_failover_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sim_failover_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverRetriesVariable")
-    def sim_failover_retries_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sim_failover_retries_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "sim_failover_retries_variable")
 
     @sim_failover_retries_variable.setter
-    def sim_failover_retries_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sim_failover_retries_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sim_failover_retries_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverTimeout")
-    def sim_failover_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sim_failover_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set SIM failover timeout in minutes
           - Range: `3`-`7`
@@ -243,41 +243,41 @@ class CellularControllerFeatureTemplateArgs:
         return pulumi.get(self, "sim_failover_timeout")
 
     @sim_failover_timeout.setter
-    def sim_failover_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sim_failover_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sim_failover_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverTimeoutVariable")
-    def sim_failover_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sim_failover_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "sim_failover_timeout_variable")
 
     @sim_failover_timeout_variable.setter
-    def sim_failover_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sim_failover_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sim_failover_timeout_variable", value)
 
 
 @pulumi.input_type
 class _CellularControllerFeatureTemplateState:
     def __init__(__self__, *,
-                 cellular_interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cellular_interface_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 firmware_auto_sim: Optional[pulumi.Input[_builtins.bool]] = None,
-                 firmware_auto_sim_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_sim_slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 primary_sim_slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_retries_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 cellular_interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cellular_interface_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_profiles: pulumi.Input[Optional[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 firmware_auto_sim: pulumi.Input[Optional[_builtins.bool]] = None,
+                 firmware_auto_sim_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_sim_slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 primary_sim_slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CellularControllerFeatureTemplate resources.
 
@@ -338,55 +338,55 @@ class _CellularControllerFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="cellularInterfaceId")
-    def cellular_interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cellular_interface_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Cellular interface name
         """
         return pulumi.get(self, "cellular_interface_id")
 
     @cellular_interface_id.setter
-    def cellular_interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cellular_interface_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cellular_interface_id", value)
 
     @_builtins.property
     @pulumi.getter(name="cellularInterfaceIdVariable")
-    def cellular_interface_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cellular_interface_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "cellular_interface_id_variable")
 
     @cellular_interface_id_variable.setter
-    def cellular_interface_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cellular_interface_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cellular_interface_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dataProfiles")
-    def data_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]:
+    def data_profiles(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]:
         """
         Data Profile List
         """
         return pulumi.get(self, "data_profiles")
 
     @data_profiles.setter
-    def data_profiles(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]):
+    def data_profiles(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]]]):
         pulumi.set(self, "data_profiles", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -394,12 +394,12 @@ class _CellularControllerFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="firmwareAutoSim")
-    def firmware_auto_sim(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def firmware_auto_sim(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable/Disable Firmware Auto Sim
           - Default value: `true`
@@ -407,36 +407,36 @@ class _CellularControllerFeatureTemplateState:
         return pulumi.get(self, "firmware_auto_sim")
 
     @firmware_auto_sim.setter
-    def firmware_auto_sim(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def firmware_auto_sim(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "firmware_auto_sim", value)
 
     @_builtins.property
     @pulumi.getter(name="firmwareAutoSimVariable")
-    def firmware_auto_sim_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def firmware_auto_sim_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "firmware_auto_sim_variable")
 
     @firmware_auto_sim_variable.setter
-    def firmware_auto_sim_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def firmware_auto_sim_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "firmware_auto_sim_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="primarySimSlot")
-    def primary_sim_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def primary_sim_slot(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set primary SIM slot
           - Range: `0`-`255`
@@ -444,24 +444,24 @@ class _CellularControllerFeatureTemplateState:
         return pulumi.get(self, "primary_sim_slot")
 
     @primary_sim_slot.setter
-    def primary_sim_slot(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def primary_sim_slot(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "primary_sim_slot", value)
 
     @_builtins.property
     @pulumi.getter(name="primarySimSlotVariable")
-    def primary_sim_slot_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_sim_slot_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "primary_sim_slot_variable")
 
     @primary_sim_slot_variable.setter
-    def primary_sim_slot_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_sim_slot_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_sim_slot_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverRetries")
-    def sim_failover_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sim_failover_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set SIM failover retries
           - Range: `0`-`65535`
@@ -469,24 +469,24 @@ class _CellularControllerFeatureTemplateState:
         return pulumi.get(self, "sim_failover_retries")
 
     @sim_failover_retries.setter
-    def sim_failover_retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sim_failover_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sim_failover_retries", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverRetriesVariable")
-    def sim_failover_retries_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sim_failover_retries_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "sim_failover_retries_variable")
 
     @sim_failover_retries_variable.setter
-    def sim_failover_retries_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sim_failover_retries_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sim_failover_retries_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverTimeout")
-    def sim_failover_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sim_failover_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set SIM failover timeout in minutes
           - Range: `3`-`7`
@@ -494,43 +494,43 @@ class _CellularControllerFeatureTemplateState:
         return pulumi.get(self, "sim_failover_timeout")
 
     @sim_failover_timeout.setter
-    def sim_failover_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sim_failover_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sim_failover_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="simFailoverTimeoutVariable")
-    def sim_failover_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sim_failover_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "sim_failover_timeout_variable")
 
     @sim_failover_timeout_variable.setter
-    def sim_failover_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sim_failover_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "sim_failover_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -540,20 +540,20 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cellular_interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cellular_interface_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 firmware_auto_sim: Optional[pulumi.Input[_builtins.bool]] = None,
-                 firmware_auto_sim_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_sim_slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 primary_sim_slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_retries_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 cellular_interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cellular_interface_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 firmware_auto_sim: pulumi.Input[Optional[_builtins.bool]] = None,
+                 firmware_auto_sim_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_sim_slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 primary_sim_slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cellular Controller feature template.
@@ -668,20 +668,20 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cellular_interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cellular_interface_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 firmware_auto_sim: Optional[pulumi.Input[_builtins.bool]] = None,
-                 firmware_auto_sim_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_sim_slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 primary_sim_slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_retries_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 sim_failover_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 sim_failover_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 cellular_interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cellular_interface_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 firmware_auto_sim: pulumi.Input[Optional[_builtins.bool]] = None,
+                 firmware_auto_sim_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_sim_slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 primary_sim_slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 sim_failover_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 sim_failover_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -721,22 +721,22 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cellular_interface_id: Optional[pulumi.Input[_builtins.str]] = None,
-            cellular_interface_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            firmware_auto_sim: Optional[pulumi.Input[_builtins.bool]] = None,
-            firmware_auto_sim_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            primary_sim_slot: Optional[pulumi.Input[_builtins.int]] = None,
-            primary_sim_slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            sim_failover_retries: Optional[pulumi.Input[_builtins.int]] = None,
-            sim_failover_retries_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            sim_failover_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            sim_failover_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CellularControllerFeatureTemplate':
+            cellular_interface_id: pulumi.Input[Optional[_builtins.str]] = None,
+            cellular_interface_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            data_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            firmware_auto_sim: pulumi.Input[Optional[_builtins.bool]] = None,
+            firmware_auto_sim_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_sim_slot: pulumi.Input[Optional[_builtins.int]] = None,
+            primary_sim_slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sim_failover_retries: pulumi.Input[Optional[_builtins.int]] = None,
+            sim_failover_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            sim_failover_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            sim_failover_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CellularControllerFeatureTemplate':
         """
         Get an existing CellularControllerFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

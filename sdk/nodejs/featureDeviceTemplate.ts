@@ -158,44 +158,44 @@ export interface FeatureDeviceTemplateState {
     /**
      * The description of the device template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device role
      *   - Choices: `sdwan-edge`, `service-node`
      */
-    deviceRole?: pulumi.Input<string>;
+    deviceRole?: pulumi.Input<string | undefined>;
     /**
      * The device type (e.g., `vedge-ISR-4331`)
      */
-    deviceType?: pulumi.Input<string>;
+    deviceType?: pulumi.Input<string | undefined>;
     /**
      * List of general templates
      */
-    generalTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplate>[]>;
+    generalTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplate>[] | undefined>;
     /**
      * The name of the device template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The policy ID
      */
-    policyId?: pulumi.Input<string>;
+    policyId?: pulumi.Input<string | undefined>;
     /**
      * The policy version
      */
-    policyVersion?: pulumi.Input<number>;
+    policyVersion?: pulumi.Input<number | undefined>;
     /**
      * The security policy ID
      */
-    securityPolicyId?: pulumi.Input<string>;
+    securityPolicyId?: pulumi.Input<string | undefined>;
     /**
      * The security policy version
      */
-    securityPolicyVersion?: pulumi.Input<number>;
+    securityPolicyVersion?: pulumi.Input<number | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -210,7 +210,7 @@ export interface FeatureDeviceTemplateArgs {
      * The device role
      *   - Choices: `sdwan-edge`, `service-node`
      */
-    deviceRole?: pulumi.Input<string>;
+    deviceRole?: pulumi.Input<string | undefined>;
     /**
      * The device type (e.g., `vedge-ISR-4331`)
      */
@@ -218,25 +218,25 @@ export interface FeatureDeviceTemplateArgs {
     /**
      * List of general templates
      */
-    generalTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplate>[]>;
+    generalTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplate>[] | undefined>;
     /**
      * The name of the device template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The policy ID
      */
-    policyId?: pulumi.Input<string>;
+    policyId?: pulumi.Input<string | undefined>;
     /**
      * The policy version
      */
-    policyVersion?: pulumi.Input<number>;
+    policyVersion?: pulumi.Input<number | undefined>;
     /**
      * The security policy ID
      */
-    securityPolicyId?: pulumi.Input<string>;
+    securityPolicyId?: pulumi.Input<string | undefined>;
     /**
      * The security policy version
      */
-    securityPolicyVersion?: pulumi.Input<number>;
+    securityPolicyVersion?: pulumi.Input<number | undefined>;
 }

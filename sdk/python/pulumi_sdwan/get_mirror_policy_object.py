@@ -125,7 +125,7 @@ def get_mirror_policy_object(id: Optional[_builtins.str] = None,
         remote_destination_ip=pulumi.get(__ret__, 'remote_destination_ip'),
         source_ip=pulumi.get(__ret__, 'source_ip'),
         version=pulumi.get(__ret__, 'version'))
-def get_mirror_policy_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_mirror_policy_object_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetMirrorPolicyObjectResult]:
     """
     This data source can read the Mirror Policy Object .

@@ -296,8 +296,8 @@ def get_transport_management_vpn_feature(feature_profile_id: Optional[_builtins.
         version=pulumi.get(__ret__, 'version'),
         vpn_description=pulumi.get(__ret__, 'vpn_description'),
         vpn_description_variable=pulumi.get(__ret__, 'vpn_description_variable'))
-def get_transport_management_vpn_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_transport_management_vpn_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                id: pulumi.Input[Optional[_builtins.str]] = None,
                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportManagementVpnFeatureResult]:
     """
     This data source can read the Transport Management VPN Feature.

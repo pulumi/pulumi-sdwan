@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.ServiceIpv6AclFeature("example", new()
+    ///     var example = new Sdwan.ServiceIpv6AclFeature("example", new()
     ///     {
     ///         Name = "Example",
     ///         Description = "My Example",

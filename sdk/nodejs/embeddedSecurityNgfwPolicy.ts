@@ -144,24 +144,24 @@ export interface EmbeddedSecurityNgfwPolicyState {
     /**
      * - Choices: `pass`, `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
-    sequences?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequence>[]>;
+    name?: pulumi.Input<string | undefined>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequence>[] | undefined>;
     /**
      * The version of the Policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -175,7 +175,7 @@ export interface EmbeddedSecurityNgfwPolicyArgs {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -183,6 +183,6 @@ export interface EmbeddedSecurityNgfwPolicyArgs {
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
-    sequences?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequence>[]>;
+    name?: pulumi.Input<string | undefined>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequence>[] | undefined>;
 }

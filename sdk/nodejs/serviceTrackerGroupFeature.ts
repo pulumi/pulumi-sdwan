@@ -141,33 +141,33 @@ export interface ServiceTrackerGroupFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * tracker ref list combine boolean and or
      *   - Choices: `and`, `or`
      *   - Default value: `or`
      */
-    trackerBoolean?: pulumi.Input<string>;
+    trackerBoolean?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerBooleanVariable?: pulumi.Input<string>;
+    trackerBooleanVariable?: pulumi.Input<string | undefined>;
     /**
      * tracker parcel ref list
      */
-    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceTrackerGroupFeatureTrackerElement>[]>;
+    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceTrackerGroupFeatureTrackerElement>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -177,7 +177,7 @@ export interface ServiceTrackerGroupFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -185,19 +185,19 @@ export interface ServiceTrackerGroupFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * tracker ref list combine boolean and or
      *   - Choices: `and`, `or`
      *   - Default value: `or`
      */
-    trackerBoolean?: pulumi.Input<string>;
+    trackerBoolean?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerBooleanVariable?: pulumi.Input<string>;
+    trackerBooleanVariable?: pulumi.Input<string | undefined>;
     /**
      * tracker parcel ref list
      */
-    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceTrackerGroupFeatureTrackerElement>[]>;
+    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceTrackerGroupFeatureTrackerElement>[] | undefined>;
 }

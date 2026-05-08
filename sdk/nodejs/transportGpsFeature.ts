@@ -198,72 +198,72 @@ export interface TransportGpsFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable GPS
      *   - Default value: `false`
      */
-    gpsEnable?: pulumi.Input<boolean>;
+    gpsEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    gpsEnableVariable?: pulumi.Input<string>;
+    gpsEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Select GPS mode
      *   - Choices: `ms-based`, `standalone`
      *   - Default value: `ms-based`
      */
-    gpsMode?: pulumi.Input<string>;
+    gpsMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    gpsModeVariable?: pulumi.Input<string>;
+    gpsModeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Destination address
      */
-    nmeaDestinationAddress?: pulumi.Input<string>;
+    nmeaDestinationAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nmeaDestinationAddressVariable?: pulumi.Input<string>;
+    nmeaDestinationAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination port
      *   - Range: `1`-`65535`
      */
-    nmeaDestinationPort?: pulumi.Input<number>;
+    nmeaDestinationPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nmeaDestinationPortVariable?: pulumi.Input<string>;
+    nmeaDestinationPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable NMEA data
      *   - Default value: `false`
      */
-    nmeaEnable?: pulumi.Input<boolean>;
+    nmeaEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nmeaEnableVariable?: pulumi.Input<string>;
+    nmeaEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Source address
      */
-    nmeaSourceAddress?: pulumi.Input<string>;
+    nmeaSourceAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nmeaSourceAddressVariable?: pulumi.Input<string>;
+    nmeaSourceAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -273,7 +273,7 @@ export interface TransportGpsFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -282,57 +282,57 @@ export interface TransportGpsFeatureArgs {
      * Enable/disable GPS
      *   - Default value: `false`
      */
-    gpsEnable?: pulumi.Input<boolean>;
+    gpsEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    gpsEnableVariable?: pulumi.Input<string>;
+    gpsEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Select GPS mode
      *   - Choices: `ms-based`, `standalone`
      *   - Default value: `ms-based`
      */
-    gpsMode?: pulumi.Input<string>;
+    gpsMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    gpsModeVariable?: pulumi.Input<string>;
+    gpsModeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Destination address
      */
-    nmeaDestinationAddress?: pulumi.Input<string>;
+    nmeaDestinationAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nmeaDestinationAddressVariable?: pulumi.Input<string>;
+    nmeaDestinationAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination port
      *   - Range: `1`-`65535`
      */
-    nmeaDestinationPort?: pulumi.Input<number>;
+    nmeaDestinationPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nmeaDestinationPortVariable?: pulumi.Input<string>;
+    nmeaDestinationPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable NMEA data
      *   - Default value: `false`
      */
-    nmeaEnable?: pulumi.Input<boolean>;
+    nmeaEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nmeaEnableVariable?: pulumi.Input<string>;
+    nmeaEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Source address
      */
-    nmeaSourceAddress?: pulumi.Input<string>;
+    nmeaSourceAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nmeaSourceAddressVariable?: pulumi.Input<string>;
+    nmeaSourceAddressVariable?: pulumi.Input<string | undefined>;
 }

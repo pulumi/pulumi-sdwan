@@ -305,124 +305,124 @@ export interface CedgePimFeatureTemplateState {
      * Enable or disable auto-RP
      *   - Default value: `false`
      */
-    autoRp?: pulumi.Input<boolean>;
+    autoRp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    autoRpVariable?: pulumi.Input<string>;
+    autoRpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Autonomic-Networking virtual interface
      */
-    bsrCandidate?: pulumi.Input<string>;
+    bsrCandidate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    bsrCandidateVariable?: pulumi.Input<string>;
+    bsrCandidateVariable?: pulumi.Input<string | undefined>;
     /**
      * Turn SSM On / Off
      *   - Default value: `false`
      */
-    default?: pulumi.Input<boolean>;
+    default?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    defaultVariable?: pulumi.Input<string>;
+    defaultVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Hash Mask length for RP selection
      */
-    hashMaskLength?: pulumi.Input<string>;
+    hashMaskLength?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hashMaskLengthVariable?: pulumi.Input<string>;
+    hashMaskLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP Discovery Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set PIM interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateInterface>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set RP candidate priority
      *   - Range: `0`-`255`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Access List for PIM SSM
      */
-    range?: pulumi.Input<string>;
+    range?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeVariable?: pulumi.Input<string>;
+    rangeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Static RP Address(es)
      */
-    rpAddresses?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAddress>[]>;
+    rpAddresses?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAddress>[] | undefined>;
     /**
      * Enable or disable RP Announce
      */
-    rpAnnounceFields?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAnnounceField>[]>;
+    rpAnnounceFields?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAnnounceField>[] | undefined>;
     /**
      * Set BSR RP candidate filter
      */
-    rpCandidateAccessList?: pulumi.Input<string>;
+    rpCandidateAccessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rpCandidateAccessListVariable?: pulumi.Input<string>;
+    rpCandidateAccessListVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP Discovery Scope
      */
-    rpCandidates?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpCandidate>[]>;
+    rpCandidates?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpCandidate>[] | undefined>;
     /**
      * Set RP Discovery Scope
      *   - Range: `1`-`255`
      */
-    scope?: pulumi.Input<number>;
+    scope?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    scopeVariable?: pulumi.Input<string>;
+    scopeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set when PIM router joins the SPT (kbps)
      *   - Choices: `0`, `infinity`
      */
-    sptThreshold?: pulumi.Input<string>;
+    sptThreshold?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sptThresholdVariable?: pulumi.Input<string>;
+    sptThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -433,28 +433,28 @@ export interface CedgePimFeatureTemplateArgs {
      * Enable or disable auto-RP
      *   - Default value: `false`
      */
-    autoRp?: pulumi.Input<boolean>;
+    autoRp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    autoRpVariable?: pulumi.Input<string>;
+    autoRpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Autonomic-Networking virtual interface
      */
-    bsrCandidate?: pulumi.Input<string>;
+    bsrCandidate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    bsrCandidateVariable?: pulumi.Input<string>;
+    bsrCandidateVariable?: pulumi.Input<string | undefined>;
     /**
      * Turn SSM On / Off
      *   - Default value: `false`
      */
-    default?: pulumi.Input<boolean>;
+    default?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    defaultVariable?: pulumi.Input<string>;
+    defaultVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -467,80 +467,80 @@ export interface CedgePimFeatureTemplateArgs {
     /**
      * Hash Mask length for RP selection
      */
-    hashMaskLength?: pulumi.Input<string>;
+    hashMaskLength?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hashMaskLengthVariable?: pulumi.Input<string>;
+    hashMaskLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP Discovery Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set PIM interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateInterface>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set RP candidate priority
      *   - Range: `0`-`255`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Access List for PIM SSM
      */
-    range?: pulumi.Input<string>;
+    range?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeVariable?: pulumi.Input<string>;
+    rangeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Static RP Address(es)
      */
-    rpAddresses?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAddress>[]>;
+    rpAddresses?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAddress>[] | undefined>;
     /**
      * Enable or disable RP Announce
      */
-    rpAnnounceFields?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAnnounceField>[]>;
+    rpAnnounceFields?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpAnnounceField>[] | undefined>;
     /**
      * Set BSR RP candidate filter
      */
-    rpCandidateAccessList?: pulumi.Input<string>;
+    rpCandidateAccessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rpCandidateAccessListVariable?: pulumi.Input<string>;
+    rpCandidateAccessListVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP Discovery Scope
      */
-    rpCandidates?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpCandidate>[]>;
+    rpCandidates?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpCandidate>[] | undefined>;
     /**
      * Set RP Discovery Scope
      *   - Range: `1`-`255`
      */
-    scope?: pulumi.Input<number>;
+    scope?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    scopeVariable?: pulumi.Input<string>;
+    scopeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set when PIM router joins the SPT (kbps)
      *   - Choices: `0`, `infinity`
      */
-    sptThreshold?: pulumi.Input<string>;
+    sptThreshold?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sptThresholdVariable?: pulumi.Input<string>;
+    sptThresholdVariable?: pulumi.Input<string | undefined>;
 }

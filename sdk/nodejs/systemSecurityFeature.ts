@@ -223,72 +223,72 @@ export interface SystemSecurityFeatureState {
      *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
      *   - Default value: `512`
      */
-    antiReplayWindow?: pulumi.Input<string>;
+    antiReplayWindow?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    antiReplayWindowVariable?: pulumi.Input<string>;
+    antiReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Extended Anti-Replay Window
      *   - Range: `10`-`2048`
      *   - Default value: `256`
      */
-    extendedAntiReplayWindow?: pulumi.Input<number>;
+    extendedAntiReplayWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    extendedAntiReplayWindowVariable?: pulumi.Input<string>;
+    extendedAntiReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    integrityTypeVariable?: pulumi.Input<string>;
+    integrityTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    integrityTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    integrityTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Enable or disable IPsec pairwise-keying
      *   - Default value: `false`
      */
-    ipsecPairwiseKeying?: pulumi.Input<boolean>;
+    ipsecPairwiseKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipsecPairwiseKeyingVariable?: pulumi.Input<string>;
+    ipsecPairwiseKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure a Keychain
      */
-    keychains?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKeychain>[]>;
+    keychains?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKeychain>[] | undefined>;
     /**
      * Configure a Key
      */
-    keys?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKey>[]>;
+    keys?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKey>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set how often to change the AES key for DTLS connections
      *   - Range: `10`-`1209600`
      *   - Default value: `86400`
      */
-    rekey?: pulumi.Input<number>;
+    rekey?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    rekeyVariable?: pulumi.Input<string>;
+    rekeyVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -300,25 +300,25 @@ export interface SystemSecurityFeatureArgs {
      *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
      *   - Default value: `512`
      */
-    antiReplayWindow?: pulumi.Input<string>;
+    antiReplayWindow?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    antiReplayWindowVariable?: pulumi.Input<string>;
+    antiReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Extended Anti-Replay Window
      *   - Range: `10`-`2048`
      *   - Default value: `256`
      */
-    extendedAntiReplayWindow?: pulumi.Input<number>;
+    extendedAntiReplayWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    extendedAntiReplayWindowVariable?: pulumi.Input<string>;
+    extendedAntiReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -326,40 +326,40 @@ export interface SystemSecurityFeatureArgs {
     /**
      * Variable name
      */
-    integrityTypeVariable?: pulumi.Input<string>;
+    integrityTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    integrityTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    integrityTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Enable or disable IPsec pairwise-keying
      *   - Default value: `false`
      */
-    ipsecPairwiseKeying?: pulumi.Input<boolean>;
+    ipsecPairwiseKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipsecPairwiseKeyingVariable?: pulumi.Input<string>;
+    ipsecPairwiseKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure a Keychain
      */
-    keychains?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKeychain>[]>;
+    keychains?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKeychain>[] | undefined>;
     /**
      * Configure a Key
      */
-    keys?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKey>[]>;
+    keys?: pulumi.Input<pulumi.Input<inputs.SystemSecurityFeatureKey>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set how often to change the AES key for DTLS connections
      *   - Range: `10`-`1209600`
      *   - Default value: `86400`
      */
-    rekey?: pulumi.Input<number>;
+    rekey?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    rekeyVariable?: pulumi.Input<string>;
+    rekeyVariable?: pulumi.Input<string | undefined>;
 }

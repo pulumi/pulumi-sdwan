@@ -126,23 +126,23 @@ export interface VpnMembershipPolicyDefinitionState {
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of sites
      */
-    sites?: pulumi.Input<pulumi.Input<inputs.VpnMembershipPolicyDefinitionSite>[]>;
+    sites?: pulumi.Input<pulumi.Input<inputs.VpnMembershipPolicyDefinitionSite>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -156,7 +156,7 @@ export interface VpnMembershipPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of sites
      */

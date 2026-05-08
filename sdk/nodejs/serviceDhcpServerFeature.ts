@@ -258,103 +258,103 @@ export interface ServiceDhcpServerFeatureState {
     /**
      * Set IP address of default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    defaultGatewayVariable?: pulumi.Input<string>;
+    defaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
-    dnsServers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    dnsServersVariable?: pulumi.Input<string>;
+    dnsServersVariable?: pulumi.Input<string | undefined>;
     /**
      * Set domain name client uses to resolve hostnames
      */
-    domainName?: pulumi.Input<string>;
+    domainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    domainNameVariable?: pulumi.Input<string>;
+    domainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    excludeVariable?: pulumi.Input<string>;
+    excludeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 address to exclude from DHCP address pool
      */
-    excludes?: pulumi.Input<pulumi.Input<string>[]>;
+    excludes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Set MTU on interface to DHCP client
      *   - Range: `68`-`65535`
      */
-    interfaceMtu?: pulumi.Input<number>;
+    interfaceMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    interfaceMtuVariable?: pulumi.Input<string>;
+    interfaceMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long a DHCP-assigned IP address is valid
      *   - Range: `60`-`31536000`
      *   - Default value: `86400`
      */
-    leaseTime?: pulumi.Input<number>;
+    leaseTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    leaseTimeVariable?: pulumi.Input<string>;
+    leaseTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Network Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Options Code
      */
-    optionCodes?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureOptionCode>[]>;
+    optionCodes?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureOptionCode>[] | undefined>;
     /**
      * Configure static IP addresses
      */
-    staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[]>;
+    staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[] | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure TFTP server IP addresses
      */
-    tftpServers?: pulumi.Input<pulumi.Input<string>[]>;
+    tftpServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    tftpServersVariable?: pulumi.Input<string>;
+    tftpServersVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -364,39 +364,39 @@ export interface ServiceDhcpServerFeatureArgs {
     /**
      * Set IP address of default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    defaultGatewayVariable?: pulumi.Input<string>;
+    defaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
-    dnsServers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    dnsServersVariable?: pulumi.Input<string>;
+    dnsServersVariable?: pulumi.Input<string | undefined>;
     /**
      * Set domain name client uses to resolve hostnames
      */
-    domainName?: pulumi.Input<string>;
+    domainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    domainNameVariable?: pulumi.Input<string>;
+    domainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    excludeVariable?: pulumi.Input<string>;
+    excludeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 address to exclude from DHCP address pool
      */
-    excludes?: pulumi.Input<pulumi.Input<string>[]>;
+    excludes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Feature Profile ID
      */
@@ -405,56 +405,56 @@ export interface ServiceDhcpServerFeatureArgs {
      * Set MTU on interface to DHCP client
      *   - Range: `68`-`65535`
      */
-    interfaceMtu?: pulumi.Input<number>;
+    interfaceMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    interfaceMtuVariable?: pulumi.Input<string>;
+    interfaceMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long a DHCP-assigned IP address is valid
      *   - Range: `60`-`31536000`
      *   - Default value: `86400`
      */
-    leaseTime?: pulumi.Input<number>;
+    leaseTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    leaseTimeVariable?: pulumi.Input<string>;
+    leaseTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Network Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Options Code
      */
-    optionCodes?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureOptionCode>[]>;
+    optionCodes?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureOptionCode>[] | undefined>;
     /**
      * Configure static IP addresses
      */
-    staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[]>;
+    staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[] | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure TFTP server IP addresses
      */
-    tftpServers?: pulumi.Input<pulumi.Input<string>[]>;
+    tftpServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    tftpServersVariable?: pulumi.Input<string>;
+    tftpServersVariable?: pulumi.Input<string | undefined>;
 }

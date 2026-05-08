@@ -172,52 +172,52 @@ export interface IntrusionPreventionPolicyDefinitionState {
     /**
      * Custom signature
      */
-    customSignature?: pulumi.Input<boolean>;
+    customSignature?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The inspection mode
      *   - Choices: `protection`, `detection`
      */
-    inspectionMode?: pulumi.Input<string>;
+    inspectionMode?: pulumi.Input<string | undefined>;
     /**
      * IPS signature list ID
      */
-    ipsSignatureListId?: pulumi.Input<string>;
+    ipsSignatureListId?: pulumi.Input<string | undefined>;
     /**
      * IPS signature list version
      */
-    ipsSignatureListVersion?: pulumi.Input<number>;
+    ipsSignatureListVersion?: pulumi.Input<number | undefined>;
     /**
      * Log level
      *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      */
-    logLevel?: pulumi.Input<string>;
-    loggings?: pulumi.Input<pulumi.Input<inputs.IntrusionPreventionPolicyDefinitionLogging>[]>;
+    logLevel?: pulumi.Input<string | undefined>;
+    loggings?: pulumi.Input<pulumi.Input<inputs.IntrusionPreventionPolicyDefinitionLogging>[] | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Signature set
      *   - Choices: `balanced`, `connectivity`, `security`
      */
-    signatureSet?: pulumi.Input<string>;
+    signatureSet?: pulumi.Input<string | undefined>;
     /**
      * List of VPN IDs
      */
-    targetVpns?: pulumi.Input<pulumi.Input<string>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -227,7 +227,7 @@ export interface IntrusionPreventionPolicyDefinitionArgs {
     /**
      * Custom signature
      */
-    customSignature?: pulumi.Input<boolean>;
+    customSignature?: pulumi.Input<boolean | undefined>;
     /**
      * The description of the policy definition
      */
@@ -236,37 +236,37 @@ export interface IntrusionPreventionPolicyDefinitionArgs {
      * The inspection mode
      *   - Choices: `protection`, `detection`
      */
-    inspectionMode?: pulumi.Input<string>;
+    inspectionMode?: pulumi.Input<string | undefined>;
     /**
      * IPS signature list ID
      */
-    ipsSignatureListId?: pulumi.Input<string>;
+    ipsSignatureListId?: pulumi.Input<string | undefined>;
     /**
      * IPS signature list version
      */
-    ipsSignatureListVersion?: pulumi.Input<number>;
+    ipsSignatureListVersion?: pulumi.Input<number | undefined>;
     /**
      * Log level
      *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      */
-    logLevel?: pulumi.Input<string>;
-    loggings?: pulumi.Input<pulumi.Input<inputs.IntrusionPreventionPolicyDefinitionLogging>[]>;
+    logLevel?: pulumi.Input<string | undefined>;
+    loggings?: pulumi.Input<pulumi.Input<inputs.IntrusionPreventionPolicyDefinitionLogging>[] | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Signature set
      *   - Choices: `balanced`, `connectivity`, `security`
      */
-    signatureSet?: pulumi.Input<string>;
+    signatureSet?: pulumi.Input<string | undefined>;
     /**
      * List of VPN IDs
      */
-    targetVpns?: pulumi.Input<pulumi.Input<string>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

@@ -21,53 +21,53 @@ class CedgeGlobalFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vty_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vty_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_logging_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CedgeGlobalFeatureTemplate resource.
 
@@ -270,7 +270,7 @@ class CedgeGlobalFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="arpProxy")
-    def arp_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def arp_proxy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set ARP Proxy
           - Default value: `false`
@@ -278,24 +278,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "arp_proxy")
 
     @arp_proxy.setter
-    def arp_proxy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def arp_proxy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "arp_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="arpProxyVariable")
-    def arp_proxy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def arp_proxy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "arp_proxy_variable")
 
     @arp_proxy_variable.setter
-    def arp_proxy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def arp_proxy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "arp_proxy_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def bootp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def bootp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Ignore BOOTP
           - Default value: `true`
@@ -303,24 +303,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "bootp")
 
     @bootp.setter
-    def bootp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def bootp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "bootp", value)
 
     @_builtins.property
     @pulumi.getter(name="bootpVariable")
-    def bootp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bootp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "bootp_variable")
 
     @bootp_variable.setter
-    def bootp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bootp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bootp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cdp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure CDP
           - Default value: `true`
@@ -328,24 +328,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "cdp")
 
     @cdp.setter
-    def cdp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cdp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cdp", value)
 
     @_builtins.property
     @pulumi.getter(name="cdpVariable")
-    def cdp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cdp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "cdp_variable")
 
     @cdp_variable.setter
-    def cdp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cdp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cdp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLogging")
-    def console_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def console_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Console Logging
           - Default value: `true`
@@ -353,24 +353,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "console_logging")
 
     @console_logging.setter
-    def console_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def console_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "console_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLoggingVariable")
-    def console_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "console_logging_variable")
 
     @console_logging_variable.setter
-    def console_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_logging_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookup")
-    def domain_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def domain_lookup(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Domain-Lookup
           - Default value: `false`
@@ -378,24 +378,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "domain_lookup")
 
     @domain_lookup.setter
-    def domain_lookup(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def domain_lookup(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "domain_lookup", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookupVariable")
-    def domain_lookup_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_lookup_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_lookup_variable")
 
     @domain_lookup_variable.setter
-    def domain_lookup_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_lookup_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_lookup_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassive")
-    def ftp_passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ftp_passive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Passive FTP
           - Default value: `false`
@@ -403,24 +403,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "ftp_passive")
 
     @ftp_passive.setter
-    def ftp_passive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ftp_passive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ftp_passive", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassiveVariable")
-    def ftp_passive_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ftp_passive_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ftp_passive_variable")
 
     @ftp_passive_variable.setter
-    def ftp_passive_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ftp_passive_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ftp_passive_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthentication")
-    def http_authentication(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set preference for HTTP Authentication
           - Choices: `local`, `aaa`
@@ -428,24 +428,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "http_authentication")
 
     @http_authentication.setter
-    def http_authentication(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthenticationVariable")
-    def http_authentication_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_authentication_variable")
 
     @http_authentication_variable.setter
-    def http_authentication_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set HTTP Server
           - Default value: `false`
@@ -453,24 +453,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServerVariable")
-    def http_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_server_variable")
 
     @http_server_variable.setter
-    def http_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServer")
-    def https_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def https_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set HTTPS Server
           - Default value: `false`
@@ -478,24 +478,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "https_server")
 
     @https_server.setter
-    def https_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def https_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "https_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServerVariable")
-    def https_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def https_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "https_server_variable")
 
     @https_server_variable.setter
-    def https_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def https_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "https_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRouting")
-    def ip_source_routing(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ip_source_routing(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Source Route
           - Default value: `false`
@@ -503,24 +503,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "ip_source_routing")
 
     @ip_source_routing.setter
-    def ip_source_routing(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ip_source_routing(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ip_source_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRoutingVariable")
-    def ip_source_routing_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_source_routing_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_source_routing_variable")
 
     @ip_source_routing_variable.setter
-    def ip_source_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_source_routing_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_source_routing_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
-    def line_vty(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def line_vty(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Telnet (Outbound)
           - Default value: `false`
@@ -528,24 +528,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "line_vty")
 
     @line_vty.setter
-    def line_vty(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def line_vty(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "line_vty", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVtyVariable")
-    def line_vty_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def line_vty_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "line_vty_variable")
 
     @line_vty_variable.setter
-    def line_vty_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def line_vty_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "line_vty_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def lldp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def lldp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure LLDP
           - Default value: `true`
@@ -553,36 +553,36 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "lldp")
 
     @lldp.setter
-    def lldp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def lldp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "lldp", value)
 
     @_builtins.property
     @pulumi.getter(name="lldpVariable")
-    def lldp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lldp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lldp_variable")
 
     @lldp_variable.setter
-    def lldp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lldp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lldp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeout")
-    def nat64_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_tcp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 TCP session timeout, in seconds
           - Range: `1`-`536870`
@@ -591,24 +591,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "nat64_tcp_timeout")
 
     @nat64_tcp_timeout.setter
-    def nat64_tcp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_tcp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_tcp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeoutVariable")
-    def nat64_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_tcp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_tcp_timeout_variable")
 
     @nat64_tcp_timeout_variable.setter
-    def nat64_tcp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_tcp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_tcp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeout")
-    def nat64_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_udp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 UDP session timeout, in seconds
           - Range: `1`-`536870`
@@ -617,24 +617,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "nat64_udp_timeout")
 
     @nat64_udp_timeout.setter
-    def nat64_udp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_udp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_udp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeoutVariable")
-    def nat64_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_udp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_udp_timeout_variable")
 
     @nat64_udp_timeout_variable.setter
-    def nat64_udp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_udp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_udp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcp")
-    def rsh_rcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rsh_rcp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set RSH/RCP
           - Default value: `false`
@@ -642,24 +642,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "rsh_rcp")
 
     @rsh_rcp.setter
-    def rsh_rcp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rsh_rcp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rsh_rcp", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcpVariable")
-    def rsh_rcp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rsh_rcp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rsh_rcp_variable")
 
     @rsh_rcp_variable.setter
-    def rsh_rcp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rsh_rcp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rsh_rcp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersist")
-    def snmp_ifindex_persist(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_ifindex_persist(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure SNMP Ifindex Persist
           - Default value: `true`
@@ -667,48 +667,48 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "snmp_ifindex_persist")
 
     @snmp_ifindex_persist.setter
-    def snmp_ifindex_persist(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_ifindex_persist(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_ifindex_persist", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersistVariable")
-    def snmp_ifindex_persist_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_ifindex_persist_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "snmp_ifindex_persist_variable")
 
     @snmp_ifindex_persist_variable.setter
-    def snmp_ifindex_persist_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_ifindex_persist_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_ifindex_persist_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterface")
-    def source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Specify interface for source address in all HTTP(S) client connections
         """
         return pulumi.get(self, "source_interface")
 
     @source_interface.setter
-    def source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterfaceVariable")
-    def source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "source_interface_variable")
 
     @source_interface_variable.setter
-    def source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersion")
-    def ssh_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ssh_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set SSH version
           - Range: `1`-`2`
@@ -716,24 +716,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "ssh_version")
 
     @ssh_version.setter
-    def ssh_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ssh_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ssh_version", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersionVariable")
-    def ssh_version_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ssh_version_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ssh_version_variable")
 
     @ssh_version_variable.setter
-    def ssh_version_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ssh_version_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ssh_version_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesIn")
-    def tcp_keepalives_in(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_in(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-in
           - Default value: `true`
@@ -741,24 +741,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "tcp_keepalives_in")
 
     @tcp_keepalives_in.setter
-    def tcp_keepalives_in(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_in(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_in", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesInVariable")
-    def tcp_keepalives_in_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_in_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_in_variable")
 
     @tcp_keepalives_in_variable.setter
-    def tcp_keepalives_in_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_in_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_in_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOut")
-    def tcp_keepalives_out(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_out(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-out
           - Default value: `true`
@@ -766,24 +766,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "tcp_keepalives_out")
 
     @tcp_keepalives_out.setter
-    def tcp_keepalives_out(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_out(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_out", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOutVariable")
-    def tcp_keepalives_out_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_out_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_out_variable")
 
     @tcp_keepalives_out_variable.setter
-    def tcp_keepalives_out_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_out_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_out_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServers")
-    def tcp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-small-servers
           - Default value: `false`
@@ -791,24 +791,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "tcp_small_servers")
 
     @tcp_small_servers.setter
-    def tcp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServersVariable")
-    def tcp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_small_servers_variable")
 
     @tcp_small_servers_variable.setter
-    def tcp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServers")
-    def udp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def udp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure udp-small-servers
           - Default value: `false`
@@ -816,24 +816,24 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "udp_small_servers")
 
     @udp_small_servers.setter
-    def udp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def udp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "udp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServersVariable")
-    def udp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "udp_small_servers_variable")
 
     @udp_small_servers_variable.setter
-    def udp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLogging")
-    def vty_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def vty_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure VTY Line Logging
           - Default value: `false`
@@ -841,76 +841,76 @@ class CedgeGlobalFeatureTemplateArgs:
         return pulumi.get(self, "vty_logging")
 
     @vty_logging.setter
-    def vty_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def vty_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "vty_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLoggingVariable")
-    def vty_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vty_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vty_logging_variable")
 
     @vty_logging_variable.setter
-    def vty_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vty_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vty_logging_variable", value)
 
 
 @pulumi.input_type
 class _CedgeGlobalFeatureTemplateState:
     def __init__(__self__, *,
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vty_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vty_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_logging_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CedgeGlobalFeatureTemplate resources.
 
@@ -1096,7 +1096,7 @@ class _CedgeGlobalFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="arpProxy")
-    def arp_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def arp_proxy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set ARP Proxy
           - Default value: `false`
@@ -1104,24 +1104,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "arp_proxy")
 
     @arp_proxy.setter
-    def arp_proxy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def arp_proxy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "arp_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="arpProxyVariable")
-    def arp_proxy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def arp_proxy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "arp_proxy_variable")
 
     @arp_proxy_variable.setter
-    def arp_proxy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def arp_proxy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "arp_proxy_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def bootp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def bootp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Ignore BOOTP
           - Default value: `true`
@@ -1129,24 +1129,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "bootp")
 
     @bootp.setter
-    def bootp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def bootp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "bootp", value)
 
     @_builtins.property
     @pulumi.getter(name="bootpVariable")
-    def bootp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bootp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "bootp_variable")
 
     @bootp_variable.setter
-    def bootp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bootp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bootp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cdp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure CDP
           - Default value: `true`
@@ -1154,24 +1154,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "cdp")
 
     @cdp.setter
-    def cdp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cdp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cdp", value)
 
     @_builtins.property
     @pulumi.getter(name="cdpVariable")
-    def cdp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cdp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "cdp_variable")
 
     @cdp_variable.setter
-    def cdp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cdp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cdp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLogging")
-    def console_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def console_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Console Logging
           - Default value: `true`
@@ -1179,36 +1179,36 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "console_logging")
 
     @console_logging.setter
-    def console_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def console_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "console_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLoggingVariable")
-    def console_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "console_logging_variable")
 
     @console_logging_variable.setter
-    def console_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_logging_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -1216,12 +1216,12 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookup")
-    def domain_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def domain_lookup(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Domain-Lookup
           - Default value: `false`
@@ -1229,24 +1229,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "domain_lookup")
 
     @domain_lookup.setter
-    def domain_lookup(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def domain_lookup(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "domain_lookup", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookupVariable")
-    def domain_lookup_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_lookup_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_lookup_variable")
 
     @domain_lookup_variable.setter
-    def domain_lookup_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_lookup_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_lookup_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassive")
-    def ftp_passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ftp_passive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Passive FTP
           - Default value: `false`
@@ -1254,24 +1254,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "ftp_passive")
 
     @ftp_passive.setter
-    def ftp_passive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ftp_passive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ftp_passive", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassiveVariable")
-    def ftp_passive_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ftp_passive_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ftp_passive_variable")
 
     @ftp_passive_variable.setter
-    def ftp_passive_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ftp_passive_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ftp_passive_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthentication")
-    def http_authentication(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set preference for HTTP Authentication
           - Choices: `local`, `aaa`
@@ -1279,24 +1279,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "http_authentication")
 
     @http_authentication.setter
-    def http_authentication(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthenticationVariable")
-    def http_authentication_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_authentication_variable")
 
     @http_authentication_variable.setter
-    def http_authentication_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set HTTP Server
           - Default value: `false`
@@ -1304,24 +1304,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServerVariable")
-    def http_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_server_variable")
 
     @http_server_variable.setter
-    def http_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServer")
-    def https_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def https_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set HTTPS Server
           - Default value: `false`
@@ -1329,24 +1329,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "https_server")
 
     @https_server.setter
-    def https_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def https_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "https_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServerVariable")
-    def https_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def https_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "https_server_variable")
 
     @https_server_variable.setter
-    def https_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def https_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "https_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRouting")
-    def ip_source_routing(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ip_source_routing(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Source Route
           - Default value: `false`
@@ -1354,24 +1354,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "ip_source_routing")
 
     @ip_source_routing.setter
-    def ip_source_routing(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ip_source_routing(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ip_source_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRoutingVariable")
-    def ip_source_routing_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_source_routing_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_source_routing_variable")
 
     @ip_source_routing_variable.setter
-    def ip_source_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_source_routing_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_source_routing_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
-    def line_vty(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def line_vty(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Telnet (Outbound)
           - Default value: `false`
@@ -1379,24 +1379,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "line_vty")
 
     @line_vty.setter
-    def line_vty(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def line_vty(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "line_vty", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVtyVariable")
-    def line_vty_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def line_vty_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "line_vty_variable")
 
     @line_vty_variable.setter
-    def line_vty_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def line_vty_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "line_vty_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def lldp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def lldp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure LLDP
           - Default value: `true`
@@ -1404,36 +1404,36 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "lldp")
 
     @lldp.setter
-    def lldp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def lldp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "lldp", value)
 
     @_builtins.property
     @pulumi.getter(name="lldpVariable")
-    def lldp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lldp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lldp_variable")
 
     @lldp_variable.setter
-    def lldp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lldp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lldp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeout")
-    def nat64_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_tcp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 TCP session timeout, in seconds
           - Range: `1`-`536870`
@@ -1442,24 +1442,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "nat64_tcp_timeout")
 
     @nat64_tcp_timeout.setter
-    def nat64_tcp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_tcp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_tcp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeoutVariable")
-    def nat64_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_tcp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_tcp_timeout_variable")
 
     @nat64_tcp_timeout_variable.setter
-    def nat64_tcp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_tcp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_tcp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeout")
-    def nat64_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_udp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 UDP session timeout, in seconds
           - Range: `1`-`536870`
@@ -1468,24 +1468,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "nat64_udp_timeout")
 
     @nat64_udp_timeout.setter
-    def nat64_udp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_udp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_udp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeoutVariable")
-    def nat64_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_udp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_udp_timeout_variable")
 
     @nat64_udp_timeout_variable.setter
-    def nat64_udp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_udp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_udp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcp")
-    def rsh_rcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rsh_rcp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set RSH/RCP
           - Default value: `false`
@@ -1493,24 +1493,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "rsh_rcp")
 
     @rsh_rcp.setter
-    def rsh_rcp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rsh_rcp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rsh_rcp", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcpVariable")
-    def rsh_rcp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rsh_rcp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rsh_rcp_variable")
 
     @rsh_rcp_variable.setter
-    def rsh_rcp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rsh_rcp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rsh_rcp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersist")
-    def snmp_ifindex_persist(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_ifindex_persist(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure SNMP Ifindex Persist
           - Default value: `true`
@@ -1518,48 +1518,48 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "snmp_ifindex_persist")
 
     @snmp_ifindex_persist.setter
-    def snmp_ifindex_persist(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_ifindex_persist(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_ifindex_persist", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersistVariable")
-    def snmp_ifindex_persist_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_ifindex_persist_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "snmp_ifindex_persist_variable")
 
     @snmp_ifindex_persist_variable.setter
-    def snmp_ifindex_persist_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_ifindex_persist_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_ifindex_persist_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterface")
-    def source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Specify interface for source address in all HTTP(S) client connections
         """
         return pulumi.get(self, "source_interface")
 
     @source_interface.setter
-    def source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterfaceVariable")
-    def source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "source_interface_variable")
 
     @source_interface_variable.setter
-    def source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersion")
-    def ssh_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ssh_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set SSH version
           - Range: `1`-`2`
@@ -1567,24 +1567,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "ssh_version")
 
     @ssh_version.setter
-    def ssh_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ssh_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ssh_version", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersionVariable")
-    def ssh_version_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ssh_version_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ssh_version_variable")
 
     @ssh_version_variable.setter
-    def ssh_version_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ssh_version_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ssh_version_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesIn")
-    def tcp_keepalives_in(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_in(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-in
           - Default value: `true`
@@ -1592,24 +1592,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "tcp_keepalives_in")
 
     @tcp_keepalives_in.setter
-    def tcp_keepalives_in(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_in(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_in", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesInVariable")
-    def tcp_keepalives_in_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_in_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_in_variable")
 
     @tcp_keepalives_in_variable.setter
-    def tcp_keepalives_in_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_in_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_in_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOut")
-    def tcp_keepalives_out(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_out(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-out
           - Default value: `true`
@@ -1617,24 +1617,24 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "tcp_keepalives_out")
 
     @tcp_keepalives_out.setter
-    def tcp_keepalives_out(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_out(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_out", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOutVariable")
-    def tcp_keepalives_out_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_out_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_out_variable")
 
     @tcp_keepalives_out_variable.setter
-    def tcp_keepalives_out_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_out_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_out_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServers")
-    def tcp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-small-servers
           - Default value: `false`
@@ -1642,36 +1642,36 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "tcp_small_servers")
 
     @tcp_small_servers.setter
-    def tcp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServersVariable")
-    def tcp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_small_servers_variable")
 
     @tcp_small_servers_variable.setter
-    def tcp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServers")
-    def udp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def udp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure udp-small-servers
           - Default value: `false`
@@ -1679,36 +1679,36 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "udp_small_servers")
 
     @udp_small_servers.setter
-    def udp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def udp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "udp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServersVariable")
-    def udp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "udp_small_servers_variable")
 
     @udp_small_servers_variable.setter
-    def udp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLogging")
-    def vty_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def vty_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure VTY Line Logging
           - Default value: `false`
@@ -1716,19 +1716,19 @@ class _CedgeGlobalFeatureTemplateState:
         return pulumi.get(self, "vty_logging")
 
     @vty_logging.setter
-    def vty_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def vty_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "vty_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLoggingVariable")
-    def vty_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vty_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vty_logging_variable")
 
     @vty_logging_variable.setter
-    def vty_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vty_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vty_logging_variable", value)
 
 
@@ -1738,55 +1738,55 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vty_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vty_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a cEdge Global feature template.
@@ -1982,55 +1982,55 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vty_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vty_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -2105,57 +2105,57 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-            arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-            bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-            cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-            console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-            domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-            ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-            http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-            http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-            https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-            ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-            line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-            lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-            rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-            snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ssh_version: Optional[pulumi.Input[_builtins.int]] = None,
-            ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-            udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vty_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-            vty_logging_variable: Optional[pulumi.Input[_builtins.str]] = None) -> 'CedgeGlobalFeatureTemplate':
+            arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+            arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+            bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+            cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+            domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+            ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+            http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+            http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+            https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+            ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+            line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+            lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+            rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+            snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ssh_version: pulumi.Input[Optional[_builtins.int]] = None,
+            ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+            udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vty_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            vty_logging_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'CedgeGlobalFeatureTemplate':
         """
         Get an existing CedgeGlobalFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

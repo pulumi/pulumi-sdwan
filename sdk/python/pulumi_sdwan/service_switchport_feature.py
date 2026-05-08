@@ -22,12 +22,12 @@ __all__ = ['ServiceSwitchportFeatureArgs', 'ServiceSwitchportFeature']
 class ServiceSwitchportFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 age_out_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 age_out_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]] = None):
+                 age_out_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]] = None):
         """
         The set of arguments for constructing a ServiceSwitchportFeature resource.
 
@@ -69,7 +69,7 @@ class ServiceSwitchportFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="ageOutTime")
-    def age_out_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def age_out_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
           - Range: `0`-`1000000`
@@ -78,81 +78,81 @@ class ServiceSwitchportFeatureArgs:
         return pulumi.get(self, "age_out_time")
 
     @age_out_time.setter
-    def age_out_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def age_out_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "age_out_time", value)
 
     @_builtins.property
     @pulumi.getter(name="ageOutTimeVariable")
-    def age_out_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def age_out_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "age_out_time_variable")
 
     @age_out_time_variable.setter
-    def age_out_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def age_out_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "age_out_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]:
         """
         Interface name: GigabitEthernet0/<>/<> when present
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="staticMacAddresses")
-    def static_mac_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]:
+    def static_mac_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]:
         """
         Add static MAC address entries for interface
         """
         return pulumi.get(self, "static_mac_addresses")
 
     @static_mac_addresses.setter
-    def static_mac_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]):
+    def static_mac_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]):
         pulumi.set(self, "static_mac_addresses", value)
 
 
 @pulumi.input_type
 class _ServiceSwitchportFeatureState:
     def __init__(__self__, *,
-                 age_out_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 age_out_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 age_out_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceSwitchportFeature resources.
 
@@ -186,7 +186,7 @@ class _ServiceSwitchportFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="ageOutTime")
-    def age_out_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def age_out_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
           - Range: `0`-`1000000`
@@ -195,91 +195,91 @@ class _ServiceSwitchportFeatureState:
         return pulumi.get(self, "age_out_time")
 
     @age_out_time.setter
-    def age_out_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def age_out_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "age_out_time", value)
 
     @_builtins.property
     @pulumi.getter(name="ageOutTimeVariable")
-    def age_out_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def age_out_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "age_out_time_variable")
 
     @age_out_time_variable.setter
-    def age_out_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def age_out_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "age_out_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]:
         """
         Interface name: GigabitEthernet0/<>/<> when present
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="staticMacAddresses")
-    def static_mac_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]:
+    def static_mac_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]:
         """
         Add static MAC address entries for interface
         """
         return pulumi.get(self, "static_mac_addresses")
 
     @static_mac_addresses.setter
-    def static_mac_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]):
+    def static_mac_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceSwitchportFeatureStaticMacAddressArgs']]]]):
         pulumi.set(self, "static_mac_addresses", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -289,13 +289,13 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 age_out_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 age_out_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
+                 age_out_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service Switchport Feature.
@@ -444,13 +444,13 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 age_out_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 age_out_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
+                 age_out_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -480,14 +480,14 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            age_out_time: Optional[pulumi.Input[_builtins.int]] = None,
-            age_out_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceSwitchportFeature':
+            age_out_time: pulumi.Input[Optional[_builtins.int]] = None,
+            age_out_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureInterfaceArgs', 'ServiceSwitchportFeatureInterfaceArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            static_mac_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceSwitchportFeatureStaticMacAddressArgs', 'ServiceSwitchportFeatureStaticMacAddressArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceSwitchportFeature':
         """
         Get an existing ServiceSwitchportFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

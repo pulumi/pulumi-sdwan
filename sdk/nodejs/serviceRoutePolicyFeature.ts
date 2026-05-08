@@ -153,27 +153,27 @@ export interface ServiceRoutePolicyFeatureState {
      *   - Choices: `reject`, `accept`
      *   - Default value: `reject`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Route Policy List
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequence>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -185,11 +185,11 @@ export interface ServiceRoutePolicyFeatureArgs {
      *   - Choices: `reject`, `accept`
      *   - Default value: `reject`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -197,9 +197,9 @@ export interface ServiceRoutePolicyFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Route Policy List
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequence>[] | undefined>;
 }

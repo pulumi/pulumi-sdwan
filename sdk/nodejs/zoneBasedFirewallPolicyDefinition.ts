@@ -158,30 +158,30 @@ export interface ZoneBasedFirewallPolicyDefinitionState {
     /**
      * , Attribute conditional on `mode` equal to `security`
      */
-    applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
+    applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[] | undefined>;
     /**
      * Default Action
      *   - Choices: `pass`, `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
-    rules?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRule>[]>;
+    name?: pulumi.Input<string | undefined>;
+    rules?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRule>[] | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -191,7 +191,7 @@ export interface ZoneBasedFirewallPolicyDefinitionArgs {
     /**
      * , Attribute conditional on `mode` equal to `security`
      */
-    applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
+    applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[] | undefined>;
     /**
      * Default Action
      *   - Choices: `pass`, `drop`
@@ -209,6 +209,6 @@ export interface ZoneBasedFirewallPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     rules: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRule>[]>;
 }

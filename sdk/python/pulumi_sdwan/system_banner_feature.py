@@ -20,12 +20,12 @@ __all__ = ['SystemBannerFeatureArgs', 'SystemBannerFeature']
 class SystemBannerFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemBannerFeature resource.
 
@@ -63,82 +63,82 @@ class SystemBannerFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def login(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "login")
 
     @login.setter
-    def login(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login", value)
 
     @_builtins.property
     @pulumi.getter(name="loginVariable")
-    def login_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "login_variable")
 
     @login_variable.setter
-    def login_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def motd(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "motd")
 
     @motd.setter
-    def motd(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd", value)
 
     @_builtins.property
     @pulumi.getter(name="motdVariable")
-    def motd_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "motd_variable")
 
     @motd_variable.setter
-    def motd_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _SystemBannerFeatureState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemBannerFeature resources.
 
@@ -168,92 +168,92 @@ class _SystemBannerFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def login(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "login")
 
     @login.setter
-    def login(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login", value)
 
     @_builtins.property
     @pulumi.getter(name="loginVariable")
-    def login_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def login_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "login_variable")
 
     @login_variable.setter
-    def login_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def login_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "login_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def motd(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "motd")
 
     @motd.setter
-    def motd(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd", value)
 
     @_builtins.property
     @pulumi.getter(name="motdVariable")
-    def motd_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def motd_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "motd_variable")
 
     @motd_variable.setter
-    def motd_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def motd_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "motd_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -263,13 +263,13 @@ class SystemBannerFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System Banner Feature.
@@ -358,13 +358,13 @@ class SystemBannerFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 login: Optional[pulumi.Input[_builtins.str]] = None,
-                 login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd: Optional[pulumi.Input[_builtins.str]] = None,
-                 motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 login: pulumi.Input[Optional[_builtins.str]] = None,
+                 login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd: pulumi.Input[Optional[_builtins.str]] = None,
+                 motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -394,14 +394,14 @@ class SystemBannerFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            login: Optional[pulumi.Input[_builtins.str]] = None,
-            login_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            motd: Optional[pulumi.Input[_builtins.str]] = None,
-            motd_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemBannerFeature':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            login: pulumi.Input[Optional[_builtins.str]] = None,
+            login_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            motd: pulumi.Input[Optional[_builtins.str]] = None,
+            motd_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemBannerFeature':
         """
         Get an existing SystemBannerFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

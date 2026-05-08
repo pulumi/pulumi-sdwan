@@ -2768,8 +2768,8 @@ def get_cisco_vpn_interface_feature_template(id: Optional[_builtins.str] = None,
         udp_timeout=pulumi.get(__ret__, 'udp_timeout'),
         udp_timeout_variable=pulumi.get(__ret__, 'udp_timeout_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_cisco_vpn_interface_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cisco_vpn_interface_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                    name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoVpnInterfaceFeatureTemplateResult]:
     """
     This data source can read the Cisco VPN Interface feature template.

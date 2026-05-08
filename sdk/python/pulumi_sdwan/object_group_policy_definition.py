@@ -20,20 +20,20 @@ __all__ = ['ObjectGroupPolicyDefinitionArgs', 'ObjectGroupPolicyDefinition']
 class ObjectGroupPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 data_fqdn_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_fqdn_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 data_ipv4_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_ipv4_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 data_fqdn_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_fqdn_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 data_ipv4_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_ipv4_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a ObjectGroupPolicyDefinition resource.
 
@@ -97,192 +97,192 @@ class ObjectGroupPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="dataFqdnPrefixListId")
-    def data_fqdn_prefix_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def data_fqdn_prefix_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Data FQDN prefix list ID
         """
         return pulumi.get(self, "data_fqdn_prefix_list_id")
 
     @data_fqdn_prefix_list_id.setter
-    def data_fqdn_prefix_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def data_fqdn_prefix_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "data_fqdn_prefix_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dataFqdnPrefixListVersion")
-    def data_fqdn_prefix_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def data_fqdn_prefix_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Data FQDN prefix list version
         """
         return pulumi.get(self, "data_fqdn_prefix_list_version")
 
     @data_fqdn_prefix_list_version.setter
-    def data_fqdn_prefix_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def data_fqdn_prefix_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "data_fqdn_prefix_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="dataIpv4PrefixListId")
-    def data_ipv4_prefix_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def data_ipv4_prefix_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Data IPv4 prefix list ID
         """
         return pulumi.get(self, "data_ipv4_prefix_list_id")
 
     @data_ipv4_prefix_list_id.setter
-    def data_ipv4_prefix_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def data_ipv4_prefix_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "data_ipv4_prefix_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dataIpv4PrefixListVersion")
-    def data_ipv4_prefix_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def data_ipv4_prefix_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Data IPv4 prefix list version
         """
         return pulumi.get(self, "data_ipv4_prefix_list_version")
 
     @data_ipv4_prefix_list_version.setter
-    def data_ipv4_prefix_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def data_ipv4_prefix_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "data_ipv4_prefix_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fqdn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Fully qualified domain name
         """
         return pulumi.get(self, "fqdn")
 
     @fqdn.setter
-    def fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fqdn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fqdn", value)
 
     @_builtins.property
     @pulumi.getter(name="geoLocation")
-    def geo_location(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def geo_location(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Geo location
         """
         return pulumi.get(self, "geo_location")
 
     @geo_location.setter
-    def geo_location(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def geo_location(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "geo_location", value)
 
     @_builtins.property
     @pulumi.getter(name="geoLocationListId")
-    def geo_location_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def geo_location_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Geo location list ID
         """
         return pulumi.get(self, "geo_location_list_id")
 
     @geo_location_list_id.setter
-    def geo_location_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def geo_location_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "geo_location_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="geoLocationListVersion")
-    def geo_location_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def geo_location_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Geo location list version
         """
         return pulumi.get(self, "geo_location_list_version")
 
     @geo_location_list_version.setter
-    def geo_location_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def geo_location_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "geo_location_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Prefix")
-    def ipv4_prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 prefix
         """
         return pulumi.get(self, "ipv4_prefix")
 
     @ipv4_prefix.setter
-    def ipv4_prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_prefix", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PrefixVariable")
-    def ipv4_prefix_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_prefix_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 prefix variable name
         """
         return pulumi.get(self, "ipv4_prefix_variable")
 
     @ipv4_prefix_variable.setter
-    def ipv4_prefix_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_prefix_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_prefix_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Port or range of ports
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="portListId")
-    def port_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Port list ID
         """
         return pulumi.get(self, "port_list_id")
 
     @port_list_id.setter
-    def port_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="portListVersion")
-    def port_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Port list version
         """
         return pulumi.get(self, "port_list_version")
 
     @port_list_version.setter
-    def port_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port_list_version", value)
 
 
 @pulumi.input_type
 class _ObjectGroupPolicyDefinitionState:
     def __init__(__self__, *,
-                 data_fqdn_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_fqdn_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 data_ipv4_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_ipv4_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 data_fqdn_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_fqdn_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 data_ipv4_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_ipv4_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ObjectGroupPolicyDefinition resources.
 
@@ -338,194 +338,194 @@ class _ObjectGroupPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="dataFqdnPrefixListId")
-    def data_fqdn_prefix_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def data_fqdn_prefix_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Data FQDN prefix list ID
         """
         return pulumi.get(self, "data_fqdn_prefix_list_id")
 
     @data_fqdn_prefix_list_id.setter
-    def data_fqdn_prefix_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def data_fqdn_prefix_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "data_fqdn_prefix_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dataFqdnPrefixListVersion")
-    def data_fqdn_prefix_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def data_fqdn_prefix_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Data FQDN prefix list version
         """
         return pulumi.get(self, "data_fqdn_prefix_list_version")
 
     @data_fqdn_prefix_list_version.setter
-    def data_fqdn_prefix_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def data_fqdn_prefix_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "data_fqdn_prefix_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="dataIpv4PrefixListId")
-    def data_ipv4_prefix_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def data_ipv4_prefix_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Data IPv4 prefix list ID
         """
         return pulumi.get(self, "data_ipv4_prefix_list_id")
 
     @data_ipv4_prefix_list_id.setter
-    def data_ipv4_prefix_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def data_ipv4_prefix_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "data_ipv4_prefix_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dataIpv4PrefixListVersion")
-    def data_ipv4_prefix_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def data_ipv4_prefix_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Data IPv4 prefix list version
         """
         return pulumi.get(self, "data_ipv4_prefix_list_version")
 
     @data_ipv4_prefix_list_version.setter
-    def data_ipv4_prefix_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def data_ipv4_prefix_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "data_ipv4_prefix_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def fqdn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fqdn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Fully qualified domain name
         """
         return pulumi.get(self, "fqdn")
 
     @fqdn.setter
-    def fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fqdn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fqdn", value)
 
     @_builtins.property
     @pulumi.getter(name="geoLocation")
-    def geo_location(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def geo_location(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Geo location
         """
         return pulumi.get(self, "geo_location")
 
     @geo_location.setter
-    def geo_location(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def geo_location(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "geo_location", value)
 
     @_builtins.property
     @pulumi.getter(name="geoLocationListId")
-    def geo_location_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def geo_location_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Geo location list ID
         """
         return pulumi.get(self, "geo_location_list_id")
 
     @geo_location_list_id.setter
-    def geo_location_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def geo_location_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "geo_location_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="geoLocationListVersion")
-    def geo_location_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def geo_location_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Geo location list version
         """
         return pulumi.get(self, "geo_location_list_version")
 
     @geo_location_list_version.setter
-    def geo_location_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def geo_location_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "geo_location_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Prefix")
-    def ipv4_prefix(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_prefix(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 prefix
         """
         return pulumi.get(self, "ipv4_prefix")
 
     @ipv4_prefix.setter
-    def ipv4_prefix(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_prefix(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_prefix", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PrefixVariable")
-    def ipv4_prefix_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_prefix_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPv4 prefix variable name
         """
         return pulumi.get(self, "ipv4_prefix_variable")
 
     @ipv4_prefix_variable.setter
-    def ipv4_prefix_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_prefix_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_prefix_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Port or range of ports
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="portListId")
-    def port_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Port list ID
         """
         return pulumi.get(self, "port_list_id")
 
     @port_list_id.setter
-    def port_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="portListVersion")
-    def port_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Port list version
         """
         return pulumi.get(self, "port_list_version")
 
     @port_list_version.setter
-    def port_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -535,21 +535,21 @@ class ObjectGroupPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 data_fqdn_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_fqdn_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 data_ipv4_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_ipv4_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 data_fqdn_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_fqdn_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 data_ipv4_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_ipv4_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Object Group Policy Definition .
@@ -644,21 +644,21 @@ class ObjectGroupPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 data_fqdn_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_fqdn_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 data_ipv4_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 data_ipv4_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_location_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_prefix: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 data_fqdn_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_fqdn_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 data_ipv4_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 data_ipv4_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_location_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_prefix: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -696,22 +696,22 @@ class ObjectGroupPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            data_fqdn_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            data_fqdn_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            data_ipv4_prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            data_ipv4_prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            fqdn: Optional[pulumi.Input[_builtins.str]] = None,
-            geo_location: Optional[pulumi.Input[_builtins.str]] = None,
-            geo_location_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            geo_location_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_prefix: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            port: Optional[pulumi.Input[_builtins.str]] = None,
-            port_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            port_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ObjectGroupPolicyDefinition':
+            data_fqdn_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            data_fqdn_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            data_ipv4_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            data_ipv4_prefix_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fqdn: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_location: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_location_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_location_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_prefix: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            port: pulumi.Input[Optional[_builtins.str]] = None,
+            port_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            port_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ObjectGroupPolicyDefinition':
         """
         Get an existing ObjectGroupPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

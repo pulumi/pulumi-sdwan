@@ -169,8 +169,8 @@ def get_application_priority_qos_policy(feature_profile_id: Optional[_builtins.s
         target_interfaces=pulumi.get(__ret__, 'target_interfaces'),
         target_interfaces_variable=pulumi.get(__ret__, 'target_interfaces_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_application_priority_qos_policy_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                               id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_application_priority_qos_policy_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                               id: pulumi.Input[Optional[_builtins.str]] = None,
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationPriorityQosPolicyResult]:
     """
     This data source can read the Application Priority QoS Policy.

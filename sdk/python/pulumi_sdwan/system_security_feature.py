@@ -22,20 +22,20 @@ __all__ = ['SystemSecurityFeatureArgs', 'SystemSecurityFeature']
 class SystemSecurityFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 anti_replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 extended_anti_replay_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipsec_pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 anti_replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 extended_anti_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemSecurityFeature resource.
 
@@ -106,7 +106,7 @@ class SystemSecurityFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="antiReplayWindow")
-    def anti_replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def anti_replay_window(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the sliding replay window size
           - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
@@ -115,36 +115,36 @@ class SystemSecurityFeatureArgs:
         return pulumi.get(self, "anti_replay_window")
 
     @anti_replay_window.setter
-    def anti_replay_window(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def anti_replay_window(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "anti_replay_window", value)
 
     @_builtins.property
     @pulumi.getter(name="antiReplayWindowVariable")
-    def anti_replay_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def anti_replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "anti_replay_window_variable")
 
     @anti_replay_window_variable.setter
-    def anti_replay_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def anti_replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "anti_replay_window_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedAntiReplayWindow")
-    def extended_anti_replay_window(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def extended_anti_replay_window(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Extended Anti-Replay Window
           - Range: `10`-`2048`
@@ -153,48 +153,48 @@ class SystemSecurityFeatureArgs:
         return pulumi.get(self, "extended_anti_replay_window")
 
     @extended_anti_replay_window.setter
-    def extended_anti_replay_window(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def extended_anti_replay_window(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "extended_anti_replay_window", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedAntiReplayWindowVariable")
-    def extended_anti_replay_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def extended_anti_replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "extended_anti_replay_window_variable")
 
     @extended_anti_replay_window_variable.setter
-    def extended_anti_replay_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def extended_anti_replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "extended_anti_replay_window_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypeVariable")
-    def integrity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def integrity_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "integrity_type_variable")
 
     @integrity_type_variable.setter
-    def integrity_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def integrity_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "integrity_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypes")
-    def integrity_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def integrity_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Set the authentication type for DTLS connections
         """
         return pulumi.get(self, "integrity_types")
 
     @integrity_types.setter
-    def integrity_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def integrity_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "integrity_types", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPairwiseKeying")
-    def ipsec_pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipsec_pairwise_keying(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable IPsec pairwise-keying
           - Default value: `false`
@@ -202,60 +202,60 @@ class SystemSecurityFeatureArgs:
         return pulumi.get(self, "ipsec_pairwise_keying")
 
     @ipsec_pairwise_keying.setter
-    def ipsec_pairwise_keying(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipsec_pairwise_keying(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipsec_pairwise_keying", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPairwiseKeyingVariable")
-    def ipsec_pairwise_keying_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_pairwise_keying_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipsec_pairwise_keying_variable")
 
     @ipsec_pairwise_keying_variable.setter
-    def ipsec_pairwise_keying_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_pairwise_keying_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_pairwise_keying_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def keychains(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]:
+    def keychains(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]:
         """
         Configure a Keychain
         """
         return pulumi.get(self, "keychains")
 
     @keychains.setter
-    def keychains(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]):
+    def keychains(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]):
         pulumi.set(self, "keychains", value)
 
     @_builtins.property
     @pulumi.getter
-    def keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]:
+    def keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]:
         """
         Configure a Key
         """
         return pulumi.get(self, "keys")
 
     @keys.setter
-    def keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]):
+    def keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]):
         pulumi.set(self, "keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rekey(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rekey(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
           - Range: `10`-`1209600`
@@ -264,41 +264,41 @@ class SystemSecurityFeatureArgs:
         return pulumi.get(self, "rekey")
 
     @rekey.setter
-    def rekey(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rekey(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rekey", value)
 
     @_builtins.property
     @pulumi.getter(name="rekeyVariable")
-    def rekey_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rekey_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rekey_variable")
 
     @rekey_variable.setter
-    def rekey_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rekey_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rekey_variable", value)
 
 
 @pulumi.input_type
 class _SystemSecurityFeatureState:
     def __init__(__self__, *,
-                 anti_replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 extended_anti_replay_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipsec_pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 anti_replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 extended_anti_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemSecurityFeature resources.
 
@@ -361,7 +361,7 @@ class _SystemSecurityFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="antiReplayWindow")
-    def anti_replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def anti_replay_window(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the sliding replay window size
           - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
@@ -370,36 +370,36 @@ class _SystemSecurityFeatureState:
         return pulumi.get(self, "anti_replay_window")
 
     @anti_replay_window.setter
-    def anti_replay_window(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def anti_replay_window(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "anti_replay_window", value)
 
     @_builtins.property
     @pulumi.getter(name="antiReplayWindowVariable")
-    def anti_replay_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def anti_replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "anti_replay_window_variable")
 
     @anti_replay_window_variable.setter
-    def anti_replay_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def anti_replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "anti_replay_window_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedAntiReplayWindow")
-    def extended_anti_replay_window(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def extended_anti_replay_window(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Extended Anti-Replay Window
           - Range: `10`-`2048`
@@ -408,60 +408,60 @@ class _SystemSecurityFeatureState:
         return pulumi.get(self, "extended_anti_replay_window")
 
     @extended_anti_replay_window.setter
-    def extended_anti_replay_window(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def extended_anti_replay_window(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "extended_anti_replay_window", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedAntiReplayWindowVariable")
-    def extended_anti_replay_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def extended_anti_replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "extended_anti_replay_window_variable")
 
     @extended_anti_replay_window_variable.setter
-    def extended_anti_replay_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def extended_anti_replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "extended_anti_replay_window_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypeVariable")
-    def integrity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def integrity_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "integrity_type_variable")
 
     @integrity_type_variable.setter
-    def integrity_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def integrity_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "integrity_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypes")
-    def integrity_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def integrity_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Set the authentication type for DTLS connections
         """
         return pulumi.get(self, "integrity_types")
 
     @integrity_types.setter
-    def integrity_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def integrity_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "integrity_types", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPairwiseKeying")
-    def ipsec_pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipsec_pairwise_keying(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable IPsec pairwise-keying
           - Default value: `false`
@@ -469,60 +469,60 @@ class _SystemSecurityFeatureState:
         return pulumi.get(self, "ipsec_pairwise_keying")
 
     @ipsec_pairwise_keying.setter
-    def ipsec_pairwise_keying(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipsec_pairwise_keying(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipsec_pairwise_keying", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecPairwiseKeyingVariable")
-    def ipsec_pairwise_keying_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_pairwise_keying_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipsec_pairwise_keying_variable")
 
     @ipsec_pairwise_keying_variable.setter
-    def ipsec_pairwise_keying_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_pairwise_keying_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_pairwise_keying_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def keychains(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]:
+    def keychains(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]:
         """
         Configure a Keychain
         """
         return pulumi.get(self, "keychains")
 
     @keychains.setter
-    def keychains(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]):
+    def keychains(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]]]):
         pulumi.set(self, "keychains", value)
 
     @_builtins.property
     @pulumi.getter
-    def keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]:
+    def keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]:
         """
         Configure a Key
         """
         return pulumi.get(self, "keys")
 
     @keys.setter
-    def keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]):
+    def keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]]]):
         pulumi.set(self, "keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def rekey(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rekey(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
           - Range: `10`-`1209600`
@@ -531,31 +531,31 @@ class _SystemSecurityFeatureState:
         return pulumi.get(self, "rekey")
 
     @rekey.setter
-    def rekey(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rekey(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rekey", value)
 
     @_builtins.property
     @pulumi.getter(name="rekeyVariable")
-    def rekey_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rekey_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rekey_variable")
 
     @rekey_variable.setter
-    def rekey_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rekey_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rekey_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -565,21 +565,21 @@ class SystemSecurityFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 extended_anti_replay_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipsec_pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 anti_replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 extended_anti_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System Security Feature.
@@ -731,21 +731,21 @@ class SystemSecurityFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 anti_replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 extended_anti_replay_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipsec_pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 anti_replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 extended_anti_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -783,22 +783,22 @@ class SystemSecurityFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            anti_replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-            anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            extended_anti_replay_window: Optional[pulumi.Input[_builtins.int]] = None,
-            extended_anti_replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            ipsec_pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipsec_pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
-            keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            rekey: Optional[pulumi.Input[_builtins.int]] = None,
-            rekey_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemSecurityFeature':
+            anti_replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+            anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            extended_anti_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+            extended_anti_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ipsec_pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipsec_pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rekey: pulumi.Input[Optional[_builtins.int]] = None,
+            rekey_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemSecurityFeature':
         """
         Get an existing SystemSecurityFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

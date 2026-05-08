@@ -221,64 +221,64 @@ export interface SystemSnmpFeatureState {
     /**
      * Configure SNMP community
      */
-    communities?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureCommunity>[]>;
+    communities?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureCommunity>[] | undefined>;
     /**
      * Set the contact for this managed node
      */
-    contactPerson?: pulumi.Input<string>;
+    contactPerson?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    contactPersonVariable?: pulumi.Input<string>;
+    contactPersonVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Configure an SNMP group
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureGroup>[] | undefined>;
     /**
      * Set the physical location of this managed node
      */
-    locationOfDevice?: pulumi.Input<string>;
+    locationOfDevice?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    locationOfDeviceVariable?: pulumi.Input<string>;
+    locationOfDeviceVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable SNMP
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP server to receive SNMP traps
      */
-    trapTargetServers?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureTrapTargetServer>[]>;
+    trapTargetServers?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureTrapTargetServer>[] | undefined>;
     /**
      * Configure an SNMP user
      */
-    users?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureUser>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Configure a view record
      */
-    views?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureView>[]>;
+    views?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureView>[] | undefined>;
 }
 
 /**
@@ -288,19 +288,19 @@ export interface SystemSnmpFeatureArgs {
     /**
      * Configure SNMP community
      */
-    communities?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureCommunity>[]>;
+    communities?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureCommunity>[] | undefined>;
     /**
      * Set the contact for this managed node
      */
-    contactPerson?: pulumi.Input<string>;
+    contactPerson?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    contactPersonVariable?: pulumi.Input<string>;
+    contactPersonVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -308,38 +308,38 @@ export interface SystemSnmpFeatureArgs {
     /**
      * Configure an SNMP group
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureGroup>[] | undefined>;
     /**
      * Set the physical location of this managed node
      */
-    locationOfDevice?: pulumi.Input<string>;
+    locationOfDevice?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    locationOfDeviceVariable?: pulumi.Input<string>;
+    locationOfDeviceVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable SNMP
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP server to receive SNMP traps
      */
-    trapTargetServers?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureTrapTargetServer>[]>;
+    trapTargetServers?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureTrapTargetServer>[] | undefined>;
     /**
      * Configure an SNMP user
      */
-    users?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureUser>[] | undefined>;
     /**
      * Configure a view record
      */
-    views?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureView>[]>;
+    views?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureView>[] | undefined>;
 }

@@ -248,90 +248,90 @@ export interface ServiceRoutingEigrpFeatureState {
      * Set EIGRP router authentication type
      *   - Choices: `md5`, `hmac-sha-256`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set autonomous system ID <1..65535>
      *   - Range: `1`-`65535`
      */
-    autonomousSystemId?: pulumi.Input<number>;
+    autonomousSystemId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    autonomousSystemIdVariable?: pulumi.Input<string>;
+    autonomousSystemIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Selective route download
      *   - Default value: `false`
      */
-    filter?: pulumi.Input<boolean>;
+    filter?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    filterVariable?: pulumi.Input<string>;
+    filterVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hello interval
      *   - Range: `0`-`65535`
      *   - Default value: `5`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
-    hmacAuthenticationKey?: pulumi.Input<string>;
+    hmacAuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
-    hmacAuthenticationKeyVariable?: pulumi.Input<string>;
+    hmacAuthenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`
      *   - Default value: `15`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterface>[] | undefined>;
     /**
      * Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
      */
-    md5Keys?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureMd5Key>[]>;
+    md5Keys?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureMd5Key>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure the networks for EIGRP to advertise
      */
-    networks?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureNetwork>[]>;
+    networks?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureNetwork>[] | undefined>;
     /**
      * Redistribute routes into EIGRP
      */
-    redistributes?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureRedistribute>[]>;
-    routePolicyId?: pulumi.Input<string>;
+    redistributes?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureRedistribute>[] | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -342,24 +342,24 @@ export interface ServiceRoutingEigrpFeatureArgs {
      * Set EIGRP router authentication type
      *   - Choices: `md5`, `hmac-sha-256`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set autonomous system ID <1..65535>
      *   - Range: `1`-`65535`
      */
-    autonomousSystemId?: pulumi.Input<number>;
+    autonomousSystemId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    autonomousSystemIdVariable?: pulumi.Input<string>;
+    autonomousSystemIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -368,51 +368,51 @@ export interface ServiceRoutingEigrpFeatureArgs {
      * Selective route download
      *   - Default value: `false`
      */
-    filter?: pulumi.Input<boolean>;
+    filter?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    filterVariable?: pulumi.Input<string>;
+    filterVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hello interval
      *   - Range: `0`-`65535`
      *   - Default value: `5`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
-    hmacAuthenticationKey?: pulumi.Input<string>;
+    hmacAuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `authenticationType` equal to `hmac-sha-256`
      */
-    hmacAuthenticationKeyVariable?: pulumi.Input<string>;
+    hmacAuthenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`
      *   - Default value: `15`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterface>[] | undefined>;
     /**
      * Set keychain details, Attribute conditional on `authenticationType` equal to `md5`
      */
-    md5Keys?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureMd5Key>[]>;
+    md5Keys?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureMd5Key>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure the networks for EIGRP to advertise
      */
@@ -420,6 +420,6 @@ export interface ServiceRoutingEigrpFeatureArgs {
     /**
      * Redistribute routes into EIGRP
      */
-    redistributes?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureRedistribute>[]>;
-    routePolicyId?: pulumi.Input<string>;
+    redistributes?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureRedistribute>[] | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }

@@ -211,65 +211,65 @@ export interface CiscoLoggingFeatureTemplateState {
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Enable logging to local disk
      *   - Default value: `true`
      */
-    diskLogging?: pulumi.Input<boolean>;
+    diskLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    diskLoggingVariable?: pulumi.Input<string>;
+    diskLoggingVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable logging to remote server
      */
-    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv4Server>[]>;
+    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv4Server>[] | undefined>;
     /**
      * Enable logging to remote IPv6 server
      */
-    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv6Server>[]>;
+    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv6Server>[] | undefined>;
     /**
      * Set number of syslog files to create before discarding oldest files
      *   - Range: `1`-`10`
      *   - Default value: `10`
      */
-    logRotations?: pulumi.Input<number>;
+    logRotations?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    logRotationsVariable?: pulumi.Input<string>;
+    logRotationsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum size of file before it is rotated
      *   - Range: `1`-`20`
      *   - Default value: `10`
      */
-    maxSize?: pulumi.Input<number>;
+    maxSize?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maxSizeVariable?: pulumi.Input<string>;
+    maxSizeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Configure a TLS profile
      */
-    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateTlsProfile>[]>;
+    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateTlsProfile>[] | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -289,45 +289,45 @@ export interface CiscoLoggingFeatureTemplateArgs {
      * Enable logging to local disk
      *   - Default value: `true`
      */
-    diskLogging?: pulumi.Input<boolean>;
+    diskLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    diskLoggingVariable?: pulumi.Input<string>;
+    diskLoggingVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable logging to remote server
      */
-    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv4Server>[]>;
+    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv4Server>[] | undefined>;
     /**
      * Enable logging to remote IPv6 server
      */
-    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv6Server>[]>;
+    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv6Server>[] | undefined>;
     /**
      * Set number of syslog files to create before discarding oldest files
      *   - Range: `1`-`10`
      *   - Default value: `10`
      */
-    logRotations?: pulumi.Input<number>;
+    logRotations?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    logRotationsVariable?: pulumi.Input<string>;
+    logRotationsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum size of file before it is rotated
      *   - Range: `1`-`20`
      *   - Default value: `10`
      */
-    maxSize?: pulumi.Input<number>;
+    maxSize?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maxSizeVariable?: pulumi.Input<string>;
+    maxSizeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure a TLS profile
      */
-    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateTlsProfile>[]>;
+    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateTlsProfile>[] | undefined>;
 }

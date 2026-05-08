@@ -140,8 +140,8 @@ def get_policy_object_security_fqdn_list(feature_profile_id: Optional[_builtins.
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-def get_policy_object_security_fqdn_list_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_policy_object_security_fqdn_list_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                id: pulumi.Input[Optional[_builtins.str]] = None,
                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectSecurityFqdnListResult]:
     """
     This data source can read the Policy Object Security FQDN List Policy_object.

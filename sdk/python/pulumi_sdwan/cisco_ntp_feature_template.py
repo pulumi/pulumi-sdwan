@@ -23,17 +23,17 @@ class CiscoNtpFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]] = None,
-                 master: Optional[pulumi.Input[_builtins.bool]] = None,
-                 master_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 master_stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]] = None,
+                 master: pulumi.Input[Optional[_builtins.bool]] = None,
+                 master_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 master_stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoNtpFeatureTemplate resource.
 
@@ -106,19 +106,19 @@ class CiscoNtpFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationKeys")
-    def authentication_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]:
+    def authentication_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]:
         """
         Set MD5 authentication key
         """
         return pulumi.get(self, "authentication_keys")
 
     @authentication_keys.setter
-    def authentication_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]):
+    def authentication_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]):
         pulumi.set(self, "authentication_keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def master(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def master(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure device as NTP master
           - Default value: `false`
@@ -126,36 +126,36 @@ class CiscoNtpFeatureTemplateArgs:
         return pulumi.get(self, "master")
 
     @master.setter
-    def master(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def master(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "master", value)
 
     @_builtins.property
     @pulumi.getter(name="masterSourceInterface")
-    def master_source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set interface for NTP Master
         """
         return pulumi.get(self, "master_source_interface")
 
     @master_source_interface.setter
-    def master_source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="masterSourceInterfaceVariable")
-    def master_source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "master_source_interface_variable")
 
     @master_source_interface_variable.setter
-    def master_source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="masterStratum")
-    def master_stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def master_stratum(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Master Stratum <1..15>
           - Range: `1`-`15`
@@ -163,100 +163,100 @@ class CiscoNtpFeatureTemplateArgs:
         return pulumi.get(self, "master_stratum")
 
     @master_stratum.setter
-    def master_stratum(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def master_stratum(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "master_stratum", value)
 
     @_builtins.property
     @pulumi.getter(name="masterStratumVariable")
-    def master_stratum_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_stratum_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "master_stratum_variable")
 
     @master_stratum_variable.setter
-    def master_stratum_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_stratum_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_stratum_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="masterVariable")
-    def master_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "master_variable")
 
     @master_variable.setter
-    def master_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]:
+    def servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]:
         """
         Configure NTP servers
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]):
+    def servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeys")
-    def trusted_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def trusted_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Designate authentication key as trustworthy
         """
         return pulumi.get(self, "trusted_keys")
 
     @trusted_keys.setter
-    def trusted_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def trusted_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "trusted_keys", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeysVariable")
-    def trusted_keys_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trusted_keys_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "trusted_keys_variable")
 
     @trusted_keys_variable.setter
-    def trusted_keys_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trusted_keys_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trusted_keys_variable", value)
 
 
 @pulumi.input_type
 class _CiscoNtpFeatureTemplateState:
     def __init__(__self__, *,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 master: Optional[pulumi.Input[_builtins.bool]] = None,
-                 master_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 master_stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 master: pulumi.Input[Optional[_builtins.bool]] = None,
+                 master_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 master_stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoNtpFeatureTemplate resources.
 
@@ -312,31 +312,31 @@ class _CiscoNtpFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationKeys")
-    def authentication_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]:
+    def authentication_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]:
         """
         Set MD5 authentication key
         """
         return pulumi.get(self, "authentication_keys")
 
     @authentication_keys.setter
-    def authentication_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]):
+    def authentication_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]):
         pulumi.set(self, "authentication_keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -344,12 +344,12 @@ class _CiscoNtpFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def master(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def master(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure device as NTP master
           - Default value: `false`
@@ -357,36 +357,36 @@ class _CiscoNtpFeatureTemplateState:
         return pulumi.get(self, "master")
 
     @master.setter
-    def master(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def master(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "master", value)
 
     @_builtins.property
     @pulumi.getter(name="masterSourceInterface")
-    def master_source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set interface for NTP Master
         """
         return pulumi.get(self, "master_source_interface")
 
     @master_source_interface.setter
-    def master_source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="masterSourceInterfaceVariable")
-    def master_source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "master_source_interface_variable")
 
     @master_source_interface_variable.setter
-    def master_source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="masterStratum")
-    def master_stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def master_stratum(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Master Stratum <1..15>
           - Range: `1`-`15`
@@ -394,103 +394,103 @@ class _CiscoNtpFeatureTemplateState:
         return pulumi.get(self, "master_stratum")
 
     @master_stratum.setter
-    def master_stratum(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def master_stratum(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "master_stratum", value)
 
     @_builtins.property
     @pulumi.getter(name="masterStratumVariable")
-    def master_stratum_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_stratum_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "master_stratum_variable")
 
     @master_stratum_variable.setter
-    def master_stratum_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_stratum_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_stratum_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="masterVariable")
-    def master_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def master_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "master_variable")
 
     @master_variable.setter
-    def master_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def master_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "master_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]:
+    def servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]:
         """
         Configure NTP servers
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]):
+    def servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoNtpFeatureTemplateServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeys")
-    def trusted_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def trusted_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Designate authentication key as trustworthy
         """
         return pulumi.get(self, "trusted_keys")
 
     @trusted_keys.setter
-    def trusted_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def trusted_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "trusted_keys", value)
 
     @_builtins.property
     @pulumi.getter(name="trustedKeysVariable")
-    def trusted_keys_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def trusted_keys_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "trusted_keys_variable")
 
     @trusted_keys_variable.setter
-    def trusted_keys_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def trusted_keys_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "trusted_keys_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -500,19 +500,19 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 master: Optional[pulumi.Input[_builtins.bool]] = None,
-                 master_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 master_stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 master: pulumi.Input[Optional[_builtins.bool]] = None,
+                 master_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 master_stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco NTP feature template.
@@ -636,19 +636,19 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 master: Optional[pulumi.Input[_builtins.bool]] = None,
-                 master_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_stratum: Optional[pulumi.Input[_builtins.int]] = None,
-                 master_stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 master_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
-                 trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 master: pulumi.Input[Optional[_builtins.bool]] = None,
+                 master_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_stratum: pulumi.Input[Optional[_builtins.int]] = None,
+                 master_stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 master_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
+                 trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -687,21 +687,21 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            master: Optional[pulumi.Input[_builtins.bool]] = None,
-            master_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            master_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            master_stratum: Optional[pulumi.Input[_builtins.int]] = None,
-            master_stratum_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            master_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-            trusted_keys_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoNtpFeatureTemplate':
+            authentication_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            master: pulumi.Input[Optional[_builtins.bool]] = None,
+            master_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            master_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            master_stratum: pulumi.Input[Optional[_builtins.int]] = None,
+            master_stratum_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            master_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            trusted_keys: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            trusted_keys_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoNtpFeatureTemplate':
         """
         Get an existing CiscoNtpFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

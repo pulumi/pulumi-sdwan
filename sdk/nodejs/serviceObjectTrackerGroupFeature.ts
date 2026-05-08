@@ -155,42 +155,42 @@ export interface ServiceObjectTrackerGroupFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Object ID
      *   - Range: `1`-`1000`
      */
-    objectTrackerId?: pulumi.Input<number>;
+    objectTrackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    objectTrackerIdVariable?: pulumi.Input<string>;
+    objectTrackerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * tracker ref list criteria boolean and or
      *   - Choices: `and`, `or`
      *   - Default value: `or`
      */
-    reachable?: pulumi.Input<string>;
+    reachable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    reachableVariable?: pulumi.Input<string>;
+    reachableVariable?: pulumi.Input<string | undefined>;
     /**
      * Group Tracks ID Refs
      */
-    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceObjectTrackerGroupFeatureTrackerElement>[]>;
+    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceObjectTrackerGroupFeatureTrackerElement>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -200,7 +200,7 @@ export interface ServiceObjectTrackerGroupFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -208,28 +208,28 @@ export interface ServiceObjectTrackerGroupFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Object ID
      *   - Range: `1`-`1000`
      */
-    objectTrackerId?: pulumi.Input<number>;
+    objectTrackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    objectTrackerIdVariable?: pulumi.Input<string>;
+    objectTrackerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * tracker ref list criteria boolean and or
      *   - Choices: `and`, `or`
      *   - Default value: `or`
      */
-    reachable?: pulumi.Input<string>;
+    reachable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    reachableVariable?: pulumi.Input<string>;
+    reachableVariable?: pulumi.Input<string | undefined>;
     /**
      * Group Tracks ID Refs
      */
-    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceObjectTrackerGroupFeatureTrackerElement>[]>;
+    trackerElements?: pulumi.Input<pulumi.Input<inputs.ServiceObjectTrackerGroupFeatureTrackerElement>[] | undefined>;
 }

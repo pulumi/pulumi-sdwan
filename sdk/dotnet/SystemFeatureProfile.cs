@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.SystemFeatureProfile("example", new()
+    ///     var example = new Sdwan.SystemFeatureProfile("example", new()
     ///     {
     ///         Name = "SYSTEM_FP_1",
     ///         Description = "My system feature profile 1",

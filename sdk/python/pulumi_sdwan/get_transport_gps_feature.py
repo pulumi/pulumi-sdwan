@@ -285,8 +285,8 @@ def get_transport_gps_feature(feature_profile_id: Optional[_builtins.str] = None
         nmea_source_address=pulumi.get(__ret__, 'nmea_source_address'),
         nmea_source_address_variable=pulumi.get(__ret__, 'nmea_source_address_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_transport_gps_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                     id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_transport_gps_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                     id: pulumi.Input[Optional[_builtins.str]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportGpsFeatureResult]:
     """
     This data source can read the Transport GPS Feature.

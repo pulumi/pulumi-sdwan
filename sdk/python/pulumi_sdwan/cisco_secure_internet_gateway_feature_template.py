@@ -23,13 +23,13 @@ class CiscoSecureInternetGatewayFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]] = None,
-                 tracker_source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_source_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]] = None,
-                 vpn_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]] = None,
+                 tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]] = None,
+                 vpn_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a CiscoSecureInternetGatewayFeatureTemplate resource.
 
@@ -90,79 +90,79 @@ class CiscoSecureInternetGatewayFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]:
         """
         Interface name: IPsec when present
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]:
+    def services(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]:
         """
         Configure services
         """
         return pulumi.get(self, "services")
 
     @services.setter
-    def services(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]):
+    def services(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]):
         pulumi.set(self, "services", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIp")
-    def tracker_source_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_source_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Source IP address for Tracker
         """
         return pulumi.get(self, "tracker_source_ip")
 
     @tracker_source_ip.setter
-    def tracker_source_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_source_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_source_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIpVariable")
-    def tracker_source_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_source_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_source_ip_variable")
 
     @tracker_source_ip_variable.setter
-    def tracker_source_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_source_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_source_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]:
+    def trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]:
         """
         Tracker configuration
         """
         return pulumi.get(self, "trackers")
 
     @trackers.setter
-    def trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]):
+    def trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]):
         pulumi.set(self, "trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnId")
-    def vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         List of VPN instances
           - Range: `0`-`65527`
@@ -171,24 +171,24 @@ class CiscoSecureInternetGatewayFeatureTemplateArgs:
         return pulumi.get(self, "vpn_id")
 
     @vpn_id.setter
-    def vpn_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn_id", value)
 
 
 @pulumi.input_type
 class _CiscoSecureInternetGatewayFeatureTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_source_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_id: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_id: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoSecureInternetGatewayFeatureTemplate resources.
 
@@ -232,19 +232,19 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -252,108 +252,108 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]:
         """
         Interface name: IPsec when present
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]:
+    def services(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]:
         """
         Configure services
         """
         return pulumi.get(self, "services")
 
     @services.setter
-    def services(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]):
+    def services(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]]]):
         pulumi.set(self, "services", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIp")
-    def tracker_source_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_source_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Source IP address for Tracker
         """
         return pulumi.get(self, "tracker_source_ip")
 
     @tracker_source_ip.setter
-    def tracker_source_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_source_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_source_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerSourceIpVariable")
-    def tracker_source_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_source_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_source_ip_variable")
 
     @tracker_source_ip_variable.setter
-    def tracker_source_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_source_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_source_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]:
+    def trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]:
         """
         Tracker configuration
         """
         return pulumi.get(self, "trackers")
 
     @trackers.setter
-    def trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]):
+    def trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]]]):
         pulumi.set(self, "trackers", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnId")
-    def vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         List of VPN instances
           - Range: `0`-`65527`
@@ -362,7 +362,7 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
         return pulumi.get(self, "vpn_id")
 
     @vpn_id.setter
-    def vpn_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn_id", value)
 
 
@@ -372,15 +372,15 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]]] = None,
-                 tracker_source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_source_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]]] = None,
-                 vpn_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]]] = None,
+                 tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]]] = None,
+                 vpn_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco Secure Internet Gateway feature template.
@@ -614,15 +614,15 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]]] = None,
-                 tracker_source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_source_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]]] = None,
-                 vpn_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]]] = None,
+                 tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]]] = None,
+                 vpn_id: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -657,17 +657,17 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_source_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vpn_id: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoSecureInternetGatewayFeatureTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            services: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_id: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoSecureInternetGatewayFeatureTemplate':
         """
         Get an existing CiscoSecureInternetGatewayFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

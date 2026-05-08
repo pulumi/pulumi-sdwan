@@ -464,151 +464,151 @@ export interface CiscoVpnFeatureTemplateState {
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Static DNS mapping
      */
-    dnsHosts?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsHost>[]>;
+    dnsHosts?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsHost>[] | undefined>;
     /**
      * DNS
      */
-    dnsIpv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv4Server>[]>;
+    dnsIpv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv4Server>[] | undefined>;
     /**
      * DNS
      */
-    dnsIpv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv6Server>[]>;
+    dnsIpv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv6Server>[] | undefined>;
     /**
      * Optional packet fields for ECMP keying
      *   - Default value: `false`
      */
-    enhanceEcmpKeying?: pulumi.Input<boolean>;
+    enhanceEcmpKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enhanceEcmpKeyingVariable?: pulumi.Input<string>;
+    enhanceEcmpKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure routes pointing to a GRE tunnel
      */
-    ipv4StaticGreRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute>[]>;
+    ipv4StaticGreRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute>[] | undefined>;
     /**
      * Configure routes pointing to a IPSEC tunnel
      */
-    ipv4StaticIpsecRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute>[]>;
+    ipv4StaticIpsecRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute>[] | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRoute>[]>;
+    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRoute>[] | undefined>;
     /**
      * Configure IPv4 Static Service Routes
      */
-    ipv4StaticServiceRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute>[]>;
+    ipv4StaticServiceRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute>[] | undefined>;
     /**
      * Configure IPv6 Static Routes
      */
-    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv6StaticRoute>[]>;
+    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv6StaticRoute>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set NAT64 v4 pool range
      */
-    nat64Pools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNat64Pool>[]>;
+    nat64Pools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNat64Pool>[] | undefined>;
     /**
      * Configure NAT Pool entries
      */
-    natPools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNatPool>[]>;
+    natPools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNatPool>[] | undefined>;
     /**
      * omp-admin-distance-ipv4
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv4?: pulumi.Input<number>;
+    ompAdminDistanceIpv4?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * omp-admin-distance-ipv6
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv6?: pulumi.Input<number>;
+    ompAdminDistanceIpv6?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Advertise routes to OMP
      */
-    ompAdvertiseIpv4Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route>[]>;
+    ompAdvertiseIpv4Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route>[] | undefined>;
     /**
      * Advertise routes to OMP
      */
-    ompAdvertiseIpv6Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route>[]>;
+    ompAdvertiseIpv6Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route>[] | undefined>;
     /**
      * Org Name selected
      */
-    organizationName?: pulumi.Input<string>;
+    organizationName?: pulumi.Input<string | undefined>;
     /**
      * Configure Port Forward entries
      */
-    portForwardRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplatePortForwardRule>[]>;
+    portForwardRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplatePortForwardRule>[] | undefined>;
     /**
      * Enable route leaking to Global VPN from this Service VPN
      */
-    routeGlobalExports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalExport>[]>;
+    routeGlobalExports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalExport>[] | undefined>;
     /**
      * Enable route leaking from Global VPN to this Service VPN
      */
-    routeGlobalImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalImport>[]>;
+    routeGlobalImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalImport>[] | undefined>;
     /**
      * Enable route leak from Service VPN to current VPN
      */
-    routeVpnImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteVpnImport>[]>;
+    routeVpnImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteVpnImport>[] | undefined>;
     /**
      * Configure services
      */
-    services?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateService>[] | undefined>;
     /**
      * Configure static NAT entries
      */
-    staticNatRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatRule>[]>;
+    staticNatRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatRule>[] | undefined>;
     /**
      * Configure static NAT Subnet entries
      */
-    staticNatSubnetRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatSubnetRule>[]>;
+    staticNatSubnetRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatSubnetRule>[] | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Tenant VPN
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    tenantVpnId?: pulumi.Input<number>;
+    tenantVpnId?: pulumi.Input<number | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * List of VPN instances
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Name
      */
-    vpnName?: pulumi.Input<string>;
+    vpnName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    vpnNameVariable?: pulumi.Input<string>;
+    vpnNameVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -627,132 +627,132 @@ export interface CiscoVpnFeatureTemplateArgs {
     /**
      * Static DNS mapping
      */
-    dnsHosts?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsHost>[]>;
+    dnsHosts?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsHost>[] | undefined>;
     /**
      * DNS
      */
-    dnsIpv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv4Server>[]>;
+    dnsIpv4Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv4Server>[] | undefined>;
     /**
      * DNS
      */
-    dnsIpv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv6Server>[]>;
+    dnsIpv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv6Server>[] | undefined>;
     /**
      * Optional packet fields for ECMP keying
      *   - Default value: `false`
      */
-    enhanceEcmpKeying?: pulumi.Input<boolean>;
+    enhanceEcmpKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enhanceEcmpKeyingVariable?: pulumi.Input<string>;
+    enhanceEcmpKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure routes pointing to a GRE tunnel
      */
-    ipv4StaticGreRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute>[]>;
+    ipv4StaticGreRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute>[] | undefined>;
     /**
      * Configure routes pointing to a IPSEC tunnel
      */
-    ipv4StaticIpsecRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute>[]>;
+    ipv4StaticIpsecRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute>[] | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRoute>[]>;
+    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRoute>[] | undefined>;
     /**
      * Configure IPv4 Static Service Routes
      */
-    ipv4StaticServiceRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute>[]>;
+    ipv4StaticServiceRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute>[] | undefined>;
     /**
      * Configure IPv6 Static Routes
      */
-    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv6StaticRoute>[]>;
+    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv6StaticRoute>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set NAT64 v4 pool range
      */
-    nat64Pools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNat64Pool>[]>;
+    nat64Pools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNat64Pool>[] | undefined>;
     /**
      * Configure NAT Pool entries
      */
-    natPools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNatPool>[]>;
+    natPools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNatPool>[] | undefined>;
     /**
      * omp-admin-distance-ipv4
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv4?: pulumi.Input<number>;
+    ompAdminDistanceIpv4?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * omp-admin-distance-ipv6
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv6?: pulumi.Input<number>;
+    ompAdminDistanceIpv6?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Advertise routes to OMP
      */
-    ompAdvertiseIpv4Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route>[]>;
+    ompAdvertiseIpv4Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route>[] | undefined>;
     /**
      * Advertise routes to OMP
      */
-    ompAdvertiseIpv6Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route>[]>;
+    ompAdvertiseIpv6Routes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route>[] | undefined>;
     /**
      * Org Name selected
      */
-    organizationName?: pulumi.Input<string>;
+    organizationName?: pulumi.Input<string | undefined>;
     /**
      * Configure Port Forward entries
      */
-    portForwardRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplatePortForwardRule>[]>;
+    portForwardRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplatePortForwardRule>[] | undefined>;
     /**
      * Enable route leaking to Global VPN from this Service VPN
      */
-    routeGlobalExports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalExport>[]>;
+    routeGlobalExports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalExport>[] | undefined>;
     /**
      * Enable route leaking from Global VPN to this Service VPN
      */
-    routeGlobalImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalImport>[]>;
+    routeGlobalImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalImport>[] | undefined>;
     /**
      * Enable route leak from Service VPN to current VPN
      */
-    routeVpnImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteVpnImport>[]>;
+    routeVpnImports?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteVpnImport>[] | undefined>;
     /**
      * Configure services
      */
-    services?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateService>[] | undefined>;
     /**
      * Configure static NAT entries
      */
-    staticNatRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatRule>[]>;
+    staticNatRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatRule>[] | undefined>;
     /**
      * Configure static NAT Subnet entries
      */
-    staticNatSubnetRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatSubnetRule>[]>;
+    staticNatSubnetRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatSubnetRule>[] | undefined>;
     /**
      * Tenant VPN
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    tenantVpnId?: pulumi.Input<number>;
+    tenantVpnId?: pulumi.Input<number | undefined>;
     /**
      * List of VPN instances
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Name
      */
-    vpnName?: pulumi.Input<string>;
+    vpnName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    vpnNameVariable?: pulumi.Input<string>;
+    vpnNameVariable?: pulumi.Input<string | undefined>;
 }

@@ -434,161 +434,161 @@ export interface ServiceLanVpnFeatureState {
     /**
      * OMP Advertise IPv4
      */
-    advertiseOmpIpv4s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv4>[]>;
+    advertiseOmpIpv4s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv4>[] | undefined>;
     /**
      * OMP Advertise IPv6
      */
-    advertiseOmpIpv6s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv6>[]>;
+    advertiseOmpIpv6s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv6>[] | undefined>;
     /**
      * Name
      */
-    configDescription?: pulumi.Input<string>;
+    configDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    configDescriptionVariable?: pulumi.Input<string>;
+    configDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable SDWAN Remote Access
      *   - Default value: `false`
      */
-    enableSdwanRemoteAccess?: pulumi.Input<boolean>;
+    enableSdwanRemoteAccess?: pulumi.Input<boolean | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Static GRE Route
      */
-    greRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureGreRoute>[]>;
-    hostMappings?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureHostMapping>[]>;
+    greRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureGreRoute>[] | undefined>;
+    hostMappings?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureHostMapping>[] | undefined>;
     /**
      * IPv4 Static IPSEC Route
      */
-    ipsecRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpsecRoute>[]>;
-    ipv4ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ExportRouteTarget>[]>;
-    ipv4ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ImportRouteTarget>[]>;
+    ipsecRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpsecRoute>[] | undefined>;
+    ipv4ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ExportRouteTarget>[] | undefined>;
+    ipv4ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ImportRouteTarget>[] | undefined>;
     /**
      * IPv4 Static Route
      */
-    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRoute>[]>;
-    ipv6ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ExportRouteTarget>[]>;
-    ipv6ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ImportRouteTarget>[]>;
+    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRoute>[] | undefined>;
+    ipv6ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ExportRouteTarget>[] | undefined>;
+    ipv6ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ImportRouteTarget>[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRoute>[]>;
+    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRoute>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NAT64 V4 Pool
      */
-    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNat64V4Pool>[]>;
+    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNat64V4Pool>[] | undefined>;
     /**
      * NAT Pool
      */
-    natPools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPool>[]>;
+    natPools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPool>[] | undefined>;
     /**
      * NAT Port Forward
      */
-    natPortForwards?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPortForward>[]>;
+    natPortForwards?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPortForward>[] | undefined>;
     /**
      * OMP Admin Distance IPv4
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv4?: pulumi.Input<number>;
+    ompAdminDistanceIpv4?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * OMP Admin Distance IPv6
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv6?: pulumi.Input<number>;
+    ompAdminDistanceIpv6?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    primaryDnsAddressIpv4?: pulumi.Input<string>;
+    primaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    primaryDnsAddressIpv6?: pulumi.Input<string>;
+    primaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Enable route leaking from Global to Service VPN
      */
-    routeLeakFromGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn>[]>;
+    routeLeakFromGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn>[] | undefined>;
     /**
      * Enable route leak from another Service VPN to current Service VPN
      */
-    routeLeakFromOtherServices?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromOtherService>[]>;
+    routeLeakFromOtherServices?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromOtherService>[] | undefined>;
     /**
      * Enable route leaking from Service to Global VPN
      */
-    routeLeakToGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn>[]>;
+    routeLeakToGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn>[] | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    secondaryDnsAddressIpv4?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    secondaryDnsAddressIpv6?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    serviceRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureServiceRoute>[]>;
+    serviceRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureServiceRoute>[] | undefined>;
     /**
      * Service
      */
-    services?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureService>[] | undefined>;
     /**
      * Static NAT Subnet Rules
      */
-    staticNatSubnets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNatSubnet>[]>;
+    staticNatSubnets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNatSubnet>[] | undefined>;
     /**
      * Static NAT Rules
      */
-    staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNat>[]>;
+    staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNat>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * VPN
      *   - Range: `1`-`65527`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -598,28 +598,28 @@ export interface ServiceLanVpnFeatureArgs {
     /**
      * OMP Advertise IPv4
      */
-    advertiseOmpIpv4s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv4>[]>;
+    advertiseOmpIpv4s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv4>[] | undefined>;
     /**
      * OMP Advertise IPv6
      */
-    advertiseOmpIpv6s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv6>[]>;
+    advertiseOmpIpv6s?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv6>[] | undefined>;
     /**
      * Name
      */
-    configDescription?: pulumi.Input<string>;
+    configDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    configDescriptionVariable?: pulumi.Input<string>;
+    configDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable SDWAN Remote Access
      *   - Default value: `false`
      */
-    enableSdwanRemoteAccess?: pulumi.Input<boolean>;
+    enableSdwanRemoteAccess?: pulumi.Input<boolean | undefined>;
     /**
      * Feature Profile ID
      */
@@ -627,126 +627,126 @@ export interface ServiceLanVpnFeatureArgs {
     /**
      * IPv4 Static GRE Route
      */
-    greRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureGreRoute>[]>;
-    hostMappings?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureHostMapping>[]>;
+    greRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureGreRoute>[] | undefined>;
+    hostMappings?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureHostMapping>[] | undefined>;
     /**
      * IPv4 Static IPSEC Route
      */
-    ipsecRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpsecRoute>[]>;
-    ipv4ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ExportRouteTarget>[]>;
-    ipv4ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ImportRouteTarget>[]>;
+    ipsecRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpsecRoute>[] | undefined>;
+    ipv4ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ExportRouteTarget>[] | undefined>;
+    ipv4ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4ImportRouteTarget>[] | undefined>;
     /**
      * IPv4 Static Route
      */
-    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRoute>[]>;
-    ipv6ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ExportRouteTarget>[]>;
-    ipv6ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ImportRouteTarget>[]>;
+    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRoute>[] | undefined>;
+    ipv6ExportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ExportRouteTarget>[] | undefined>;
+    ipv6ImportRouteTargets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6ImportRouteTarget>[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRoute>[]>;
+    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRoute>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NAT64 V4 Pool
      */
-    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNat64V4Pool>[]>;
+    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNat64V4Pool>[] | undefined>;
     /**
      * NAT Pool
      */
-    natPools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPool>[]>;
+    natPools?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPool>[] | undefined>;
     /**
      * NAT Port Forward
      */
-    natPortForwards?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPortForward>[]>;
+    natPortForwards?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPortForward>[] | undefined>;
     /**
      * OMP Admin Distance IPv4
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv4?: pulumi.Input<number>;
+    ompAdminDistanceIpv4?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * OMP Admin Distance IPv6
      *   - Range: `1`-`255`
      */
-    ompAdminDistanceIpv6?: pulumi.Input<number>;
+    ompAdminDistanceIpv6?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
+    ompAdminDistanceIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    primaryDnsAddressIpv4?: pulumi.Input<string>;
+    primaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    primaryDnsAddressIpv6?: pulumi.Input<string>;
+    primaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Enable route leaking from Global to Service VPN
      */
-    routeLeakFromGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn>[]>;
+    routeLeakFromGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn>[] | undefined>;
     /**
      * Enable route leak from another Service VPN to current Service VPN
      */
-    routeLeakFromOtherServices?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromOtherService>[]>;
+    routeLeakFromOtherServices?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromOtherService>[] | undefined>;
     /**
      * Enable route leaking from Service to Global VPN
      */
-    routeLeakToGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn>[]>;
+    routeLeakToGlobalVpns?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn>[] | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    secondaryDnsAddressIpv4?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    secondaryDnsAddressIpv6?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    serviceRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureServiceRoute>[]>;
+    serviceRoutes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureServiceRoute>[] | undefined>;
     /**
      * Service
      */
-    services?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureService>[] | undefined>;
     /**
      * Static NAT Subnet Rules
      */
-    staticNatSubnets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNatSubnet>[]>;
+    staticNatSubnets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNatSubnet>[] | undefined>;
     /**
      * Static NAT Rules
      */
-    staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNat>[]>;
+    staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNat>[] | undefined>;
     /**
      * VPN
      *   - Range: `1`-`65527`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }

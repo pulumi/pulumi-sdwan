@@ -70,8 +70,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateRouteGlobalImportArgs;
  * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateRouteVpnImportArgs;
  * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateRouteGlobalExportArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -104,11 +104,11 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .dnsHosts(CiscoVpnFeatureTemplateDnsHostArgs.builder()
  *                 .hostname("abc1")
- *                 .ip(List.of("7.7.7.7"))
+ *                 .ip(Arrays.asList("7.7.7.7"))
  *                 .build())
  *             .services(CiscoVpnFeatureTemplateServiceArgs.builder()
  *                 .serviceTypes("FW")
- *                 .address(List.of("8.8.8.8"))
+ *                 .address(Arrays.asList("8.8.8.8"))
  *                 .interface_("e1")
  *                 .trackEnable(true)
  *                 .build())
@@ -156,7 +156,7 @@ import javax.annotation.Nullable;
  *             .ompAdvertiseIpv4Routes(CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs.builder()
  *                 .protocol("bgp")
  *                 .routePolicy("rp1")
- *                 .protocolSubType(List.of("external"))
+ *                 .protocolSubType(Arrays.asList("external"))
  *                 .prefixes(CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs.builder()
  *                     .prefixEntry("1.1.1.0/24")
  *                     .aggregateOnly(true)
@@ -165,7 +165,7 @@ import javax.annotation.Nullable;
  *             .ompAdvertiseIpv6Routes(CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs.builder()
  *                 .protocol("bgp")
  *                 .routePolicy("rp1")
- *                 .protocolSubType(List.of("external"))
+ *                 .protocolSubType(Arrays.asList("external"))
  *                 .prefixes(CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs.builder()
  *                     .prefixEntry("2001:2::/48")
  *                     .aggregateOnly(true)
@@ -213,7 +213,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .routeGlobalImports(CiscoVpnFeatureTemplateRouteGlobalImportArgs.builder()
  *                 .protocol("ospf")
- *                 .protocolSubType(List.of("external"))
+ *                 .protocolSubType(Arrays.asList("external"))
  *                 .routePolicy("policy1")
  *                 .redistributes(CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs.builder()
  *                     .protocol("bgp")
@@ -223,7 +223,7 @@ import javax.annotation.Nullable;
  *             .routeVpnImports(CiscoVpnFeatureTemplateRouteVpnImportArgs.builder()
  *                 .sourceVpnId(5)
  *                 .protocol("ospf")
- *                 .protocolSubType(List.of("external"))
+ *                 .protocolSubType(Arrays.asList("external"))
  *                 .routePolicy("policy1")
  *                 .redistributes(CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs.builder()
  *                     .protocol("bgp")
@@ -232,7 +232,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .routeGlobalExports(CiscoVpnFeatureTemplateRouteGlobalExportArgs.builder()
  *                 .protocol("ospf")
- *                 .protocolSubType(List.of("external"))
+ *                 .protocolSubType(Arrays.asList("external"))
  *                 .routePolicy("policy1")
  *                 .redistributes(CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs.builder()
  *                     .protocol("bgp")

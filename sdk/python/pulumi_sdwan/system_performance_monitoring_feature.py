@@ -20,14 +20,14 @@ __all__ = ['SystemPerformanceMonitoringFeatureArgs', 'SystemPerformanceMonitorin
 class SystemPerformanceMonitoringFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 app_perf_monitor_app_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 app_perf_monitor_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 event_driven_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 event_driven_events: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 monitoring_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitoring_config_interval: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 app_perf_monitor_app_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 app_perf_monitor_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 event_driven_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 event_driven_events: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 monitoring_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitoring_config_interval: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemPerformanceMonitoringFeature resource.
 
@@ -77,19 +77,19 @@ class SystemPerformanceMonitoringFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="appPerfMonitorAppGroups")
-    def app_perf_monitor_app_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def app_perf_monitor_app_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Application groups to be monitored
         """
         return pulumi.get(self, "app_perf_monitor_app_groups")
 
     @app_perf_monitor_app_groups.setter
-    def app_perf_monitor_app_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def app_perf_monitor_app_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "app_perf_monitor_app_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="appPerfMonitorEnabled")
-    def app_perf_monitor_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def app_perf_monitor_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Application performance monitoring enable or disable
           - Default value: `false`
@@ -97,24 +97,24 @@ class SystemPerformanceMonitoringFeatureArgs:
         return pulumi.get(self, "app_perf_monitor_enabled")
 
     @app_perf_monitor_enabled.setter
-    def app_perf_monitor_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def app_perf_monitor_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "app_perf_monitor_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="eventDrivenConfigEnabled")
-    def event_driven_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def event_driven_config_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         UMTS event driven monitoring enable or disable
           - Default value: `false`
@@ -122,24 +122,24 @@ class SystemPerformanceMonitoringFeatureArgs:
         return pulumi.get(self, "event_driven_config_enabled")
 
     @event_driven_config_enabled.setter
-    def event_driven_config_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def event_driven_config_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "event_driven_config_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="eventDrivenEvents")
-    def event_driven_events(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def event_driven_events(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         UMTS events
         """
         return pulumi.get(self, "event_driven_events")
 
     @event_driven_events.setter
-    def event_driven_events(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def event_driven_events(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "event_driven_events", value)
 
     @_builtins.property
     @pulumi.getter(name="monitoringConfigEnabled")
-    def monitoring_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def monitoring_config_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         UMTS monitoring enable or disable
           - Default value: `false`
@@ -147,12 +147,12 @@ class SystemPerformanceMonitoringFeatureArgs:
         return pulumi.get(self, "monitoring_config_enabled")
 
     @monitoring_config_enabled.setter
-    def monitoring_config_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def monitoring_config_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "monitoring_config_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="monitoringConfigInterval")
-    def monitoring_config_interval(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def monitoring_config_interval(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         UMTS monitoring interval(Minutes)
           - Choices: `30`, `60`
@@ -160,35 +160,35 @@ class SystemPerformanceMonitoringFeatureArgs:
         return pulumi.get(self, "monitoring_config_interval")
 
     @monitoring_config_interval.setter
-    def monitoring_config_interval(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def monitoring_config_interval(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "monitoring_config_interval", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _SystemPerformanceMonitoringFeatureState:
     def __init__(__self__, *,
-                 app_perf_monitor_app_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 app_perf_monitor_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 event_driven_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 event_driven_events: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 monitoring_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitoring_config_interval: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 app_perf_monitor_app_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 app_perf_monitor_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 event_driven_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 event_driven_events: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 monitoring_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitoring_config_interval: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemPerformanceMonitoringFeature resources.
 
@@ -230,19 +230,19 @@ class _SystemPerformanceMonitoringFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="appPerfMonitorAppGroups")
-    def app_perf_monitor_app_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def app_perf_monitor_app_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Application groups to be monitored
         """
         return pulumi.get(self, "app_perf_monitor_app_groups")
 
     @app_perf_monitor_app_groups.setter
-    def app_perf_monitor_app_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def app_perf_monitor_app_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "app_perf_monitor_app_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="appPerfMonitorEnabled")
-    def app_perf_monitor_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def app_perf_monitor_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Application performance monitoring enable or disable
           - Default value: `false`
@@ -250,24 +250,24 @@ class _SystemPerformanceMonitoringFeatureState:
         return pulumi.get(self, "app_perf_monitor_enabled")
 
     @app_perf_monitor_enabled.setter
-    def app_perf_monitor_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def app_perf_monitor_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "app_perf_monitor_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="eventDrivenConfigEnabled")
-    def event_driven_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def event_driven_config_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         UMTS event driven monitoring enable or disable
           - Default value: `false`
@@ -275,36 +275,36 @@ class _SystemPerformanceMonitoringFeatureState:
         return pulumi.get(self, "event_driven_config_enabled")
 
     @event_driven_config_enabled.setter
-    def event_driven_config_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def event_driven_config_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "event_driven_config_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="eventDrivenEvents")
-    def event_driven_events(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def event_driven_events(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         UMTS events
         """
         return pulumi.get(self, "event_driven_events")
 
     @event_driven_events.setter
-    def event_driven_events(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def event_driven_events(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "event_driven_events", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="monitoringConfigEnabled")
-    def monitoring_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def monitoring_config_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         UMTS monitoring enable or disable
           - Default value: `false`
@@ -312,12 +312,12 @@ class _SystemPerformanceMonitoringFeatureState:
         return pulumi.get(self, "monitoring_config_enabled")
 
     @monitoring_config_enabled.setter
-    def monitoring_config_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def monitoring_config_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "monitoring_config_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="monitoringConfigInterval")
-    def monitoring_config_interval(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def monitoring_config_interval(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         UMTS monitoring interval(Minutes)
           - Choices: `30`, `60`
@@ -325,31 +325,31 @@ class _SystemPerformanceMonitoringFeatureState:
         return pulumi.get(self, "monitoring_config_interval")
 
     @monitoring_config_interval.setter
-    def monitoring_config_interval(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def monitoring_config_interval(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "monitoring_config_interval", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -359,15 +359,15 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 app_perf_monitor_app_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 app_perf_monitor_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 event_driven_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 event_driven_events: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 monitoring_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitoring_config_interval: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 app_perf_monitor_app_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 app_perf_monitor_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 event_driven_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 event_driven_events: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 monitoring_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitoring_config_interval: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System Performance Monitoring Feature.
@@ -472,15 +472,15 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 app_perf_monitor_app_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 app_perf_monitor_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 event_driven_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 event_driven_events: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 monitoring_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 monitoring_config_interval: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 app_perf_monitor_app_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 app_perf_monitor_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 event_driven_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 event_driven_events: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 monitoring_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 monitoring_config_interval: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -512,16 +512,16 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            app_perf_monitor_app_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            app_perf_monitor_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            event_driven_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            event_driven_events: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            monitoring_config_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            monitoring_config_interval: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemPerformanceMonitoringFeature':
+            app_perf_monitor_app_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            app_perf_monitor_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            event_driven_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            event_driven_events: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            monitoring_config_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            monitoring_config_interval: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemPerformanceMonitoringFeature':
         """
         Get an existing SystemPerformanceMonitoringFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

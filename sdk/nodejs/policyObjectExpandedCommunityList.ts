@@ -131,27 +131,27 @@ export interface PolicyObjectExpandedCommunityListState {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Expanded Community List
      */
-    expandedCommunityLists?: pulumi.Input<pulumi.Input<string>[]>;
+    expandedCommunityLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    expandedCommunityListsVariable?: pulumi.Input<string>;
+    expandedCommunityListsVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -161,7 +161,7 @@ export interface PolicyObjectExpandedCommunityListArgs {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Expanded Community List
      */
@@ -169,7 +169,7 @@ export interface PolicyObjectExpandedCommunityListArgs {
     /**
      * Variable name
      */
-    expandedCommunityListsVariable?: pulumi.Input<string>;
+    expandedCommunityListsVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -177,5 +177,5 @@ export interface PolicyObjectExpandedCommunityListArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

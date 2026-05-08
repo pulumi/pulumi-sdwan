@@ -25,14 +25,14 @@ class DnsSecurityPolicyDefinitionArgs:
                  description: pulumi.Input[_builtins.str],
                  match_all_vpn: pulumi.Input[_builtins.bool],
                  umbrella_dns_default: pulumi.Input[_builtins.bool],
-                 cisco_sig_credentials_feature_template_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 custom_dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 dnscrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]] = None):
+                 cisco_sig_credentials_feature_template_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 custom_dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 dnscrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]] = None):
         """
         The set of arguments for constructing a DnsSecurityPolicyDefinition resource.
 
@@ -120,117 +120,117 @@ class DnsSecurityPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="ciscoSigCredentialsFeatureTemplateVersion")
-    def cisco_sig_credentials_feature_template_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def cisco_sig_credentials_feature_template_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Credentials feature template version
         """
         return pulumi.get(self, "cisco_sig_credentials_feature_template_version")
 
     @cisco_sig_credentials_feature_template_version.setter
-    def cisco_sig_credentials_feature_template_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def cisco_sig_credentials_feature_template_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "cisco_sig_credentials_feature_template_version", value)
 
     @_builtins.property
     @pulumi.getter(name="customDnsServerIp")
-    def custom_dns_server_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def custom_dns_server_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Only relevant when `umbrella_dns_default` is `false`
         """
         return pulumi.get(self, "custom_dns_server_ip")
 
     @custom_dns_server_ip.setter
-    def custom_dns_server_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def custom_dns_server_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "custom_dns_server_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def dnscrypt(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dnscrypt(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Should DNSCrypt be enabled
         """
         return pulumi.get(self, "dnscrypt")
 
     @dnscrypt.setter
-    def dnscrypt(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dnscrypt(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dnscrypt", value)
 
     @_builtins.property
     @pulumi.getter(name="domainListId")
-    def domain_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Local domain bypass list ID
         """
         return pulumi.get(self, "domain_list_id")
 
     @domain_list_id.setter
-    def domain_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="domainListVersion")
-    def domain_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def domain_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Local domain bypass list version
         """
         return pulumi.get(self, "domain_list_version")
 
     @domain_list_version.setter
-    def domain_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def domain_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "domain_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="localDomainBypassEnabled")
-    def local_domain_bypass_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_domain_bypass_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Should the local domain bypass list be enabled
         """
         return pulumi.get(self, "local_domain_bypass_enabled")
 
     @local_domain_bypass_enabled.setter
-    def local_domain_bypass_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_domain_bypass_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_domain_bypass_enabled", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]:
         """
         Only relevant when `match_all_vpn` is `false`
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]):
         pulumi.set(self, "target_vpns", value)
 
 
 @pulumi.input_type
 class _DnsSecurityPolicyDefinitionState:
     def __init__(__self__, *,
-                 cisco_sig_credentials_feature_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cisco_sig_credentials_feature_template_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 custom_dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dnscrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]] = None,
-                 umbrella_dns_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 cisco_sig_credentials_feature_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cisco_sig_credentials_feature_template_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 custom_dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dnscrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]] = None,
+                 umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering DnsSecurityPolicyDefinition resources.
 
@@ -277,158 +277,158 @@ class _DnsSecurityPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="ciscoSigCredentialsFeatureTemplateId")
-    def cisco_sig_credentials_feature_template_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cisco_sig_credentials_feature_template_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Credentials feature template ID
         """
         return pulumi.get(self, "cisco_sig_credentials_feature_template_id")
 
     @cisco_sig_credentials_feature_template_id.setter
-    def cisco_sig_credentials_feature_template_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cisco_sig_credentials_feature_template_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cisco_sig_credentials_feature_template_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ciscoSigCredentialsFeatureTemplateVersion")
-    def cisco_sig_credentials_feature_template_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def cisco_sig_credentials_feature_template_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Credentials feature template version
         """
         return pulumi.get(self, "cisco_sig_credentials_feature_template_version")
 
     @cisco_sig_credentials_feature_template_version.setter
-    def cisco_sig_credentials_feature_template_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def cisco_sig_credentials_feature_template_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "cisco_sig_credentials_feature_template_version", value)
 
     @_builtins.property
     @pulumi.getter(name="customDnsServerIp")
-    def custom_dns_server_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def custom_dns_server_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Only relevant when `umbrella_dns_default` is `false`
         """
         return pulumi.get(self, "custom_dns_server_ip")
 
     @custom_dns_server_ip.setter
-    def custom_dns_server_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def custom_dns_server_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "custom_dns_server_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition.
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def dnscrypt(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dnscrypt(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Should DNSCrypt be enabled
         """
         return pulumi.get(self, "dnscrypt")
 
     @dnscrypt.setter
-    def dnscrypt(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dnscrypt(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dnscrypt", value)
 
     @_builtins.property
     @pulumi.getter(name="domainListId")
-    def domain_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Local domain bypass list ID
         """
         return pulumi.get(self, "domain_list_id")
 
     @domain_list_id.setter
-    def domain_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="domainListVersion")
-    def domain_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def domain_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Local domain bypass list version
         """
         return pulumi.get(self, "domain_list_version")
 
     @domain_list_version.setter
-    def domain_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def domain_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "domain_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="localDomainBypassEnabled")
-    def local_domain_bypass_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_domain_bypass_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Should the local domain bypass list be enabled
         """
         return pulumi.get(self, "local_domain_bypass_enabled")
 
     @local_domain_bypass_enabled.setter
-    def local_domain_bypass_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_domain_bypass_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_domain_bypass_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="matchAllVpn")
-    def match_all_vpn(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def match_all_vpn(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Should use match all VPN
         """
         return pulumi.get(self, "match_all_vpn")
 
     @match_all_vpn.setter
-    def match_all_vpn(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def match_all_vpn(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "match_all_vpn", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]:
         """
         Only relevant when `match_all_vpn` is `false`
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyDefinitionTargetVpnArgs']]]]):
         pulumi.set(self, "target_vpns", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaDnsDefault")
-    def umbrella_dns_default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def umbrella_dns_default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Should use umbrella as DNS Server
         """
         return pulumi.get(self, "umbrella_dns_default")
 
     @umbrella_dns_default.setter
-    def umbrella_dns_default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def umbrella_dns_default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "umbrella_dns_default", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -438,18 +438,18 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cisco_sig_credentials_feature_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cisco_sig_credentials_feature_template_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 custom_dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dnscrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
-                 umbrella_dns_default: Optional[pulumi.Input[_builtins.bool]] = None,
+                 cisco_sig_credentials_feature_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cisco_sig_credentials_feature_template_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 custom_dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dnscrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
+                 umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage a DNS Security Policy Definition .
@@ -545,18 +545,18 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 cisco_sig_credentials_feature_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 cisco_sig_credentials_feature_template_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 custom_dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dnscrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
-                 umbrella_dns_default: Optional[pulumi.Input[_builtins.bool]] = None,
+                 cisco_sig_credentials_feature_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 cisco_sig_credentials_feature_template_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 custom_dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dnscrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
+                 umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -597,19 +597,19 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            cisco_sig_credentials_feature_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-            cisco_sig_credentials_feature_template_version: Optional[pulumi.Input[_builtins.int]] = None,
-            custom_dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            dnscrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-            domain_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            domain_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
-            umbrella_dns_default: Optional[pulumi.Input[_builtins.bool]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'DnsSecurityPolicyDefinition':
+            cisco_sig_credentials_feature_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+            cisco_sig_credentials_feature_template_version: pulumi.Input[Optional[_builtins.int]] = None,
+            custom_dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dnscrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+            domain_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyDefinitionTargetVpnArgs', 'DnsSecurityPolicyDefinitionTargetVpnArgsDict']]]]] = None,
+            umbrella_dns_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'DnsSecurityPolicyDefinition':
         """
         Get an existing DnsSecurityPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -250,107 +250,107 @@ export interface TransportIpv6TrackerFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * API url of endpoint
      */
-    endpointApiUrl?: pulumi.Input<string>;
+    endpointApiUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointApiUrlVariable?: pulumi.Input<string>;
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * DNS Name
      */
-    endpointDnsName?: pulumi.Input<string>;
+    endpointDnsName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointDnsNameVariable?: pulumi.Input<string>;
+    endpointDnsNameVariable?: pulumi.Input<string | undefined>;
     /**
      * IP
      */
-    endpointIp?: pulumi.Input<string>;
+    endpointIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointIpVariable?: pulumi.Input<string>;
+    endpointIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint Tracker Type
      *   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
      *   - Default value: `ipv6-interface`
      */
-    endpointTrackerType?: pulumi.Input<string>;
+    endpointTrackerType?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
      *   - Range: `2`-`1000`
      *   - Default value: `2`
      */
-    icmpInterval?: pulumi.Input<number>;
+    icmpInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
      */
-    icmpIntervalVariable?: pulumi.Input<string>;
+    icmpIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Multiplier
      *   - Range: `1`-`10`
      *   - Default value: `3`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Threshold
      *   - Range: `100`-`1000`
      *   - Default value: `300`
      */
-    threshold?: pulumi.Input<number>;
+    threshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    thresholdVariable?: pulumi.Input<string>;
+    thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Name
      */
-    trackerName?: pulumi.Input<string>;
+    trackerName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerNameVariable?: pulumi.Input<string>;
+    trackerNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Type
      *   - Choices: `endpoint`
      *   - Default value: `endpoint`
      */
-    trackerType?: pulumi.Input<string>;
+    trackerType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerTypeVariable?: pulumi.Input<string>;
+    trackerTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -360,37 +360,37 @@ export interface TransportIpv6TrackerFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * API url of endpoint
      */
-    endpointApiUrl?: pulumi.Input<string>;
+    endpointApiUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointApiUrlVariable?: pulumi.Input<string>;
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * DNS Name
      */
-    endpointDnsName?: pulumi.Input<string>;
+    endpointDnsName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointDnsNameVariable?: pulumi.Input<string>;
+    endpointDnsNameVariable?: pulumi.Input<string | undefined>;
     /**
      * IP
      */
-    endpointIp?: pulumi.Input<string>;
+    endpointIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointIpVariable?: pulumi.Input<string>;
+    endpointIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint Tracker Type
      *   - Choices: `ipv6-interface`, `ipv6-interface-icmp`
      *   - Default value: `ipv6-interface`
      */
-    endpointTrackerType?: pulumi.Input<string>;
+    endpointTrackerType?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -400,61 +400,61 @@ export interface TransportIpv6TrackerFeatureArgs {
      *   - Range: `2`-`1000`
      *   - Default value: `2`
      */
-    icmpInterval?: pulumi.Input<number>;
+    icmpInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface-icmp`
      */
-    icmpIntervalVariable?: pulumi.Input<string>;
+    icmpIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Probe Interval, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `endpointTrackerType` equal to `ipv6-interface`
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Multiplier
      *   - Range: `1`-`10`
      *   - Default value: `3`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Threshold
      *   - Range: `100`-`1000`
      *   - Default value: `300`
      */
-    threshold?: pulumi.Input<number>;
+    threshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    thresholdVariable?: pulumi.Input<string>;
+    thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Name
      */
-    trackerName?: pulumi.Input<string>;
+    trackerName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerNameVariable?: pulumi.Input<string>;
+    trackerNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Type
      *   - Choices: `endpoint`
      *   - Default value: `endpoint`
      */
-    trackerType?: pulumi.Input<string>;
+    trackerType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerTypeVariable?: pulumi.Input<string>;
+    trackerTypeVariable?: pulumi.Input<string | undefined>;
 }

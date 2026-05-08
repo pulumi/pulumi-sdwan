@@ -23,7 +23,7 @@ class VpnMembershipPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  sites: pulumi.Input[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a VpnMembershipPolicyDefinition resource.
 
@@ -62,25 +62,25 @@ class VpnMembershipPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _VpnMembershipPolicyDefinitionState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sites: Optional[pulumi.Input[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering VpnMembershipPolicyDefinition resources.
 
@@ -103,62 +103,62 @@ class _VpnMembershipPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sites(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]]]:
+    def sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]]]:
         """
         List of sites
         """
         return pulumi.get(self, "sites")
 
     @sites.setter
-    def sites(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]]]):
+    def sites(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['VpnMembershipPolicyDefinitionSiteArgs']]]]):
         pulumi.set(self, "sites", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -168,9 +168,9 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sites: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a VPN Membership Policy Definition .
@@ -253,9 +253,9 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sites: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -284,11 +284,11 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sites: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'VpnMembershipPolicyDefinition':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sites: pulumi.Input[Optional[Sequence[pulumi.Input[Union['VpnMembershipPolicyDefinitionSiteArgs', 'VpnMembershipPolicyDefinitionSiteArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'VpnMembershipPolicyDefinition':
         """
         Get an existing VpnMembershipPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

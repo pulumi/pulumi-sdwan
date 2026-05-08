@@ -22,58 +22,58 @@ __all__ = ['ServiceRoutingBgpFeatureArgs', 'ServiceRoutingBgpFeature']
 class ServiceRoutingBgpFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 external_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 internal_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]] = None,
-                 ipv4_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]] = None,
-                 ipv4_networks: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]] = None,
-                 ipv4_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]] = None,
-                 ipv4_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]] = None,
-                 ipv6_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]] = None,
-                 ipv6_networks: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]] = None,
-                 ipv6_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]] = None,
-                 ipv6_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 keepalive_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_as_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_as_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_as_path: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_as_path_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 external_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]] = None,
+                 ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]] = None,
+                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]] = None,
+                 ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]] = None,
+                 ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]] = None,
+                 ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]] = None,
+                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]] = None,
+                 ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]] = None,
+                 ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_as_path: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_as_path_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceRoutingBgpFeature resource.
 
@@ -272,7 +272,7 @@ class ServiceRoutingBgpFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMed")
-    def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def always_compare_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all ASs when selecting active BGP paths
           - Default value: `false`
@@ -280,48 +280,48 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "always_compare_med")
 
     @always_compare_med.setter
-    def always_compare_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def always_compare_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "always_compare_med", value)
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMedVariable")
-    def always_compare_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def always_compare_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "always_compare_med_variable")
 
     @always_compare_med_variable.setter
-    def always_compare_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def always_compare_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "always_compare_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumberVariable")
-    def as_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "as_number_variable")
 
     @as_number_variable.setter
-    def as_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterId")
-    def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def compare_router_id(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare router IDs when selecting active BGP paths
           - Default value: `false`
@@ -329,36 +329,36 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "compare_router_id")
 
     @compare_router_id.setter
-    def compare_router_id(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def compare_router_id(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "compare_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterIdVariable")
-    def compare_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def compare_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "compare_router_id_variable")
 
     @compare_router_id_variable.setter
-    def compare_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def compare_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "compare_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMed")
-    def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def deterministic_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all routes from same AS when selecting active BGP paths
           - Default value: `false`
@@ -366,24 +366,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "deterministic_med")
 
     @deterministic_med.setter
-    def deterministic_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def deterministic_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "deterministic_med", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMedVariable")
-    def deterministic_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deterministic_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "deterministic_med_variable")
 
     @deterministic_med_variable.setter
-    def deterministic_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deterministic_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deterministic_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="externalRoutesDistance")
-    def external_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def external_routes_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for external BGP routes
           - Range: `1`-`255`
@@ -392,24 +392,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "external_routes_distance")
 
     @external_routes_distance.setter
-    def external_routes_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def external_routes_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "external_routes_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="externalRoutesDistanceVariable")
-    def external_routes_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def external_routes_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "external_routes_distance_variable")
 
     @external_routes_distance_variable.setter
-    def external_routes_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def external_routes_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "external_routes_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interval (seconds) not receiving a keepalive message declares a BGP peer down
           - Range: `0`-`65535`
@@ -418,24 +418,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTimeVariable")
-    def hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hold_time_variable")
 
     @hold_time_variable.setter
-    def hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="internalRoutesDistance")
-    def internal_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def internal_routes_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for internal BGP routes
           - Range: `1`-`255`
@@ -444,36 +444,36 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "internal_routes_distance")
 
     @internal_routes_distance.setter
-    def internal_routes_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def internal_routes_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "internal_routes_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="internalRoutesDistanceVariable")
-    def internal_routes_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def internal_routes_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "internal_routes_distance_variable")
 
     @internal_routes_distance_variable.setter
-    def internal_routes_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def internal_routes_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "internal_routes_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AggregateAddresses")
-    def ipv4_aggregate_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]:
+    def ipv4_aggregate_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]:
         """
         Aggregate prefixes in specific range
         """
         return pulumi.get(self, "ipv4_aggregate_addresses")
 
     @ipv4_aggregate_addresses.setter
-    def ipv4_aggregate_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]):
+    def ipv4_aggregate_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]):
         pulumi.set(self, "ipv4_aggregate_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4EibgpMaximumPaths")
-    def ipv4_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_eibgp_maximum_paths(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of parallel IBGP paths for multipath load sharing
           - Range: `1`-`32`
@@ -481,48 +481,48 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "ipv4_eibgp_maximum_paths")
 
     @ipv4_eibgp_maximum_paths.setter
-    def ipv4_eibgp_maximum_paths(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_eibgp_maximum_paths(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_eibgp_maximum_paths", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4EibgpMaximumPathsVariable")
-    def ipv4_eibgp_maximum_paths_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_eibgp_maximum_paths_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_eibgp_maximum_paths_variable")
 
     @ipv4_eibgp_maximum_paths_variable.setter
-    def ipv4_eibgp_maximum_paths_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_eibgp_maximum_paths_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_eibgp_maximum_paths_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Neighbors")
-    def ipv4_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]:
+    def ipv4_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]:
         """
         Set BGP IPv4 neighbors
         """
         return pulumi.get(self, "ipv4_neighbors")
 
     @ipv4_neighbors.setter
-    def ipv4_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]):
+    def ipv4_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]):
         pulumi.set(self, "ipv4_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Networks")
-    def ipv4_networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]:
+    def ipv4_networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]:
         """
         Configure the networks for BGP to advertise
         """
         return pulumi.get(self, "ipv4_networks")
 
     @ipv4_networks.setter
-    def ipv4_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]):
+    def ipv4_networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]):
         pulumi.set(self, "ipv4_networks", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Originate")
-    def ipv4_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP Default Information Originate
           - Default value: `false`
@@ -530,36 +530,36 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "ipv4_originate")
 
     @ipv4_originate.setter
-    def ipv4_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4OriginateVariable")
-    def ipv4_originate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_originate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_originate_variable")
 
     @ipv4_originate_variable.setter
-    def ipv4_originate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_originate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_originate_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Redistributes")
-    def ipv4_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]:
+    def ipv4_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]:
         """
         Redistribute routes into BGP
         """
         return pulumi.get(self, "ipv4_redistributes")
 
     @ipv4_redistributes.setter
-    def ipv4_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]):
+    def ipv4_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]):
         pulumi.set(self, "ipv4_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TableMapFilter")
-    def ipv4_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_table_map_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Table map filtered or not
           - Default value: `false`
@@ -567,45 +567,45 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "ipv4_table_map_filter")
 
     @ipv4_table_map_filter.setter
-    def ipv4_table_map_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_table_map_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_table_map_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TableMapFilterVariable")
-    def ipv4_table_map_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_table_map_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_table_map_filter_variable")
 
     @ipv4_table_map_filter_variable.setter
-    def ipv4_table_map_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_table_map_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_table_map_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TableMapRoutePolicyId")
-    def ipv4_table_map_route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_table_map_route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "ipv4_table_map_route_policy_id")
 
     @ipv4_table_map_route_policy_id.setter
-    def ipv4_table_map_route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_table_map_route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_table_map_route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AggregateAddresses")
-    def ipv6_aggregate_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]:
+    def ipv6_aggregate_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]:
         """
         IPv6 Aggregate prefixes in specific range
         """
         return pulumi.get(self, "ipv6_aggregate_addresses")
 
     @ipv6_aggregate_addresses.setter
-    def ipv6_aggregate_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]):
+    def ipv6_aggregate_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]):
         pulumi.set(self, "ipv6_aggregate_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6EibgpMaximumPaths")
-    def ipv6_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_eibgp_maximum_paths(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of parallel IBGP paths for multipath load sharing
           - Range: `1`-`32`
@@ -613,48 +613,48 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "ipv6_eibgp_maximum_paths")
 
     @ipv6_eibgp_maximum_paths.setter
-    def ipv6_eibgp_maximum_paths(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_eibgp_maximum_paths(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_eibgp_maximum_paths", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6EibgpMaximumPathsVariable")
-    def ipv6_eibgp_maximum_paths_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_eibgp_maximum_paths_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_eibgp_maximum_paths_variable")
 
     @ipv6_eibgp_maximum_paths_variable.setter
-    def ipv6_eibgp_maximum_paths_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_eibgp_maximum_paths_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_eibgp_maximum_paths_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Neighbors")
-    def ipv6_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]:
+    def ipv6_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]:
         """
         Set BGP IPv6 neighbors
         """
         return pulumi.get(self, "ipv6_neighbors")
 
     @ipv6_neighbors.setter
-    def ipv6_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]):
+    def ipv6_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]):
         pulumi.set(self, "ipv6_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Networks")
-    def ipv6_networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]:
+    def ipv6_networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]:
         """
         Configure the networks for BGP to advertise
         """
         return pulumi.get(self, "ipv6_networks")
 
     @ipv6_networks.setter
-    def ipv6_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]):
+    def ipv6_networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]):
         pulumi.set(self, "ipv6_networks", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Originate")
-    def ipv6_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP Default Information Originate
           - Default value: `false`
@@ -662,36 +662,36 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "ipv6_originate")
 
     @ipv6_originate.setter
-    def ipv6_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6OriginateVariable")
-    def ipv6_originate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_originate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_originate_variable")
 
     @ipv6_originate_variable.setter
-    def ipv6_originate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_originate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_originate_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Redistributes")
-    def ipv6_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]:
+    def ipv6_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]:
         """
         Redistribute routes into BGP
         """
         return pulumi.get(self, "ipv6_redistributes")
 
     @ipv6_redistributes.setter
-    def ipv6_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]):
+    def ipv6_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]):
         pulumi.set(self, "ipv6_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TableMapFilter")
-    def ipv6_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_table_map_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Table map filtered or not
           - Default value: `false`
@@ -699,33 +699,33 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "ipv6_table_map_filter")
 
     @ipv6_table_map_filter.setter
-    def ipv6_table_map_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_table_map_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_table_map_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TableMapFilterVariable")
-    def ipv6_table_map_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_table_map_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_table_map_filter_variable")
 
     @ipv6_table_map_filter_variable.setter
-    def ipv6_table_map_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_table_map_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_table_map_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TableMapRoutePolicyId")
-    def ipv6_table_map_route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_table_map_route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "ipv6_table_map_route_policy_id")
 
     @ipv6_table_map_route_policy_id.setter
-    def ipv6_table_map_route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_table_map_route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_table_map_route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="keepaliveTime")
-    def keepalive_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def keepalive_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interval (seconds) of keepalive messages sent to its BGP peer
           - Range: `0`-`65535`
@@ -734,24 +734,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "keepalive_time")
 
     @keepalive_time.setter
-    def keepalive_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def keepalive_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "keepalive_time", value)
 
     @_builtins.property
     @pulumi.getter(name="keepaliveTimeVariable")
-    def keepalive_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def keepalive_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "keepalive_time_variable")
 
     @keepalive_time_variable.setter
-    def keepalive_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def keepalive_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "keepalive_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="localRoutesDistance")
-    def local_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def local_routes_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for local BGP routes
           - Range: `1`-`255`
@@ -760,24 +760,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "local_routes_distance")
 
     @local_routes_distance.setter
-    def local_routes_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def local_routes_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "local_routes_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="localRoutesDistanceVariable")
-    def local_routes_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_routes_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "local_routes_distance_variable")
 
     @local_routes_distance_variable.setter
-    def local_routes_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_routes_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_routes_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedAsWorst")
-    def missing_med_as_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def missing_med_as_worst(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If path has no MED, consider it to be worst path when selecting active BGP paths
           - Default value: `false`
@@ -785,24 +785,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "missing_med_as_worst")
 
     @missing_med_as_worst.setter
-    def missing_med_as_worst(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def missing_med_as_worst(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "missing_med_as_worst", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedAsWorstVariable")
-    def missing_med_as_worst_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def missing_med_as_worst_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "missing_med_as_worst_variable")
 
     @missing_med_as_worst_variable.setter
-    def missing_med_as_worst_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def missing_med_as_worst_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "missing_med_as_worst_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelax")
-    def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def multipath_relax(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Ignore AS for multipath selection
           - Default value: `false`
@@ -810,36 +810,36 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "multipath_relax")
 
     @multipath_relax.setter
-    def multipath_relax(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def multipath_relax(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "multipath_relax", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelaxVariable")
-    def multipath_relax_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multipath_relax_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multipath_relax_variable")
 
     @multipath_relax_variable.setter
-    def multipath_relax_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multipath_relax_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multipath_relax_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAsPath")
-    def propagate_as_path(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_as_path(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate AS Path
           - Default value: `false`
@@ -847,24 +847,24 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "propagate_as_path")
 
     @propagate_as_path.setter
-    def propagate_as_path(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_as_path(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_as_path", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAsPathVariable")
-    def propagate_as_path_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_as_path_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_as_path_variable")
 
     @propagate_as_path_variable.setter
-    def propagate_as_path_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_as_path_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_as_path_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunity")
-    def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_community(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate Community
           - Default value: `false`
@@ -872,103 +872,103 @@ class ServiceRoutingBgpFeatureArgs:
         return pulumi.get(self, "propagate_community")
 
     @propagate_community.setter
-    def propagate_community(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_community(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_community", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunityVariable")
-    def propagate_community_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_community_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_community_variable")
 
     @propagate_community_variable.setter
-    def propagate_community_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_community_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_community_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure BGP router identifier
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
 
 @pulumi.input_type
 class _ServiceRoutingBgpFeatureState:
     def __init__(__self__, *,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 external_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 internal_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]] = None,
-                 ipv4_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]] = None,
-                 ipv4_networks: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]] = None,
-                 ipv4_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]] = None,
-                 ipv4_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]] = None,
-                 ipv6_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]] = None,
-                 ipv6_networks: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]] = None,
-                 ipv6_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]] = None,
-                 ipv6_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 keepalive_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_as_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_as_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_as_path: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_as_path_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 external_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]] = None,
+                 ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]] = None,
+                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]] = None,
+                 ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]] = None,
+                 ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]] = None,
+                 ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]] = None,
+                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]] = None,
+                 ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]] = None,
+                 ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_as_path: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_as_path_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceRoutingBgpFeature resources.
 
@@ -1159,7 +1159,7 @@ class _ServiceRoutingBgpFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMed")
-    def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def always_compare_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all ASs when selecting active BGP paths
           - Default value: `false`
@@ -1167,48 +1167,48 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "always_compare_med")
 
     @always_compare_med.setter
-    def always_compare_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def always_compare_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "always_compare_med", value)
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMedVariable")
-    def always_compare_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def always_compare_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "always_compare_med_variable")
 
     @always_compare_med_variable.setter
-    def always_compare_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def always_compare_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "always_compare_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumberVariable")
-    def as_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "as_number_variable")
 
     @as_number_variable.setter
-    def as_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterId")
-    def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def compare_router_id(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare router IDs when selecting active BGP paths
           - Default value: `false`
@@ -1216,36 +1216,36 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "compare_router_id")
 
     @compare_router_id.setter
-    def compare_router_id(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def compare_router_id(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "compare_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterIdVariable")
-    def compare_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def compare_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "compare_router_id_variable")
 
     @compare_router_id_variable.setter
-    def compare_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def compare_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "compare_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMed")
-    def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def deterministic_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all routes from same AS when selecting active BGP paths
           - Default value: `false`
@@ -1253,24 +1253,24 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "deterministic_med")
 
     @deterministic_med.setter
-    def deterministic_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def deterministic_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "deterministic_med", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMedVariable")
-    def deterministic_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deterministic_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "deterministic_med_variable")
 
     @deterministic_med_variable.setter
-    def deterministic_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deterministic_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deterministic_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="externalRoutesDistance")
-    def external_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def external_routes_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for external BGP routes
           - Range: `1`-`255`
@@ -1279,36 +1279,36 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "external_routes_distance")
 
     @external_routes_distance.setter
-    def external_routes_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def external_routes_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "external_routes_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="externalRoutesDistanceVariable")
-    def external_routes_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def external_routes_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "external_routes_distance_variable")
 
     @external_routes_distance_variable.setter
-    def external_routes_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def external_routes_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "external_routes_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interval (seconds) not receiving a keepalive message declares a BGP peer down
           - Range: `0`-`65535`
@@ -1317,24 +1317,24 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTimeVariable")
-    def hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hold_time_variable")
 
     @hold_time_variable.setter
-    def hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="internalRoutesDistance")
-    def internal_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def internal_routes_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for internal BGP routes
           - Range: `1`-`255`
@@ -1343,36 +1343,36 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "internal_routes_distance")
 
     @internal_routes_distance.setter
-    def internal_routes_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def internal_routes_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "internal_routes_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="internalRoutesDistanceVariable")
-    def internal_routes_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def internal_routes_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "internal_routes_distance_variable")
 
     @internal_routes_distance_variable.setter
-    def internal_routes_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def internal_routes_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "internal_routes_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AggregateAddresses")
-    def ipv4_aggregate_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]:
+    def ipv4_aggregate_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]:
         """
         Aggregate prefixes in specific range
         """
         return pulumi.get(self, "ipv4_aggregate_addresses")
 
     @ipv4_aggregate_addresses.setter
-    def ipv4_aggregate_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]):
+    def ipv4_aggregate_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs']]]]):
         pulumi.set(self, "ipv4_aggregate_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4EibgpMaximumPaths")
-    def ipv4_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_eibgp_maximum_paths(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of parallel IBGP paths for multipath load sharing
           - Range: `1`-`32`
@@ -1380,48 +1380,48 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "ipv4_eibgp_maximum_paths")
 
     @ipv4_eibgp_maximum_paths.setter
-    def ipv4_eibgp_maximum_paths(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_eibgp_maximum_paths(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_eibgp_maximum_paths", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4EibgpMaximumPathsVariable")
-    def ipv4_eibgp_maximum_paths_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_eibgp_maximum_paths_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_eibgp_maximum_paths_variable")
 
     @ipv4_eibgp_maximum_paths_variable.setter
-    def ipv4_eibgp_maximum_paths_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_eibgp_maximum_paths_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_eibgp_maximum_paths_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Neighbors")
-    def ipv4_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]:
+    def ipv4_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]:
         """
         Set BGP IPv4 neighbors
         """
         return pulumi.get(self, "ipv4_neighbors")
 
     @ipv4_neighbors.setter
-    def ipv4_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]):
+    def ipv4_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborArgs']]]]):
         pulumi.set(self, "ipv4_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Networks")
-    def ipv4_networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]:
+    def ipv4_networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]:
         """
         Configure the networks for BGP to advertise
         """
         return pulumi.get(self, "ipv4_networks")
 
     @ipv4_networks.setter
-    def ipv4_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]):
+    def ipv4_networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NetworkArgs']]]]):
         pulumi.set(self, "ipv4_networks", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Originate")
-    def ipv4_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP Default Information Originate
           - Default value: `false`
@@ -1429,36 +1429,36 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "ipv4_originate")
 
     @ipv4_originate.setter
-    def ipv4_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4OriginateVariable")
-    def ipv4_originate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_originate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_originate_variable")
 
     @ipv4_originate_variable.setter
-    def ipv4_originate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_originate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_originate_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Redistributes")
-    def ipv4_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]:
+    def ipv4_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]:
         """
         Redistribute routes into BGP
         """
         return pulumi.get(self, "ipv4_redistributes")
 
     @ipv4_redistributes.setter
-    def ipv4_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]):
+    def ipv4_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4RedistributeArgs']]]]):
         pulumi.set(self, "ipv4_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TableMapFilter")
-    def ipv4_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_table_map_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Table map filtered or not
           - Default value: `false`
@@ -1466,45 +1466,45 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "ipv4_table_map_filter")
 
     @ipv4_table_map_filter.setter
-    def ipv4_table_map_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_table_map_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_table_map_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TableMapFilterVariable")
-    def ipv4_table_map_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_table_map_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_table_map_filter_variable")
 
     @ipv4_table_map_filter_variable.setter
-    def ipv4_table_map_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_table_map_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_table_map_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TableMapRoutePolicyId")
-    def ipv4_table_map_route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_table_map_route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "ipv4_table_map_route_policy_id")
 
     @ipv4_table_map_route_policy_id.setter
-    def ipv4_table_map_route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_table_map_route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_table_map_route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AggregateAddresses")
-    def ipv6_aggregate_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]:
+    def ipv6_aggregate_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]:
         """
         IPv6 Aggregate prefixes in specific range
         """
         return pulumi.get(self, "ipv6_aggregate_addresses")
 
     @ipv6_aggregate_addresses.setter
-    def ipv6_aggregate_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]):
+    def ipv6_aggregate_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs']]]]):
         pulumi.set(self, "ipv6_aggregate_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6EibgpMaximumPaths")
-    def ipv6_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_eibgp_maximum_paths(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of parallel IBGP paths for multipath load sharing
           - Range: `1`-`32`
@@ -1512,48 +1512,48 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "ipv6_eibgp_maximum_paths")
 
     @ipv6_eibgp_maximum_paths.setter
-    def ipv6_eibgp_maximum_paths(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_eibgp_maximum_paths(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_eibgp_maximum_paths", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6EibgpMaximumPathsVariable")
-    def ipv6_eibgp_maximum_paths_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_eibgp_maximum_paths_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_eibgp_maximum_paths_variable")
 
     @ipv6_eibgp_maximum_paths_variable.setter
-    def ipv6_eibgp_maximum_paths_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_eibgp_maximum_paths_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_eibgp_maximum_paths_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Neighbors")
-    def ipv6_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]:
+    def ipv6_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]:
         """
         Set BGP IPv6 neighbors
         """
         return pulumi.get(self, "ipv6_neighbors")
 
     @ipv6_neighbors.setter
-    def ipv6_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]):
+    def ipv6_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborArgs']]]]):
         pulumi.set(self, "ipv6_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Networks")
-    def ipv6_networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]:
+    def ipv6_networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]:
         """
         Configure the networks for BGP to advertise
         """
         return pulumi.get(self, "ipv6_networks")
 
     @ipv6_networks.setter
-    def ipv6_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]):
+    def ipv6_networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NetworkArgs']]]]):
         pulumi.set(self, "ipv6_networks", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Originate")
-    def ipv6_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP Default Information Originate
           - Default value: `false`
@@ -1561,36 +1561,36 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "ipv6_originate")
 
     @ipv6_originate.setter
-    def ipv6_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6OriginateVariable")
-    def ipv6_originate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_originate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_originate_variable")
 
     @ipv6_originate_variable.setter
-    def ipv6_originate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_originate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_originate_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Redistributes")
-    def ipv6_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]:
+    def ipv6_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]:
         """
         Redistribute routes into BGP
         """
         return pulumi.get(self, "ipv6_redistributes")
 
     @ipv6_redistributes.setter
-    def ipv6_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]):
+    def ipv6_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6RedistributeArgs']]]]):
         pulumi.set(self, "ipv6_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TableMapFilter")
-    def ipv6_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_table_map_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Table map filtered or not
           - Default value: `false`
@@ -1598,33 +1598,33 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "ipv6_table_map_filter")
 
     @ipv6_table_map_filter.setter
-    def ipv6_table_map_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_table_map_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_table_map_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TableMapFilterVariable")
-    def ipv6_table_map_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_table_map_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_table_map_filter_variable")
 
     @ipv6_table_map_filter_variable.setter
-    def ipv6_table_map_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_table_map_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_table_map_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TableMapRoutePolicyId")
-    def ipv6_table_map_route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_table_map_route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "ipv6_table_map_route_policy_id")
 
     @ipv6_table_map_route_policy_id.setter
-    def ipv6_table_map_route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_table_map_route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_table_map_route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="keepaliveTime")
-    def keepalive_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def keepalive_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interval (seconds) of keepalive messages sent to its BGP peer
           - Range: `0`-`65535`
@@ -1633,24 +1633,24 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "keepalive_time")
 
     @keepalive_time.setter
-    def keepalive_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def keepalive_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "keepalive_time", value)
 
     @_builtins.property
     @pulumi.getter(name="keepaliveTimeVariable")
-    def keepalive_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def keepalive_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "keepalive_time_variable")
 
     @keepalive_time_variable.setter
-    def keepalive_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def keepalive_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "keepalive_time_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="localRoutesDistance")
-    def local_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def local_routes_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for local BGP routes
           - Range: `1`-`255`
@@ -1659,24 +1659,24 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "local_routes_distance")
 
     @local_routes_distance.setter
-    def local_routes_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def local_routes_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "local_routes_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="localRoutesDistanceVariable")
-    def local_routes_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_routes_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "local_routes_distance_variable")
 
     @local_routes_distance_variable.setter
-    def local_routes_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_routes_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_routes_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedAsWorst")
-    def missing_med_as_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def missing_med_as_worst(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If path has no MED, consider it to be worst path when selecting active BGP paths
           - Default value: `false`
@@ -1684,24 +1684,24 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "missing_med_as_worst")
 
     @missing_med_as_worst.setter
-    def missing_med_as_worst(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def missing_med_as_worst(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "missing_med_as_worst", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedAsWorstVariable")
-    def missing_med_as_worst_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def missing_med_as_worst_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "missing_med_as_worst_variable")
 
     @missing_med_as_worst_variable.setter
-    def missing_med_as_worst_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def missing_med_as_worst_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "missing_med_as_worst_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelax")
-    def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def multipath_relax(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Ignore AS for multipath selection
           - Default value: `false`
@@ -1709,36 +1709,36 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "multipath_relax")
 
     @multipath_relax.setter
-    def multipath_relax(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def multipath_relax(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "multipath_relax", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelaxVariable")
-    def multipath_relax_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multipath_relax_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multipath_relax_variable")
 
     @multipath_relax_variable.setter
-    def multipath_relax_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multipath_relax_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multipath_relax_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAsPath")
-    def propagate_as_path(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_as_path(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate AS Path
           - Default value: `false`
@@ -1746,24 +1746,24 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "propagate_as_path")
 
     @propagate_as_path.setter
-    def propagate_as_path(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_as_path(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_as_path", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAsPathVariable")
-    def propagate_as_path_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_as_path_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_as_path_variable")
 
     @propagate_as_path_variable.setter
-    def propagate_as_path_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_as_path_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_as_path_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunity")
-    def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_community(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate Community
           - Default value: `false`
@@ -1771,55 +1771,55 @@ class _ServiceRoutingBgpFeatureState:
         return pulumi.get(self, "propagate_community")
 
     @propagate_community.setter
-    def propagate_community(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_community(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_community", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunityVariable")
-    def propagate_community_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_community_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_community_variable")
 
     @propagate_community_variable.setter
-    def propagate_community_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_community_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_community_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure BGP router identifier
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1829,59 +1829,59 @@ class ServiceRoutingBgpFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 external_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 internal_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
-                 ipv4_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NeighborArgs', 'ServiceRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
-                 ipv4_networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NetworkArgs', 'ServiceRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
-                 ipv4_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4RedistributeArgs', 'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
-                 ipv4_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
-                 ipv6_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NeighborArgs', 'ServiceRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
-                 ipv6_networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NetworkArgs', 'ServiceRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
-                 ipv6_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6RedistributeArgs', 'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
-                 ipv6_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 keepalive_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_as_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_as_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_as_path: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_as_path_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 external_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
+                 ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NeighborArgs', 'ServiceRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
+                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NetworkArgs', 'ServiceRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
+                 ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4RedistributeArgs', 'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
+                 ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
+                 ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NeighborArgs', 'ServiceRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
+                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NetworkArgs', 'ServiceRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
+                 ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6RedistributeArgs', 'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
+                 ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_as_path: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_as_path_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service Routing BGP Feature.
@@ -2209,59 +2209,59 @@ class ServiceRoutingBgpFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 external_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 external_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 internal_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 internal_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
-                 ipv4_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NeighborArgs', 'ServiceRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
-                 ipv4_networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NetworkArgs', 'ServiceRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
-                 ipv4_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4RedistributeArgs', 'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
-                 ipv4_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
-                 ipv6_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NeighborArgs', 'ServiceRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
-                 ipv6_networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NetworkArgs', 'ServiceRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
-                 ipv6_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6RedistributeArgs', 'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
-                 ipv6_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 keepalive_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 local_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_as_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_as_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_as_path: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_as_path_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 external_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 external_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
+                 ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NeighborArgs', 'ServiceRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
+                 ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NetworkArgs', 'ServiceRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
+                 ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4RedistributeArgs', 'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
+                 ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
+                 ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NeighborArgs', 'ServiceRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
+                 ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NetworkArgs', 'ServiceRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
+                 ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6RedistributeArgs', 'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
+                 ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_as_path: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_as_path_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -2337,60 +2337,60 @@ class ServiceRoutingBgpFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-            always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            as_number: Optional[pulumi.Input[_builtins.int]] = None,
-            as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-            compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-            deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            external_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-            external_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-            hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            internal_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-            internal_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
-            ipv4_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NeighborArgs', 'ServiceRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
-            ipv4_networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NetworkArgs', 'ServiceRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
-            ipv4_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4RedistributeArgs', 'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
-            ipv4_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_aggregate_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
-            ipv6_eibgp_maximum_paths: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_eibgp_maximum_paths_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NeighborArgs', 'ServiceRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
-            ipv6_networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NetworkArgs', 'ServiceRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
-            ipv6_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_originate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6RedistributeArgs', 'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
-            ipv6_table_map_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_table_map_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_table_map_route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            keepalive_time: Optional[pulumi.Input[_builtins.int]] = None,
-            keepalive_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            local_routes_distance: Optional[pulumi.Input[_builtins.int]] = None,
-            local_routes_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            missing_med_as_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-            missing_med_as_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-            multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            propagate_as_path: Optional[pulumi.Input[_builtins.bool]] = None,
-            propagate_as_path_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-            propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceRoutingBgpFeature':
+            always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+            always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            as_number: pulumi.Input[Optional[_builtins.int]] = None,
+            as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+            compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+            deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            external_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+            external_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            internal_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+            internal_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]]] = None,
+            ipv4_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NeighborArgs', 'ServiceRoutingBgpFeatureIpv4NeighborArgsDict']]]]] = None,
+            ipv4_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4NetworkArgs', 'ServiceRoutingBgpFeatureIpv4NetworkArgsDict']]]]] = None,
+            ipv4_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv4RedistributeArgs', 'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict']]]]] = None,
+            ipv4_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_aggregate_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6AggregateAddressArgs', 'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]]] = None,
+            ipv6_eibgp_maximum_paths: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_eibgp_maximum_paths_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NeighborArgs', 'ServiceRoutingBgpFeatureIpv6NeighborArgsDict']]]]] = None,
+            ipv6_networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6NetworkArgs', 'ServiceRoutingBgpFeatureIpv6NetworkArgsDict']]]]] = None,
+            ipv6_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_originate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingBgpFeatureIpv6RedistributeArgs', 'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict']]]]] = None,
+            ipv6_table_map_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_table_map_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_table_map_route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
+            keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            local_routes_distance: pulumi.Input[Optional[_builtins.int]] = None,
+            local_routes_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            missing_med_as_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+            missing_med_as_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+            multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            propagate_as_path: pulumi.Input[Optional[_builtins.bool]] = None,
+            propagate_as_path_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+            propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceRoutingBgpFeature':
         """
         Get an existing ServiceRoutingBgpFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -129,25 +129,25 @@ export interface PolicerPolicyObjectState {
      * Burst in bytes
      *   - Range: `15000`-`10000000`
      */
-    burst?: pulumi.Input<number>;
+    burst?: pulumi.Input<number | undefined>;
     /**
      * Exceed action
      *   - Choices: `drop`, `remark`
      */
-    exceedAction?: pulumi.Input<string>;
+    exceedAction?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Rate in bps
      *   - Range: `8`-`100000000000`
      */
-    rate?: pulumi.Input<number>;
+    rate?: pulumi.Input<number | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -167,7 +167,7 @@ export interface PolicerPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Rate in bps
      *   - Range: `8`-`100000000000`

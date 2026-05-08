@@ -23,21 +23,21 @@ class SystemAaaFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
                  server_auth_orders: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 accounting_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 accounting_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]] = None,
-                 authentication_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]] = None,
-                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None):
+                 accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]] = None,
+                 authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]] = None,
+                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None):
         """
         The set of arguments for constructing a SystemAaaFeature resource.
 
@@ -122,7 +122,7 @@ class SystemAaaFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="accountingGroup")
-    def accounting_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def accounting_group(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accounting configurations parameters
           - Default value: `false`
@@ -130,36 +130,36 @@ class SystemAaaFeatureArgs:
         return pulumi.get(self, "accounting_group")
 
     @accounting_group.setter
-    def accounting_group(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def accounting_group(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "accounting_group", value)
 
     @_builtins.property
     @pulumi.getter(name="accountingGroupVariable")
-    def accounting_group_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def accounting_group_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "accounting_group_variable")
 
     @accounting_group_variable.setter
-    def accounting_group_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def accounting_group_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "accounting_group_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="accountingRules")
-    def accounting_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]:
+    def accounting_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]:
         """
         Configure the accounting rules
         """
         return pulumi.get(self, "accounting_rules")
 
     @accounting_rules.setter
-    def accounting_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]):
+    def accounting_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]):
         pulumi.set(self, "accounting_rules", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationGroup")
-    def authentication_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_group(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Authentication configurations parameters
           - Default value: `false`
@@ -167,24 +167,24 @@ class SystemAaaFeatureArgs:
         return pulumi.get(self, "authentication_group")
 
     @authentication_group.setter
-    def authentication_group(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_group(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_group", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationGroupVariable")
-    def authentication_group_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_group_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_group_variable")
 
     @authentication_group_variable.setter
-    def authentication_group_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_group_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_group_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommands")
-    def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_config_commands(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For configuration mode commands.
           - Default value: `false`
@@ -192,24 +192,24 @@ class SystemAaaFeatureArgs:
         return pulumi.get(self, "authorization_config_commands")
 
     @authorization_config_commands.setter
-    def authorization_config_commands(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_config_commands(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_config_commands", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommandsVariable")
-    def authorization_config_commands_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_config_commands_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_config_commands_variable")
 
     @authorization_config_commands_variable.setter
-    def authorization_config_commands_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_config_commands_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_config_commands_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsole")
-    def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_console(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For enabling console authorization
           - Default value: `false`
@@ -217,115 +217,115 @@ class SystemAaaFeatureArgs:
         return pulumi.get(self, "authorization_console")
 
     @authorization_console.setter
-    def authorization_console(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_console(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_console", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsoleVariable")
-    def authorization_console_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_console_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_console_variable")
 
     @authorization_console_variable.setter
-    def authorization_console_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_console_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_console_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationRules")
-    def authorization_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]:
+    def authorization_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]:
         """
         Configure the Authorization Rules
         """
         return pulumi.get(self, "authorization_rules")
 
     @authorization_rules.setter
-    def authorization_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]):
+    def authorization_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]):
         pulumi.set(self, "authorization_rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusGroups")
-    def radius_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]:
+    def radius_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]:
         """
         Configure the Radius serverGroup
         """
         return pulumi.get(self, "radius_groups")
 
     @radius_groups.setter
-    def radius_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]):
+    def radius_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]):
         pulumi.set(self, "radius_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsGroups")
-    def tacacs_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]:
+    def tacacs_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]:
         """
         Configure the TACACS serverGroup
         """
         return pulumi.get(self, "tacacs_groups")
 
     @tacacs_groups.setter
-    def tacacs_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]):
+    def tacacs_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]):
         pulumi.set(self, "tacacs_groups", value)
 
     @_builtins.property
     @pulumi.getter
-    def users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]:
+    def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]:
         """
         Create local login account
         """
         return pulumi.get(self, "users")
 
     @users.setter
-    def users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]):
+    def users(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]):
         pulumi.set(self, "users", value)
 
 
 @pulumi.input_type
 class _SystemAaaFeatureState:
     def __init__(__self__, *,
-                 accounting_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 accounting_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]] = None,
-                 authentication_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]] = None,
-                 server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]] = None,
+                 authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]] = None,
+                 server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemAaaFeature resources.
 
@@ -391,7 +391,7 @@ class _SystemAaaFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="accountingGroup")
-    def accounting_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def accounting_group(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Accounting configurations parameters
           - Default value: `false`
@@ -399,36 +399,36 @@ class _SystemAaaFeatureState:
         return pulumi.get(self, "accounting_group")
 
     @accounting_group.setter
-    def accounting_group(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def accounting_group(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "accounting_group", value)
 
     @_builtins.property
     @pulumi.getter(name="accountingGroupVariable")
-    def accounting_group_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def accounting_group_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "accounting_group_variable")
 
     @accounting_group_variable.setter
-    def accounting_group_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def accounting_group_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "accounting_group_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="accountingRules")
-    def accounting_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]:
+    def accounting_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]:
         """
         Configure the accounting rules
         """
         return pulumi.get(self, "accounting_rules")
 
     @accounting_rules.setter
-    def accounting_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]):
+    def accounting_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]]]):
         pulumi.set(self, "accounting_rules", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationGroup")
-    def authentication_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authentication_group(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Authentication configurations parameters
           - Default value: `false`
@@ -436,24 +436,24 @@ class _SystemAaaFeatureState:
         return pulumi.get(self, "authentication_group")
 
     @authentication_group.setter
-    def authentication_group(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authentication_group(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authentication_group", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationGroupVariable")
-    def authentication_group_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_group_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_group_variable")
 
     @authentication_group_variable.setter
-    def authentication_group_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_group_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_group_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommands")
-    def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_config_commands(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For configuration mode commands.
           - Default value: `false`
@@ -461,24 +461,24 @@ class _SystemAaaFeatureState:
         return pulumi.get(self, "authorization_config_commands")
 
     @authorization_config_commands.setter
-    def authorization_config_commands(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_config_commands(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_config_commands", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConfigCommandsVariable")
-    def authorization_config_commands_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_config_commands_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_config_commands_variable")
 
     @authorization_config_commands_variable.setter
-    def authorization_config_commands_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_config_commands_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_config_commands_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsole")
-    def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def authorization_console(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         For enabling console authorization
           - Default value: `false`
@@ -486,127 +486,127 @@ class _SystemAaaFeatureState:
         return pulumi.get(self, "authorization_console")
 
     @authorization_console.setter
-    def authorization_console(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def authorization_console(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "authorization_console", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationConsoleVariable")
-    def authorization_console_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authorization_console_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authorization_console_variable")
 
     @authorization_console_variable.setter
-    def authorization_console_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authorization_console_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authorization_console_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authorizationRules")
-    def authorization_rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]:
+    def authorization_rules(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]:
         """
         Configure the Authorization Rules
         """
         return pulumi.get(self, "authorization_rules")
 
     @authorization_rules.setter
-    def authorization_rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]):
+    def authorization_rules(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]]]):
         pulumi.set(self, "authorization_rules", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusGroups")
-    def radius_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]:
+    def radius_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]:
         """
         Configure the Radius serverGroup
         """
         return pulumi.get(self, "radius_groups")
 
     @radius_groups.setter
-    def radius_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]):
+    def radius_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]]):
         pulumi.set(self, "radius_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="serverAuthOrders")
-    def server_auth_orders(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def server_auth_orders(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         ServerGroups priority order
         """
         return pulumi.get(self, "server_auth_orders")
 
     @server_auth_orders.setter
-    def server_auth_orders(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def server_auth_orders(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "server_auth_orders", value)
 
     @_builtins.property
     @pulumi.getter(name="tacacsGroups")
-    def tacacs_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]:
+    def tacacs_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]:
         """
         Configure the TACACS serverGroup
         """
         return pulumi.get(self, "tacacs_groups")
 
     @tacacs_groups.setter
-    def tacacs_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]):
+    def tacacs_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]]):
         pulumi.set(self, "tacacs_groups", value)
 
     @_builtins.property
     @pulumi.getter
-    def users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]:
+    def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]:
         """
         Create local login account
         """
         return pulumi.get(self, "users")
 
     @users.setter
-    def users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]):
+    def users(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]):
         pulumi.set(self, "users", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -616,23 +616,23 @@ class SystemAaaFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 accounting_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 accounting_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
-                 authentication_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
-                 server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
+                 accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
+                 authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
+                 server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System AAA Feature.
@@ -847,23 +847,23 @@ class SystemAaaFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 accounting_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 accounting_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
-                 authentication_group: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authentication_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-                 authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
-                 server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
+                 accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
+                 authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+                 authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
+                 server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+                 users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -905,24 +905,24 @@ class SystemAaaFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            accounting_group: Optional[pulumi.Input[_builtins.bool]] = None,
-            accounting_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
-            authentication_group: Optional[pulumi.Input[_builtins.bool]] = None,
-            authentication_group_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authorization_config_commands: Optional[pulumi.Input[_builtins.bool]] = None,
-            authorization_config_commands_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authorization_console: Optional[pulumi.Input[_builtins.bool]] = None,
-            authorization_console_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
-            server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
-            users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemAaaFeature':
+            accounting_group: pulumi.Input[Optional[_builtins.bool]] = None,
+            accounting_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            accounting_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]]] = None,
+            authentication_group: pulumi.Input[Optional[_builtins.bool]] = None,
+            authentication_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_config_commands: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_config_commands_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_console: pulumi.Input[Optional[_builtins.bool]] = None,
+            authorization_console_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authorization_rules: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
+            server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+            users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemAaaFeature':
         """
         Get an existing SystemAaaFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

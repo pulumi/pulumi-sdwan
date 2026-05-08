@@ -22,20 +22,20 @@ __all__ = ['UrlFilteringPolicyDefinitionArgs', 'UrlFilteringPolicyDefinition']
 class UrlFilteringPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a UrlFilteringPolicyDefinition resource.
 
@@ -102,43 +102,43 @@ class UrlFilteringPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of alerts options that will be exported as syslog messages
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListId")
-    def allow_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allow_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Allow URL list ID
         """
         return pulumi.get(self, "allow_url_list_id")
 
     @allow_url_list_id.setter
-    def allow_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allow_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allow_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListVersion")
-    def allow_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def allow_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Allow URL list version
         """
         return pulumi.get(self, "allow_url_list_version")
 
     @allow_url_list_version.setter
-    def allow_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def allow_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "allow_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageAction")
-    def block_page_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Redirect to a URL or display a message when a blocked page is accessed.
           - Choices: `text`, `redirectUrl`
@@ -146,57 +146,57 @@ class UrlFilteringPolicyDefinitionArgs:
         return pulumi.get(self, "block_page_action")
 
     @block_page_action.setter
-    def block_page_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_action", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageContents")
-    def block_page_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The message displayed or URL redirected to when a blocked page is accessed.
         """
         return pulumi.get(self, "block_page_contents")
 
     @block_page_contents.setter
-    def block_page_contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_contents", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListId")
-    def block_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Block URL list ID
         """
         return pulumi.get(self, "block_url_list_id")
 
     @block_url_list_id.setter
-    def block_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListVersion")
-    def block_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def block_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Block URL list version
         """
         return pulumi.get(self, "block_url_list_version")
 
     @block_url_list_version.setter
-    def block_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def block_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "block_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]:
+    def loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]:
         return pulumi.get(self, "loggings")
 
     @loggings.setter
-    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]):
+    def loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]):
         pulumi.set(self, "loggings", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -204,48 +204,48 @@ class UrlFilteringPolicyDefinitionArgs:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of VPN IDs
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_vpns", value)
 
     @_builtins.property
     @pulumi.getter(name="webCategories")
-    def web_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def web_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of categories to block or allow
         """
         return pulumi.get(self, "web_categories")
 
     @web_categories.setter
-    def web_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def web_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "web_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="webCategoriesAction")
-    def web_categories_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_categories_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         whether the selected web categories should be blocked or allowed.
           - Choices: `block`, `allow`
@@ -253,12 +253,12 @@ class UrlFilteringPolicyDefinitionArgs:
         return pulumi.get(self, "web_categories_action")
 
     @web_categories_action.setter
-    def web_categories_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_categories_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_categories_action", value)
 
     @_builtins.property
     @pulumi.getter(name="webReputation")
-    def web_reputation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_reputation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The web reputation of the policy definition
           - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
@@ -266,29 +266,29 @@ class UrlFilteringPolicyDefinitionArgs:
         return pulumi.get(self, "web_reputation")
 
     @web_reputation.setter
-    def web_reputation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_reputation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_reputation", value)
 
 
 @pulumi.input_type
 class _UrlFilteringPolicyDefinitionState:
     def __init__(__self__, *,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering UrlFilteringPolicyDefinition resources.
 
@@ -347,43 +347,43 @@ class _UrlFilteringPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of alerts options that will be exported as syslog messages
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListId")
-    def allow_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allow_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Allow URL list ID
         """
         return pulumi.get(self, "allow_url_list_id")
 
     @allow_url_list_id.setter
-    def allow_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allow_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allow_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListVersion")
-    def allow_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def allow_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Allow URL list version
         """
         return pulumi.get(self, "allow_url_list_version")
 
     @allow_url_list_version.setter
-    def allow_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def allow_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "allow_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageAction")
-    def block_page_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Redirect to a URL or display a message when a blocked page is accessed.
           - Choices: `text`, `redirectUrl`
@@ -391,69 +391,69 @@ class _UrlFilteringPolicyDefinitionState:
         return pulumi.get(self, "block_page_action")
 
     @block_page_action.setter
-    def block_page_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_action", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageContents")
-    def block_page_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The message displayed or URL redirected to when a blocked page is accessed.
         """
         return pulumi.get(self, "block_page_contents")
 
     @block_page_contents.setter
-    def block_page_contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_contents", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListId")
-    def block_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Block URL list ID
         """
         return pulumi.get(self, "block_url_list_id")
 
     @block_url_list_id.setter
-    def block_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListVersion")
-    def block_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def block_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Block URL list version
         """
         return pulumi.get(self, "block_url_list_version")
 
     @block_url_list_version.setter
-    def block_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def block_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "block_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition.
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]:
+    def loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]:
         return pulumi.get(self, "loggings")
 
     @loggings.setter
-    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]):
+    def loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]):
         pulumi.set(self, "loggings", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -461,60 +461,60 @@ class _UrlFilteringPolicyDefinitionState:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of VPN IDs
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_vpns", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="webCategories")
-    def web_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def web_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of categories to block or allow
         """
         return pulumi.get(self, "web_categories")
 
     @web_categories.setter
-    def web_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def web_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "web_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="webCategoriesAction")
-    def web_categories_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_categories_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         whether the selected web categories should be blocked or allowed.
           - Choices: `block`, `allow`
@@ -522,12 +522,12 @@ class _UrlFilteringPolicyDefinitionState:
         return pulumi.get(self, "web_categories_action")
 
     @web_categories_action.setter
-    def web_categories_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_categories_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_categories_action", value)
 
     @_builtins.property
     @pulumi.getter(name="webReputation")
-    def web_reputation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_reputation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The web reputation of the policy definition
           - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
@@ -535,7 +535,7 @@ class _UrlFilteringPolicyDefinitionState:
         return pulumi.get(self, "web_reputation")
 
     @web_reputation.setter
-    def web_reputation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_reputation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_reputation", value)
 
 
@@ -545,21 +545,21 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a URL Filtering Policy Definition .
@@ -673,21 +673,21 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -725,22 +725,22 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-            block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-            block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-            web_reputation: Optional[pulumi.Input[_builtins.str]] = None) -> 'UrlFilteringPolicyDefinition':
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+            block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+            block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+            web_reputation: pulumi.Input[Optional[_builtins.str]] = None) -> 'UrlFilteringPolicyDefinition':
         """
         Get an existing UrlFilteringPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

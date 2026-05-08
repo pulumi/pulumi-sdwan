@@ -100,11 +100,11 @@ export interface SigSecurityFeatureProfileState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the sig security feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -118,5 +118,5 @@ export interface SigSecurityFeatureProfileArgs {
     /**
      * The name of the sig security feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -42,8 +42,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateAccessListArgs;
  * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs;
  * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -150,9 +150,9 @@ import javax.annotation.Nullable;
  *                 .linecode("ami")
  *                 .setLengthForLong("100")
  *                 .setLengthForShort("100")
- *                 .channelGroupList(List.of(Map.ofEntries(
+ *                 .channelGroupList(Arrays.asList(Map.ofEntries(
  *                     Map.entry("channelGroup", 30),
- *                     Map.entry("timeSlot", List.of("example"))
+ *                     Map.entry("timeSlot", Arrays.asList("example"))
  *                 )))
  *                 .build())
  *             .nimInterfaceLists(VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs.builder()

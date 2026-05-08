@@ -175,35 +175,35 @@ export interface ServiceSwitchportFeatureState {
      *   - Range: `0`-`1000000`
      *   - Default value: `300`
      */
-    ageOutTime?: pulumi.Input<number>;
+    ageOutTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ageOutTimeVariable?: pulumi.Input<string>;
+    ageOutTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureInterface>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Add static MAC address entries for interface
      */
-    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureStaticMacAddress>[]>;
+    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureStaticMacAddress>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -215,15 +215,15 @@ export interface ServiceSwitchportFeatureArgs {
      *   - Range: `0`-`1000000`
      *   - Default value: `300`
      */
-    ageOutTime?: pulumi.Input<number>;
+    ageOutTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ageOutTimeVariable?: pulumi.Input<string>;
+    ageOutTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -231,13 +231,13 @@ export interface ServiceSwitchportFeatureArgs {
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureInterface>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Add static MAC address entries for interface
      */
-    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureStaticMacAddress>[]>;
+    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceSwitchportFeatureStaticMacAddress>[] | undefined>;
 }

@@ -22,24 +22,24 @@ __all__ = ['EmbeddedSecurityPolicyArgs', 'EmbeddedSecurityPolicy']
 class EmbeddedSecurityPolicyArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 assemblies: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]] = None,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 download_url_database_on_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 download_url_database_on_device_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 icmp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nat_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None):
+                 assemblies: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]] = None,
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a EmbeddedSecurityPolicy resource.
 
@@ -112,16 +112,16 @@ class EmbeddedSecurityPolicyArgs:
 
     @_builtins.property
     @pulumi.getter
-    def assemblies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]:
+    def assemblies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]:
         return pulumi.get(self, "assemblies")
 
     @assemblies.setter
-    def assemblies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]):
+    def assemblies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]):
         pulumi.set(self, "assemblies", value)
 
     @_builtins.property
     @pulumi.getter(name="auditTrail")
-    def audit_trail(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def audit_trail(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -129,57 +129,57 @@ class EmbeddedSecurityPolicyArgs:
         return pulumi.get(self, "audit_trail")
 
     @audit_trail.setter
-    def audit_trail(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def audit_trail(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "audit_trail", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="downloadUrlDatabaseOnDevice")
-    def download_url_database_on_device(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def download_url_database_on_device(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "download_url_database_on_device")
 
     @download_url_database_on_device.setter
-    def download_url_database_on_device(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def download_url_database_on_device(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "download_url_database_on_device", value)
 
     @_builtins.property
     @pulumi.getter(name="downloadUrlDatabaseOnDeviceVariable")
-    def download_url_database_on_device_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def download_url_database_on_device_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "download_url_database_on_device_variable")
 
     @download_url_database_on_device_variable.setter
-    def download_url_database_on_device_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def download_url_database_on_device_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "download_url_database_on_device_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="failureMode")
-    def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def failure_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `close`, `open`
         """
         return pulumi.get(self, "failure_mode")
 
     @failure_mode.setter
-    def failure_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def failure_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "failure_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpUnreachableAllow")
-    def icmp_unreachable_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def icmp_unreachable_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -187,96 +187,96 @@ class EmbeddedSecurityPolicyArgs:
         return pulumi.get(self, "icmp_unreachable_allow")
 
     @icmp_unreachable_allow.setter
-    def icmp_unreachable_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def icmp_unreachable_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "icmp_unreachable_allow", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteIcmpLimit")
-    def max_incomplete_icmp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_icmp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "max_incomplete_icmp_limit")
 
     @max_incomplete_icmp_limit.setter
-    def max_incomplete_icmp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_icmp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_icmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteTcpLimit")
-    def max_incomplete_tcp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_tcp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "max_incomplete_tcp_limit")
 
     @max_incomplete_tcp_limit.setter
-    def max_incomplete_tcp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_tcp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_tcp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteUdpLimit")
-    def max_incomplete_udp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_udp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "max_incomplete_udp_limit")
 
     @max_incomplete_udp_limit.setter
-    def max_incomplete_udp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_udp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_udp_limit", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def nat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "nat")
 
     @nat.setter
-    def nat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def nat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "nat", value)
 
     @_builtins.property
     @pulumi.getter(name="natVariable")
-    def nat_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat_variable")
 
     @nat_variable.setter
-    def nat_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="resourceProfile")
-    def resource_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resource_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `low`, `medium`, `high`
         """
         return pulumi.get(self, "resource_profile")
 
     @resource_profile.setter
-    def resource_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resource_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resource_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="resourceProfileVariable")
-    def resource_profile_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resource_profile_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "resource_profile_variable")
 
     @resource_profile_variable.setter
-    def resource_profile_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resource_profile_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resource_profile_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionReclassifyAllow")
-    def session_reclassify_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def session_reclassify_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -284,21 +284,21 @@ class EmbeddedSecurityPolicyArgs:
         return pulumi.get(self, "session_reclassify_allow")
 
     @session_reclassify_allow.setter
-    def session_reclassify_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def session_reclassify_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "session_reclassify_allow", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
-    def tcp_syn_flood_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_syn_flood_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "tcp_syn_flood_limit")
 
     @tcp_syn_flood_limit.setter
-    def tcp_syn_flood_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_syn_flood_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_syn_flood_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="unifiedLogging")
-    def unified_logging(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unified_logging(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -306,33 +306,33 @@ class EmbeddedSecurityPolicyArgs:
         return pulumi.get(self, "unified_logging")
 
     @unified_logging.setter
-    def unified_logging(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unified_logging(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unified_logging", value)
 
 
 @pulumi.input_type
 class _EmbeddedSecurityPolicyState:
     def __init__(__self__, *,
-                 assemblies: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]] = None,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 download_url_database_on_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 download_url_database_on_device_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 icmp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nat_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 assemblies: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]] = None,
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering EmbeddedSecurityPolicy resources.
 
@@ -397,16 +397,16 @@ class _EmbeddedSecurityPolicyState:
 
     @_builtins.property
     @pulumi.getter
-    def assemblies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]:
+    def assemblies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]:
         return pulumi.get(self, "assemblies")
 
     @assemblies.setter
-    def assemblies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]):
+    def assemblies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyArgs']]]]):
         pulumi.set(self, "assemblies", value)
 
     @_builtins.property
     @pulumi.getter(name="auditTrail")
-    def audit_trail(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def audit_trail(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -414,69 +414,69 @@ class _EmbeddedSecurityPolicyState:
         return pulumi.get(self, "audit_trail")
 
     @audit_trail.setter
-    def audit_trail(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def audit_trail(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "audit_trail", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="downloadUrlDatabaseOnDevice")
-    def download_url_database_on_device(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def download_url_database_on_device(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "download_url_database_on_device")
 
     @download_url_database_on_device.setter
-    def download_url_database_on_device(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def download_url_database_on_device(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "download_url_database_on_device", value)
 
     @_builtins.property
     @pulumi.getter(name="downloadUrlDatabaseOnDeviceVariable")
-    def download_url_database_on_device_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def download_url_database_on_device_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "download_url_database_on_device_variable")
 
     @download_url_database_on_device_variable.setter
-    def download_url_database_on_device_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def download_url_database_on_device_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "download_url_database_on_device_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="failureMode")
-    def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def failure_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `close`, `open`
         """
         return pulumi.get(self, "failure_mode")
 
     @failure_mode.setter
-    def failure_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def failure_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "failure_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="icmpUnreachableAllow")
-    def icmp_unreachable_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def icmp_unreachable_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -484,96 +484,96 @@ class _EmbeddedSecurityPolicyState:
         return pulumi.get(self, "icmp_unreachable_allow")
 
     @icmp_unreachable_allow.setter
-    def icmp_unreachable_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def icmp_unreachable_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "icmp_unreachable_allow", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteIcmpLimit")
-    def max_incomplete_icmp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_icmp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "max_incomplete_icmp_limit")
 
     @max_incomplete_icmp_limit.setter
-    def max_incomplete_icmp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_icmp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_icmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteTcpLimit")
-    def max_incomplete_tcp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_tcp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "max_incomplete_tcp_limit")
 
     @max_incomplete_tcp_limit.setter
-    def max_incomplete_tcp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_tcp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_tcp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteUdpLimit")
-    def max_incomplete_udp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_udp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "max_incomplete_udp_limit")
 
     @max_incomplete_udp_limit.setter
-    def max_incomplete_udp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_udp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_udp_limit", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def nat(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "nat")
 
     @nat.setter
-    def nat(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def nat(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "nat", value)
 
     @_builtins.property
     @pulumi.getter(name="natVariable")
-    def nat_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat_variable")
 
     @nat_variable.setter
-    def nat_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="resourceProfile")
-    def resource_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resource_profile(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `low`, `medium`, `high`
         """
         return pulumi.get(self, "resource_profile")
 
     @resource_profile.setter
-    def resource_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resource_profile(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resource_profile", value)
 
     @_builtins.property
     @pulumi.getter(name="resourceProfileVariable")
-    def resource_profile_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def resource_profile_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "resource_profile_variable")
 
     @resource_profile_variable.setter
-    def resource_profile_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def resource_profile_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "resource_profile_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionReclassifyAllow")
-    def session_reclassify_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def session_reclassify_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -581,21 +581,21 @@ class _EmbeddedSecurityPolicyState:
         return pulumi.get(self, "session_reclassify_allow")
 
     @session_reclassify_allow.setter
-    def session_reclassify_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def session_reclassify_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "session_reclassify_allow", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
-    def tcp_syn_flood_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_syn_flood_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "tcp_syn_flood_limit")
 
     @tcp_syn_flood_limit.setter
-    def tcp_syn_flood_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_syn_flood_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_syn_flood_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="unifiedLogging")
-    def unified_logging(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unified_logging(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Setting can be string 'on' or missing for off
           - Choices: `on`
@@ -603,19 +603,19 @@ class _EmbeddedSecurityPolicyState:
         return pulumi.get(self, "unified_logging")
 
     @unified_logging.setter
-    def unified_logging(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unified_logging(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unified_logging", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Policy
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -625,25 +625,25 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 assemblies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict']]]]] = None,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 download_url_database_on_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 download_url_database_on_device_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 icmp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nat_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
+                 assemblies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict']]]]] = None,
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Embedded Security Policy.
@@ -777,25 +777,25 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 assemblies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict']]]]] = None,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 download_url_database_on_device: Optional[pulumi.Input[_builtins.bool]] = None,
-                 download_url_database_on_device_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 icmp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 nat_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 resource_profile_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
+                 assemblies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict']]]]] = None,
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
+                 download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat: pulumi.Input[Optional[_builtins.bool]] = None,
+                 nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
+                 resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -837,26 +837,26 @@ class EmbeddedSecurityPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            assemblies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict']]]]] = None,
-            audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            download_url_database_on_device: Optional[pulumi.Input[_builtins.bool]] = None,
-            download_url_database_on_device_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            icmp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-            max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            nat: Optional[pulumi.Input[_builtins.bool]] = None,
-            nat_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            resource_profile: Optional[pulumi.Input[_builtins.str]] = None,
-            resource_profile_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'EmbeddedSecurityPolicy':
+            assemblies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EmbeddedSecurityPolicyAssemblyArgs', 'EmbeddedSecurityPolicyAssemblyArgsDict']]]]] = None,
+            audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            download_url_database_on_device: pulumi.Input[Optional[_builtins.bool]] = None,
+            download_url_database_on_device_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            icmp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat: pulumi.Input[Optional[_builtins.bool]] = None,
+            nat_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            resource_profile: pulumi.Input[Optional[_builtins.str]] = None,
+            resource_profile_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'EmbeddedSecurityPolicy':
         """
         Get an existing EmbeddedSecurityPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

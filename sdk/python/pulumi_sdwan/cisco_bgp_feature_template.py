@@ -23,43 +23,43 @@ class CiscoBgpFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]] = None,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_internal: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_internal_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_local: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_local_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]] = None,
-                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]] = None,
-                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]] = None,
-                 keepalive: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_aspath: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_aspath_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]] = None,
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_internal: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_internal_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_local: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_local_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]] = None,
+                 ipv4_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]] = None,
+                 ipv6_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]] = None,
+                 keepalive: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_aspath: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_aspath_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoBgpFeatureTemplate resource.
 
@@ -226,19 +226,19 @@ class CiscoBgpFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="addressFamilies")
-    def address_families(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]:
+    def address_families(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]:
         """
         Set BGP address family
         """
         return pulumi.get(self, "address_families")
 
     @address_families.setter
-    def address_families(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]):
+    def address_families(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]):
         pulumi.set(self, "address_families", value)
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMed")
-    def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def always_compare_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all ASs when selecting active BGP paths
           - Default value: `false`
@@ -246,48 +246,48 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "always_compare_med")
 
     @always_compare_med.setter
-    def always_compare_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def always_compare_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "always_compare_med", value)
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMedVariable")
-    def always_compare_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def always_compare_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "always_compare_med_variable")
 
     @always_compare_med_variable.setter
-    def always_compare_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def always_compare_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "always_compare_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumberVariable")
-    def as_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "as_number_variable")
 
     @as_number_variable.setter
-    def as_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterId")
-    def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def compare_router_id(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare router IDs when selecting active BGP paths
           - Default value: `false`
@@ -295,24 +295,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "compare_router_id")
 
     @compare_router_id.setter
-    def compare_router_id(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def compare_router_id(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "compare_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterIdVariable")
-    def compare_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def compare_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "compare_router_id_variable")
 
     @compare_router_id_variable.setter
-    def compare_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def compare_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "compare_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMed")
-    def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def deterministic_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all routes from same AS when selecting active BGP paths
           - Default value: `false`
@@ -320,24 +320,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "deterministic_med")
 
     @deterministic_med.setter
-    def deterministic_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def deterministic_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "deterministic_med", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMedVariable")
-    def deterministic_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deterministic_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "deterministic_med_variable")
 
     @deterministic_med_variable.setter
-    def deterministic_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deterministic_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deterministic_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternal")
-    def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for external BGP routes
           - Range: `1`-`255`
@@ -346,24 +346,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "distance_external")
 
     @distance_external.setter
-    def distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternalVariable")
-    def distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_external_variable")
 
     @distance_external_variable.setter
-    def distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInternal")
-    def distance_internal(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_internal(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for internal BGP routes
           - Range: `1`-`255`
@@ -372,24 +372,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "distance_internal")
 
     @distance_internal.setter
-    def distance_internal(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_internal(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_internal", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInternalVariable")
-    def distance_internal_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_internal_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_internal_variable")
 
     @distance_internal_variable.setter
-    def distance_internal_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_internal_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_internal_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceLocal")
-    def distance_local(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_local(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for local BGP routes
           - Range: `1`-`255`
@@ -398,24 +398,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "distance_local")
 
     @distance_local.setter
-    def distance_local(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_local(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_local", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceLocalVariable")
-    def distance_local_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_local_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_local_variable")
 
     @distance_local_variable.setter
-    def distance_local_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_local_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_local_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the interval when BGP considers a neighbor to be down
           - Range: `0`-`65535`
@@ -424,72 +424,72 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "holdtime")
 
     @holdtime.setter
-    def holdtime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def holdtime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "holdtime", value)
 
     @_builtins.property
     @pulumi.getter(name="holdtimeVariable")
-    def holdtime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def holdtime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "holdtime_variable")
 
     @holdtime_variable.setter
-    def holdtime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def holdtime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "holdtime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Neighbors")
-    def ipv4_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]:
+    def ipv4_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]:
         """
         Set BGP neighbors
         """
         return pulumi.get(self, "ipv4_neighbors")
 
     @ipv4_neighbors.setter
-    def ipv4_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]):
+    def ipv4_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]):
         pulumi.set(self, "ipv4_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4RouteTargets")
-    def ipv4_route_targets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]:
+    def ipv4_route_targets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]:
         """
         Router Target for IPV4
         """
         return pulumi.get(self, "ipv4_route_targets")
 
     @ipv4_route_targets.setter
-    def ipv4_route_targets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]):
+    def ipv4_route_targets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]):
         pulumi.set(self, "ipv4_route_targets", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Neighbors")
-    def ipv6_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]:
+    def ipv6_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]:
         """
         Set BGP IPv6 neighbors
         """
         return pulumi.get(self, "ipv6_neighbors")
 
     @ipv6_neighbors.setter
-    def ipv6_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]):
+    def ipv6_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]):
         pulumi.set(self, "ipv6_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6RouteTargets")
-    def ipv6_route_targets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]:
+    def ipv6_route_targets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]:
         """
         Router Target for IPV6
         """
         return pulumi.get(self, "ipv6_route_targets")
 
     @ipv6_route_targets.setter
-    def ipv6_route_targets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]):
+    def ipv6_route_targets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]):
         pulumi.set(self, "ipv6_route_targets", value)
 
     @_builtins.property
     @pulumi.getter
-    def keepalive(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def keepalive(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often keepalive messages are sent to BGP peer
           - Range: `0`-`65535`
@@ -498,24 +498,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "keepalive")
 
     @keepalive.setter
-    def keepalive(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def keepalive(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "keepalive", value)
 
     @_builtins.property
     @pulumi.getter(name="keepaliveVariable")
-    def keepalive_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def keepalive_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "keepalive_variable")
 
     @keepalive_variable.setter
-    def keepalive_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def keepalive_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "keepalive_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedWorst")
-    def missing_med_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def missing_med_worst(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If path has no MED, consider it to be worst path when selecting active BGP paths
           - Default value: `false`
@@ -523,36 +523,36 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "missing_med_worst")
 
     @missing_med_worst.setter
-    def missing_med_worst(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def missing_med_worst(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "missing_med_worst", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedWorstVariable")
-    def missing_med_worst_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def missing_med_worst_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "missing_med_worst_variable")
 
     @missing_med_worst_variable.setter
-    def missing_med_worst_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def missing_med_worst_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "missing_med_worst_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="mplsInterfaces")
-    def mpls_interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]:
+    def mpls_interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]:
         """
         MPLS BGP Interface
         """
         return pulumi.get(self, "mpls_interfaces")
 
     @mpls_interfaces.setter
-    def mpls_interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]):
+    def mpls_interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]):
         pulumi.set(self, "mpls_interfaces", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelax")
-    def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def multipath_relax(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Ignore AS for multipath selection
           - Default value: `false`
@@ -560,36 +560,36 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "multipath_relax")
 
     @multipath_relax.setter
-    def multipath_relax(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def multipath_relax(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "multipath_relax", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelaxVariable")
-    def multipath_relax_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multipath_relax_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multipath_relax_variable")
 
     @multipath_relax_variable.setter
-    def multipath_relax_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multipath_relax_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multipath_relax_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAspath")
-    def propagate_aspath(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_aspath(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate AS Path 
           - Default value: `false`
@@ -597,24 +597,24 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "propagate_aspath")
 
     @propagate_aspath.setter
-    def propagate_aspath(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_aspath(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_aspath", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAspathVariable")
-    def propagate_aspath_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_aspath_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_aspath_variable")
 
     @propagate_aspath_variable.setter
-    def propagate_aspath_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_aspath_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_aspath_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunity")
-    def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_community(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate Community
           - Default value: `false`
@@ -622,48 +622,48 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "propagate_community")
 
     @propagate_community.setter
-    def propagate_community(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_community(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_community", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunityVariable")
-    def propagate_community_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_community_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_community_variable")
 
     @propagate_community_variable.setter
-    def propagate_community_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_community_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_community_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure BGP router identifier
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable BGP
           - Default value: `false`
@@ -671,66 +671,66 @@ class CiscoBgpFeatureTemplateArgs:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
 
 @pulumi.input_type
 class _CiscoBgpFeatureTemplateState:
     def __init__(__self__, *,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]] = None,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_internal: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_internal_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_local: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_local_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]] = None,
-                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]] = None,
-                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]] = None,
-                 keepalive: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_aspath: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_aspath_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]] = None,
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_internal: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_internal_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_local: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_local_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]] = None,
+                 ipv4_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]] = None,
+                 ipv6_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]] = None,
+                 keepalive: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_aspath: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_aspath_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoBgpFeatureTemplate resources.
 
@@ -880,19 +880,19 @@ class _CiscoBgpFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="addressFamilies")
-    def address_families(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]:
+    def address_families(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]:
         """
         Set BGP address family
         """
         return pulumi.get(self, "address_families")
 
     @address_families.setter
-    def address_families(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]):
+    def address_families(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]):
         pulumi.set(self, "address_families", value)
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMed")
-    def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def always_compare_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all ASs when selecting active BGP paths
           - Default value: `false`
@@ -900,48 +900,48 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "always_compare_med")
 
     @always_compare_med.setter
-    def always_compare_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def always_compare_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "always_compare_med", value)
 
     @_builtins.property
     @pulumi.getter(name="alwaysCompareMedVariable")
-    def always_compare_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def always_compare_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "always_compare_med_variable")
 
     @always_compare_med_variable.setter
-    def always_compare_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def always_compare_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "always_compare_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumberVariable")
-    def as_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "as_number_variable")
 
     @as_number_variable.setter
-    def as_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterId")
-    def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def compare_router_id(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare router IDs when selecting active BGP paths
           - Default value: `false`
@@ -949,36 +949,36 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "compare_router_id")
 
     @compare_router_id.setter
-    def compare_router_id(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def compare_router_id(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "compare_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="compareRouterIdVariable")
-    def compare_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def compare_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "compare_router_id_variable")
 
     @compare_router_id_variable.setter
-    def compare_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def compare_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "compare_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMed")
-    def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def deterministic_med(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Compare MEDs from all routes from same AS when selecting active BGP paths
           - Default value: `false`
@@ -986,24 +986,24 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "deterministic_med")
 
     @deterministic_med.setter
-    def deterministic_med(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def deterministic_med(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "deterministic_med", value)
 
     @_builtins.property
     @pulumi.getter(name="deterministicMedVariable")
-    def deterministic_med_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def deterministic_med_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "deterministic_med_variable")
 
     @deterministic_med_variable.setter
-    def deterministic_med_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def deterministic_med_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "deterministic_med_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -1011,12 +1011,12 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternal")
-    def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for external BGP routes
           - Range: `1`-`255`
@@ -1025,24 +1025,24 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "distance_external")
 
     @distance_external.setter
-    def distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternalVariable")
-    def distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_external_variable")
 
     @distance_external_variable.setter
-    def distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInternal")
-    def distance_internal(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_internal(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for internal BGP routes
           - Range: `1`-`255`
@@ -1051,24 +1051,24 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "distance_internal")
 
     @distance_internal.setter
-    def distance_internal(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_internal(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_internal", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInternalVariable")
-    def distance_internal_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_internal_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_internal_variable")
 
     @distance_internal_variable.setter
-    def distance_internal_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_internal_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_internal_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceLocal")
-    def distance_local(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_local(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set administrative distance for local BGP routes
           - Range: `1`-`255`
@@ -1077,24 +1077,24 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "distance_local")
 
     @distance_local.setter
-    def distance_local(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_local(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_local", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceLocalVariable")
-    def distance_local_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_local_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_local_variable")
 
     @distance_local_variable.setter
-    def distance_local_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_local_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_local_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the interval when BGP considers a neighbor to be down
           - Range: `0`-`65535`
@@ -1103,72 +1103,72 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "holdtime")
 
     @holdtime.setter
-    def holdtime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def holdtime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "holdtime", value)
 
     @_builtins.property
     @pulumi.getter(name="holdtimeVariable")
-    def holdtime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def holdtime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "holdtime_variable")
 
     @holdtime_variable.setter
-    def holdtime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def holdtime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "holdtime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Neighbors")
-    def ipv4_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]:
+    def ipv4_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]:
         """
         Set BGP neighbors
         """
         return pulumi.get(self, "ipv4_neighbors")
 
     @ipv4_neighbors.setter
-    def ipv4_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]):
+    def ipv4_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]):
         pulumi.set(self, "ipv4_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4RouteTargets")
-    def ipv4_route_targets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]:
+    def ipv4_route_targets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]:
         """
         Router Target for IPV4
         """
         return pulumi.get(self, "ipv4_route_targets")
 
     @ipv4_route_targets.setter
-    def ipv4_route_targets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]):
+    def ipv4_route_targets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]):
         pulumi.set(self, "ipv4_route_targets", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Neighbors")
-    def ipv6_neighbors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]:
+    def ipv6_neighbors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]:
         """
         Set BGP IPv6 neighbors
         """
         return pulumi.get(self, "ipv6_neighbors")
 
     @ipv6_neighbors.setter
-    def ipv6_neighbors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]):
+    def ipv6_neighbors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]):
         pulumi.set(self, "ipv6_neighbors", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6RouteTargets")
-    def ipv6_route_targets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]:
+    def ipv6_route_targets(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]:
         """
         Router Target for IPV6
         """
         return pulumi.get(self, "ipv6_route_targets")
 
     @ipv6_route_targets.setter
-    def ipv6_route_targets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]):
+    def ipv6_route_targets(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]):
         pulumi.set(self, "ipv6_route_targets", value)
 
     @_builtins.property
     @pulumi.getter
-    def keepalive(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def keepalive(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often keepalive messages are sent to BGP peer
           - Range: `0`-`65535`
@@ -1177,24 +1177,24 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "keepalive")
 
     @keepalive.setter
-    def keepalive(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def keepalive(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "keepalive", value)
 
     @_builtins.property
     @pulumi.getter(name="keepaliveVariable")
-    def keepalive_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def keepalive_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "keepalive_variable")
 
     @keepalive_variable.setter
-    def keepalive_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def keepalive_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "keepalive_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedWorst")
-    def missing_med_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def missing_med_worst(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If path has no MED, consider it to be worst path when selecting active BGP paths
           - Default value: `false`
@@ -1202,36 +1202,36 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "missing_med_worst")
 
     @missing_med_worst.setter
-    def missing_med_worst(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def missing_med_worst(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "missing_med_worst", value)
 
     @_builtins.property
     @pulumi.getter(name="missingMedWorstVariable")
-    def missing_med_worst_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def missing_med_worst_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "missing_med_worst_variable")
 
     @missing_med_worst_variable.setter
-    def missing_med_worst_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def missing_med_worst_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "missing_med_worst_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="mplsInterfaces")
-    def mpls_interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]:
+    def mpls_interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]:
         """
         MPLS BGP Interface
         """
         return pulumi.get(self, "mpls_interfaces")
 
     @mpls_interfaces.setter
-    def mpls_interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]):
+    def mpls_interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]):
         pulumi.set(self, "mpls_interfaces", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelax")
-    def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def multipath_relax(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Ignore AS for multipath selection
           - Default value: `false`
@@ -1239,36 +1239,36 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "multipath_relax")
 
     @multipath_relax.setter
-    def multipath_relax(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def multipath_relax(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "multipath_relax", value)
 
     @_builtins.property
     @pulumi.getter(name="multipathRelaxVariable")
-    def multipath_relax_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multipath_relax_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multipath_relax_variable")
 
     @multipath_relax_variable.setter
-    def multipath_relax_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multipath_relax_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multipath_relax_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAspath")
-    def propagate_aspath(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_aspath(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate AS Path 
           - Default value: `false`
@@ -1276,24 +1276,24 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "propagate_aspath")
 
     @propagate_aspath.setter
-    def propagate_aspath(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_aspath(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_aspath", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateAspathVariable")
-    def propagate_aspath_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_aspath_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_aspath_variable")
 
     @propagate_aspath_variable.setter
-    def propagate_aspath_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_aspath_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_aspath_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunity")
-    def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def propagate_community(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Propagate Community
           - Default value: `false`
@@ -1301,48 +1301,48 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "propagate_community")
 
     @propagate_community.setter
-    def propagate_community(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def propagate_community(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "propagate_community", value)
 
     @_builtins.property
     @pulumi.getter(name="propagateCommunityVariable")
-    def propagate_community_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def propagate_community_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "propagate_community_variable")
 
     @propagate_community_variable.setter
-    def propagate_community_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def propagate_community_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "propagate_community_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure BGP router identifier
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable BGP
           - Default value: `false`
@@ -1350,43 +1350,43 @@ class _CiscoBgpFeatureTemplateState:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1396,45 +1396,45 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_internal: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_internal_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_local: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_local_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
-                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
-                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
-                 keepalive: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_aspath: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_aspath_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_internal: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_internal_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_local: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_local_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
+                 ipv4_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
+                 ipv6_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
+                 keepalive: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_aspath: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_aspath_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco BGP feature template.
@@ -1794,45 +1794,45 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
-                 always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.str]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-                 deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_internal: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_internal_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_local: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_local_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
-                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
-                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
-                 keepalive: Optional[pulumi.Input[_builtins.int]] = None,
-                 keepalive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 missing_med_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-                 missing_med_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
-                 multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_aspath: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_aspath_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-                 propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+                 always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+                 deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_internal: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_internal_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_local: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_local_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
+                 ipv4_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
+                 ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
+                 ipv6_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
+                 keepalive: pulumi.Input[Optional[_builtins.int]] = None,
+                 keepalive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 missing_med_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+                 missing_med_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
+                 multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_aspath: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_aspath_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+                 propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1897,47 +1897,47 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
-            always_compare_med: Optional[pulumi.Input[_builtins.bool]] = None,
-            always_compare_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            as_number: Optional[pulumi.Input[_builtins.str]] = None,
-            as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            compare_router_id: Optional[pulumi.Input[_builtins.bool]] = None,
-            compare_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            deterministic_med: Optional[pulumi.Input[_builtins.bool]] = None,
-            deterministic_med_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_internal: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_internal_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_local: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_local_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-            holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
-            ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
-            ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
-            ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
-            keepalive: Optional[pulumi.Input[_builtins.int]] = None,
-            keepalive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            missing_med_worst: Optional[pulumi.Input[_builtins.bool]] = None,
-            missing_med_worst_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
-            multipath_relax: Optional[pulumi.Input[_builtins.bool]] = None,
-            multipath_relax_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            propagate_aspath: Optional[pulumi.Input[_builtins.bool]] = None,
-            propagate_aspath_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            propagate_community: Optional[pulumi.Input[_builtins.bool]] = None,
-            propagate_community_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-            shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoBgpFeatureTemplate':
+            address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+            always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
+            always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            as_number: pulumi.Input[Optional[_builtins.str]] = None,
+            as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
+            compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            deterministic_med: pulumi.Input[Optional[_builtins.bool]] = None,
+            deterministic_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_internal: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_internal_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_local: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_local_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+            holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
+            ipv4_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
+            ipv6_neighbors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
+            ipv6_route_targets: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
+            keepalive: pulumi.Input[Optional[_builtins.int]] = None,
+            keepalive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            missing_med_worst: pulumi.Input[Optional[_builtins.bool]] = None,
+            missing_med_worst_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            mpls_interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
+            multipath_relax: pulumi.Input[Optional[_builtins.bool]] = None,
+            multipath_relax_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            propagate_aspath: pulumi.Input[Optional[_builtins.bool]] = None,
+            propagate_aspath_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            propagate_community: pulumi.Input[Optional[_builtins.bool]] = None,
+            propagate_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoBgpFeatureTemplate':
         """
         Get an existing CiscoBgpFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

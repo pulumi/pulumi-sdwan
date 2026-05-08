@@ -100,11 +100,11 @@ export interface ApplicationPriorityFeatureProfileState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the application priority feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -118,5 +118,5 @@ export interface ApplicationPriorityFeatureProfileArgs {
     /**
      * The name of the application priority feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

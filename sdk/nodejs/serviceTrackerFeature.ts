@@ -268,117 +268,117 @@ export interface ServiceTrackerFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * API url of endpoint
      */
-    endpointApiUrl?: pulumi.Input<string>;
+    endpointApiUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointApiUrlVariable?: pulumi.Input<string>;
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint DNS Name
      */
-    endpointDnsName?: pulumi.Input<string>;
+    endpointDnsName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointDnsNameVariable?: pulumi.Input<string>;
+    endpointDnsNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint IP
      */
-    endpointIp?: pulumi.Input<string>;
+    endpointIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointIpVariable?: pulumi.Input<string>;
+    endpointIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint Tracker Type
      *   - Choices: `static-route`
      *   - Default value: `static-route`
      */
-    endpointTrackerType?: pulumi.Input<string>;
+    endpointTrackerType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointTrackerTypeVariable?: pulumi.Input<string>;
+    endpointTrackerTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Interval
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Multiplier
      *   - Range: `1`-`10`
      *   - Default value: `3`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Range: `1`-`65535`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portVariable?: pulumi.Input<string>;
+    portVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Threshold
      *   - Range: `100`-`1000`
      *   - Default value: `300`
      */
-    threshold?: pulumi.Input<number>;
+    threshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    thresholdVariable?: pulumi.Input<string>;
+    thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Name
      */
-    trackerName?: pulumi.Input<string>;
+    trackerName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerNameVariable?: pulumi.Input<string>;
+    trackerNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Type
      *   - Choices: `endpoint`
      *   - Default value: `endpoint`
      */
-    trackerType?: pulumi.Input<string>;
+    trackerType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerTypeVariable?: pulumi.Input<string>;
+    trackerTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -388,41 +388,41 @@ export interface ServiceTrackerFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * API url of endpoint
      */
-    endpointApiUrl?: pulumi.Input<string>;
+    endpointApiUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointApiUrlVariable?: pulumi.Input<string>;
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint DNS Name
      */
-    endpointDnsName?: pulumi.Input<string>;
+    endpointDnsName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointDnsNameVariable?: pulumi.Input<string>;
+    endpointDnsNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint IP
      */
-    endpointIp?: pulumi.Input<string>;
+    endpointIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointIpVariable?: pulumi.Input<string>;
+    endpointIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Endpoint Tracker Type
      *   - Choices: `static-route`
      *   - Default value: `static-route`
      */
-    endpointTrackerType?: pulumi.Input<string>;
+    endpointTrackerType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointTrackerTypeVariable?: pulumi.Input<string>;
+    endpointTrackerTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -432,67 +432,67 @@ export interface ServiceTrackerFeatureArgs {
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Multiplier
      *   - Range: `1`-`10`
      *   - Default value: `3`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Range: `1`-`65535`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portVariable?: pulumi.Input<string>;
+    portVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Threshold
      *   - Range: `100`-`1000`
      *   - Default value: `300`
      */
-    threshold?: pulumi.Input<number>;
+    threshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    thresholdVariable?: pulumi.Input<string>;
+    thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Name
      */
-    trackerName?: pulumi.Input<string>;
+    trackerName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerNameVariable?: pulumi.Input<string>;
+    trackerNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker Type
      *   - Choices: `endpoint`
      *   - Default value: `endpoint`
      */
-    trackerType?: pulumi.Input<string>;
+    trackerType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerTypeVariable?: pulumi.Input<string>;
+    trackerTypeVariable?: pulumi.Input<string | undefined>;
 }

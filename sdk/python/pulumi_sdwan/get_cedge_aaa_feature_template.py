@@ -480,8 +480,8 @@ def get_cedge_aaa_feature_template(id: Optional[_builtins.str] = None,
         template_type=pulumi.get(__ret__, 'template_type'),
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'))
-def get_cedge_aaa_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cedge_aaa_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCedgeAaaFeatureTemplateResult]:
     """
     This data source can read the cEdge AAA feature template.

@@ -218,84 +218,84 @@ export interface TransportCellularProfileFeatureState {
     /**
      * Set access point name
      */
-    accessPointName?: pulumi.Input<string>;
+    accessPointName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessPointNameVariable?: pulumi.Input<string>;
+    accessPointNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set authentication type, Attribute conditional on `requiresAuthentication` equal to `true`
      *   - Choices: `pap`, `chap`, `papChap`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * No Overwrite
      */
-    noOverwrite?: pulumi.Input<boolean>;
+    noOverwrite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noOverwriteVariable?: pulumi.Input<string>;
+    noOverwriteVariable?: pulumi.Input<string | undefined>;
     /**
      * Set packet data network type
      *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
      *   - Default value: `ipv4`
      */
-    packetDataNetworkType?: pulumi.Input<string>;
+    packetDataNetworkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    packetDataNetworkTypeVariable?: pulumi.Input<string>;
+    packetDataNetworkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Profile ID
      *   - Range: `1`-`16`
      */
-    profileId?: pulumi.Input<number>;
+    profileId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    profileIdVariable?: pulumi.Input<string>;
+    profileIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profilePassword?: pulumi.Input<string>;
+    profilePassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profilePasswordVariable?: pulumi.Input<string>;
+    profilePasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profileUsername?: pulumi.Input<string>;
+    profileUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profileUsernameVariable?: pulumi.Input<string>;
+    profileUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * Require authentication type
      *   - Default value: `false`
      */
-    requiresAuthentication?: pulumi.Input<boolean>;
+    requiresAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -305,24 +305,24 @@ export interface TransportCellularProfileFeatureArgs {
     /**
      * Set access point name
      */
-    accessPointName?: pulumi.Input<string>;
+    accessPointName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessPointNameVariable?: pulumi.Input<string>;
+    accessPointNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set authentication type, Attribute conditional on `requiresAuthentication` equal to `true`
      *   - Choices: `pap`, `chap`, `papChap`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -330,53 +330,53 @@ export interface TransportCellularProfileFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * No Overwrite
      */
-    noOverwrite?: pulumi.Input<boolean>;
+    noOverwrite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noOverwriteVariable?: pulumi.Input<string>;
+    noOverwriteVariable?: pulumi.Input<string | undefined>;
     /**
      * Set packet data network type
      *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
      *   - Default value: `ipv4`
      */
-    packetDataNetworkType?: pulumi.Input<string>;
+    packetDataNetworkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    packetDataNetworkTypeVariable?: pulumi.Input<string>;
+    packetDataNetworkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Profile ID
      *   - Range: `1`-`16`
      */
-    profileId?: pulumi.Input<number>;
+    profileId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    profileIdVariable?: pulumi.Input<string>;
+    profileIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.], Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profilePassword?: pulumi.Input<string>;
+    profilePassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profilePasswordVariable?: pulumi.Input<string>;
+    profilePasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profileUsername?: pulumi.Input<string>;
+    profileUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
-    profileUsernameVariable?: pulumi.Input<string>;
+    profileUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * Require authentication type
      *   - Default value: `false`
      */
-    requiresAuthentication?: pulumi.Input<boolean>;
+    requiresAuthentication?: pulumi.Input<boolean | undefined>;
 }

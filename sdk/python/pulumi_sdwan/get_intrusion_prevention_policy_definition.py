@@ -227,7 +227,7 @@ def get_intrusion_prevention_policy_definition(id: Optional[_builtins.str] = Non
         signature_set=pulumi.get(__ret__, 'signature_set'),
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
         version=pulumi.get(__ret__, 'version'))
-def get_intrusion_prevention_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_intrusion_prevention_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIntrusionPreventionPolicyDefinitionResult]:
     """
     This data source can read the Intrusion Prevention Policy Definition .

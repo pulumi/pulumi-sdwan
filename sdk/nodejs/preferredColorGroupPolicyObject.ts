@@ -143,38 +143,38 @@ export interface PreferredColorGroupPolicyObjectState {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Color or space separated list of colors
      */
-    primaryColorPreference?: pulumi.Input<string>;
+    primaryColorPreference?: pulumi.Input<string | undefined>;
     /**
      * Path preference
      *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    primaryPathPreference?: pulumi.Input<string>;
+    primaryPathPreference?: pulumi.Input<string | undefined>;
     /**
      * Color or space separated list of colors
      */
-    secondaryColorPreference?: pulumi.Input<string>;
+    secondaryColorPreference?: pulumi.Input<string | undefined>;
     /**
      * Path preference
      *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    secondaryPathPreference?: pulumi.Input<string>;
+    secondaryPathPreference?: pulumi.Input<string | undefined>;
     /**
      * Color or space separated list of colors
      */
-    tertiaryColorPreference?: pulumi.Input<string>;
+    tertiaryColorPreference?: pulumi.Input<string | undefined>;
     /**
      * Path preference
      *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    tertiaryPathPreference?: pulumi.Input<string>;
+    tertiaryPathPreference?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -184,7 +184,7 @@ export interface PreferredColorGroupPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Color or space separated list of colors
      */
@@ -193,23 +193,23 @@ export interface PreferredColorGroupPolicyObjectArgs {
      * Path preference
      *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    primaryPathPreference?: pulumi.Input<string>;
+    primaryPathPreference?: pulumi.Input<string | undefined>;
     /**
      * Color or space separated list of colors
      */
-    secondaryColorPreference?: pulumi.Input<string>;
+    secondaryColorPreference?: pulumi.Input<string | undefined>;
     /**
      * Path preference
      *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    secondaryPathPreference?: pulumi.Input<string>;
+    secondaryPathPreference?: pulumi.Input<string | undefined>;
     /**
      * Color or space separated list of colors
      */
-    tertiaryColorPreference?: pulumi.Input<string>;
+    tertiaryColorPreference?: pulumi.Input<string | undefined>;
     /**
      * Path preference
      *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    tertiaryPathPreference?: pulumi.Input<string>;
+    tertiaryPathPreference?: pulumi.Input<string | undefined>;
 }

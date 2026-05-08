@@ -203,66 +203,66 @@ export interface CiscoNtpFeatureTemplateState {
     /**
      * Set MD5 authentication key
      */
-    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateAuthenticationKey>[]>;
+    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateAuthenticationKey>[] | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure device as NTP master
      *   - Default value: `false`
      */
-    master?: pulumi.Input<boolean>;
+    master?: pulumi.Input<boolean | undefined>;
     /**
      * Set interface for NTP Master
      */
-    masterSourceInterface?: pulumi.Input<string>;
+    masterSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    masterSourceInterfaceVariable?: pulumi.Input<string>;
+    masterSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Master Stratum <1..15>
      *   - Range: `1`-`15`
      */
-    masterStratum?: pulumi.Input<number>;
+    masterStratum?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    masterStratumVariable?: pulumi.Input<string>;
+    masterStratumVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    masterVariable?: pulumi.Input<string>;
+    masterVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure NTP servers
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateServer>[] | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Designate authentication key as trustworthy
      */
-    trustedKeys?: pulumi.Input<pulumi.Input<number>[]>;
+    trustedKeys?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    trustedKeysVariable?: pulumi.Input<string>;
+    trustedKeysVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -272,7 +272,7 @@ export interface CiscoNtpFeatureTemplateArgs {
     /**
      * Set MD5 authentication key
      */
-    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateAuthenticationKey>[]>;
+    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateAuthenticationKey>[] | undefined>;
     /**
      * The description of the feature template
      */
@@ -286,42 +286,42 @@ export interface CiscoNtpFeatureTemplateArgs {
      * Configure device as NTP master
      *   - Default value: `false`
      */
-    master?: pulumi.Input<boolean>;
+    master?: pulumi.Input<boolean | undefined>;
     /**
      * Set interface for NTP Master
      */
-    masterSourceInterface?: pulumi.Input<string>;
+    masterSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    masterSourceInterfaceVariable?: pulumi.Input<string>;
+    masterSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Master Stratum <1..15>
      *   - Range: `1`-`15`
      */
-    masterStratum?: pulumi.Input<number>;
+    masterStratum?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    masterStratumVariable?: pulumi.Input<string>;
+    masterStratumVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    masterVariable?: pulumi.Input<string>;
+    masterVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure NTP servers
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.CiscoNtpFeatureTemplateServer>[] | undefined>;
     /**
      * Designate authentication key as trustworthy
      */
-    trustedKeys?: pulumi.Input<pulumi.Input<number>[]>;
+    trustedKeys?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    trustedKeysVariable?: pulumi.Input<string>;
+    trustedKeysVariable?: pulumi.Input<string | undefined>;
 }

@@ -23,16 +23,16 @@ class CiscoLoggingFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 disk_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 disk_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]] = None,
-                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]] = None,
-                 log_rotations: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_rotations_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]] = None):
+                 disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]] = None,
+                 log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]] = None):
         """
         The set of arguments for constructing a CiscoLoggingFeatureTemplate resource.
 
@@ -105,7 +105,7 @@ class CiscoLoggingFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="diskLogging")
-    def disk_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def disk_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable logging to local disk
           - Default value: `true`
@@ -113,48 +113,48 @@ class CiscoLoggingFeatureTemplateArgs:
         return pulumi.get(self, "disk_logging")
 
     @disk_logging.setter
-    def disk_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def disk_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "disk_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="diskLoggingVariable")
-    def disk_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def disk_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "disk_logging_variable")
 
     @disk_logging_variable.setter
-    def disk_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def disk_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "disk_logging_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Servers")
-    def ipv4_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]:
+    def ipv4_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]:
         """
         Enable logging to remote server
         """
         return pulumi.get(self, "ipv4_servers")
 
     @ipv4_servers.setter
-    def ipv4_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]):
+    def ipv4_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]):
         pulumi.set(self, "ipv4_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Servers")
-    def ipv6_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]:
+    def ipv6_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]:
         """
         Enable logging to remote IPv6 server
         """
         return pulumi.get(self, "ipv6_servers")
 
     @ipv6_servers.setter
-    def ipv6_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]):
+    def ipv6_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]):
         pulumi.set(self, "ipv6_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="logRotations")
-    def log_rotations(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def log_rotations(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set number of syslog files to create before discarding oldest files
           - Range: `1`-`10`
@@ -163,24 +163,24 @@ class CiscoLoggingFeatureTemplateArgs:
         return pulumi.get(self, "log_rotations")
 
     @log_rotations.setter
-    def log_rotations(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def log_rotations(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "log_rotations", value)
 
     @_builtins.property
     @pulumi.getter(name="logRotationsVariable")
-    def log_rotations_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def log_rotations_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "log_rotations_variable")
 
     @log_rotations_variable.setter
-    def log_rotations_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def log_rotations_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "log_rotations_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="maxSize")
-    def max_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum size of file before it is rotated
           - Range: `1`-`20`
@@ -189,63 +189,63 @@ class CiscoLoggingFeatureTemplateArgs:
         return pulumi.get(self, "max_size")
 
     @max_size.setter
-    def max_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_size", value)
 
     @_builtins.property
     @pulumi.getter(name="maxSizeVariable")
-    def max_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "max_size_variable")
 
     @max_size_variable.setter
-    def max_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_size_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsProfiles")
-    def tls_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]:
+    def tls_profiles(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]:
         """
         Configure a TLS profile
         """
         return pulumi.get(self, "tls_profiles")
 
     @tls_profiles.setter
-    def tls_profiles(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]):
+    def tls_profiles(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]):
         pulumi.set(self, "tls_profiles", value)
 
 
 @pulumi.input_type
 class _CiscoLoggingFeatureTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 disk_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 disk_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]] = None,
-                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]] = None,
-                 log_rotations: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_rotations_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]] = None,
+                 log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoLoggingFeatureTemplate resources.
 
@@ -301,19 +301,19 @@ class _CiscoLoggingFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -321,12 +321,12 @@ class _CiscoLoggingFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="diskLogging")
-    def disk_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def disk_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable logging to local disk
           - Default value: `true`
@@ -334,48 +334,48 @@ class _CiscoLoggingFeatureTemplateState:
         return pulumi.get(self, "disk_logging")
 
     @disk_logging.setter
-    def disk_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def disk_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "disk_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="diskLoggingVariable")
-    def disk_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def disk_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "disk_logging_variable")
 
     @disk_logging_variable.setter
-    def disk_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def disk_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "disk_logging_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Servers")
-    def ipv4_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]:
+    def ipv4_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]:
         """
         Enable logging to remote server
         """
         return pulumi.get(self, "ipv4_servers")
 
     @ipv4_servers.setter
-    def ipv4_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]):
+    def ipv4_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]]]):
         pulumi.set(self, "ipv4_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Servers")
-    def ipv6_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]:
+    def ipv6_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]:
         """
         Enable logging to remote IPv6 server
         """
         return pulumi.get(self, "ipv6_servers")
 
     @ipv6_servers.setter
-    def ipv6_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]):
+    def ipv6_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]]]):
         pulumi.set(self, "ipv6_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="logRotations")
-    def log_rotations(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def log_rotations(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set number of syslog files to create before discarding oldest files
           - Range: `1`-`10`
@@ -384,24 +384,24 @@ class _CiscoLoggingFeatureTemplateState:
         return pulumi.get(self, "log_rotations")
 
     @log_rotations.setter
-    def log_rotations(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def log_rotations(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "log_rotations", value)
 
     @_builtins.property
     @pulumi.getter(name="logRotationsVariable")
-    def log_rotations_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def log_rotations_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "log_rotations_variable")
 
     @log_rotations_variable.setter
-    def log_rotations_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def log_rotations_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "log_rotations_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="maxSize")
-    def max_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum size of file before it is rotated
           - Range: `1`-`20`
@@ -410,67 +410,67 @@ class _CiscoLoggingFeatureTemplateState:
         return pulumi.get(self, "max_size")
 
     @max_size.setter
-    def max_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_size", value)
 
     @_builtins.property
     @pulumi.getter(name="maxSizeVariable")
-    def max_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "max_size_variable")
 
     @max_size_variable.setter
-    def max_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_size_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsProfiles")
-    def tls_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]:
+    def tls_profiles(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]:
         """
         Configure a TLS profile
         """
         return pulumi.get(self, "tls_profiles")
 
     @tls_profiles.setter
-    def tls_profiles(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]):
+    def tls_profiles(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]]]):
         pulumi.set(self, "tls_profiles", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -480,18 +480,18 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 disk_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 disk_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
-                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
-                 log_rotations: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_rotations_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
+                 log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco Logging feature template.
@@ -639,18 +639,18 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 disk_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 disk_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
-                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
-                 log_rotations: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_rotations_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
+                 ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
+                 log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -688,20 +688,20 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            disk_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-            disk_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
-            ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
-            log_rotations: Optional[pulumi.Input[_builtins.int]] = None,
-            log_rotations_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            max_size: Optional[pulumi.Input[_builtins.int]] = None,
-            max_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoLoggingFeatureTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            disk_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            disk_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]]] = None,
+            ipv6_servers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]]] = None,
+            log_rotations: pulumi.Input[Optional[_builtins.int]] = None,
+            log_rotations_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            max_size: pulumi.Input[Optional[_builtins.int]] = None,
+            max_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_profiles: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoLoggingFeatureTemplate':
         """
         Get an existing CiscoLoggingFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

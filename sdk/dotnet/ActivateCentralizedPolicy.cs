@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.ActivateCentralizedPolicy("example", new()
+    ///     var example = new Sdwan.ActivateCentralizedPolicy("example", new()
     ///     {
     ///         ActivateCentralizedPolicyId = POLICY1.Id,
     ///     });

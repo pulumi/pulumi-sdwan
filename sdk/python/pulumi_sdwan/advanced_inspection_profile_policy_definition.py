@@ -20,16 +20,16 @@ __all__ = ['AdvancedInspectionProfilePolicyDefinitionArgs', 'AdvancedInspectionP
 class AdvancedInspectionProfilePolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 advanced_malware_protection_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_malware_protection_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 intrusion_prevention_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 url_filtering_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_filtering_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 advanced_malware_protection_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_malware_protection_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 intrusion_prevention_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 url_filtering_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_filtering_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a AdvancedInspectionProfilePolicyDefinition resource.
 
@@ -82,67 +82,67 @@ class AdvancedInspectionProfilePolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="advancedMalwareProtectionId")
-    def advanced_malware_protection_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advanced_malware_protection_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Advanced malware protection ID
         """
         return pulumi.get(self, "advanced_malware_protection_id")
 
     @advanced_malware_protection_id.setter
-    def advanced_malware_protection_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advanced_malware_protection_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advanced_malware_protection_id", value)
 
     @_builtins.property
     @pulumi.getter(name="advancedMalwareProtectionVersion")
-    def advanced_malware_protection_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def advanced_malware_protection_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Advanced malware protection version
         """
         return pulumi.get(self, "advanced_malware_protection_version")
 
     @advanced_malware_protection_version.setter
-    def advanced_malware_protection_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def advanced_malware_protection_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "advanced_malware_protection_version", value)
 
     @_builtins.property
     @pulumi.getter(name="intrusionPreventionId")
-    def intrusion_prevention_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def intrusion_prevention_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Intrusion prevention ID (unified mode)
         """
         return pulumi.get(self, "intrusion_prevention_id")
 
     @intrusion_prevention_id.setter
-    def intrusion_prevention_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def intrusion_prevention_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "intrusion_prevention_id", value)
 
     @_builtins.property
     @pulumi.getter(name="intrusionPreventionVersion")
-    def intrusion_prevention_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def intrusion_prevention_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Intrusion prevention version
         """
         return pulumi.get(self, "intrusion_prevention_version")
 
     @intrusion_prevention_version.setter
-    def intrusion_prevention_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def intrusion_prevention_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "intrusion_prevention_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsAction")
-    def tls_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tls_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TLS Action
           - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
@@ -150,73 +150,73 @@ class AdvancedInspectionProfilePolicyDefinitionArgs:
         return pulumi.get(self, "tls_action")
 
     @tls_action.setter
-    def tls_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tls_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tls_action", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsSslDecryptionId")
-    def tls_ssl_decryption_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tls_ssl_decryption_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TLS/SSL decryption ID
         """
         return pulumi.get(self, "tls_ssl_decryption_id")
 
     @tls_ssl_decryption_id.setter
-    def tls_ssl_decryption_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tls_ssl_decryption_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tls_ssl_decryption_id", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsSslDecryptionVersion")
-    def tls_ssl_decryption_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tls_ssl_decryption_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         TLS/SSL decryption version
         """
         return pulumi.get(self, "tls_ssl_decryption_version")
 
     @tls_ssl_decryption_version.setter
-    def tls_ssl_decryption_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tls_ssl_decryption_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tls_ssl_decryption_version", value)
 
     @_builtins.property
     @pulumi.getter(name="urlFilteringId")
-    def url_filtering_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_filtering_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         URL filtering ID (unified mode)
         """
         return pulumi.get(self, "url_filtering_id")
 
     @url_filtering_id.setter
-    def url_filtering_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_filtering_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_filtering_id", value)
 
     @_builtins.property
     @pulumi.getter(name="urlFilteringVersion")
-    def url_filtering_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def url_filtering_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         URL filtering version
         """
         return pulumi.get(self, "url_filtering_version")
 
     @url_filtering_version.setter
-    def url_filtering_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def url_filtering_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "url_filtering_version", value)
 
 
 @pulumi.input_type
 class _AdvancedInspectionProfilePolicyDefinitionState:
     def __init__(__self__, *,
-                 advanced_malware_protection_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_malware_protection_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 url_filtering_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_filtering_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 advanced_malware_protection_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_malware_protection_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 url_filtering_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_filtering_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AdvancedInspectionProfilePolicyDefinition resources.
 
@@ -261,79 +261,79 @@ class _AdvancedInspectionProfilePolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="advancedMalwareProtectionId")
-    def advanced_malware_protection_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advanced_malware_protection_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Advanced malware protection ID
         """
         return pulumi.get(self, "advanced_malware_protection_id")
 
     @advanced_malware_protection_id.setter
-    def advanced_malware_protection_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advanced_malware_protection_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advanced_malware_protection_id", value)
 
     @_builtins.property
     @pulumi.getter(name="advancedMalwareProtectionVersion")
-    def advanced_malware_protection_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def advanced_malware_protection_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Advanced malware protection version
         """
         return pulumi.get(self, "advanced_malware_protection_version")
 
     @advanced_malware_protection_version.setter
-    def advanced_malware_protection_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def advanced_malware_protection_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "advanced_malware_protection_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition.
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="intrusionPreventionId")
-    def intrusion_prevention_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def intrusion_prevention_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Intrusion prevention ID (unified mode)
         """
         return pulumi.get(self, "intrusion_prevention_id")
 
     @intrusion_prevention_id.setter
-    def intrusion_prevention_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def intrusion_prevention_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "intrusion_prevention_id", value)
 
     @_builtins.property
     @pulumi.getter(name="intrusionPreventionVersion")
-    def intrusion_prevention_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def intrusion_prevention_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Intrusion prevention version
         """
         return pulumi.get(self, "intrusion_prevention_version")
 
     @intrusion_prevention_version.setter
-    def intrusion_prevention_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def intrusion_prevention_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "intrusion_prevention_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsAction")
-    def tls_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tls_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TLS Action
           - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
@@ -341,67 +341,67 @@ class _AdvancedInspectionProfilePolicyDefinitionState:
         return pulumi.get(self, "tls_action")
 
     @tls_action.setter
-    def tls_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tls_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tls_action", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsSslDecryptionId")
-    def tls_ssl_decryption_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tls_ssl_decryption_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TLS/SSL decryption ID
         """
         return pulumi.get(self, "tls_ssl_decryption_id")
 
     @tls_ssl_decryption_id.setter
-    def tls_ssl_decryption_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tls_ssl_decryption_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tls_ssl_decryption_id", value)
 
     @_builtins.property
     @pulumi.getter(name="tlsSslDecryptionVersion")
-    def tls_ssl_decryption_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tls_ssl_decryption_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         TLS/SSL decryption version
         """
         return pulumi.get(self, "tls_ssl_decryption_version")
 
     @tls_ssl_decryption_version.setter
-    def tls_ssl_decryption_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tls_ssl_decryption_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tls_ssl_decryption_version", value)
 
     @_builtins.property
     @pulumi.getter(name="urlFilteringId")
-    def url_filtering_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_filtering_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         URL filtering ID (unified mode)
         """
         return pulumi.get(self, "url_filtering_id")
 
     @url_filtering_id.setter
-    def url_filtering_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_filtering_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_filtering_id", value)
 
     @_builtins.property
     @pulumi.getter(name="urlFilteringVersion")
-    def url_filtering_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def url_filtering_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         URL filtering version
         """
         return pulumi.get(self, "url_filtering_version")
 
     @url_filtering_version.setter
-    def url_filtering_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def url_filtering_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "url_filtering_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -411,17 +411,17 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advanced_malware_protection_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_malware_protection_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 url_filtering_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_filtering_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 advanced_malware_protection_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_malware_protection_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 url_filtering_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_filtering_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Advanced Inspection Profile Policy Definition .
@@ -509,17 +509,17 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advanced_malware_protection_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 advanced_malware_protection_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 intrusion_prevention_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 tls_ssl_decryption_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 url_filtering_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_filtering_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 advanced_malware_protection_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 advanced_malware_protection_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 intrusion_prevention_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 tls_ssl_decryption_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 url_filtering_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_filtering_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -553,18 +553,18 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advanced_malware_protection_id: Optional[pulumi.Input[_builtins.str]] = None,
-            advanced_malware_protection_version: Optional[pulumi.Input[_builtins.int]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            intrusion_prevention_id: Optional[pulumi.Input[_builtins.str]] = None,
-            intrusion_prevention_version: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            tls_action: Optional[pulumi.Input[_builtins.str]] = None,
-            tls_ssl_decryption_id: Optional[pulumi.Input[_builtins.str]] = None,
-            tls_ssl_decryption_version: Optional[pulumi.Input[_builtins.int]] = None,
-            url_filtering_id: Optional[pulumi.Input[_builtins.str]] = None,
-            url_filtering_version: Optional[pulumi.Input[_builtins.int]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'AdvancedInspectionProfilePolicyDefinition':
+            advanced_malware_protection_id: pulumi.Input[Optional[_builtins.str]] = None,
+            advanced_malware_protection_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            intrusion_prevention_id: pulumi.Input[Optional[_builtins.str]] = None,
+            intrusion_prevention_version: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_action: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_ssl_decryption_id: pulumi.Input[Optional[_builtins.str]] = None,
+            tls_ssl_decryption_version: pulumi.Input[Optional[_builtins.int]] = None,
+            url_filtering_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url_filtering_version: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'AdvancedInspectionProfilePolicyDefinition':
         """
         Get an existing AdvancedInspectionProfilePolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

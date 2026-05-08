@@ -73,10 +73,10 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs:
 @pulumi.input_type
 class _TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState:
     def __init__(__self__, *,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_routing_ospfv3_ipv6_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_routing_ospfv3_ipv6_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature resources.
 
@@ -96,50 +96,50 @@ class _TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState:
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="transportRoutingOspfv3Ipv6FeatureId")
-    def transport_routing_ospfv3_ipv6_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_routing_ospfv3_ipv6_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Transport Routing OSPFv4 IPv6 Feature ID
         """
         return pulumi.get(self, "transport_routing_ospfv3_ipv6_feature_id")
 
     @transport_routing_ospfv3_ipv6_feature_id.setter
-    def transport_routing_ospfv3_ipv6_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_routing_ospfv3_ipv6_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_routing_ospfv3_ipv6_feature_id", value)
 
     @_builtins.property
     @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_wan_vpn_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Transport WAN VPN Feature ID
         """
         return pulumi.get(self, "transport_wan_vpn_feature_id")
 
     @transport_wan_vpn_feature_id.setter
-    def transport_wan_vpn_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_wan_vpn_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -149,9 +149,9 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(pulumi.CustomResou
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_routing_ospfv3_ipv6_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_routing_ospfv3_ipv6_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Transport WAN VPN Feature Associate Routing OSPFv3 IPv6 Feature .
@@ -234,9 +234,9 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(pulumi.CustomResou
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_routing_ospfv3_ipv6_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_routing_ospfv3_ipv6_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -266,10 +266,10 @@ class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(pulumi.CustomResou
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            transport_routing_ospfv3_ipv6_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            transport_wan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature':
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_routing_ospfv3_ipv6_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature':
         """
         Get an existing TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

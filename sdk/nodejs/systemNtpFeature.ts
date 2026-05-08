@@ -195,61 +195,61 @@ export interface SystemNtpFeatureState {
     /**
      * Set MD5 authentication key
      */
-    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureAuthenticationKey>[]>;
+    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureAuthenticationKey>[] | undefined>;
     /**
      * Enable device as NTP Leader
      *   - Default value: `false`
      */
-    authoritativeNtpServer?: pulumi.Input<boolean>;
+    authoritativeNtpServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authoritativeNtpServerVariable?: pulumi.Input<string>;
+    authoritativeNtpServerVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure NTP servers
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureServer>[] | undefined>;
     /**
      * Enable device as NTP Leader
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable device as NTP Leader
      *   - Range: `1`-`15`
      */
-    stratum?: pulumi.Input<number>;
+    stratum?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    stratumVariable?: pulumi.Input<string>;
+    stratumVariable?: pulumi.Input<string | undefined>;
     /**
      * Designate authentication key as trustworthy
      */
-    trustedKeys?: pulumi.Input<pulumi.Input<number>[]>;
+    trustedKeys?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    trustedKeysVariable?: pulumi.Input<string>;
+    trustedKeysVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -259,20 +259,20 @@ export interface SystemNtpFeatureArgs {
     /**
      * Set MD5 authentication key
      */
-    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureAuthenticationKey>[]>;
+    authenticationKeys?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureAuthenticationKey>[] | undefined>;
     /**
      * Enable device as NTP Leader
      *   - Default value: `false`
      */
-    authoritativeNtpServer?: pulumi.Input<boolean>;
+    authoritativeNtpServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authoritativeNtpServerVariable?: pulumi.Input<string>;
+    authoritativeNtpServerVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -280,34 +280,34 @@ export interface SystemNtpFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure NTP servers
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureServer>[] | undefined>;
     /**
      * Enable device as NTP Leader
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable device as NTP Leader
      *   - Range: `1`-`15`
      */
-    stratum?: pulumi.Input<number>;
+    stratum?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    stratumVariable?: pulumi.Input<string>;
+    stratumVariable?: pulumi.Input<string | undefined>;
     /**
      * Designate authentication key as trustworthy
      */
-    trustedKeys?: pulumi.Input<pulumi.Input<number>[]>;
+    trustedKeys?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    trustedKeysVariable?: pulumi.Input<string>;
+    trustedKeysVariable?: pulumi.Input<string | undefined>;
 }

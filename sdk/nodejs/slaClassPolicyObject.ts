@@ -162,53 +162,53 @@ export interface SlaClassPolicyObjectState {
     /**
      * App Probe Class Policy Object ID
      */
-    appProbeClassId?: pulumi.Input<string>;
+    appProbeClassId?: pulumi.Input<string | undefined>;
     /**
      * App Probe Class Policy Object version
      */
-    appProbeClassVersion?: pulumi.Input<number>;
+    appProbeClassVersion?: pulumi.Input<number | undefined>;
     /**
      * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      */
-    fallbackBestTunnelCriteria?: pulumi.Input<string>;
+    fallbackBestTunnelCriteria?: pulumi.Input<string | undefined>;
     /**
      * Jitter variance in ms
      *   - Range: `1`-`1000`
      */
-    fallbackBestTunnelJitter?: pulumi.Input<number>;
+    fallbackBestTunnelJitter?: pulumi.Input<number | undefined>;
     /**
      * Latency variance in ms
      *   - Range: `1`-`1000`
      */
-    fallbackBestTunnelLatency?: pulumi.Input<number>;
+    fallbackBestTunnelLatency?: pulumi.Input<number | undefined>;
     /**
      * Loss variance in percent
      *   - Range: `1`-`100`
      */
-    fallbackBestTunnelLoss?: pulumi.Input<number>;
+    fallbackBestTunnelLoss?: pulumi.Input<number | undefined>;
     /**
      * Jitter in ms
      *   - Range: `1`-`1000`
      */
-    jitter?: pulumi.Input<number>;
+    jitter?: pulumi.Input<number | undefined>;
     /**
      * Latency in ms
      *   - Range: `1`-`1000`
      */
-    latency?: pulumi.Input<number>;
+    latency?: pulumi.Input<number | undefined>;
     /**
      * Loss in percent
      *   - Range: `1`-`100`
      */
-    loss?: pulumi.Input<number>;
+    loss?: pulumi.Input<number | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -218,47 +218,47 @@ export interface SlaClassPolicyObjectArgs {
     /**
      * App Probe Class Policy Object ID
      */
-    appProbeClassId?: pulumi.Input<string>;
+    appProbeClassId?: pulumi.Input<string | undefined>;
     /**
      * App Probe Class Policy Object version
      */
-    appProbeClassVersion?: pulumi.Input<number>;
+    appProbeClassVersion?: pulumi.Input<number | undefined>;
     /**
      * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      */
-    fallbackBestTunnelCriteria?: pulumi.Input<string>;
+    fallbackBestTunnelCriteria?: pulumi.Input<string | undefined>;
     /**
      * Jitter variance in ms
      *   - Range: `1`-`1000`
      */
-    fallbackBestTunnelJitter?: pulumi.Input<number>;
+    fallbackBestTunnelJitter?: pulumi.Input<number | undefined>;
     /**
      * Latency variance in ms
      *   - Range: `1`-`1000`
      */
-    fallbackBestTunnelLatency?: pulumi.Input<number>;
+    fallbackBestTunnelLatency?: pulumi.Input<number | undefined>;
     /**
      * Loss variance in percent
      *   - Range: `1`-`100`
      */
-    fallbackBestTunnelLoss?: pulumi.Input<number>;
+    fallbackBestTunnelLoss?: pulumi.Input<number | undefined>;
     /**
      * Jitter in ms
      *   - Range: `1`-`1000`
      */
-    jitter?: pulumi.Input<number>;
+    jitter?: pulumi.Input<number | undefined>;
     /**
      * Latency in ms
      *   - Range: `1`-`1000`
      */
-    latency?: pulumi.Input<number>;
+    latency?: pulumi.Input<number | undefined>;
     /**
      * Loss in percent
      *   - Range: `1`-`100`
      */
-    loss?: pulumi.Input<number>;
+    loss?: pulumi.Input<number | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

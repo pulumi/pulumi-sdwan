@@ -256,99 +256,99 @@ export interface CiscoDhcpServerFeatureTemplateState {
     /**
      * Configure IPv4 prefix range of the DHCP address pool
      */
-    addressPool?: pulumi.Input<string>;
+    addressPool?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressPoolVariable?: pulumi.Input<string>;
+    addressPoolVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IP address of default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    defaultGatewayVariable?: pulumi.Input<string>;
+    defaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
-    dnsServers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    dnsServersVariable?: pulumi.Input<string>;
+    dnsServersVariable?: pulumi.Input<string | undefined>;
     /**
      * Set domain name client uses to resolve hostnames
      */
-    domainName?: pulumi.Input<string>;
+    domainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    domainNameVariable?: pulumi.Input<string>;
+    domainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 address to exclude from DHCP address pool
      */
-    excludeAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    excludeAddresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    excludeAddressesVariable?: pulumi.Input<string>;
+    excludeAddressesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MTU on interface to DHCP client
      *   - Range: `68`-`65535`
      */
-    interfaceMtu?: pulumi.Input<number>;
+    interfaceMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    interfaceMtuVariable?: pulumi.Input<string>;
+    interfaceMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long a DHCP-assigned IP address is valid
      *   - Range: `60`-`31536000`
      *   - Default value: `86400`
      */
-    leaseTime?: pulumi.Input<number>;
+    leaseTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    leaseTimeVariable?: pulumi.Input<string>;
+    leaseTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure Options Code
      */
-    options?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateOption>[]>;
+    options?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateOption>[] | undefined>;
     /**
      * Configure static IP addresses
      */
-    staticLeases?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateStaticLease>[]>;
+    staticLeases?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateStaticLease>[] | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Configure TFTP server IP addresses
      */
-    tftpServers?: pulumi.Input<pulumi.Input<string>[]>;
+    tftpServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    tftpServersVariable?: pulumi.Input<string>;
+    tftpServersVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -358,19 +358,19 @@ export interface CiscoDhcpServerFeatureTemplateArgs {
     /**
      * Configure IPv4 prefix range of the DHCP address pool
      */
-    addressPool?: pulumi.Input<string>;
+    addressPool?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressPoolVariable?: pulumi.Input<string>;
+    addressPoolVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IP address of default gateway
      */
-    defaultGateway?: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    defaultGatewayVariable?: pulumi.Input<string>;
+    defaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -383,64 +383,64 @@ export interface CiscoDhcpServerFeatureTemplateArgs {
     /**
      * Configure one or more DNS server IP addresses
      */
-    dnsServers?: pulumi.Input<pulumi.Input<string>[]>;
+    dnsServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    dnsServersVariable?: pulumi.Input<string>;
+    dnsServersVariable?: pulumi.Input<string | undefined>;
     /**
      * Set domain name client uses to resolve hostnames
      */
-    domainName?: pulumi.Input<string>;
+    domainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    domainNameVariable?: pulumi.Input<string>;
+    domainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 address to exclude from DHCP address pool
      */
-    excludeAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    excludeAddresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    excludeAddressesVariable?: pulumi.Input<string>;
+    excludeAddressesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MTU on interface to DHCP client
      *   - Range: `68`-`65535`
      */
-    interfaceMtu?: pulumi.Input<number>;
+    interfaceMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    interfaceMtuVariable?: pulumi.Input<string>;
+    interfaceMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long a DHCP-assigned IP address is valid
      *   - Range: `60`-`31536000`
      *   - Default value: `86400`
      */
-    leaseTime?: pulumi.Input<number>;
+    leaseTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    leaseTimeVariable?: pulumi.Input<string>;
+    leaseTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure Options Code
      */
-    options?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateOption>[]>;
+    options?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateOption>[] | undefined>;
     /**
      * Configure static IP addresses
      */
-    staticLeases?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateStaticLease>[]>;
+    staticLeases?: pulumi.Input<pulumi.Input<inputs.CiscoDhcpServerFeatureTemplateStaticLease>[] | undefined>;
     /**
      * Configure TFTP server IP addresses
      */
-    tftpServers?: pulumi.Input<pulumi.Input<string>[]>;
+    tftpServers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    tftpServersVariable?: pulumi.Input<string>;
+    tftpServersVariable?: pulumi.Input<string | undefined>;
 }

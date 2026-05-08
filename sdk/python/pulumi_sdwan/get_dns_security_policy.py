@@ -231,8 +231,8 @@ def get_dns_security_policy(feature_profile_id: Optional[_builtins.str] = None,
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
         umbrella_default=pulumi.get(__ret__, 'umbrella_default'),
         version=pulumi.get(__ret__, 'version'))
-def get_dns_security_policy_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                   id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_dns_security_policy_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                   id: pulumi.Input[Optional[_builtins.str]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDnsSecurityPolicyResult]:
     """
     This data source can read the DNS Security Policy.

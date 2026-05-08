@@ -202,60 +202,60 @@ export interface SystemLoggingFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable logging to local disk
      *   - Default value: `true`
      */
-    diskEnable?: pulumi.Input<boolean>;
+    diskEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    diskEnableVariable?: pulumi.Input<string>;
+    diskEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Set number of syslog files to create before discarding oldest files
      *   - Range: `1`-`10`
      *   - Default value: `10`
      */
-    diskFileRotate?: pulumi.Input<number>;
+    diskFileRotate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    diskFileRotateVariable?: pulumi.Input<string>;
+    diskFileRotateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum size of file before it is rotated
      *   - Range: `1`-`20`
      *   - Default value: `10`
      */
-    diskFileSize?: pulumi.Input<number>;
+    diskFileSize?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    diskFileSizeVariable?: pulumi.Input<string>;
+    diskFileSizeVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Enable logging to remote server
      */
-    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv4Server>[]>;
+    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv4Server>[] | undefined>;
     /**
      * Enable logging to remote ipv6 server
      */
-    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv6Server>[]>;
+    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv6Server>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure a TLS profile
      */
-    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureTlsProfile>[]>;
+    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureTlsProfile>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -265,36 +265,36 @@ export interface SystemLoggingFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable logging to local disk
      *   - Default value: `true`
      */
-    diskEnable?: pulumi.Input<boolean>;
+    diskEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    diskEnableVariable?: pulumi.Input<string>;
+    diskEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Set number of syslog files to create before discarding oldest files
      *   - Range: `1`-`10`
      *   - Default value: `10`
      */
-    diskFileRotate?: pulumi.Input<number>;
+    diskFileRotate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    diskFileRotateVariable?: pulumi.Input<string>;
+    diskFileRotateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum size of file before it is rotated
      *   - Range: `1`-`20`
      *   - Default value: `10`
      */
-    diskFileSize?: pulumi.Input<number>;
+    diskFileSize?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    diskFileSizeVariable?: pulumi.Input<string>;
+    diskFileSizeVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -302,17 +302,17 @@ export interface SystemLoggingFeatureArgs {
     /**
      * Enable logging to remote server
      */
-    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv4Server>[]>;
+    ipv4Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv4Server>[] | undefined>;
     /**
      * Enable logging to remote ipv6 server
      */
-    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv6Server>[]>;
+    ipv6Servers?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureIpv6Server>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure a TLS profile
      */
-    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureTlsProfile>[]>;
+    tlsProfiles?: pulumi.Input<pulumi.Input<inputs.SystemLoggingFeatureTlsProfile>[] | undefined>;
 }

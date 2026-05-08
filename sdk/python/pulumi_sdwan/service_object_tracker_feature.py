@@ -21,18 +21,18 @@ class ServiceObjectTrackerFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
                  object_tracker_type: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 object_tracker_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceObjectTrackerFeature resource.
 
@@ -110,55 +110,55 @@ class ServiceObjectTrackerFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         interface name
         """
         return pulumi.get(self, "interface")
 
     @interface.setter
-    def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceVariable")
-    def interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_variable")
 
     @interface_variable.setter
-    def interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackerId")
-    def object_tracker_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def object_tracker_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Object tracker ID
           - Range: `1`-`1000`
@@ -166,48 +166,48 @@ class ServiceObjectTrackerFeatureArgs:
         return pulumi.get(self, "object_tracker_id")
 
     @object_tracker_id.setter
-    def object_tracker_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def object_tracker_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "object_tracker_id", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackerIdVariable")
-    def object_tracker_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def object_tracker_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "object_tracker_id_variable")
 
     @object_tracker_id_variable.setter
-    def object_tracker_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def object_tracker_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "object_tracker_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routeIp")
-    def route_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP address
         """
         return pulumi.get(self, "route_ip")
 
     @route_ip.setter
-    def route_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="routeIpVariable")
-    def route_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "route_ip_variable")
 
     @route_ip_variable.setter
-    def route_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routeMask")
-    def route_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP mask
           - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -216,24 +216,24 @@ class ServiceObjectTrackerFeatureArgs:
         return pulumi.get(self, "route_mask")
 
     @route_mask.setter
-    def route_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="routeMaskVariable")
-    def route_mask_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_mask_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "route_mask_variable")
 
     @route_mask_variable.setter
-    def route_mask_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_mask_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_mask_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN
           - Range: `0`-`65530`
@@ -241,40 +241,40 @@ class ServiceObjectTrackerFeatureArgs:
         return pulumi.get(self, "vpn")
 
     @vpn.setter
-    def vpn(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnVariable")
-    def vpn_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vpn_variable")
 
     @vpn_variable.setter
-    def vpn_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_variable", value)
 
 
 @pulumi.input_type
 class _ServiceObjectTrackerFeatureState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 object_tracker_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceObjectTrackerFeature resources.
 
@@ -332,67 +332,67 @@ class _ServiceObjectTrackerFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         interface name
         """
         return pulumi.get(self, "interface")
 
     @interface.setter
-    def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceVariable")
-    def interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_variable")
 
     @interface_variable.setter
-    def interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackerId")
-    def object_tracker_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def object_tracker_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Object tracker ID
           - Range: `1`-`1000`
@@ -400,24 +400,24 @@ class _ServiceObjectTrackerFeatureState:
         return pulumi.get(self, "object_tracker_id")
 
     @object_tracker_id.setter
-    def object_tracker_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def object_tracker_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "object_tracker_id", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackerIdVariable")
-    def object_tracker_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def object_tracker_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "object_tracker_id_variable")
 
     @object_tracker_id_variable.setter
-    def object_tracker_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def object_tracker_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "object_tracker_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackerType")
-    def object_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def object_tracker_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         objectTrackerType:Interface SIG Route
           - Choices: `Interface`, `SIG`, `Route`
@@ -425,36 +425,36 @@ class _ServiceObjectTrackerFeatureState:
         return pulumi.get(self, "object_tracker_type")
 
     @object_tracker_type.setter
-    def object_tracker_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def object_tracker_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "object_tracker_type", value)
 
     @_builtins.property
     @pulumi.getter(name="routeIp")
-    def route_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP address
         """
         return pulumi.get(self, "route_ip")
 
     @route_ip.setter
-    def route_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="routeIpVariable")
-    def route_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "route_ip_variable")
 
     @route_ip_variable.setter
-    def route_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="routeMask")
-    def route_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IP mask
           - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -463,36 +463,36 @@ class _ServiceObjectTrackerFeatureState:
         return pulumi.get(self, "route_mask")
 
     @route_mask.setter
-    def route_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="routeMaskVariable")
-    def route_mask_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_mask_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "route_mask_variable")
 
     @route_mask_variable.setter
-    def route_mask_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_mask_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_mask_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter
-    def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN
           - Range: `0`-`65530`
@@ -500,19 +500,19 @@ class _ServiceObjectTrackerFeatureState:
         return pulumi.get(self, "vpn")
 
     @vpn.setter
-    def vpn(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnVariable")
-    def vpn_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vpn_variable")
 
     @vpn_variable.setter
-    def vpn_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_variable", value)
 
 
@@ -522,20 +522,20 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 object_tracker_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service Object Tracker Feature.
@@ -640,20 +640,20 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 object_tracker_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -692,21 +692,21 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interface: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            object_tracker_id: Optional[pulumi.Input[_builtins.int]] = None,
-            object_tracker_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            object_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-            route_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            route_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            route_mask: Optional[pulumi.Input[_builtins.str]] = None,
-            route_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vpn: Optional[pulumi.Input[_builtins.int]] = None,
-            vpn_variable: Optional[pulumi.Input[_builtins.str]] = None) -> 'ServiceObjectTrackerFeature':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            object_tracker_id: pulumi.Input[Optional[_builtins.int]] = None,
+            object_tracker_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            object_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+            route_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            route_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            route_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            route_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'ServiceObjectTrackerFeature':
         """
         Get an existing ServiceObjectTrackerFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -20,18 +20,18 @@ __all__ = ['TlsSslProfilePolicyDefinitionArgs', 'TlsSslProfilePolicyDefinition']
 class TlsSslProfilePolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 never_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 skip_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 never_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 skip_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a TlsSslProfilePolicyDefinition resource.
 
@@ -91,67 +91,67 @@ class TlsSslProfilePolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListId")
-    def allow_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allow_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Allow URL list ID
         """
         return pulumi.get(self, "allow_url_list_id")
 
     @allow_url_list_id.setter
-    def allow_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allow_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allow_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListVersion")
-    def allow_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def allow_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Allow URL list version
         """
         return pulumi.get(self, "allow_url_list_version")
 
     @allow_url_list_version.setter
-    def allow_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def allow_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "allow_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListId")
-    def block_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Block URL list ID
         """
         return pulumi.get(self, "block_url_list_id")
 
     @block_url_list_id.setter
-    def block_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListVersion")
-    def block_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def block_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Block URL list version
         """
         return pulumi.get(self, "block_url_list_version")
 
     @block_url_list_version.setter
-    def block_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def block_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "block_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="decryptCategories")
-    def decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Categories that should be decrypted
         """
         return pulumi.get(self, "decrypt_categories")
 
     @decrypt_categories.setter
-    def decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="decryptThreshold")
-    def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def decrypt_threshold(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Decrypt threshold
           - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
@@ -159,24 +159,24 @@ class TlsSslProfilePolicyDefinitionArgs:
         return pulumi.get(self, "decrypt_threshold")
 
     @decrypt_threshold.setter
-    def decrypt_threshold(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def decrypt_threshold(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "decrypt_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="failDecrypt")
-    def fail_decrypt(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def fail_decrypt(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Fail decrypt enabled
         """
         return pulumi.get(self, "fail_decrypt")
 
     @fail_decrypt.setter
-    def fail_decrypt(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def fail_decrypt(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "fail_decrypt", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -184,75 +184,75 @@ class TlsSslProfilePolicyDefinitionArgs:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="neverDecryptCategories")
-    def never_decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def never_decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Categories that should never be decrypted
         """
         return pulumi.get(self, "never_decrypt_categories")
 
     @never_decrypt_categories.setter
-    def never_decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def never_decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "never_decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter
-    def reputation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def reputation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Reputation enabled
         """
         return pulumi.get(self, "reputation")
 
     @reputation.setter
-    def reputation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def reputation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "reputation", value)
 
     @_builtins.property
     @pulumi.getter(name="skipDecryptCategories")
-    def skip_decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def skip_decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Categories that should skipped
         """
         return pulumi.get(self, "skip_decrypt_categories")
 
     @skip_decrypt_categories.setter
-    def skip_decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def skip_decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "skip_decrypt_categories", value)
 
 
 @pulumi.input_type
 class _TlsSslProfilePolicyDefinitionState:
     def __init__(__self__, *,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 never_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 skip_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 never_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 skip_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TlsSslProfilePolicyDefinition resources.
 
@@ -304,67 +304,67 @@ class _TlsSslProfilePolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListId")
-    def allow_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def allow_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Allow URL list ID
         """
         return pulumi.get(self, "allow_url_list_id")
 
     @allow_url_list_id.setter
-    def allow_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def allow_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "allow_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="allowUrlListVersion")
-    def allow_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def allow_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Allow URL list version
         """
         return pulumi.get(self, "allow_url_list_version")
 
     @allow_url_list_version.setter
-    def allow_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def allow_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "allow_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListId")
-    def block_url_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_url_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Block URL list ID
         """
         return pulumi.get(self, "block_url_list_id")
 
     @block_url_list_id.setter
-    def block_url_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_url_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_url_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="blockUrlListVersion")
-    def block_url_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def block_url_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Block URL list version
         """
         return pulumi.get(self, "block_url_list_version")
 
     @block_url_list_version.setter
-    def block_url_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def block_url_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "block_url_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="decryptCategories")
-    def decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Categories that should be decrypted
         """
         return pulumi.get(self, "decrypt_categories")
 
     @decrypt_categories.setter
-    def decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="decryptThreshold")
-    def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def decrypt_threshold(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Decrypt threshold
           - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
@@ -372,36 +372,36 @@ class _TlsSslProfilePolicyDefinitionState:
         return pulumi.get(self, "decrypt_threshold")
 
     @decrypt_threshold.setter
-    def decrypt_threshold(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def decrypt_threshold(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "decrypt_threshold", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition.
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="failDecrypt")
-    def fail_decrypt(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def fail_decrypt(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Fail decrypt enabled
         """
         return pulumi.get(self, "fail_decrypt")
 
     @fail_decrypt.setter
-    def fail_decrypt(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def fail_decrypt(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "fail_decrypt", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -409,67 +409,67 @@ class _TlsSslProfilePolicyDefinitionState:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition.
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="neverDecryptCategories")
-    def never_decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def never_decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Categories that should never be decrypted
         """
         return pulumi.get(self, "never_decrypt_categories")
 
     @never_decrypt_categories.setter
-    def never_decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def never_decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "never_decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter
-    def reputation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def reputation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Reputation enabled
         """
         return pulumi.get(self, "reputation")
 
     @reputation.setter
-    def reputation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def reputation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "reputation", value)
 
     @_builtins.property
     @pulumi.getter(name="skipDecryptCategories")
-    def skip_decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def skip_decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Categories that should skipped
         """
         return pulumi.get(self, "skip_decrypt_categories")
 
     @skip_decrypt_categories.setter
-    def skip_decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def skip_decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "skip_decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -479,19 +479,19 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 never_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 skip_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 never_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 skip_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         This resource can manage a TLS SSL Profile Policy Definition .
@@ -592,19 +592,19 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 never_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 skip_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 never_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 skip_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -640,20 +640,20 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            allow_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            allow_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            block_url_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            block_url_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            never_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-            skip_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'TlsSslProfilePolicyDefinition':
+            allow_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            allow_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            block_url_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            block_url_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            never_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+            skip_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TlsSslProfilePolicyDefinition':
         """
         Get an existing TlsSslProfilePolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

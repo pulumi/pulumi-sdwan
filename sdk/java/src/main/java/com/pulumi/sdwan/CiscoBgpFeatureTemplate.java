@@ -44,8 +44,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateAddressFamilyArgs;
  * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv4NeighborArgs;
  * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv6NeighborArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -68,13 +68,13 @@ import javax.annotation.Nullable;
  *             .propagateCommunity(true)
  *             .ipv4RouteTargets(CiscoBgpFeatureTemplateIpv4RouteTargetArgs.builder()
  *                 .vpnId(1)
- *                 .export(List.of(Map.of("asnIp", "10:100")))
- *                 .import_(List.of(Map.of("asnIp", "10:100")))
+ *                 .export(Arrays.asList(Map.of("asnIp", "10:100")))
+ *                 .import_(Arrays.asList(Map.of("asnIp", "10:100")))
  *                 .build())
  *             .ipv6RouteTargets(CiscoBgpFeatureTemplateIpv6RouteTargetArgs.builder()
  *                 .vpnId(1)
- *                 .export(List.of(Map.of("asnIp", "10:100")))
- *                 .import_(List.of(Map.of("asnIp", "10:100")))
+ *                 .export(Arrays.asList(Map.of("asnIp", "10:100")))
+ *                 .import_(Arrays.asList(Map.of("asnIp", "10:100")))
  *                 .build())
  *             .mplsInterfaces(CiscoBgpFeatureTemplateMplsInterfaceArgs.builder()
  *                 .interfaceName("GigabitEthernet0")

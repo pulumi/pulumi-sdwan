@@ -23,13 +23,13 @@ class FeatureDeviceTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_type: pulumi.Input[_builtins.str],
-                 device_role: Optional[pulumi.Input[_builtins.str]] = None,
-                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 security_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 security_policy_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 device_role: pulumi.Input[Optional[_builtins.str]] = None,
+                 general_templates: pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_policy_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a FeatureDeviceTemplate resource.
 
@@ -87,7 +87,7 @@ class FeatureDeviceTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="deviceRole")
-    def device_role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device role
           - Choices: `sdwan-edge`, `service-node`
@@ -95,95 +95,95 @@ class FeatureDeviceTemplateArgs:
         return pulumi.get(self, "device_role")
 
     @device_role.setter
-    def device_role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_role", value)
 
     @_builtins.property
     @pulumi.getter(name="generalTemplates")
-    def general_templates(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]:
+    def general_templates(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]:
         """
         List of general templates
         """
         return pulumi.get(self, "general_templates")
 
     @general_templates.setter
-    def general_templates(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]):
+    def general_templates(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]):
         pulumi.set(self, "general_templates", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the device template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="policyId")
-    def policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy ID
         """
         return pulumi.get(self, "policy_id")
 
     @policy_id.setter
-    def policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="policyVersion")
-    def policy_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def policy_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The policy version
         """
         return pulumi.get(self, "policy_version")
 
     @policy_version.setter
-    def policy_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def policy_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "policy_version", value)
 
     @_builtins.property
     @pulumi.getter(name="securityPolicyId")
-    def security_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def security_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The security policy ID
         """
         return pulumi.get(self, "security_policy_id")
 
     @security_policy_id.setter
-    def security_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def security_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "security_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="securityPolicyVersion")
-    def security_policy_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def security_policy_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The security policy version
         """
         return pulumi.get(self, "security_policy_version")
 
     @security_policy_version.setter
-    def security_policy_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def security_policy_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "security_policy_version", value)
 
 
 @pulumi.input_type
 class _FeatureDeviceTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_role: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 security_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 security_policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_role: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 general_templates: pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering FeatureDeviceTemplate resources.
 
@@ -222,19 +222,19 @@ class _FeatureDeviceTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the device template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceRole")
-    def device_role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device role
           - Choices: `sdwan-edge`, `service-node`
@@ -242,103 +242,103 @@ class _FeatureDeviceTemplateState:
         return pulumi.get(self, "device_role")
 
     @device_role.setter
-    def device_role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_role", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceType")
-    def device_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The device type (e.g., `vedge-ISR-4331`)
         """
         return pulumi.get(self, "device_type")
 
     @device_type.setter
-    def device_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_type", value)
 
     @_builtins.property
     @pulumi.getter(name="generalTemplates")
-    def general_templates(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]:
+    def general_templates(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]:
         """
         List of general templates
         """
         return pulumi.get(self, "general_templates")
 
     @general_templates.setter
-    def general_templates(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]):
+    def general_templates(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]]]):
         pulumi.set(self, "general_templates", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the device template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="policyId")
-    def policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy ID
         """
         return pulumi.get(self, "policy_id")
 
     @policy_id.setter
-    def policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="policyVersion")
-    def policy_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def policy_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The policy version
         """
         return pulumi.get(self, "policy_version")
 
     @policy_version.setter
-    def policy_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def policy_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "policy_version", value)
 
     @_builtins.property
     @pulumi.getter(name="securityPolicyId")
-    def security_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def security_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The security policy ID
         """
         return pulumi.get(self, "security_policy_id")
 
     @security_policy_id.setter
-    def security_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def security_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "security_policy_id", value)
 
     @_builtins.property
     @pulumi.getter(name="securityPolicyVersion")
-    def security_policy_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def security_policy_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The security policy version
         """
         return pulumi.get(self, "security_policy_version")
 
     @security_policy_version.setter
-    def security_policy_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def security_policy_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "security_policy_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -348,15 +348,15 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_role: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 security_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 security_policy_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_role: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 general_templates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_policy_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Feature Device Template .
@@ -448,15 +448,15 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_role: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 security_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 security_policy_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_role: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 general_templates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 security_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 security_policy_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -490,16 +490,16 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_role: Optional[pulumi.Input[_builtins.str]] = None,
-            device_type: Optional[pulumi.Input[_builtins.str]] = None,
-            general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-            security_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            security_policy_version: Optional[pulumi.Input[_builtins.int]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'FeatureDeviceTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_role: pulumi.Input[Optional[_builtins.str]] = None,
+            device_type: pulumi.Input[Optional[_builtins.str]] = None,
+            general_templates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+            security_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            security_policy_version: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'FeatureDeviceTemplate':
         """
         Get an existing FeatureDeviceTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -247,8 +247,8 @@ def get_system_logging_feature(feature_profile_id: Optional[_builtins.str] = Non
         name=pulumi.get(__ret__, 'name'),
         tls_profiles=pulumi.get(__ret__, 'tls_profiles'),
         version=pulumi.get(__ret__, 'version'))
-def get_system_logging_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                      id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_system_logging_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                      id: pulumi.Input[Optional[_builtins.str]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemLoggingFeatureResult]:
     """
     This data source can read the System Logging Feature.

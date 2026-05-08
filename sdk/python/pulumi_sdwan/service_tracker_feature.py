@@ -20,30 +20,30 @@ __all__ = ['ServiceTrackerFeatureArgs', 'ServiceTrackerFeature']
 class ServiceTrackerFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceTrackerFeature resource.
 
@@ -147,91 +147,91 @@ class ServiceTrackerFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointApiUrl")
-    def endpoint_api_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_api_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         API url of endpoint
         """
         return pulumi.get(self, "endpoint_api_url")
 
     @endpoint_api_url.setter
-    def endpoint_api_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_api_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_api_url", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointApiUrlVariable")
-    def endpoint_api_url_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_api_url_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_api_url_variable")
 
     @endpoint_api_url_variable.setter
-    def endpoint_api_url_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_api_url_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_api_url_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointDnsName")
-    def endpoint_dns_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_dns_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Endpoint DNS Name
         """
         return pulumi.get(self, "endpoint_dns_name")
 
     @endpoint_dns_name.setter
-    def endpoint_dns_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_dns_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_dns_name", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointDnsNameVariable")
-    def endpoint_dns_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_dns_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_dns_name_variable")
 
     @endpoint_dns_name_variable.setter
-    def endpoint_dns_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_dns_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_dns_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointIp")
-    def endpoint_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Endpoint IP
         """
         return pulumi.get(self, "endpoint_ip")
 
     @endpoint_ip.setter
-    def endpoint_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointIpVariable")
-    def endpoint_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_ip_variable")
 
     @endpoint_ip_variable.setter
-    def endpoint_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointTrackerType")
-    def endpoint_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_tracker_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Endpoint Tracker Type
           - Choices: `static-route`
@@ -240,24 +240,24 @@ class ServiceTrackerFeatureArgs:
         return pulumi.get(self, "endpoint_tracker_type")
 
     @endpoint_tracker_type.setter
-    def endpoint_tracker_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_tracker_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_tracker_type", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointTrackerTypeVariable")
-    def endpoint_tracker_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_tracker_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_tracker_type_variable")
 
     @endpoint_tracker_type_variable.setter
-    def endpoint_tracker_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_tracker_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_tracker_type_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interval
           - Range: `20`-`600`
@@ -266,24 +266,24 @@ class ServiceTrackerFeatureArgs:
         return pulumi.get(self, "interval")
 
     @interval.setter
-    def interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "interval", value)
 
     @_builtins.property
     @pulumi.getter(name="intervalVariable")
-    def interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interval_variable")
 
     @interval_variable.setter
-    def interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interval_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Multiplier
           - Range: `1`-`10`
@@ -292,84 +292,84 @@ class ServiceTrackerFeatureArgs:
         return pulumi.get(self, "multiplier")
 
     @multiplier.setter
-    def multiplier(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multiplier", value)
 
     @_builtins.property
     @pulumi.getter(name="multiplierVariable")
-    def multiplier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multiplier_variable")
 
     @multiplier_variable.setter
-    def multiplier_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multiplier_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `1`-`65535`
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="portVariable")
-    def port_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "port_variable")
 
     @port_variable.setter
-    def port_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `tcp`, `udp`
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="protocolVariable")
-    def protocol_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "protocol_variable")
 
     @protocol_variable.setter
-    def protocol_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Threshold
           - Range: `100`-`1000`
@@ -378,48 +378,48 @@ class ServiceTrackerFeatureArgs:
         return pulumi.get(self, "threshold")
 
     @threshold.setter
-    def threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "threshold_variable")
 
     @threshold_variable.setter
-    def threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threshold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerName")
-    def tracker_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tracker Name
         """
         return pulumi.get(self, "tracker_name")
 
     @tracker_name.setter
-    def tracker_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_name", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerNameVariable")
-    def tracker_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_name_variable")
 
     @tracker_name_variable.setter
-    def tracker_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerType")
-    def tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tracker Type
           - Choices: `endpoint`
@@ -428,51 +428,51 @@ class ServiceTrackerFeatureArgs:
         return pulumi.get(self, "tracker_type")
 
     @tracker_type.setter
-    def tracker_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_type", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerTypeVariable")
-    def tracker_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_type_variable")
 
     @tracker_type_variable.setter
-    def tracker_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_type_variable", value)
 
 
 @pulumi.input_type
 class _ServiceTrackerFeatureState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceTrackerFeature resources.
 
@@ -568,91 +568,91 @@ class _ServiceTrackerFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointApiUrl")
-    def endpoint_api_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_api_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         API url of endpoint
         """
         return pulumi.get(self, "endpoint_api_url")
 
     @endpoint_api_url.setter
-    def endpoint_api_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_api_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_api_url", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointApiUrlVariable")
-    def endpoint_api_url_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_api_url_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_api_url_variable")
 
     @endpoint_api_url_variable.setter
-    def endpoint_api_url_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_api_url_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_api_url_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointDnsName")
-    def endpoint_dns_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_dns_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Endpoint DNS Name
         """
         return pulumi.get(self, "endpoint_dns_name")
 
     @endpoint_dns_name.setter
-    def endpoint_dns_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_dns_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_dns_name", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointDnsNameVariable")
-    def endpoint_dns_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_dns_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_dns_name_variable")
 
     @endpoint_dns_name_variable.setter
-    def endpoint_dns_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_dns_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_dns_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointIp")
-    def endpoint_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Endpoint IP
         """
         return pulumi.get(self, "endpoint_ip")
 
     @endpoint_ip.setter
-    def endpoint_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointIpVariable")
-    def endpoint_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_ip_variable")
 
     @endpoint_ip_variable.setter
-    def endpoint_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointTrackerType")
-    def endpoint_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_tracker_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Endpoint Tracker Type
           - Choices: `static-route`
@@ -661,36 +661,36 @@ class _ServiceTrackerFeatureState:
         return pulumi.get(self, "endpoint_tracker_type")
 
     @endpoint_tracker_type.setter
-    def endpoint_tracker_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_tracker_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_tracker_type", value)
 
     @_builtins.property
     @pulumi.getter(name="endpointTrackerTypeVariable")
-    def endpoint_tracker_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def endpoint_tracker_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "endpoint_tracker_type_variable")
 
     @endpoint_tracker_type_variable.setter
-    def endpoint_tracker_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def endpoint_tracker_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "endpoint_tracker_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interval
           - Range: `20`-`600`
@@ -699,24 +699,24 @@ class _ServiceTrackerFeatureState:
         return pulumi.get(self, "interval")
 
     @interval.setter
-    def interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "interval", value)
 
     @_builtins.property
     @pulumi.getter(name="intervalVariable")
-    def interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interval_variable")
 
     @interval_variable.setter
-    def interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interval_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Multiplier
           - Range: `1`-`10`
@@ -725,84 +725,84 @@ class _ServiceTrackerFeatureState:
         return pulumi.get(self, "multiplier")
 
     @multiplier.setter
-    def multiplier(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "multiplier", value)
 
     @_builtins.property
     @pulumi.getter(name="multiplierVariable")
-    def multiplier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multiplier_variable")
 
     @multiplier_variable.setter
-    def multiplier_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multiplier_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         - Range: `1`-`65535`
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
     @pulumi.getter(name="portVariable")
-    def port_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "port_variable")
 
     @port_variable.setter
-    def port_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `tcp`, `udp`
         """
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="protocolVariable")
-    def protocol_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "protocol_variable")
 
     @protocol_variable.setter
-    def protocol_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Threshold
           - Range: `100`-`1000`
@@ -811,48 +811,48 @@ class _ServiceTrackerFeatureState:
         return pulumi.get(self, "threshold")
 
     @threshold.setter
-    def threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "threshold_variable")
 
     @threshold_variable.setter
-    def threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threshold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerName")
-    def tracker_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tracker Name
         """
         return pulumi.get(self, "tracker_name")
 
     @tracker_name.setter
-    def tracker_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_name", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerNameVariable")
-    def tracker_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_name_variable")
 
     @tracker_name_variable.setter
-    def tracker_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerType")
-    def tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tracker Type
           - Choices: `endpoint`
@@ -861,31 +861,31 @@ class _ServiceTrackerFeatureState:
         return pulumi.get(self, "tracker_type")
 
     @tracker_type.setter
-    def tracker_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_type", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerTypeVariable")
-    def tracker_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_type_variable")
 
     @tracker_type_variable.setter
-    def tracker_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_type_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -895,31 +895,31 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service Tracker Feature.
@@ -1056,31 +1056,31 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_api_url_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_dns_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-                 multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_dns_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 port: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1128,32 +1128,32 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_api_url: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_api_url_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_dns_name: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_dns_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-            endpoint_tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interval: Optional[pulumi.Input[_builtins.int]] = None,
-            interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            multiplier: Optional[pulumi.Input[_builtins.int]] = None,
-            multiplier_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            port: Optional[pulumi.Input[_builtins.int]] = None,
-            port_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            threshold: Optional[pulumi.Input[_builtins.int]] = None,
-            threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_name: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_type: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceTrackerFeature':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_dns_name: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_dns_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+            endpoint_tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interval: pulumi.Input[Optional[_builtins.int]] = None,
+            interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+            multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            port: pulumi.Input[Optional[_builtins.int]] = None,
+            port_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_name: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceTrackerFeature':
         """
         Get an existing ServiceTrackerFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

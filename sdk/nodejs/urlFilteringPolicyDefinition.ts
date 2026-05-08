@@ -198,68 +198,68 @@ export interface UrlFilteringPolicyDefinitionState {
     /**
      * List of alerts options that will be exported as syslog messages
      */
-    alerts?: pulumi.Input<pulumi.Input<string>[]>;
+    alerts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allow URL list ID
      */
-    allowUrlListId?: pulumi.Input<string>;
+    allowUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Allow URL list version
      */
-    allowUrlListVersion?: pulumi.Input<number>;
+    allowUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * Redirect to a URL or display a message when a blocked page is accessed.
      *   - Choices: `text`, `redirectUrl`
      */
-    blockPageAction?: pulumi.Input<string>;
+    blockPageAction?: pulumi.Input<string | undefined>;
     /**
      * The message displayed or URL redirected to when a blocked page is accessed.
      */
-    blockPageContents?: pulumi.Input<string>;
+    blockPageContents?: pulumi.Input<string | undefined>;
     /**
      * Block URL list ID
      */
-    blockUrlListId?: pulumi.Input<string>;
+    blockUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Block URL list version
      */
-    blockUrlListVersion?: pulumi.Input<number>;
+    blockUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition.
      */
-    description?: pulumi.Input<string>;
-    loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[]>;
+    description?: pulumi.Input<string | undefined>;
+    loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[] | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of VPN IDs
      */
-    targetVpns?: pulumi.Input<pulumi.Input<string>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * List of categories to block or allow
      */
-    webCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    webCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * whether the selected web categories should be blocked or allowed.
      *   - Choices: `block`, `allow`
      */
-    webCategoriesAction?: pulumi.Input<string>;
+    webCategoriesAction?: pulumi.Input<string | undefined>;
     /**
      * The web reputation of the policy definition
      *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
-    webReputation?: pulumi.Input<string>;
+    webReputation?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -269,62 +269,62 @@ export interface UrlFilteringPolicyDefinitionArgs {
     /**
      * List of alerts options that will be exported as syslog messages
      */
-    alerts?: pulumi.Input<pulumi.Input<string>[]>;
+    alerts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Allow URL list ID
      */
-    allowUrlListId?: pulumi.Input<string>;
+    allowUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Allow URL list version
      */
-    allowUrlListVersion?: pulumi.Input<number>;
+    allowUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * Redirect to a URL or display a message when a blocked page is accessed.
      *   - Choices: `text`, `redirectUrl`
      */
-    blockPageAction?: pulumi.Input<string>;
+    blockPageAction?: pulumi.Input<string | undefined>;
     /**
      * The message displayed or URL redirected to when a blocked page is accessed.
      */
-    blockPageContents?: pulumi.Input<string>;
+    blockPageContents?: pulumi.Input<string | undefined>;
     /**
      * Block URL list ID
      */
-    blockUrlListId?: pulumi.Input<string>;
+    blockUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Block URL list version
      */
-    blockUrlListVersion?: pulumi.Input<number>;
+    blockUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition.
      */
     description: pulumi.Input<string>;
-    loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[]>;
+    loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[] | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of VPN IDs
      */
-    targetVpns?: pulumi.Input<pulumi.Input<string>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of categories to block or allow
      */
-    webCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    webCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * whether the selected web categories should be blocked or allowed.
      *   - Choices: `block`, `allow`
      */
-    webCategoriesAction?: pulumi.Input<string>;
+    webCategoriesAction?: pulumi.Input<string | undefined>;
     /**
      * The web reputation of the policy definition
      *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
-    webReputation?: pulumi.Input<string>;
+    webReputation?: pulumi.Input<string | undefined>;
 }

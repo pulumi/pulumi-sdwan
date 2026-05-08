@@ -23,25 +23,25 @@ class SecurityPolicyArgs:
     def __init__(__self__, *,
                  definitions: pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]],
                  description: pulumi.Input[_builtins.str],
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 direct_internet_applications: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 imcp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]] = None,
-                 match_statistics_per_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_case: Optional[pulumi.Input[_builtins.str]] = None):
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]] = None,
+                 match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_case: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SecurityPolicy resource.
 
@@ -144,7 +144,7 @@ class SecurityPolicyArgs:
 
     @_builtins.property
     @pulumi.getter(name="auditTrail")
-    def audit_trail(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def audit_trail(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Audit trail
           - Choices: `on`, `off`
@@ -152,12 +152,12 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "audit_trail")
 
     @audit_trail.setter
-    def audit_trail(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def audit_trail(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "audit_trail", value)
 
     @_builtins.property
     @pulumi.getter(name="directInternetApplications")
-    def direct_internet_applications(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def direct_internet_applications(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Bypass firewall policy and allow all Internet traffic to/from VPN 0
           - Choices: `allow`, `deny`
@@ -165,12 +165,12 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "direct_internet_applications")
 
     @direct_internet_applications.setter
-    def direct_internet_applications(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def direct_internet_applications(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "direct_internet_applications", value)
 
     @_builtins.property
     @pulumi.getter(name="failureMode")
-    def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def failure_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Failure mode
           - Choices: `open`, `close`
@@ -178,60 +178,60 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "failure_mode")
 
     @failure_mode.setter
-    def failure_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def failure_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "failure_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerIp")
-    def high_speed_logging_server_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_server_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging Server IP
         """
         return pulumi.get(self, "high_speed_logging_server_ip")
 
     @high_speed_logging_server_ip.setter
-    def high_speed_logging_server_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_server_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_server_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerPort")
-    def high_speed_logging_server_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_server_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging Port
         """
         return pulumi.get(self, "high_speed_logging_server_port")
 
     @high_speed_logging_server_port.setter
-    def high_speed_logging_server_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_server_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_server_port", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerSourceInterface")
-    def high_speed_logging_server_source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_server_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging Source Interface
         """
         return pulumi.get(self, "high_speed_logging_server_source_interface")
 
     @high_speed_logging_server_source_interface.setter
-    def high_speed_logging_server_source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_server_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_server_source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingVpn")
-    def high_speed_logging_vpn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_vpn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging VPN
         """
         return pulumi.get(self, "high_speed_logging_vpn")
 
     @high_speed_logging_vpn.setter
-    def high_speed_logging_vpn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_vpn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_vpn", value)
 
     @_builtins.property
     @pulumi.getter(name="imcpUnreachableAllow")
-    def imcp_unreachable_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def imcp_unreachable_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ICMP Unreachable Allow
           - Choices: `on`, `off`
@@ -239,21 +239,21 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "imcp_unreachable_allow")
 
     @imcp_unreachable_allow.setter
-    def imcp_unreachable_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def imcp_unreachable_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "imcp_unreachable_allow", value)
 
     @_builtins.property
     @pulumi.getter
-    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]:
+    def loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]:
         return pulumi.get(self, "loggings")
 
     @loggings.setter
-    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]):
+    def loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]):
         pulumi.set(self, "loggings", value)
 
     @_builtins.property
     @pulumi.getter(name="matchStatisticsPerFilter")
-    def match_statistics_per_filter(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def match_statistics_per_filter(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Match Statistics per-filter
           - Choices: `on`, `off`
@@ -261,48 +261,48 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "match_statistics_per_filter")
 
     @match_statistics_per_filter.setter
-    def match_statistics_per_filter(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def match_statistics_per_filter(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "match_statistics_per_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteIcmpLimit")
-    def max_incomplete_icmp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_icmp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Max Incomplete ICMP Limit
         """
         return pulumi.get(self, "max_incomplete_icmp_limit")
 
     @max_incomplete_icmp_limit.setter
-    def max_incomplete_icmp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_icmp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_icmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteTcpLimit")
-    def max_incomplete_tcp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_tcp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Max Incomplete TCP Limit
         """
         return pulumi.get(self, "max_incomplete_tcp_limit")
 
     @max_incomplete_tcp_limit.setter
-    def max_incomplete_tcp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_tcp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_tcp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteUdpLimit")
-    def max_incomplete_udp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_udp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Max Incomplete UDP Limit
         """
         return pulumi.get(self, "max_incomplete_udp_limit")
 
     @max_incomplete_udp_limit.setter
-    def max_incomplete_udp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_udp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_udp_limit", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -311,24 +311,24 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the security policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionReclassifyAllow")
-    def session_reclassify_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def session_reclassify_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Session Reclassify Allow
           - Choices: `on`, `off`
@@ -336,24 +336,24 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "session_reclassify_allow")
 
     @session_reclassify_allow.setter
-    def session_reclassify_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def session_reclassify_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "session_reclassify_allow", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
-    def tcp_syn_flood_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_syn_flood_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TCP SYN Flood Limit, value from 1 to 4294967295
         """
         return pulumi.get(self, "tcp_syn_flood_limit")
 
     @tcp_syn_flood_limit.setter
-    def tcp_syn_flood_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_syn_flood_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_syn_flood_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="unifiedLogging")
-    def unified_logging(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unified_logging(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unified Logging
           - Choices: `on`, `off`
@@ -361,12 +361,12 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "unified_logging")
 
     @unified_logging.setter
-    def unified_logging(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unified_logging(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unified_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="useCase")
-    def use_case(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def use_case(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The use case of the security policy
           - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
@@ -375,35 +375,35 @@ class SecurityPolicyArgs:
         return pulumi.get(self, "use_case")
 
     @use_case.setter
-    def use_case(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def use_case(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "use_case", value)
 
 
 @pulumi.input_type
 class _SecurityPolicyState:
     def __init__(__self__, *,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 direct_internet_applications: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 imcp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]] = None,
-                 match_statistics_per_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_case: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]] = None,
+                 match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_case: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SecurityPolicy resources.
 
@@ -487,7 +487,7 @@ class _SecurityPolicyState:
 
     @_builtins.property
     @pulumi.getter(name="auditTrail")
-    def audit_trail(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def audit_trail(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Audit trail
           - Choices: `on`, `off`
@@ -495,36 +495,36 @@ class _SecurityPolicyState:
         return pulumi.get(self, "audit_trail")
 
     @audit_trail.setter
-    def audit_trail(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def audit_trail(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "audit_trail", value)
 
     @_builtins.property
     @pulumi.getter
-    def definitions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]]]:
+    def definitions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]]]:
         """
         List of policy definitions
         """
         return pulumi.get(self, "definitions")
 
     @definitions.setter
-    def definitions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]]]):
+    def definitions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]]]):
         pulumi.set(self, "definitions", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the security policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="directInternetApplications")
-    def direct_internet_applications(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def direct_internet_applications(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Bypass firewall policy and allow all Internet traffic to/from VPN 0
           - Choices: `allow`, `deny`
@@ -532,12 +532,12 @@ class _SecurityPolicyState:
         return pulumi.get(self, "direct_internet_applications")
 
     @direct_internet_applications.setter
-    def direct_internet_applications(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def direct_internet_applications(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "direct_internet_applications", value)
 
     @_builtins.property
     @pulumi.getter(name="failureMode")
-    def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def failure_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Failure mode
           - Choices: `open`, `close`
@@ -545,60 +545,60 @@ class _SecurityPolicyState:
         return pulumi.get(self, "failure_mode")
 
     @failure_mode.setter
-    def failure_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def failure_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "failure_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerIp")
-    def high_speed_logging_server_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_server_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging Server IP
         """
         return pulumi.get(self, "high_speed_logging_server_ip")
 
     @high_speed_logging_server_ip.setter
-    def high_speed_logging_server_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_server_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_server_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerPort")
-    def high_speed_logging_server_port(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_server_port(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging Port
         """
         return pulumi.get(self, "high_speed_logging_server_port")
 
     @high_speed_logging_server_port.setter
-    def high_speed_logging_server_port(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_server_port(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_server_port", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerSourceInterface")
-    def high_speed_logging_server_source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_server_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging Source Interface
         """
         return pulumi.get(self, "high_speed_logging_server_source_interface")
 
     @high_speed_logging_server_source_interface.setter
-    def high_speed_logging_server_source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_server_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_server_source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingVpn")
-    def high_speed_logging_vpn(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def high_speed_logging_vpn(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         High Speed Logging VPN
         """
         return pulumi.get(self, "high_speed_logging_vpn")
 
     @high_speed_logging_vpn.setter
-    def high_speed_logging_vpn(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def high_speed_logging_vpn(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "high_speed_logging_vpn", value)
 
     @_builtins.property
     @pulumi.getter(name="imcpUnreachableAllow")
-    def imcp_unreachable_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def imcp_unreachable_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         ICMP Unreachable Allow
           - Choices: `on`, `off`
@@ -606,21 +606,21 @@ class _SecurityPolicyState:
         return pulumi.get(self, "imcp_unreachable_allow")
 
     @imcp_unreachable_allow.setter
-    def imcp_unreachable_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def imcp_unreachable_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "imcp_unreachable_allow", value)
 
     @_builtins.property
     @pulumi.getter
-    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]:
+    def loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]:
         return pulumi.get(self, "loggings")
 
     @loggings.setter
-    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]):
+    def loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyLoggingArgs']]]]):
         pulumi.set(self, "loggings", value)
 
     @_builtins.property
     @pulumi.getter(name="matchStatisticsPerFilter")
-    def match_statistics_per_filter(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def match_statistics_per_filter(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Match Statistics per-filter
           - Choices: `on`, `off`
@@ -628,48 +628,48 @@ class _SecurityPolicyState:
         return pulumi.get(self, "match_statistics_per_filter")
 
     @match_statistics_per_filter.setter
-    def match_statistics_per_filter(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def match_statistics_per_filter(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "match_statistics_per_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteIcmpLimit")
-    def max_incomplete_icmp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_icmp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Max Incomplete ICMP Limit
         """
         return pulumi.get(self, "max_incomplete_icmp_limit")
 
     @max_incomplete_icmp_limit.setter
-    def max_incomplete_icmp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_icmp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_icmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteTcpLimit")
-    def max_incomplete_tcp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_tcp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Max Incomplete TCP Limit
         """
         return pulumi.get(self, "max_incomplete_tcp_limit")
 
     @max_incomplete_tcp_limit.setter
-    def max_incomplete_tcp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_tcp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_tcp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteUdpLimit")
-    def max_incomplete_udp_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_incomplete_udp_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Max Incomplete UDP Limit
         """
         return pulumi.get(self, "max_incomplete_udp_limit")
 
     @max_incomplete_udp_limit.setter
-    def max_incomplete_udp_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_incomplete_udp_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_incomplete_udp_limit", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -678,24 +678,24 @@ class _SecurityPolicyState:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the security policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sessionReclassifyAllow")
-    def session_reclassify_allow(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def session_reclassify_allow(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Session Reclassify Allow
           - Choices: `on`, `off`
@@ -703,24 +703,24 @@ class _SecurityPolicyState:
         return pulumi.get(self, "session_reclassify_allow")
 
     @session_reclassify_allow.setter
-    def session_reclassify_allow(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def session_reclassify_allow(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "session_reclassify_allow", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSynFloodLimit")
-    def tcp_syn_flood_limit(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_syn_flood_limit(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         TCP SYN Flood Limit, value from 1 to 4294967295
         """
         return pulumi.get(self, "tcp_syn_flood_limit")
 
     @tcp_syn_flood_limit.setter
-    def tcp_syn_flood_limit(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_syn_flood_limit(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_syn_flood_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="unifiedLogging")
-    def unified_logging(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unified_logging(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Unified Logging
           - Choices: `on`, `off`
@@ -728,12 +728,12 @@ class _SecurityPolicyState:
         return pulumi.get(self, "unified_logging")
 
     @unified_logging.setter
-    def unified_logging(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unified_logging(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unified_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="useCase")
-    def use_case(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def use_case(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The use case of the security policy
           - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
@@ -742,19 +742,19 @@ class _SecurityPolicyState:
         return pulumi.get(self, "use_case")
 
     @use_case.setter
-    def use_case(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def use_case(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "use_case", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -764,27 +764,27 @@ class SecurityPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 direct_internet_applications: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 imcp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
-                 match_statistics_per_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_case: Optional[pulumi.Input[_builtins.str]] = None,
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
+                 match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_case: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Security Policy .
@@ -909,27 +909,27 @@ class SecurityPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 direct_internet_applications: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_port: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_server_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 high_speed_logging_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-                 imcp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
-                 match_statistics_per_filter: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-                 unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-                 use_case: Optional[pulumi.Input[_builtins.str]] = None,
+                 audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+                 imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
+                 match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+                 unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+                 use_case: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -975,28 +975,28 @@ class SecurityPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            audit_trail: Optional[pulumi.Input[_builtins.str]] = None,
-            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            direct_internet_applications: Optional[pulumi.Input[_builtins.str]] = None,
-            failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            high_speed_logging_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            high_speed_logging_server_port: Optional[pulumi.Input[_builtins.str]] = None,
-            high_speed_logging_server_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            high_speed_logging_vpn: Optional[pulumi.Input[_builtins.str]] = None,
-            imcp_unreachable_allow: Optional[pulumi.Input[_builtins.str]] = None,
-            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
-            match_statistics_per_filter: Optional[pulumi.Input[_builtins.str]] = None,
-            max_incomplete_icmp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            max_incomplete_tcp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            max_incomplete_udp_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            session_reclassify_allow: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_syn_flood_limit: Optional[pulumi.Input[_builtins.str]] = None,
-            unified_logging: Optional[pulumi.Input[_builtins.str]] = None,
-            use_case: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SecurityPolicy':
+            audit_trail: pulumi.Input[Optional[_builtins.str]] = None,
+            definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            direct_internet_applications: pulumi.Input[Optional[_builtins.str]] = None,
+            failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            high_speed_logging_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            high_speed_logging_server_port: pulumi.Input[Optional[_builtins.str]] = None,
+            high_speed_logging_server_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            high_speed_logging_vpn: pulumi.Input[Optional[_builtins.str]] = None,
+            imcp_unreachable_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
+            match_statistics_per_filter: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_icmp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_tcp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            max_incomplete_udp_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            session_reclassify_allow: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_syn_flood_limit: pulumi.Input[Optional[_builtins.str]] = None,
+            unified_logging: pulumi.Input[Optional[_builtins.str]] = None,
+            use_case: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SecurityPolicy':
         """
         Get an existing SecurityPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

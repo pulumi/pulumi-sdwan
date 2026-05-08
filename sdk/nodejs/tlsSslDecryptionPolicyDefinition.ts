@@ -246,95 +246,95 @@ export interface TlsSslDecryptionPolicyDefinitionState {
     /**
      * Certificate Lifetime(in Days)
      */
-    certificateLifetimeInDays?: pulumi.Input<number>;
+    certificateLifetimeInDays?: pulumi.Input<number | undefined>;
     /**
      * Certificate revocation status
      *   - Choices: `ocsp`, `none`
      */
-    certificateRevocationStatus?: pulumi.Input<string>;
+    certificateRevocationStatus?: pulumi.Input<string | undefined>;
     /**
      * Default action (applies when `mode` set to `security`)
      *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition.
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * EC Key Type
      *   - Choices: `P256`, `P384`, `P521`
      */
-    ecKeyType?: pulumi.Input<string>;
+    ecKeyType?: pulumi.Input<string | undefined>;
     /**
      * Expired certificate action
      *   - Choices: `drop`, `decrypt`
      */
-    expiredCertificate?: pulumi.Input<string>;
+    expiredCertificate?: pulumi.Input<string | undefined>;
     /**
      * Failure mode
      *   - Choices: `open`, `close`
      */
-    failureMode?: pulumi.Input<string>;
+    failureMode?: pulumi.Input<string | undefined>;
     /**
      * Minimal TLS Version
      *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      */
-    minimalTlsVersion?: pulumi.Input<string>;
+    minimalTlsVersion?: pulumi.Input<string | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of network rules (applies when `mode` set to `security`)
      */
-    networkRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRule>[]>;
+    networkRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRule>[] | undefined>;
     /**
      * RSA key pair modules
      *   - Choices: `1024`, `2048`, `4096`
      */
-    rsaKeyPairModulus?: pulumi.Input<string>;
+    rsaKeyPairModulus?: pulumi.Input<string | undefined>;
     /**
      * SSL decryption enabled
      */
-    sslDecryptionEnabled?: pulumi.Input<string>;
+    sslDecryptionEnabled?: pulumi.Input<string | undefined>;
     /**
      * Unknown revocation status action
      *   - Choices: `drop`, `decrypt`
      */
-    unknownRevocationStatus?: pulumi.Input<string>;
+    unknownRevocationStatus?: pulumi.Input<string | undefined>;
     /**
      * Unsupported cipher suites action
      *   - Choices: `drop`, `no-decrypt`
      */
-    unsupportedCipherSuites?: pulumi.Input<string>;
+    unsupportedCipherSuites?: pulumi.Input<string | undefined>;
     /**
      * Unsupported protocol versions action
      *   - Choices: `drop`, `no-decrypt`
      */
-    unsupportedProtocolVersions?: pulumi.Input<string>;
+    unsupportedProtocolVersions?: pulumi.Input<string | undefined>;
     /**
      * Untrusted certificate action
      *   - Choices: `drop`, `decrypt`
      */
-    untrustedCertificate?: pulumi.Input<string>;
+    untrustedCertificate?: pulumi.Input<string | undefined>;
     /**
      * List of url rules (applies when `mode` set to `security`)
      */
-    urlRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionUrlRule>[]>;
+    urlRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionUrlRule>[] | undefined>;
     /**
      * Use default CA certificate bundle
      */
-    useDefaultCaCertBundle?: pulumi.Input<boolean>;
+    useDefaultCaCertBundle?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -344,17 +344,17 @@ export interface TlsSslDecryptionPolicyDefinitionArgs {
     /**
      * Certificate Lifetime(in Days)
      */
-    certificateLifetimeInDays?: pulumi.Input<number>;
+    certificateLifetimeInDays?: pulumi.Input<number | undefined>;
     /**
      * Certificate revocation status
      *   - Choices: `ocsp`, `none`
      */
-    certificateRevocationStatus?: pulumi.Input<string>;
+    certificateRevocationStatus?: pulumi.Input<string | undefined>;
     /**
      * Default action (applies when `mode` set to `security`)
      *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition.
      */
@@ -363,70 +363,70 @@ export interface TlsSslDecryptionPolicyDefinitionArgs {
      * EC Key Type
      *   - Choices: `P256`, `P384`, `P521`
      */
-    ecKeyType?: pulumi.Input<string>;
+    ecKeyType?: pulumi.Input<string | undefined>;
     /**
      * Expired certificate action
      *   - Choices: `drop`, `decrypt`
      */
-    expiredCertificate?: pulumi.Input<string>;
+    expiredCertificate?: pulumi.Input<string | undefined>;
     /**
      * Failure mode
      *   - Choices: `open`, `close`
      */
-    failureMode?: pulumi.Input<string>;
+    failureMode?: pulumi.Input<string | undefined>;
     /**
      * Minimal TLS Version
      *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      */
-    minimalTlsVersion?: pulumi.Input<string>;
+    minimalTlsVersion?: pulumi.Input<string | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of network rules (applies when `mode` set to `security`)
      */
-    networkRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRule>[]>;
+    networkRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRule>[] | undefined>;
     /**
      * RSA key pair modules
      *   - Choices: `1024`, `2048`, `4096`
      */
-    rsaKeyPairModulus?: pulumi.Input<string>;
+    rsaKeyPairModulus?: pulumi.Input<string | undefined>;
     /**
      * SSL decryption enabled
      */
-    sslDecryptionEnabled?: pulumi.Input<string>;
+    sslDecryptionEnabled?: pulumi.Input<string | undefined>;
     /**
      * Unknown revocation status action
      *   - Choices: `drop`, `decrypt`
      */
-    unknownRevocationStatus?: pulumi.Input<string>;
+    unknownRevocationStatus?: pulumi.Input<string | undefined>;
     /**
      * Unsupported cipher suites action
      *   - Choices: `drop`, `no-decrypt`
      */
-    unsupportedCipherSuites?: pulumi.Input<string>;
+    unsupportedCipherSuites?: pulumi.Input<string | undefined>;
     /**
      * Unsupported protocol versions action
      *   - Choices: `drop`, `no-decrypt`
      */
-    unsupportedProtocolVersions?: pulumi.Input<string>;
+    unsupportedProtocolVersions?: pulumi.Input<string | undefined>;
     /**
      * Untrusted certificate action
      *   - Choices: `drop`, `decrypt`
      */
-    untrustedCertificate?: pulumi.Input<string>;
+    untrustedCertificate?: pulumi.Input<string | undefined>;
     /**
      * List of url rules (applies when `mode` set to `security`)
      */
-    urlRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionUrlRule>[]>;
+    urlRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionUrlRule>[] | undefined>;
     /**
      * Use default CA certificate bundle
      */
-    useDefaultCaCertBundle?: pulumi.Input<boolean>;
+    useDefaultCaCertBundle?: pulumi.Input<boolean | undefined>;
 }

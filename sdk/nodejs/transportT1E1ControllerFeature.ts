@@ -164,36 +164,36 @@ export interface TransportT1E1ControllerFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Controller tx-ex List
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.TransportT1E1ControllerFeatureEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.TransportT1E1ControllerFeatureEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Slot number
      */
-    slot?: pulumi.Input<string>;
+    slot?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    slotVariable?: pulumi.Input<string>;
+    slotVariable?: pulumi.Input<string | undefined>;
     /**
      * Card Type
      *   - Choices: `e1`, `t1`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -203,7 +203,7 @@ export interface TransportT1E1ControllerFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Controller tx-ex List
      */
@@ -215,15 +215,15 @@ export interface TransportT1E1ControllerFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Slot number
      */
-    slot?: pulumi.Input<string>;
+    slot?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    slotVariable?: pulumi.Input<string>;
+    slotVariable?: pulumi.Input<string | undefined>;
     /**
      * Card Type
      *   - Choices: `e1`, `t1`

@@ -121,19 +121,19 @@ export interface ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
-    serviceLanVpnFeatureId?: pulumi.Input<string>;
+    serviceLanVpnFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Service Routing OSPFv3 IPv6 Feature ID
      */
-    serviceRoutingOspfv3Ipv6FeatureId?: pulumi.Input<string>;
+    serviceRoutingOspfv3Ipv6FeatureId?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**

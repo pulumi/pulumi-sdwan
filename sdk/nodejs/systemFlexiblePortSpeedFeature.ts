@@ -130,29 +130,29 @@ export interface SystemFlexiblePortSpeedFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * port Type
      *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
      *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      */
-    portType?: pulumi.Input<string>;
+    portType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    portTypeVariable?: pulumi.Input<string>;
+    portTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -162,7 +162,7 @@ export interface SystemFlexiblePortSpeedFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -170,15 +170,15 @@ export interface SystemFlexiblePortSpeedFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * port Type
      *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
      *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      */
-    portType?: pulumi.Input<string>;
+    portType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    portTypeVariable?: pulumi.Input<string>;
+    portTypeVariable?: pulumi.Input<string | undefined>;
 }

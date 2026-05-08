@@ -2157,8 +2157,8 @@ def get_vpn_interface_dsl_pppoe_feature_template(id: Optional[_builtins.str] = N
         vpn_qos_map_variable=pulumi.get(__ret__, 'vpn_qos_map_variable'),
         write_rule=pulumi.get(__ret__, 'write_rule'),
         write_rule_variable=pulumi.get(__ret__, 'write_rule_variable'))
-def get_vpn_interface_dsl_pppoe_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_vpn_interface_dsl_pppoe_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                        name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVpnInterfaceDslPppoeFeatureTemplateResult]:
     """
     This data source can read the VPN Interface DSL PPPoE feature template.

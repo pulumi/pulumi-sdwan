@@ -143,27 +143,27 @@ export interface RoutePolicyDefinitionState {
      * Default action, either `accept` or `reject`
      *   - Choices: `accept`, `reject`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of ACL sequences
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequence>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -174,7 +174,7 @@ export interface RoutePolicyDefinitionArgs {
      * Default action, either `accept` or `reject`
      *   - Choices: `accept`, `reject`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
@@ -182,9 +182,9 @@ export interface RoutePolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of ACL sequences
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequence>[] | undefined>;
 }

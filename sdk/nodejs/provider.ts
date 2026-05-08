@@ -79,27 +79,27 @@ export interface ProviderArgs {
     /**
      * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
      */
-    insecure?: pulumi.Input<boolean>;
+    insecure?: pulumi.Input<boolean | undefined>;
     /**
      * Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
      */
-    retries?: pulumi.Input<number>;
+    retries?: pulumi.Input<number | undefined>;
     /**
      * Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
      */
-    taskTimeout?: pulumi.Input<number>;
+    taskTimeout?: pulumi.Input<number | undefined>;
     /**
      * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
     /**
      * Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
 }
 
 export namespace Provider {

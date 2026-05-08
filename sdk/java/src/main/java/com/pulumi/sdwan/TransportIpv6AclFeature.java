@@ -33,8 +33,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TransportIpv6AclFeature;
  * import com.pulumi.sdwan.TransportIpv6AclFeatureArgs;
  * import com.pulumi.sdwan.inputs.TransportIpv6AclFeatureSequenceArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -61,7 +61,7 @@ import javax.annotation.Nullable;
  *                         .port("8000")
  *                         .build())
  *                     .tcpState("syn")
- *                     .trafficClass(List.of(10))
+ *                     .trafficClass(Arrays.asList(10))
  *                     .build())
  *                 .actions(TransportIpv6AclFeatureSequenceActionArgs.builder()
  *                     .acceptCounterName("COUNTER_1")

@@ -196,66 +196,66 @@ export interface LocalizedPolicyState {
      * IPv4 application visibility
      *   - Default value: `false`
      */
-    applicationVisibilityIpv4?: pulumi.Input<boolean>;
+    applicationVisibilityIpv4?: pulumi.Input<boolean | undefined>;
     /**
      * IPv6 application visibility
      *   - Default value: `false`
      */
-    applicationVisibilityIpv6?: pulumi.Input<boolean>;
+    applicationVisibilityIpv6?: pulumi.Input<boolean | undefined>;
     /**
      * Cloud QoS
      */
-    cloudQos?: pulumi.Input<boolean>;
+    cloudQos?: pulumi.Input<boolean | undefined>;
     /**
      * Cloud QoS service side
      */
-    cloudQosServiceSide?: pulumi.Input<boolean>;
+    cloudQosServiceSide?: pulumi.Input<boolean | undefined>;
     /**
      * List of policy definitions
      */
-    definitions?: pulumi.Input<pulumi.Input<inputs.LocalizedPolicyDefinition>[]>;
+    definitions?: pulumi.Input<pulumi.Input<inputs.LocalizedPolicyDefinition>[] | undefined>;
     /**
      * The description of the localized policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IPv4 flow visibility
      *   - Default value: `false`
      */
-    flowVisibilityIpv4?: pulumi.Input<boolean>;
+    flowVisibilityIpv4?: pulumi.Input<boolean | undefined>;
     /**
      * IPv6 flow visibility
      *   - Default value: `false`
      */
-    flowVisibilityIpv6?: pulumi.Input<boolean>;
+    flowVisibilityIpv6?: pulumi.Input<boolean | undefined>;
     /**
      * Implicit ACL logging
      *   - Default value: `false`
      */
-    implicitAclLogging?: pulumi.Input<boolean>;
+    implicitAclLogging?: pulumi.Input<boolean | undefined>;
     /**
      * IPv4 visibility cache entries
      *   - Range: `16`-`2000000`
      */
-    ipv4VisibilityCacheEntries?: pulumi.Input<number>;
+    ipv4VisibilityCacheEntries?: pulumi.Input<number | undefined>;
     /**
      * IPv6 visibility cache entries
      *   - Range: `16`-`2000000`
      */
-    ipv6VisibilityCacheEntries?: pulumi.Input<number>;
+    ipv6VisibilityCacheEntries?: pulumi.Input<number | undefined>;
     /**
      * Log frequency
      *   - Range: `1`-`2147483647`
      */
-    logFrequency?: pulumi.Input<number>;
+    logFrequency?: pulumi.Input<number | undefined>;
     /**
      * The name of the localized policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -266,24 +266,24 @@ export interface LocalizedPolicyArgs {
      * IPv4 application visibility
      *   - Default value: `false`
      */
-    applicationVisibilityIpv4?: pulumi.Input<boolean>;
+    applicationVisibilityIpv4?: pulumi.Input<boolean | undefined>;
     /**
      * IPv6 application visibility
      *   - Default value: `false`
      */
-    applicationVisibilityIpv6?: pulumi.Input<boolean>;
+    applicationVisibilityIpv6?: pulumi.Input<boolean | undefined>;
     /**
      * Cloud QoS
      */
-    cloudQos?: pulumi.Input<boolean>;
+    cloudQos?: pulumi.Input<boolean | undefined>;
     /**
      * Cloud QoS service side
      */
-    cloudQosServiceSide?: pulumi.Input<boolean>;
+    cloudQosServiceSide?: pulumi.Input<boolean | undefined>;
     /**
      * List of policy definitions
      */
-    definitions?: pulumi.Input<pulumi.Input<inputs.LocalizedPolicyDefinition>[]>;
+    definitions?: pulumi.Input<pulumi.Input<inputs.LocalizedPolicyDefinition>[] | undefined>;
     /**
      * The description of the localized policy
      */
@@ -292,34 +292,34 @@ export interface LocalizedPolicyArgs {
      * IPv4 flow visibility
      *   - Default value: `false`
      */
-    flowVisibilityIpv4?: pulumi.Input<boolean>;
+    flowVisibilityIpv4?: pulumi.Input<boolean | undefined>;
     /**
      * IPv6 flow visibility
      *   - Default value: `false`
      */
-    flowVisibilityIpv6?: pulumi.Input<boolean>;
+    flowVisibilityIpv6?: pulumi.Input<boolean | undefined>;
     /**
      * Implicit ACL logging
      *   - Default value: `false`
      */
-    implicitAclLogging?: pulumi.Input<boolean>;
+    implicitAclLogging?: pulumi.Input<boolean | undefined>;
     /**
      * IPv4 visibility cache entries
      *   - Range: `16`-`2000000`
      */
-    ipv4VisibilityCacheEntries?: pulumi.Input<number>;
+    ipv4VisibilityCacheEntries?: pulumi.Input<number | undefined>;
     /**
      * IPv6 visibility cache entries
      *   - Range: `16`-`2000000`
      */
-    ipv6VisibilityCacheEntries?: pulumi.Input<number>;
+    ipv6VisibilityCacheEntries?: pulumi.Input<number | undefined>;
     /**
      * Log frequency
      *   - Range: `1`-`2147483647`
      */
-    logFrequency?: pulumi.Input<number>;
+    logFrequency?: pulumi.Input<number | undefined>;
     /**
      * The name of the localized policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

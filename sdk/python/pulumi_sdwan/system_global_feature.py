@@ -20,62 +20,62 @@ __all__ = ['SystemGlobalFeatureArgs', 'SystemGlobalFeature']
 class SystemGlobalFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
-                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vty_line_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_community_new_format: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: pulumi.Input[Optional[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lacp_system_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 lacp_system_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vty_line_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_line_logging_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemGlobalFeature resource.
 
@@ -293,7 +293,7 @@ class SystemGlobalFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="arpProxy")
-    def arp_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def arp_proxy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set ARP Proxy
           - Default value: `false`
@@ -301,24 +301,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "arp_proxy")
 
     @arp_proxy.setter
-    def arp_proxy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def arp_proxy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "arp_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="arpProxyVariable")
-    def arp_proxy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def arp_proxy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "arp_proxy_variable")
 
     @arp_proxy_variable.setter
-    def arp_proxy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def arp_proxy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "arp_proxy_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpCommunityNewFormat")
-    def bgp_community_new_format(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def bgp_community_new_format(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
           - Default value: `false`
@@ -326,24 +326,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "bgp_community_new_format")
 
     @bgp_community_new_format.setter
-    def bgp_community_new_format(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def bgp_community_new_format(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "bgp_community_new_format", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpCommunityNewFormatVariable")
-    def bgp_community_new_format_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bgp_community_new_format_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "bgp_community_new_format_variable")
 
     @bgp_community_new_format_variable.setter
-    def bgp_community_new_format_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bgp_community_new_format_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bgp_community_new_format_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cdp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure CDP
           - Default value: `true`
@@ -351,24 +351,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "cdp")
 
     @cdp.setter
-    def cdp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cdp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cdp", value)
 
     @_builtins.property
     @pulumi.getter(name="cdpVariable")
-    def cdp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cdp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "cdp_variable")
 
     @cdp_variable.setter
-    def cdp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cdp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cdp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLogging")
-    def console_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def console_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Console Logging
           - Default value: `true`
@@ -376,36 +376,36 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "console_logging")
 
     @console_logging.setter
-    def console_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def console_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "console_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLoggingVariable")
-    def console_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "console_logging_variable")
 
     @console_logging_variable.setter
-    def console_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_logging_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookup")
-    def domain_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def domain_lookup(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Domain-Lookup
           - Default value: `false`
@@ -413,24 +413,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "domain_lookup")
 
     @domain_lookup.setter
-    def domain_lookup(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def domain_lookup(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "domain_lookup", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookupVariable")
-    def domain_lookup_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_lookup_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_lookup_variable")
 
     @domain_lookup_variable.setter
-    def domain_lookup_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_lookup_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_lookup_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelFlowLoadBalance")
-    def etherchannel_flow_load_balance(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def etherchannel_flow_load_balance(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set Etherchannel load balance hash algorithm
           - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
@@ -438,24 +438,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "etherchannel_flow_load_balance")
 
     @etherchannel_flow_load_balance.setter
-    def etherchannel_flow_load_balance(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def etherchannel_flow_load_balance(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "etherchannel_flow_load_balance", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelFlowLoadBalanceVariable")
-    def etherchannel_flow_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def etherchannel_flow_load_balance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "etherchannel_flow_load_balance_variable")
 
     @etherchannel_flow_load_balance_variable.setter
-    def etherchannel_flow_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def etherchannel_flow_load_balance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "etherchannel_flow_load_balance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelVlanLoadBalance")
-    def etherchannel_vlan_load_balance(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def etherchannel_vlan_load_balance(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Etherchannel vlan manual load balance
           - Default value: `false`
@@ -463,24 +463,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "etherchannel_vlan_load_balance")
 
     @etherchannel_vlan_load_balance.setter
-    def etherchannel_vlan_load_balance(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def etherchannel_vlan_load_balance(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "etherchannel_vlan_load_balance", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelVlanLoadBalanceVariable")
-    def etherchannel_vlan_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def etherchannel_vlan_load_balance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "etherchannel_vlan_load_balance_variable")
 
     @etherchannel_vlan_load_balance_variable.setter
-    def etherchannel_vlan_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def etherchannel_vlan_load_balance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "etherchannel_vlan_load_balance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassive")
-    def ftp_passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ftp_passive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Passive FTP
           - Default value: `false`
@@ -488,24 +488,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "ftp_passive")
 
     @ftp_passive.setter
-    def ftp_passive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ftp_passive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ftp_passive", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassiveVariable")
-    def ftp_passive_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ftp_passive_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ftp_passive_variable")
 
     @ftp_passive_variable.setter
-    def ftp_passive_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ftp_passive_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ftp_passive_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthentication")
-    def http_authentication(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set preference for HTTP Authentication
           - Choices: `local`, `aaa`
@@ -513,24 +513,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "http_authentication")
 
     @http_authentication.setter
-    def http_authentication(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthenticationVariable")
-    def http_authentication_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_authentication_variable")
 
     @http_authentication_variable.setter
-    def http_authentication_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set a HTTP Server
           - Default value: `false`
@@ -538,24 +538,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServerVariable")
-    def http_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_server_variable")
 
     @http_server_variable.setter
-    def http_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServer")
-    def https_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def https_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set a HTTPS Server
           - Default value: `false`
@@ -563,24 +563,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "https_server")
 
     @https_server.setter
-    def https_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def https_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "https_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServerVariable")
-    def https_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def https_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "https_server_variable")
 
     @https_server_variable.setter
-    def https_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def https_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "https_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreBootp")
-    def ignore_bootp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ignore_bootp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Ignore BOOTP
           - Default value: `true`
@@ -588,24 +588,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "ignore_bootp")
 
     @ignore_bootp.setter
-    def ignore_bootp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ignore_bootp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ignore_bootp", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreBootpVariable")
-    def ignore_bootp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ignore_bootp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ignore_bootp_variable")
 
     @ignore_bootp_variable.setter
-    def ignore_bootp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ignore_bootp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ignore_bootp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRouting")
-    def ip_source_routing(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ip_source_routing(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Source Route
           - Default value: `false`
@@ -613,24 +613,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "ip_source_routing")
 
     @ip_source_routing.setter
-    def ip_source_routing(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ip_source_routing(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ip_source_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRoutingVariable")
-    def ip_source_routing_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_source_routing_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_source_routing_variable")
 
     @ip_source_routing_variable.setter
-    def ip_source_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_source_routing_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_source_routing_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lacpSystemPriority")
-    def lacp_system_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def lacp_system_priority(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set LACP system priority
           - Range: `1`-`65535`
@@ -638,24 +638,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "lacp_system_priority")
 
     @lacp_system_priority.setter
-    def lacp_system_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def lacp_system_priority(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "lacp_system_priority", value)
 
     @_builtins.property
     @pulumi.getter(name="lacpSystemPriorityVariable")
-    def lacp_system_priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lacp_system_priority_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lacp_system_priority_variable")
 
     @lacp_system_priority_variable.setter
-    def lacp_system_priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lacp_system_priority_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lacp_system_priority_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
-    def line_vty(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def line_vty(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Telnet (Outbound)
           - Default value: `false`
@@ -663,24 +663,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "line_vty")
 
     @line_vty.setter
-    def line_vty(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def line_vty(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "line_vty", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVtyVariable")
-    def line_vty_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def line_vty_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "line_vty_variable")
 
     @line_vty_variable.setter
-    def line_vty_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def line_vty_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "line_vty_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def lldp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def lldp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure LLDP
           - Default value: `true`
@@ -688,36 +688,36 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "lldp")
 
     @lldp.setter
-    def lldp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def lldp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "lldp", value)
 
     @_builtins.property
     @pulumi.getter(name="lldpVariable")
-    def lldp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lldp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lldp_variable")
 
     @lldp_variable.setter
-    def lldp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lldp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lldp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeout")
-    def nat64_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_tcp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 TCP session timeout, in seconds
           - Range: `1`-`536870`
@@ -726,24 +726,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "nat64_tcp_timeout")
 
     @nat64_tcp_timeout.setter
-    def nat64_tcp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_tcp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_tcp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeoutVariable")
-    def nat64_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_tcp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_tcp_timeout_variable")
 
     @nat64_tcp_timeout_variable.setter
-    def nat64_tcp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_tcp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_tcp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeout")
-    def nat64_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_udp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 UDP session timeout, in seconds
           - Range: `1`-`536870`
@@ -752,24 +752,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "nat64_udp_timeout")
 
     @nat64_udp_timeout.setter
-    def nat64_udp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_udp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_udp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeoutVariable")
-    def nat64_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_udp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_udp_timeout_variable")
 
     @nat64_udp_timeout_variable.setter
-    def nat64_udp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_udp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_udp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcp")
-    def rsh_rcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rsh_rcp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set RSH/RCP
           - Default value: `false`
@@ -777,24 +777,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "rsh_rcp")
 
     @rsh_rcp.setter
-    def rsh_rcp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rsh_rcp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rsh_rcp", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcpVariable")
-    def rsh_rcp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rsh_rcp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rsh_rcp_variable")
 
     @rsh_rcp_variable.setter
-    def rsh_rcp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rsh_rcp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rsh_rcp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersist")
-    def snmp_ifindex_persist(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_ifindex_persist(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure SNMP Ifindex Persist
           - Default value: `true`
@@ -802,48 +802,48 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "snmp_ifindex_persist")
 
     @snmp_ifindex_persist.setter
-    def snmp_ifindex_persist(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_ifindex_persist(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_ifindex_persist", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersistVariable")
-    def snmp_ifindex_persist_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_ifindex_persist_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "snmp_ifindex_persist_variable")
 
     @snmp_ifindex_persist_variable.setter
-    def snmp_ifindex_persist_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_ifindex_persist_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_ifindex_persist_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterface")
-    def source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Specify interface for source address in all HTTP(S) client connections
         """
         return pulumi.get(self, "source_interface")
 
     @source_interface.setter
-    def source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterfaceVariable")
-    def source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "source_interface_variable")
 
     @source_interface_variable.setter
-    def source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersion")
-    def ssh_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ssh_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set SSH version
           - Choices: `2`
@@ -851,24 +851,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "ssh_version")
 
     @ssh_version.setter
-    def ssh_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ssh_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ssh_version", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersionVariable")
-    def ssh_version_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ssh_version_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ssh_version_variable")
 
     @ssh_version_variable.setter
-    def ssh_version_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ssh_version_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ssh_version_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesIn")
-    def tcp_keepalives_in(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_in(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-in
           - Default value: `true`
@@ -876,24 +876,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "tcp_keepalives_in")
 
     @tcp_keepalives_in.setter
-    def tcp_keepalives_in(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_in(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_in", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesInVariable")
-    def tcp_keepalives_in_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_in_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_in_variable")
 
     @tcp_keepalives_in_variable.setter
-    def tcp_keepalives_in_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_in_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_in_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOut")
-    def tcp_keepalives_out(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_out(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-out
           - Default value: `true`
@@ -901,24 +901,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "tcp_keepalives_out")
 
     @tcp_keepalives_out.setter
-    def tcp_keepalives_out(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_out(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_out", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOutVariable")
-    def tcp_keepalives_out_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_out_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_out_variable")
 
     @tcp_keepalives_out_variable.setter
-    def tcp_keepalives_out_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_out_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_out_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServers")
-    def tcp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-small-servers
           - Default value: `false`
@@ -926,24 +926,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "tcp_small_servers")
 
     @tcp_small_servers.setter
-    def tcp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServersVariable")
-    def tcp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_small_servers_variable")
 
     @tcp_small_servers_variable.setter
-    def tcp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServers")
-    def udp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def udp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure udp-small-servers
           - Default value: `false`
@@ -951,24 +951,24 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "udp_small_servers")
 
     @udp_small_servers.setter
-    def udp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def udp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "udp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServersVariable")
-    def udp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "udp_small_servers_variable")
 
     @udp_small_servers_variable.setter
-    def udp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLineLogging")
-    def vty_line_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def vty_line_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure VTY Line Logging
           - Default value: `false`
@@ -976,83 +976,83 @@ class SystemGlobalFeatureArgs:
         return pulumi.get(self, "vty_line_logging")
 
     @vty_line_logging.setter
-    def vty_line_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def vty_line_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "vty_line_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLineLoggingVariable")
-    def vty_line_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vty_line_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vty_line_logging_variable")
 
     @vty_line_logging_variable.setter
-    def vty_line_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vty_line_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vty_line_logging_variable", value)
 
 
 @pulumi.input_type
 class _SystemGlobalFeatureState:
     def __init__(__self__, *,
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
-                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vty_line_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_community_new_format: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: pulumi.Input[Optional[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lacp_system_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 lacp_system_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vty_line_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_line_logging_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SystemGlobalFeature resources.
 
@@ -1262,7 +1262,7 @@ class _SystemGlobalFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="arpProxy")
-    def arp_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def arp_proxy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set ARP Proxy
           - Default value: `false`
@@ -1270,24 +1270,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "arp_proxy")
 
     @arp_proxy.setter
-    def arp_proxy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def arp_proxy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "arp_proxy", value)
 
     @_builtins.property
     @pulumi.getter(name="arpProxyVariable")
-    def arp_proxy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def arp_proxy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "arp_proxy_variable")
 
     @arp_proxy_variable.setter
-    def arp_proxy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def arp_proxy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "arp_proxy_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpCommunityNewFormat")
-    def bgp_community_new_format(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def bgp_community_new_format(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Display community attributes in the newer format. Instead of displaying communities as a 32-bit value, it shows them as two 16-bit integers separated by a colon (AA:NN format)
           - Default value: `false`
@@ -1295,24 +1295,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "bgp_community_new_format")
 
     @bgp_community_new_format.setter
-    def bgp_community_new_format(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def bgp_community_new_format(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "bgp_community_new_format", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpCommunityNewFormatVariable")
-    def bgp_community_new_format_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bgp_community_new_format_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "bgp_community_new_format_variable")
 
     @bgp_community_new_format_variable.setter
-    def bgp_community_new_format_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bgp_community_new_format_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bgp_community_new_format_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cdp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure CDP
           - Default value: `true`
@@ -1320,24 +1320,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "cdp")
 
     @cdp.setter
-    def cdp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cdp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cdp", value)
 
     @_builtins.property
     @pulumi.getter(name="cdpVariable")
-    def cdp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def cdp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "cdp_variable")
 
     @cdp_variable.setter
-    def cdp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def cdp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "cdp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLogging")
-    def console_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def console_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Console Logging
           - Default value: `true`
@@ -1345,36 +1345,36 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "console_logging")
 
     @console_logging.setter
-    def console_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def console_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "console_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleLoggingVariable")
-    def console_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "console_logging_variable")
 
     @console_logging_variable.setter
-    def console_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_logging_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookup")
-    def domain_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def domain_lookup(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Domain-Lookup
           - Default value: `false`
@@ -1382,24 +1382,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "domain_lookup")
 
     @domain_lookup.setter
-    def domain_lookup(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def domain_lookup(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "domain_lookup", value)
 
     @_builtins.property
     @pulumi.getter(name="domainLookupVariable")
-    def domain_lookup_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_lookup_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_lookup_variable")
 
     @domain_lookup_variable.setter
-    def domain_lookup_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_lookup_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_lookup_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelFlowLoadBalance")
-    def etherchannel_flow_load_balance(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def etherchannel_flow_load_balance(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set Etherchannel load balance hash algorithm
           - Choices: `src-ip`, `dst-ip`, `src-dst-ip`, `src-mac`, `dst-mac`, `src-dst-mac`, `src-dst-mixed-ip-port`, `sdwan`
@@ -1407,24 +1407,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "etherchannel_flow_load_balance")
 
     @etherchannel_flow_load_balance.setter
-    def etherchannel_flow_load_balance(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def etherchannel_flow_load_balance(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "etherchannel_flow_load_balance", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelFlowLoadBalanceVariable")
-    def etherchannel_flow_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def etherchannel_flow_load_balance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "etherchannel_flow_load_balance_variable")
 
     @etherchannel_flow_load_balance_variable.setter
-    def etherchannel_flow_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def etherchannel_flow_load_balance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "etherchannel_flow_load_balance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelVlanLoadBalance")
-    def etherchannel_vlan_load_balance(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def etherchannel_vlan_load_balance(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Etherchannel vlan manual load balance
           - Default value: `false`
@@ -1432,36 +1432,36 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "etherchannel_vlan_load_balance")
 
     @etherchannel_vlan_load_balance.setter
-    def etherchannel_vlan_load_balance(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def etherchannel_vlan_load_balance(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "etherchannel_vlan_load_balance", value)
 
     @_builtins.property
     @pulumi.getter(name="etherchannelVlanLoadBalanceVariable")
-    def etherchannel_vlan_load_balance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def etherchannel_vlan_load_balance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "etherchannel_vlan_load_balance_variable")
 
     @etherchannel_vlan_load_balance_variable.setter
-    def etherchannel_vlan_load_balance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def etherchannel_vlan_load_balance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "etherchannel_vlan_load_balance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassive")
-    def ftp_passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ftp_passive(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Passive FTP
           - Default value: `false`
@@ -1469,24 +1469,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "ftp_passive")
 
     @ftp_passive.setter
-    def ftp_passive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ftp_passive(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ftp_passive", value)
 
     @_builtins.property
     @pulumi.getter(name="ftpPassiveVariable")
-    def ftp_passive_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ftp_passive_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ftp_passive_variable")
 
     @ftp_passive_variable.setter
-    def ftp_passive_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ftp_passive_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ftp_passive_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthentication")
-    def http_authentication(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set preference for HTTP Authentication
           - Choices: `local`, `aaa`
@@ -1494,24 +1494,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "http_authentication")
 
     @http_authentication.setter
-    def http_authentication(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication", value)
 
     @_builtins.property
     @pulumi.getter(name="httpAuthenticationVariable")
-    def http_authentication_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_authentication_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_authentication_variable")
 
     @http_authentication_variable.setter
-    def http_authentication_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_authentication_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_authentication_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServer")
-    def http_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def http_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set a HTTP Server
           - Default value: `false`
@@ -1519,24 +1519,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "http_server")
 
     @http_server.setter
-    def http_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def http_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "http_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpServerVariable")
-    def http_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def http_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "http_server_variable")
 
     @http_server_variable.setter
-    def http_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def http_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "http_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServer")
-    def https_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def https_server(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set a HTTPS Server
           - Default value: `false`
@@ -1544,24 +1544,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "https_server")
 
     @https_server.setter
-    def https_server(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def https_server(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "https_server", value)
 
     @_builtins.property
     @pulumi.getter(name="httpsServerVariable")
-    def https_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def https_server_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "https_server_variable")
 
     @https_server_variable.setter
-    def https_server_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def https_server_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "https_server_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreBootp")
-    def ignore_bootp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ignore_bootp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Ignore BOOTP
           - Default value: `true`
@@ -1569,24 +1569,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "ignore_bootp")
 
     @ignore_bootp.setter
-    def ignore_bootp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ignore_bootp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ignore_bootp", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreBootpVariable")
-    def ignore_bootp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ignore_bootp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ignore_bootp_variable")
 
     @ignore_bootp_variable.setter
-    def ignore_bootp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ignore_bootp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ignore_bootp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRouting")
-    def ip_source_routing(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ip_source_routing(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set Source Route
           - Default value: `false`
@@ -1594,24 +1594,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "ip_source_routing")
 
     @ip_source_routing.setter
-    def ip_source_routing(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ip_source_routing(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ip_source_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="ipSourceRoutingVariable")
-    def ip_source_routing_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_source_routing_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_source_routing_variable")
 
     @ip_source_routing_variable.setter
-    def ip_source_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_source_routing_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_source_routing_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lacpSystemPriority")
-    def lacp_system_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def lacp_system_priority(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set LACP system priority
           - Range: `1`-`65535`
@@ -1619,24 +1619,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "lacp_system_priority")
 
     @lacp_system_priority.setter
-    def lacp_system_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def lacp_system_priority(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "lacp_system_priority", value)
 
     @_builtins.property
     @pulumi.getter(name="lacpSystemPriorityVariable")
-    def lacp_system_priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lacp_system_priority_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lacp_system_priority_variable")
 
     @lacp_system_priority_variable.setter
-    def lacp_system_priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lacp_system_priority_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lacp_system_priority_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVty")
-    def line_vty(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def line_vty(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure Telnet (Outbound)
           - Default value: `false`
@@ -1644,24 +1644,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "line_vty")
 
     @line_vty.setter
-    def line_vty(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def line_vty(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "line_vty", value)
 
     @_builtins.property
     @pulumi.getter(name="lineVtyVariable")
-    def line_vty_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def line_vty_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "line_vty_variable")
 
     @line_vty_variable.setter
-    def line_vty_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def line_vty_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "line_vty_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def lldp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def lldp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure LLDP
           - Default value: `true`
@@ -1669,36 +1669,36 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "lldp")
 
     @lldp.setter
-    def lldp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def lldp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "lldp", value)
 
     @_builtins.property
     @pulumi.getter(name="lldpVariable")
-    def lldp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lldp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lldp_variable")
 
     @lldp_variable.setter
-    def lldp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lldp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lldp_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeout")
-    def nat64_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_tcp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 TCP session timeout, in seconds
           - Range: `1`-`536870`
@@ -1707,24 +1707,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "nat64_tcp_timeout")
 
     @nat64_tcp_timeout.setter
-    def nat64_tcp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_tcp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_tcp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64TcpTimeoutVariable")
-    def nat64_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_tcp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_tcp_timeout_variable")
 
     @nat64_tcp_timeout_variable.setter
-    def nat64_tcp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_tcp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_tcp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeout")
-    def nat64_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def nat64_udp_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set NAT64 UDP session timeout, in seconds
           - Range: `1`-`536870`
@@ -1733,24 +1733,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "nat64_udp_timeout")
 
     @nat64_udp_timeout.setter
-    def nat64_udp_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def nat64_udp_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "nat64_udp_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="nat64UdpTimeoutVariable")
-    def nat64_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def nat64_udp_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "nat64_udp_timeout_variable")
 
     @nat64_udp_timeout_variable.setter
-    def nat64_udp_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def nat64_udp_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "nat64_udp_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcp")
-    def rsh_rcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def rsh_rcp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Set RSH/RCP
           - Default value: `false`
@@ -1758,24 +1758,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "rsh_rcp")
 
     @rsh_rcp.setter
-    def rsh_rcp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def rsh_rcp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "rsh_rcp", value)
 
     @_builtins.property
     @pulumi.getter(name="rshRcpVariable")
-    def rsh_rcp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rsh_rcp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rsh_rcp_variable")
 
     @rsh_rcp_variable.setter
-    def rsh_rcp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rsh_rcp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rsh_rcp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersist")
-    def snmp_ifindex_persist(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def snmp_ifindex_persist(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure SNMP Ifindex Persist
           - Default value: `true`
@@ -1783,48 +1783,48 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "snmp_ifindex_persist")
 
     @snmp_ifindex_persist.setter
-    def snmp_ifindex_persist(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def snmp_ifindex_persist(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "snmp_ifindex_persist", value)
 
     @_builtins.property
     @pulumi.getter(name="snmpIfindexPersistVariable")
-    def snmp_ifindex_persist_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def snmp_ifindex_persist_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "snmp_ifindex_persist_variable")
 
     @snmp_ifindex_persist_variable.setter
-    def snmp_ifindex_persist_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def snmp_ifindex_persist_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "snmp_ifindex_persist_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterface")
-    def source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Specify interface for source address in all HTTP(S) client connections
         """
         return pulumi.get(self, "source_interface")
 
     @source_interface.setter
-    def source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceInterfaceVariable")
-    def source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "source_interface_variable")
 
     @source_interface_variable.setter
-    def source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersion")
-    def ssh_version(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ssh_version(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set SSH version
           - Choices: `2`
@@ -1832,24 +1832,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "ssh_version")
 
     @ssh_version.setter
-    def ssh_version(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ssh_version(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ssh_version", value)
 
     @_builtins.property
     @pulumi.getter(name="sshVersionVariable")
-    def ssh_version_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ssh_version_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ssh_version_variable")
 
     @ssh_version_variable.setter
-    def ssh_version_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ssh_version_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ssh_version_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesIn")
-    def tcp_keepalives_in(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_in(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-in
           - Default value: `true`
@@ -1857,24 +1857,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "tcp_keepalives_in")
 
     @tcp_keepalives_in.setter
-    def tcp_keepalives_in(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_in(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_in", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesInVariable")
-    def tcp_keepalives_in_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_in_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_in_variable")
 
     @tcp_keepalives_in_variable.setter
-    def tcp_keepalives_in_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_in_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_in_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOut")
-    def tcp_keepalives_out(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_keepalives_out(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-keepalives-out
           - Default value: `true`
@@ -1882,24 +1882,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "tcp_keepalives_out")
 
     @tcp_keepalives_out.setter
-    def tcp_keepalives_out(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_keepalives_out(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_keepalives_out", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpKeepalivesOutVariable")
-    def tcp_keepalives_out_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_keepalives_out_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_keepalives_out_variable")
 
     @tcp_keepalives_out_variable.setter
-    def tcp_keepalives_out_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_keepalives_out_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_keepalives_out_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServers")
-    def tcp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tcp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tcp-small-servers
           - Default value: `false`
@@ -1907,24 +1907,24 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "tcp_small_servers")
 
     @tcp_small_servers.setter
-    def tcp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tcp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tcp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpSmallServersVariable")
-    def tcp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_small_servers_variable")
 
     @tcp_small_servers_variable.setter
-    def tcp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServers")
-    def udp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def udp_small_servers(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure udp-small-servers
           - Default value: `false`
@@ -1932,36 +1932,36 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "udp_small_servers")
 
     @udp_small_servers.setter
-    def udp_small_servers(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def udp_small_servers(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "udp_small_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="udpSmallServersVariable")
-    def udp_small_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def udp_small_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "udp_small_servers_variable")
 
     @udp_small_servers_variable.setter
-    def udp_small_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def udp_small_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "udp_small_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLineLogging")
-    def vty_line_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def vty_line_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure VTY Line Logging
           - Default value: `false`
@@ -1969,19 +1969,19 @@ class _SystemGlobalFeatureState:
         return pulumi.get(self, "vty_line_logging")
 
     @vty_line_logging.setter
-    def vty_line_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def vty_line_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "vty_line_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="vtyLineLoggingVariable")
-    def vty_line_logging_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vty_line_logging_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vty_line_logging_variable")
 
     @vty_line_logging_variable.setter
-    def vty_line_logging_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vty_line_logging_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vty_line_logging_variable", value)
 
 
@@ -1991,63 +1991,63 @@ class SystemGlobalFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
-                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vty_line_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_community_new_format: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: pulumi.Input[Optional[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lacp_system_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 lacp_system_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vty_line_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_line_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System Global Feature.
@@ -2266,63 +2266,63 @@ class SystemGlobalFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
-                 bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-                 domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
-                 etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-                 https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-                 line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-                 snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-                 udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vty_line_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bgp_community_new_format: pulumi.Input[Optional[_builtins.bool]] = None,
+                 bgp_community_new_format_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+                 domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_flow_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 etherchannel_vlan_load_balance: pulumi.Input[Optional[_builtins.bool]] = None,
+                 etherchannel_vlan_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+                 https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lacp_system_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 lacp_system_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+                 line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+                 snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vty_line_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 vty_line_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -2402,64 +2402,64 @@ class SystemGlobalFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arp_proxy: Optional[pulumi.Input[_builtins.bool]] = None,
-            arp_proxy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            bgp_community_new_format: Optional[pulumi.Input[_builtins.bool]] = None,
-            bgp_community_new_format_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            cdp: Optional[pulumi.Input[_builtins.bool]] = None,
-            cdp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            console_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-            console_logging_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            domain_lookup: Optional[pulumi.Input[_builtins.bool]] = None,
-            domain_lookup_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            etherchannel_flow_load_balance: Optional[pulumi.Input[_builtins.str]] = None,
-            etherchannel_flow_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            etherchannel_vlan_load_balance: Optional[pulumi.Input[_builtins.bool]] = None,
-            etherchannel_vlan_load_balance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ftp_passive: Optional[pulumi.Input[_builtins.bool]] = None,
-            ftp_passive_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            http_authentication: Optional[pulumi.Input[_builtins.str]] = None,
-            http_authentication_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            http_server: Optional[pulumi.Input[_builtins.bool]] = None,
-            http_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            https_server: Optional[pulumi.Input[_builtins.bool]] = None,
-            https_server_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ignore_bootp: Optional[pulumi.Input[_builtins.bool]] = None,
-            ignore_bootp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ip_source_routing: Optional[pulumi.Input[_builtins.bool]] = None,
-            ip_source_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            lacp_system_priority: Optional[pulumi.Input[_builtins.int]] = None,
-            lacp_system_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            line_vty: Optional[pulumi.Input[_builtins.bool]] = None,
-            line_vty_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            lldp: Optional[pulumi.Input[_builtins.bool]] = None,
-            lldp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            nat64_tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            nat64_tcp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            nat64_udp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            nat64_udp_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            rsh_rcp: Optional[pulumi.Input[_builtins.bool]] = None,
-            rsh_rcp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            snmp_ifindex_persist: Optional[pulumi.Input[_builtins.bool]] = None,
-            snmp_ifindex_persist_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ssh_version: Optional[pulumi.Input[_builtins.str]] = None,
-            ssh_version_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_keepalives_in: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_keepalives_in_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_keepalives_out: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_keepalives_out_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-            tcp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            udp_small_servers: Optional[pulumi.Input[_builtins.bool]] = None,
-            udp_small_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vty_line_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-            vty_line_logging_variable: Optional[pulumi.Input[_builtins.str]] = None) -> 'SystemGlobalFeature':
+            arp_proxy: pulumi.Input[Optional[_builtins.bool]] = None,
+            arp_proxy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            bgp_community_new_format: pulumi.Input[Optional[_builtins.bool]] = None,
+            bgp_community_new_format_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            cdp: pulumi.Input[Optional[_builtins.bool]] = None,
+            cdp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            console_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            console_logging_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_lookup: pulumi.Input[Optional[_builtins.bool]] = None,
+            domain_lookup_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            etherchannel_flow_load_balance: pulumi.Input[Optional[_builtins.str]] = None,
+            etherchannel_flow_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            etherchannel_vlan_load_balance: pulumi.Input[Optional[_builtins.bool]] = None,
+            etherchannel_vlan_load_balance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ftp_passive: pulumi.Input[Optional[_builtins.bool]] = None,
+            ftp_passive_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            http_authentication: pulumi.Input[Optional[_builtins.str]] = None,
+            http_authentication_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            http_server: pulumi.Input[Optional[_builtins.bool]] = None,
+            http_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            https_server: pulumi.Input[Optional[_builtins.bool]] = None,
+            https_server_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ignore_bootp: pulumi.Input[Optional[_builtins.bool]] = None,
+            ignore_bootp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_source_routing: pulumi.Input[Optional[_builtins.bool]] = None,
+            ip_source_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            lacp_system_priority: pulumi.Input[Optional[_builtins.int]] = None,
+            lacp_system_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            line_vty: pulumi.Input[Optional[_builtins.bool]] = None,
+            line_vty_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            lldp: pulumi.Input[Optional[_builtins.bool]] = None,
+            lldp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_tcp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            nat64_tcp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            nat64_udp_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            nat64_udp_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rsh_rcp: pulumi.Input[Optional[_builtins.bool]] = None,
+            rsh_rcp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            snmp_ifindex_persist: pulumi.Input[Optional[_builtins.bool]] = None,
+            snmp_ifindex_persist_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ssh_version: pulumi.Input[Optional[_builtins.str]] = None,
+            ssh_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_keepalives_in: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_keepalives_in_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_keepalives_out: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_keepalives_out_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+            tcp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            udp_small_servers: pulumi.Input[Optional[_builtins.bool]] = None,
+            udp_small_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vty_line_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            vty_line_logging_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'SystemGlobalFeature':
         """
         Get an existing SystemGlobalFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

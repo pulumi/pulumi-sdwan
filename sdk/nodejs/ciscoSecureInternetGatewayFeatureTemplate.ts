@@ -236,50 +236,50 @@ export interface CiscoSecureInternetGatewayFeatureTemplateState {
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Interface name: IPsec when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateInterface>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure services
      */
-    services?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateService>[] | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Source IP address for Tracker
      */
-    trackerSourceIp?: pulumi.Input<string>;
+    trackerSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerSourceIpVariable?: pulumi.Input<string>;
+    trackerSourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker configuration
      */
-    trackers?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateTracker>[]>;
+    trackers?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateTracker>[] | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * List of VPN instances
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -298,31 +298,31 @@ export interface CiscoSecureInternetGatewayFeatureTemplateArgs {
     /**
      * Interface name: IPsec when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateInterface>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure services
      */
-    services?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateService>[] | undefined>;
     /**
      * Source IP address for Tracker
      */
-    trackerSourceIp?: pulumi.Input<string>;
+    trackerSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerSourceIpVariable?: pulumi.Input<string>;
+    trackerSourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker configuration
      */
-    trackers?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateTracker>[]>;
+    trackers?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateTracker>[] | undefined>;
     /**
      * List of VPN instances
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }

@@ -131,23 +131,23 @@ export interface TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFea
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Transport Tracker Group Feature ID
      */
-    transportTrackerGroupFeatureId?: pulumi.Input<string>;
+    transportTrackerGroupFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Transport WAN VPN Feature ID
      */
-    transportWanVpnFeatureId?: pulumi.Input<string>;
+    transportWanVpnFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Transport WAN VPN Interface Ethernet Feature ID
      */
-    transportWanVpnInterfaceEthernetFeatureId?: pulumi.Input<string>;
+    transportWanVpnInterfaceEthernetFeatureId?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**

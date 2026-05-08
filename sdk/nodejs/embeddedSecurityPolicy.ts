@@ -212,94 +212,94 @@ export class EmbeddedSecurityPolicy extends pulumi.CustomResource {
  * Input properties used for looking up and filtering EmbeddedSecurityPolicy resources.
  */
 export interface EmbeddedSecurityPolicyState {
-    assemblies?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssembly>[]>;
+    assemblies?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssembly>[] | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    auditTrail?: pulumi.Input<string>;
+    auditTrail?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
-    downloadUrlDatabaseOnDevice?: pulumi.Input<boolean>;
+    description?: pulumi.Input<string | undefined>;
+    downloadUrlDatabaseOnDevice?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    downloadUrlDatabaseOnDeviceVariable?: pulumi.Input<string>;
+    downloadUrlDatabaseOnDeviceVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `close`, `open`
      */
-    failureMode?: pulumi.Input<string>;
+    failureMode?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    icmpUnreachableAllow?: pulumi.Input<string>;
-    maxIncompleteIcmpLimit?: pulumi.Input<string>;
-    maxIncompleteTcpLimit?: pulumi.Input<string>;
-    maxIncompleteUdpLimit?: pulumi.Input<string>;
+    icmpUnreachableAllow?: pulumi.Input<string | undefined>;
+    maxIncompleteIcmpLimit?: pulumi.Input<string | undefined>;
+    maxIncompleteTcpLimit?: pulumi.Input<string | undefined>;
+    maxIncompleteUdpLimit?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
-    nat?: pulumi.Input<boolean>;
+    name?: pulumi.Input<string | undefined>;
+    nat?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `low`, `medium`, `high`
      */
-    resourceProfile?: pulumi.Input<string>;
+    resourceProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    resourceProfileVariable?: pulumi.Input<string>;
+    resourceProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    sessionReclassifyAllow?: pulumi.Input<string>;
-    tcpSynFloodLimit?: pulumi.Input<string>;
+    sessionReclassifyAllow?: pulumi.Input<string | undefined>;
+    tcpSynFloodLimit?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    unifiedLogging?: pulumi.Input<string>;
+    unifiedLogging?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
  * The set of arguments for constructing a EmbeddedSecurityPolicy resource.
  */
 export interface EmbeddedSecurityPolicyArgs {
-    assemblies?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssembly>[]>;
+    assemblies?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssembly>[] | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    auditTrail?: pulumi.Input<string>;
+    auditTrail?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
-    downloadUrlDatabaseOnDevice?: pulumi.Input<boolean>;
+    description?: pulumi.Input<string | undefined>;
+    downloadUrlDatabaseOnDevice?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    downloadUrlDatabaseOnDeviceVariable?: pulumi.Input<string>;
+    downloadUrlDatabaseOnDeviceVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `close`, `open`
      */
-    failureMode?: pulumi.Input<string>;
+    failureMode?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -308,36 +308,36 @@ export interface EmbeddedSecurityPolicyArgs {
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    icmpUnreachableAllow?: pulumi.Input<string>;
-    maxIncompleteIcmpLimit?: pulumi.Input<string>;
-    maxIncompleteTcpLimit?: pulumi.Input<string>;
-    maxIncompleteUdpLimit?: pulumi.Input<string>;
+    icmpUnreachableAllow?: pulumi.Input<string | undefined>;
+    maxIncompleteIcmpLimit?: pulumi.Input<string | undefined>;
+    maxIncompleteTcpLimit?: pulumi.Input<string | undefined>;
+    maxIncompleteUdpLimit?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
-    nat?: pulumi.Input<boolean>;
+    name?: pulumi.Input<string | undefined>;
+    nat?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `low`, `medium`, `high`
      */
-    resourceProfile?: pulumi.Input<string>;
+    resourceProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    resourceProfileVariable?: pulumi.Input<string>;
+    resourceProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    sessionReclassifyAllow?: pulumi.Input<string>;
-    tcpSynFloodLimit?: pulumi.Input<string>;
+    sessionReclassifyAllow?: pulumi.Input<string | undefined>;
+    tcpSynFloodLimit?: pulumi.Input<string | undefined>;
     /**
      * Setting can be string 'on' or missing for off
      *   - Choices: `on`
      */
-    unifiedLogging?: pulumi.Input<string>;
+    unifiedLogging?: pulumi.Input<string | undefined>;
 }

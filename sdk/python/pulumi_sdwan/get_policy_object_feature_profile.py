@@ -99,7 +99,7 @@ def get_policy_object_feature_profile(id: Optional[_builtins.str] = None,
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
-def get_policy_object_feature_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_policy_object_feature_profile_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectFeatureProfileResult]:
     """
     This data source can read the Policy Object Feature Profile .

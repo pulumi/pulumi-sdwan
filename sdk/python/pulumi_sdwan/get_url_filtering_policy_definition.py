@@ -279,7 +279,7 @@ def get_url_filtering_policy_definition(id: Optional[_builtins.str] = None,
         web_categories=pulumi.get(__ret__, 'web_categories'),
         web_categories_action=pulumi.get(__ret__, 'web_categories_action'),
         web_reputation=pulumi.get(__ret__, 'web_reputation'))
-def get_url_filtering_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_url_filtering_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetUrlFilteringPolicyDefinitionResult]:
     """
     This data source can read the URL Filtering Policy Definition .

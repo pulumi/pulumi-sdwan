@@ -138,54 +138,54 @@ export class PolicyObjectUnifiedAdvancedInspectionProfile extends pulumi.CustomR
  * Input properties used for looking up and filtering PolicyObjectUnifiedAdvancedInspectionProfile resources.
  */
 export interface PolicyObjectUnifiedAdvancedInspectionProfileState {
-    advancedMalwareProtectionListId?: pulumi.Input<string>;
+    advancedMalwareProtectionListId?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
-    intrusionPreventionListId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
+    intrusionPreventionListId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `decrypt`, `neverDecrypt`, `skipDecrypt`
      */
-    tlsDecryptionAction?: pulumi.Input<string>;
-    tlsSslProfileListId?: pulumi.Input<string>;
-    urlFilteringListId?: pulumi.Input<string>;
+    tlsDecryptionAction?: pulumi.Input<string | undefined>;
+    tlsSslProfileListId?: pulumi.Input<string | undefined>;
+    urlFilteringListId?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
  * The set of arguments for constructing a PolicyObjectUnifiedAdvancedInspectionProfile resource.
  */
 export interface PolicyObjectUnifiedAdvancedInspectionProfileArgs {
-    advancedMalwareProtectionListId?: pulumi.Input<string>;
+    advancedMalwareProtectionListId?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
     featureProfileId: pulumi.Input<string>;
-    intrusionPreventionListId?: pulumi.Input<string>;
+    intrusionPreventionListId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `decrypt`, `neverDecrypt`, `skipDecrypt`
      */
     tlsDecryptionAction: pulumi.Input<string>;
-    tlsSslProfileListId?: pulumi.Input<string>;
-    urlFilteringListId?: pulumi.Input<string>;
+    tlsSslProfileListId?: pulumi.Input<string | undefined>;
+    urlFilteringListId?: pulumi.Input<string | undefined>;
 }

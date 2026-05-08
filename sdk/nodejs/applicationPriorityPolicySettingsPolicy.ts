@@ -145,39 +145,39 @@ export interface ApplicationPriorityPolicySettingsPolicyState {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Application Visibility
      *   - Default value: `false`
      */
-    ipv4ApplicationVisibility?: pulumi.Input<boolean>;
+    ipv4ApplicationVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * Flow Visibility
      *   - Default value: `false`
      */
-    ipv4FlowVisibility?: pulumi.Input<boolean>;
+    ipv4FlowVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * Application Visibility IPv6
      *   - Default value: `false`
      */
-    ipv6ApplicationVisibility?: pulumi.Input<boolean>;
+    ipv6ApplicationVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * Flow Visibility IPv6
      *   - Default value: `false`
      */
-    ipv6FlowVisibility?: pulumi.Input<boolean>;
+    ipv6FlowVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -187,7 +187,7 @@ export interface ApplicationPriorityPolicySettingsPolicyArgs {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -196,24 +196,24 @@ export interface ApplicationPriorityPolicySettingsPolicyArgs {
      * Application Visibility
      *   - Default value: `false`
      */
-    ipv4ApplicationVisibility?: pulumi.Input<boolean>;
+    ipv4ApplicationVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * Flow Visibility
      *   - Default value: `false`
      */
-    ipv4FlowVisibility?: pulumi.Input<boolean>;
+    ipv4FlowVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * Application Visibility IPv6
      *   - Default value: `false`
      */
-    ipv6ApplicationVisibility?: pulumi.Input<boolean>;
+    ipv6ApplicationVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * Flow Visibility IPv6
      *   - Default value: `false`
      */
-    ipv6FlowVisibility?: pulumi.Input<boolean>;
+    ipv6FlowVisibility?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

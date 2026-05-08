@@ -107,15 +107,15 @@ export interface TagState {
     /**
      * Tag description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of associated devices
      */
-    devices?: pulumi.Input<pulumi.Input<string>[]>;
+    devices?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tag name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -129,9 +129,9 @@ export interface TagArgs {
     /**
      * List of associated devices
      */
-    devices?: pulumi.Input<pulumi.Input<string>[]>;
+    devices?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tag name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

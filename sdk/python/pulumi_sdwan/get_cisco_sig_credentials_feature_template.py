@@ -427,8 +427,8 @@ def get_cisco_sig_credentials_feature_template(id: Optional[_builtins.str] = Non
         zscaler_password_variable=pulumi.get(__ret__, 'zscaler_password_variable'),
         zscaler_username=pulumi.get(__ret__, 'zscaler_username'),
         zscaler_username_variable=pulumi.get(__ret__, 'zscaler_username_variable'))
-def get_cisco_sig_credentials_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cisco_sig_credentials_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                      name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoSigCredentialsFeatureTemplateResult]:
     """
     This data source can read the Cisco SIG Credentials feature template.

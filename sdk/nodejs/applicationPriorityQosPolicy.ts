@@ -142,31 +142,31 @@ export interface ApplicationPriorityQosPolicyState {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * qosSchedulers
      */
-    qosSchedulers?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityQosPolicyQosScheduler>[]>;
+    qosSchedulers?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityQosPolicyQosScheduler>[] | undefined>;
     /**
      * interfaces
      */
-    targetInterfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    targetInterfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    targetInterfacesVariable?: pulumi.Input<string>;
+    targetInterfacesVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -176,7 +176,7 @@ export interface ApplicationPriorityQosPolicyArgs {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -184,17 +184,17 @@ export interface ApplicationPriorityQosPolicyArgs {
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * qosSchedulers
      */
-    qosSchedulers?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityQosPolicyQosScheduler>[]>;
+    qosSchedulers?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityQosPolicyQosScheduler>[] | undefined>;
     /**
      * interfaces
      */
-    targetInterfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    targetInterfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    targetInterfacesVariable?: pulumi.Input<string>;
+    targetInterfacesVariable?: pulumi.Input<string | undefined>;
 }

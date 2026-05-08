@@ -135,23 +135,23 @@ export interface OtherThousandeyesFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Virtual application Instance
      */
-    virtualApplications?: pulumi.Input<pulumi.Input<inputs.OtherThousandeyesFeatureVirtualApplication>[]>;
+    virtualApplications?: pulumi.Input<pulumi.Input<inputs.OtherThousandeyesFeatureVirtualApplication>[] | undefined>;
 }
 
 /**
@@ -161,7 +161,7 @@ export interface OtherThousandeyesFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -169,9 +169,9 @@ export interface OtherThousandeyesFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Virtual application Instance
      */
-    virtualApplications?: pulumi.Input<pulumi.Input<inputs.OtherThousandeyesFeatureVirtualApplication>[]>;
+    virtualApplications?: pulumi.Input<pulumi.Input<inputs.OtherThousandeyesFeatureVirtualApplication>[] | undefined>;
 }

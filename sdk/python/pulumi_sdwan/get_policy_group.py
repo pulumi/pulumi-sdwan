@@ -152,7 +152,7 @@ def get_policy_group(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         policy_versions=pulumi.get(__ret__, 'policy_versions'),
         solution=pulumi.get(__ret__, 'solution'))
-def get_policy_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_policy_group_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyGroupResult]:
     """
     This data source can read the Policy Group .

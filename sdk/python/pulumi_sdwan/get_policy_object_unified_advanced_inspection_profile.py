@@ -179,8 +179,8 @@ def get_policy_object_unified_advanced_inspection_profile(feature_profile_id: Op
         tls_ssl_profile_list_id=pulumi.get(__ret__, 'tls_ssl_profile_list_id'),
         url_filtering_list_id=pulumi.get(__ret__, 'url_filtering_list_id'),
         version=pulumi.get(__ret__, 'version'))
-def get_policy_object_unified_advanced_inspection_profile_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                                 id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_policy_object_unified_advanced_inspection_profile_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                 id: pulumi.Input[Optional[_builtins.str]] = None,
                                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectUnifiedAdvancedInspectionProfileResult]:
     """
     This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.

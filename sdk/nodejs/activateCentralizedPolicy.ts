@@ -96,11 +96,11 @@ export interface ActivateCentralizedPolicyState {
     /**
      * The ID of the centralized policy
      */
-    activateCentralizedPolicyId?: pulumi.Input<string>;
+    activateCentralizedPolicyId?: pulumi.Input<string | undefined>;
     /**
      * The version of the centralized policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -114,5 +114,5 @@ export interface ActivateCentralizedPolicyArgs {
     /**
      * The version of the centralized policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }

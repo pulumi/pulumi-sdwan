@@ -582,8 +582,8 @@ def get_service_routing_ospfv3_ipv4_feature(feature_profile_id: Optional[_builti
         spf_maximum_hold_time=pulumi.get(__ret__, 'spf_maximum_hold_time'),
         spf_maximum_hold_time_variable=pulumi.get(__ret__, 'spf_maximum_hold_time_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_service_routing_ospfv3_ipv4_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                   id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_routing_ospfv3_ipv4_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                   id: pulumi.Input[Optional[_builtins.str]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceRoutingOspfv3Ipv4FeatureResult]:
     """
     This data source can read the Service Routing OSPFv3 IPv4 Feature.

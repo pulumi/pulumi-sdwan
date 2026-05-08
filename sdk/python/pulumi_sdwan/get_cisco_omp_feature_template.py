@@ -506,8 +506,8 @@ def get_cisco_omp_feature_template(id: Optional[_builtins.str] = None,
         transport_gateway=pulumi.get(__ret__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__ret__, 'transport_gateway_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_cisco_omp_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cisco_omp_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoOmpFeatureTemplateResult]:
     """
     This data source can read the Cisco OMP feature template.

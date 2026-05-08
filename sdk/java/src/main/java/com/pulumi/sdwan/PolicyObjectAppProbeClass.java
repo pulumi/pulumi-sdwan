@@ -33,8 +33,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.PolicyObjectAppProbeClass;
  * import com.pulumi.sdwan.PolicyObjectAppProbeClassArgs;
  * import com.pulumi.sdwan.inputs.PolicyObjectAppProbeClassEntryArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .entries(PolicyObjectAppProbeClassEntryArgs.builder()
- *                 .map(List.of(Map.ofEntries(
+ *                 .map(Arrays.asList(Map.ofEntries(
  *                     Map.entry("color", "3g"),
  *                     Map.entry("dscp", 45)
  *                 )))

@@ -23,14 +23,14 @@ class CflowdPolicyDefinitionArgs:
     def __init__(__self__, *,
                  collectors: pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]],
                  description: pulumi.Input[_builtins.str],
-                 active_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 flow_refresh: Optional[pulumi.Input[_builtins.int]] = None,
-                 inactive_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 remarked_dscp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sampling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 tos: Optional[pulumi.Input[_builtins.bool]] = None):
+                 active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
+                 inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 remarked_dscp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 tos: pulumi.Input[Optional[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CflowdPolicyDefinition resource.
 
@@ -95,7 +95,7 @@ class CflowdPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="activeFlowTimeout")
-    def active_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def active_flow_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Active flow timeout in seconds
           - Range: `30`-`3600`
@@ -103,12 +103,12 @@ class CflowdPolicyDefinitionArgs:
         return pulumi.get(self, "active_flow_timeout")
 
     @active_flow_timeout.setter
-    def active_flow_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def active_flow_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "active_flow_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="flowRefresh")
-    def flow_refresh(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def flow_refresh(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Flow refresh in seconds
           - Range: `60`-`86400`
@@ -116,12 +116,12 @@ class CflowdPolicyDefinitionArgs:
         return pulumi.get(self, "flow_refresh")
 
     @flow_refresh.setter
-    def flow_refresh(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def flow_refresh(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "flow_refresh", value)
 
     @_builtins.property
     @pulumi.getter(name="inactiveFlowTimeout")
-    def inactive_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def inactive_flow_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Inactive flow timeout in seconds
           - Range: `1`-`3600`
@@ -129,24 +129,24 @@ class CflowdPolicyDefinitionArgs:
         return pulumi.get(self, "inactive_flow_timeout")
 
     @inactive_flow_timeout.setter
-    def inactive_flow_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def inactive_flow_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "inactive_flow_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Protocol, either `ipv4`, `ipv6` or `all`
           - Choices: `ipv4`, `ipv6`, `all`
@@ -154,24 +154,24 @@ class CflowdPolicyDefinitionArgs:
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="remarkedDscp")
-    def remarked_dscp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def remarked_dscp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Collect remarked DSCP
         """
         return pulumi.get(self, "remarked_dscp")
 
     @remarked_dscp.setter
-    def remarked_dscp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def remarked_dscp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "remarked_dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="samplingInterval")
-    def sampling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sampling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Flow sampling interval
           - Range: `1`-`65536`
@@ -179,37 +179,37 @@ class CflowdPolicyDefinitionArgs:
         return pulumi.get(self, "sampling_interval")
 
     @sampling_interval.setter
-    def sampling_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sampling_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sampling_interval", value)
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tos(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Collect TOS record field
         """
         return pulumi.get(self, "tos")
 
     @tos.setter
-    def tos(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tos(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tos", value)
 
 
 @pulumi.input_type
 class _CflowdPolicyDefinitionState:
     def __init__(__self__, *,
-                 active_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 flow_refresh: Optional[pulumi.Input[_builtins.int]] = None,
-                 inactive_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 remarked_dscp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sampling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 tos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
+                 inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 remarked_dscp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 tos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CflowdPolicyDefinition resources.
 
@@ -258,7 +258,7 @@ class _CflowdPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="activeFlowTimeout")
-    def active_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def active_flow_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Active flow timeout in seconds
           - Range: `30`-`3600`
@@ -266,36 +266,36 @@ class _CflowdPolicyDefinitionState:
         return pulumi.get(self, "active_flow_timeout")
 
     @active_flow_timeout.setter
-    def active_flow_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def active_flow_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "active_flow_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def collectors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]]]:
+    def collectors(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]]]:
         """
         List of collectors
         """
         return pulumi.get(self, "collectors")
 
     @collectors.setter
-    def collectors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]]]):
+    def collectors(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]]]):
         pulumi.set(self, "collectors", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="flowRefresh")
-    def flow_refresh(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def flow_refresh(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Flow refresh in seconds
           - Range: `60`-`86400`
@@ -303,12 +303,12 @@ class _CflowdPolicyDefinitionState:
         return pulumi.get(self, "flow_refresh")
 
     @flow_refresh.setter
-    def flow_refresh(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def flow_refresh(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "flow_refresh", value)
 
     @_builtins.property
     @pulumi.getter(name="inactiveFlowTimeout")
-    def inactive_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def inactive_flow_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Inactive flow timeout in seconds
           - Range: `1`-`3600`
@@ -316,24 +316,24 @@ class _CflowdPolicyDefinitionState:
         return pulumi.get(self, "inactive_flow_timeout")
 
     @inactive_flow_timeout.setter
-    def inactive_flow_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def inactive_flow_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "inactive_flow_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Protocol, either `ipv4`, `ipv6` or `all`
           - Choices: `ipv4`, `ipv6`, `all`
@@ -341,24 +341,24 @@ class _CflowdPolicyDefinitionState:
         return pulumi.get(self, "protocol")
 
     @protocol.setter
-    def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "protocol", value)
 
     @_builtins.property
     @pulumi.getter(name="remarkedDscp")
-    def remarked_dscp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def remarked_dscp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Collect remarked DSCP
         """
         return pulumi.get(self, "remarked_dscp")
 
     @remarked_dscp.setter
-    def remarked_dscp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def remarked_dscp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "remarked_dscp", value)
 
     @_builtins.property
     @pulumi.getter(name="samplingInterval")
-    def sampling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def sampling_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Flow sampling interval
           - Range: `1`-`65536`
@@ -366,43 +366,43 @@ class _CflowdPolicyDefinitionState:
         return pulumi.get(self, "sampling_interval")
 
     @sampling_interval.setter
-    def sampling_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def sampling_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "sampling_interval", value)
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def tos(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Collect TOS record field
         """
         return pulumi.get(self, "tos")
 
     @tos.setter
-    def tos(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def tos(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "tos", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -412,16 +412,16 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 flow_refresh: Optional[pulumi.Input[_builtins.int]] = None,
-                 inactive_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 remarked_dscp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sampling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 tos: Optional[pulumi.Input[_builtins.bool]] = None,
+                 active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
+                 inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 remarked_dscp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 tos: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage a Cflowd Policy Definition .
@@ -542,16 +542,16 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 active_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 flow_refresh: Optional[pulumi.Input[_builtins.int]] = None,
-                 inactive_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 protocol: Optional[pulumi.Input[_builtins.str]] = None,
-                 remarked_dscp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 sampling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 tos: Optional[pulumi.Input[_builtins.bool]] = None,
+                 active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
+                 inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 remarked_dscp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 tos: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -587,18 +587,18 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            active_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            collectors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            flow_refresh: Optional[pulumi.Input[_builtins.int]] = None,
-            inactive_flow_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            protocol: Optional[pulumi.Input[_builtins.str]] = None,
-            remarked_dscp: Optional[pulumi.Input[_builtins.bool]] = None,
-            sampling_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            tos: Optional[pulumi.Input[_builtins.bool]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CflowdPolicyDefinition':
+            active_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            collectors: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            flow_refresh: pulumi.Input[Optional[_builtins.int]] = None,
+            inactive_flow_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            protocol: pulumi.Input[Optional[_builtins.str]] = None,
+            remarked_dscp: pulumi.Input[Optional[_builtins.bool]] = None,
+            sampling_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            tos: pulumi.Input[Optional[_builtins.bool]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CflowdPolicyDefinition':
         """
         Get an existing CflowdPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

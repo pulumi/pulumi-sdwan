@@ -25,13 +25,13 @@ class PolicyObjectUnifiedUrlFilteringArgs:
                  web_categories: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  web_categories_action: pulumi.Input[_builtins.str],
                  web_reputation: pulumi.Input[_builtins.str],
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedUrlFiltering resource.
 
@@ -134,100 +134,100 @@ class PolicyObjectUnifiedUrlFilteringArgs:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         , Attribute conditional on `enable_alerts` equal to `true`
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageContents")
-    def block_page_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `block_page_action` equal to `text`
         """
         return pulumi.get(self, "block_page_contents")
 
     @block_page_contents.setter
-    def block_page_contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_contents", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy_object
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy_object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="redirectUrl")
-    def redirect_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def redirect_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `block_page_action` equal to `redirect-url`
         """
         return pulumi.get(self, "redirect_url")
 
     @redirect_url.setter
-    def redirect_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def redirect_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "redirect_url", value)
 
     @_builtins.property
     @pulumi.getter(name="urlAllowListId")
-    def url_allow_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_allow_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_allow_list_id")
 
     @url_allow_list_id.setter
-    def url_allow_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_allow_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_allow_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="urlBlockListId")
-    def url_block_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_block_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_block_list_id")
 
     @url_block_list_id.setter
-    def url_block_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_block_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_block_list_id", value)
 
 
 @pulumi.input_type
 class _PolicyObjectUnifiedUrlFilteringState:
     def __init__(__self__, *,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_alerts: Optional[pulumi.Input[_builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None):
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_alerts: pulumi.Input[Optional[_builtins.bool]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedUrlFiltering resources.
 
@@ -273,158 +273,158 @@ class _PolicyObjectUnifiedUrlFilteringState:
 
     @_builtins.property
     @pulumi.getter
-    def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def alerts(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         , Attribute conditional on `enable_alerts` equal to `true`
         """
         return pulumi.get(self, "alerts")
 
     @alerts.setter
-    def alerts(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def alerts(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageAction")
-    def block_page_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `text`, `redirect-url`
         """
         return pulumi.get(self, "block_page_action")
 
     @block_page_action.setter
-    def block_page_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_action", value)
 
     @_builtins.property
     @pulumi.getter(name="blockPageContents")
-    def block_page_contents(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def block_page_contents(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `block_page_action` equal to `text`
         """
         return pulumi.get(self, "block_page_contents")
 
     @block_page_contents.setter
-    def block_page_contents(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def block_page_contents(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "block_page_contents", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy_object
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="enableAlerts")
-    def enable_alerts(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_alerts(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "enable_alerts")
 
     @enable_alerts.setter
-    def enable_alerts(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_alerts(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_alerts", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy_object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="redirectUrl")
-    def redirect_url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def redirect_url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `block_page_action` equal to `redirect-url`
         """
         return pulumi.get(self, "redirect_url")
 
     @redirect_url.setter
-    def redirect_url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def redirect_url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "redirect_url", value)
 
     @_builtins.property
     @pulumi.getter(name="urlAllowListId")
-    def url_allow_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_allow_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_allow_list_id")
 
     @url_allow_list_id.setter
-    def url_allow_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_allow_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_allow_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="urlBlockListId")
-    def url_block_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_block_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_block_list_id")
 
     @url_block_list_id.setter
-    def url_block_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_block_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_block_list_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Policy_object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="webCategories")
-    def web_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def web_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "web_categories")
 
     @web_categories.setter
-    def web_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def web_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "web_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="webCategoriesAction")
-    def web_categories_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_categories_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `block`, `allow`
         """
         return pulumi.get(self, "web_categories_action")
 
     @web_categories_action.setter
-    def web_categories_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_categories_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_categories_action", value)
 
     @_builtins.property
     @pulumi.getter(name="webReputation")
-    def web_reputation(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def web_reputation(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
         """
         return pulumi.get(self, "web_reputation")
 
     @web_reputation.setter
-    def web_reputation(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def web_reputation(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "web_reputation", value)
 
 
@@ -434,19 +434,19 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_alerts: Optional[pulumi.Input[_builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_alerts: pulumi.Input[Optional[_builtins.bool]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Policy Object Unified URL Filtering Policy_object.
@@ -553,19 +553,19 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_alerts: Optional[pulumi.Input[_builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 web_reputation: Optional[pulumi.Input[_builtins.str]] = None,
+                 alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_alerts: pulumi.Input[Optional[_builtins.bool]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 web_reputation: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -611,20 +611,20 @@ class PolicyObjectUnifiedUrlFiltering(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            block_page_action: Optional[pulumi.Input[_builtins.str]] = None,
-            block_page_contents: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_alerts: Optional[pulumi.Input[_builtins.bool]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            redirect_url: Optional[pulumi.Input[_builtins.str]] = None,
-            url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            web_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            web_categories_action: Optional[pulumi.Input[_builtins.str]] = None,
-            web_reputation: Optional[pulumi.Input[_builtins.str]] = None) -> 'PolicyObjectUnifiedUrlFiltering':
+            alerts: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            block_page_action: pulumi.Input[Optional[_builtins.str]] = None,
+            block_page_contents: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_alerts: pulumi.Input[Optional[_builtins.bool]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redirect_url: pulumi.Input[Optional[_builtins.str]] = None,
+            url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            web_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            web_categories_action: pulumi.Input[Optional[_builtins.str]] = None,
+            web_reputation: pulumi.Input[Optional[_builtins.str]] = None) -> 'PolicyObjectUnifiedUrlFiltering':
         """
         Get an existing PolicyObjectUnifiedUrlFiltering resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

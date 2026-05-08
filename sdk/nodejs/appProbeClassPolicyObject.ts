@@ -120,19 +120,19 @@ export interface AppProbeClassPolicyObjectState {
     /**
      * Forwarding class name
      */
-    forwardingClass?: pulumi.Input<string>;
+    forwardingClass?: pulumi.Input<string | undefined>;
     /**
      * Color mappings
      */
-    mappings?: pulumi.Input<pulumi.Input<inputs.AppProbeClassPolicyObjectMapping>[]>;
+    mappings?: pulumi.Input<pulumi.Input<inputs.AppProbeClassPolicyObjectMapping>[] | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -150,5 +150,5 @@ export interface AppProbeClassPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -127,20 +127,20 @@ export interface PolicyObjectSecurityScalableGroupTagListState {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
-    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityScalableGroupTagListEntry>[]>;
+    description?: pulumi.Input<string | undefined>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityScalableGroupTagListEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -150,7 +150,7 @@ export interface PolicyObjectSecurityScalableGroupTagListArgs {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     entries: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityScalableGroupTagListEntry>[]>;
     /**
      * Feature Profile ID
@@ -159,5 +159,5 @@ export interface PolicyObjectSecurityScalableGroupTagListArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

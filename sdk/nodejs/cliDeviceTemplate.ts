@@ -137,28 +137,28 @@ export interface CliDeviceTemplateState {
     /**
      * CLI configuration
      */
-    cliConfiguration?: pulumi.Input<string>;
+    cliConfiguration?: pulumi.Input<string | undefined>;
     /**
      * CLI type
      *   - Choices: `device`, `intend`
      */
-    cliType?: pulumi.Input<string>;
+    cliType?: pulumi.Input<string | undefined>;
     /**
      * The description of the device template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The device type (e.g., `vedge-ISR-4331`)
      */
-    deviceType?: pulumi.Input<string>;
+    deviceType?: pulumi.Input<string | undefined>;
     /**
      * The name of the device template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -185,5 +185,5 @@ export interface CliDeviceTemplateArgs {
     /**
      * The name of the device template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -23,12 +23,12 @@ class ConfigurationGroupArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  solution: pulumi.Input[_builtins.str],
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]] = None,
-                 topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None):
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]] = None,
+                 topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a ConfigurationGroup resource.
 
@@ -85,67 +85,67 @@ class ConfigurationGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]:
         """
         List of devices
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileIds")
-    def feature_profile_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_profile_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of feature profile IDs
         """
         return pulumi.get(self, "feature_profile_ids")
 
     @feature_profile_ids.setter
-    def feature_profile_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_profile_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_profile_ids", value)
 
     @_builtins.property
     @pulumi.getter(name="featureVersions")
-    def feature_versions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of all associated feature versions
         """
         return pulumi.get(self, "feature_versions")
 
     @feature_versions.setter
-    def feature_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_versions", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the configuration group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="topologyDevices")
-    def topology_devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]:
+    def topology_devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]:
         """
         List of topology device types
         """
         return pulumi.get(self, "topology_devices")
 
     @topology_devices.setter
-    def topology_devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]):
+    def topology_devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]):
         pulumi.set(self, "topology_devices", value)
 
     @_builtins.property
     @pulumi.getter(name="topologySiteDevices")
-    def topology_site_devices(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def topology_site_devices(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of devices per site
           - Range: `1`-`20`
@@ -153,21 +153,21 @@ class ConfigurationGroupArgs:
         return pulumi.get(self, "topology_site_devices")
 
     @topology_site_devices.setter
-    def topology_site_devices(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def topology_site_devices(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "topology_site_devices", value)
 
 
 @pulumi.input_type
 class _ConfigurationGroupState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 solution: Optional[pulumi.Input[_builtins.str]] = None,
-                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]] = None,
-                 topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 solution: pulumi.Input[Optional[_builtins.str]] = None,
+                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]] = None,
+                 topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ConfigurationGroup resources.
 
@@ -201,67 +201,67 @@ class _ConfigurationGroupState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Description
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]:
         """
         List of devices
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileIds")
-    def feature_profile_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_profile_ids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of feature profile IDs
         """
         return pulumi.get(self, "feature_profile_ids")
 
     @feature_profile_ids.setter
-    def feature_profile_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_profile_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_profile_ids", value)
 
     @_builtins.property
     @pulumi.getter(name="featureVersions")
-    def feature_versions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def feature_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of all associated feature versions
         """
         return pulumi.get(self, "feature_versions")
 
     @feature_versions.setter
-    def feature_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def feature_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_versions", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the configuration group
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def solution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def solution(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type of solution
           - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -269,24 +269,24 @@ class _ConfigurationGroupState:
         return pulumi.get(self, "solution")
 
     @solution.setter
-    def solution(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def solution(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "solution", value)
 
     @_builtins.property
     @pulumi.getter(name="topologyDevices")
-    def topology_devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]:
+    def topology_devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]:
         """
         List of topology device types
         """
         return pulumi.get(self, "topology_devices")
 
     @topology_devices.setter
-    def topology_devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]):
+    def topology_devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]]):
         pulumi.set(self, "topology_devices", value)
 
     @_builtins.property
     @pulumi.getter(name="topologySiteDevices")
-    def topology_site_devices(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def topology_site_devices(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of devices per site
           - Range: `1`-`20`
@@ -294,7 +294,7 @@ class _ConfigurationGroupState:
         return pulumi.get(self, "topology_site_devices")
 
     @topology_site_devices.setter
-    def topology_site_devices(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def topology_site_devices(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "topology_site_devices", value)
 
 
@@ -304,14 +304,14 @@ class ConfigurationGroup(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 solution: Optional[pulumi.Input[_builtins.str]] = None,
-                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
-                 topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 solution: pulumi.Input[Optional[_builtins.str]] = None,
+                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
+                 topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Configuration Group .
@@ -413,14 +413,14 @@ class ConfigurationGroup(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
-                 feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 solution: Optional[pulumi.Input[_builtins.str]] = None,
-                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
-                 topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
+                 feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 solution: pulumi.Input[Optional[_builtins.str]] = None,
+                 topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
+                 topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -452,14 +452,14 @@ class ConfigurationGroup(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
-            feature_profile_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            solution: Optional[pulumi.Input[_builtins.str]] = None,
-            topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
-            topology_site_devices: Optional[pulumi.Input[_builtins.int]] = None) -> 'ConfigurationGroup':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
+            feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            solution: pulumi.Input[Optional[_builtins.str]] = None,
+            topology_devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
+            topology_site_devices: pulumi.Input[Optional[_builtins.int]] = None) -> 'ConfigurationGroup':
         """
         Get an existing ConfigurationGroup resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

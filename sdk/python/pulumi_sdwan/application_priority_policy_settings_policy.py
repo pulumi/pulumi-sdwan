@@ -20,12 +20,12 @@ __all__ = ['ApplicationPriorityPolicySettingsPolicyArgs', 'ApplicationPriorityPo
 class ApplicationPriorityPolicySettingsPolicyArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationPriorityPolicySettingsPolicy resource.
 
@@ -69,19 +69,19 @@ class ApplicationPriorityPolicySettingsPolicyArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4ApplicationVisibility")
-    def ipv4_application_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_application_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Application Visibility
           - Default value: `false`
@@ -89,12 +89,12 @@ class ApplicationPriorityPolicySettingsPolicyArgs:
         return pulumi.get(self, "ipv4_application_visibility")
 
     @ipv4_application_visibility.setter
-    def ipv4_application_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_application_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_application_visibility", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4FlowVisibility")
-    def ipv4_flow_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_flow_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flow Visibility
           - Default value: `false`
@@ -102,12 +102,12 @@ class ApplicationPriorityPolicySettingsPolicyArgs:
         return pulumi.get(self, "ipv4_flow_visibility")
 
     @ipv4_flow_visibility.setter
-    def ipv4_flow_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_flow_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_flow_visibility", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6ApplicationVisibility")
-    def ipv6_application_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_application_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Application Visibility IPv6
           - Default value: `false`
@@ -115,12 +115,12 @@ class ApplicationPriorityPolicySettingsPolicyArgs:
         return pulumi.get(self, "ipv6_application_visibility")
 
     @ipv6_application_visibility.setter
-    def ipv6_application_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_application_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_application_visibility", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6FlowVisibility")
-    def ipv6_flow_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_flow_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flow Visibility IPv6
           - Default value: `false`
@@ -128,33 +128,33 @@ class ApplicationPriorityPolicySettingsPolicyArgs:
         return pulumi.get(self, "ipv6_flow_visibility")
 
     @ipv6_flow_visibility.setter
-    def ipv6_flow_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_flow_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_flow_visibility", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _ApplicationPriorityPolicySettingsPolicyState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ApplicationPriorityPolicySettingsPolicy resources.
 
@@ -190,31 +190,31 @@ class _ApplicationPriorityPolicySettingsPolicyState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4ApplicationVisibility")
-    def ipv4_application_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_application_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Application Visibility
           - Default value: `false`
@@ -222,12 +222,12 @@ class _ApplicationPriorityPolicySettingsPolicyState:
         return pulumi.get(self, "ipv4_application_visibility")
 
     @ipv4_application_visibility.setter
-    def ipv4_application_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_application_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_application_visibility", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4FlowVisibility")
-    def ipv4_flow_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_flow_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flow Visibility
           - Default value: `false`
@@ -235,12 +235,12 @@ class _ApplicationPriorityPolicySettingsPolicyState:
         return pulumi.get(self, "ipv4_flow_visibility")
 
     @ipv4_flow_visibility.setter
-    def ipv4_flow_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_flow_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_flow_visibility", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6ApplicationVisibility")
-    def ipv6_application_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_application_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Application Visibility IPv6
           - Default value: `false`
@@ -248,12 +248,12 @@ class _ApplicationPriorityPolicySettingsPolicyState:
         return pulumi.get(self, "ipv6_application_visibility")
 
     @ipv6_application_visibility.setter
-    def ipv6_application_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_application_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_application_visibility", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6FlowVisibility")
-    def ipv6_flow_visibility(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_flow_visibility(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Flow Visibility IPv6
           - Default value: `false`
@@ -261,31 +261,31 @@ class _ApplicationPriorityPolicySettingsPolicyState:
         return pulumi.get(self, "ipv6_flow_visibility")
 
     @ipv6_flow_visibility.setter
-    def ipv6_flow_visibility(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_flow_visibility(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_flow_visibility", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Policy
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -295,13 +295,13 @@ class ApplicationPriorityPolicySettingsPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Application Priority Policy Settings Policy.
@@ -396,13 +396,13 @@ class ApplicationPriorityPolicySettingsPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -432,14 +432,14 @@ class ApplicationPriorityPolicySettingsPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_application_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_flow_visibility: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ApplicationPriorityPolicySettingsPolicy':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_application_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_flow_visibility: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ApplicationPriorityPolicySettingsPolicy':
         """
         Get an existing ApplicationPriorityPolicySettingsPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

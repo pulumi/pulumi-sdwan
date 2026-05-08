@@ -23,9 +23,9 @@ class MeshTopologyPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  regions: pulumi.Input[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a MeshTopologyPolicyDefinition resource.
 
@@ -70,51 +70,51 @@ class MeshTopologyPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListId")
-    def vpn_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         VPN list ID
         """
         return pulumi.get(self, "vpn_list_id")
 
     @vpn_list_id.setter
-    def vpn_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListVersion")
-    def vpn_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN list version
         """
         return pulumi.get(self, "vpn_list_version")
 
     @vpn_list_version.setter
-    def vpn_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn_list_version", value)
 
 
 @pulumi.input_type
 class _MeshTopologyPolicyDefinitionState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 regions: Optional[pulumi.Input[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 regions: pulumi.Input[Optional[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering MeshTopologyPolicyDefinition resources.
 
@@ -143,86 +143,86 @@ class _MeshTopologyPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def regions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]]]:
+    def regions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]]]:
         """
         List of regions
         """
         return pulumi.get(self, "regions")
 
     @regions.setter
-    def regions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]]]):
+    def regions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['MeshTopologyPolicyDefinitionRegionArgs']]]]):
         pulumi.set(self, "regions", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListId")
-    def vpn_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         VPN list ID
         """
         return pulumi.get(self, "vpn_list_id")
 
     @vpn_list_id.setter
-    def vpn_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListVersion")
-    def vpn_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN list version
         """
         return pulumi.get(self, "vpn_list_version")
 
     @vpn_list_version.setter
-    def vpn_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn_list_version", value)
 
 
@@ -232,11 +232,11 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 regions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Mesh Topology Policy Definition .
@@ -323,11 +323,11 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 regions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -358,13 +358,13 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            regions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None) -> 'MeshTopologyPolicyDefinition':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            regions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None) -> 'MeshTopologyPolicyDefinition':
         """
         Get an existing MeshTopologyPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

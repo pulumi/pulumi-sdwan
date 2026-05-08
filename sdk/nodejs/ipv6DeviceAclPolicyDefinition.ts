@@ -144,27 +144,27 @@ export interface Ipv6DeviceAclPolicyDefinitionState {
      * Default action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of ACL sequences
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.Ipv6DeviceAclPolicyDefinitionSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.Ipv6DeviceAclPolicyDefinitionSequence>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -175,7 +175,7 @@ export interface Ipv6DeviceAclPolicyDefinitionArgs {
      * Default action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
@@ -183,7 +183,7 @@ export interface Ipv6DeviceAclPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of ACL sequences
      */

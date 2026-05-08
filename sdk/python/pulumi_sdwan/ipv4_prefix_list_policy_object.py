@@ -22,7 +22,7 @@ __all__ = ['Ipv4PrefixListPolicyObjectArgs', 'Ipv4PrefixListPolicyObject']
 class Ipv4PrefixListPolicyObjectArgs:
     def __init__(__self__, *,
                  entries: pulumi.Input[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Ipv4PrefixListPolicyObject resource.
 
@@ -47,23 +47,23 @@ class Ipv4PrefixListPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _Ipv4PrefixListPolicyObjectState:
     def __init__(__self__, *,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Ipv4PrefixListPolicyObject resources.
 
@@ -80,38 +80,38 @@ class _Ipv4PrefixListPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]]]:
+    def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]]]:
         """
         List of entries
         """
         return pulumi.get(self, "entries")
 
     @entries.setter
-    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]]]):
+    def entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4PrefixListPolicyObjectEntryArgs']]]]):
         pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -121,8 +121,8 @@ class Ipv4PrefixListPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a IPv4 Prefix List Policy Object .
@@ -204,8 +204,8 @@ class Ipv4PrefixListPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -230,9 +230,9 @@ class Ipv4PrefixListPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'Ipv4PrefixListPolicyObject':
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['Ipv4PrefixListPolicyObjectEntryArgs', 'Ipv4PrefixListPolicyObjectEntryArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'Ipv4PrefixListPolicyObject':
         """
         Get an existing Ipv4PrefixListPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

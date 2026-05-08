@@ -24,24 +24,24 @@ class ServiceWirelessLanFeatureArgs:
                  feature_profile_id: pulumi.Input[_builtins.str],
                  me_dynamic_ip_enabled: pulumi.Input[_builtins.bool],
                  ssids: pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]],
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 country_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable24g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable24g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable5g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable24g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable24g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable5g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceWirelessLanFeature resource.
 
@@ -149,7 +149,7 @@ class ServiceWirelessLanFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def country(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Select country
           - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
@@ -157,36 +157,36 @@ class ServiceWirelessLanFeatureArgs:
         return pulumi.get(self, "country")
 
     @country.setter
-    def country(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country", value)
 
     @_builtins.property
     @pulumi.getter(name="countryVariable")
-    def country_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "country_variable")
 
     @country_variable.setter
-    def country_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def enable24g(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable24g(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         2.4GHz Enabled
           - Default value: `true`
@@ -194,24 +194,24 @@ class ServiceWirelessLanFeatureArgs:
         return pulumi.get(self, "enable24g")
 
     @enable24g.setter
-    def enable24g(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable24g(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable24g", value)
 
     @_builtins.property
     @pulumi.getter(name="enable24gVariable")
-    def enable24g_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable24g_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable24g_variable")
 
     @enable24g_variable.setter
-    def enable24g_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable24g_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable24g_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def enable5g(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable5g(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         5GHz Enabled
           - Default value: `true`
@@ -219,72 +219,72 @@ class ServiceWirelessLanFeatureArgs:
         return pulumi.get(self, "enable5g")
 
     @enable5g.setter
-    def enable5g(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable5g(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable5g", value)
 
     @_builtins.property
     @pulumi.getter(name="enable5gVariable")
-    def enable5g_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable5g_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable5g_variable")
 
     @enable5g_variable.setter
-    def enable5g_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable5g_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable5g_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="meDefaultGateway")
-    def me_default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set mobile express default gateway
         """
         return pulumi.get(self, "me_default_gateway")
 
     @me_default_gateway.setter
-    def me_default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="meDefaultGatewayVariable")
-    def me_default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "me_default_gateway_variable")
 
     @me_default_gateway_variable.setter
-    def me_default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="meIpv4Address")
-    def me_ipv4_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_ipv4_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set mobile express controller address
         """
         return pulumi.get(self, "me_ipv4_address")
 
     @me_ipv4_address.setter
-    def me_ipv4_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_ipv4_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_ipv4_address", value)
 
     @_builtins.property
     @pulumi.getter(name="meIpv4AddressVariable")
-    def me_ipv4_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_ipv4_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "me_ipv4_address_variable")
 
     @me_ipv4_address_variable.setter
-    def me_ipv4_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_ipv4_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_ipv4_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="meSubnetMask")
-    def me_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set mobile express controller subnet mask
           - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -292,107 +292,107 @@ class ServiceWirelessLanFeatureArgs:
         return pulumi.get(self, "me_subnet_mask")
 
     @me_subnet_mask.setter
-    def me_subnet_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_subnet_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_subnet_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="meSubnetMaskVariable")
-    def me_subnet_mask_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_subnet_mask_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "me_subnet_mask_variable")
 
     @me_subnet_mask_variable.setter
-    def me_subnet_mask_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_subnet_mask_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_subnet_mask_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordVariable")
-    def password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "password_variable")
 
     @password_variable.setter
-    def password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set management username
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameVariable")
-    def username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "username_variable")
 
     @username_variable.setter
-    def username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username_variable", value)
 
 
 @pulumi.input_type
 class _ServiceWirelessLanFeatureState:
     def __init__(__self__, *,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 country_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable24g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable24g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable5g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_dynamic_ip_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 me_ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssids: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable24g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable24g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable5g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_dynamic_ip_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 me_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceWirelessLanFeature resources.
 
@@ -470,7 +470,7 @@ class _ServiceWirelessLanFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def country(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Select country
           - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
@@ -478,36 +478,36 @@ class _ServiceWirelessLanFeatureState:
         return pulumi.get(self, "country")
 
     @country.setter
-    def country(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country", value)
 
     @_builtins.property
     @pulumi.getter(name="countryVariable")
-    def country_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def country_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "country_variable")
 
     @country_variable.setter
-    def country_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def country_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "country_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def enable24g(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable24g(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         2.4GHz Enabled
           - Default value: `true`
@@ -515,24 +515,24 @@ class _ServiceWirelessLanFeatureState:
         return pulumi.get(self, "enable24g")
 
     @enable24g.setter
-    def enable24g(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable24g(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable24g", value)
 
     @_builtins.property
     @pulumi.getter(name="enable24gVariable")
-    def enable24g_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable24g_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable24g_variable")
 
     @enable24g_variable.setter
-    def enable24g_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable24g_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable24g_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def enable5g(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable5g(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         5GHz Enabled
           - Default value: `true`
@@ -540,96 +540,96 @@ class _ServiceWirelessLanFeatureState:
         return pulumi.get(self, "enable5g")
 
     @enable5g.setter
-    def enable5g(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable5g(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable5g", value)
 
     @_builtins.property
     @pulumi.getter(name="enable5gVariable")
-    def enable5g_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable5g_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable5g_variable")
 
     @enable5g_variable.setter
-    def enable5g_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable5g_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable5g_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="meDefaultGateway")
-    def me_default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set mobile express default gateway
         """
         return pulumi.get(self, "me_default_gateway")
 
     @me_default_gateway.setter
-    def me_default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="meDefaultGatewayVariable")
-    def me_default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "me_default_gateway_variable")
 
     @me_default_gateway_variable.setter
-    def me_default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="meDynamicIpEnabled")
-    def me_dynamic_ip_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def me_dynamic_ip_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         ME management IP dynamic allocated by DHCP
         """
         return pulumi.get(self, "me_dynamic_ip_enabled")
 
     @me_dynamic_ip_enabled.setter
-    def me_dynamic_ip_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def me_dynamic_ip_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "me_dynamic_ip_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="meIpv4Address")
-    def me_ipv4_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_ipv4_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set mobile express controller address
         """
         return pulumi.get(self, "me_ipv4_address")
 
     @me_ipv4_address.setter
-    def me_ipv4_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_ipv4_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_ipv4_address", value)
 
     @_builtins.property
     @pulumi.getter(name="meIpv4AddressVariable")
-    def me_ipv4_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_ipv4_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "me_ipv4_address_variable")
 
     @me_ipv4_address_variable.setter
-    def me_ipv4_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_ipv4_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_ipv4_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="meSubnetMask")
-    def me_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set mobile express controller subnet mask
           - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -637,103 +637,103 @@ class _ServiceWirelessLanFeatureState:
         return pulumi.get(self, "me_subnet_mask")
 
     @me_subnet_mask.setter
-    def me_subnet_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_subnet_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_subnet_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="meSubnetMaskVariable")
-    def me_subnet_mask_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def me_subnet_mask_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "me_subnet_mask_variable")
 
     @me_subnet_mask_variable.setter
-    def me_subnet_mask_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def me_subnet_mask_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "me_subnet_mask_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter(name="passwordVariable")
-    def password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "password_variable")
 
     @password_variable.setter
-    def password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def ssids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]]:
+    def ssids(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]]:
         """
         Configure Wi-Fi SSID profile
         """
         return pulumi.get(self, "ssids")
 
     @ssids.setter
-    def ssids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]]):
+    def ssids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]]]):
         pulumi.set(self, "ssids", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set management username
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
     @_builtins.property
     @pulumi.getter(name="usernameVariable")
-    def username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "username_variable")
 
     @username_variable.setter
-    def username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -743,27 +743,27 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 country_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable24g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable24g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable5g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_dynamic_ip_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 me_ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssids: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable24g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable24g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable5g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_dynamic_ip_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 me_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service Wireless LAN Feature.
@@ -900,27 +900,27 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 country: Optional[pulumi.Input[_builtins.str]] = None,
-                 country_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable24g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable24g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable5g: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable5g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_dynamic_ip_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 me_ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 me_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ssids: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None,
-                 username_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 country: pulumi.Input[Optional[_builtins.str]] = None,
+                 country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable24g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable24g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable5g: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable5g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_dynamic_ip_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 me_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 me_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None,
+                 username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -968,28 +968,28 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            country: Optional[pulumi.Input[_builtins.str]] = None,
-            country_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            enable24g: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable24g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            enable5g: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable5g_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            me_default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            me_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            me_dynamic_ip_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            me_ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-            me_ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            me_subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-            me_subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            password: Optional[pulumi.Input[_builtins.str]] = None,
-            password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ssids: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
-            username: Optional[pulumi.Input[_builtins.str]] = None,
-            username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceWirelessLanFeature':
+            country: pulumi.Input[Optional[_builtins.str]] = None,
+            country_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable24g: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable24g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            enable5g: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable5g_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            me_default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            me_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            me_dynamic_ip_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            me_ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+            me_ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            me_subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            me_subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            password: pulumi.Input[Optional[_builtins.str]] = None,
+            password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ssids: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]]] = None,
+            username: pulumi.Input[Optional[_builtins.str]] = None,
+            username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceWirelessLanFeature':
         """
         Get an existing ServiceWirelessLanFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
