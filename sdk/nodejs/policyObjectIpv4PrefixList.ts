@@ -132,23 +132,23 @@ export interface PolicyObjectIpv4PrefixListState {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Prefix List
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectIpv4PrefixListEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectIpv4PrefixListEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -158,7 +158,7 @@ export interface PolicyObjectIpv4PrefixListArgs {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Prefix List
      */
@@ -170,5 +170,5 @@ export interface PolicyObjectIpv4PrefixListArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

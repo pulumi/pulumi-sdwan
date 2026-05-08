@@ -23,36 +23,36 @@ class CiscoOspfFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]] = None,
-                 auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]] = None,
-                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]] = None,
+                 auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]] = None,
+                 route_policies: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoOspfFeatureTemplate resource.
 
@@ -199,19 +199,19 @@ class CiscoOspfFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]:
+    def areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]:
         """
         Configure OSPF area
         """
         return pulumi.get(self, "areas")
 
     @areas.setter
-    def areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]):
+    def areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]):
         pulumi.set(self, "areas", value)
 
     @_builtins.property
     @pulumi.getter(name="autoCostReferenceBandwidth")
-    def auto_cost_reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def auto_cost_reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -220,24 +220,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "auto_cost_reference_bandwidth")
 
     @auto_cost_reference_bandwidth.setter
-    def auto_cost_reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def auto_cost_reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "auto_cost_reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="autoCostReferenceBandwidthVariable")
-    def auto_cost_reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auto_cost_reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "auto_cost_reference_bandwidth_variable")
 
     @auto_cost_reference_bandwidth_variable.setter
-    def auto_cost_reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auto_cost_reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auto_cost_reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="compatibleRfc1583")
-    def compatible_rfc1583(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def compatible_rfc1583(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -245,24 +245,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "compatible_rfc1583")
 
     @compatible_rfc1583.setter
-    def compatible_rfc1583(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def compatible_rfc1583(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "compatible_rfc1583", value)
 
     @_builtins.property
     @pulumi.getter(name="compatibleRfc1583Variable")
-    def compatible_rfc1583_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def compatible_rfc1583_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "compatible_rfc1583_variable")
 
     @compatible_rfc1583_variable.setter
-    def compatible_rfc1583_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def compatible_rfc1583_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "compatible_rfc1583_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginate")
-    def default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF
           - Default value: `false`
@@ -270,12 +270,12 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "default_information_originate")
 
     @default_information_originate.setter
-    def default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlways")
-    def default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
           - Default value: `false`
@@ -283,24 +283,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "default_information_originate_always")
 
     @default_information_originate_always.setter
-    def default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlwaysVariable")
-    def default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_always_variable")
 
     @default_information_originate_always_variable.setter
-    def default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetric")
-    def default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -308,12 +308,12 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "default_information_originate_metric")
 
     @default_information_originate_metric.setter
-    def default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricType")
-    def default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route type
           - Choices: `type1`, `type2`
@@ -321,36 +321,36 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "default_information_originate_metric_type")
 
     @default_information_originate_metric_type.setter
-    def default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricTypeVariable")
-    def default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_type_variable")
 
     @default_information_originate_metric_type_variable.setter
-    def default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricVariable")
-    def default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_variable")
 
     @default_information_originate_metric_variable.setter
-    def default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternal")
-    def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`255`
@@ -359,24 +359,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "distance_external")
 
     @distance_external.setter
-    def distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternalVariable")
-    def distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_external_variable")
 
     @distance_external_variable.setter
-    def distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterArea")
-    def distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`255`
@@ -385,24 +385,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "distance_inter_area")
 
     @distance_inter_area.setter
-    def distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterAreaVariable")
-    def distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_inter_area_variable")
 
     @distance_inter_area_variable.setter
-    def distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraArea")
-    def distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`255`
@@ -411,96 +411,96 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "distance_intra_area")
 
     @distance_intra_area.setter
-    def distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraAreaVariable")
-    def distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_intra_area_variable")
 
     @distance_intra_area_variable.setter
-    def distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="maxMetricRouterLsas")
-    def max_metric_router_lsas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]:
+    def max_metric_router_lsas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]:
         """
         Advertise own router LSA with infinite distance
         """
         return pulumi.get(self, "max_metric_router_lsas")
 
     @max_metric_router_lsas.setter
-    def max_metric_router_lsas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]):
+    def max_metric_router_lsas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]):
         pulumi.set(self, "max_metric_router_lsas", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]:
+    def redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "redistributes")
 
     @redistributes.setter
-    def redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]):
+    def redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]):
         pulumi.set(self, "redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicies")
-    def route_policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]:
+    def route_policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]:
         """
         Set route policy to apply
         """
         return pulumi.get(self, "route_policies")
 
     @route_policies.setter
-    def route_policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]):
+    def route_policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]):
         pulumi.set(self, "route_policies", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfDelay")
-    def timers_spf_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timers_spf_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `1`-`600000`
@@ -509,24 +509,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "timers_spf_delay")
 
     @timers_spf_delay.setter
-    def timers_spf_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timers_spf_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timers_spf_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfDelayVariable")
-    def timers_spf_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timers_spf_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timers_spf_delay_variable")
 
     @timers_spf_delay_variable.setter
-    def timers_spf_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timers_spf_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timers_spf_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfInitialHold")
-    def timers_spf_initial_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timers_spf_initial_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -535,24 +535,24 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "timers_spf_initial_hold")
 
     @timers_spf_initial_hold.setter
-    def timers_spf_initial_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timers_spf_initial_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timers_spf_initial_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfInitialHoldVariable")
-    def timers_spf_initial_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timers_spf_initial_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timers_spf_initial_hold_variable")
 
     @timers_spf_initial_hold_variable.setter
-    def timers_spf_initial_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timers_spf_initial_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timers_spf_initial_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfMaxHold")
-    def timers_spf_max_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timers_spf_max_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -561,59 +561,59 @@ class CiscoOspfFeatureTemplateArgs:
         return pulumi.get(self, "timers_spf_max_hold")
 
     @timers_spf_max_hold.setter
-    def timers_spf_max_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timers_spf_max_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timers_spf_max_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfMaxHoldVariable")
-    def timers_spf_max_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timers_spf_max_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timers_spf_max_hold_variable")
 
     @timers_spf_max_hold_variable.setter
-    def timers_spf_max_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timers_spf_max_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timers_spf_max_hold_variable", value)
 
 
 @pulumi.input_type
 class _CiscoOspfFeatureTemplateState:
     def __init__(__self__, *,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]] = None,
-                 auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]] = None,
-                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]] = None,
+                 auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]] = None,
+                 route_policies: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoOspfFeatureTemplate resources.
 
@@ -743,19 +743,19 @@ class _CiscoOspfFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]:
+    def areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]:
         """
         Configure OSPF area
         """
         return pulumi.get(self, "areas")
 
     @areas.setter
-    def areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]):
+    def areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaArgs']]]]):
         pulumi.set(self, "areas", value)
 
     @_builtins.property
     @pulumi.getter(name="autoCostReferenceBandwidth")
-    def auto_cost_reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def auto_cost_reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -764,24 +764,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "auto_cost_reference_bandwidth")
 
     @auto_cost_reference_bandwidth.setter
-    def auto_cost_reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def auto_cost_reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "auto_cost_reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="autoCostReferenceBandwidthVariable")
-    def auto_cost_reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auto_cost_reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "auto_cost_reference_bandwidth_variable")
 
     @auto_cost_reference_bandwidth_variable.setter
-    def auto_cost_reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auto_cost_reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auto_cost_reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="compatibleRfc1583")
-    def compatible_rfc1583(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def compatible_rfc1583(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -789,24 +789,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "compatible_rfc1583")
 
     @compatible_rfc1583.setter
-    def compatible_rfc1583(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def compatible_rfc1583(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "compatible_rfc1583", value)
 
     @_builtins.property
     @pulumi.getter(name="compatibleRfc1583Variable")
-    def compatible_rfc1583_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def compatible_rfc1583_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "compatible_rfc1583_variable")
 
     @compatible_rfc1583_variable.setter
-    def compatible_rfc1583_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def compatible_rfc1583_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "compatible_rfc1583_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginate")
-    def default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF
           - Default value: `false`
@@ -814,12 +814,12 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "default_information_originate")
 
     @default_information_originate.setter
-    def default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlways")
-    def default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
           - Default value: `false`
@@ -827,24 +827,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "default_information_originate_always")
 
     @default_information_originate_always.setter
-    def default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateAlwaysVariable")
-    def default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_always_variable")
 
     @default_information_originate_always_variable.setter
-    def default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetric")
-    def default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -852,12 +852,12 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "default_information_originate_metric")
 
     @default_information_originate_metric.setter
-    def default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricType")
-    def default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route type
           - Choices: `type1`, `type2`
@@ -865,48 +865,48 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "default_information_originate_metric_type")
 
     @default_information_originate_metric_type.setter
-    def default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricTypeVariable")
-    def default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_type_variable")
 
     @default_information_originate_metric_type_variable.setter
-    def default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultInformationOriginateMetricVariable")
-    def default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_information_originate_metric_variable")
 
     @default_information_originate_metric_variable.setter
-    def default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -914,12 +914,12 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternal")
-    def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`255`
@@ -928,24 +928,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "distance_external")
 
     @distance_external.setter
-    def distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceExternalVariable")
-    def distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_external_variable")
 
     @distance_external_variable.setter
-    def distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterArea")
-    def distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`255`
@@ -954,24 +954,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "distance_inter_area")
 
     @distance_inter_area.setter
-    def distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceInterAreaVariable")
-    def distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_inter_area_variable")
 
     @distance_inter_area_variable.setter
-    def distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraArea")
-    def distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`255`
@@ -980,108 +980,108 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "distance_intra_area")
 
     @distance_intra_area.setter
-    def distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="distanceIntraAreaVariable")
-    def distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "distance_intra_area_variable")
 
     @distance_intra_area_variable.setter
-    def distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="maxMetricRouterLsas")
-    def max_metric_router_lsas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]:
+    def max_metric_router_lsas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]:
         """
         Advertise own router LSA with infinite distance
         """
         return pulumi.get(self, "max_metric_router_lsas")
 
     @max_metric_router_lsas.setter
-    def max_metric_router_lsas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]):
+    def max_metric_router_lsas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]):
         pulumi.set(self, "max_metric_router_lsas", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]:
+    def redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "redistributes")
 
     @redistributes.setter
-    def redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]):
+    def redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRedistributeArgs']]]]):
         pulumi.set(self, "redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicies")
-    def route_policies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]:
+    def route_policies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]:
         """
         Set route policy to apply
         """
         return pulumi.get(self, "route_policies")
 
     @route_policies.setter
-    def route_policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]):
+    def route_policies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]):
         pulumi.set(self, "route_policies", value)
 
     @_builtins.property
     @pulumi.getter(name="routerId")
-    def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "router_id")
 
     @router_id.setter
-    def router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="routerIdVariable")
-    def router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "router_id_variable")
 
     @router_id_variable.setter
-    def router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfDelay")
-    def timers_spf_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timers_spf_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `1`-`600000`
@@ -1090,24 +1090,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "timers_spf_delay")
 
     @timers_spf_delay.setter
-    def timers_spf_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timers_spf_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timers_spf_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfDelayVariable")
-    def timers_spf_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timers_spf_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timers_spf_delay_variable")
 
     @timers_spf_delay_variable.setter
-    def timers_spf_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timers_spf_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timers_spf_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfInitialHold")
-    def timers_spf_initial_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timers_spf_initial_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -1116,24 +1116,24 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "timers_spf_initial_hold")
 
     @timers_spf_initial_hold.setter
-    def timers_spf_initial_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timers_spf_initial_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timers_spf_initial_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfInitialHoldVariable")
-    def timers_spf_initial_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timers_spf_initial_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timers_spf_initial_hold_variable")
 
     @timers_spf_initial_hold_variable.setter
-    def timers_spf_initial_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timers_spf_initial_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timers_spf_initial_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfMaxHold")
-    def timers_spf_max_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def timers_spf_max_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -1142,31 +1142,31 @@ class _CiscoOspfFeatureTemplateState:
         return pulumi.get(self, "timers_spf_max_hold")
 
     @timers_spf_max_hold.setter
-    def timers_spf_max_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def timers_spf_max_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "timers_spf_max_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="timersSpfMaxHoldVariable")
-    def timers_spf_max_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timers_spf_max_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timers_spf_max_hold_variable")
 
     @timers_spf_max_hold_variable.setter
-    def timers_spf_max_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timers_spf_max_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timers_spf_max_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1176,38 +1176,38 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
-                 auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
-                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
+                 auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
+                 route_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco OSPF feature template.
@@ -1437,38 +1437,38 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
-                 auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
-                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
-                 router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
+                 auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
+                 route_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
+                 router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1526,40 +1526,40 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
-            auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-            auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-            compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-            default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-            default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-            default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-            distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
-            route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
-            router_id: Optional[pulumi.Input[_builtins.str]] = None,
-            router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-            timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-            timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-            timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoOspfFeatureTemplate':
+            areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
+            auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+            compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+            default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+            distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
+            route_policies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
+            router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+            timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoOspfFeatureTemplate':
         """
         Get an existing CiscoOspfFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

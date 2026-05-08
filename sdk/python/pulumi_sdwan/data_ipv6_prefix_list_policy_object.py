@@ -22,7 +22,7 @@ __all__ = ['DataIpv6PrefixListPolicyObjectArgs', 'DataIpv6PrefixListPolicyObject
 class DataIpv6PrefixListPolicyObjectArgs:
     def __init__(__self__, *,
                  entries: pulumi.Input[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a DataIpv6PrefixListPolicyObject resource.
 
@@ -47,23 +47,23 @@ class DataIpv6PrefixListPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _DataIpv6PrefixListPolicyObjectState:
     def __init__(__self__, *,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering DataIpv6PrefixListPolicyObject resources.
 
@@ -80,38 +80,38 @@ class _DataIpv6PrefixListPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]]]:
+    def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]]]:
         """
         List of entries
         """
         return pulumi.get(self, "entries")
 
     @entries.setter
-    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]]]):
+    def entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DataIpv6PrefixListPolicyObjectEntryArgs']]]]):
         pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -121,8 +121,8 @@ class DataIpv6PrefixListPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DataIpv6PrefixListPolicyObjectEntryArgs', 'DataIpv6PrefixListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataIpv6PrefixListPolicyObjectEntryArgs', 'DataIpv6PrefixListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Data IPv6 Prefix List Policy Object .
@@ -200,8 +200,8 @@ class DataIpv6PrefixListPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DataIpv6PrefixListPolicyObjectEntryArgs', 'DataIpv6PrefixListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataIpv6PrefixListPolicyObjectEntryArgs', 'DataIpv6PrefixListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -226,9 +226,9 @@ class DataIpv6PrefixListPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DataIpv6PrefixListPolicyObjectEntryArgs', 'DataIpv6PrefixListPolicyObjectEntryArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'DataIpv6PrefixListPolicyObject':
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DataIpv6PrefixListPolicyObjectEntryArgs', 'DataIpv6PrefixListPolicyObjectEntryArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'DataIpv6PrefixListPolicyObject':
         """
         Get an existing DataIpv6PrefixListPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

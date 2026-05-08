@@ -100,11 +100,11 @@ export interface PolicyObjectFeatureProfileState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy object feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -118,5 +118,5 @@ export interface PolicyObjectFeatureProfileArgs {
     /**
      * The name of the policy object feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

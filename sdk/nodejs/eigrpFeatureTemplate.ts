@@ -258,99 +258,99 @@ export interface EigrpFeatureTemplateState {
     /**
      * Set EIGRP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamily>[] | undefined>;
     /**
      * Set autonomous system ID <1..65535>
      *   - Range: `1`-`65535`
      */
-    asNumber?: pulumi.Input<number>;
+    asNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    asNumberVariable?: pulumi.Input<string>;
+    asNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP router authentication type
      *   - Choices: `md5`, `hmac-sha-256`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Selective route download
      *   - Default value: `false`
      */
-    filter?: pulumi.Input<boolean>;
+    filter?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    filterVariable?: pulumi.Input<string>;
+    filterVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hello interval
      *   - Range: `0`-`65535`
      *   - Default value: `5`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key
      */
-    hmacAuthenticationKey?: pulumi.Input<string>;
+    hmacAuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hmacAuthenticationKeyVariable?: pulumi.Input<string>;
+    hmacAuthenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`
      *   - Default value: `15`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateInterface>[] | undefined>;
     /**
      * Set keychain name
      */
-    keys?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateKey>[]>;
+    keys?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateKey>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure policy to apply to prefixes received from EIGRP neighbor
      */
-    routePolicyName?: pulumi.Input<string>;
+    routePolicyName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyNameVariable?: pulumi.Input<string>;
+    routePolicyNameVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -360,25 +360,25 @@ export interface EigrpFeatureTemplateArgs {
     /**
      * Set EIGRP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamily>[] | undefined>;
     /**
      * Set autonomous system ID <1..65535>
      *   - Range: `1`-`65535`
      */
-    asNumber?: pulumi.Input<number>;
+    asNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    asNumberVariable?: pulumi.Input<string>;
+    asNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP router authentication type
      *   - Choices: `md5`, `hmac-sha-256`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -392,57 +392,57 @@ export interface EigrpFeatureTemplateArgs {
      * Selective route download
      *   - Default value: `false`
      */
-    filter?: pulumi.Input<boolean>;
+    filter?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    filterVariable?: pulumi.Input<string>;
+    filterVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hello interval
      *   - Range: `0`-`65535`
      *   - Default value: `5`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key
      */
-    hmacAuthenticationKey?: pulumi.Input<string>;
+    hmacAuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hmacAuthenticationKeyVariable?: pulumi.Input<string>;
+    hmacAuthenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set EIGRP hold time
      *   - Range: `0`-`65535`
      *   - Default value: `15`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateInterface>[] | undefined>;
     /**
      * Set keychain name
      */
-    keys?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateKey>[]>;
+    keys?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateKey>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure policy to apply to prefixes received from EIGRP neighbor
      */
-    routePolicyName?: pulumi.Input<string>;
+    routePolicyName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyNameVariable?: pulumi.Input<string>;
+    routePolicyNameVariable?: pulumi.Input<string | undefined>;
 }

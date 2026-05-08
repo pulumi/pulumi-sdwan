@@ -187,47 +187,47 @@ export interface PolicyObjectUnifiedUrlFilteringState {
     /**
      * , Attribute conditional on `enableAlerts` equal to `true`
      */
-    alerts?: pulumi.Input<pulumi.Input<string>[]>;
+    alerts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `text`, `redirect-url`
      */
-    blockPageAction?: pulumi.Input<string>;
+    blockPageAction?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `blockPageAction` equal to `text`
      */
-    blockPageContents?: pulumi.Input<string>;
+    blockPageContents?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
-    enableAlerts?: pulumi.Input<boolean>;
+    description?: pulumi.Input<string | undefined>;
+    enableAlerts?: pulumi.Input<boolean | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      */
-    redirectUrl?: pulumi.Input<string>;
-    urlAllowListId?: pulumi.Input<string>;
-    urlBlockListId?: pulumi.Input<string>;
+    redirectUrl?: pulumi.Input<string | undefined>;
+    urlAllowListId?: pulumi.Input<string | undefined>;
+    urlBlockListId?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
-    webCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    version?: pulumi.Input<number | undefined>;
+    webCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `block`, `allow`
      */
-    webCategoriesAction?: pulumi.Input<string>;
+    webCategoriesAction?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
-    webReputation?: pulumi.Input<string>;
+    webReputation?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -237,7 +237,7 @@ export interface PolicyObjectUnifiedUrlFilteringArgs {
     /**
      * , Attribute conditional on `enableAlerts` equal to `true`
      */
-    alerts?: pulumi.Input<pulumi.Input<string>[]>;
+    alerts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `text`, `redirect-url`
      */
@@ -245,11 +245,11 @@ export interface PolicyObjectUnifiedUrlFilteringArgs {
     /**
      * , Attribute conditional on `blockPageAction` equal to `text`
      */
-    blockPageContents?: pulumi.Input<string>;
+    blockPageContents?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     enableAlerts: pulumi.Input<boolean>;
     /**
      * Feature Profile ID
@@ -258,13 +258,13 @@ export interface PolicyObjectUnifiedUrlFilteringArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      */
-    redirectUrl?: pulumi.Input<string>;
-    urlAllowListId?: pulumi.Input<string>;
-    urlBlockListId?: pulumi.Input<string>;
+    redirectUrl?: pulumi.Input<string | undefined>;
+    urlAllowListId?: pulumi.Input<string | undefined>;
+    urlBlockListId?: pulumi.Input<string | undefined>;
     webCategories: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * - Choices: `block`, `allow`

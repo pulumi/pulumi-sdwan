@@ -248,87 +248,87 @@ export interface CiscoSecurityFeatureTemplateState {
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    authenticationTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    authenticationTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Extended Anti-Replay Window
      *   - Range: `10`-`2048`
      *   - Default value: `256`
      */
-    extendedArWindow?: pulumi.Input<number>;
+    extendedArWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    extendedArWindowVariable?: pulumi.Input<string>;
+    extendedArWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    integrityTypeVariable?: pulumi.Input<string>;
+    integrityTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    integrityTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    integrityTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure a Keychain
      */
-    keychains?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKeychain>[]>;
+    keychains?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKeychain>[] | undefined>;
     /**
      * Configure a Key
      */
-    keys?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKey>[]>;
+    keys?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKey>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable IPsec pairwise-keying
      *   - Default value: `false`
      */
-    pairwiseKeying?: pulumi.Input<boolean>;
+    pairwiseKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    pairwiseKeyingVariable?: pulumi.Input<string>;
+    pairwiseKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often to change the AES key for DTLS connections
      *   - Range: `10`-`1209600`
      *   - Default value: `86400`
      */
-    rekeyInterval?: pulumi.Input<number>;
+    rekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    rekeyIntervalVariable?: pulumi.Input<string>;
+    rekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the sliding replay window size
      *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
      *   - Default value: `512`
      */
-    replayWindow?: pulumi.Input<string>;
+    replayWindow?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    replayWindowVariable?: pulumi.Input<string>;
+    replayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -338,11 +338,11 @@ export interface CiscoSecurityFeatureTemplateArgs {
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    authenticationTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    authenticationTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The description of the feature template
      */
@@ -357,58 +357,58 @@ export interface CiscoSecurityFeatureTemplateArgs {
      *   - Range: `10`-`2048`
      *   - Default value: `256`
      */
-    extendedArWindow?: pulumi.Input<number>;
+    extendedArWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    extendedArWindowVariable?: pulumi.Input<string>;
+    extendedArWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    integrityTypeVariable?: pulumi.Input<string>;
+    integrityTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    integrityTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    integrityTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure a Keychain
      */
-    keychains?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKeychain>[]>;
+    keychains?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKeychain>[] | undefined>;
     /**
      * Configure a Key
      */
-    keys?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKey>[]>;
+    keys?: pulumi.Input<pulumi.Input<inputs.CiscoSecurityFeatureTemplateKey>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable IPsec pairwise-keying
      *   - Default value: `false`
      */
-    pairwiseKeying?: pulumi.Input<boolean>;
+    pairwiseKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    pairwiseKeyingVariable?: pulumi.Input<string>;
+    pairwiseKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often to change the AES key for DTLS connections
      *   - Range: `10`-`1209600`
      *   - Default value: `86400`
      */
-    rekeyInterval?: pulumi.Input<number>;
+    rekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    rekeyIntervalVariable?: pulumi.Input<string>;
+    rekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the sliding replay window size
      *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
      *   - Default value: `512`
      */
-    replayWindow?: pulumi.Input<string>;
+    replayWindow?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    replayWindowVariable?: pulumi.Input<string>;
+    replayWindowVariable?: pulumi.Input<string | undefined>;
 }

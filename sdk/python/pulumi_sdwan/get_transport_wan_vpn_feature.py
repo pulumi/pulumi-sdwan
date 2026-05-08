@@ -335,8 +335,8 @@ def get_transport_wan_vpn_feature(feature_profile_id: Optional[_builtins.str] = 
         services=pulumi.get(__ret__, 'services'),
         version=pulumi.get(__ret__, 'version'),
         vpn=pulumi.get(__ret__, 'vpn'))
-def get_transport_wan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                         id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_transport_wan_vpn_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                         id: pulumi.Input[Optional[_builtins.str]] = None,
                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnFeatureResult]:
     """
     This data source can read the Transport WAN VPN Feature.

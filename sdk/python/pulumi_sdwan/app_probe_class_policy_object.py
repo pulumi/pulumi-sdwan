@@ -23,7 +23,7 @@ class AppProbeClassPolicyObjectArgs:
     def __init__(__self__, *,
                  forwarding_class: pulumi.Input[_builtins.str],
                  mappings: pulumi.Input[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a AppProbeClassPolicyObject resource.
 
@@ -62,24 +62,24 @@ class AppProbeClassPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _AppProbeClassPolicyObjectState:
     def __init__(__self__, *,
-                 forwarding_class: Optional[pulumi.Input[_builtins.str]] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 forwarding_class: pulumi.Input[Optional[_builtins.str]] = None,
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AppProbeClassPolicyObject resources.
 
@@ -99,50 +99,50 @@ class _AppProbeClassPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter(name="forwardingClass")
-    def forwarding_class(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def forwarding_class(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Forwarding class name
         """
         return pulumi.get(self, "forwarding_class")
 
     @forwarding_class.setter
-    def forwarding_class(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def forwarding_class(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "forwarding_class", value)
 
     @_builtins.property
     @pulumi.getter
-    def mappings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]]]:
+    def mappings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]]]:
         """
         Color mappings
         """
         return pulumi.get(self, "mappings")
 
     @mappings.setter
-    def mappings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]]]):
+    def mappings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AppProbeClassPolicyObjectMappingArgs']]]]):
         pulumi.set(self, "mappings", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -152,9 +152,9 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 forwarding_class: Optional[pulumi.Input[_builtins.str]] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 forwarding_class: pulumi.Input[Optional[_builtins.str]] = None,
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a App Probe Class Policy Object .
@@ -237,9 +237,9 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 forwarding_class: Optional[pulumi.Input[_builtins.str]] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 forwarding_class: pulumi.Input[Optional[_builtins.str]] = None,
+                 mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -267,10 +267,10 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            forwarding_class: Optional[pulumi.Input[_builtins.str]] = None,
-            mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'AppProbeClassPolicyObject':
+            forwarding_class: pulumi.Input[Optional[_builtins.str]] = None,
+            mappings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'AppProbeClassPolicyObject':
         """
         Get an existing AppProbeClassPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

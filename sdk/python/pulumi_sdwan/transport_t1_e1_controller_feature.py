@@ -24,10 +24,10 @@ class TransportT1E1ControllerFeatureArgs:
                  entries: pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]],
                  feature_profile_id: pulumi.Input[_builtins.str],
                  type: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TransportT1E1ControllerFeature resource.
 
@@ -91,64 +91,64 @@ class TransportT1E1ControllerFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def slot(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slot(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Slot number
         """
         return pulumi.get(self, "slot")
 
     @slot.setter
-    def slot(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slot(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slot", value)
 
     @_builtins.property
     @pulumi.getter(name="slotVariable")
-    def slot_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slot_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "slot_variable")
 
     @slot_variable.setter
-    def slot_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slot_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slot_variable", value)
 
 
 @pulumi.input_type
 class _TransportT1E1ControllerFeatureState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportT1E1ControllerFeature resources.
 
@@ -181,79 +181,79 @@ class _TransportT1E1ControllerFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]]]:
+    def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]]]:
         """
         Controller tx-ex List
         """
         return pulumi.get(self, "entries")
 
     @entries.setter
-    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]]]):
+    def entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]]]):
         pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def slot(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slot(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Slot number
         """
         return pulumi.get(self, "slot")
 
     @slot.setter
-    def slot(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slot(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slot", value)
 
     @_builtins.property
     @pulumi.getter(name="slotVariable")
-    def slot_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def slot_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "slot_variable")
 
     @slot_variable.setter
-    def slot_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def slot_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "slot_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Card Type
           - Choices: `e1`, `t1`
@@ -261,19 +261,19 @@ class _TransportT1E1ControllerFeatureState:
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -283,13 +283,13 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Transport T1 E1 Controller Feature.
@@ -409,13 +409,13 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -449,14 +449,14 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            slot: Optional[pulumi.Input[_builtins.str]] = None,
-            slot_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'TransportT1E1ControllerFeature':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TransportT1E1ControllerFeatureEntryArgs', 'TransportT1E1ControllerFeatureEntryArgsDict']]]]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            slot: pulumi.Input[Optional[_builtins.str]] = None,
+            slot_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TransportT1E1ControllerFeature':
         """
         Get an existing TransportT1E1ControllerFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

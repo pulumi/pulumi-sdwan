@@ -183,58 +183,58 @@ export interface CiscoBfdFeatureTemplateState {
     /**
      * Set color that identifies the WAN transport tunnel
      */
-    colors?: pulumi.Input<pulumi.Input<inputs.CiscoBfdFeatureTemplateColor>[]>;
+    colors?: pulumi.Input<pulumi.Input<inputs.CiscoBfdFeatureTemplateColor>[] | undefined>;
     /**
      * Set default DSCP value for BFD packets
      *   - Range: `0`-`63`
      *   - Default value: `48`
      */
-    defaultDscp?: pulumi.Input<number>;
+    defaultDscp?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    defaultDscpVariable?: pulumi.Input<string>;
+    defaultDscpVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set the number of polling intervals used to determine tunnel SLA class
      *   - Range: `1`-`6`
      *   - Default value: `6`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set how often BFD polls tunnels to collect packet latency, loss, and statistics
      *   - Range: `1`-`4294967295`
      *   - Default value: `600000`
      */
-    pollInterval?: pulumi.Input<number>;
+    pollInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pollIntervalVariable?: pulumi.Input<string>;
+    pollIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -244,17 +244,17 @@ export interface CiscoBfdFeatureTemplateArgs {
     /**
      * Set color that identifies the WAN transport tunnel
      */
-    colors?: pulumi.Input<pulumi.Input<inputs.CiscoBfdFeatureTemplateColor>[]>;
+    colors?: pulumi.Input<pulumi.Input<inputs.CiscoBfdFeatureTemplateColor>[] | undefined>;
     /**
      * Set default DSCP value for BFD packets
      *   - Range: `0`-`63`
      *   - Default value: `48`
      */
-    defaultDscp?: pulumi.Input<number>;
+    defaultDscp?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    defaultDscpVariable?: pulumi.Input<string>;
+    defaultDscpVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -269,23 +269,23 @@ export interface CiscoBfdFeatureTemplateArgs {
      *   - Range: `1`-`6`
      *   - Default value: `6`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set how often BFD polls tunnels to collect packet latency, loss, and statistics
      *   - Range: `1`-`4294967295`
      *   - Default value: `600000`
      */
-    pollInterval?: pulumi.Input<number>;
+    pollInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pollIntervalVariable?: pulumi.Input<string>;
+    pollIntervalVariable?: pulumi.Input<string | undefined>;
 }

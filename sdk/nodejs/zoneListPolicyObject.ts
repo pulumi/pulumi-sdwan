@@ -109,15 +109,15 @@ export interface ZoneListPolicyObjectState {
     /**
      * List of entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.ZoneListPolicyObjectEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.ZoneListPolicyObjectEntry>[] | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -131,5 +131,5 @@ export interface ZoneListPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

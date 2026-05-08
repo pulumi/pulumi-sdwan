@@ -128,23 +128,23 @@ export interface RewriteRulePolicyDefinitionState {
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.RewriteRulePolicyDefinitionRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.RewriteRulePolicyDefinitionRule>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -158,7 +158,7 @@ export interface RewriteRulePolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of rules
      */

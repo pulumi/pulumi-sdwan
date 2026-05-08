@@ -181,8 +181,8 @@ def get_application_priority_policy_settings_policy(feature_profile_id: Optional
         ipv6_flow_visibility=pulumi.get(__ret__, 'ipv6_flow_visibility'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-def get_application_priority_policy_settings_policy_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                           id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_application_priority_policy_settings_policy_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                           id: pulumi.Input[Optional[_builtins.str]] = None,
                                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationPriorityPolicySettingsPolicyResult]:
     """
     This data source can read the Application Priority Policy Settings Policy.

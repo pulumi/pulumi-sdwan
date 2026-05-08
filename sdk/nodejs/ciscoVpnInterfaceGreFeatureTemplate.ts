@@ -324,147 +324,147 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
     /**
      * Apply ACL
      */
-    accessLists?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>[]>;
+    accessLists?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>[] | undefined>;
     /**
      * Enable Application Tunnel Type
      *   - Choices: `none`, `sig`
      *   - Default value: `none`
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    applicationVariable?: pulumi.Input<string>;
+    applicationVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
      *   - Default value: `false`
      */
-    clearDontFragment?: pulumi.Input<boolean>;
+    clearDontFragment?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    clearDontFragmentVariable?: pulumi.Input<string>;
+    clearDontFragmentVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <576..2000>, in bytes
      *   - Range: `64`-`18000`
      *   - Default value: `1500`
      */
-    ipMtu?: pulumi.Input<number>;
+    ipMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipMtuVariable?: pulumi.Input<string>;
+    ipMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Name of rewrite rule
      */
-    rewriteRule?: pulumi.Input<string>;
+    rewriteRule?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rewriteRuleVariable?: pulumi.Input<string>;
+    rewriteRuleVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tcpMssAdjust?: pulumi.Input<number>;
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssAdjustVariable?: pulumi.Input<string>;
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    trackers?: pulumi.Input<pulumi.Input<string>[]>;
+    trackers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tunnel destination IP Address
      */
-    tunnelDestination?: pulumi.Input<string>;
+    tunnelDestination?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelDestinationVariable?: pulumi.Input<string>;
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelRouteVia?: pulumi.Input<string>;
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelRouteViaVariable?: pulumi.Input<string>;
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    tunnelSource?: pulumi.Input<string>;
+    tunnelSource?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelSourceInterface?: pulumi.Input<string>;
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceVariable?: pulumi.Input<string>;
+    tunnelSourceVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -474,26 +474,26 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
     /**
      * Apply ACL
      */
-    accessLists?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>[]>;
+    accessLists?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>[] | undefined>;
     /**
      * Enable Application Tunnel Type
      *   - Choices: `none`, `sig`
      *   - Default value: `none`
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    applicationVariable?: pulumi.Input<string>;
+    applicationVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
      *   - Default value: `false`
      */
-    clearDontFragment?: pulumi.Input<boolean>;
+    clearDontFragment?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    clearDontFragmentVariable?: pulumi.Input<string>;
+    clearDontFragmentVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -506,105 +506,105 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <576..2000>, in bytes
      *   - Range: `64`-`18000`
      *   - Default value: `1500`
      */
-    ipMtu?: pulumi.Input<number>;
+    ipMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipMtuVariable?: pulumi.Input<string>;
+    ipMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Name of rewrite rule
      */
-    rewriteRule?: pulumi.Input<string>;
+    rewriteRule?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rewriteRuleVariable?: pulumi.Input<string>;
+    rewriteRuleVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tcpMssAdjust?: pulumi.Input<number>;
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssAdjustVariable?: pulumi.Input<string>;
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    trackers?: pulumi.Input<pulumi.Input<string>[]>;
+    trackers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tunnel destination IP Address
      */
-    tunnelDestination?: pulumi.Input<string>;
+    tunnelDestination?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelDestinationVariable?: pulumi.Input<string>;
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelRouteVia?: pulumi.Input<string>;
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelRouteViaVariable?: pulumi.Input<string>;
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    tunnelSource?: pulumi.Input<string>;
+    tunnelSource?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelSourceInterface?: pulumi.Input<string>;
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceVariable?: pulumi.Input<string>;
+    tunnelSourceVariable?: pulumi.Input<string | undefined>;
 }

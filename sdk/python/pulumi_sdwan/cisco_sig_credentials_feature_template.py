@@ -21,29 +21,29 @@ class CiscoSigCredentialsFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_cloud_name: Optional[pulumi.Input[_builtins.int]] = None,
-                 zscaler_cloud_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_cloud_name: pulumi.Input[Optional[_builtins.int]] = None,
+                 zscaler_cloud_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoSigCredentialsFeatureTemplate resource.
 
@@ -151,91 +151,91 @@ class CiscoSigCredentialsFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiKey")
-    def umbrella_api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         API Key
         """
         return pulumi.get(self, "umbrella_api_key")
 
     @umbrella_api_key.setter
-    def umbrella_api_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiKeyVariable")
-    def umbrella_api_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "umbrella_api_key_variable")
 
     @umbrella_api_key_variable.setter
-    def umbrella_api_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiSecret")
-    def umbrella_api_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         API Secret
         """
         return pulumi.get(self, "umbrella_api_secret")
 
     @umbrella_api_secret.setter
-    def umbrella_api_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiSecretVariable")
-    def umbrella_api_secret_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_secret_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "umbrella_api_secret_variable")
 
     @umbrella_api_secret_variable.setter
-    def umbrella_api_secret_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_secret_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_secret_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaOrganizationId")
-    def umbrella_organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Ord ID
         """
         return pulumi.get(self, "umbrella_organization_id")
 
     @umbrella_organization_id.setter
-    def umbrella_organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaOrganizationIdVariable")
-    def umbrella_organization_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_organization_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "umbrella_organization_id_variable")
 
     @umbrella_organization_id_variable.setter
-    def umbrella_organization_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_organization_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_organization_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerCloudName")
-    def zscaler_cloud_name(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def zscaler_cloud_name(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Third Party Cloud Name
           - Range: `0`-`255`
@@ -243,220 +243,220 @@ class CiscoSigCredentialsFeatureTemplateArgs:
         return pulumi.get(self, "zscaler_cloud_name")
 
     @zscaler_cloud_name.setter
-    def zscaler_cloud_name(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def zscaler_cloud_name(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "zscaler_cloud_name", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerCloudNameVariable")
-    def zscaler_cloud_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_cloud_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_cloud_name_variable")
 
     @zscaler_cloud_name_variable.setter
-    def zscaler_cloud_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_cloud_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_cloud_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerOrganization")
-    def zscaler_organization(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_organization(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization Name
         """
         return pulumi.get(self, "zscaler_organization")
 
     @zscaler_organization.setter
-    def zscaler_organization(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_organization(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_organization", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerOrganizationVariable")
-    def zscaler_organization_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_organization_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_organization_variable")
 
     @zscaler_organization_variable.setter
-    def zscaler_organization_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_organization_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_organization_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerApiKey")
-    def zscaler_partner_api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_api_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner API Key
         """
         return pulumi.get(self, "zscaler_partner_api_key")
 
     @zscaler_partner_api_key.setter
-    def zscaler_partner_api_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_api_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerApiKeyVariable")
-    def zscaler_partner_api_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_api_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_api_key_variable")
 
     @zscaler_partner_api_key_variable.setter
-    def zscaler_partner_api_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_api_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_api_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerBaseUri")
-    def zscaler_partner_base_uri(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_base_uri(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner Base URI to be used in REST calls
         """
         return pulumi.get(self, "zscaler_partner_base_uri")
 
     @zscaler_partner_base_uri.setter
-    def zscaler_partner_base_uri(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_base_uri(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_base_uri", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerBaseUriVariable")
-    def zscaler_partner_base_uri_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_base_uri_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_base_uri_variable")
 
     @zscaler_partner_base_uri_variable.setter
-    def zscaler_partner_base_uri_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_base_uri_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_base_uri_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerPassword")
-    def zscaler_partner_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner Password
         """
         return pulumi.get(self, "zscaler_partner_password")
 
     @zscaler_partner_password.setter
-    def zscaler_partner_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_password", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerPasswordVariable")
-    def zscaler_partner_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_password_variable")
 
     @zscaler_partner_password_variable.setter
-    def zscaler_partner_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerUsername")
-    def zscaler_partner_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner User Name
         """
         return pulumi.get(self, "zscaler_partner_username")
 
     @zscaler_partner_username.setter
-    def zscaler_partner_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_username", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerUsernameVariable")
-    def zscaler_partner_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_username_variable")
 
     @zscaler_partner_username_variable.setter
-    def zscaler_partner_username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_username_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPassword")
-    def zscaler_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password of Zscaler partner account
         """
         return pulumi.get(self, "zscaler_password")
 
     @zscaler_password.setter
-    def zscaler_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_password", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPasswordVariable")
-    def zscaler_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_password_variable")
 
     @zscaler_password_variable.setter
-    def zscaler_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerUsername")
-    def zscaler_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username of Zscaler partner account
         """
         return pulumi.get(self, "zscaler_username")
 
     @zscaler_username.setter
-    def zscaler_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_username", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerUsernameVariable")
-    def zscaler_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_username_variable")
 
     @zscaler_username_variable.setter
-    def zscaler_username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_username_variable", value)
 
 
 @pulumi.input_type
 class _CiscoSigCredentialsFeatureTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 zscaler_cloud_name: Optional[pulumi.Input[_builtins.int]] = None,
-                 zscaler_cloud_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 zscaler_cloud_name: pulumi.Input[Optional[_builtins.int]] = None,
+                 zscaler_cloud_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CiscoSigCredentialsFeatureTemplate resources.
 
@@ -547,19 +547,19 @@ class _CiscoSigCredentialsFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -567,120 +567,120 @@ class _CiscoSigCredentialsFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiKey")
-    def umbrella_api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         API Key
         """
         return pulumi.get(self, "umbrella_api_key")
 
     @umbrella_api_key.setter
-    def umbrella_api_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiKeyVariable")
-    def umbrella_api_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "umbrella_api_key_variable")
 
     @umbrella_api_key_variable.setter
-    def umbrella_api_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiSecret")
-    def umbrella_api_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         API Secret
         """
         return pulumi.get(self, "umbrella_api_secret")
 
     @umbrella_api_secret.setter
-    def umbrella_api_secret(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_secret", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaApiSecretVariable")
-    def umbrella_api_secret_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_api_secret_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "umbrella_api_secret_variable")
 
     @umbrella_api_secret_variable.setter
-    def umbrella_api_secret_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_api_secret_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_api_secret_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaOrganizationId")
-    def umbrella_organization_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_organization_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Ord ID
         """
         return pulumi.get(self, "umbrella_organization_id")
 
     @umbrella_organization_id.setter
-    def umbrella_organization_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_organization_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_organization_id", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaOrganizationIdVariable")
-    def umbrella_organization_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def umbrella_organization_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "umbrella_organization_id_variable")
 
     @umbrella_organization_id_variable.setter
-    def umbrella_organization_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def umbrella_organization_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "umbrella_organization_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerCloudName")
-    def zscaler_cloud_name(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def zscaler_cloud_name(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Third Party Cloud Name
           - Range: `0`-`255`
@@ -688,187 +688,187 @@ class _CiscoSigCredentialsFeatureTemplateState:
         return pulumi.get(self, "zscaler_cloud_name")
 
     @zscaler_cloud_name.setter
-    def zscaler_cloud_name(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def zscaler_cloud_name(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "zscaler_cloud_name", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerCloudNameVariable")
-    def zscaler_cloud_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_cloud_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_cloud_name_variable")
 
     @zscaler_cloud_name_variable.setter
-    def zscaler_cloud_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_cloud_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_cloud_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerOrganization")
-    def zscaler_organization(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_organization(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Organization Name
         """
         return pulumi.get(self, "zscaler_organization")
 
     @zscaler_organization.setter
-    def zscaler_organization(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_organization(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_organization", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerOrganizationVariable")
-    def zscaler_organization_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_organization_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_organization_variable")
 
     @zscaler_organization_variable.setter
-    def zscaler_organization_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_organization_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_organization_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerApiKey")
-    def zscaler_partner_api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_api_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner API Key
         """
         return pulumi.get(self, "zscaler_partner_api_key")
 
     @zscaler_partner_api_key.setter
-    def zscaler_partner_api_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_api_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_api_key", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerApiKeyVariable")
-    def zscaler_partner_api_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_api_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_api_key_variable")
 
     @zscaler_partner_api_key_variable.setter
-    def zscaler_partner_api_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_api_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_api_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerBaseUri")
-    def zscaler_partner_base_uri(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_base_uri(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner Base URI to be used in REST calls
         """
         return pulumi.get(self, "zscaler_partner_base_uri")
 
     @zscaler_partner_base_uri.setter
-    def zscaler_partner_base_uri(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_base_uri(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_base_uri", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerBaseUriVariable")
-    def zscaler_partner_base_uri_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_base_uri_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_base_uri_variable")
 
     @zscaler_partner_base_uri_variable.setter
-    def zscaler_partner_base_uri_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_base_uri_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_base_uri_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerPassword")
-    def zscaler_partner_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner Password
         """
         return pulumi.get(self, "zscaler_partner_password")
 
     @zscaler_partner_password.setter
-    def zscaler_partner_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_password", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerPasswordVariable")
-    def zscaler_partner_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_password_variable")
 
     @zscaler_partner_password_variable.setter
-    def zscaler_partner_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerUsername")
-    def zscaler_partner_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Partner User Name
         """
         return pulumi.get(self, "zscaler_partner_username")
 
     @zscaler_partner_username.setter
-    def zscaler_partner_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_username", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPartnerUsernameVariable")
-    def zscaler_partner_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_partner_username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_partner_username_variable")
 
     @zscaler_partner_username_variable.setter
-    def zscaler_partner_username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_partner_username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_partner_username_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPassword")
-    def zscaler_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password of Zscaler partner account
         """
         return pulumi.get(self, "zscaler_password")
 
     @zscaler_password.setter
-    def zscaler_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_password", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerPasswordVariable")
-    def zscaler_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_password_variable")
 
     @zscaler_password_variable.setter
-    def zscaler_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerUsername")
-    def zscaler_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username of Zscaler partner account
         """
         return pulumi.get(self, "zscaler_username")
 
     @zscaler_username.setter
-    def zscaler_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_username", value)
 
     @_builtins.property
     @pulumi.getter(name="zscalerUsernameVariable")
-    def zscaler_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def zscaler_username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "zscaler_username_variable")
 
     @zscaler_username_variable.setter
-    def zscaler_username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def zscaler_username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "zscaler_username_variable", value)
 
 
@@ -878,31 +878,31 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_cloud_name: Optional[pulumi.Input[_builtins.int]] = None,
-                 zscaler_cloud_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_cloud_name: pulumi.Input[Optional[_builtins.int]] = None,
+                 zscaler_cloud_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco SIG Credentials feature template.
@@ -1027,31 +1027,31 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_api_secret_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 umbrella_organization_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_cloud_name: Optional[pulumi.Input[_builtins.int]] = None,
-                 zscaler_cloud_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_organization_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_base_uri_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_partner_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 zscaler_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_api_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 umbrella_organization_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_cloud_name: pulumi.Input[Optional[_builtins.int]] = None,
+                 zscaler_cloud_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_organization_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_base_uri_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_partner_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 zscaler_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1102,33 +1102,33 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            umbrella_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-            umbrella_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            umbrella_api_secret: Optional[pulumi.Input[_builtins.str]] = None,
-            umbrella_api_secret_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            umbrella_organization_id: Optional[pulumi.Input[_builtins.str]] = None,
-            umbrella_organization_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            zscaler_cloud_name: Optional[pulumi.Input[_builtins.int]] = None,
-            zscaler_cloud_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_organization: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_organization_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_api_key: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_api_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_base_uri: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_base_uri_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_password: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_username: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_partner_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_password: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_username: Optional[pulumi.Input[_builtins.str]] = None,
-            zscaler_username_variable: Optional[pulumi.Input[_builtins.str]] = None) -> 'CiscoSigCredentialsFeatureTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_secret: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_api_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_organization_id: pulumi.Input[Optional[_builtins.str]] = None,
+            umbrella_organization_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            zscaler_cloud_name: pulumi.Input[Optional[_builtins.int]] = None,
+            zscaler_cloud_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_organization: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_organization_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_api_key: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_api_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_base_uri: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_base_uri_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_password: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_username: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_partner_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_password: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_username: pulumi.Input[Optional[_builtins.str]] = None,
+            zscaler_username_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'CiscoSigCredentialsFeatureTemplate':
         """
         Get an existing CiscoSigCredentialsFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -150,10 +150,10 @@ def get_service_lan_vpn_interface_ethernet_feature_associate_tracker_feature(fea
         service_lan_vpn_interface_ethernet_feature_id=pulumi.get(__ret__, 'service_lan_vpn_interface_ethernet_feature_id'),
         service_tracker_feature_id=pulumi.get(__ret__, 'service_tracker_feature_id'),
         version=pulumi.get(__ret__, 'version'))
-def get_service_lan_vpn_interface_ethernet_feature_associate_tracker_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                                                    id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                                                    service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                                                    service_lan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_lan_vpn_interface_ethernet_feature_associate_tracker_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                                    id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                                    service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                                    service_lan_vpn_interface_ethernet_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult]:
     """
     This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Feature .

@@ -23,31 +23,31 @@ class CedgePimFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 auto_rp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_rp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hash_mask_length: Optional[pulumi.Input[_builtins.str]] = None,
-                 hash_mask_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 range: Optional[pulumi.Input[_builtins.str]] = None,
-                 range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]] = None,
-                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]] = None,
-                 rp_candidate_access_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidate_access_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]] = None,
-                 scope: Optional[pulumi.Input[_builtins.int]] = None,
-                 scope_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hash_mask_length: pulumi.Input[Optional[_builtins.str]] = None,
+                 hash_mask_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 range: pulumi.Input[Optional[_builtins.str]] = None,
+                 range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]] = None,
+                 rp_announce_fields: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]] = None,
+                 rp_candidate_access_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidate_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]] = None,
+                 scope: pulumi.Input[Optional[_builtins.int]] = None,
+                 scope_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CedgePimFeatureTemplate resource.
 
@@ -165,7 +165,7 @@ class CedgePimFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="autoRp")
-    def auto_rp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def auto_rp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable auto-RP
           - Default value: `false`
@@ -173,48 +173,48 @@ class CedgePimFeatureTemplateArgs:
         return pulumi.get(self, "auto_rp")
 
     @auto_rp.setter
-    def auto_rp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def auto_rp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "auto_rp", value)
 
     @_builtins.property
     @pulumi.getter(name="autoRpVariable")
-    def auto_rp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auto_rp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "auto_rp_variable")
 
     @auto_rp_variable.setter
-    def auto_rp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auto_rp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auto_rp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="bsrCandidate")
-    def bsr_candidate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bsr_candidate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set Autonomic-Networking virtual interface
         """
         return pulumi.get(self, "bsr_candidate")
 
     @bsr_candidate.setter
-    def bsr_candidate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bsr_candidate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bsr_candidate", value)
 
     @_builtins.property
     @pulumi.getter(name="bsrCandidateVariable")
-    def bsr_candidate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bsr_candidate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "bsr_candidate_variable")
 
     @bsr_candidate_variable.setter
-    def bsr_candidate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bsr_candidate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bsr_candidate_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Turn SSM On / Off
           - Default value: `false`
@@ -222,96 +222,96 @@ class CedgePimFeatureTemplateArgs:
         return pulumi.get(self, "default")
 
     @default.setter
-    def default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultVariable")
-    def default_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_variable")
 
     @default_variable.setter
-    def default_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="hashMaskLength")
-    def hash_mask_length(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hash_mask_length(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Hash Mask length for RP selection
         """
         return pulumi.get(self, "hash_mask_length")
 
     @hash_mask_length.setter
-    def hash_mask_length(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hash_mask_length(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hash_mask_length", value)
 
     @_builtins.property
     @pulumi.getter(name="hashMaskLengthVariable")
-    def hash_mask_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hash_mask_length_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hash_mask_length_variable")
 
     @hash_mask_length_variable.setter
-    def hash_mask_length_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hash_mask_length_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hash_mask_length_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set RP Discovery Interface Name
         """
         return pulumi.get(self, "interface_name")
 
     @interface_name.setter
-    def interface_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceNameVariable")
-    def interface_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_name_variable")
 
     @interface_name_variable.setter
-    def interface_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]:
         """
         Set PIM interface parameters
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def priority(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set RP candidate priority
           - Range: `0`-`255`
@@ -319,108 +319,108 @@ class CedgePimFeatureTemplateArgs:
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def priority(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
     @_builtins.property
     @pulumi.getter(name="priorityVariable")
-    def priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def priority_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "priority_variable")
 
     @priority_variable.setter
-    def priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def priority_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "priority_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def range(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def range(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set Access List for PIM SSM
         """
         return pulumi.get(self, "range")
 
     @range.setter
-    def range(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def range(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "range", value)
 
     @_builtins.property
     @pulumi.getter(name="rangeVariable")
-    def range_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def range_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "range_variable")
 
     @range_variable.setter
-    def range_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def range_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "range_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rpAddresses")
-    def rp_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]:
+    def rp_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]:
         """
         Set Static RP Address(es)
         """
         return pulumi.get(self, "rp_addresses")
 
     @rp_addresses.setter
-    def rp_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]):
+    def rp_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]):
         pulumi.set(self, "rp_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="rpAnnounceFields")
-    def rp_announce_fields(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]:
+    def rp_announce_fields(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]:
         """
         Enable or disable RP Announce
         """
         return pulumi.get(self, "rp_announce_fields")
 
     @rp_announce_fields.setter
-    def rp_announce_fields(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]):
+    def rp_announce_fields(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]):
         pulumi.set(self, "rp_announce_fields", value)
 
     @_builtins.property
     @pulumi.getter(name="rpCandidateAccessList")
-    def rp_candidate_access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rp_candidate_access_list(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set BSR RP candidate filter
         """
         return pulumi.get(self, "rp_candidate_access_list")
 
     @rp_candidate_access_list.setter
-    def rp_candidate_access_list(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rp_candidate_access_list(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rp_candidate_access_list", value)
 
     @_builtins.property
     @pulumi.getter(name="rpCandidateAccessListVariable")
-    def rp_candidate_access_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rp_candidate_access_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rp_candidate_access_list_variable")
 
     @rp_candidate_access_list_variable.setter
-    def rp_candidate_access_list_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rp_candidate_access_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rp_candidate_access_list_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rpCandidates")
-    def rp_candidates(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]:
+    def rp_candidates(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]:
         """
         Set RP Discovery Scope
         """
         return pulumi.get(self, "rp_candidates")
 
     @rp_candidates.setter
-    def rp_candidates(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]):
+    def rp_candidates(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]):
         pulumi.set(self, "rp_candidates", value)
 
     @_builtins.property
     @pulumi.getter
-    def scope(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def scope(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set RP Discovery Scope
           - Range: `1`-`255`
@@ -428,24 +428,24 @@ class CedgePimFeatureTemplateArgs:
         return pulumi.get(self, "scope")
 
     @scope.setter
-    def scope(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def scope(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "scope", value)
 
     @_builtins.property
     @pulumi.getter(name="scopeVariable")
-    def scope_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scope_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "scope_variable")
 
     @scope_variable.setter
-    def scope_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scope_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scope_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sptThreshold")
-    def spt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spt_threshold(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set when PIM router joins the SPT (kbps)
           - Choices: `0`, `infinity`
@@ -453,54 +453,54 @@ class CedgePimFeatureTemplateArgs:
         return pulumi.get(self, "spt_threshold")
 
     @spt_threshold.setter
-    def spt_threshold(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spt_threshold(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spt_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="sptThresholdVariable")
-    def spt_threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spt_threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spt_threshold_variable")
 
     @spt_threshold_variable.setter
-    def spt_threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spt_threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spt_threshold_variable", value)
 
 
 @pulumi.input_type
 class _CedgePimFeatureTemplateState:
     def __init__(__self__, *,
-                 auto_rp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_rp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 hash_mask_length: Optional[pulumi.Input[_builtins.str]] = None,
-                 hash_mask_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 range: Optional[pulumi.Input[_builtins.str]] = None,
-                 range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]] = None,
-                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]] = None,
-                 rp_candidate_access_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidate_access_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]] = None,
-                 scope: Optional[pulumi.Input[_builtins.int]] = None,
-                 scope_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 hash_mask_length: pulumi.Input[Optional[_builtins.str]] = None,
+                 hash_mask_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 range: pulumi.Input[Optional[_builtins.str]] = None,
+                 range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]] = None,
+                 rp_announce_fields: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]] = None,
+                 rp_candidate_access_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidate_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]] = None,
+                 scope: pulumi.Input[Optional[_builtins.int]] = None,
+                 scope_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CedgePimFeatureTemplate resources.
 
@@ -601,7 +601,7 @@ class _CedgePimFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="autoRp")
-    def auto_rp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def auto_rp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable auto-RP
           - Default value: `false`
@@ -609,48 +609,48 @@ class _CedgePimFeatureTemplateState:
         return pulumi.get(self, "auto_rp")
 
     @auto_rp.setter
-    def auto_rp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def auto_rp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "auto_rp", value)
 
     @_builtins.property
     @pulumi.getter(name="autoRpVariable")
-    def auto_rp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def auto_rp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "auto_rp_variable")
 
     @auto_rp_variable.setter
-    def auto_rp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def auto_rp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "auto_rp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="bsrCandidate")
-    def bsr_candidate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bsr_candidate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set Autonomic-Networking virtual interface
         """
         return pulumi.get(self, "bsr_candidate")
 
     @bsr_candidate.setter
-    def bsr_candidate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bsr_candidate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bsr_candidate", value)
 
     @_builtins.property
     @pulumi.getter(name="bsrCandidateVariable")
-    def bsr_candidate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bsr_candidate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "bsr_candidate_variable")
 
     @bsr_candidate_variable.setter
-    def bsr_candidate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bsr_candidate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bsr_candidate_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Turn SSM On / Off
           - Default value: `false`
@@ -658,36 +658,36 @@ class _CedgePimFeatureTemplateState:
         return pulumi.get(self, "default")
 
     @default.setter
-    def default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultVariable")
-    def default_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_variable")
 
     @default_variable.setter
-    def default_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -695,84 +695,84 @@ class _CedgePimFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="hashMaskLength")
-    def hash_mask_length(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hash_mask_length(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Hash Mask length for RP selection
         """
         return pulumi.get(self, "hash_mask_length")
 
     @hash_mask_length.setter
-    def hash_mask_length(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hash_mask_length(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hash_mask_length", value)
 
     @_builtins.property
     @pulumi.getter(name="hashMaskLengthVariable")
-    def hash_mask_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hash_mask_length_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hash_mask_length_variable")
 
     @hash_mask_length_variable.setter
-    def hash_mask_length_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hash_mask_length_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hash_mask_length_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set RP Discovery Interface Name
         """
         return pulumi.get(self, "interface_name")
 
     @interface_name.setter
-    def interface_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceNameVariable")
-    def interface_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_name_variable")
 
     @interface_name_variable.setter
-    def interface_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]:
         """
         Set PIM interface parameters
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def priority(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set RP candidate priority
           - Range: `0`-`255`
@@ -780,108 +780,108 @@ class _CedgePimFeatureTemplateState:
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def priority(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
     @_builtins.property
     @pulumi.getter(name="priorityVariable")
-    def priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def priority_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "priority_variable")
 
     @priority_variable.setter
-    def priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def priority_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "priority_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def range(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def range(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set Access List for PIM SSM
         """
         return pulumi.get(self, "range")
 
     @range.setter
-    def range(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def range(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "range", value)
 
     @_builtins.property
     @pulumi.getter(name="rangeVariable")
-    def range_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def range_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "range_variable")
 
     @range_variable.setter
-    def range_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def range_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "range_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rpAddresses")
-    def rp_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]:
+    def rp_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]:
         """
         Set Static RP Address(es)
         """
         return pulumi.get(self, "rp_addresses")
 
     @rp_addresses.setter
-    def rp_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]):
+    def rp_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAddressArgs']]]]):
         pulumi.set(self, "rp_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="rpAnnounceFields")
-    def rp_announce_fields(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]:
+    def rp_announce_fields(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]:
         """
         Enable or disable RP Announce
         """
         return pulumi.get(self, "rp_announce_fields")
 
     @rp_announce_fields.setter
-    def rp_announce_fields(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]):
+    def rp_announce_fields(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]):
         pulumi.set(self, "rp_announce_fields", value)
 
     @_builtins.property
     @pulumi.getter(name="rpCandidateAccessList")
-    def rp_candidate_access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rp_candidate_access_list(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set BSR RP candidate filter
         """
         return pulumi.get(self, "rp_candidate_access_list")
 
     @rp_candidate_access_list.setter
-    def rp_candidate_access_list(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rp_candidate_access_list(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rp_candidate_access_list", value)
 
     @_builtins.property
     @pulumi.getter(name="rpCandidateAccessListVariable")
-    def rp_candidate_access_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rp_candidate_access_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rp_candidate_access_list_variable")
 
     @rp_candidate_access_list_variable.setter
-    def rp_candidate_access_list_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rp_candidate_access_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rp_candidate_access_list_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rpCandidates")
-    def rp_candidates(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]:
+    def rp_candidates(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]:
         """
         Set RP Discovery Scope
         """
         return pulumi.get(self, "rp_candidates")
 
     @rp_candidates.setter
-    def rp_candidates(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]):
+    def rp_candidates(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]]]):
         pulumi.set(self, "rp_candidates", value)
 
     @_builtins.property
     @pulumi.getter
-    def scope(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def scope(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set RP Discovery Scope
           - Range: `1`-`255`
@@ -889,24 +889,24 @@ class _CedgePimFeatureTemplateState:
         return pulumi.get(self, "scope")
 
     @scope.setter
-    def scope(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def scope(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "scope", value)
 
     @_builtins.property
     @pulumi.getter(name="scopeVariable")
-    def scope_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def scope_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "scope_variable")
 
     @scope_variable.setter
-    def scope_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def scope_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "scope_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sptThreshold")
-    def spt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spt_threshold(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set when PIM router joins the SPT (kbps)
           - Choices: `0`, `infinity`
@@ -914,43 +914,43 @@ class _CedgePimFeatureTemplateState:
         return pulumi.get(self, "spt_threshold")
 
     @spt_threshold.setter
-    def spt_threshold(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spt_threshold(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spt_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="sptThresholdVariable")
-    def spt_threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spt_threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spt_threshold_variable")
 
     @spt_threshold_variable.setter
-    def spt_threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spt_threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spt_threshold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -960,33 +960,33 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 auto_rp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_rp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 hash_mask_length: Optional[pulumi.Input[_builtins.str]] = None,
-                 hash_mask_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 range: Optional[pulumi.Input[_builtins.str]] = None,
-                 range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
-                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
-                 rp_candidate_access_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidate_access_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
-                 scope: Optional[pulumi.Input[_builtins.int]] = None,
-                 scope_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 hash_mask_length: pulumi.Input[Optional[_builtins.str]] = None,
+                 hash_mask_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 range: pulumi.Input[Optional[_builtins.str]] = None,
+                 range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
+                 rp_announce_fields: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
+                 rp_candidate_access_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidate_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
+                 scope: pulumi.Input[Optional[_builtins.int]] = None,
+                 scope_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a cEdge PIM feature template.
@@ -1155,33 +1155,33 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 auto_rp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 auto_rp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate: Optional[pulumi.Input[_builtins.str]] = None,
-                 bsr_candidate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 default_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 hash_mask_length: Optional[pulumi.Input[_builtins.str]] = None,
-                 hash_mask_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 range: Optional[pulumi.Input[_builtins.str]] = None,
-                 range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
-                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
-                 rp_candidate_access_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidate_access_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
-                 scope: Optional[pulumi.Input[_builtins.int]] = None,
-                 scope_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate: pulumi.Input[Optional[_builtins.str]] = None,
+                 bsr_candidate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 default_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 hash_mask_length: pulumi.Input[Optional[_builtins.str]] = None,
+                 hash_mask_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 range: pulumi.Input[Optional[_builtins.str]] = None,
+                 range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
+                 rp_announce_fields: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
+                 rp_candidate_access_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidate_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
+                 scope: pulumi.Input[Optional[_builtins.int]] = None,
+                 scope_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1234,35 +1234,35 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            auto_rp: Optional[pulumi.Input[_builtins.bool]] = None,
-            auto_rp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            bsr_candidate: Optional[pulumi.Input[_builtins.str]] = None,
-            bsr_candidate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default: Optional[pulumi.Input[_builtins.bool]] = None,
-            default_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            hash_mask_length: Optional[pulumi.Input[_builtins.str]] = None,
-            hash_mask_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            priority: Optional[pulumi.Input[_builtins.int]] = None,
-            priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            range: Optional[pulumi.Input[_builtins.str]] = None,
-            range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
-            rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
-            rp_candidate_access_list: Optional[pulumi.Input[_builtins.str]] = None,
-            rp_candidate_access_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
-            scope: Optional[pulumi.Input[_builtins.int]] = None,
-            scope_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            spt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-            spt_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CedgePimFeatureTemplate':
+            auto_rp: pulumi.Input[Optional[_builtins.bool]] = None,
+            auto_rp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            bsr_candidate: pulumi.Input[Optional[_builtins.str]] = None,
+            bsr_candidate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default: pulumi.Input[Optional[_builtins.bool]] = None,
+            default_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            hash_mask_length: pulumi.Input[Optional[_builtins.str]] = None,
+            hash_mask_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            priority: pulumi.Input[Optional[_builtins.int]] = None,
+            priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            range: pulumi.Input[Optional[_builtins.str]] = None,
+            range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rp_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
+            rp_announce_fields: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
+            rp_candidate_access_list: pulumi.Input[Optional[_builtins.str]] = None,
+            rp_candidate_access_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rp_candidates: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
+            scope: pulumi.Input[Optional[_builtins.int]] = None,
+            scope_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            spt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+            spt_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CedgePimFeatureTemplate':
         """
         Get an existing CedgePimFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

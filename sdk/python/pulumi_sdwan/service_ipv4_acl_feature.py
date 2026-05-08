@@ -22,10 +22,10 @@ __all__ = ['ServiceIpv4AclFeatureArgs', 'ServiceIpv4AclFeature']
 class ServiceIpv4AclFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a ServiceIpv4AclFeature resource.
 
@@ -61,7 +61,7 @@ class ServiceIpv4AclFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default Action
           - Choices: `drop`, `accept`
@@ -70,55 +70,55 @@ class ServiceIpv4AclFeatureArgs:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]:
+    def sequences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]:
         """
         Access Control List
         """
         return pulumi.get(self, "sequences")
 
     @sequences.setter
-    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]):
+    def sequences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]):
         pulumi.set(self, "sequences", value)
 
 
 @pulumi.input_type
 class _ServiceIpv4AclFeatureState:
     def __init__(__self__, *,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceIpv4AclFeature resources.
 
@@ -146,7 +146,7 @@ class _ServiceIpv4AclFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default Action
           - Choices: `drop`, `accept`
@@ -155,67 +155,67 @@ class _ServiceIpv4AclFeatureState:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]:
+    def sequences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]:
         """
         Access Control List
         """
         return pulumi.get(self, "sequences")
 
     @sequences.setter
-    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]):
+    def sequences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceArgs']]]]):
         pulumi.set(self, "sequences", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -225,11 +225,11 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Service IPv4 ACL Feature.
@@ -356,11 +356,11 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -388,12 +388,12 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_action: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceIpv4AclFeature':
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceIpv4AclFeatureSequenceArgs', 'ServiceIpv4AclFeatureSequenceArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceIpv4AclFeature':
         """
         Get an existing ServiceIpv4AclFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -23,24 +23,24 @@ class ServiceRoutingEigrpFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
                  networks: pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]],
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 autonomous_system_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 autonomous_system_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]] = None,
-                 md5_keys: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 autonomous_system_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 autonomous_system_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]] = None,
+                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceRoutingEigrpFeature resource.
 
@@ -136,7 +136,7 @@ class ServiceRoutingEigrpFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationType")
-    def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set EIGRP router authentication type
           - Choices: `md5`, `hmac-sha-256`
@@ -144,24 +144,24 @@ class ServiceRoutingEigrpFeatureArgs:
         return pulumi.get(self, "authentication_type")
 
     @authentication_type.setter
-    def authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="autonomousSystemId")
-    def autonomous_system_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def autonomous_system_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set autonomous system ID <1..65535>
           - Range: `1`-`65535`
@@ -169,36 +169,36 @@ class ServiceRoutingEigrpFeatureArgs:
         return pulumi.get(self, "autonomous_system_id")
 
     @autonomous_system_id.setter
-    def autonomous_system_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def autonomous_system_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "autonomous_system_id", value)
 
     @_builtins.property
     @pulumi.getter(name="autonomousSystemIdVariable")
-    def autonomous_system_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def autonomous_system_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "autonomous_system_id_variable")
 
     @autonomous_system_id_variable.setter
-    def autonomous_system_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def autonomous_system_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "autonomous_system_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Selective route download
           - Default value: `false`
@@ -206,24 +206,24 @@ class ServiceRoutingEigrpFeatureArgs:
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter(name="filterVariable")
-    def filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "filter_variable")
 
     @filter_variable.setter
-    def filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hello_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hello interval
           - Range: `0`-`65535`
@@ -232,48 +232,48 @@ class ServiceRoutingEigrpFeatureArgs:
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hello_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="helloIntervalVariable")
-    def hello_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hello_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hello_interval_variable")
 
     @hello_interval_variable.setter
-    def hello_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hello_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hello_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKey")
-    def hmac_authentication_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key")
 
     @hmac_authentication_key.setter
-    def hmac_authentication_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
-    def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
     @hmac_authentication_key_variable.setter
-    def hmac_authentication_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hold time
           - Range: `0`-`65535`
@@ -282,103 +282,103 @@ class ServiceRoutingEigrpFeatureArgs:
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTimeVariable")
-    def hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hold_time_variable")
 
     @hold_time_variable.setter
-    def hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]:
         """
         Configure IPv4 Static Routes
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter(name="md5Keys")
-    def md5_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]:
+    def md5_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]:
         """
         Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         """
         return pulumi.get(self, "md5_keys")
 
     @md5_keys.setter
-    def md5_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]):
+    def md5_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]):
         pulumi.set(self, "md5_keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]:
+    def redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]:
         """
         Redistribute routes into EIGRP
         """
         return pulumi.get(self, "redistributes")
 
     @redistributes.setter
-    def redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]):
+    def redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]):
         pulumi.set(self, "redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
-    def route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "route_policy_id")
 
     @route_policy_id.setter
-    def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
 
 
 @pulumi.input_type
 class _ServiceRoutingEigrpFeatureState:
     def __init__(__self__, *,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 autonomous_system_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 autonomous_system_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]] = None,
-                 md5_keys: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 autonomous_system_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 autonomous_system_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]] = None,
+                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceRoutingEigrpFeature resources.
 
@@ -455,7 +455,7 @@ class _ServiceRoutingEigrpFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationType")
-    def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set EIGRP router authentication type
           - Choices: `md5`, `hmac-sha-256`
@@ -463,24 +463,24 @@ class _ServiceRoutingEigrpFeatureState:
         return pulumi.get(self, "authentication_type")
 
     @authentication_type.setter
-    def authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="autonomousSystemId")
-    def autonomous_system_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def autonomous_system_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set autonomous system ID <1..65535>
           - Range: `1`-`65535`
@@ -488,48 +488,48 @@ class _ServiceRoutingEigrpFeatureState:
         return pulumi.get(self, "autonomous_system_id")
 
     @autonomous_system_id.setter
-    def autonomous_system_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def autonomous_system_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "autonomous_system_id", value)
 
     @_builtins.property
     @pulumi.getter(name="autonomousSystemIdVariable")
-    def autonomous_system_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def autonomous_system_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "autonomous_system_id_variable")
 
     @autonomous_system_id_variable.setter
-    def autonomous_system_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def autonomous_system_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "autonomous_system_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Selective route download
           - Default value: `false`
@@ -537,24 +537,24 @@ class _ServiceRoutingEigrpFeatureState:
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter(name="filterVariable")
-    def filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "filter_variable")
 
     @filter_variable.setter
-    def filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hello_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hello interval
           - Range: `0`-`65535`
@@ -563,48 +563,48 @@ class _ServiceRoutingEigrpFeatureState:
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hello_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="helloIntervalVariable")
-    def hello_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hello_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hello_interval_variable")
 
     @hello_interval_variable.setter
-    def hello_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hello_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hello_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKey")
-    def hmac_authentication_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key")
 
     @hmac_authentication_key.setter
-    def hmac_authentication_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
-    def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `authentication_type` equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
     @hmac_authentication_key_variable.setter
-    def hmac_authentication_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hold time
           - Range: `0`-`65535`
@@ -613,100 +613,100 @@ class _ServiceRoutingEigrpFeatureState:
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTimeVariable")
-    def hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hold_time_variable")
 
     @hold_time_variable.setter
-    def hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]:
         """
         Configure IPv4 Static Routes
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter(name="md5Keys")
-    def md5_keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]:
+    def md5_keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]:
         """
         Set keychain details, Attribute conditional on `authentication_type` equal to `md5`
         """
         return pulumi.get(self, "md5_keys")
 
     @md5_keys.setter
-    def md5_keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]):
+    def md5_keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]]]):
         pulumi.set(self, "md5_keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def networks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]]]:
+    def networks(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]]]:
         """
         Configure the networks for EIGRP to advertise
         """
         return pulumi.get(self, "networks")
 
     @networks.setter
-    def networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]]]):
+    def networks(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]]]):
         pulumi.set(self, "networks", value)
 
     @_builtins.property
     @pulumi.getter
-    def redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]:
+    def redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]:
         """
         Redistribute routes into EIGRP
         """
         return pulumi.get(self, "redistributes")
 
     @redistributes.setter
-    def redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]):
+    def redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureRedistributeArgs']]]]):
         pulumi.set(self, "redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyId")
-    def route_policy_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "route_policy_id")
 
     @route_policy_id.setter
-    def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -716,26 +716,26 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 autonomous_system_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 autonomous_system_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
-                 md5_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 autonomous_system_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 autonomous_system_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
+                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service Routing EIGRP Feature.
@@ -883,26 +883,26 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 autonomous_system_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 autonomous_system_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
-                 md5_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 autonomous_system_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 autonomous_system_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
+                 md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
+                 redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
+                 route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -947,27 +947,27 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            autonomous_system_id: Optional[pulumi.Input[_builtins.int]] = None,
-            autonomous_system_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-            hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-            hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
-            md5_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            networks: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
-            redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
-            route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceRoutingEigrpFeature':
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            autonomous_system_id: pulumi.Input[Optional[_builtins.int]] = None,
+            autonomous_system_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]]] = None,
+            md5_keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            networks: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureNetworkArgs', 'ServiceRoutingEigrpFeatureNetworkArgsDict']]]]] = None,
+            redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureRedistributeArgs', 'ServiceRoutingEigrpFeatureRedistributeArgsDict']]]]] = None,
+            route_policy_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceRoutingEigrpFeature':
         """
         Get an existing ServiceRoutingEigrpFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

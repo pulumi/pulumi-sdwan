@@ -182,55 +182,55 @@ export interface DnsSecurityPolicyDefinitionState {
     /**
      * Credentials feature template ID
      */
-    ciscoSigCredentialsFeatureTemplateId?: pulumi.Input<string>;
+    ciscoSigCredentialsFeatureTemplateId?: pulumi.Input<string | undefined>;
     /**
      * Credentials feature template version
      */
-    ciscoSigCredentialsFeatureTemplateVersion?: pulumi.Input<number>;
+    ciscoSigCredentialsFeatureTemplateVersion?: pulumi.Input<number | undefined>;
     /**
      * Only relevant when `umbrellaDnsDefault` is `false`
      */
-    customDnsServerIp?: pulumi.Input<string>;
+    customDnsServerIp?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition.
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Should DNSCrypt be enabled
      */
-    dnscrypt?: pulumi.Input<boolean>;
+    dnscrypt?: pulumi.Input<boolean | undefined>;
     /**
      * Local domain bypass list ID
      */
-    domainListId?: pulumi.Input<string>;
+    domainListId?: pulumi.Input<string | undefined>;
     /**
      * Local domain bypass list version
      */
-    domainListVersion?: pulumi.Input<number>;
+    domainListVersion?: pulumi.Input<number | undefined>;
     /**
      * Should the local domain bypass list be enabled
      */
-    localDomainBypassEnabled?: pulumi.Input<boolean>;
+    localDomainBypassEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Should use match all VPN
      */
-    matchAllVpn?: pulumi.Input<boolean>;
+    matchAllVpn?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Only relevant when `matchAllVpn` is `false`
      */
-    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyDefinitionTargetVpn>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyDefinitionTargetVpn>[] | undefined>;
     /**
      * Should use umbrella as DNS Server
      */
-    umbrellaDnsDefault?: pulumi.Input<boolean>;
+    umbrellaDnsDefault?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -244,11 +244,11 @@ export interface DnsSecurityPolicyDefinitionArgs {
     /**
      * Credentials feature template version
      */
-    ciscoSigCredentialsFeatureTemplateVersion?: pulumi.Input<number>;
+    ciscoSigCredentialsFeatureTemplateVersion?: pulumi.Input<number | undefined>;
     /**
      * Only relevant when `umbrellaDnsDefault` is `false`
      */
-    customDnsServerIp?: pulumi.Input<string>;
+    customDnsServerIp?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition.
      */
@@ -256,19 +256,19 @@ export interface DnsSecurityPolicyDefinitionArgs {
     /**
      * Should DNSCrypt be enabled
      */
-    dnscrypt?: pulumi.Input<boolean>;
+    dnscrypt?: pulumi.Input<boolean | undefined>;
     /**
      * Local domain bypass list ID
      */
-    domainListId?: pulumi.Input<string>;
+    domainListId?: pulumi.Input<string | undefined>;
     /**
      * Local domain bypass list version
      */
-    domainListVersion?: pulumi.Input<number>;
+    domainListVersion?: pulumi.Input<number | undefined>;
     /**
      * Should the local domain bypass list be enabled
      */
-    localDomainBypassEnabled?: pulumi.Input<boolean>;
+    localDomainBypassEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Should use match all VPN
      */
@@ -276,11 +276,11 @@ export interface DnsSecurityPolicyDefinitionArgs {
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Only relevant when `matchAllVpn` is `false`
      */
-    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyDefinitionTargetVpn>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyDefinitionTargetVpn>[] | undefined>;
     /**
      * Should use umbrella as DNS Server
      */

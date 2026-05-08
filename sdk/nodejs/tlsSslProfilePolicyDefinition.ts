@@ -180,61 +180,61 @@ export interface TlsSslProfilePolicyDefinitionState {
     /**
      * Allow URL list ID
      */
-    allowUrlListId?: pulumi.Input<string>;
+    allowUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Allow URL list version
      */
-    allowUrlListVersion?: pulumi.Input<number>;
+    allowUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * Block URL list ID
      */
-    blockUrlListId?: pulumi.Input<string>;
+    blockUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Block URL list version
      */
-    blockUrlListVersion?: pulumi.Input<number>;
+    blockUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * Categories that should be decrypted
      */
-    decryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    decryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Decrypt threshold
      *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
-    decryptThreshold?: pulumi.Input<string>;
+    decryptThreshold?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition.
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Fail decrypt enabled
      */
-    failDecrypt?: pulumi.Input<boolean>;
+    failDecrypt?: pulumi.Input<boolean | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Categories that should never be decrypted
      */
-    neverDecryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    neverDecryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Reputation enabled
      */
-    reputation?: pulumi.Input<boolean>;
+    reputation?: pulumi.Input<boolean | undefined>;
     /**
      * Categories that should skipped
      */
-    skipDecryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    skipDecryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -244,28 +244,28 @@ export interface TlsSslProfilePolicyDefinitionArgs {
     /**
      * Allow URL list ID
      */
-    allowUrlListId?: pulumi.Input<string>;
+    allowUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Allow URL list version
      */
-    allowUrlListVersion?: pulumi.Input<number>;
+    allowUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * Block URL list ID
      */
-    blockUrlListId?: pulumi.Input<string>;
+    blockUrlListId?: pulumi.Input<string | undefined>;
     /**
      * Block URL list version
      */
-    blockUrlListVersion?: pulumi.Input<number>;
+    blockUrlListVersion?: pulumi.Input<number | undefined>;
     /**
      * Categories that should be decrypted
      */
-    decryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    decryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Decrypt threshold
      *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
-    decryptThreshold?: pulumi.Input<string>;
+    decryptThreshold?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition.
      */
@@ -273,26 +273,26 @@ export interface TlsSslProfilePolicyDefinitionArgs {
     /**
      * Fail decrypt enabled
      */
-    failDecrypt?: pulumi.Input<boolean>;
+    failDecrypt?: pulumi.Input<boolean | undefined>;
     /**
      * The policy mode
      *   - Choices: `security`, `unified`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Categories that should never be decrypted
      */
-    neverDecryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    neverDecryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Reputation enabled
      */
-    reputation?: pulumi.Input<boolean>;
+    reputation?: pulumi.Input<boolean | undefined>;
     /**
      * Categories that should skipped
      */
-    skipDecryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    skipDecryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

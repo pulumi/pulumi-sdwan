@@ -266,78 +266,78 @@ export interface SystemAaaFeatureState {
      * Accounting configurations parameters
      *   - Default value: `false`
      */
-    accountingGroup?: pulumi.Input<boolean>;
+    accountingGroup?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    accountingGroupVariable?: pulumi.Input<string>;
+    accountingGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the accounting rules
      */
-    accountingRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAccountingRule>[]>;
+    accountingRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAccountingRule>[] | undefined>;
     /**
      * Authentication configurations parameters
      *   - Default value: `false`
      */
-    authenticationGroup?: pulumi.Input<boolean>;
+    authenticationGroup?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authenticationGroupVariable?: pulumi.Input<string>;
+    authenticationGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * For configuration mode commands.
      *   - Default value: `false`
      */
-    authorizationConfigCommands?: pulumi.Input<boolean>;
+    authorizationConfigCommands?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConfigCommandsVariable?: pulumi.Input<string>;
+    authorizationConfigCommandsVariable?: pulumi.Input<string | undefined>;
     /**
      * For enabling console authorization
      *   - Default value: `false`
      */
-    authorizationConsole?: pulumi.Input<boolean>;
+    authorizationConsole?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConsoleVariable?: pulumi.Input<string>;
+    authorizationConsoleVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the Authorization Rules
      */
-    authorizationRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAuthorizationRule>[]>;
+    authorizationRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAuthorizationRule>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure the Radius serverGroup
      */
-    radiusGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureRadiusGroup>[]>;
+    radiusGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureRadiusGroup>[] | undefined>;
     /**
      * ServerGroups priority order
      */
-    serverAuthOrders?: pulumi.Input<pulumi.Input<string>[]>;
+    serverAuthOrders?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure the TACACS serverGroup
      */
-    tacacsGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroup>[]>;
+    tacacsGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroup>[] | undefined>;
     /**
      * Create local login account
      */
-    users?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureUser>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -348,50 +348,50 @@ export interface SystemAaaFeatureArgs {
      * Accounting configurations parameters
      *   - Default value: `false`
      */
-    accountingGroup?: pulumi.Input<boolean>;
+    accountingGroup?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    accountingGroupVariable?: pulumi.Input<string>;
+    accountingGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the accounting rules
      */
-    accountingRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAccountingRule>[]>;
+    accountingRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAccountingRule>[] | undefined>;
     /**
      * Authentication configurations parameters
      *   - Default value: `false`
      */
-    authenticationGroup?: pulumi.Input<boolean>;
+    authenticationGroup?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authenticationGroupVariable?: pulumi.Input<string>;
+    authenticationGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * For configuration mode commands.
      *   - Default value: `false`
      */
-    authorizationConfigCommands?: pulumi.Input<boolean>;
+    authorizationConfigCommands?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConfigCommandsVariable?: pulumi.Input<string>;
+    authorizationConfigCommandsVariable?: pulumi.Input<string | undefined>;
     /**
      * For enabling console authorization
      *   - Default value: `false`
      */
-    authorizationConsole?: pulumi.Input<boolean>;
+    authorizationConsole?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConsoleVariable?: pulumi.Input<string>;
+    authorizationConsoleVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the Authorization Rules
      */
-    authorizationRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAuthorizationRule>[]>;
+    authorizationRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAuthorizationRule>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -399,11 +399,11 @@ export interface SystemAaaFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure the Radius serverGroup
      */
-    radiusGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureRadiusGroup>[]>;
+    radiusGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureRadiusGroup>[] | undefined>;
     /**
      * ServerGroups priority order
      */
@@ -411,9 +411,9 @@ export interface SystemAaaFeatureArgs {
     /**
      * Configure the TACACS serverGroup
      */
-    tacacsGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroup>[]>;
+    tacacsGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroup>[] | undefined>;
     /**
      * Create local login account
      */
-    users?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureUser>[] | undefined>;
 }

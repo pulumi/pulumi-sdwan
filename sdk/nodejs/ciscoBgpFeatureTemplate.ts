@@ -472,186 +472,186 @@ export interface CiscoBgpFeatureTemplateState {
     /**
      * Set BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamily>[] | undefined>;
     /**
      * Compare MEDs from all ASs when selecting active BGP paths
      *   - Default value: `false`
      */
-    alwaysCompareMed?: pulumi.Input<boolean>;
+    alwaysCompareMed?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    alwaysCompareMedVariable?: pulumi.Input<string>;
+    alwaysCompareMedVariable?: pulumi.Input<string | undefined>;
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    asNumber?: pulumi.Input<string>;
+    asNumber?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asNumberVariable?: pulumi.Input<string>;
+    asNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Compare router IDs when selecting active BGP paths
      *   - Default value: `false`
      */
-    compareRouterId?: pulumi.Input<boolean>;
+    compareRouterId?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    compareRouterIdVariable?: pulumi.Input<string>;
+    compareRouterIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Compare MEDs from all routes from same AS when selecting active BGP paths
      *   - Default value: `false`
      */
-    deterministicMed?: pulumi.Input<boolean>;
+    deterministicMed?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    deterministicMedVariable?: pulumi.Input<string>;
+    deterministicMedVariable?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set administrative distance for external BGP routes
      *   - Range: `1`-`255`
      *   - Default value: `20`
      */
-    distanceExternal?: pulumi.Input<number>;
+    distanceExternal?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceExternalVariable?: pulumi.Input<string>;
+    distanceExternalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set administrative distance for internal BGP routes
      *   - Range: `1`-`255`
      *   - Default value: `200`
      */
-    distanceInternal?: pulumi.Input<number>;
+    distanceInternal?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceInternalVariable?: pulumi.Input<string>;
+    distanceInternalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set administrative distance for local BGP routes
      *   - Range: `1`-`255`
      *   - Default value: `20`
      */
-    distanceLocal?: pulumi.Input<number>;
+    distanceLocal?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceLocalVariable?: pulumi.Input<string>;
+    distanceLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interval when BGP considers a neighbor to be down
      *   - Range: `0`-`65535`
      *   - Default value: `180`
      */
-    holdtime?: pulumi.Input<number>;
+    holdtime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdtimeVariable?: pulumi.Input<string>;
+    holdtimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set BGP neighbors
      */
-    ipv4Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4Neighbor>[]>;
+    ipv4Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4Neighbor>[] | undefined>;
     /**
      * Router Target for IPV4
      */
-    ipv4RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTarget>[]>;
+    ipv4RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTarget>[] | undefined>;
     /**
      * Set BGP IPv6 neighbors
      */
-    ipv6Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6Neighbor>[]>;
+    ipv6Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6Neighbor>[] | undefined>;
     /**
      * Router Target for IPV6
      */
-    ipv6RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTarget>[]>;
+    ipv6RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTarget>[] | undefined>;
     /**
      * Set how often keepalive messages are sent to BGP peer
      *   - Range: `0`-`65535`
      *   - Default value: `60`
      */
-    keepalive?: pulumi.Input<number>;
+    keepalive?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveVariable?: pulumi.Input<string>;
+    keepaliveVariable?: pulumi.Input<string | undefined>;
     /**
      * If path has no MED, consider it to be worst path when selecting active BGP paths
      *   - Default value: `false`
      */
-    missingMedWorst?: pulumi.Input<boolean>;
+    missingMedWorst?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    missingMedWorstVariable?: pulumi.Input<string>;
+    missingMedWorstVariable?: pulumi.Input<string | undefined>;
     /**
      * MPLS BGP Interface
      */
-    mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateMplsInterface>[]>;
+    mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateMplsInterface>[] | undefined>;
     /**
      * Ignore AS for multipath selection
      *   - Default value: `false`
      */
-    multipathRelax?: pulumi.Input<boolean>;
+    multipathRelax?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    multipathRelaxVariable?: pulumi.Input<string>;
+    multipathRelaxVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Propagate AS Path 
      *   - Default value: `false`
      */
-    propagateAspath?: pulumi.Input<boolean>;
+    propagateAspath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    propagateAspathVariable?: pulumi.Input<string>;
+    propagateAspathVariable?: pulumi.Input<string | undefined>;
     /**
      * Propagate Community
      *   - Default value: `false`
      */
-    propagateCommunity?: pulumi.Input<boolean>;
+    propagateCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    propagateCommunityVariable?: pulumi.Input<string>;
+    propagateCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure BGP router identifier
      */
-    routerId?: pulumi.Input<string>;
+    routerId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routerIdVariable?: pulumi.Input<string>;
+    routerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable BGP
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -661,33 +661,33 @@ export interface CiscoBgpFeatureTemplateArgs {
     /**
      * Set BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamily>[] | undefined>;
     /**
      * Compare MEDs from all ASs when selecting active BGP paths
      *   - Default value: `false`
      */
-    alwaysCompareMed?: pulumi.Input<boolean>;
+    alwaysCompareMed?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    alwaysCompareMedVariable?: pulumi.Input<string>;
+    alwaysCompareMedVariable?: pulumi.Input<string | undefined>;
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    asNumber?: pulumi.Input<string>;
+    asNumber?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asNumberVariable?: pulumi.Input<string>;
+    asNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Compare router IDs when selecting active BGP paths
      *   - Default value: `false`
      */
-    compareRouterId?: pulumi.Input<boolean>;
+    compareRouterId?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    compareRouterIdVariable?: pulumi.Input<string>;
+    compareRouterIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -696,11 +696,11 @@ export interface CiscoBgpFeatureTemplateArgs {
      * Compare MEDs from all routes from same AS when selecting active BGP paths
      *   - Default value: `false`
      */
-    deterministicMed?: pulumi.Input<boolean>;
+    deterministicMed?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    deterministicMedVariable?: pulumi.Input<string>;
+    deterministicMedVariable?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -711,126 +711,126 @@ export interface CiscoBgpFeatureTemplateArgs {
      *   - Range: `1`-`255`
      *   - Default value: `20`
      */
-    distanceExternal?: pulumi.Input<number>;
+    distanceExternal?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceExternalVariable?: pulumi.Input<string>;
+    distanceExternalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set administrative distance for internal BGP routes
      *   - Range: `1`-`255`
      *   - Default value: `200`
      */
-    distanceInternal?: pulumi.Input<number>;
+    distanceInternal?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceInternalVariable?: pulumi.Input<string>;
+    distanceInternalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set administrative distance for local BGP routes
      *   - Range: `1`-`255`
      *   - Default value: `20`
      */
-    distanceLocal?: pulumi.Input<number>;
+    distanceLocal?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceLocalVariable?: pulumi.Input<string>;
+    distanceLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interval when BGP considers a neighbor to be down
      *   - Range: `0`-`65535`
      *   - Default value: `180`
      */
-    holdtime?: pulumi.Input<number>;
+    holdtime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdtimeVariable?: pulumi.Input<string>;
+    holdtimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set BGP neighbors
      */
-    ipv4Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4Neighbor>[]>;
+    ipv4Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4Neighbor>[] | undefined>;
     /**
      * Router Target for IPV4
      */
-    ipv4RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTarget>[]>;
+    ipv4RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTarget>[] | undefined>;
     /**
      * Set BGP IPv6 neighbors
      */
-    ipv6Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6Neighbor>[]>;
+    ipv6Neighbors?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6Neighbor>[] | undefined>;
     /**
      * Router Target for IPV6
      */
-    ipv6RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTarget>[]>;
+    ipv6RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTarget>[] | undefined>;
     /**
      * Set how often keepalive messages are sent to BGP peer
      *   - Range: `0`-`65535`
      *   - Default value: `60`
      */
-    keepalive?: pulumi.Input<number>;
+    keepalive?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveVariable?: pulumi.Input<string>;
+    keepaliveVariable?: pulumi.Input<string | undefined>;
     /**
      * If path has no MED, consider it to be worst path when selecting active BGP paths
      *   - Default value: `false`
      */
-    missingMedWorst?: pulumi.Input<boolean>;
+    missingMedWorst?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    missingMedWorstVariable?: pulumi.Input<string>;
+    missingMedWorstVariable?: pulumi.Input<string | undefined>;
     /**
      * MPLS BGP Interface
      */
-    mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateMplsInterface>[]>;
+    mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateMplsInterface>[] | undefined>;
     /**
      * Ignore AS for multipath selection
      *   - Default value: `false`
      */
-    multipathRelax?: pulumi.Input<boolean>;
+    multipathRelax?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    multipathRelaxVariable?: pulumi.Input<string>;
+    multipathRelaxVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Propagate AS Path 
      *   - Default value: `false`
      */
-    propagateAspath?: pulumi.Input<boolean>;
+    propagateAspath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    propagateAspathVariable?: pulumi.Input<string>;
+    propagateAspathVariable?: pulumi.Input<string | undefined>;
     /**
      * Propagate Community
      *   - Default value: `false`
      */
-    propagateCommunity?: pulumi.Input<boolean>;
+    propagateCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    propagateCommunityVariable?: pulumi.Input<string>;
+    propagateCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure BGP router identifier
      */
-    routerId?: pulumi.Input<string>;
+    routerId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routerIdVariable?: pulumi.Input<string>;
+    routerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable BGP
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
 }

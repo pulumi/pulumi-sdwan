@@ -96,9 +96,9 @@ export interface GetDeviceOutputArgs {
     /**
      * The hostname of a device
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Serial number for device. Could be board or virtual identifier
      */
-    serialNumber?: pulumi.Input<string>;
+    serialNumber?: pulumi.Input<string | undefined>;
 }

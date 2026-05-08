@@ -109,15 +109,15 @@ export interface ColorListPolicyObjectState {
     /**
      * List of entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.ColorListPolicyObjectEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.ColorListPolicyObjectEntry>[] | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -131,5 +131,5 @@ export interface ColorListPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -109,15 +109,15 @@ export interface DataIpv6PrefixListPolicyObjectState {
     /**
      * List of entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.DataIpv6PrefixListPolicyObjectEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.DataIpv6PrefixListPolicyObjectEntry>[] | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -131,5 +131,5 @@ export interface DataIpv6PrefixListPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

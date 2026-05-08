@@ -357,7 +357,7 @@ def get_security_policy(id: Optional[_builtins.str] = None,
         unified_logging=pulumi.get(__ret__, 'unified_logging'),
         use_case=pulumi.get(__ret__, 'use_case'),
         version=pulumi.get(__ret__, 'version'))
-def get_security_policy_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_security_policy_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityPolicyResult]:
     """
     This data source can read the Security Policy .

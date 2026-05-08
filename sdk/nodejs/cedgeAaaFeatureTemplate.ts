@@ -363,139 +363,139 @@ export interface CedgeAaaFeatureTemplateState {
     /**
      * Configure the accounting rules
      */
-    accountingRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAccountingRule>[]>;
+    accountingRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAccountingRule>[] | undefined>;
     /**
      * For configuration mode commands.
      *   - Default value: `false`
      */
-    authorizationConfigCommands?: pulumi.Input<boolean>;
+    authorizationConfigCommands?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConfigCommandsVariable?: pulumi.Input<string>;
+    authorizationConfigCommandsVariable?: pulumi.Input<string | undefined>;
     /**
      * For enabling console authorization
      *   - Default value: `false`
      */
-    authorizationConsole?: pulumi.Input<boolean>;
+    authorizationConsole?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConsoleVariable?: pulumi.Input<string>;
+    authorizationConsoleVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the Authorization Rules
      */
-    authorizationRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAuthorizationRule>[]>;
+    authorizationRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAuthorizationRule>[] | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Accounting configurations parameters
      *   - Default value: `false`
      */
-    dot1xAccounting?: pulumi.Input<boolean>;
+    dot1xAccounting?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xAccountingVariable?: pulumi.Input<string>;
+    dot1xAccountingVariable?: pulumi.Input<string | undefined>;
     /**
      * Authentication configurations parameters
      *   - Default value: `false`
      */
-    dot1xAuthentication?: pulumi.Input<boolean>;
+    dot1xAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xAuthenticationVariable?: pulumi.Input<string>;
+    dot1xAuthenticationVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Specify a RADIUS client
      */
-    radiusClients?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusClient>[]>;
+    radiusClients?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusClient>[] | undefined>;
     /**
      * Authentication Type
      *   - Choices: `any`, `all`, `session-key`
      *   - Default value: `any`
      */
-    radiusDynamicAuthorAuthenticationType?: pulumi.Input<string>;
+    radiusDynamicAuthorAuthenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorAuthenticationTypeVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorAuthenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Domain Stripping
      *   - Choices: `yes`, `no`, `right-to-left`
      *   - Default value: `no`
      */
-    radiusDynamicAuthorDomainStripping?: pulumi.Input<string>;
+    radiusDynamicAuthorDomainStripping?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorDomainStrippingVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorDomainStrippingVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify Radius Dynamic Author Port
      *   - Range: `0`-`65535`
      *   - Default value: `1700`
      */
-    radiusDynamicAuthorPort?: pulumi.Input<number>;
+    radiusDynamicAuthorPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorPortVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify a radius dynamic author server-key
      */
-    radiusDynamicAuthorServerKey?: pulumi.Input<string>;
+    radiusDynamicAuthorServerKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorServerKeyVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorServerKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the Radius serverGroup
      */
-    radiusServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusServerGroup>[]>;
+    radiusServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusServerGroup>[] | undefined>;
     /**
      * CTS Authorization List
      */
-    radiusTrustsecCtsAuthorizationList?: pulumi.Input<string>;
+    radiusTrustsecCtsAuthorizationList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusTrustsecCtsAuthorizationListVariable?: pulumi.Input<string>;
+    radiusTrustsecCtsAuthorizationListVariable?: pulumi.Input<string | undefined>;
     /**
      * RADIUS trustsec group
      */
-    radiusTrustsecGroup?: pulumi.Input<string>;
+    radiusTrustsecGroup?: pulumi.Input<string | undefined>;
     /**
      * ServerGroups priority order
      *   - Default value: `local`
      */
-    serverGroupsPriorityOrder?: pulumi.Input<string>;
+    serverGroupsPriorityOrder?: pulumi.Input<string | undefined>;
     /**
      * Configure the TACACS serverGroup
      */
-    tacacsServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateTacacsServerGroup>[]>;
+    tacacsServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateTacacsServerGroup>[] | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Create local login account
      */
-    users?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateUser>[] | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -505,29 +505,29 @@ export interface CedgeAaaFeatureTemplateArgs {
     /**
      * Configure the accounting rules
      */
-    accountingRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAccountingRule>[]>;
+    accountingRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAccountingRule>[] | undefined>;
     /**
      * For configuration mode commands.
      *   - Default value: `false`
      */
-    authorizationConfigCommands?: pulumi.Input<boolean>;
+    authorizationConfigCommands?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConfigCommandsVariable?: pulumi.Input<string>;
+    authorizationConfigCommandsVariable?: pulumi.Input<string | undefined>;
     /**
      * For enabling console authorization
      *   - Default value: `false`
      */
-    authorizationConsole?: pulumi.Input<boolean>;
+    authorizationConsole?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    authorizationConsoleVariable?: pulumi.Input<string>;
+    authorizationConsoleVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the Authorization Rules
      */
-    authorizationRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAuthorizationRule>[]>;
+    authorizationRules?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateAuthorizationRule>[] | undefined>;
     /**
      * The description of the feature template
      */
@@ -541,93 +541,93 @@ export interface CedgeAaaFeatureTemplateArgs {
      * Accounting configurations parameters
      *   - Default value: `false`
      */
-    dot1xAccounting?: pulumi.Input<boolean>;
+    dot1xAccounting?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xAccountingVariable?: pulumi.Input<string>;
+    dot1xAccountingVariable?: pulumi.Input<string | undefined>;
     /**
      * Authentication configurations parameters
      *   - Default value: `false`
      */
-    dot1xAuthentication?: pulumi.Input<boolean>;
+    dot1xAuthentication?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xAuthenticationVariable?: pulumi.Input<string>;
+    dot1xAuthenticationVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Specify a RADIUS client
      */
-    radiusClients?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusClient>[]>;
+    radiusClients?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusClient>[] | undefined>;
     /**
      * Authentication Type
      *   - Choices: `any`, `all`, `session-key`
      *   - Default value: `any`
      */
-    radiusDynamicAuthorAuthenticationType?: pulumi.Input<string>;
+    radiusDynamicAuthorAuthenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorAuthenticationTypeVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorAuthenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Domain Stripping
      *   - Choices: `yes`, `no`, `right-to-left`
      *   - Default value: `no`
      */
-    radiusDynamicAuthorDomainStripping?: pulumi.Input<string>;
+    radiusDynamicAuthorDomainStripping?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorDomainStrippingVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorDomainStrippingVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify Radius Dynamic Author Port
      *   - Range: `0`-`65535`
      *   - Default value: `1700`
      */
-    radiusDynamicAuthorPort?: pulumi.Input<number>;
+    radiusDynamicAuthorPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorPortVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify a radius dynamic author server-key
      */
-    radiusDynamicAuthorServerKey?: pulumi.Input<string>;
+    radiusDynamicAuthorServerKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusDynamicAuthorServerKeyVariable?: pulumi.Input<string>;
+    radiusDynamicAuthorServerKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the Radius serverGroup
      */
-    radiusServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusServerGroup>[]>;
+    radiusServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusServerGroup>[] | undefined>;
     /**
      * CTS Authorization List
      */
-    radiusTrustsecCtsAuthorizationList?: pulumi.Input<string>;
+    radiusTrustsecCtsAuthorizationList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusTrustsecCtsAuthorizationListVariable?: pulumi.Input<string>;
+    radiusTrustsecCtsAuthorizationListVariable?: pulumi.Input<string | undefined>;
     /**
      * RADIUS trustsec group
      */
-    radiusTrustsecGroup?: pulumi.Input<string>;
+    radiusTrustsecGroup?: pulumi.Input<string | undefined>;
     /**
      * ServerGroups priority order
      *   - Default value: `local`
      */
-    serverGroupsPriorityOrder?: pulumi.Input<string>;
+    serverGroupsPriorityOrder?: pulumi.Input<string | undefined>;
     /**
      * Configure the TACACS serverGroup
      */
-    tacacsServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateTacacsServerGroup>[]>;
+    tacacsServerGroups?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateTacacsServerGroup>[] | undefined>;
     /**
      * Create local login account
      */
-    users?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateUser>[] | undefined>;
 }

@@ -169,8 +169,8 @@ def get_service_tracker_group_feature(feature_profile_id: Optional[_builtins.str
         tracker_boolean_variable=pulumi.get(__ret__, 'tracker_boolean_variable'),
         tracker_elements=pulumi.get(__ret__, 'tracker_elements'),
         version=pulumi.get(__ret__, 'version'))
-def get_service_tracker_group_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                             id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_tracker_group_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                             id: pulumi.Input[Optional[_builtins.str]] = None,
                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceTrackerGroupFeatureResult]:
     """
     This data source can read the Service Tracker Group Feature.

@@ -329,126 +329,126 @@ export interface ServiceMulticastFeatureState {
     /**
      * Enable or disable RP Announce
      */
-    autoRpAnnounces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpAnnounce>[]>;
+    autoRpAnnounces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpAnnounce>[] | undefined>;
     /**
      * Enable or disable RP Discovery
      */
-    autoRpDiscoveries?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpDiscovery>[]>;
+    autoRpDiscoveries?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpDiscovery>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable auto-RP
      *   - Default value: `false`
      */
-    enableAutoRp?: pulumi.Input<boolean>;
+    enableAutoRp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableAutoRpVariable?: pulumi.Input<string>;
+    enableAutoRpVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Set IGMP interface parameters
      */
-    igmpInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterface>[]>;
+    igmpInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterface>[] | undefined>;
     /**
      * Replicator is local to this device
      *   - Default value: `false`
      */
-    localReplicator?: pulumi.Input<boolean>;
+    localReplicator?: pulumi.Input<boolean | undefined>;
     /**
      * Set number of joins per group the router supports
      *   - Range: `0`-`131072`
      */
-    localReplicatorThreshold?: pulumi.Input<number>;
+    localReplicatorThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    localReplicatorThresholdVariable?: pulumi.Input<string>;
+    localReplicatorThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    localReplicatorVariable?: pulumi.Input<string>;
+    localReplicatorVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP refresh timer
      *   - Range: `1`-`60`
      */
-    msdpConnectionRetryInterval?: pulumi.Input<number>;
+    msdpConnectionRetryInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    msdpConnectionRetryIntervalVariable?: pulumi.Input<string>;
+    msdpConnectionRetryIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * multicast MSDP peer
      */
-    msdpGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroup>[]>;
+    msdpGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroup>[] | undefined>;
     /**
      * Set MSDP originator ID
      */
-    msdpOriginatorId?: pulumi.Input<string>;
+    msdpOriginatorId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    msdpOriginatorIdVariable?: pulumi.Input<string>;
+    msdpOriginatorIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * bsr candidate Attributes
      */
-    pimBsrCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrCandidate>[]>;
+    pimBsrCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrCandidate>[] | undefined>;
     /**
      * Set RP Discovery Scope
      */
-    pimBsrRpCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrRpCandidate>[]>;
+    pimBsrRpCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrRpCandidate>[] | undefined>;
     /**
      * Set PIM interface parameters
      */
-    pimInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimInterface>[]>;
+    pimInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimInterface>[] | undefined>;
     /**
      * Set Access List for PIM SSM
      */
-    pimSourceSpecificMulticastAccessList?: pulumi.Input<string>;
+    pimSourceSpecificMulticastAccessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    pimSourceSpecificMulticastAccessListVariable?: pulumi.Input<string>;
+    pimSourceSpecificMulticastAccessListVariable?: pulumi.Input<string | undefined>;
     /**
      * turn SSM on/off
      */
-    pimSourceSpecificMulticastEnable?: pulumi.Input<boolean>;
+    pimSourceSpecificMulticastEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Set when PIM router joins the SPT (kbps)
      *   - Choices: `0`, `infinity`
      *   - Default value: `0`
      */
-    pimSptThreshold?: pulumi.Input<string>;
+    pimSptThreshold?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    pimSptThresholdVariable?: pulumi.Input<string>;
+    pimSptThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Shortest Path Tree (SPT) Only Mode
      *   - Default value: `false`
      */
-    sptOnly?: pulumi.Input<boolean>;
+    sptOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sptOnlyVariable?: pulumi.Input<string>;
+    sptOnlyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Static RP Address(es)
      */
-    staticRpAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureStaticRpAddress>[]>;
+    staticRpAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureStaticRpAddress>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -458,24 +458,24 @@ export interface ServiceMulticastFeatureArgs {
     /**
      * Enable or disable RP Announce
      */
-    autoRpAnnounces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpAnnounce>[]>;
+    autoRpAnnounces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpAnnounce>[] | undefined>;
     /**
      * Enable or disable RP Discovery
      */
-    autoRpDiscoveries?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpDiscovery>[]>;
+    autoRpDiscoveries?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureAutoRpDiscovery>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable auto-RP
      *   - Default value: `false`
      */
-    enableAutoRp?: pulumi.Input<boolean>;
+    enableAutoRp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableAutoRpVariable?: pulumi.Input<string>;
+    enableAutoRpVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -483,70 +483,70 @@ export interface ServiceMulticastFeatureArgs {
     /**
      * Set IGMP interface parameters
      */
-    igmpInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterface>[]>;
+    igmpInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterface>[] | undefined>;
     /**
      * Replicator is local to this device
      *   - Default value: `false`
      */
-    localReplicator?: pulumi.Input<boolean>;
+    localReplicator?: pulumi.Input<boolean | undefined>;
     /**
      * Set number of joins per group the router supports
      *   - Range: `0`-`131072`
      */
-    localReplicatorThreshold?: pulumi.Input<number>;
+    localReplicatorThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    localReplicatorThresholdVariable?: pulumi.Input<string>;
+    localReplicatorThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    localReplicatorVariable?: pulumi.Input<string>;
+    localReplicatorVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP refresh timer
      *   - Range: `1`-`60`
      */
-    msdpConnectionRetryInterval?: pulumi.Input<number>;
+    msdpConnectionRetryInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    msdpConnectionRetryIntervalVariable?: pulumi.Input<string>;
+    msdpConnectionRetryIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * multicast MSDP peer
      */
-    msdpGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroup>[]>;
+    msdpGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroup>[] | undefined>;
     /**
      * Set MSDP originator ID
      */
-    msdpOriginatorId?: pulumi.Input<string>;
+    msdpOriginatorId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    msdpOriginatorIdVariable?: pulumi.Input<string>;
+    msdpOriginatorIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * bsr candidate Attributes
      */
-    pimBsrCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrCandidate>[]>;
+    pimBsrCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrCandidate>[] | undefined>;
     /**
      * Set RP Discovery Scope
      */
-    pimBsrRpCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrRpCandidate>[]>;
+    pimBsrRpCandidates?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimBsrRpCandidate>[] | undefined>;
     /**
      * Set PIM interface parameters
      */
-    pimInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimInterface>[]>;
+    pimInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeaturePimInterface>[] | undefined>;
     /**
      * Set Access List for PIM SSM
      */
-    pimSourceSpecificMulticastAccessList?: pulumi.Input<string>;
+    pimSourceSpecificMulticastAccessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    pimSourceSpecificMulticastAccessListVariable?: pulumi.Input<string>;
+    pimSourceSpecificMulticastAccessListVariable?: pulumi.Input<string | undefined>;
     /**
      * turn SSM on/off
      */
@@ -556,22 +556,22 @@ export interface ServiceMulticastFeatureArgs {
      *   - Choices: `0`, `infinity`
      *   - Default value: `0`
      */
-    pimSptThreshold?: pulumi.Input<string>;
+    pimSptThreshold?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    pimSptThresholdVariable?: pulumi.Input<string>;
+    pimSptThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Shortest Path Tree (SPT) Only Mode
      *   - Default value: `false`
      */
-    sptOnly?: pulumi.Input<boolean>;
+    sptOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sptOnlyVariable?: pulumi.Input<string>;
+    sptOnlyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Static RP Address(es)
      */
-    staticRpAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureStaticRpAddress>[]>;
+    staticRpAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureStaticRpAddress>[] | undefined>;
 }

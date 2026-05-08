@@ -109,15 +109,15 @@ export interface PortListPolicyObjectState {
     /**
      * List of entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.PortListPolicyObjectEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PortListPolicyObjectEntry>[] | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -131,5 +131,5 @@ export interface PortListPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

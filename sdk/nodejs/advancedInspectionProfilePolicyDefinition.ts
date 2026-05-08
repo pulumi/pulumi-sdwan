@@ -162,52 +162,52 @@ export interface AdvancedInspectionProfilePolicyDefinitionState {
     /**
      * Advanced malware protection ID
      */
-    advancedMalwareProtectionId?: pulumi.Input<string>;
+    advancedMalwareProtectionId?: pulumi.Input<string | undefined>;
     /**
      * Advanced malware protection version
      */
-    advancedMalwareProtectionVersion?: pulumi.Input<number>;
+    advancedMalwareProtectionVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition.
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Intrusion prevention ID (unified mode)
      */
-    intrusionPreventionId?: pulumi.Input<string>;
+    intrusionPreventionId?: pulumi.Input<string | undefined>;
     /**
      * Intrusion prevention version
      */
-    intrusionPreventionVersion?: pulumi.Input<number>;
+    intrusionPreventionVersion?: pulumi.Input<number | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * TLS Action
      *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      */
-    tlsAction?: pulumi.Input<string>;
+    tlsAction?: pulumi.Input<string | undefined>;
     /**
      * TLS/SSL decryption ID
      */
-    tlsSslDecryptionId?: pulumi.Input<string>;
+    tlsSslDecryptionId?: pulumi.Input<string | undefined>;
     /**
      * TLS/SSL decryption version
      */
-    tlsSslDecryptionVersion?: pulumi.Input<number>;
+    tlsSslDecryptionVersion?: pulumi.Input<number | undefined>;
     /**
      * URL filtering ID (unified mode)
      */
-    urlFilteringId?: pulumi.Input<string>;
+    urlFilteringId?: pulumi.Input<string | undefined>;
     /**
      * URL filtering version
      */
-    urlFilteringVersion?: pulumi.Input<number>;
+    urlFilteringVersion?: pulumi.Input<number | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -217,11 +217,11 @@ export interface AdvancedInspectionProfilePolicyDefinitionArgs {
     /**
      * Advanced malware protection ID
      */
-    advancedMalwareProtectionId?: pulumi.Input<string>;
+    advancedMalwareProtectionId?: pulumi.Input<string | undefined>;
     /**
      * Advanced malware protection version
      */
-    advancedMalwareProtectionVersion?: pulumi.Input<number>;
+    advancedMalwareProtectionVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition.
      */
@@ -229,34 +229,34 @@ export interface AdvancedInspectionProfilePolicyDefinitionArgs {
     /**
      * Intrusion prevention ID (unified mode)
      */
-    intrusionPreventionId?: pulumi.Input<string>;
+    intrusionPreventionId?: pulumi.Input<string | undefined>;
     /**
      * Intrusion prevention version
      */
-    intrusionPreventionVersion?: pulumi.Input<number>;
+    intrusionPreventionVersion?: pulumi.Input<number | undefined>;
     /**
      * The name of the policy definition.
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * TLS Action
      *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      */
-    tlsAction?: pulumi.Input<string>;
+    tlsAction?: pulumi.Input<string | undefined>;
     /**
      * TLS/SSL decryption ID
      */
-    tlsSslDecryptionId?: pulumi.Input<string>;
+    tlsSslDecryptionId?: pulumi.Input<string | undefined>;
     /**
      * TLS/SSL decryption version
      */
-    tlsSslDecryptionVersion?: pulumi.Input<number>;
+    tlsSslDecryptionVersion?: pulumi.Input<number | undefined>;
     /**
      * URL filtering ID (unified mode)
      */
-    urlFilteringId?: pulumi.Input<string>;
+    urlFilteringId?: pulumi.Input<string | undefined>;
     /**
      * URL filtering version
      */
-    urlFilteringVersion?: pulumi.Input<number>;
+    urlFilteringVersion?: pulumi.Input<number | undefined>;
 }

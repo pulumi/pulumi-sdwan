@@ -23,10 +23,10 @@ class ApplicationAwareRoutingPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  sequences: pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]],
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationAwareRoutingPolicyDefinition resource.
 
@@ -75,7 +75,7 @@ class ApplicationAwareRoutingPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type of default action
           - Choices: `slaClass`
@@ -83,57 +83,57 @@ class ApplicationAwareRoutingPolicyDefinitionArgs:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultActionSlaClassListId")
-    def default_action_sla_class_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action_sla_class_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         """
         return pulumi.get(self, "default_action_sla_class_list_id")
 
     @default_action_sla_class_list_id.setter
-    def default_action_sla_class_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action_sla_class_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action_sla_class_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultActionSlaClassListVersion")
-    def default_action_sla_class_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_action_sla_class_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SLA class list version
         """
         return pulumi.get(self, "default_action_sla_class_list_version")
 
     @default_action_sla_class_list_version.setter
-    def default_action_sla_class_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_action_sla_class_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_action_sla_class_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _ApplicationAwareRoutingPolicyDefinitionState:
     def __init__(__self__, *,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ApplicationAwareRoutingPolicyDefinition resources.
 
@@ -166,7 +166,7 @@ class _ApplicationAwareRoutingPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type of default action
           - Choices: `slaClass`
@@ -174,91 +174,91 @@ class _ApplicationAwareRoutingPolicyDefinitionState:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultActionSlaClassListId")
-    def default_action_sla_class_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action_sla_class_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         """
         return pulumi.get(self, "default_action_sla_class_list_id")
 
     @default_action_sla_class_list_id.setter
-    def default_action_sla_class_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action_sla_class_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action_sla_class_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultActionSlaClassListVersion")
-    def default_action_sla_class_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def default_action_sla_class_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         SLA class list version
         """
         return pulumi.get(self, "default_action_sla_class_list_version")
 
     @default_action_sla_class_list_version.setter
-    def default_action_sla_class_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def default_action_sla_class_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "default_action_sla_class_list_version", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]:
+    def sequences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]:
         """
         List of sequences
         """
         return pulumi.get(self, "sequences")
 
     @sequences.setter
-    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]):
+    def sequences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]):
         pulumi.set(self, "sequences", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -268,12 +268,12 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Application Aware Routing Policy Definition .
@@ -378,12 +378,12 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_action_sla_class_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -415,14 +415,14 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_action: Optional[pulumi.Input[_builtins.str]] = None,
-            default_action_sla_class_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            default_action_sla_class_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ApplicationAwareRoutingPolicyDefinition':
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            default_action_sla_class_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            default_action_sla_class_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ApplicationAwareRoutingPolicyDefinition':
         """
         Get an existing ApplicationAwareRoutingPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

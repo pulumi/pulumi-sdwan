@@ -229,8 +229,8 @@ def get_policy_object_unified_url_filtering(feature_profile_id: Optional[_builti
         web_categories=pulumi.get(__ret__, 'web_categories'),
         web_categories_action=pulumi.get(__ret__, 'web_categories_action'),
         web_reputation=pulumi.get(__ret__, 'web_reputation'))
-def get_policy_object_unified_url_filtering_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                   id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_policy_object_unified_url_filtering_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                   id: pulumi.Input[Optional[_builtins.str]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectUnifiedUrlFilteringResult]:
     """
     This data source can read the Policy Object Unified URL Filtering Policy_object.

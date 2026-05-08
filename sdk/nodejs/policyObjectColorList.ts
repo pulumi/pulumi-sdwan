@@ -129,23 +129,23 @@ export interface PolicyObjectColorListState {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Color List
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectColorListEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectColorListEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -155,7 +155,7 @@ export interface PolicyObjectColorListArgs {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Color List
      */
@@ -167,5 +167,5 @@ export interface PolicyObjectColorListArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

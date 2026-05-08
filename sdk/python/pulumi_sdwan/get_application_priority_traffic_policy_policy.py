@@ -173,8 +173,8 @@ def get_application_priority_traffic_policy_policy(feature_profile_id: Optional[
         sequences=pulumi.get(__ret__, 'sequences'),
         version=pulumi.get(__ret__, 'version'),
         vpns=pulumi.get(__ret__, 'vpns'))
-def get_application_priority_traffic_policy_policy_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                          id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_application_priority_traffic_policy_policy_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                          id: pulumi.Input[Optional[_builtins.str]] = None,
                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationPriorityTrafficPolicyPolicyResult]:
     """
     This data source can read the Application Priority Traffic Policy Policy.

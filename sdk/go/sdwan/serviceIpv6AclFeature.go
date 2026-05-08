@@ -48,7 +48,7 @@ import (
 //									},
 //								},
 //								TcpState: pulumi.String("syn"),
-//								TrafficClass: []float64{
+//								TrafficClass: []int{
 //									10,
 //								},
 //							},

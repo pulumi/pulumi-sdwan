@@ -126,23 +126,23 @@ export interface PolicyObjectSecurityLocalApplicationListState {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Localapp list
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityLocalApplicationListEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityLocalApplicationListEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -152,11 +152,11 @@ export interface PolicyObjectSecurityLocalApplicationListArgs {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Localapp list
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityLocalApplicationListEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityLocalApplicationListEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
@@ -164,5 +164,5 @@ export interface PolicyObjectSecurityLocalApplicationListArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

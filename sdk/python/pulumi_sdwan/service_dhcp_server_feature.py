@@ -22,28 +22,28 @@ __all__ = ['ServiceDhcpServerFeatureArgs', 'ServiceDhcpServerFeature']
 class ServiceDhcpServerFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_codes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]] = None,
-                 subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]] = None,
+                 subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ServiceDhcpServerFeature resource.
 
@@ -135,115 +135,115 @@ class ServiceDhcpServerFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set IP address of default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGatewayVariable")
-    def default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_gateway_variable")
 
     @default_gateway_variable.setter
-    def default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
-    def dns_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure one or more DNS server IP addresses
         """
         return pulumi.get(self, "dns_servers")
 
     @dns_servers.setter
-    def dns_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServersVariable")
-    def dns_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dns_servers_variable")
 
     @dns_servers_variable.setter
-    def dns_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="domainName")
-    def domain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set domain name client uses to resolve hostnames
         """
         return pulumi.get(self, "domain_name")
 
     @domain_name.setter
-    def domain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name", value)
 
     @_builtins.property
     @pulumi.getter(name="domainNameVariable")
-    def domain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_name_variable")
 
     @domain_name_variable.setter
-    def domain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeVariable")
-    def exclude_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exclude_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "exclude_variable")
 
     @exclude_variable.setter
-    def exclude_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exclude_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exclude_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def excludes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def excludes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure IPv4 address to exclude from DHCP address pool
         """
         return pulumi.get(self, "excludes")
 
     @excludes.setter
-    def excludes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def excludes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "excludes", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtu")
-    def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def interface_mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set MTU on interface to DHCP client
           - Range: `68`-`65535`
@@ -251,24 +251,24 @@ class ServiceDhcpServerFeatureArgs:
         return pulumi.get(self, "interface_mtu")
 
     @interface_mtu.setter
-    def interface_mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def interface_mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "interface_mtu", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtuVariable")
-    def interface_mtu_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_mtu_variable")
 
     @interface_mtu_variable.setter
-    def interface_mtu_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_mtu_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTime")
-    def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def lease_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Configure how long a DHCP-assigned IP address is valid
           - Range: `60`-`31536000`
@@ -277,84 +277,84 @@ class ServiceDhcpServerFeatureArgs:
         return pulumi.get(self, "lease_time")
 
     @lease_time.setter
-    def lease_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def lease_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTimeVariable")
-    def lease_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lease_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lease_time_variable")
 
     @lease_time_variable.setter
-    def lease_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lease_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lease_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkAddress")
-    def network_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network Address
         """
         return pulumi.get(self, "network_address")
 
     @network_address.setter
-    def network_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_address", value)
 
     @_builtins.property
     @pulumi.getter(name="networkAddressVariable")
-    def network_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "network_address_variable")
 
     @network_address_variable.setter
-    def network_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="optionCodes")
-    def option_codes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]:
+    def option_codes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]:
         """
         Configure Options Code
         """
         return pulumi.get(self, "option_codes")
 
     @option_codes.setter
-    def option_codes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]):
+    def option_codes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]):
         pulumi.set(self, "option_codes", value)
 
     @_builtins.property
     @pulumi.getter(name="staticLeases")
-    def static_leases(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]:
+    def static_leases(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]:
         """
         Configure static IP addresses
         """
         return pulumi.get(self, "static_leases")
 
     @static_leases.setter
-    def static_leases(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]):
+    def static_leases(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]):
         pulumi.set(self, "static_leases", value)
 
     @_builtins.property
     @pulumi.getter(name="subnetMask")
-    def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
           - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -362,73 +362,73 @@ class ServiceDhcpServerFeatureArgs:
         return pulumi.get(self, "subnet_mask")
 
     @subnet_mask.setter
-    def subnet_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="subnetMaskVariable")
-    def subnet_mask_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet_mask_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "subnet_mask_variable")
 
     @subnet_mask_variable.setter
-    def subnet_mask_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet_mask_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet_mask_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServers")
-    def tftp_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tftp_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure TFTP server IP addresses
         """
         return pulumi.get(self, "tftp_servers")
 
     @tftp_servers.setter
-    def tftp_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tftp_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tftp_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServersVariable")
-    def tftp_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tftp_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tftp_servers_variable")
 
     @tftp_servers_variable.setter
-    def tftp_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tftp_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tftp_servers_variable", value)
 
 
 @pulumi.input_type
 class _ServiceDhcpServerFeatureState:
     def __init__(__self__, *,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_codes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]] = None,
-                 subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]] = None,
+                 subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceDhcpServerFeature resources.
 
@@ -512,127 +512,127 @@ class _ServiceDhcpServerFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set IP address of default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGatewayVariable")
-    def default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_gateway_variable")
 
     @default_gateway_variable.setter
-    def default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
-    def dns_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure one or more DNS server IP addresses
         """
         return pulumi.get(self, "dns_servers")
 
     @dns_servers.setter
-    def dns_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServersVariable")
-    def dns_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dns_servers_variable")
 
     @dns_servers_variable.setter
-    def dns_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="domainName")
-    def domain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set domain name client uses to resolve hostnames
         """
         return pulumi.get(self, "domain_name")
 
     @domain_name.setter
-    def domain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name", value)
 
     @_builtins.property
     @pulumi.getter(name="domainNameVariable")
-    def domain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_name_variable")
 
     @domain_name_variable.setter
-    def domain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeVariable")
-    def exclude_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exclude_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "exclude_variable")
 
     @exclude_variable.setter
-    def exclude_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exclude_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exclude_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def excludes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def excludes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure IPv4 address to exclude from DHCP address pool
         """
         return pulumi.get(self, "excludes")
 
     @excludes.setter
-    def excludes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def excludes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "excludes", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtu")
-    def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def interface_mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set MTU on interface to DHCP client
           - Range: `68`-`65535`
@@ -640,24 +640,24 @@ class _ServiceDhcpServerFeatureState:
         return pulumi.get(self, "interface_mtu")
 
     @interface_mtu.setter
-    def interface_mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def interface_mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "interface_mtu", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtuVariable")
-    def interface_mtu_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_mtu_variable")
 
     @interface_mtu_variable.setter
-    def interface_mtu_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_mtu_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTime")
-    def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def lease_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Configure how long a DHCP-assigned IP address is valid
           - Range: `60`-`31536000`
@@ -666,84 +666,84 @@ class _ServiceDhcpServerFeatureState:
         return pulumi.get(self, "lease_time")
 
     @lease_time.setter
-    def lease_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def lease_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTimeVariable")
-    def lease_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lease_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lease_time_variable")
 
     @lease_time_variable.setter
-    def lease_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lease_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lease_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="networkAddress")
-    def network_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Network Address
         """
         return pulumi.get(self, "network_address")
 
     @network_address.setter
-    def network_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_address", value)
 
     @_builtins.property
     @pulumi.getter(name="networkAddressVariable")
-    def network_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def network_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "network_address_variable")
 
     @network_address_variable.setter
-    def network_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def network_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "network_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="optionCodes")
-    def option_codes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]:
+    def option_codes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]:
         """
         Configure Options Code
         """
         return pulumi.get(self, "option_codes")
 
     @option_codes.setter
-    def option_codes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]):
+    def option_codes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]]]):
         pulumi.set(self, "option_codes", value)
 
     @_builtins.property
     @pulumi.getter(name="staticLeases")
-    def static_leases(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]:
+    def static_leases(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]:
         """
         Configure static IP addresses
         """
         return pulumi.get(self, "static_leases")
 
     @static_leases.setter
-    def static_leases(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]):
+    def static_leases(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]]]):
         pulumi.set(self, "static_leases", value)
 
     @_builtins.property
     @pulumi.getter(name="subnetMask")
-    def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
           - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -751,55 +751,55 @@ class _ServiceDhcpServerFeatureState:
         return pulumi.get(self, "subnet_mask")
 
     @subnet_mask.setter
-    def subnet_mask(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet_mask(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet_mask", value)
 
     @_builtins.property
     @pulumi.getter(name="subnetMaskVariable")
-    def subnet_mask_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def subnet_mask_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "subnet_mask_variable")
 
     @subnet_mask_variable.setter
-    def subnet_mask_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def subnet_mask_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "subnet_mask_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServers")
-    def tftp_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tftp_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure TFTP server IP addresses
         """
         return pulumi.get(self, "tftp_servers")
 
     @tftp_servers.setter
-    def tftp_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tftp_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tftp_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServersVariable")
-    def tftp_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tftp_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tftp_servers_variable")
 
     @tftp_servers_variable.setter
-    def tftp_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tftp_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tftp_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -809,29 +809,29 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_codes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
-                 subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
+                 subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service DHCP Server Feature.
@@ -972,29 +972,29 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 network_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 option_codes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
-                 subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-                 subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
+                 subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+                 subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1040,30 +1040,30 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-            domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            exclude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            excludes: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-            interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-            lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            network_address: Optional[pulumi.Input[_builtins.str]] = None,
-            network_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            option_codes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
-            static_leases: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
-            subnet_mask: Optional[pulumi.Input[_builtins.str]] = None,
-            subnet_mask_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceDhcpServerFeature':
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            exclude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            excludes: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+            lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            network_address: pulumi.Input[Optional[_builtins.str]] = None,
+            network_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            option_codes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]]] = None,
+            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]]] = None,
+            subnet_mask: pulumi.Input[Optional[_builtins.str]] = None,
+            subnet_mask_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceDhcpServerFeature':
         """
         Get an existing ServiceDhcpServerFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

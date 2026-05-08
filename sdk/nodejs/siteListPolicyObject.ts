@@ -109,15 +109,15 @@ export interface SiteListPolicyObjectState {
     /**
      * List of entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.SiteListPolicyObjectEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.SiteListPolicyObjectEntry>[] | undefined>;
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -131,5 +131,5 @@ export interface SiteListPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

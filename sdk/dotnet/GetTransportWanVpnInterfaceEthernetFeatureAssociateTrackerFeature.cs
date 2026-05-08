@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.Index.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature.Invoke(new()
+        ///     var example = Sdwan.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature.Invoke(new()
         ///     {
         ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
         ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
@@ -51,7 +51,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.Index.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature.Invoke(new()
+        ///     var example = Sdwan.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature.Invoke(new()
         ///     {
         ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
         ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
@@ -78,7 +78,7 @@ namespace Pulumi.Sdwan
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Sdwan.Index.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature.Invoke(new()
+        ///     var example = Sdwan.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature.Invoke(new()
         ///     {
         ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
         ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",

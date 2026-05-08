@@ -129,19 +129,19 @@ export interface RuleSetPolicyDefinitionState {
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of rules
      */
-    rules?: pulumi.Input<pulumi.Input<inputs.RuleSetPolicyDefinitionRule>[]>;
+    rules?: pulumi.Input<pulumi.Input<inputs.RuleSetPolicyDefinitionRule>[] | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -155,7 +155,7 @@ export interface RuleSetPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of rules
      */

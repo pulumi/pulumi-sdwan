@@ -140,27 +140,27 @@ export interface SystemIpv6DeviceAccessFeatureState {
      *   - Choices: `drop`, `accept`
      *   - Default value: `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Device Access Control List
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.SystemIpv6DeviceAccessFeatureSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.SystemIpv6DeviceAccessFeatureSequence>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -172,11 +172,11 @@ export interface SystemIpv6DeviceAccessFeatureArgs {
      *   - Choices: `drop`, `accept`
      *   - Default value: `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -184,9 +184,9 @@ export interface SystemIpv6DeviceAccessFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Device Access Control List
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.SystemIpv6DeviceAccessFeatureSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.SystemIpv6DeviceAccessFeatureSequence>[] | undefined>;
 }

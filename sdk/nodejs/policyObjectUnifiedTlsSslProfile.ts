@@ -171,39 +171,39 @@ export class PolicyObjectUnifiedTlsSslProfile extends pulumi.CustomResource {
  * Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslProfile resources.
  */
 export interface PolicyObjectUnifiedTlsSslProfileState {
-    decryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    decryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
-    decryptThreshold?: pulumi.Input<string>;
+    decryptThreshold?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
-    failDecrypt?: pulumi.Input<boolean>;
+    description?: pulumi.Input<string | undefined>;
+    failDecrypt?: pulumi.Input<boolean | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
-    noDecryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
-    passThroughCategories?: pulumi.Input<pulumi.Input<string>[]>;
-    reputation?: pulumi.Input<boolean>;
+    name?: pulumi.Input<string | undefined>;
+    noDecryptCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    passThroughCategories?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    reputation?: pulumi.Input<boolean | undefined>;
     /**
      * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
-    thresholdCategories?: pulumi.Input<string>;
-    urlAllowListId?: pulumi.Input<string>;
-    urlBlockListId?: pulumi.Input<string>;
+    thresholdCategories?: pulumi.Input<string | undefined>;
+    urlAllowListId?: pulumi.Input<string | undefined>;
+    urlBlockListId?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -215,11 +215,11 @@ export interface PolicyObjectUnifiedTlsSslProfileArgs {
      * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
-    decryptThreshold?: pulumi.Input<string>;
+    decryptThreshold?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     failDecrypt: pulumi.Input<boolean>;
     /**
      * Feature Profile ID
@@ -228,7 +228,7 @@ export interface PolicyObjectUnifiedTlsSslProfileArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     noDecryptCategories: pulumi.Input<pulumi.Input<string>[]>;
     passThroughCategories: pulumi.Input<pulumi.Input<string>[]>;
     reputation: pulumi.Input<boolean>;
@@ -236,7 +236,7 @@ export interface PolicyObjectUnifiedTlsSslProfileArgs {
      * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      */
-    thresholdCategories?: pulumi.Input<string>;
-    urlAllowListId?: pulumi.Input<string>;
-    urlBlockListId?: pulumi.Input<string>;
+    thresholdCategories?: pulumi.Input<string | undefined>;
+    urlAllowListId?: pulumi.Input<string | undefined>;
+    urlBlockListId?: pulumi.Input<string | undefined>;
 }

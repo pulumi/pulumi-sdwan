@@ -23,36 +23,36 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]] = None,
-                 application: Optional[pulumi.Input[_builtins.str]] = None,
-                 application_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 clear_dont_fragment: Optional[pulumi.Input[_builtins.bool]] = None,
-                 clear_dont_fragment_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_mss_adjust: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_mss_adjust_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tunnel_destination: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_destination_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]] = None,
+                 application: pulumi.Input[Optional[_builtins.str]] = None,
+                 application_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
+                 clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoVpnInterfaceGreFeatureTemplate resource.
 
@@ -187,19 +187,19 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessLists")
-    def access_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]:
+    def access_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]:
         """
         Apply ACL
         """
         return pulumi.get(self, "access_lists")
 
     @access_lists.setter
-    def access_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]):
+    def access_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]):
         pulumi.set(self, "access_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def application(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def application(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable Application Tunnel Type
           - Choices: `none`, `sig`
@@ -208,24 +208,24 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
         return pulumi.get(self, "application")
 
     @application.setter
-    def application(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def application(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "application", value)
 
     @_builtins.property
     @pulumi.getter(name="applicationVariable")
-    def application_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def application_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "application_variable")
 
     @application_variable.setter
-    def application_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def application_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "application_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="clearDontFragment")
-    def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def clear_dont_fragment(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
           - Default value: `false`
@@ -233,96 +233,96 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
         return pulumi.get(self, "clear_dont_fragment")
 
     @clear_dont_fragment.setter
-    def clear_dont_fragment(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def clear_dont_fragment(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "clear_dont_fragment", value)
 
     @_builtins.property
     @pulumi.getter(name="clearDontFragmentVariable")
-    def clear_dont_fragment_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def clear_dont_fragment_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "clear_dont_fragment_variable")
 
     @clear_dont_fragment_variable.setter
-    def clear_dont_fragment_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def clear_dont_fragment_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "clear_dont_fragment_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceDescription")
-    def interface_description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface description
         """
         return pulumi.get(self, "interface_description")
 
     @interface_description.setter
-    def interface_description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_description", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceDescriptionVariable")
-    def interface_description_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_description_variable")
 
     @interface_description_variable.setter
-    def interface_description_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_description_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         """
         return pulumi.get(self, "interface_name")
 
     @interface_name.setter
-    def interface_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceNameVariable")
-    def interface_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_name_variable")
 
     @interface_name_variable.setter
-    def interface_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipAddress")
-    def ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assign IPv4 address
         """
         return pulumi.get(self, "ip_address")
 
     @ip_address.setter
-    def ip_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_address", value)
 
     @_builtins.property
     @pulumi.getter(name="ipAddressVariable")
-    def ip_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_address_variable")
 
     @ip_address_variable.setter
-    def ip_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipMtu")
-    def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ip_mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interface MTU <576..2000>, in bytes
           - Range: `64`-`18000`
@@ -331,60 +331,60 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
         return pulumi.get(self, "ip_mtu")
 
     @ip_mtu.setter
-    def ip_mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ip_mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ip_mtu", value)
 
     @_builtins.property
     @pulumi.getter(name="ipMtuVariable")
-    def ip_mtu_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_mtu_variable")
 
     @ip_mtu_variable.setter
-    def ip_mtu_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_mtu_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="rewriteRule")
-    def rewrite_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rewrite_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of rewrite rule
         """
         return pulumi.get(self, "rewrite_rule")
 
     @rewrite_rule.setter
-    def rewrite_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rewrite_rule(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rewrite_rule", value)
 
     @_builtins.property
     @pulumi.getter(name="rewriteRuleVariable")
-    def rewrite_rule_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rewrite_rule_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rewrite_rule_variable")
 
     @rewrite_rule_variable.setter
-    def rewrite_rule_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rewrite_rule_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rewrite_rule_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Administrative state
           - Default value: `true`
@@ -392,24 +392,24 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpMssAdjust")
-    def tcp_mss_adjust(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_mss_adjust(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         TCP MSS on SYN packets, in bytes
           - Range: `500`-`1460`
@@ -417,179 +417,179 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
         return pulumi.get(self, "tcp_mss_adjust")
 
     @tcp_mss_adjust.setter
-    def tcp_mss_adjust(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_mss_adjust(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_mss_adjust", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpMssAdjustVariable")
-    def tcp_mss_adjust_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_mss_adjust_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_mss_adjust_variable")
 
     @tcp_mss_adjust_variable.setter
-    def tcp_mss_adjust_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_mss_adjust_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_mss_adjust_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerVariable")
-    def tracker_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_variable")
 
     @tracker_variable.setter
-    def tracker_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Enable tracker for this interface
         """
         return pulumi.get(self, "trackers")
 
     @trackers.setter
-    def trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelDestination")
-    def tunnel_destination(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_destination(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tunnel destination IP Address
         """
         return pulumi.get(self, "tunnel_destination")
 
     @tunnel_destination.setter
-    def tunnel_destination(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_destination(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_destination", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelDestinationVariable")
-    def tunnel_destination_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_destination_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_destination_variable")
 
     @tunnel_destination_variable.setter
-    def tunnel_destination_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_destination_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_destination_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelRouteVia")
-    def tunnel_route_via(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_route_via(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         """
         return pulumi.get(self, "tunnel_route_via")
 
     @tunnel_route_via.setter
-    def tunnel_route_via(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_route_via(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_route_via", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelRouteViaVariable")
-    def tunnel_route_via_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_route_via_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_route_via_variable")
 
     @tunnel_route_via_variable.setter
-    def tunnel_route_via_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_route_via_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_route_via_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSource")
-    def tunnel_source(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tunnel source IP Address
         """
         return pulumi.get(self, "tunnel_source")
 
     @tunnel_source.setter
-    def tunnel_source(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSourceInterface")
-    def tunnel_source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         """
         return pulumi.get(self, "tunnel_source_interface")
 
     @tunnel_source_interface.setter
-    def tunnel_source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSourceInterfaceVariable")
-    def tunnel_source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_source_interface_variable")
 
     @tunnel_source_interface_variable.setter
-    def tunnel_source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSourceVariable")
-    def tunnel_source_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_source_variable")
 
     @tunnel_source_variable.setter
-    def tunnel_source_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source_variable", value)
 
 
 @pulumi.input_type
 class _CiscoVpnInterfaceGreFeatureTemplateState:
     def __init__(__self__, *,
-                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]] = None,
-                 application: Optional[pulumi.Input[_builtins.str]] = None,
-                 application_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 clear_dont_fragment: Optional[pulumi.Input[_builtins.bool]] = None,
-                 clear_dont_fragment_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interface_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_mss_adjust: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_mss_adjust_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tunnel_destination: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_destination_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]] = None,
+                 application: pulumi.Input[Optional[_builtins.str]] = None,
+                 application_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
+                 clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoVpnInterfaceGreFeatureTemplate resources.
 
@@ -707,19 +707,19 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="accessLists")
-    def access_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]:
+    def access_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]:
         """
         Apply ACL
         """
         return pulumi.get(self, "access_lists")
 
     @access_lists.setter
-    def access_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]):
+    def access_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]):
         pulumi.set(self, "access_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def application(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def application(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable Application Tunnel Type
           - Choices: `none`, `sig`
@@ -728,24 +728,24 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         return pulumi.get(self, "application")
 
     @application.setter
-    def application(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def application(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "application", value)
 
     @_builtins.property
     @pulumi.getter(name="applicationVariable")
-    def application_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def application_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "application_variable")
 
     @application_variable.setter
-    def application_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def application_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "application_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="clearDontFragment")
-    def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def clear_dont_fragment(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
           - Default value: `false`
@@ -753,36 +753,36 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         return pulumi.get(self, "clear_dont_fragment")
 
     @clear_dont_fragment.setter
-    def clear_dont_fragment(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def clear_dont_fragment(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "clear_dont_fragment", value)
 
     @_builtins.property
     @pulumi.getter(name="clearDontFragmentVariable")
-    def clear_dont_fragment_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def clear_dont_fragment_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "clear_dont_fragment_variable")
 
     @clear_dont_fragment_variable.setter
-    def clear_dont_fragment_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def clear_dont_fragment_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "clear_dont_fragment_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -790,84 +790,84 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceDescription")
-    def interface_description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface description
         """
         return pulumi.get(self, "interface_description")
 
     @interface_description.setter
-    def interface_description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_description", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceDescriptionVariable")
-    def interface_description_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_description_variable")
 
     @interface_description_variable.setter
-    def interface_description_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_description_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         """
         return pulumi.get(self, "interface_name")
 
     @interface_name.setter
-    def interface_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceNameVariable")
-    def interface_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_name_variable")
 
     @interface_name_variable.setter
-    def interface_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipAddress")
-    def ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assign IPv4 address
         """
         return pulumi.get(self, "ip_address")
 
     @ip_address.setter
-    def ip_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_address", value)
 
     @_builtins.property
     @pulumi.getter(name="ipAddressVariable")
-    def ip_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_address_variable")
 
     @ip_address_variable.setter
-    def ip_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_address_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipMtu")
-    def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ip_mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Interface MTU <576..2000>, in bytes
           - Range: `64`-`18000`
@@ -876,60 +876,60 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         return pulumi.get(self, "ip_mtu")
 
     @ip_mtu.setter
-    def ip_mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ip_mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ip_mtu", value)
 
     @_builtins.property
     @pulumi.getter(name="ipMtuVariable")
-    def ip_mtu_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip_mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ip_mtu_variable")
 
     @ip_mtu_variable.setter
-    def ip_mtu_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip_mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ip_mtu_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="rewriteRule")
-    def rewrite_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rewrite_rule(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name of rewrite rule
         """
         return pulumi.get(self, "rewrite_rule")
 
     @rewrite_rule.setter
-    def rewrite_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rewrite_rule(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rewrite_rule", value)
 
     @_builtins.property
     @pulumi.getter(name="rewriteRuleVariable")
-    def rewrite_rule_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rewrite_rule_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rewrite_rule_variable")
 
     @rewrite_rule_variable.setter
-    def rewrite_rule_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rewrite_rule_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rewrite_rule_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Administrative state
           - Default value: `true`
@@ -937,24 +937,24 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpMssAdjust")
-    def tcp_mss_adjust(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def tcp_mss_adjust(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         TCP MSS on SYN packets, in bytes
           - Range: `500`-`1460`
@@ -962,163 +962,163 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         return pulumi.get(self, "tcp_mss_adjust")
 
     @tcp_mss_adjust.setter
-    def tcp_mss_adjust(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def tcp_mss_adjust(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tcp_mss_adjust", value)
 
     @_builtins.property
     @pulumi.getter(name="tcpMssAdjustVariable")
-    def tcp_mss_adjust_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tcp_mss_adjust_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tcp_mss_adjust_variable")
 
     @tcp_mss_adjust_variable.setter
-    def tcp_mss_adjust_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tcp_mss_adjust_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tcp_mss_adjust_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="trackerVariable")
-    def tracker_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tracker_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tracker_variable")
 
     @tracker_variable.setter
-    def tracker_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tracker_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tracker_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Enable tracker for this interface
         """
         return pulumi.get(self, "trackers")
 
     @trackers.setter
-    def trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelDestination")
-    def tunnel_destination(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_destination(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tunnel destination IP Address
         """
         return pulumi.get(self, "tunnel_destination")
 
     @tunnel_destination.setter
-    def tunnel_destination(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_destination(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_destination", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelDestinationVariable")
-    def tunnel_destination_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_destination_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_destination_variable")
 
     @tunnel_destination_variable.setter
-    def tunnel_destination_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_destination_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_destination_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelRouteVia")
-    def tunnel_route_via(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_route_via(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         """
         return pulumi.get(self, "tunnel_route_via")
 
     @tunnel_route_via.setter
-    def tunnel_route_via(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_route_via(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_route_via", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelRouteViaVariable")
-    def tunnel_route_via_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_route_via_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_route_via_variable")
 
     @tunnel_route_via_variable.setter
-    def tunnel_route_via_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_route_via_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_route_via_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSource")
-    def tunnel_source(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Tunnel source IP Address
         """
         return pulumi.get(self, "tunnel_source")
 
     @tunnel_source.setter
-    def tunnel_source(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSourceInterface")
-    def tunnel_source_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         """
         return pulumi.get(self, "tunnel_source_interface")
 
     @tunnel_source_interface.setter
-    def tunnel_source_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source_interface", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSourceInterfaceVariable")
-    def tunnel_source_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_source_interface_variable")
 
     @tunnel_source_interface_variable.setter
-    def tunnel_source_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source_interface_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="tunnelSourceVariable")
-    def tunnel_source_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tunnel_source_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tunnel_source_variable")
 
     @tunnel_source_variable.setter
-    def tunnel_source_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tunnel_source_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tunnel_source_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1128,38 +1128,38 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
-                 application: Optional[pulumi.Input[_builtins.str]] = None,
-                 application_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 clear_dont_fragment: Optional[pulumi.Input[_builtins.bool]] = None,
-                 clear_dont_fragment_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interface_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_mss_adjust: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_mss_adjust_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tunnel_destination: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_destination_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
+                 application: pulumi.Input[Optional[_builtins.str]] = None,
+                 application_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
+                 clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco VPN Interface GRE feature template.
@@ -1311,38 +1311,38 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
-                 application: Optional[pulumi.Input[_builtins.str]] = None,
-                 application_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 clear_dont_fragment: Optional[pulumi.Input[_builtins.bool]] = None,
-                 clear_dont_fragment_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 interface_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ip_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule: Optional[pulumi.Input[_builtins.str]] = None,
-                 rewrite_rule_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tcp_mss_adjust: Optional[pulumi.Input[_builtins.int]] = None,
-                 tcp_mss_adjust_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tunnel_destination: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_destination_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_route_via_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 tunnel_source_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
+                 application: pulumi.Input[Optional[_builtins.str]] = None,
+                 application_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
+                 clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule: pulumi.Input[Optional[_builtins.str]] = None,
+                 rewrite_rule_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1400,40 +1400,40 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
-            application: Optional[pulumi.Input[_builtins.str]] = None,
-            application_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            clear_dont_fragment: Optional[pulumi.Input[_builtins.bool]] = None,
-            clear_dont_fragment_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            interface_description: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_name: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ip_address: Optional[pulumi.Input[_builtins.str]] = None,
-            ip_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ip_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-            ip_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            rewrite_rule: Optional[pulumi.Input[_builtins.str]] = None,
-            rewrite_rule_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-            shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tcp_mss_adjust: Optional[pulumi.Input[_builtins.int]] = None,
-            tcp_mss_adjust_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            tracker_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            trackers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tunnel_destination: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_destination_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_route_via: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_route_via_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_source: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_source_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_source_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            tunnel_source_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoVpnInterfaceGreFeatureTemplate':
+            access_lists: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
+            application: pulumi.Input[Optional[_builtins.str]] = None,
+            application_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            clear_dont_fragment: pulumi.Input[Optional[_builtins.bool]] = None,
+            clear_dont_fragment_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ip_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            ip_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rewrite_rule: pulumi.Input[Optional[_builtins.str]] = None,
+            rewrite_rule_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+            tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tracker_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoVpnInterfaceGreFeatureTemplate':
         """
         Get an existing CiscoVpnInterfaceGreFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -135,28 +135,28 @@ export interface PolicyGroupState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of devices
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDevice>[]>;
+    devices?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDevice>[] | undefined>;
     /**
      * List of feature profile IDs
      */
-    featureProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
+    featureProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the policy group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of all associated policy versions
      */
-    policyVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    policyVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Type of solution
      *   - Choices: `sdwan`
      */
-    solution?: pulumi.Input<string>;
+    solution?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -170,19 +170,19 @@ export interface PolicyGroupArgs {
     /**
      * List of devices
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDevice>[]>;
+    devices?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDevice>[] | undefined>;
     /**
      * List of feature profile IDs
      */
-    featureProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
+    featureProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the policy group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of all associated policy versions
      */
-    policyVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    policyVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Type of solution
      *   - Choices: `sdwan`

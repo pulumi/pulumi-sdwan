@@ -190,48 +190,48 @@ export interface DnsSecurityPolicyState {
     /**
      * String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
      */
-    childOrgId?: pulumi.Input<string>;
+    childOrgId?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
      */
-    dnsCrypt?: pulumi.Input<boolean>;
+    dnsCrypt?: pulumi.Input<boolean | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
      */
-    dnsServerIp?: pulumi.Input<string>;
+    dnsServerIp?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    localDomainBypassEnabled?: pulumi.Input<boolean>;
-    localDomainBypassListId?: pulumi.Input<string>;
+    localDomainBypassEnabled?: pulumi.Input<boolean | undefined>;
+    localDomainBypassListId?: pulumi.Input<string | undefined>;
     /**
      * If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
      */
-    matchAllVpn?: pulumi.Input<boolean>;
+    matchAllVpn?: pulumi.Input<boolean | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
      */
-    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyTargetVpn>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyTargetVpn>[] | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    umbrellaDefault?: pulumi.Input<boolean>;
+    umbrellaDefault?: pulumi.Input<boolean | undefined>;
     /**
      * The version of the Policy
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -245,7 +245,7 @@ export interface DnsSecurityPolicyArgs {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
      */
@@ -270,11 +270,11 @@ export interface DnsSecurityPolicyArgs {
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
      */
-    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyTargetVpn>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyTargetVpn>[] | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */

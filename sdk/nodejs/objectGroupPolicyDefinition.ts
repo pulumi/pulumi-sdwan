@@ -187,67 +187,67 @@ export interface ObjectGroupPolicyDefinitionState {
     /**
      * Data FQDN prefix list ID
      */
-    dataFqdnPrefixListId?: pulumi.Input<string>;
+    dataFqdnPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Data FQDN prefix list version
      */
-    dataFqdnPrefixListVersion?: pulumi.Input<number>;
+    dataFqdnPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Data IPv4 prefix list ID
      */
-    dataIpv4PrefixListId?: pulumi.Input<string>;
+    dataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Data IPv4 prefix list version
      */
-    dataIpv4PrefixListVersion?: pulumi.Input<number>;
+    dataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Fully qualified domain name
      */
-    fqdn?: pulumi.Input<string>;
+    fqdn?: pulumi.Input<string | undefined>;
     /**
      * Geo location
      */
-    geoLocation?: pulumi.Input<string>;
+    geoLocation?: pulumi.Input<string | undefined>;
     /**
      * Geo location list ID
      */
-    geoLocationListId?: pulumi.Input<string>;
+    geoLocationListId?: pulumi.Input<string | undefined>;
     /**
      * Geo location list version
      */
-    geoLocationListVersion?: pulumi.Input<number>;
+    geoLocationListVersion?: pulumi.Input<number | undefined>;
     /**
      * IPv4 prefix
      */
-    ipv4Prefix?: pulumi.Input<string>;
+    ipv4Prefix?: pulumi.Input<string | undefined>;
     /**
      * IPv4 prefix variable name
      */
-    ipv4PrefixVariable?: pulumi.Input<string>;
+    ipv4PrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Port or range of ports
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
     /**
      * Port list ID
      */
-    portListId?: pulumi.Input<string>;
+    portListId?: pulumi.Input<string | undefined>;
     /**
      * Port list version
      */
-    portListVersion?: pulumi.Input<number>;
+    portListVersion?: pulumi.Input<number | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -257,19 +257,19 @@ export interface ObjectGroupPolicyDefinitionArgs {
     /**
      * Data FQDN prefix list ID
      */
-    dataFqdnPrefixListId?: pulumi.Input<string>;
+    dataFqdnPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Data FQDN prefix list version
      */
-    dataFqdnPrefixListVersion?: pulumi.Input<number>;
+    dataFqdnPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Data IPv4 prefix list ID
      */
-    dataIpv4PrefixListId?: pulumi.Input<string>;
+    dataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Data IPv4 prefix list version
      */
-    dataIpv4PrefixListVersion?: pulumi.Input<number>;
+    dataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition
      */
@@ -277,41 +277,41 @@ export interface ObjectGroupPolicyDefinitionArgs {
     /**
      * Fully qualified domain name
      */
-    fqdn?: pulumi.Input<string>;
+    fqdn?: pulumi.Input<string | undefined>;
     /**
      * Geo location
      */
-    geoLocation?: pulumi.Input<string>;
+    geoLocation?: pulumi.Input<string | undefined>;
     /**
      * Geo location list ID
      */
-    geoLocationListId?: pulumi.Input<string>;
+    geoLocationListId?: pulumi.Input<string | undefined>;
     /**
      * Geo location list version
      */
-    geoLocationListVersion?: pulumi.Input<number>;
+    geoLocationListVersion?: pulumi.Input<number | undefined>;
     /**
      * IPv4 prefix
      */
-    ipv4Prefix?: pulumi.Input<string>;
+    ipv4Prefix?: pulumi.Input<string | undefined>;
     /**
      * IPv4 prefix variable name
      */
-    ipv4PrefixVariable?: pulumi.Input<string>;
+    ipv4PrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Port or range of ports
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
     /**
      * Port list ID
      */
-    portListId?: pulumi.Input<string>;
+    portListId?: pulumi.Input<string | undefined>;
     /**
      * Port list version
      */
-    portListVersion?: pulumi.Input<number>;
+    portListVersion?: pulumi.Input<number | undefined>;
 }

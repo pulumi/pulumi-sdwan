@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Sdwan.Index.PolicyGroup("example", new()
+    ///     var example = new Sdwan.PolicyGroup("example", new()
     ///     {
     ///         Name = "PG_1",
     ///         Description = "My policy group 1",

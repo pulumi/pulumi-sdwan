@@ -561,299 +561,299 @@ export interface SystemBasicFeatureState {
      * Collect admin-tech before reboot due to daemon failure
      *   - Default value: `true`
      */
-    adminTechOnFailure?: pulumi.Input<boolean>;
+    adminTechOnFailure?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    adminTechOnFailureVariable?: pulumi.Input<string>;
+    adminTechOnFailureVariable?: pulumi.Input<string | undefined>;
     /**
      * Affinity Group Number
      *   - Range: `1`-`63`
      */
-    affinityGroupNumber?: pulumi.Input<number>;
+    affinityGroupNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    affinityGroupNumberVariable?: pulumi.Input<string>;
+    affinityGroupNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Affinity Group Preference
      */
-    affinityGroupPreferences?: pulumi.Input<pulumi.Input<number>[]>;
+    affinityGroupPreferences?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    affinityGroupPreferencesVariable?: pulumi.Input<string>;
+    affinityGroupPreferencesVariable?: pulumi.Input<string | undefined>;
     /**
      * Affinity Group Number for VRFs
      */
-    affinityPerVrfs?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureAffinityPerVrf>[]>;
+    affinityPerVrfs?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureAffinityPerVrf>[] | undefined>;
     /**
      * Affinity Group Preference Auto
      *   - Default value: `false`
      */
-    affinityPreferenceAuto?: pulumi.Input<boolean>;
+    affinityPreferenceAuto?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    affinityPreferenceAutoVariable?: pulumi.Input<string>;
+    affinityPreferenceAutoVariable?: pulumi.Input<string | undefined>;
     /**
      * Set a text description of the device
      */
-    configDescription?: pulumi.Input<string>;
+    configDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    configDescriptionVariable?: pulumi.Input<string>;
+    configDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the console baud rate
      *   - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
      *   - Default value: `9600`
      */
-    consoleBaudRate?: pulumi.Input<string>;
+    consoleBaudRate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    consoleBaudRateVariable?: pulumi.Input<string>;
+    consoleBaudRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the policer rate for control sessions
      *   - Range: `1`-`65535`
      *   - Default value: `300`
      */
-    controlSessionPps?: pulumi.Input<number>;
+    controlSessionPps?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    controlSessionPpsVariable?: pulumi.Input<string>;
+    controlSessionPpsVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure a list of comma-separated controller groups
      */
-    controllerGroups?: pulumi.Input<pulumi.Input<number>[]>;
+    controllerGroups?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    controllerGroupsVariable?: pulumi.Input<string>;
+    controllerGroupsVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Device groups
      */
-    deviceGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    deviceGroupsVariable?: pulumi.Input<string>;
+    deviceGroupsVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable SLA Dampening and Enhanced App Routing.
      *   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
      *   - Default value: `disabled`
      */
-    enhancedAppAwareRouting?: pulumi.Input<string>;
+    enhancedAppAwareRouting?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    enhancedAppAwareRoutingVariable?: pulumi.Input<string>;
+    enhancedAppAwareRoutingVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Enable Geo fencing
      *   - Default value: `false`
      */
-    gpsGeoFencingEnable?: pulumi.Input<boolean>;
+    gpsGeoFencingEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Set the device’s geo fencing range
      *   - Range: `100`-`10000`
      *   - Default value: `100`
      */
-    gpsGeoFencingRange?: pulumi.Input<number>;
+    gpsGeoFencingRange?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gpsGeoFencingRangeVariable?: pulumi.Input<string>;
+    gpsGeoFencingRangeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the device physical latitude
      *   - Range: `-90`-`90`
      */
-    gpsLatitude?: pulumi.Input<number>;
+    gpsLatitude?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gpsLatitudeVariable?: pulumi.Input<string>;
+    gpsLatitudeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the device physical longitude
      *   - Range: `-180`-`180`
      */
-    gpsLongitude?: pulumi.Input<number>;
+    gpsLongitude?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gpsLongitudeVariable?: pulumi.Input<string>;
+    gpsLongitudeVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable device’s geo fencing SMS
      *   - Default value: `false`
      */
-    gpsSmsEnable?: pulumi.Input<boolean>;
+    gpsSmsEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Set device’s geo fencing SMS phone number
      */
-    gpsSmsMobileNumbers?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureGpsSmsMobileNumber>[]>;
+    gpsSmsMobileNumbers?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureGpsSmsMobileNumber>[] | undefined>;
     /**
      * Idle CLI timeout in minutes
      *   - Range: `0`-`300`
      */
-    idleTimeout?: pulumi.Input<number>;
+    idleTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    idleTimeoutVariable?: pulumi.Input<string>;
+    idleTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the location of the device
      */
-    location?: pulumi.Input<string>;
+    location?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    locationVariable?: pulumi.Input<string>;
+    locationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the maximum number of OMP sessions <1..100> the device can have
      *   - Range: `1`-`100`
      */
-    maxOmpSessions?: pulumi.Input<number>;
+    maxOmpSessions?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maxOmpSessionsVariable?: pulumi.Input<string>;
+    maxOmpSessionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Device is multi-tenant
      *   - Default value: `false`
      */
-    multiTenant?: pulumi.Input<boolean>;
+    multiTenant?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    multiTenantVariable?: pulumi.Input<string>;
+    multiTenantVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable On-demand Tunnel
      *   - Default value: `false`
      */
-    onDemandEnable?: pulumi.Input<boolean>;
+    onDemandEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    onDemandEnableVariable?: pulumi.Input<string>;
+    onDemandEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the idle timeout for on-demand tunnels
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    onDemandIdleTimeout?: pulumi.Input<number>;
+    onDemandIdleTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    onDemandIdleTimeoutVariable?: pulumi.Input<string>;
+    onDemandIdleTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Overlay ID
      *   - Range: `1`-`4294967295`
      *   - Default value: `1`
      */
-    overlayId?: pulumi.Input<number>;
+    overlayId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    overlayIdVariable?: pulumi.Input<string>;
+    overlayIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable port hopping
      *   - Default value: `true`
      */
-    portHopping?: pulumi.Input<boolean>;
+    portHopping?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    portHoppingVariable?: pulumi.Input<string>;
+    portHoppingVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the TLOC port offset when multiple devices are behind a NAT
      *   - Range: `0`-`19`
      *   - Default value: `0`
      */
-    portOffset?: pulumi.Input<number>;
+    portOffset?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portOffsetVariable?: pulumi.Input<string>;
+    portOffsetVariable?: pulumi.Input<string | undefined>;
     /**
      * Site Type
      */
-    siteTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    siteTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    siteTypesVariable?: pulumi.Input<string>;
+    siteTypesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the timezone
      *   - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
      *   - Default value: `UTC`
      */
-    timezone?: pulumi.Input<string>;
+    timezone?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    timezoneVariable?: pulumi.Input<string>;
+    timezoneVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable default gateway tracking
      *   - Default value: `true`
      */
-    trackDefaultGateway?: pulumi.Input<boolean>;
+    trackDefaultGateway?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackDefaultGatewayVariable?: pulumi.Input<string>;
+    trackDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * OMP Tag attached to routes based on interface tracking
      *   - Range: `1`-`4294967295`
      */
-    trackInterfaceTag?: pulumi.Input<number>;
+    trackInterfaceTag?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackInterfaceTagVariable?: pulumi.Input<string>;
+    trackInterfaceTagVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tracking of transport
      *   - Default value: `true`
      */
-    trackTransport?: pulumi.Input<boolean>;
+    trackTransport?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackTransportVariable?: pulumi.Input<string>;
+    trackTransportVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable endpoint tracker diaStabilize status
      *   - Default value: `false`
      */
-    trackerDiaStabilizeStatus?: pulumi.Input<boolean>;
+    trackerDiaStabilizeStatus?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackerDiaStabilizeStatusVariable?: pulumi.Input<string>;
+    trackerDiaStabilizeStatusVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable transport gateway
      *   - Default value: `false`
      */
-    transportGateway?: pulumi.Input<boolean>;
+    transportGateway?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    transportGatewayVariable?: pulumi.Input<string>;
+    transportGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -864,99 +864,99 @@ export interface SystemBasicFeatureArgs {
      * Collect admin-tech before reboot due to daemon failure
      *   - Default value: `true`
      */
-    adminTechOnFailure?: pulumi.Input<boolean>;
+    adminTechOnFailure?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    adminTechOnFailureVariable?: pulumi.Input<string>;
+    adminTechOnFailureVariable?: pulumi.Input<string | undefined>;
     /**
      * Affinity Group Number
      *   - Range: `1`-`63`
      */
-    affinityGroupNumber?: pulumi.Input<number>;
+    affinityGroupNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    affinityGroupNumberVariable?: pulumi.Input<string>;
+    affinityGroupNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Affinity Group Preference
      */
-    affinityGroupPreferences?: pulumi.Input<pulumi.Input<number>[]>;
+    affinityGroupPreferences?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    affinityGroupPreferencesVariable?: pulumi.Input<string>;
+    affinityGroupPreferencesVariable?: pulumi.Input<string | undefined>;
     /**
      * Affinity Group Number for VRFs
      */
-    affinityPerVrfs?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureAffinityPerVrf>[]>;
+    affinityPerVrfs?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureAffinityPerVrf>[] | undefined>;
     /**
      * Affinity Group Preference Auto
      *   - Default value: `false`
      */
-    affinityPreferenceAuto?: pulumi.Input<boolean>;
+    affinityPreferenceAuto?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    affinityPreferenceAutoVariable?: pulumi.Input<string>;
+    affinityPreferenceAutoVariable?: pulumi.Input<string | undefined>;
     /**
      * Set a text description of the device
      */
-    configDescription?: pulumi.Input<string>;
+    configDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    configDescriptionVariable?: pulumi.Input<string>;
+    configDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the console baud rate
      *   - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
      *   - Default value: `9600`
      */
-    consoleBaudRate?: pulumi.Input<string>;
+    consoleBaudRate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    consoleBaudRateVariable?: pulumi.Input<string>;
+    consoleBaudRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the policer rate for control sessions
      *   - Range: `1`-`65535`
      *   - Default value: `300`
      */
-    controlSessionPps?: pulumi.Input<number>;
+    controlSessionPps?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    controlSessionPpsVariable?: pulumi.Input<string>;
+    controlSessionPpsVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure a list of comma-separated controller groups
      */
-    controllerGroups?: pulumi.Input<pulumi.Input<number>[]>;
+    controllerGroups?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Variable name
      */
-    controllerGroupsVariable?: pulumi.Input<string>;
+    controllerGroupsVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Device groups
      */
-    deviceGroups?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceGroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    deviceGroupsVariable?: pulumi.Input<string>;
+    deviceGroupsVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable SLA Dampening and Enhanced App Routing.
      *   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
      *   - Default value: `disabled`
      */
-    enhancedAppAwareRouting?: pulumi.Input<string>;
+    enhancedAppAwareRouting?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    enhancedAppAwareRoutingVariable?: pulumi.Input<string>;
+    enhancedAppAwareRoutingVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -965,192 +965,192 @@ export interface SystemBasicFeatureArgs {
      * Enable Geo fencing
      *   - Default value: `false`
      */
-    gpsGeoFencingEnable?: pulumi.Input<boolean>;
+    gpsGeoFencingEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Set the device’s geo fencing range
      *   - Range: `100`-`10000`
      *   - Default value: `100`
      */
-    gpsGeoFencingRange?: pulumi.Input<number>;
+    gpsGeoFencingRange?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gpsGeoFencingRangeVariable?: pulumi.Input<string>;
+    gpsGeoFencingRangeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the device physical latitude
      *   - Range: `-90`-`90`
      */
-    gpsLatitude?: pulumi.Input<number>;
+    gpsLatitude?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gpsLatitudeVariable?: pulumi.Input<string>;
+    gpsLatitudeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the device physical longitude
      *   - Range: `-180`-`180`
      */
-    gpsLongitude?: pulumi.Input<number>;
+    gpsLongitude?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    gpsLongitudeVariable?: pulumi.Input<string>;
+    gpsLongitudeVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable device’s geo fencing SMS
      *   - Default value: `false`
      */
-    gpsSmsEnable?: pulumi.Input<boolean>;
+    gpsSmsEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Set device’s geo fencing SMS phone number
      */
-    gpsSmsMobileNumbers?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureGpsSmsMobileNumber>[]>;
+    gpsSmsMobileNumbers?: pulumi.Input<pulumi.Input<inputs.SystemBasicFeatureGpsSmsMobileNumber>[] | undefined>;
     /**
      * Idle CLI timeout in minutes
      *   - Range: `0`-`300`
      */
-    idleTimeout?: pulumi.Input<number>;
+    idleTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    idleTimeoutVariable?: pulumi.Input<string>;
+    idleTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the location of the device
      */
-    location?: pulumi.Input<string>;
+    location?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    locationVariable?: pulumi.Input<string>;
+    locationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the maximum number of OMP sessions <1..100> the device can have
      *   - Range: `1`-`100`
      */
-    maxOmpSessions?: pulumi.Input<number>;
+    maxOmpSessions?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maxOmpSessionsVariable?: pulumi.Input<string>;
+    maxOmpSessionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Device is multi-tenant
      *   - Default value: `false`
      */
-    multiTenant?: pulumi.Input<boolean>;
+    multiTenant?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    multiTenantVariable?: pulumi.Input<string>;
+    multiTenantVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable On-demand Tunnel
      *   - Default value: `false`
      */
-    onDemandEnable?: pulumi.Input<boolean>;
+    onDemandEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    onDemandEnableVariable?: pulumi.Input<string>;
+    onDemandEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the idle timeout for on-demand tunnels
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    onDemandIdleTimeout?: pulumi.Input<number>;
+    onDemandIdleTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    onDemandIdleTimeoutVariable?: pulumi.Input<string>;
+    onDemandIdleTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Overlay ID
      *   - Range: `1`-`4294967295`
      *   - Default value: `1`
      */
-    overlayId?: pulumi.Input<number>;
+    overlayId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    overlayIdVariable?: pulumi.Input<string>;
+    overlayIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable port hopping
      *   - Default value: `true`
      */
-    portHopping?: pulumi.Input<boolean>;
+    portHopping?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    portHoppingVariable?: pulumi.Input<string>;
+    portHoppingVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the TLOC port offset when multiple devices are behind a NAT
      *   - Range: `0`-`19`
      *   - Default value: `0`
      */
-    portOffset?: pulumi.Input<number>;
+    portOffset?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portOffsetVariable?: pulumi.Input<string>;
+    portOffsetVariable?: pulumi.Input<string | undefined>;
     /**
      * Site Type
      */
-    siteTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    siteTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    siteTypesVariable?: pulumi.Input<string>;
+    siteTypesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the timezone
      *   - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
      *   - Default value: `UTC`
      */
-    timezone?: pulumi.Input<string>;
+    timezone?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    timezoneVariable?: pulumi.Input<string>;
+    timezoneVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable default gateway tracking
      *   - Default value: `true`
      */
-    trackDefaultGateway?: pulumi.Input<boolean>;
+    trackDefaultGateway?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackDefaultGatewayVariable?: pulumi.Input<string>;
+    trackDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * OMP Tag attached to routes based on interface tracking
      *   - Range: `1`-`4294967295`
      */
-    trackInterfaceTag?: pulumi.Input<number>;
+    trackInterfaceTag?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackInterfaceTagVariable?: pulumi.Input<string>;
+    trackInterfaceTagVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tracking of transport
      *   - Default value: `true`
      */
-    trackTransport?: pulumi.Input<boolean>;
+    trackTransport?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackTransportVariable?: pulumi.Input<string>;
+    trackTransportVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable endpoint tracker diaStabilize status
      *   - Default value: `false`
      */
-    trackerDiaStabilizeStatus?: pulumi.Input<boolean>;
+    trackerDiaStabilizeStatus?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackerDiaStabilizeStatusVariable?: pulumi.Input<string>;
+    trackerDiaStabilizeStatusVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable transport gateway
      *   - Default value: `false`
      */
-    transportGateway?: pulumi.Input<boolean>;
+    transportGateway?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    transportGatewayVariable?: pulumi.Input<string>;
+    transportGatewayVariable?: pulumi.Input<string | undefined>;
 }

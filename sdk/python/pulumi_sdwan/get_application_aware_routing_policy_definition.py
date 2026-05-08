@@ -178,7 +178,7 @@ def get_application_aware_routing_policy_definition(id: Optional[_builtins.str] 
         sequences=pulumi.get(__ret__, 'sequences'),
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
-def get_application_aware_routing_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_application_aware_routing_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationAwareRoutingPolicyDefinitionResult]:
     """
     This data source can read the Application Aware Routing Policy Definition .

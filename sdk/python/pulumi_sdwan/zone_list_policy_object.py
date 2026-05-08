@@ -22,7 +22,7 @@ __all__ = ['ZoneListPolicyObjectArgs', 'ZoneListPolicyObject']
 class ZoneListPolicyObjectArgs:
     def __init__(__self__, *,
                  entries: pulumi.Input[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a ZoneListPolicyObject resource.
 
@@ -47,23 +47,23 @@ class ZoneListPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _ZoneListPolicyObjectState:
     def __init__(__self__, *,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ZoneListPolicyObject resources.
 
@@ -80,38 +80,38 @@ class _ZoneListPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]]]:
+    def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]]]:
         """
         List of entries
         """
         return pulumi.get(self, "entries")
 
     @entries.setter
-    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]]]):
+    def entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['ZoneListPolicyObjectEntryArgs']]]]):
         pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -121,8 +121,8 @@ class ZoneListPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneListPolicyObjectEntryArgs', 'ZoneListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneListPolicyObjectEntryArgs', 'ZoneListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Zone List Policy Object .
@@ -200,8 +200,8 @@ class ZoneListPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneListPolicyObjectEntryArgs', 'ZoneListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneListPolicyObjectEntryArgs', 'ZoneListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -226,9 +226,9 @@ class ZoneListPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ZoneListPolicyObjectEntryArgs', 'ZoneListPolicyObjectEntryArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ZoneListPolicyObject':
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['ZoneListPolicyObjectEntryArgs', 'ZoneListPolicyObjectEntryArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ZoneListPolicyObject':
         """
         Get an existing ZoneListPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

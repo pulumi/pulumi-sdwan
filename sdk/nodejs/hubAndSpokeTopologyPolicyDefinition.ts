@@ -148,31 +148,31 @@ export interface HubAndSpokeTopologyPolicyDefinitionState {
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of topologies
      */
-    topologies?: pulumi.Input<pulumi.Input<inputs.HubAndSpokeTopologyPolicyDefinitionTopology>[]>;
+    topologies?: pulumi.Input<pulumi.Input<inputs.HubAndSpokeTopologyPolicyDefinitionTopology>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * VPN list ID
      */
-    vpnListId?: pulumi.Input<string>;
+    vpnListId?: pulumi.Input<string | undefined>;
     /**
      * VPN list version
      */
-    vpnListVersion?: pulumi.Input<number>;
+    vpnListVersion?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -186,7 +186,7 @@ export interface HubAndSpokeTopologyPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of topologies
      */
@@ -194,9 +194,9 @@ export interface HubAndSpokeTopologyPolicyDefinitionArgs {
     /**
      * VPN list ID
      */
-    vpnListId?: pulumi.Input<string>;
+    vpnListId?: pulumi.Input<string | undefined>;
     /**
      * VPN list version
      */
-    vpnListVersion?: pulumi.Input<number>;
+    vpnListVersion?: pulumi.Input<number | undefined>;
 }

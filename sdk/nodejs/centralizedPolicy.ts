@@ -122,19 +122,19 @@ export interface CentralizedPolicyState {
     /**
      * List of policy definitions
      */
-    definitions?: pulumi.Input<pulumi.Input<inputs.CentralizedPolicyDefinition>[]>;
+    definitions?: pulumi.Input<pulumi.Input<inputs.CentralizedPolicyDefinition>[] | undefined>;
     /**
      * The description of the centralized policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the centralized policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -144,7 +144,7 @@ export interface CentralizedPolicyArgs {
     /**
      * List of policy definitions
      */
-    definitions?: pulumi.Input<pulumi.Input<inputs.CentralizedPolicyDefinition>[]>;
+    definitions?: pulumi.Input<pulumi.Input<inputs.CentralizedPolicyDefinition>[] | undefined>;
     /**
      * The description of the centralized policy
      */
@@ -152,5 +152,5 @@ export interface CentralizedPolicyArgs {
     /**
      * The name of the centralized policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

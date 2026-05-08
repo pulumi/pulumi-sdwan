@@ -23,25 +23,25 @@ class CiscoDhcpServerFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 address_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_pool_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 exclude_addresses_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 options: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 address_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_pool_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 exclude_addresses_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 options: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoDhcpServerFeatureTemplate resource.
 
@@ -139,127 +139,127 @@ class CiscoDhcpServerFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="addressPool")
-    def address_pool(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_pool(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure IPv4 prefix range of the DHCP address pool
         """
         return pulumi.get(self, "address_pool")
 
     @address_pool.setter
-    def address_pool(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_pool(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_pool", value)
 
     @_builtins.property
     @pulumi.getter(name="addressPoolVariable")
-    def address_pool_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_pool_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "address_pool_variable")
 
     @address_pool_variable.setter
-    def address_pool_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_pool_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_pool_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set IP address of default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGatewayVariable")
-    def default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_gateway_variable")
 
     @default_gateway_variable.setter
-    def default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
-    def dns_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure one or more DNS server IP addresses
         """
         return pulumi.get(self, "dns_servers")
 
     @dns_servers.setter
-    def dns_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServersVariable")
-    def dns_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dns_servers_variable")
 
     @dns_servers_variable.setter
-    def dns_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="domainName")
-    def domain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set domain name client uses to resolve hostnames
         """
         return pulumi.get(self, "domain_name")
 
     @domain_name.setter
-    def domain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name", value)
 
     @_builtins.property
     @pulumi.getter(name="domainNameVariable")
-    def domain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_name_variable")
 
     @domain_name_variable.setter
-    def domain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeAddresses")
-    def exclude_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def exclude_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure IPv4 address to exclude from DHCP address pool
         """
         return pulumi.get(self, "exclude_addresses")
 
     @exclude_addresses.setter
-    def exclude_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def exclude_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "exclude_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeAddressesVariable")
-    def exclude_addresses_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exclude_addresses_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "exclude_addresses_variable")
 
     @exclude_addresses_variable.setter
-    def exclude_addresses_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exclude_addresses_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exclude_addresses_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtu")
-    def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def interface_mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set MTU on interface to DHCP client
           - Range: `68`-`65535`
@@ -267,24 +267,24 @@ class CiscoDhcpServerFeatureTemplateArgs:
         return pulumi.get(self, "interface_mtu")
 
     @interface_mtu.setter
-    def interface_mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def interface_mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "interface_mtu", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtuVariable")
-    def interface_mtu_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_mtu_variable")
 
     @interface_mtu_variable.setter
-    def interface_mtu_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_mtu_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTime")
-    def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def lease_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Configure how long a DHCP-assigned IP address is valid
           - Range: `60`-`31536000`
@@ -293,108 +293,108 @@ class CiscoDhcpServerFeatureTemplateArgs:
         return pulumi.get(self, "lease_time")
 
     @lease_time.setter
-    def lease_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def lease_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTimeVariable")
-    def lease_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lease_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lease_time_variable")
 
     @lease_time_variable.setter
-    def lease_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lease_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lease_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def options(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]:
+    def options(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]:
         """
         Configure Options Code
         """
         return pulumi.get(self, "options")
 
     @options.setter
-    def options(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]):
+    def options(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]):
         pulumi.set(self, "options", value)
 
     @_builtins.property
     @pulumi.getter(name="staticLeases")
-    def static_leases(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]:
+    def static_leases(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]:
         """
         Configure static IP addresses
         """
         return pulumi.get(self, "static_leases")
 
     @static_leases.setter
-    def static_leases(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]):
+    def static_leases(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]):
         pulumi.set(self, "static_leases", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServers")
-    def tftp_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tftp_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure TFTP server IP addresses
         """
         return pulumi.get(self, "tftp_servers")
 
     @tftp_servers.setter
-    def tftp_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tftp_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tftp_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServersVariable")
-    def tftp_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tftp_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tftp_servers_variable")
 
     @tftp_servers_variable.setter
-    def tftp_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tftp_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tftp_servers_variable", value)
 
 
 @pulumi.input_type
 class _CiscoDhcpServerFeatureTemplateState:
     def __init__(__self__, *,
-                 address_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_pool_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 exclude_addresses_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 options: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 address_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_pool_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 exclude_addresses_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 options: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoDhcpServerFeatureTemplate resources.
 
@@ -475,67 +475,67 @@ class _CiscoDhcpServerFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="addressPool")
-    def address_pool(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_pool(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure IPv4 prefix range of the DHCP address pool
         """
         return pulumi.get(self, "address_pool")
 
     @address_pool.setter
-    def address_pool(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_pool(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_pool", value)
 
     @_builtins.property
     @pulumi.getter(name="addressPoolVariable")
-    def address_pool_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def address_pool_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "address_pool_variable")
 
     @address_pool_variable.setter
-    def address_pool_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def address_pool_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "address_pool_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set IP address of default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGatewayVariable")
-    def default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_gateway_variable")
 
     @default_gateway_variable.setter
-    def default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -543,84 +543,84 @@ class _CiscoDhcpServerFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
-    def dns_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def dns_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure one or more DNS server IP addresses
         """
         return pulumi.get(self, "dns_servers")
 
     @dns_servers.setter
-    def dns_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def dns_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "dns_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServersVariable")
-    def dns_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "dns_servers_variable")
 
     @dns_servers_variable.setter
-    def dns_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="domainName")
-    def domain_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set domain name client uses to resolve hostnames
         """
         return pulumi.get(self, "domain_name")
 
     @domain_name.setter
-    def domain_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name", value)
 
     @_builtins.property
     @pulumi.getter(name="domainNameVariable")
-    def domain_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "domain_name_variable")
 
     @domain_name_variable.setter
-    def domain_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "domain_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeAddresses")
-    def exclude_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def exclude_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure IPv4 address to exclude from DHCP address pool
         """
         return pulumi.get(self, "exclude_addresses")
 
     @exclude_addresses.setter
-    def exclude_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def exclude_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "exclude_addresses", value)
 
     @_builtins.property
     @pulumi.getter(name="excludeAddressesVariable")
-    def exclude_addresses_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def exclude_addresses_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "exclude_addresses_variable")
 
     @exclude_addresses_variable.setter
-    def exclude_addresses_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def exclude_addresses_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "exclude_addresses_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtu")
-    def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def interface_mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set MTU on interface to DHCP client
           - Range: `68`-`65535`
@@ -628,24 +628,24 @@ class _CiscoDhcpServerFeatureTemplateState:
         return pulumi.get(self, "interface_mtu")
 
     @interface_mtu.setter
-    def interface_mtu(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def interface_mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "interface_mtu", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceMtuVariable")
-    def interface_mtu_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def interface_mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "interface_mtu_variable")
 
     @interface_mtu_variable.setter
-    def interface_mtu_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def interface_mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "interface_mtu_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTime")
-    def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def lease_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Configure how long a DHCP-assigned IP address is valid
           - Range: `60`-`31536000`
@@ -654,103 +654,103 @@ class _CiscoDhcpServerFeatureTemplateState:
         return pulumi.get(self, "lease_time")
 
     @lease_time.setter
-    def lease_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def lease_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "lease_time", value)
 
     @_builtins.property
     @pulumi.getter(name="leaseTimeVariable")
-    def lease_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def lease_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "lease_time_variable")
 
     @lease_time_variable.setter
-    def lease_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def lease_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "lease_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def options(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]:
+    def options(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]:
         """
         Configure Options Code
         """
         return pulumi.get(self, "options")
 
     @options.setter
-    def options(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]):
+    def options(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]]]):
         pulumi.set(self, "options", value)
 
     @_builtins.property
     @pulumi.getter(name="staticLeases")
-    def static_leases(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]:
+    def static_leases(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]:
         """
         Configure static IP addresses
         """
         return pulumi.get(self, "static_leases")
 
     @static_leases.setter
-    def static_leases(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]):
+    def static_leases(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateStaticLeaseArgs']]]]):
         pulumi.set(self, "static_leases", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServers")
-    def tftp_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def tftp_servers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Configure TFTP server IP addresses
         """
         return pulumi.get(self, "tftp_servers")
 
     @tftp_servers.setter
-    def tftp_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def tftp_servers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tftp_servers", value)
 
     @_builtins.property
     @pulumi.getter(name="tftpServersVariable")
-    def tftp_servers_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tftp_servers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "tftp_servers_variable")
 
     @tftp_servers_variable.setter
-    def tftp_servers_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tftp_servers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tftp_servers_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -760,27 +760,27 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_pool_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 exclude_addresses_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_pool_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 exclude_addresses_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco DHCP Server feature template.
@@ -921,27 +921,27 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_pool: Optional[pulumi.Input[_builtins.str]] = None,
-                 address_pool_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 exclude_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 exclude_addresses_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-                 interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
-                 static_leases: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
-                 tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_pool: pulumi.Input[Optional[_builtins.str]] = None,
+                 address_pool_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 exclude_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 exclude_addresses_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
+                 static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
+                 tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -988,29 +988,29 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address_pool: Optional[pulumi.Input[_builtins.str]] = None,
-            address_pool_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            dns_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            domain_name: Optional[pulumi.Input[_builtins.str]] = None,
-            domain_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            exclude_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            exclude_addresses_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            interface_mtu: Optional[pulumi.Input[_builtins.int]] = None,
-            interface_mtu_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            lease_time: Optional[pulumi.Input[_builtins.int]] = None,
-            lease_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            options: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
-            static_leases: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            tftp_servers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            tftp_servers_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoDhcpServerFeatureTemplate':
+            address_pool: pulumi.Input[Optional[_builtins.str]] = None,
+            address_pool_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_name: pulumi.Input[Optional[_builtins.str]] = None,
+            domain_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            exclude_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            exclude_addresses_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interface_mtu: pulumi.Input[Optional[_builtins.int]] = None,
+            interface_mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            lease_time: pulumi.Input[Optional[_builtins.int]] = None,
+            lease_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            options: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]]] = None,
+            static_leases: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateStaticLeaseArgs', 'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict']]]]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            tftp_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tftp_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoDhcpServerFeatureTemplate':
         """
         Get an existing CiscoDhcpServerFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

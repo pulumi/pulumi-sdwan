@@ -131,23 +131,23 @@ export interface PolicyObjectPolicerState {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Policer Entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectPolicerEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectPolicerEntry>[] | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The version of the Policy_object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -157,7 +157,7 @@ export interface PolicyObjectPolicerArgs {
     /**
      * The description of the Policy_object
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Policer Entries
      */
@@ -169,5 +169,5 @@ export interface PolicyObjectPolicerArgs {
     /**
      * The name of the Policy_object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

@@ -100,11 +100,11 @@ export interface ServiceFeatureProfileState {
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the service feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -118,5 +118,5 @@ export interface ServiceFeatureProfileArgs {
     /**
      * The name of the service feature profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

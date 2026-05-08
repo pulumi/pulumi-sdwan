@@ -24,20 +24,20 @@ class OtherUcseFeatureArgs:
                  bay: pulumi.Input[_builtins.int],
                  feature_profile_id: pulumi.Input[_builtins.str],
                  slot: pulumi.Input[_builtins.int],
-                 access_port_dedicated: Optional[pulumi.Input[_builtins.bool]] = None,
-                 access_port_shared_failover_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_port_shared_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 assign_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 assign_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]] = None,
-                 ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 access_port_dedicated: pulumi.Input[Optional[_builtins.bool]] = None,
+                 access_port_shared_failover_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_port_shared_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 assign_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 assign_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]] = None,
+                 ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a OtherUcseFeature resource.
 
@@ -138,7 +138,7 @@ class OtherUcseFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessPortDedicated")
-    def access_port_dedicated(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def access_port_dedicated(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Dedicated
           - Default value: `true`
@@ -146,12 +146,12 @@ class OtherUcseFeatureArgs:
         return pulumi.get(self, "access_port_dedicated")
 
     @access_port_dedicated.setter
-    def access_port_dedicated(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def access_port_dedicated(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "access_port_dedicated", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPortSharedFailoverType")
-    def access_port_shared_failover_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_port_shared_failover_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `access_port_dedicated` equal to `false`
           - Choices: `ge2`, `te2`
@@ -159,12 +159,12 @@ class OtherUcseFeatureArgs:
         return pulumi.get(self, "access_port_shared_failover_type")
 
     @access_port_shared_failover_type.setter
-    def access_port_shared_failover_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_port_shared_failover_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_port_shared_failover_type", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPortSharedType")
-    def access_port_shared_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_port_shared_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `access_port_dedicated` equal to `false`
           - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
@@ -172,12 +172,12 @@ class OtherUcseFeatureArgs:
         return pulumi.get(self, "access_port_shared_type")
 
     @access_port_shared_type.setter
-    def access_port_shared_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_port_shared_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_port_shared_type", value)
 
     @_builtins.property
     @pulumi.getter(name="assignPriority")
-    def assign_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def assign_priority(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Assign priority
           - Range: `0`-`7`
@@ -185,108 +185,108 @@ class OtherUcseFeatureArgs:
         return pulumi.get(self, "assign_priority")
 
     @assign_priority.setter
-    def assign_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def assign_priority(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "assign_priority", value)
 
     @_builtins.property
     @pulumi.getter(name="assignPriorityVariable")
-    def assign_priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assign_priority_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "assign_priority_variable")
 
     @assign_priority_variable.setter
-    def assign_priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assign_priority_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assign_priority_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assign default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGatewayVariable")
-    def default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_gateway_variable")
 
     @default_gateway_variable.setter
-    def default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]:
         """
         Interface name: GigabitEthernet0/<>/<> when present
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assign IPv4 address
         """
         return pulumi.get(self, "ipv4_address")
 
     @ipv4_address.setter
-    def ipv4_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_address", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AddressVariable")
-    def ipv4_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_address_variable")
 
     @ipv4_address_variable.setter
-    def ipv4_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_address_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Assign Vlan Id
           - Range: `2`-`4095`
@@ -294,43 +294,43 @@ class OtherUcseFeatureArgs:
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanIdVariable")
-    def vlan_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vlan_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vlan_id_variable")
 
     @vlan_id_variable.setter
-    def vlan_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vlan_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vlan_id_variable", value)
 
 
 @pulumi.input_type
 class _OtherUcseFeatureState:
     def __init__(__self__, *,
-                 access_port_dedicated: Optional[pulumi.Input[_builtins.bool]] = None,
-                 access_port_shared_failover_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_port_shared_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 assign_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 assign_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bay: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]] = None,
-                 ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 access_port_dedicated: pulumi.Input[Optional[_builtins.bool]] = None,
+                 access_port_shared_failover_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_port_shared_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 assign_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 assign_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bay: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]] = None,
+                 ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering OtherUcseFeature resources.
 
@@ -399,7 +399,7 @@ class _OtherUcseFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="accessPortDedicated")
-    def access_port_dedicated(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def access_port_dedicated(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Dedicated
           - Default value: `true`
@@ -407,12 +407,12 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "access_port_dedicated")
 
     @access_port_dedicated.setter
-    def access_port_dedicated(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def access_port_dedicated(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "access_port_dedicated", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPortSharedFailoverType")
-    def access_port_shared_failover_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_port_shared_failover_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `access_port_dedicated` equal to `false`
           - Choices: `ge2`, `te2`
@@ -420,12 +420,12 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "access_port_shared_failover_type")
 
     @access_port_shared_failover_type.setter
-    def access_port_shared_failover_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_port_shared_failover_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_port_shared_failover_type", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPortSharedType")
-    def access_port_shared_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_port_shared_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `access_port_dedicated` equal to `false`
           - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
@@ -433,12 +433,12 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "access_port_shared_type")
 
     @access_port_shared_type.setter
-    def access_port_shared_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_port_shared_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_port_shared_type", value)
 
     @_builtins.property
     @pulumi.getter(name="assignPriority")
-    def assign_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def assign_priority(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Assign priority
           - Range: `0`-`7`
@@ -446,24 +446,24 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "assign_priority")
 
     @assign_priority.setter
-    def assign_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def assign_priority(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "assign_priority", value)
 
     @_builtins.property
     @pulumi.getter(name="assignPriorityVariable")
-    def assign_priority_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def assign_priority_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "assign_priority_variable")
 
     @assign_priority_variable.setter
-    def assign_priority_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def assign_priority_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "assign_priority_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def bay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def bay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Bay
           - Range: `0`-`2`
@@ -471,108 +471,108 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "bay")
 
     @bay.setter
-    def bay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def bay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "bay", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assign default gateway
         """
         return pulumi.get(self, "default_gateway")
 
     @default_gateway.setter
-    def default_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultGatewayVariable")
-    def default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "default_gateway_variable")
 
     @default_gateway_variable.setter
-    def default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]:
         """
         Interface name: GigabitEthernet0/<>/<> when present
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_address(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Assign IPv4 address
         """
         return pulumi.get(self, "ipv4_address")
 
     @ipv4_address.setter
-    def ipv4_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_address(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_address", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AddressVariable")
-    def ipv4_address_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_address_variable")
 
     @ipv4_address_variable.setter
-    def ipv4_address_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_address_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def slot(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def slot(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Slot
           - Range: `0`-`3`
@@ -580,24 +580,24 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "slot")
 
     @slot.setter
-    def slot(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def slot(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "slot", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Assign Vlan Id
           - Range: `2`-`4095`
@@ -605,19 +605,19 @@ class _OtherUcseFeatureState:
         return pulumi.get(self, "vlan_id")
 
     @vlan_id.setter
-    def vlan_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vlan_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanIdVariable")
-    def vlan_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vlan_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vlan_id_variable")
 
     @vlan_id_variable.setter
-    def vlan_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vlan_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vlan_id_variable", value)
 
 
@@ -627,23 +627,23 @@ class OtherUcseFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_port_dedicated: Optional[pulumi.Input[_builtins.bool]] = None,
-                 access_port_shared_failover_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_port_shared_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 assign_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 assign_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bay: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
-                 ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_port_dedicated: pulumi.Input[Optional[_builtins.bool]] = None,
+                 access_port_shared_failover_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_port_shared_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 assign_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 assign_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bay: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
+                 ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Other UCSE Feature.
@@ -775,23 +775,23 @@ class OtherUcseFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_port_dedicated: Optional[pulumi.Input[_builtins.bool]] = None,
-                 access_port_shared_failover_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_port_shared_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 assign_priority: Optional[pulumi.Input[_builtins.int]] = None,
-                 assign_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 bay: Optional[pulumi.Input[_builtins.int]] = None,
-                 default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
-                 ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 slot: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_port_dedicated: pulumi.Input[Optional[_builtins.bool]] = None,
+                 access_port_shared_failover_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_port_shared_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 assign_priority: pulumi.Input[Optional[_builtins.int]] = None,
+                 assign_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 bay: pulumi.Input[Optional[_builtins.int]] = None,
+                 default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
+                 ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 slot: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vlan_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -835,24 +835,24 @@ class OtherUcseFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_port_dedicated: Optional[pulumi.Input[_builtins.bool]] = None,
-            access_port_shared_failover_type: Optional[pulumi.Input[_builtins.str]] = None,
-            access_port_shared_type: Optional[pulumi.Input[_builtins.str]] = None,
-            assign_priority: Optional[pulumi.Input[_builtins.int]] = None,
-            assign_priority_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            bay: Optional[pulumi.Input[_builtins.int]] = None,
-            default_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
-            ipv4_address: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_address_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            slot: Optional[pulumi.Input[_builtins.int]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vlan_id: Optional[pulumi.Input[_builtins.int]] = None,
-            vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None) -> 'OtherUcseFeature':
+            access_port_dedicated: pulumi.Input[Optional[_builtins.bool]] = None,
+            access_port_shared_failover_type: pulumi.Input[Optional[_builtins.str]] = None,
+            access_port_shared_type: pulumi.Input[Optional[_builtins.str]] = None,
+            assign_priority: pulumi.Input[Optional[_builtins.int]] = None,
+            assign_priority_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            bay: pulumi.Input[Optional[_builtins.int]] = None,
+            default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['OtherUcseFeatureInterfaceArgs', 'OtherUcseFeatureInterfaceArgsDict']]]]] = None,
+            ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            slot: pulumi.Input[Optional[_builtins.int]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vlan_id: pulumi.Input[Optional[_builtins.int]] = None,
+            vlan_id_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'OtherUcseFeature':
         """
         Get an existing OtherUcseFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

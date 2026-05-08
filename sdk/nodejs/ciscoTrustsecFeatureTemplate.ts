@@ -353,164 +353,164 @@ export interface CiscoTrustsecFeatureTemplateState {
     /**
      * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      */
-    credentialsId?: pulumi.Input<string>;
+    credentialsId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    credentialsIdVariable?: pulumi.Input<string>;
+    credentialsIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the password for the device
      */
-    credentialsPassword?: pulumi.Input<string>;
+    credentialsPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    credentialsPasswordVariable?: pulumi.Input<string>;
+    credentialsPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Configure Local device security group <2..65519>
      *   - Range: `2`-`65519`
      */
-    deviceSgt?: pulumi.Input<number>;
+    deviceSgt?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deviceSgtVariable?: pulumi.Input<string>;
+    deviceSgtVariable?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Enable Role-based Access Control enforcement
      *   - Default value: `false`
      */
-    enableEnforcement?: pulumi.Input<boolean>;
+    enableEnforcement?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableEnforcementVariable?: pulumi.Input<string>;
+    enableEnforcementVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable CTS SXP support
      *   - Default value: `false`
      */
-    enableSxp?: pulumi.Input<boolean>;
+    enableSxp?: pulumi.Input<boolean | undefined>;
     /**
      * Configure Maximum allowed hold-time for listener in seconds <1..65534>
      *   - Range: `1`-`65534`
      *   - Default value: `180`
      */
-    maximumListenerHoldTime?: pulumi.Input<number>;
+    maximumListenerHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumListenerHoldTimeVariable?: pulumi.Input<string>;
+    maximumListenerHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Minimum allowed hold-time for listener in seconds <1..65534>
      *   - Range: `1`-`65534`
      *   - Default value: `90`
      */
-    minimumListenerHoldTime?: pulumi.Input<number>;
+    minimumListenerHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    minimumListenerHoldTimeVariable?: pulumi.Input<string>;
+    minimumListenerHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure Speaker hold-time in seconds <1..65534>
      *   - Range: `1`-`65534`
      *   - Default value: `120`
      */
-    speakerHoldTime?: pulumi.Input<number>;
+    speakerHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    speakerHoldTimeVariable?: pulumi.Input<string>;
+    speakerHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP Connections
      */
-    sxpConnections?: pulumi.Input<pulumi.Input<inputs.CiscoTrustsecFeatureTemplateSxpConnection>[]>;
+    sxpConnections?: pulumi.Input<pulumi.Input<inputs.CiscoTrustsecFeatureTemplateSxpConnection>[] | undefined>;
     /**
      * Configure SXP default password
      */
-    sxpDefaultPassword?: pulumi.Input<string>;
+    sxpDefaultPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpDefaultPasswordVariable?: pulumi.Input<string>;
+    sxpDefaultPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP key-chain
      */
-    sxpKeyChain?: pulumi.Input<string>;
+    sxpKeyChain?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpKeyChainVariable?: pulumi.Input<string>;
+    sxpKeyChainVariable?: pulumi.Input<string | undefined>;
     /**
      * Enables logging for IP-to-SGT binding changes
      *   - Default value: `false`
      */
-    sxpLogBindingChanges?: pulumi.Input<boolean>;
+    sxpLogBindingChanges?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sxpLogBindingChangesVariable?: pulumi.Input<string>;
+    sxpLogBindingChangesVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP Node ID <IP, 8 char string or interface name>
      */
-    sxpNodeId?: pulumi.Input<string>;
+    sxpNodeId?: pulumi.Input<string | undefined>;
     /**
      * Define SXP Node ID type <IP, 8 char string or interface name>
      *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
      *   - Default value: `ip`
      */
-    sxpNodeIdType?: pulumi.Input<string>;
+    sxpNodeIdType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpNodeIdVariable?: pulumi.Input<string>;
+    sxpNodeIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the SXP reconciliation period in seconds <0..64000>
      *   - Range: `0`-`64000`
      *   - Default value: `120`
      */
-    sxpReconciliationPeriod?: pulumi.Input<number>;
+    sxpReconciliationPeriod?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sxpReconciliationPeriodVariable?: pulumi.Input<string>;
+    sxpReconciliationPeriodVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Retry period for SXP connection in seconds <0..64000>
      *   - Range: `0`-`64000`
      *   - Default value: `120`
      */
-    sxpRetryPeriod?: pulumi.Input<number>;
+    sxpRetryPeriod?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sxpRetryPeriodVariable?: pulumi.Input<string>;
+    sxpRetryPeriodVariable?: pulumi.Input<string | undefined>;
     /**
      * SXP Source IP
      */
-    sxpSourceIp?: pulumi.Input<string>;
+    sxpSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpSourceIpVariable?: pulumi.Input<string>;
+    sxpSourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -520,19 +520,19 @@ export interface CiscoTrustsecFeatureTemplateArgs {
     /**
      * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      */
-    credentialsId?: pulumi.Input<string>;
+    credentialsId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    credentialsIdVariable?: pulumi.Input<string>;
+    credentialsIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the password for the device
      */
-    credentialsPassword?: pulumi.Input<string>;
+    credentialsPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    credentialsPasswordVariable?: pulumi.Input<string>;
+    credentialsPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -541,11 +541,11 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      * Configure Local device security group <2..65519>
      *   - Range: `2`-`65519`
      */
-    deviceSgt?: pulumi.Input<number>;
+    deviceSgt?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deviceSgtVariable?: pulumi.Input<string>;
+    deviceSgtVariable?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -555,119 +555,119 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      * Enable Role-based Access Control enforcement
      *   - Default value: `false`
      */
-    enableEnforcement?: pulumi.Input<boolean>;
+    enableEnforcement?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableEnforcementVariable?: pulumi.Input<string>;
+    enableEnforcementVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable CTS SXP support
      *   - Default value: `false`
      */
-    enableSxp?: pulumi.Input<boolean>;
+    enableSxp?: pulumi.Input<boolean | undefined>;
     /**
      * Configure Maximum allowed hold-time for listener in seconds <1..65534>
      *   - Range: `1`-`65534`
      *   - Default value: `180`
      */
-    maximumListenerHoldTime?: pulumi.Input<number>;
+    maximumListenerHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumListenerHoldTimeVariable?: pulumi.Input<string>;
+    maximumListenerHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Minimum allowed hold-time for listener in seconds <1..65534>
      *   - Range: `1`-`65534`
      *   - Default value: `90`
      */
-    minimumListenerHoldTime?: pulumi.Input<number>;
+    minimumListenerHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    minimumListenerHoldTimeVariable?: pulumi.Input<string>;
+    minimumListenerHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure Speaker hold-time in seconds <1..65534>
      *   - Range: `1`-`65534`
      *   - Default value: `120`
      */
-    speakerHoldTime?: pulumi.Input<number>;
+    speakerHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    speakerHoldTimeVariable?: pulumi.Input<string>;
+    speakerHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP Connections
      */
-    sxpConnections?: pulumi.Input<pulumi.Input<inputs.CiscoTrustsecFeatureTemplateSxpConnection>[]>;
+    sxpConnections?: pulumi.Input<pulumi.Input<inputs.CiscoTrustsecFeatureTemplateSxpConnection>[] | undefined>;
     /**
      * Configure SXP default password
      */
-    sxpDefaultPassword?: pulumi.Input<string>;
+    sxpDefaultPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpDefaultPasswordVariable?: pulumi.Input<string>;
+    sxpDefaultPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP key-chain
      */
-    sxpKeyChain?: pulumi.Input<string>;
+    sxpKeyChain?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpKeyChainVariable?: pulumi.Input<string>;
+    sxpKeyChainVariable?: pulumi.Input<string | undefined>;
     /**
      * Enables logging for IP-to-SGT binding changes
      *   - Default value: `false`
      */
-    sxpLogBindingChanges?: pulumi.Input<boolean>;
+    sxpLogBindingChanges?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sxpLogBindingChangesVariable?: pulumi.Input<string>;
+    sxpLogBindingChangesVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP Node ID <IP, 8 char string or interface name>
      */
-    sxpNodeId?: pulumi.Input<string>;
+    sxpNodeId?: pulumi.Input<string | undefined>;
     /**
      * Define SXP Node ID type <IP, 8 char string or interface name>
      *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
      *   - Default value: `ip`
      */
-    sxpNodeIdType?: pulumi.Input<string>;
+    sxpNodeIdType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpNodeIdVariable?: pulumi.Input<string>;
+    sxpNodeIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure the SXP reconciliation period in seconds <0..64000>
      *   - Range: `0`-`64000`
      *   - Default value: `120`
      */
-    sxpReconciliationPeriod?: pulumi.Input<number>;
+    sxpReconciliationPeriod?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sxpReconciliationPeriodVariable?: pulumi.Input<string>;
+    sxpReconciliationPeriodVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Retry period for SXP connection in seconds <0..64000>
      *   - Range: `0`-`64000`
      *   - Default value: `120`
      */
-    sxpRetryPeriod?: pulumi.Input<number>;
+    sxpRetryPeriod?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sxpRetryPeriodVariable?: pulumi.Input<string>;
+    sxpRetryPeriodVariable?: pulumi.Input<string | undefined>;
     /**
      * SXP Source IP
      */
-    sxpSourceIp?: pulumi.Input<string>;
+    sxpSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sxpSourceIpVariable?: pulumi.Input<string>;
+    sxpSourceIpVariable?: pulumi.Input<string | undefined>;
 }

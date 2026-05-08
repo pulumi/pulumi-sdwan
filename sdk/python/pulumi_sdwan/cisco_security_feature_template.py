@@ -23,21 +23,21 @@ class CiscoSecurityFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 extended_ar_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_ar_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 extended_ar_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoSecurityFeatureTemplate resource.
 
@@ -127,31 +127,31 @@ class CiscoSecurityFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypes")
-    def authentication_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def authentication_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Set the authentication type for DTLS connections
         """
         return pulumi.get(self, "authentication_types")
 
     @authentication_types.setter
-    def authentication_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def authentication_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "authentication_types", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedArWindow")
-    def extended_ar_window(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def extended_ar_window(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Extended Anti-Replay Window
           - Range: `10`-`2048`
@@ -160,84 +160,84 @@ class CiscoSecurityFeatureTemplateArgs:
         return pulumi.get(self, "extended_ar_window")
 
     @extended_ar_window.setter
-    def extended_ar_window(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def extended_ar_window(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "extended_ar_window", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedArWindowVariable")
-    def extended_ar_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def extended_ar_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "extended_ar_window_variable")
 
     @extended_ar_window_variable.setter
-    def extended_ar_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def extended_ar_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "extended_ar_window_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypeVariable")
-    def integrity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def integrity_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "integrity_type_variable")
 
     @integrity_type_variable.setter
-    def integrity_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def integrity_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "integrity_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypes")
-    def integrity_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def integrity_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Set the authentication type for DTLS connections
         """
         return pulumi.get(self, "integrity_types")
 
     @integrity_types.setter
-    def integrity_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def integrity_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "integrity_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def keychains(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]:
+    def keychains(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]:
         """
         Configure a Keychain
         """
         return pulumi.get(self, "keychains")
 
     @keychains.setter
-    def keychains(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]):
+    def keychains(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]):
         pulumi.set(self, "keychains", value)
 
     @_builtins.property
     @pulumi.getter
-    def keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]:
+    def keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]:
         """
         Configure a Key
         """
         return pulumi.get(self, "keys")
 
     @keys.setter
-    def keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]):
+    def keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]):
         pulumi.set(self, "keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pairwiseKeying")
-    def pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pairwise_keying(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable IPsec pairwise-keying
           - Default value: `false`
@@ -245,24 +245,24 @@ class CiscoSecurityFeatureTemplateArgs:
         return pulumi.get(self, "pairwise_keying")
 
     @pairwise_keying.setter
-    def pairwise_keying(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pairwise_keying(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pairwise_keying", value)
 
     @_builtins.property
     @pulumi.getter(name="pairwiseKeyingVariable")
-    def pairwise_keying_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def pairwise_keying_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "pairwise_keying_variable")
 
     @pairwise_keying_variable.setter
-    def pairwise_keying_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def pairwise_keying_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "pairwise_keying_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rekeyInterval")
-    def rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rekey_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
           - Range: `10`-`1209600`
@@ -271,24 +271,24 @@ class CiscoSecurityFeatureTemplateArgs:
         return pulumi.get(self, "rekey_interval")
 
     @rekey_interval.setter
-    def rekey_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rekey_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rekey_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="rekeyIntervalVariable")
-    def rekey_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rekey_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rekey_interval_variable")
 
     @rekey_interval_variable.setter
-    def rekey_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rekey_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rekey_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="replayWindow")
-    def replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def replay_window(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the sliding replay window size
           - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
@@ -297,44 +297,44 @@ class CiscoSecurityFeatureTemplateArgs:
         return pulumi.get(self, "replay_window")
 
     @replay_window.setter
-    def replay_window(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def replay_window(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "replay_window", value)
 
     @_builtins.property
     @pulumi.getter(name="replayWindowVariable")
-    def replay_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "replay_window_variable")
 
     @replay_window_variable.setter
-    def replay_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "replay_window_variable", value)
 
 
 @pulumi.input_type
 class _CiscoSecurityFeatureTemplateState:
     def __init__(__self__, *,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 extended_ar_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_ar_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 extended_ar_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoSecurityFeatureTemplate resources.
 
@@ -407,43 +407,43 @@ class _CiscoSecurityFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypes")
-    def authentication_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def authentication_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Set the authentication type for DTLS connections
         """
         return pulumi.get(self, "authentication_types")
 
     @authentication_types.setter
-    def authentication_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def authentication_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "authentication_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -451,12 +451,12 @@ class _CiscoSecurityFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedArWindow")
-    def extended_ar_window(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def extended_ar_window(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Extended Anti-Replay Window
           - Range: `10`-`2048`
@@ -465,84 +465,84 @@ class _CiscoSecurityFeatureTemplateState:
         return pulumi.get(self, "extended_ar_window")
 
     @extended_ar_window.setter
-    def extended_ar_window(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def extended_ar_window(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "extended_ar_window", value)
 
     @_builtins.property
     @pulumi.getter(name="extendedArWindowVariable")
-    def extended_ar_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def extended_ar_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "extended_ar_window_variable")
 
     @extended_ar_window_variable.setter
-    def extended_ar_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def extended_ar_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "extended_ar_window_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypeVariable")
-    def integrity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def integrity_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "integrity_type_variable")
 
     @integrity_type_variable.setter
-    def integrity_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def integrity_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "integrity_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="integrityTypes")
-    def integrity_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def integrity_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Set the authentication type for DTLS connections
         """
         return pulumi.get(self, "integrity_types")
 
     @integrity_types.setter
-    def integrity_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def integrity_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "integrity_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def keychains(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]:
+    def keychains(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]:
         """
         Configure a Keychain
         """
         return pulumi.get(self, "keychains")
 
     @keychains.setter
-    def keychains(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]):
+    def keychains(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]]]):
         pulumi.set(self, "keychains", value)
 
     @_builtins.property
     @pulumi.getter
-    def keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]:
+    def keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]:
         """
         Configure a Key
         """
         return pulumi.get(self, "keys")
 
     @keys.setter
-    def keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]):
+    def keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]]]):
         pulumi.set(self, "keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pairwiseKeying")
-    def pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def pairwise_keying(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable IPsec pairwise-keying
           - Default value: `false`
@@ -550,24 +550,24 @@ class _CiscoSecurityFeatureTemplateState:
         return pulumi.get(self, "pairwise_keying")
 
     @pairwise_keying.setter
-    def pairwise_keying(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def pairwise_keying(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "pairwise_keying", value)
 
     @_builtins.property
     @pulumi.getter(name="pairwiseKeyingVariable")
-    def pairwise_keying_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def pairwise_keying_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "pairwise_keying_variable")
 
     @pairwise_keying_variable.setter
-    def pairwise_keying_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def pairwise_keying_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "pairwise_keying_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="rekeyInterval")
-    def rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def rekey_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
           - Range: `10`-`1209600`
@@ -576,24 +576,24 @@ class _CiscoSecurityFeatureTemplateState:
         return pulumi.get(self, "rekey_interval")
 
     @rekey_interval.setter
-    def rekey_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def rekey_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "rekey_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="rekeyIntervalVariable")
-    def rekey_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rekey_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "rekey_interval_variable")
 
     @rekey_interval_variable.setter
-    def rekey_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rekey_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rekey_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="replayWindow")
-    def replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def replay_window(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the sliding replay window size
           - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
@@ -602,43 +602,43 @@ class _CiscoSecurityFeatureTemplateState:
         return pulumi.get(self, "replay_window")
 
     @replay_window.setter
-    def replay_window(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def replay_window(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "replay_window", value)
 
     @_builtins.property
     @pulumi.getter(name="replayWindowVariable")
-    def replay_window_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "replay_window_variable")
 
     @replay_window_variable.setter
-    def replay_window_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "replay_window_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -648,23 +648,23 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 extended_ar_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_ar_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 extended_ar_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco Security feature template.
@@ -829,23 +829,23 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 extended_ar_window: Optional[pulumi.Input[_builtins.int]] = None,
-                 extended_ar_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-                 pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 rekey_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 rekey_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-                 replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 extended_ar_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+                 replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -888,25 +888,25 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            extended_ar_window: Optional[pulumi.Input[_builtins.int]] = None,
-            extended_ar_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            integrity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
-            keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            pairwise_keying: Optional[pulumi.Input[_builtins.bool]] = None,
-            pairwise_keying_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            rekey_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            rekey_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            replay_window: Optional[pulumi.Input[_builtins.str]] = None,
-            replay_window_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoSecurityFeatureTemplate':
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            extended_ar_window: pulumi.Input[Optional[_builtins.int]] = None,
+            extended_ar_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            integrity_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            keychains: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            pairwise_keying: pulumi.Input[Optional[_builtins.bool]] = None,
+            pairwise_keying_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            replay_window: pulumi.Input[Optional[_builtins.str]] = None,
+            replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoSecurityFeatureTemplate':
         """
         Get an existing CiscoSecurityFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

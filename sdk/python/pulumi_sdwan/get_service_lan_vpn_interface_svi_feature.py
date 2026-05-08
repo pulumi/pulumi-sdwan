@@ -629,9 +629,9 @@ def get_service_lan_vpn_interface_svi_feature(feature_profile_id: Optional[_buil
         tcp_mss=pulumi.get(__ret__, 'tcp_mss'),
         tcp_mss_variable=pulumi.get(__ret__, 'tcp_mss_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_service_lan_vpn_interface_svi_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                     id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                     service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_lan_vpn_interface_svi_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                     id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                     service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnInterfaceSviFeatureResult]:
     """
     This data source can read the Service LAN VPN Interface SVI Feature.

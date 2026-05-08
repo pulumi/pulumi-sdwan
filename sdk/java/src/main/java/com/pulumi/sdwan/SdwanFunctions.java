@@ -763,8 +763,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedInspectionProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -803,8 +803,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedInspectionProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -843,8 +843,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedInspectionProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -883,8 +883,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedInspectionProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -923,8 +923,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedInspectionProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -963,8 +963,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedMalwareProtectionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1003,8 +1003,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedMalwareProtectionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1043,8 +1043,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedMalwareProtectionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1083,8 +1083,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedMalwareProtectionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1123,8 +1123,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAdvancedMalwareProtectionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1163,8 +1163,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAllowUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1203,8 +1203,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAllowUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1243,8 +1243,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAllowUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1283,8 +1283,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAllowUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1323,8 +1323,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAllowUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1363,8 +1363,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAppProbeClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1403,8 +1403,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAppProbeClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1443,8 +1443,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAppProbeClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1483,8 +1483,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAppProbeClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1523,8 +1523,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAppProbeClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1563,8 +1563,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1603,8 +1603,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1643,8 +1643,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1683,8 +1683,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1723,8 +1723,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1763,8 +1763,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1803,8 +1803,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1843,8 +1843,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1883,8 +1883,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1923,8 +1923,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1963,8 +1963,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2003,8 +2003,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2043,8 +2043,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2083,8 +2083,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2123,8 +2123,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2163,8 +2163,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2204,8 +2204,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2245,8 +2245,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2286,8 +2286,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2327,8 +2327,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityPolicySettingsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2368,8 +2368,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2409,8 +2409,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2450,8 +2450,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2491,8 +2491,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2532,8 +2532,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2573,8 +2573,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityTrafficPolicyPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2614,8 +2614,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityTrafficPolicyPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2655,8 +2655,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityTrafficPolicyPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2696,8 +2696,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityTrafficPolicyPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2737,8 +2737,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetApplicationPriorityTrafficPolicyPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2778,8 +2778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2818,8 +2818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2858,8 +2858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2898,8 +2898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2938,8 +2938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2978,8 +2978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetBlockUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3018,8 +3018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetBlockUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3058,8 +3058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetBlockUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3098,8 +3098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetBlockUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3138,8 +3138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetBlockUrlListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3178,8 +3178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3218,8 +3218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3258,8 +3258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3298,8 +3298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3338,8 +3338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3378,8 +3378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3418,8 +3418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeAaaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3458,8 +3458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3498,8 +3498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3538,8 +3538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3578,8 +3578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3618,8 +3618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3658,8 +3658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3698,8 +3698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeGlobalFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3738,8 +3738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3778,8 +3778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3818,8 +3818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3858,8 +3858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3898,8 +3898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3938,8 +3938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3978,8 +3978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeIgmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4018,8 +4018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4058,8 +4058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4098,8 +4098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4138,8 +4138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4178,8 +4178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4218,8 +4218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4258,8 +4258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgeMulticastFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4298,8 +4298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4338,8 +4338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4378,8 +4378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4418,8 +4418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4458,8 +4458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4498,8 +4498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4538,8 +4538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCedgePimFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4578,8 +4578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4618,8 +4618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4658,8 +4658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4698,8 +4698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4738,8 +4738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4778,8 +4778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4818,8 +4818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularCedgeProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4858,8 +4858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4898,8 +4898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4938,8 +4938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4978,8 +4978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5018,8 +5018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5058,8 +5058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5098,8 +5098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularControllerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5138,8 +5138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5178,8 +5178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5218,8 +5218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5258,8 +5258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5298,8 +5298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5338,8 +5338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5378,8 +5378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCellularProfileFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5418,8 +5418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCentralizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5458,8 +5458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCentralizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5498,8 +5498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCentralizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5538,8 +5538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCentralizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5578,8 +5578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCentralizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5618,8 +5618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCflowdPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5658,8 +5658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCflowdPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5698,8 +5698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCflowdPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5738,8 +5738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCflowdPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5778,8 +5778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCflowdPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5818,8 +5818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5858,8 +5858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5898,8 +5898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5938,8 +5938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5978,8 +5978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6018,8 +6018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6058,8 +6058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBannerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6098,8 +6098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6138,8 +6138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6178,8 +6178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6218,8 +6218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6258,8 +6258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6298,8 +6298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6338,8 +6338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBfdFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6378,8 +6378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6418,8 +6418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6458,8 +6458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6498,8 +6498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6538,8 +6538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6578,8 +6578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6618,8 +6618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoBgpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6658,8 +6658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6698,8 +6698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6738,8 +6738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6778,8 +6778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6818,8 +6818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6858,8 +6858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6898,8 +6898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoDhcpServerFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6938,8 +6938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6978,8 +6978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7018,8 +7018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7058,8 +7058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7098,8 +7098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7138,8 +7138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7178,8 +7178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoLoggingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7218,8 +7218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7258,8 +7258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7298,8 +7298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7338,8 +7338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7378,8 +7378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7418,8 +7418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7458,8 +7458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoNtpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7498,8 +7498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7538,8 +7538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7578,8 +7578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7618,8 +7618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7658,8 +7658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7698,8 +7698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7738,8 +7738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7778,8 +7778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7818,8 +7818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7858,8 +7858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7898,8 +7898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7938,8 +7938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7978,8 +7978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8018,8 +8018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8058,8 +8058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8098,8 +8098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8138,8 +8138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8178,8 +8178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8218,8 +8218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8258,8 +8258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8298,8 +8298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoOspfv3FeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8338,8 +8338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8378,8 +8378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8418,8 +8418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8458,8 +8458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8498,8 +8498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8538,8 +8538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8578,8 +8578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecureInternetGatewayFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8618,8 +8618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8658,8 +8658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8698,8 +8698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8738,8 +8738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8778,8 +8778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8818,8 +8818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8858,8 +8858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSecurityFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8898,8 +8898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8938,8 +8938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8978,8 +8978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9018,8 +9018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9058,8 +9058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9098,8 +9098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9138,8 +9138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSigCredentialsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9178,8 +9178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9218,8 +9218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9258,8 +9258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9298,8 +9298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9338,8 +9338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9378,8 +9378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9418,8 +9418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSnmpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9458,8 +9458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9498,8 +9498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9538,8 +9538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9578,8 +9578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9618,8 +9618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9658,8 +9658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9698,8 +9698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoSystemFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9738,8 +9738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9778,8 +9778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9818,8 +9818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9858,8 +9858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9898,8 +9898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9938,8 +9938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9978,8 +9978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoThousandeyesFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10018,8 +10018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10058,8 +10058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10098,8 +10098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10138,8 +10138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10178,8 +10178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10218,8 +10218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10258,8 +10258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoTrustsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10298,8 +10298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10338,8 +10338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10378,8 +10378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10418,8 +10418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10458,8 +10458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10498,8 +10498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10538,8 +10538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10578,8 +10578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10618,8 +10618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10658,8 +10658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10698,8 +10698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10738,8 +10738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10778,8 +10778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10818,8 +10818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10858,8 +10858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10898,8 +10898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10938,8 +10938,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10978,8 +10978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11018,8 +11018,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11058,8 +11058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11098,8 +11098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceGreFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11138,8 +11138,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11178,8 +11178,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11218,8 +11218,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11258,8 +11258,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11298,8 +11298,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11338,8 +11338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11378,8 +11378,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoVpnInterfaceIpsecFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11418,8 +11418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11458,8 +11458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11498,8 +11498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11538,8 +11538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11578,8 +11578,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11618,8 +11618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11658,8 +11658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCiscoWirelessLanFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11698,8 +11698,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetClassMapPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11738,8 +11738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetClassMapPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11778,8 +11778,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetClassMapPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11818,8 +11818,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetClassMapPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11858,8 +11858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetClassMapPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11898,8 +11898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliConfigFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11939,8 +11939,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliConfigFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11980,8 +11980,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliConfigFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12021,8 +12021,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliConfigFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12062,8 +12062,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliConfigFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12103,8 +12103,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12143,8 +12143,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12183,8 +12183,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12223,8 +12223,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12263,8 +12263,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12303,8 +12303,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12343,8 +12343,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12383,8 +12383,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12423,8 +12423,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12463,8 +12463,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12503,8 +12503,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12543,8 +12543,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12583,8 +12583,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12623,8 +12623,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12663,8 +12663,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12703,8 +12703,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12743,8 +12743,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12783,8 +12783,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12823,8 +12823,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12863,8 +12863,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12903,8 +12903,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12943,8 +12943,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12983,8 +12983,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13023,8 +13023,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13063,8 +13063,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13103,8 +13103,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13143,8 +13143,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13183,8 +13183,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13223,8 +13223,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13263,8 +13263,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13303,8 +13303,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13343,8 +13343,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13383,8 +13383,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataFqdnPrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13423,8 +13423,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataFqdnPrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13463,8 +13463,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataFqdnPrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13503,8 +13503,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataFqdnPrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13543,8 +13543,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataFqdnPrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13583,8 +13583,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13623,8 +13623,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13663,8 +13663,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13703,8 +13703,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13743,8 +13743,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13783,8 +13783,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13823,8 +13823,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13863,8 +13863,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13903,8 +13903,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13943,8 +13943,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDataIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13983,8 +13983,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14024,8 +14024,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14065,8 +14065,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14106,8 +14106,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14147,8 +14147,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14188,8 +14188,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14229,8 +14229,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14270,8 +14270,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14310,8 +14310,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14350,8 +14350,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14390,8 +14390,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14430,8 +14430,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14470,8 +14470,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14511,8 +14511,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14552,8 +14552,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14593,8 +14593,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14634,8 +14634,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14675,8 +14675,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14715,8 +14715,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14755,8 +14755,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14795,8 +14795,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14835,8 +14835,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14875,8 +14875,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14915,8 +14915,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14955,8 +14955,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14995,8 +14995,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15035,8 +15035,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15075,8 +15075,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15115,8 +15115,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15155,8 +15155,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15195,8 +15195,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15235,8 +15235,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15275,8 +15275,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15315,8 +15315,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15355,8 +15355,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15395,8 +15395,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15435,8 +15435,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15475,8 +15475,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15515,8 +15515,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15555,8 +15555,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15596,8 +15596,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15637,8 +15637,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15678,8 +15678,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15719,8 +15719,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityNgfwPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15760,8 +15760,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15801,8 +15801,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15842,8 +15842,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15883,8 +15883,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15924,8 +15924,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetEmbeddedSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15965,8 +15965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16005,8 +16005,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16045,8 +16045,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16085,8 +16085,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16125,8 +16125,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExpandedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16165,8 +16165,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExtendedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16205,8 +16205,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExtendedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16245,8 +16245,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExtendedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16285,8 +16285,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExtendedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16325,8 +16325,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetExtendedCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16365,8 +16365,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetFeatureDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16405,8 +16405,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetFeatureDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16445,8 +16445,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetFeatureDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16485,8 +16485,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetFeatureDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16525,8 +16525,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetFeatureDeviceTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16565,8 +16565,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGeoLocationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16605,8 +16605,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGeoLocationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16645,8 +16645,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGeoLocationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16685,8 +16685,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGeoLocationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16725,8 +16725,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGeoLocationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16765,8 +16765,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16805,8 +16805,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16845,8 +16845,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16885,8 +16885,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16925,8 +16925,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16965,8 +16965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17005,8 +17005,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetGpsFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17045,8 +17045,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetHubAndSpokeTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17085,8 +17085,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetHubAndSpokeTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17125,8 +17125,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetHubAndSpokeTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17165,8 +17165,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetHubAndSpokeTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17205,8 +17205,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetHubAndSpokeTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17245,8 +17245,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIntrusionPreventionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17285,8 +17285,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIntrusionPreventionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17325,8 +17325,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIntrusionPreventionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17365,8 +17365,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIntrusionPreventionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17405,8 +17405,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIntrusionPreventionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17445,8 +17445,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpsSignatureListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17485,8 +17485,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpsSignatureListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17525,8 +17525,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpsSignatureListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17565,8 +17565,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpsSignatureListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17605,8 +17605,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpsSignatureListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17645,8 +17645,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17685,8 +17685,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17725,8 +17725,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17765,8 +17765,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17805,8 +17805,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17845,8 +17845,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17885,8 +17885,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17925,8 +17925,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17965,8 +17965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18005,8 +18005,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18045,8 +18045,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18085,8 +18085,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18125,8 +18125,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18165,8 +18165,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18205,8 +18205,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv4PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18245,8 +18245,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18285,8 +18285,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18325,8 +18325,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18365,8 +18365,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18405,8 +18405,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6AclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18445,8 +18445,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18485,8 +18485,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18525,8 +18525,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18565,8 +18565,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18605,8 +18605,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6DeviceAclPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18645,8 +18645,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18685,8 +18685,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18725,8 +18725,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18765,8 +18765,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18805,8 +18805,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetIpv6PrefixListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18845,8 +18845,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18885,8 +18885,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18925,8 +18925,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18965,8 +18965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19005,8 +19005,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalApplicationListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19045,8 +19045,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19085,8 +19085,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19125,8 +19125,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19165,8 +19165,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19205,8 +19205,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetLocalizedPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19245,8 +19245,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19285,8 +19285,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19325,8 +19325,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19365,8 +19365,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19405,8 +19405,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19445,8 +19445,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19485,8 +19485,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19525,8 +19525,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19565,8 +19565,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19605,8 +19605,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19645,8 +19645,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19685,8 +19685,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19725,8 +19725,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19765,8 +19765,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19805,8 +19805,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19845,8 +19845,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19885,8 +19885,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19925,8 +19925,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19965,8 +19965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20005,8 +20005,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20045,8 +20045,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20086,8 +20086,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20127,8 +20127,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20168,8 +20168,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20209,8 +20209,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20250,8 +20250,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20291,8 +20291,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20332,8 +20332,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20373,8 +20373,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20414,8 +20414,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20455,8 +20455,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20495,8 +20495,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20535,8 +20535,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20575,8 +20575,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20615,8 +20615,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20655,8 +20655,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20695,8 +20695,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20735,8 +20735,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20775,8 +20775,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20815,8 +20815,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20855,8 +20855,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20896,8 +20896,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20937,8 +20937,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20978,8 +20978,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21019,8 +21019,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21060,8 +21060,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21101,8 +21101,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21142,8 +21142,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21183,8 +21183,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21224,8 +21224,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21265,8 +21265,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAsPathListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21306,8 +21306,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAsPathListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21347,8 +21347,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAsPathListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21388,8 +21388,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAsPathListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21429,8 +21429,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectAsPathListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21470,8 +21470,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectClassMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21511,8 +21511,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectClassMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21552,8 +21552,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectClassMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21593,8 +21593,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectClassMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21634,8 +21634,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectClassMapArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21675,8 +21675,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectColorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21716,8 +21716,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectColorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21757,8 +21757,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectColorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21798,8 +21798,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectColorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21839,8 +21839,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectColorListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21880,8 +21880,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21921,8 +21921,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21962,8 +21962,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22003,8 +22003,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22044,8 +22044,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22085,8 +22085,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22126,8 +22126,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22167,8 +22167,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22208,8 +22208,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22249,8 +22249,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectDataIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22290,8 +22290,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExpandedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22331,8 +22331,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExpandedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22372,8 +22372,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExpandedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22413,8 +22413,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExpandedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22454,8 +22454,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExpandedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22495,8 +22495,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22536,8 +22536,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22577,8 +22577,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22618,8 +22618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22659,8 +22659,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22700,8 +22700,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22740,8 +22740,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22780,8 +22780,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22820,8 +22820,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22860,8 +22860,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22900,8 +22900,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22941,8 +22941,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22982,8 +22982,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23023,8 +23023,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23064,8 +23064,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23105,8 +23105,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23146,8 +23146,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23187,8 +23187,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23228,8 +23228,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23269,8 +23269,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectIpv6PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23310,8 +23310,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectMirrorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23351,8 +23351,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectMirrorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23392,8 +23392,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectMirrorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23433,8 +23433,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectMirrorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23474,8 +23474,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectMirrorArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23515,8 +23515,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPolicerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23556,8 +23556,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPolicerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23597,8 +23597,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPolicerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23638,8 +23638,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPolicerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23679,8 +23679,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPolicerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23720,8 +23720,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPreferredColorGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23761,8 +23761,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPreferredColorGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23802,8 +23802,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPreferredColorGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23843,8 +23843,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPreferredColorGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23884,8 +23884,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectPreferredColorGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23925,8 +23925,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23966,8 +23966,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24007,8 +24007,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24048,8 +24048,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24089,8 +24089,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityDataIpv4PrefixListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24130,8 +24130,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityFqdnListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24171,8 +24171,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityFqdnListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24212,8 +24212,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityFqdnListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24253,8 +24253,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityFqdnListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24294,8 +24294,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityFqdnListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24335,8 +24335,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityGeolocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24376,8 +24376,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityGeolocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24417,8 +24417,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityGeolocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24458,8 +24458,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityGeolocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24499,8 +24499,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityGeolocationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24540,8 +24540,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIdentityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24581,8 +24581,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIdentityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24622,8 +24622,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIdentityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24663,8 +24663,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIdentityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24704,8 +24704,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIdentityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24745,8 +24745,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIpsSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24786,8 +24786,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIpsSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24827,8 +24827,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIpsSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24868,8 +24868,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIpsSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24909,8 +24909,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityIpsSignatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24950,8 +24950,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24991,8 +24991,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25032,8 +25032,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25073,8 +25073,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25114,8 +25114,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalApplicationListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25155,8 +25155,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25196,8 +25196,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25237,8 +25237,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25278,8 +25278,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25319,8 +25319,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25360,8 +25360,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25401,8 +25401,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25442,8 +25442,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25483,8 +25483,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25524,8 +25524,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25565,8 +25565,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25606,8 +25606,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25647,8 +25647,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25688,8 +25688,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25729,8 +25729,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25770,8 +25770,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25811,8 +25811,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25852,8 +25852,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25893,8 +25893,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25934,8 +25934,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25975,8 +25975,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26016,8 +26016,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26057,8 +26057,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26098,8 +26098,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26139,8 +26139,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26180,8 +26180,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26221,8 +26221,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26262,8 +26262,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26303,8 +26303,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26344,8 +26344,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlBlockListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26385,8 +26385,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26426,8 +26426,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26467,8 +26467,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26508,8 +26508,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26549,8 +26549,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityZoneArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26590,8 +26590,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26631,8 +26631,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26672,8 +26672,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26713,8 +26713,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26754,8 +26754,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectSlaClassListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26795,8 +26795,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26836,8 +26836,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26877,8 +26877,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26918,8 +26918,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26959,8 +26959,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27000,8 +27000,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27041,8 +27041,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27082,8 +27082,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27123,8 +27123,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27164,8 +27164,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27205,8 +27205,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27246,8 +27246,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27287,8 +27287,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27328,8 +27328,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27369,8 +27369,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27410,8 +27410,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27451,8 +27451,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27492,8 +27492,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27533,8 +27533,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27574,8 +27574,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27615,8 +27615,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27656,8 +27656,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27697,8 +27697,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27738,8 +27738,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27779,8 +27779,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27820,8 +27820,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27861,8 +27861,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27902,8 +27902,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27943,8 +27943,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27984,8 +27984,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28025,8 +28025,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28066,8 +28066,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28107,8 +28107,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28148,8 +28148,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28189,8 +28189,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28230,8 +28230,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28271,8 +28271,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28312,8 +28312,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28353,8 +28353,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28394,8 +28394,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28435,8 +28435,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28476,8 +28476,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28517,8 +28517,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28558,8 +28558,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28599,8 +28599,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28640,8 +28640,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPortListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28680,8 +28680,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPortListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28720,8 +28720,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPortListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28760,8 +28760,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPortListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28800,8 +28800,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPortListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28840,8 +28840,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPreferredColorGroupPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28880,8 +28880,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPreferredColorGroupPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28920,8 +28920,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPreferredColorGroupPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -28960,8 +28960,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPreferredColorGroupPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29000,8 +29000,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetPreferredColorGroupPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29040,8 +29040,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetProtocolListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29080,8 +29080,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetProtocolListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29120,8 +29120,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetProtocolListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29160,8 +29160,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetProtocolListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29200,8 +29200,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetProtocolListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29240,8 +29240,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetQosMapPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29280,8 +29280,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetQosMapPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29320,8 +29320,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetQosMapPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29360,8 +29360,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetQosMapPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29400,8 +29400,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetQosMapPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29440,8 +29440,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRegionListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29480,8 +29480,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRegionListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29520,8 +29520,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRegionListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29560,8 +29560,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRegionListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29600,8 +29600,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRegionListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29640,8 +29640,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRewriteRulePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29680,8 +29680,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRewriteRulePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29720,8 +29720,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRewriteRulePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29760,8 +29760,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRewriteRulePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29800,8 +29800,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRewriteRulePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29840,8 +29840,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29880,8 +29880,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29920,8 +29920,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -29960,8 +29960,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30000,8 +30000,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRoutePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30040,8 +30040,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30080,8 +30080,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30120,8 +30120,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30160,8 +30160,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30200,8 +30200,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetRuleSetPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30240,8 +30240,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30280,8 +30280,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30320,8 +30320,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30360,8 +30360,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30400,8 +30400,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30440,8 +30440,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30480,8 +30480,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30520,8 +30520,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30560,8 +30560,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30600,8 +30600,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30640,8 +30640,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30680,8 +30680,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30720,8 +30720,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30761,8 +30761,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30802,8 +30802,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30843,8 +30843,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30884,8 +30884,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30925,8 +30925,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -30965,8 +30965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31005,8 +31005,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31045,8 +31045,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31085,8 +31085,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31125,8 +31125,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31166,8 +31166,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31207,8 +31207,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31248,8 +31248,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31289,8 +31289,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31330,8 +31330,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31371,8 +31371,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31412,8 +31412,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31453,8 +31453,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31494,8 +31494,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31535,8 +31535,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31576,8 +31576,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31617,8 +31617,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31658,8 +31658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31699,8 +31699,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31740,8 +31740,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31782,8 +31782,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31824,8 +31824,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31866,8 +31866,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31908,8 +31908,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31950,8 +31950,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -31992,8 +31992,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32034,8 +32034,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32076,8 +32076,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32118,8 +32118,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32160,8 +32160,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32202,8 +32202,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32244,8 +32244,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32286,8 +32286,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32328,8 +32328,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32370,8 +32370,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32412,8 +32412,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32454,8 +32454,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32496,8 +32496,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32538,8 +32538,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32580,8 +32580,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32622,8 +32622,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32664,8 +32664,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32706,8 +32706,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32748,8 +32748,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32790,8 +32790,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32832,8 +32832,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32874,8 +32874,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32916,8 +32916,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -32958,8 +32958,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33000,8 +33000,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33042,8 +33042,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33084,8 +33084,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33126,8 +33126,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33168,8 +33168,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33210,8 +33210,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33253,8 +33253,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33296,8 +33296,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33339,8 +33339,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33382,8 +33382,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33425,8 +33425,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33468,8 +33468,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33511,8 +33511,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33554,8 +33554,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33597,8 +33597,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33640,8 +33640,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33683,8 +33683,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33726,8 +33726,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33769,8 +33769,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33812,8 +33812,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33855,8 +33855,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33897,8 +33897,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33939,8 +33939,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -33981,8 +33981,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34023,8 +34023,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34065,8 +34065,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34107,8 +34107,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34149,8 +34149,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34191,8 +34191,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34233,8 +34233,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34275,8 +34275,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34318,8 +34318,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34361,8 +34361,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34404,8 +34404,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34447,8 +34447,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34490,8 +34490,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34532,8 +34532,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34574,8 +34574,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34616,8 +34616,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34658,8 +34658,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34700,8 +34700,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34743,8 +34743,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34786,8 +34786,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34829,8 +34829,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34872,8 +34872,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34915,8 +34915,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34956,8 +34956,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -34997,8 +34997,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35038,8 +35038,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35079,8 +35079,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceMulticastFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35120,8 +35120,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35161,8 +35161,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35202,8 +35202,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35243,8 +35243,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35284,8 +35284,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35325,8 +35325,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35366,8 +35366,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35407,8 +35407,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35448,8 +35448,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35489,8 +35489,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceObjectTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35530,8 +35530,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35571,8 +35571,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35612,8 +35612,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35653,8 +35653,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35694,8 +35694,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35735,8 +35735,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35776,8 +35776,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35817,8 +35817,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35858,8 +35858,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35899,8 +35899,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35940,8 +35940,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -35981,8 +35981,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36022,8 +36022,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36063,8 +36063,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36104,8 +36104,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingEigrpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36145,8 +36145,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36186,8 +36186,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36227,8 +36227,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36268,8 +36268,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36309,8 +36309,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36350,8 +36350,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36391,8 +36391,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36432,8 +36432,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36473,8 +36473,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36514,8 +36514,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36555,8 +36555,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36596,8 +36596,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36637,8 +36637,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36678,8 +36678,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36719,8 +36719,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36760,8 +36760,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceSwitchportFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36801,8 +36801,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceSwitchportFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36842,8 +36842,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceSwitchportFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36883,8 +36883,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceSwitchportFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36924,8 +36924,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceSwitchportFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -36965,8 +36965,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37006,8 +37006,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37047,8 +37047,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37088,8 +37088,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37129,8 +37129,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37170,8 +37170,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37211,8 +37211,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37252,8 +37252,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37293,8 +37293,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37334,8 +37334,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37375,8 +37375,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceWirelessLanFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37416,8 +37416,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceWirelessLanFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37457,8 +37457,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceWirelessLanFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37498,8 +37498,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceWirelessLanFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37539,8 +37539,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetServiceWirelessLanFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37580,8 +37580,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSigSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37620,8 +37620,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSigSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37660,8 +37660,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSigSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37700,8 +37700,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSigSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37740,8 +37740,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSigSecurityFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37780,8 +37780,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37820,8 +37820,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37860,8 +37860,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37900,8 +37900,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37940,8 +37940,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -37980,8 +37980,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38020,8 +38020,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38060,8 +38060,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38100,8 +38100,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38140,8 +38140,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38180,8 +38180,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38220,8 +38220,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38260,8 +38260,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38300,8 +38300,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38340,8 +38340,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38380,8 +38380,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38420,8 +38420,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38460,8 +38460,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38500,8 +38500,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38540,8 +38540,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38580,8 +38580,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38620,8 +38620,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38660,8 +38660,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemAaaFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38701,8 +38701,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemAaaFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38742,8 +38742,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemAaaFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38783,8 +38783,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemAaaFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38824,8 +38824,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemAaaFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38865,8 +38865,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBannerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38906,8 +38906,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBannerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38947,8 +38947,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBannerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -38988,8 +38988,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBannerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39029,8 +39029,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBannerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39070,8 +39070,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBasicFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39111,8 +39111,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBasicFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39152,8 +39152,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBasicFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39193,8 +39193,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBasicFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39234,8 +39234,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBasicFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39275,8 +39275,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBfdFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39316,8 +39316,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBfdFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39357,8 +39357,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBfdFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39398,8 +39398,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBfdFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39439,8 +39439,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemBfdFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39480,8 +39480,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39521,8 +39521,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39562,8 +39562,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39603,8 +39603,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39644,8 +39644,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39685,8 +39685,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39725,8 +39725,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39765,8 +39765,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39805,8 +39805,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39845,8 +39845,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39885,8 +39885,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFlexiblePortSpeedFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39926,8 +39926,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFlexiblePortSpeedFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -39967,8 +39967,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFlexiblePortSpeedFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40008,8 +40008,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFlexiblePortSpeedFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40049,8 +40049,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemFlexiblePortSpeedFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40090,8 +40090,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemGlobalFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40131,8 +40131,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemGlobalFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40172,8 +40172,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemGlobalFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40213,8 +40213,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemGlobalFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40254,8 +40254,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemGlobalFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40295,8 +40295,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv4DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40336,8 +40336,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv4DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40377,8 +40377,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv4DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40418,8 +40418,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv4DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40459,8 +40459,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv4DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40500,8 +40500,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv6DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40541,8 +40541,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv6DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40582,8 +40582,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv6DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40623,8 +40623,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv6DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40664,8 +40664,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemIpv6DeviceAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40705,8 +40705,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemLoggingFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40746,8 +40746,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemLoggingFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40787,8 +40787,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemLoggingFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40828,8 +40828,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemLoggingFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40869,8 +40869,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemLoggingFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40910,8 +40910,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemMrfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40951,8 +40951,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemMrfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -40992,8 +40992,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemMrfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41033,8 +41033,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemMrfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41074,8 +41074,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemMrfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41115,8 +41115,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemNtpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41156,8 +41156,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemNtpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41197,8 +41197,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemNtpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41238,8 +41238,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemNtpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41279,8 +41279,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemNtpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41320,8 +41320,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemOmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41361,8 +41361,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemOmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41402,8 +41402,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemOmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41443,8 +41443,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemOmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41484,8 +41484,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemOmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41525,8 +41525,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemPerformanceMonitoringFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41566,8 +41566,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemPerformanceMonitoringFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41607,8 +41607,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemPerformanceMonitoringFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41648,8 +41648,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemPerformanceMonitoringFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41689,8 +41689,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemPerformanceMonitoringFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41730,8 +41730,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemRemoteAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41771,8 +41771,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemRemoteAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41812,8 +41812,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemRemoteAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41853,8 +41853,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemRemoteAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41894,8 +41894,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemRemoteAccessFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41935,8 +41935,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSecurityFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -41976,8 +41976,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSecurityFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42017,8 +42017,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSecurityFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42058,8 +42058,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSecurityFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42099,8 +42099,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSecurityFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42140,8 +42140,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSnmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42181,8 +42181,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSnmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42222,8 +42222,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSnmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42263,8 +42263,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSnmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42304,8 +42304,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetSystemSnmpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42345,8 +42345,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42385,8 +42385,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42425,8 +42425,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42465,8 +42465,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42505,8 +42505,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTagArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42545,8 +42545,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42585,8 +42585,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42625,8 +42625,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42665,8 +42665,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42705,8 +42705,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42745,8 +42745,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42785,8 +42785,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42825,8 +42825,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42865,8 +42865,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42905,8 +42905,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42945,8 +42945,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -42985,8 +42985,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43025,8 +43025,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43065,8 +43065,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43105,8 +43105,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43145,8 +43145,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43185,8 +43185,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43225,8 +43225,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43265,8 +43265,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43305,8 +43305,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43345,8 +43345,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43386,8 +43386,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43427,8 +43427,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43468,8 +43468,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43509,8 +43509,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43550,8 +43550,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43591,8 +43591,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43632,8 +43632,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43673,8 +43673,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43714,8 +43714,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportCellularProfileFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43755,8 +43755,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43795,8 +43795,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43835,8 +43835,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43875,8 +43875,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43915,8 +43915,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportFeatureProfileArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43955,8 +43955,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportGpsFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -43996,8 +43996,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportGpsFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44037,8 +44037,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportGpsFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44078,8 +44078,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportGpsFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44119,8 +44119,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportGpsFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44160,8 +44160,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44201,8 +44201,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44242,8 +44242,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44283,8 +44283,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44324,8 +44324,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv4AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44365,8 +44365,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44406,8 +44406,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44447,8 +44447,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44488,8 +44488,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44529,8 +44529,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6AclFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44570,8 +44570,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44611,8 +44611,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44652,8 +44652,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44693,8 +44693,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44734,8 +44734,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44775,8 +44775,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44816,8 +44816,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44857,8 +44857,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44898,8 +44898,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44939,8 +44939,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -44980,8 +44980,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45021,8 +45021,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45062,8 +45062,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45103,8 +45103,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45144,8 +45144,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45185,8 +45185,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45227,8 +45227,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45269,8 +45269,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45311,8 +45311,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45353,8 +45353,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45395,8 +45395,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45436,8 +45436,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45477,8 +45477,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45518,8 +45518,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45559,8 +45559,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutePolicyFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45600,8 +45600,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45641,8 +45641,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45682,8 +45682,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45723,8 +45723,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45764,8 +45764,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45805,8 +45805,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45846,8 +45846,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45887,8 +45887,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45928,8 +45928,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -45969,8 +45969,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46010,8 +46010,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46051,8 +46051,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46092,8 +46092,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46133,8 +46133,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46174,8 +46174,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46215,8 +46215,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46256,8 +46256,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46297,8 +46297,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46338,8 +46338,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46379,8 +46379,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46420,8 +46420,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportT1E1ControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46461,8 +46461,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportT1E1ControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46502,8 +46502,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportT1E1ControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46543,8 +46543,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportT1E1ControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46584,8 +46584,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportT1E1ControllerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46625,8 +46625,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46666,8 +46666,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46707,8 +46707,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46748,8 +46748,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46789,8 +46789,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46830,8 +46830,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46871,8 +46871,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46912,8 +46912,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46953,8 +46953,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -46994,8 +46994,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47035,8 +47035,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47076,8 +47076,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47117,8 +47117,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47158,8 +47158,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47199,8 +47199,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47240,8 +47240,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47282,8 +47282,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47324,8 +47324,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47366,8 +47366,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47408,8 +47408,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47450,8 +47450,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47492,8 +47492,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47534,8 +47534,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47576,8 +47576,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47618,8 +47618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47660,8 +47660,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47702,8 +47702,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47744,8 +47744,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47786,8 +47786,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47828,8 +47828,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47870,8 +47870,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47912,8 +47912,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47954,8 +47954,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -47996,8 +47996,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48038,8 +48038,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48080,8 +48080,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48122,8 +48122,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48164,8 +48164,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48206,8 +48206,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48248,8 +48248,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48290,8 +48290,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48333,8 +48333,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48376,8 +48376,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48419,8 +48419,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48462,8 +48462,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48505,8 +48505,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48548,8 +48548,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48591,8 +48591,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48634,8 +48634,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48677,8 +48677,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48720,8 +48720,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48762,8 +48762,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48804,8 +48804,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48846,8 +48846,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48888,8 +48888,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48930,8 +48930,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -48973,8 +48973,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49016,8 +49016,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49059,8 +49059,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49102,8 +49102,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49145,8 +49145,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49188,8 +49188,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49231,8 +49231,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49274,8 +49274,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49317,8 +49317,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49360,8 +49360,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49403,8 +49403,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49446,8 +49446,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49489,8 +49489,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49532,8 +49532,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49575,8 +49575,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49618,8 +49618,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49661,8 +49661,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49704,8 +49704,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49747,8 +49747,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49790,8 +49790,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49832,8 +49832,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49874,8 +49874,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49916,8 +49916,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -49958,8 +49958,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50000,8 +50000,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50043,8 +50043,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50086,8 +50086,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50129,8 +50129,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50172,8 +50172,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50215,8 +50215,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50257,8 +50257,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50299,8 +50299,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50341,8 +50341,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50383,8 +50383,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50425,8 +50425,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50468,8 +50468,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50511,8 +50511,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50554,8 +50554,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50597,8 +50597,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50640,8 +50640,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50682,8 +50682,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50724,8 +50724,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50766,8 +50766,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50808,8 +50808,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeatureArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50850,8 +50850,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetUrlFilteringPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50890,8 +50890,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetUrlFilteringPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50930,8 +50930,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetUrlFilteringPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -50970,8 +50970,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetUrlFilteringPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51010,8 +51010,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetUrlFilteringPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51049,8 +51049,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51086,8 +51086,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51123,8 +51123,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51160,8 +51160,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51197,8 +51197,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51234,8 +51234,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51271,8 +51271,8 @@ public final class SdwanFunctions {
      * import com.pulumi.Pulumi;
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51309,8 +51309,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51349,8 +51349,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51389,8 +51389,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51429,8 +51429,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51469,8 +51469,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51509,8 +51509,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51549,8 +51549,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceCellularFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51589,8 +51589,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51629,8 +51629,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51669,8 +51669,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51709,8 +51709,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51749,8 +51749,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51789,8 +51789,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51829,8 +51829,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslIpoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51869,8 +51869,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51909,8 +51909,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51949,8 +51949,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -51989,8 +51989,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52029,8 +52029,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52069,8 +52069,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52109,8 +52109,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoaFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52149,8 +52149,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52189,8 +52189,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52229,8 +52229,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52269,8 +52269,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52309,8 +52309,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52349,8 +52349,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52389,8 +52389,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceDslPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52429,8 +52429,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52469,8 +52469,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52509,8 +52509,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52549,8 +52549,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52589,8 +52589,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52629,8 +52629,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52669,8 +52669,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceEthernetPppoeFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52709,8 +52709,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52749,8 +52749,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52789,8 +52789,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52829,8 +52829,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52869,8 +52869,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52909,8 +52909,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52949,8 +52949,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceMultilinkFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -52989,8 +52989,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53029,8 +53029,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53069,8 +53069,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53109,8 +53109,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53149,8 +53149,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53189,8 +53189,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53229,8 +53229,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceSviFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53269,8 +53269,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53309,8 +53309,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53349,8 +53349,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53389,8 +53389,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53429,8 +53429,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53469,8 +53469,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53509,8 +53509,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnInterfaceT1E1SerialFeatureTemplateArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53549,8 +53549,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53589,8 +53589,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53629,8 +53629,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53669,8 +53669,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53709,8 +53709,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53749,8 +53749,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnMembershipPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53789,8 +53789,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnMembershipPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53829,8 +53829,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnMembershipPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53869,8 +53869,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnMembershipPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53909,8 +53909,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetVpnMembershipPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53949,8 +53949,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneBasedFirewallPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -53989,8 +53989,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneBasedFirewallPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54029,8 +54029,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneBasedFirewallPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54069,8 +54069,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneBasedFirewallPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54109,8 +54109,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneBasedFirewallPolicyDefinitionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54149,8 +54149,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54189,8 +54189,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54229,8 +54229,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54269,8 +54269,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -54309,8 +54309,8 @@ public final class SdwanFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.sdwan.SdwanFunctions;
      * import com.pulumi.sdwan.inputs.GetZoneListPolicyObjectArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;

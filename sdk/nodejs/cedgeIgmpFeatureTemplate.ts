@@ -138,28 +138,28 @@ export interface CedgeIgmpFeatureTemplateState {
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set IGMP interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgeIgmpFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgeIgmpFeatureTemplateInterface>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -178,9 +178,9 @@ export interface CedgeIgmpFeatureTemplateArgs {
     /**
      * Set IGMP interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgeIgmpFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CedgeIgmpFeatureTemplateInterface>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

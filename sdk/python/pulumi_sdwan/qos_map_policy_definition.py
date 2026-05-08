@@ -23,7 +23,7 @@ class QosMapPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  qos_schedulers: pulumi.Input[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a QosMapPolicyDefinition resource.
 
@@ -62,25 +62,25 @@ class QosMapPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _QosMapPolicyDefinitionState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering QosMapPolicyDefinition resources.
 
@@ -103,62 +103,62 @@ class _QosMapPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="qosSchedulers")
-    def qos_schedulers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]]]:
+    def qos_schedulers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]]]:
         """
         List of QoS schedulers
         """
         return pulumi.get(self, "qos_schedulers")
 
     @qos_schedulers.setter
-    def qos_schedulers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]]]):
+    def qos_schedulers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['QosMapPolicyDefinitionQosSchedulerArgs']]]]):
         pulumi.set(self, "qos_schedulers", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -168,9 +168,9 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a QoS Map Policy Definition .
@@ -263,9 +263,9 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -294,11 +294,11 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'QosMapPolicyDefinition':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            qos_schedulers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'QosMapPolicyDefinition':
         """
         Get an existing QosMapPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

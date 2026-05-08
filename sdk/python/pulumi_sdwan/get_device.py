@@ -117,8 +117,8 @@ def get_device(name: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         serial_number=pulumi.get(__ret__, 'serial_number'))
-def get_device_output(name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                      serial_number: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_device_output(name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                      serial_number: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDeviceResult]:
     """
     This data source can read the Device .

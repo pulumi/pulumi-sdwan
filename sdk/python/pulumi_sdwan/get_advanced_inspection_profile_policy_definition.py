@@ -229,7 +229,7 @@ def get_advanced_inspection_profile_policy_definition(id: Optional[_builtins.str
         url_filtering_id=pulumi.get(__ret__, 'url_filtering_id'),
         url_filtering_version=pulumi.get(__ret__, 'url_filtering_version'),
         version=pulumi.get(__ret__, 'version'))
-def get_advanced_inspection_profile_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_advanced_inspection_profile_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAdvancedInspectionProfilePolicyDefinitionResult]:
     """
     This data source can read the Advanced Inspection Profile Policy Definition .

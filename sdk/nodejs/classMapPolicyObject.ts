@@ -106,16 +106,16 @@ export interface ClassMapPolicyObjectState {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Queue
      *   - Range: `0`-`7`
      */
-    queue?: pulumi.Input<number>;
+    queue?: pulumi.Input<number | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -125,7 +125,7 @@ export interface ClassMapPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Queue
      *   - Range: `0`-`7`

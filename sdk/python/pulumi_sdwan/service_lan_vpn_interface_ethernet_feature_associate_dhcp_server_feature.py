@@ -88,11 +88,11 @@ class ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs:
 @pulumi.input_type
 class _ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureState:
     def __init__(__self__, *,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_dhcp_server_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_dhcp_server_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_interface_ethernet_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature resources.
 
@@ -115,62 +115,62 @@ class _ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceDhcpServerFeatureId")
-    def service_dhcp_server_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service_dhcp_server_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Service DHCP Server Feature ID
         """
         return pulumi.get(self, "service_dhcp_server_feature_id")
 
     @service_dhcp_server_feature_id.setter
-    def service_dhcp_server_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service_dhcp_server_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service_dhcp_server_feature_id", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service_lan_vpn_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Service LAN VPN Feature ID
         """
         return pulumi.get(self, "service_lan_vpn_feature_id")
 
     @service_lan_vpn_feature_id.setter
-    def service_lan_vpn_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service_lan_vpn_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceLanVpnInterfaceEthernetFeatureId")
-    def service_lan_vpn_interface_ethernet_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service_lan_vpn_interface_ethernet_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Service LAN VPN Interface Ethernet Feature ID
         """
         return pulumi.get(self, "service_lan_vpn_interface_ethernet_feature_id")
 
     @service_lan_vpn_interface_ethernet_feature_id.setter
-    def service_lan_vpn_interface_ethernet_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service_lan_vpn_interface_ethernet_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service_lan_vpn_interface_ethernet_feature_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -180,10 +180,10 @@ class ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(pulumi.Cus
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_dhcp_server_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_dhcp_server_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_interface_ethernet_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service LAN VPN Interface Ethernet Feature Associate DHCP Server Feature .
@@ -269,10 +269,10 @@ class ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(pulumi.Cus
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_dhcp_server_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_dhcp_server_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_interface_ethernet_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -305,11 +305,11 @@ class ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(pulumi.Cus
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            service_dhcp_server_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            service_lan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature':
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_dhcp_server_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_lan_vpn_interface_ethernet_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature':
         """
         Get an existing ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

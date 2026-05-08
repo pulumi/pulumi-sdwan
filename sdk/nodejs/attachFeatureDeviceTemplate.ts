@@ -120,15 +120,15 @@ export interface AttachFeatureDeviceTemplateState {
     /**
      * The ID of the device template
      */
-    attachFeatureDeviceTemplateId?: pulumi.Input<string>;
+    attachFeatureDeviceTemplateId?: pulumi.Input<string | undefined>;
     /**
      * Devices
      */
-    devices?: pulumi.Input<pulumi.Input<inputs.AttachFeatureDeviceTemplateDevice>[]>;
+    devices?: pulumi.Input<pulumi.Input<inputs.AttachFeatureDeviceTemplateDevice>[] | undefined>;
     /**
      * The version of the device template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -146,5 +146,5 @@ export interface AttachFeatureDeviceTemplateArgs {
     /**
      * The version of the device template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }

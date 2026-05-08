@@ -19,12 +19,12 @@ __all__ = ['ProviderArgs', 'Provider']
 @pulumi.input_type
 class ProviderArgs:
     def __init__(__self__, *,
-                 insecure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 task_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None):
+                 insecure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 task_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a Provider resource.
 
@@ -50,74 +50,74 @@ class ProviderArgs:
 
     @_builtins.property
     @pulumi.getter
-    def insecure(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def insecure(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         """
         return pulumi.get(self, "insecure")
 
     @insecure.setter
-    def insecure(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def insecure(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "insecure", value)
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         """
         return pulumi.get(self, "password")
 
     @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "password", value)
 
     @_builtins.property
     @pulumi.getter
-    def retries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def retries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
         """
         return pulumi.get(self, "retries")
 
     @retries.setter
-    def retries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def retries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "retries", value)
 
     @_builtins.property
     @pulumi.getter(name="taskTimeout")
-    def task_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def task_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
         """
         return pulumi.get(self, "task_timeout")
 
     @task_timeout.setter
-    def task_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def task_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "task_timeout", value)
 
     @_builtins.property
     @pulumi.getter
-    def url(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         """
         return pulumi.get(self, "url")
 
     @url.setter
-    def url(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url", value)
 
     @_builtins.property
     @pulumi.getter
-    def username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
         return pulumi.get(self, "username")
 
     @username.setter
-    def username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "username", value)
 
 
@@ -127,12 +127,12 @@ class Provider(pulumi.ProviderResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 insecure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 task_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None,
+                 insecure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 task_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         The provider type for the sdwan package. By default, resources use package-wide configuration
@@ -178,12 +178,12 @@ class Provider(pulumi.ProviderResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 insecure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
-                 retries: Optional[pulumi.Input[_builtins.int]] = None,
-                 task_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 url: Optional[pulumi.Input[_builtins.str]] = None,
-                 username: Optional[pulumi.Input[_builtins.str]] = None,
+                 insecure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 password: pulumi.Input[Optional[_builtins.str]] = None,
+                 retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 task_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 url: pulumi.Input[Optional[_builtins.str]] = None,
+                 username: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):

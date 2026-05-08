@@ -126,7 +126,7 @@ def get_app_probe_class_policy_object(id: Optional[_builtins.str] = None,
         mappings=pulumi.get(__ret__, 'mappings'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-def get_app_probe_class_policy_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_app_probe_class_policy_object_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppProbeClassPolicyObjectResult]:
     """
     This data source can read the App Probe Class Policy Object .

@@ -30,12 +30,12 @@ class PolicyObjectUnifiedTlsSslDecryptionArgs:
                  unsupported_cipher_suites: pulumi.Input[_builtins.str],
                  unsupported_protocol_versions: pulumi.Input[_builtins.str],
                  untrusted_certificate: pulumi.Input[_builtins.str],
-                 bundle_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_ca_certificate_bundle: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_revocation_status: Optional[pulumi.Input[_builtins.str]] = None):
+                 bundle_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_ca_certificate_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedTlsSslDecryption resource.
 
@@ -215,58 +215,58 @@ class PolicyObjectUnifiedTlsSslDecryptionArgs:
 
     @_builtins.property
     @pulumi.getter(name="bundleString")
-    def bundle_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bundle_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "bundle_string")
 
     @bundle_string.setter
-    def bundle_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bundle_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bundle_string", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultCaCertificateBundle")
-    def default_ca_certificate_bundle(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_ca_certificate_bundle(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "default_ca_certificate_bundle")
 
     @default_ca_certificate_bundle.setter
-    def default_ca_certificate_bundle(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_ca_certificate_bundle(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_ca_certificate_bundle", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy_object
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="fileName")
-    def file_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def file_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "file_name")
 
     @file_name.setter
-    def file_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def file_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "file_name", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy_object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="unknownRevocationStatus")
-    def unknown_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unknown_revocation_status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
           - Choices: `decrypt`, `drop`
@@ -274,31 +274,31 @@ class PolicyObjectUnifiedTlsSslDecryptionArgs:
         return pulumi.get(self, "unknown_revocation_status")
 
     @unknown_revocation_status.setter
-    def unknown_revocation_status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unknown_revocation_status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unknown_revocation_status", value)
 
 
 @pulumi.input_type
 class _PolicyObjectUnifiedTlsSslDecryptionState:
     def __init__(__self__, *,
-                 bundle_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_lifetime: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_ca_certificate_bundle: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ec_key_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 expired_certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 minimal_tls_ver: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsa_keypair_modules: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 unsupported_cipher_suites: Optional[pulumi.Input[_builtins.str]] = None,
-                 unsupported_protocol_versions: Optional[pulumi.Input[_builtins.str]] = None,
-                 untrusted_certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 bundle_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_lifetime: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_ca_certificate_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ec_key_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 expired_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 minimal_tls_ver: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsa_keypair_modules: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 unsupported_cipher_suites: pulumi.Input[Optional[_builtins.str]] = None,
+                 unsupported_protocol_versions: pulumi.Input[Optional[_builtins.str]] = None,
+                 untrusted_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslDecryption resources.
 
@@ -359,28 +359,28 @@ class _PolicyObjectUnifiedTlsSslDecryptionState:
 
     @_builtins.property
     @pulumi.getter(name="bundleString")
-    def bundle_string(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def bundle_string(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "bundle_string")
 
     @bundle_string.setter
-    def bundle_string(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def bundle_string(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "bundle_string", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateLifetime")
-    def certificate_lifetime(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_lifetime(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         If you have vManage as CA or vManage as intermediate CA, this value should be 1
         """
         return pulumi.get(self, "certificate_lifetime")
 
     @certificate_lifetime.setter
-    def certificate_lifetime(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_lifetime(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="certificateRevocationStatus")
-    def certificate_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def certificate_revocation_status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         If value is none unknown status not required, if value is ocsp then unknown status is required
           - Choices: `ocsp`, `none`
@@ -388,126 +388,126 @@ class _PolicyObjectUnifiedTlsSslDecryptionState:
         return pulumi.get(self, "certificate_revocation_status")
 
     @certificate_revocation_status.setter
-    def certificate_revocation_status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def certificate_revocation_status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "certificate_revocation_status", value)
 
     @_builtins.property
     @pulumi.getter(name="defaultCaCertificateBundle")
-    def default_ca_certificate_bundle(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def default_ca_certificate_bundle(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "default_ca_certificate_bundle")
 
     @default_ca_certificate_bundle.setter
-    def default_ca_certificate_bundle(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def default_ca_certificate_bundle(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "default_ca_certificate_bundle", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy_object
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="ecKeyType")
-    def ec_key_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ec_key_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `P256`, `P384`, `P521`
         """
         return pulumi.get(self, "ec_key_type")
 
     @ec_key_type.setter
-    def ec_key_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ec_key_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ec_key_type", value)
 
     @_builtins.property
     @pulumi.getter(name="expiredCertificate")
-    def expired_certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def expired_certificate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `decrypt`, `drop`
         """
         return pulumi.get(self, "expired_certificate")
 
     @expired_certificate.setter
-    def expired_certificate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def expired_certificate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "expired_certificate", value)
 
     @_builtins.property
     @pulumi.getter(name="failureMode")
-    def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def failure_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `close`, `open`
         """
         return pulumi.get(self, "failure_mode")
 
     @failure_mode.setter
-    def failure_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def failure_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "failure_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="fileName")
-    def file_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def file_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "file_name")
 
     @file_name.setter
-    def file_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def file_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "file_name", value)
 
     @_builtins.property
     @pulumi.getter(name="minimalTlsVer")
-    def minimal_tls_ver(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def minimal_tls_ver(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `TLSv1`, `TLSv1.1`, `TLSv1.2`
         """
         return pulumi.get(self, "minimal_tls_ver")
 
     @minimal_tls_ver.setter
-    def minimal_tls_ver(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def minimal_tls_ver(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "minimal_tls_ver", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy_object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="rsaKeypairModules")
-    def rsa_keypair_modules(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def rsa_keypair_modules(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `1024`, `2048`, `4096`
         """
         return pulumi.get(self, "rsa_keypair_modules")
 
     @rsa_keypair_modules.setter
-    def rsa_keypair_modules(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def rsa_keypair_modules(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "rsa_keypair_modules", value)
 
     @_builtins.property
     @pulumi.getter(name="unknownRevocationStatus")
-    def unknown_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unknown_revocation_status(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificate_revocation_status` equal to `ocsp`
           - Choices: `decrypt`, `drop`
@@ -515,55 +515,55 @@ class _PolicyObjectUnifiedTlsSslDecryptionState:
         return pulumi.get(self, "unknown_revocation_status")
 
     @unknown_revocation_status.setter
-    def unknown_revocation_status(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unknown_revocation_status(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unknown_revocation_status", value)
 
     @_builtins.property
     @pulumi.getter(name="unsupportedCipherSuites")
-    def unsupported_cipher_suites(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unsupported_cipher_suites(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `no-decrypt`, `drop`
         """
         return pulumi.get(self, "unsupported_cipher_suites")
 
     @unsupported_cipher_suites.setter
-    def unsupported_cipher_suites(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unsupported_cipher_suites(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unsupported_cipher_suites", value)
 
     @_builtins.property
     @pulumi.getter(name="unsupportedProtocolVersions")
-    def unsupported_protocol_versions(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def unsupported_protocol_versions(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `no-decrypt`, `drop`
         """
         return pulumi.get(self, "unsupported_protocol_versions")
 
     @unsupported_protocol_versions.setter
-    def unsupported_protocol_versions(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def unsupported_protocol_versions(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "unsupported_protocol_versions", value)
 
     @_builtins.property
     @pulumi.getter(name="untrustedCertificate")
-    def untrusted_certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def untrusted_certificate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `decrypt`, `drop`
         """
         return pulumi.get(self, "untrusted_certificate")
 
     @untrusted_certificate.setter
-    def untrusted_certificate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def untrusted_certificate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "untrusted_certificate", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Policy_object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -573,23 +573,23 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bundle_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_lifetime: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_ca_certificate_bundle: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ec_key_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 expired_certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 minimal_tls_ver: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsa_keypair_modules: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 unsupported_cipher_suites: Optional[pulumi.Input[_builtins.str]] = None,
-                 unsupported_protocol_versions: Optional[pulumi.Input[_builtins.str]] = None,
-                 untrusted_certificate: Optional[pulumi.Input[_builtins.str]] = None,
+                 bundle_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_lifetime: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_ca_certificate_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ec_key_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 expired_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 minimal_tls_ver: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsa_keypair_modules: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 unsupported_cipher_suites: pulumi.Input[Optional[_builtins.str]] = None,
+                 unsupported_protocol_versions: pulumi.Input[Optional[_builtins.str]] = None,
+                 untrusted_certificate: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
@@ -707,23 +707,23 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bundle_string: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_lifetime: Optional[pulumi.Input[_builtins.str]] = None,
-                 certificate_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_ca_certificate_bundle: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ec_key_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 expired_certificate: Optional[pulumi.Input[_builtins.str]] = None,
-                 failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 file_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 minimal_tls_ver: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 rsa_keypair_modules: Optional[pulumi.Input[_builtins.str]] = None,
-                 unknown_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-                 unsupported_cipher_suites: Optional[pulumi.Input[_builtins.str]] = None,
-                 unsupported_protocol_versions: Optional[pulumi.Input[_builtins.str]] = None,
-                 untrusted_certificate: Optional[pulumi.Input[_builtins.str]] = None,
+                 bundle_string: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_lifetime: pulumi.Input[Optional[_builtins.str]] = None,
+                 certificate_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 default_ca_certificate_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ec_key_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 expired_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+                 failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 file_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 minimal_tls_ver: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 rsa_keypair_modules: pulumi.Input[Optional[_builtins.str]] = None,
+                 unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+                 unsupported_cipher_suites: pulumi.Input[Optional[_builtins.str]] = None,
+                 unsupported_protocol_versions: pulumi.Input[Optional[_builtins.str]] = None,
+                 untrusted_certificate: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -783,24 +783,24 @@ class PolicyObjectUnifiedTlsSslDecryption(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bundle_string: Optional[pulumi.Input[_builtins.str]] = None,
-            certificate_lifetime: Optional[pulumi.Input[_builtins.str]] = None,
-            certificate_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-            default_ca_certificate_bundle: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            ec_key_type: Optional[pulumi.Input[_builtins.str]] = None,
-            expired_certificate: Optional[pulumi.Input[_builtins.str]] = None,
-            failure_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            file_name: Optional[pulumi.Input[_builtins.str]] = None,
-            minimal_tls_ver: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            rsa_keypair_modules: Optional[pulumi.Input[_builtins.str]] = None,
-            unknown_revocation_status: Optional[pulumi.Input[_builtins.str]] = None,
-            unsupported_cipher_suites: Optional[pulumi.Input[_builtins.str]] = None,
-            unsupported_protocol_versions: Optional[pulumi.Input[_builtins.str]] = None,
-            untrusted_certificate: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'PolicyObjectUnifiedTlsSslDecryption':
+            bundle_string: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_lifetime: pulumi.Input[Optional[_builtins.str]] = None,
+            certificate_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+            default_ca_certificate_bundle: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            ec_key_type: pulumi.Input[Optional[_builtins.str]] = None,
+            expired_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            failure_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            file_name: pulumi.Input[Optional[_builtins.str]] = None,
+            minimal_tls_ver: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            rsa_keypair_modules: pulumi.Input[Optional[_builtins.str]] = None,
+            unknown_revocation_status: pulumi.Input[Optional[_builtins.str]] = None,
+            unsupported_cipher_suites: pulumi.Input[Optional[_builtins.str]] = None,
+            unsupported_protocol_versions: pulumi.Input[Optional[_builtins.str]] = None,
+            untrusted_certificate: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectUnifiedTlsSslDecryption':
         """
         Get an existing PolicyObjectUnifiedTlsSslDecryption resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

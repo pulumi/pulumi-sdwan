@@ -376,8 +376,8 @@ def get_cisco_dhcp_server_feature_template(id: Optional[_builtins.str] = None,
         tftp_servers=pulumi.get(__ret__, 'tftp_servers'),
         tftp_servers_variable=pulumi.get(__ret__, 'tftp_servers_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_cisco_dhcp_server_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cisco_dhcp_server_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                  name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoDhcpServerFeatureTemplateResult]:
     """
     This data source can read the Cisco DHCP Server feature template.

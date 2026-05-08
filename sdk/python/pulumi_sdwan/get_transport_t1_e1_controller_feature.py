@@ -182,8 +182,8 @@ def get_transport_t1_e1_controller_feature(feature_profile_id: Optional[_builtin
         slot_variable=pulumi.get(__ret__, 'slot_variable'),
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
-def get_transport_t1_e1_controller_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                  id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_transport_t1_e1_controller_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                  id: pulumi.Input[Optional[_builtins.str]] = None,
                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportT1E1ControllerFeatureResult]:
     """
     This data source can read the Transport T1 E1 Controller Feature.

@@ -447,231 +447,231 @@ export interface CedgeGlobalFeatureTemplateState {
      * Set ARP Proxy
      *   - Default value: `false`
      */
-    arpProxy?: pulumi.Input<boolean>;
+    arpProxy?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    arpProxyVariable?: pulumi.Input<string>;
+    arpProxyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Ignore BOOTP
      *   - Default value: `true`
      */
-    bootp?: pulumi.Input<boolean>;
+    bootp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    bootpVariable?: pulumi.Input<string>;
+    bootpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure CDP
      *   - Default value: `true`
      */
-    cdp?: pulumi.Input<boolean>;
+    cdp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    cdpVariable?: pulumi.Input<string>;
+    cdpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Console Logging
      *   - Default value: `true`
      */
-    consoleLogging?: pulumi.Input<boolean>;
+    consoleLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    consoleLoggingVariable?: pulumi.Input<string>;
+    consoleLoggingVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure Domain-Lookup
      *   - Default value: `false`
      */
-    domainLookup?: pulumi.Input<boolean>;
+    domainLookup?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    domainLookupVariable?: pulumi.Input<string>;
+    domainLookupVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Passive FTP
      *   - Default value: `false`
      */
-    ftpPassive?: pulumi.Input<boolean>;
+    ftpPassive?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ftpPassiveVariable?: pulumi.Input<string>;
+    ftpPassiveVariable?: pulumi.Input<string | undefined>;
     /**
      * Set preference for HTTP Authentication
      *   - Choices: `local`, `aaa`
      */
-    httpAuthentication?: pulumi.Input<string>;
+    httpAuthentication?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    httpAuthenticationVariable?: pulumi.Input<string>;
+    httpAuthenticationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set HTTP Server
      *   - Default value: `false`
      */
-    httpServer?: pulumi.Input<boolean>;
+    httpServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    httpServerVariable?: pulumi.Input<string>;
+    httpServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set HTTPS Server
      *   - Default value: `false`
      */
-    httpsServer?: pulumi.Input<boolean>;
+    httpsServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    httpsServerVariable?: pulumi.Input<string>;
+    httpsServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Source Route
      *   - Default value: `false`
      */
-    ipSourceRouting?: pulumi.Input<boolean>;
+    ipSourceRouting?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipSourceRoutingVariable?: pulumi.Input<string>;
+    ipSourceRoutingVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Telnet (Outbound)
      *   - Default value: `false`
      */
-    lineVty?: pulumi.Input<boolean>;
+    lineVty?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    lineVtyVariable?: pulumi.Input<string>;
+    lineVtyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure LLDP
      *   - Default value: `true`
      */
-    lldp?: pulumi.Input<boolean>;
+    lldp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    lldpVariable?: pulumi.Input<string>;
+    lldpVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set NAT64 TCP session timeout, in seconds
      *   - Range: `1`-`536870`
      *   - Default value: `3600`
      */
-    nat64TcpTimeout?: pulumi.Input<number>;
+    nat64TcpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nat64TcpTimeoutVariable?: pulumi.Input<string>;
+    nat64TcpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NAT64 UDP session timeout, in seconds
      *   - Range: `1`-`536870`
      *   - Default value: `300`
      */
-    nat64UdpTimeout?: pulumi.Input<number>;
+    nat64UdpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nat64UdpTimeoutVariable?: pulumi.Input<string>;
+    nat64UdpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RSH/RCP
      *   - Default value: `false`
      */
-    rshRcp?: pulumi.Input<boolean>;
+    rshRcp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    rshRcpVariable?: pulumi.Input<string>;
+    rshRcpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP Ifindex Persist
      *   - Default value: `true`
      */
-    snmpIfindexPersist?: pulumi.Input<boolean>;
+    snmpIfindexPersist?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    snmpIfindexPersistVariable?: pulumi.Input<string>;
+    snmpIfindexPersistVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify interface for source address in all HTTP(S) client connections
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set SSH version
      *   - Range: `1`-`2`
      */
-    sshVersion?: pulumi.Input<number>;
+    sshVersion?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sshVersionVariable?: pulumi.Input<string>;
+    sshVersionVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tcp-keepalives-in
      *   - Default value: `true`
      */
-    tcpKeepalivesIn?: pulumi.Input<boolean>;
+    tcpKeepalivesIn?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tcpKeepalivesInVariable?: pulumi.Input<string>;
+    tcpKeepalivesInVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tcp-keepalives-out
      *   - Default value: `true`
      */
-    tcpKeepalivesOut?: pulumi.Input<boolean>;
+    tcpKeepalivesOut?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tcpKeepalivesOutVariable?: pulumi.Input<string>;
+    tcpKeepalivesOutVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tcp-small-servers
      *   - Default value: `false`
      */
-    tcpSmallServers?: pulumi.Input<boolean>;
+    tcpSmallServers?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tcpSmallServersVariable?: pulumi.Input<string>;
+    tcpSmallServersVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Configure udp-small-servers
      *   - Default value: `false`
      */
-    udpSmallServers?: pulumi.Input<boolean>;
+    udpSmallServers?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    udpSmallServersVariable?: pulumi.Input<string>;
+    udpSmallServersVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Configure VTY Line Logging
      *   - Default value: `false`
      */
-    vtyLogging?: pulumi.Input<boolean>;
+    vtyLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    vtyLoggingVariable?: pulumi.Input<string>;
+    vtyLoggingVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -682,38 +682,38 @@ export interface CedgeGlobalFeatureTemplateArgs {
      * Set ARP Proxy
      *   - Default value: `false`
      */
-    arpProxy?: pulumi.Input<boolean>;
+    arpProxy?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    arpProxyVariable?: pulumi.Input<string>;
+    arpProxyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Ignore BOOTP
      *   - Default value: `true`
      */
-    bootp?: pulumi.Input<boolean>;
+    bootp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    bootpVariable?: pulumi.Input<string>;
+    bootpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure CDP
      *   - Default value: `true`
      */
-    cdp?: pulumi.Input<boolean>;
+    cdp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    cdpVariable?: pulumi.Input<string>;
+    cdpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Console Logging
      *   - Default value: `true`
      */
-    consoleLogging?: pulumi.Input<boolean>;
+    consoleLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    consoleLoggingVariable?: pulumi.Input<string>;
+    consoleLoggingVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -727,176 +727,176 @@ export interface CedgeGlobalFeatureTemplateArgs {
      * Configure Domain-Lookup
      *   - Default value: `false`
      */
-    domainLookup?: pulumi.Input<boolean>;
+    domainLookup?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    domainLookupVariable?: pulumi.Input<string>;
+    domainLookupVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Passive FTP
      *   - Default value: `false`
      */
-    ftpPassive?: pulumi.Input<boolean>;
+    ftpPassive?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ftpPassiveVariable?: pulumi.Input<string>;
+    ftpPassiveVariable?: pulumi.Input<string | undefined>;
     /**
      * Set preference for HTTP Authentication
      *   - Choices: `local`, `aaa`
      */
-    httpAuthentication?: pulumi.Input<string>;
+    httpAuthentication?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    httpAuthenticationVariable?: pulumi.Input<string>;
+    httpAuthenticationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set HTTP Server
      *   - Default value: `false`
      */
-    httpServer?: pulumi.Input<boolean>;
+    httpServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    httpServerVariable?: pulumi.Input<string>;
+    httpServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set HTTPS Server
      *   - Default value: `false`
      */
-    httpsServer?: pulumi.Input<boolean>;
+    httpsServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    httpsServerVariable?: pulumi.Input<string>;
+    httpsServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Source Route
      *   - Default value: `false`
      */
-    ipSourceRouting?: pulumi.Input<boolean>;
+    ipSourceRouting?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipSourceRoutingVariable?: pulumi.Input<string>;
+    ipSourceRoutingVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Telnet (Outbound)
      *   - Default value: `false`
      */
-    lineVty?: pulumi.Input<boolean>;
+    lineVty?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    lineVtyVariable?: pulumi.Input<string>;
+    lineVtyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure LLDP
      *   - Default value: `true`
      */
-    lldp?: pulumi.Input<boolean>;
+    lldp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    lldpVariable?: pulumi.Input<string>;
+    lldpVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set NAT64 TCP session timeout, in seconds
      *   - Range: `1`-`536870`
      *   - Default value: `3600`
      */
-    nat64TcpTimeout?: pulumi.Input<number>;
+    nat64TcpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nat64TcpTimeoutVariable?: pulumi.Input<string>;
+    nat64TcpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NAT64 UDP session timeout, in seconds
      *   - Range: `1`-`536870`
      *   - Default value: `300`
      */
-    nat64UdpTimeout?: pulumi.Input<number>;
+    nat64UdpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nat64UdpTimeoutVariable?: pulumi.Input<string>;
+    nat64UdpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RSH/RCP
      *   - Default value: `false`
      */
-    rshRcp?: pulumi.Input<boolean>;
+    rshRcp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    rshRcpVariable?: pulumi.Input<string>;
+    rshRcpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP Ifindex Persist
      *   - Default value: `true`
      */
-    snmpIfindexPersist?: pulumi.Input<boolean>;
+    snmpIfindexPersist?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    snmpIfindexPersistVariable?: pulumi.Input<string>;
+    snmpIfindexPersistVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify interface for source address in all HTTP(S) client connections
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set SSH version
      *   - Range: `1`-`2`
      */
-    sshVersion?: pulumi.Input<number>;
+    sshVersion?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sshVersionVariable?: pulumi.Input<string>;
+    sshVersionVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tcp-keepalives-in
      *   - Default value: `true`
      */
-    tcpKeepalivesIn?: pulumi.Input<boolean>;
+    tcpKeepalivesIn?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tcpKeepalivesInVariable?: pulumi.Input<string>;
+    tcpKeepalivesInVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tcp-keepalives-out
      *   - Default value: `true`
      */
-    tcpKeepalivesOut?: pulumi.Input<boolean>;
+    tcpKeepalivesOut?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tcpKeepalivesOutVariable?: pulumi.Input<string>;
+    tcpKeepalivesOutVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure tcp-small-servers
      *   - Default value: `false`
      */
-    tcpSmallServers?: pulumi.Input<boolean>;
+    tcpSmallServers?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tcpSmallServersVariable?: pulumi.Input<string>;
+    tcpSmallServersVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure udp-small-servers
      *   - Default value: `false`
      */
-    udpSmallServers?: pulumi.Input<boolean>;
+    udpSmallServers?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    udpSmallServersVariable?: pulumi.Input<string>;
+    udpSmallServersVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VTY Line Logging
      *   - Default value: `false`
      */
-    vtyLogging?: pulumi.Input<boolean>;
+    vtyLogging?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    vtyLoggingVariable?: pulumi.Input<string>;
+    vtyLoggingVariable?: pulumi.Input<string | undefined>;
 }

@@ -187,55 +187,55 @@ export interface CflowdPolicyDefinitionState {
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
      */
-    activeFlowTimeout?: pulumi.Input<number>;
+    activeFlowTimeout?: pulumi.Input<number | undefined>;
     /**
      * List of collectors
      */
-    collectors?: pulumi.Input<pulumi.Input<inputs.CflowdPolicyDefinitionCollector>[]>;
+    collectors?: pulumi.Input<pulumi.Input<inputs.CflowdPolicyDefinitionCollector>[] | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Flow refresh in seconds
      *   - Range: `60`-`86400`
      */
-    flowRefresh?: pulumi.Input<number>;
+    flowRefresh?: pulumi.Input<number | undefined>;
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
      */
-    inactiveFlowTimeout?: pulumi.Input<number>;
+    inactiveFlowTimeout?: pulumi.Input<number | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Protocol, either `ipv4`, `ipv6` or `all`
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Collect remarked DSCP
      */
-    remarkedDscp?: pulumi.Input<boolean>;
+    remarkedDscp?: pulumi.Input<boolean | undefined>;
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
      */
-    samplingInterval?: pulumi.Input<number>;
+    samplingInterval?: pulumi.Input<number | undefined>;
     /**
      * Collect TOS record field
      */
-    tos?: pulumi.Input<boolean>;
+    tos?: pulumi.Input<boolean | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -246,7 +246,7 @@ export interface CflowdPolicyDefinitionArgs {
      * Active flow timeout in seconds
      *   - Range: `30`-`3600`
      */
-    activeFlowTimeout?: pulumi.Input<number>;
+    activeFlowTimeout?: pulumi.Input<number | undefined>;
     /**
      * List of collectors
      */
@@ -259,32 +259,32 @@ export interface CflowdPolicyDefinitionArgs {
      * Flow refresh in seconds
      *   - Range: `60`-`86400`
      */
-    flowRefresh?: pulumi.Input<number>;
+    flowRefresh?: pulumi.Input<number | undefined>;
     /**
      * Inactive flow timeout in seconds
      *   - Range: `1`-`3600`
      */
-    inactiveFlowTimeout?: pulumi.Input<number>;
+    inactiveFlowTimeout?: pulumi.Input<number | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Protocol, either `ipv4`, `ipv6` or `all`
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Collect remarked DSCP
      */
-    remarkedDscp?: pulumi.Input<boolean>;
+    remarkedDscp?: pulumi.Input<boolean | undefined>;
     /**
      * Flow sampling interval
      *   - Range: `1`-`65536`
      */
-    samplingInterval?: pulumi.Input<number>;
+    samplingInterval?: pulumi.Input<number | undefined>;
     /**
      * Collect TOS record field
      */
-    tos?: pulumi.Input<boolean>;
+    tos?: pulumi.Input<boolean | undefined>;
 }

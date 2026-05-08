@@ -910,9 +910,9 @@ export interface GetCiscoVpnInterfaceFeatureTemplateOutputArgs {
     /**
      * The id of the feature template
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
 }

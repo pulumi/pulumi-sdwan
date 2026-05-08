@@ -195,8 +195,8 @@ def get_transport_ipv6_tracker_group_feature(feature_profile_id: Optional[_built
         tracker_name=pulumi.get(__ret__, 'tracker_name'),
         tracker_name_variable=pulumi.get(__ret__, 'tracker_name_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_transport_ipv6_tracker_group_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                    id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_transport_ipv6_tracker_group_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                    id: pulumi.Input[Optional[_builtins.str]] = None,
                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportIpv6TrackerGroupFeatureResult]:
     """
     This data source can read the Transport IPv6 Tracker Group Feature.

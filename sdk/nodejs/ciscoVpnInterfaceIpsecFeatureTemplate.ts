@@ -499,263 +499,263 @@ export interface CiscoVpnInterfaceIpsecFeatureTemplateState {
      *   - Choices: `none`, `sig`
      *   - Default value: `none`
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    applicationVariable?: pulumi.Input<string>;
+    applicationVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
      *   - Default value: `false`
      */
-    clearDontFragment?: pulumi.Input<boolean>;
+    clearDontFragment?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    clearDontFragmentVariable?: pulumi.Input<string>;
+    clearDontFragmentVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE keepalive interval (seconds)
      *   - Range: `10`-`3600`
      *   - Default value: `10`
      */
-    deadPeerDetectionInterval?: pulumi.Input<number>;
+    deadPeerDetectionInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadPeerDetectionIntervalVariable?: pulumi.Input<string>;
+    deadPeerDetectionIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE keepalive retries
      *   - Range: `2`-`60`
      *   - Default value: `3`
      */
-    deadPeerDetectionRetries?: pulumi.Input<number>;
+    deadPeerDetectionRetries?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadPeerDetectionRetriesVariable?: pulumi.Input<string>;
+    deadPeerDetectionRetriesVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * IKE identity the IKE preshared secret belongs to
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
      *   - Default value: `aes256-cbc-sha1`
      */
-    ikeCiphersuite?: pulumi.Input<string>;
+    ikeCiphersuite?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeCiphersuiteVariable?: pulumi.Input<string>;
+    ikeCiphersuiteVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE Diffie Hellman Groups
      *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
      *   - Default value: `16`
      */
-    ikeGroup?: pulumi.Input<string>;
+    ikeGroup?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeGroupVariable?: pulumi.Input<string>;
+    ikeGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE integrity protocol
      *   - Choices: `main`, `aggressive`
      *   - Default value: `main`
      */
-    ikeMode?: pulumi.Input<string>;
+    ikeMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeModeVariable?: pulumi.Input<string>;
+    ikeModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
      */
-    ikePreSharedKey?: pulumi.Input<string>;
+    ikePreSharedKey?: pulumi.Input<string | undefined>;
     /**
      * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
      */
-    ikePreSharedKeyLocalId?: pulumi.Input<string>;
+    ikePreSharedKeyLocalId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyLocalIdVariable?: pulumi.Input<string>;
+    ikePreSharedKeyLocalIdVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
      */
-    ikePreSharedKeyRemoteId?: pulumi.Input<string>;
+    ikePreSharedKeyRemoteId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyRemoteIdVariable?: pulumi.Input<string>;
+    ikePreSharedKeyRemoteIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyVariable?: pulumi.Input<string>;
+    ikePreSharedKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE rekey interval <60..86400> seconds
      *   - Range: `60`-`86400`
      *   - Default value: `14400`
      */
-    ikeRekeyInterval?: pulumi.Input<number>;
+    ikeRekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ikeRekeyIntervalVariable?: pulumi.Input<string>;
+    ikeRekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE Version <1..2>
      *   - Range: `1`-`2`
      *   - Default value: `1`
      */
-    ikeVersion?: pulumi.Input<number>;
+    ikeVersion?: pulumi.Input<number | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: IPsec when present
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec(ESP) encryption and integrity protocol
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
      *   - Default value: `aes256-gcm`
      */
-    ipsecCiphersuite?: pulumi.Input<string>;
+    ipsecCiphersuite?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipsecCiphersuiteVariable?: pulumi.Input<string>;
+    ipsecCiphersuiteVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec perfect forward secrecy settings
      *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
      *   - Default value: `group-16`
      */
-    ipsecPerfectForwardSecrecy?: pulumi.Input<string>;
+    ipsecPerfectForwardSecrecy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipsecPerfectForwardSecrecyVariable?: pulumi.Input<string>;
+    ipsecPerfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec rekey interval <300..1209600> seconds
      *   - Range: `120`-`2592000`
      *   - Default value: `3600`
      */
-    ipsecRekeyInterval?: pulumi.Input<number>;
+    ipsecRekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecRekeyIntervalVariable?: pulumi.Input<string>;
+    ipsecRekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Replay window size 32..8192 (must be a power of 2)
      *   - Range: `64`-`4096`
      *   - Default value: `512`
      */
-    ipsecReplayWindow?: pulumi.Input<number>;
+    ipsecReplayWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecReplayWindowVariable?: pulumi.Input<string>;
+    ipsecReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <68..9216>, in bytes
      *   - Range: `68`-`9216`
      *   - Default value: `1500`
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    mtuVariable?: pulumi.Input<string>;
+    mtuVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tcpMssAdjust?: pulumi.Input<number>;
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssAdjustVariable?: pulumi.Input<string>;
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    trackers?: pulumi.Input<pulumi.Input<string>[]>;
+    trackers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tunnel destination IP address
      */
-    tunnelDestination?: pulumi.Input<string>;
+    tunnelDestination?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelDestinationVariable?: pulumi.Input<string>;
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelRouteVia?: pulumi.Input<string>;
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelRouteViaVariable?: pulumi.Input<string>;
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    tunnelSource?: pulumi.Input<string>;
+    tunnelSource?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelSourceInterface?: pulumi.Input<string>;
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceVariable?: pulumi.Input<string>;
+    tunnelSourceVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -767,40 +767,40 @@ export interface CiscoVpnInterfaceIpsecFeatureTemplateArgs {
      *   - Choices: `none`, `sig`
      *   - Default value: `none`
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    applicationVariable?: pulumi.Input<string>;
+    applicationVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
      *   - Default value: `false`
      */
-    clearDontFragment?: pulumi.Input<boolean>;
+    clearDontFragment?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    clearDontFragmentVariable?: pulumi.Input<string>;
+    clearDontFragmentVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE keepalive interval (seconds)
      *   - Range: `10`-`3600`
      *   - Default value: `10`
      */
-    deadPeerDetectionInterval?: pulumi.Input<number>;
+    deadPeerDetectionInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadPeerDetectionIntervalVariable?: pulumi.Input<string>;
+    deadPeerDetectionIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE keepalive retries
      *   - Range: `2`-`60`
      *   - Default value: `3`
      */
-    deadPeerDetectionRetries?: pulumi.Input<number>;
+    deadPeerDetectionRetries?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadPeerDetectionRetriesVariable?: pulumi.Input<string>;
+    deadPeerDetectionRetriesVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -815,205 +815,205 @@ export interface CiscoVpnInterfaceIpsecFeatureTemplateArgs {
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
      *   - Default value: `aes256-cbc-sha1`
      */
-    ikeCiphersuite?: pulumi.Input<string>;
+    ikeCiphersuite?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeCiphersuiteVariable?: pulumi.Input<string>;
+    ikeCiphersuiteVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE Diffie Hellman Groups
      *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
      *   - Default value: `16`
      */
-    ikeGroup?: pulumi.Input<string>;
+    ikeGroup?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeGroupVariable?: pulumi.Input<string>;
+    ikeGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE integrity protocol
      *   - Choices: `main`, `aggressive`
      *   - Default value: `main`
      */
-    ikeMode?: pulumi.Input<string>;
+    ikeMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeModeVariable?: pulumi.Input<string>;
+    ikeModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
      */
-    ikePreSharedKey?: pulumi.Input<string>;
+    ikePreSharedKey?: pulumi.Input<string | undefined>;
     /**
      * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
      */
-    ikePreSharedKeyLocalId?: pulumi.Input<string>;
+    ikePreSharedKeyLocalId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyLocalIdVariable?: pulumi.Input<string>;
+    ikePreSharedKeyLocalIdVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
      */
-    ikePreSharedKeyRemoteId?: pulumi.Input<string>;
+    ikePreSharedKeyRemoteId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyRemoteIdVariable?: pulumi.Input<string>;
+    ikePreSharedKeyRemoteIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyVariable?: pulumi.Input<string>;
+    ikePreSharedKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE rekey interval <60..86400> seconds
      *   - Range: `60`-`86400`
      *   - Default value: `14400`
      */
-    ikeRekeyInterval?: pulumi.Input<number>;
+    ikeRekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ikeRekeyIntervalVariable?: pulumi.Input<string>;
+    ikeRekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE Version <1..2>
      *   - Range: `1`-`2`
      *   - Default value: `1`
      */
-    ikeVersion?: pulumi.Input<number>;
+    ikeVersion?: pulumi.Input<number | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: IPsec when present
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec(ESP) encryption and integrity protocol
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
      *   - Default value: `aes256-gcm`
      */
-    ipsecCiphersuite?: pulumi.Input<string>;
+    ipsecCiphersuite?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipsecCiphersuiteVariable?: pulumi.Input<string>;
+    ipsecCiphersuiteVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec perfect forward secrecy settings
      *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
      *   - Default value: `group-16`
      */
-    ipsecPerfectForwardSecrecy?: pulumi.Input<string>;
+    ipsecPerfectForwardSecrecy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipsecPerfectForwardSecrecyVariable?: pulumi.Input<string>;
+    ipsecPerfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec rekey interval <300..1209600> seconds
      *   - Range: `120`-`2592000`
      *   - Default value: `3600`
      */
-    ipsecRekeyInterval?: pulumi.Input<number>;
+    ipsecRekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecRekeyIntervalVariable?: pulumi.Input<string>;
+    ipsecRekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Replay window size 32..8192 (must be a power of 2)
      *   - Range: `64`-`4096`
      *   - Default value: `512`
      */
-    ipsecReplayWindow?: pulumi.Input<number>;
+    ipsecReplayWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecReplayWindowVariable?: pulumi.Input<string>;
+    ipsecReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <68..9216>, in bytes
      *   - Range: `68`-`9216`
      *   - Default value: `1500`
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    mtuVariable?: pulumi.Input<string>;
+    mtuVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tcpMssAdjust?: pulumi.Input<number>;
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssAdjustVariable?: pulumi.Input<string>;
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    trackers?: pulumi.Input<pulumi.Input<string>[]>;
+    trackers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tunnel destination IP address
      */
-    tunnelDestination?: pulumi.Input<string>;
+    tunnelDestination?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelDestinationVariable?: pulumi.Input<string>;
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelRouteVia?: pulumi.Input<string>;
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelRouteViaVariable?: pulumi.Input<string>;
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    tunnelSource?: pulumi.Input<string>;
+    tunnelSource?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelSourceInterface?: pulumi.Input<string>;
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceVariable?: pulumi.Input<string>;
+    tunnelSourceVariable?: pulumi.Input<string | undefined>;
 }

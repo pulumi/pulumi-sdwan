@@ -417,215 +417,215 @@ export class ServiceLanVpnInterfaceSviFeature extends pulumi.CustomResource {
  * Input properties used for looking up and filtering ServiceLanVpnInterfaceSviFeature resources.
  */
 export interface ServiceLanVpnInterfaceSviFeatureState {
-    aclIpv4EgressFeatureId?: pulumi.Input<string>;
-    aclIpv4IngressFeatureId?: pulumi.Input<string>;
-    aclIpv6EgressFeatureId?: pulumi.Input<string>;
-    aclIpv6IngressFeatureId?: pulumi.Input<string>;
+    aclIpv4EgressFeatureId?: pulumi.Input<string | undefined>;
+    aclIpv4IngressFeatureId?: pulumi.Input<string | undefined>;
+    aclIpv6EgressFeatureId?: pulumi.Input<string | undefined>;
+    aclIpv6IngressFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
      *   - Range: `0`-`2678400`
      *   - Default value: `1200`
      */
-    arpTimeout?: pulumi.Input<number>;
+    arpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    arpTimeoutVariable?: pulumi.Input<string>;
+    arpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure static ARP entries
      */
-    arps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureArp>[]>;
+    arps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureArp>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable DHCPv6
      *   - Default value: `false`
      */
-    enableDhcpv6?: pulumi.Input<boolean>;
+    enableDhcpv6?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableDhcpv6Variable?: pulumi.Input<string>;
+    enableDhcpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * ICMP/ICMPv6 Redirect Disable
      *   - Default value: `true`
      */
-    icmpRedirectDisable?: pulumi.Input<boolean>;
+    icmpRedirectDisable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    icmpRedirectDisableVariable?: pulumi.Input<string>;
+    icmpRedirectDisableVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <1500..9216> in bytes
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      */
-    interfaceMtu?: pulumi.Input<number>;
+    interfaceMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    interfaceMtuVariable?: pulumi.Input<string>;
+    interfaceMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: VLAN 1 - VLAN 4094 when present
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Directed-Broadcast
      *   - Default value: `false`
      */
-    ipDirectedBroadcast?: pulumi.Input<boolean>;
+    ipDirectedBroadcast?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipDirectedBroadcastVariable?: pulumi.Input<string>;
+    ipDirectedBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
      * IP MTU <576..Interface MTU>, in bytes
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      */
-    ipMtu?: pulumi.Input<number>;
+    ipMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipMtuVariable?: pulumi.Input<string>;
+    ipMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * List of DHCP helper addresses
      */
-    ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[]>;
+    ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    ipv4DhcpHelpersVariable?: pulumi.Input<string>;
+    ipv4DhcpHelpersVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign secondary IP addresses
      */
-    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress>[]>;
+    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress>[] | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    ipv4SubnetMask?: pulumi.Input<string>;
+    ipv4SubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4SubnetMaskVariable?: pulumi.Input<string>;
+    ipv4SubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable ipv4 VRRP
      */
-    ipv4Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4Vrrp>[]>;
+    ipv4Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4Vrrp>[] | undefined>;
     /**
      * Assign IPv6 address
      */
-    ipv6Address?: pulumi.Input<string>;
+    ipv6Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv6AddressVariable?: pulumi.Input<string>;
+    ipv6AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * DHCPv6 Helper
      */
-    ipv6DhcpHelpers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper>[]>;
+    ipv6DhcpHelpers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper>[] | undefined>;
     /**
      * Assign secondary IPv6 addresses
      */
-    ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress>[]>;
+    ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress>[] | undefined>;
     /**
      * Enable ipv6 VRRP
      */
-    ipv6Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6Vrrp>[]>;
+    ipv6Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6Vrrp>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
-    serviceLanVpnFeatureId?: pulumi.Input<string>;
+    serviceLanVpnFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `552`-`1960`
      */
-    tcpMss?: pulumi.Input<number>;
+    tcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssVariable?: pulumi.Input<string>;
+    tcpMssVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
  * The set of arguments for constructing a ServiceLanVpnInterfaceSviFeature resource.
  */
 export interface ServiceLanVpnInterfaceSviFeatureArgs {
-    aclIpv4EgressFeatureId?: pulumi.Input<string>;
-    aclIpv4IngressFeatureId?: pulumi.Input<string>;
-    aclIpv6EgressFeatureId?: pulumi.Input<string>;
-    aclIpv6IngressFeatureId?: pulumi.Input<string>;
+    aclIpv4EgressFeatureId?: pulumi.Input<string | undefined>;
+    aclIpv4IngressFeatureId?: pulumi.Input<string | undefined>;
+    aclIpv6EgressFeatureId?: pulumi.Input<string | undefined>;
+    aclIpv6IngressFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
      *   - Range: `0`-`2678400`
      *   - Default value: `1200`
      */
-    arpTimeout?: pulumi.Input<number>;
+    arpTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    arpTimeoutVariable?: pulumi.Input<string>;
+    arpTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure static ARP entries
      */
-    arps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureArp>[]>;
+    arps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureArp>[] | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enable DHCPv6
      *   - Default value: `false`
      */
-    enableDhcpv6?: pulumi.Input<boolean>;
+    enableDhcpv6?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableDhcpv6Variable?: pulumi.Input<string>;
+    enableDhcpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -634,113 +634,113 @@ export interface ServiceLanVpnInterfaceSviFeatureArgs {
      * ICMP/ICMPv6 Redirect Disable
      *   - Default value: `true`
      */
-    icmpRedirectDisable?: pulumi.Input<boolean>;
+    icmpRedirectDisable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    icmpRedirectDisableVariable?: pulumi.Input<string>;
+    icmpRedirectDisableVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <1500..9216> in bytes
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      */
-    interfaceMtu?: pulumi.Input<number>;
+    interfaceMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    interfaceMtuVariable?: pulumi.Input<string>;
+    interfaceMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: VLAN 1 - VLAN 4094 when present
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Directed-Broadcast
      *   - Default value: `false`
      */
-    ipDirectedBroadcast?: pulumi.Input<boolean>;
+    ipDirectedBroadcast?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    ipDirectedBroadcastVariable?: pulumi.Input<string>;
+    ipDirectedBroadcastVariable?: pulumi.Input<string | undefined>;
     /**
      * IP MTU <576..Interface MTU>, in bytes
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      */
-    ipMtu?: pulumi.Input<number>;
+    ipMtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipMtuVariable?: pulumi.Input<string>;
+    ipMtuVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * List of DHCP helper addresses
      */
-    ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[]>;
+    ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    ipv4DhcpHelpersVariable?: pulumi.Input<string>;
+    ipv4DhcpHelpersVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign secondary IP addresses
      */
-    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress>[]>;
+    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress>[] | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    ipv4SubnetMask?: pulumi.Input<string>;
+    ipv4SubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4SubnetMaskVariable?: pulumi.Input<string>;
+    ipv4SubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable ipv4 VRRP
      */
-    ipv4Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4Vrrp>[]>;
+    ipv4Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4Vrrp>[] | undefined>;
     /**
      * Assign IPv6 address
      */
-    ipv6Address?: pulumi.Input<string>;
+    ipv6Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv6AddressVariable?: pulumi.Input<string>;
+    ipv6AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * DHCPv6 Helper
      */
-    ipv6DhcpHelpers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper>[]>;
+    ipv6DhcpHelpers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper>[] | undefined>;
     /**
      * Assign secondary IPv6 addresses
      */
-    ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress>[]>;
+    ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress>[] | undefined>;
     /**
      * Enable ipv6 VRRP
      */
-    ipv6Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6Vrrp>[]>;
+    ipv6Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6Vrrp>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
@@ -749,18 +749,18 @@ export interface ServiceLanVpnInterfaceSviFeatureArgs {
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `552`-`1960`
      */
-    tcpMss?: pulumi.Input<number>;
+    tcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssVariable?: pulumi.Input<string>;
+    tcpMssVariable?: pulumi.Input<string | undefined>;
 }

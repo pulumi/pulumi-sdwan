@@ -115,19 +115,19 @@ export interface MirrorPolicyObjectState {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Remote destination IP
      */
-    remoteDestinationIp?: pulumi.Input<string>;
+    remoteDestinationIp?: pulumi.Input<string | undefined>;
     /**
      * Source IP
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -137,7 +137,7 @@ export interface MirrorPolicyObjectArgs {
     /**
      * The name of the policy object
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Remote destination IP
      */

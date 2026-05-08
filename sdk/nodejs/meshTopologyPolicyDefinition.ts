@@ -139,31 +139,31 @@ export interface MeshTopologyPolicyDefinitionState {
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of regions
      */
-    regions?: pulumi.Input<pulumi.Input<inputs.MeshTopologyPolicyDefinitionRegion>[]>;
+    regions?: pulumi.Input<pulumi.Input<inputs.MeshTopologyPolicyDefinitionRegion>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * VPN list ID
      */
-    vpnListId?: pulumi.Input<string>;
+    vpnListId?: pulumi.Input<string | undefined>;
     /**
      * VPN list version
      */
-    vpnListVersion?: pulumi.Input<number>;
+    vpnListVersion?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -177,7 +177,7 @@ export interface MeshTopologyPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of regions
      */
@@ -185,9 +185,9 @@ export interface MeshTopologyPolicyDefinitionArgs {
     /**
      * VPN list ID
      */
-    vpnListId?: pulumi.Input<string>;
+    vpnListId?: pulumi.Input<string | undefined>;
     /**
      * VPN list version
      */
-    vpnListVersion?: pulumi.Input<number>;
+    vpnListVersion?: pulumi.Input<number | undefined>;
 }

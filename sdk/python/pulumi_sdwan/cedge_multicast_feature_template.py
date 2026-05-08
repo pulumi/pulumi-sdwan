@@ -21,13 +21,13 @@ class CedgeMulticastFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 local_replicator: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_replicator_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 spt_only_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CedgeMulticastFeatureTemplate resource.
 
@@ -89,7 +89,7 @@ class CedgeMulticastFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="localReplicator")
-    def local_replicator(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_replicator(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Replicator is local to this device
           - Default value: `false`
@@ -97,36 +97,36 @@ class CedgeMulticastFeatureTemplateArgs:
         return pulumi.get(self, "local_replicator")
 
     @local_replicator.setter
-    def local_replicator(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_replicator(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_replicator", value)
 
     @_builtins.property
     @pulumi.getter(name="localReplicatorVariable")
-    def local_replicator_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_replicator_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "local_replicator_variable")
 
     @local_replicator_variable.setter
-    def local_replicator_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_replicator_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_replicator_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sptOnly")
-    def spt_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def spt_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Shortest Path Tree (SPT) Only Mode
           - Default value: `false`
@@ -134,24 +134,24 @@ class CedgeMulticastFeatureTemplateArgs:
         return pulumi.get(self, "spt_only")
 
     @spt_only.setter
-    def spt_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def spt_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "spt_only", value)
 
     @_builtins.property
     @pulumi.getter(name="sptOnlyVariable")
-    def spt_only_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spt_only_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spt_only_variable")
 
     @spt_only_variable.setter
-    def spt_only_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spt_only_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spt_only_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set number of joins per group the router supports
           - Range: `0`-`1000`
@@ -159,36 +159,36 @@ class CedgeMulticastFeatureTemplateArgs:
         return pulumi.get(self, "threshold")
 
     @threshold.setter
-    def threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "threshold_variable")
 
     @threshold_variable.setter
-    def threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threshold_variable", value)
 
 
 @pulumi.input_type
 class _CedgeMulticastFeatureTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 local_replicator: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_replicator_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 spt_only_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CedgeMulticastFeatureTemplate resources.
 
@@ -233,19 +233,19 @@ class _CedgeMulticastFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -253,12 +253,12 @@ class _CedgeMulticastFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="localReplicator")
-    def local_replicator(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_replicator(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Replicator is local to this device
           - Default value: `false`
@@ -266,36 +266,36 @@ class _CedgeMulticastFeatureTemplateState:
         return pulumi.get(self, "local_replicator")
 
     @local_replicator.setter
-    def local_replicator(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_replicator(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_replicator", value)
 
     @_builtins.property
     @pulumi.getter(name="localReplicatorVariable")
-    def local_replicator_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_replicator_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "local_replicator_variable")
 
     @local_replicator_variable.setter
-    def local_replicator_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_replicator_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_replicator_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="sptOnly")
-    def spt_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def spt_only(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Shortest Path Tree (SPT) Only Mode
           - Default value: `false`
@@ -303,36 +303,36 @@ class _CedgeMulticastFeatureTemplateState:
         return pulumi.get(self, "spt_only")
 
     @spt_only.setter
-    def spt_only(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def spt_only(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "spt_only", value)
 
     @_builtins.property
     @pulumi.getter(name="sptOnlyVariable")
-    def spt_only_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def spt_only_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "spt_only_variable")
 
     @spt_only_variable.setter
-    def spt_only_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def spt_only_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "spt_only_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set number of joins per group the router supports
           - Range: `0`-`1000`
@@ -340,31 +340,31 @@ class _CedgeMulticastFeatureTemplateState:
         return pulumi.get(self, "threshold")
 
     @threshold.setter
-    def threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "threshold_variable")
 
     @threshold_variable.setter
-    def threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threshold_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -374,15 +374,15 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 local_replicator: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_replicator_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 spt_only_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a cEdge Multicast feature template.
@@ -477,15 +477,15 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 local_replicator: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_replicator_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 spt_only: Optional[pulumi.Input[_builtins.bool]] = None,
-                 spt_only_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
+                 spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -520,17 +520,17 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            local_replicator: Optional[pulumi.Input[_builtins.bool]] = None,
-            local_replicator_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            spt_only: Optional[pulumi.Input[_builtins.bool]] = None,
-            spt_only_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            threshold: Optional[pulumi.Input[_builtins.int]] = None,
-            threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CedgeMulticastFeatureTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            local_replicator: pulumi.Input[Optional[_builtins.bool]] = None,
+            local_replicator_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            spt_only: pulumi.Input[Optional[_builtins.bool]] = None,
+            spt_only_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CedgeMulticastFeatureTemplate':
         """
         Get an existing CedgeMulticastFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

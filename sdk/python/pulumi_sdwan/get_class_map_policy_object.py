@@ -112,7 +112,7 @@ def get_class_map_policy_object(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         queue=pulumi.get(__ret__, 'queue'),
         version=pulumi.get(__ret__, 'version'))
-def get_class_map_policy_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_class_map_policy_object_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetClassMapPolicyObjectResult]:
     """
     This data source can read the Class Map Policy Object .

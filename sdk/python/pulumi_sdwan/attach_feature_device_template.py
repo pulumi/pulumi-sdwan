@@ -23,7 +23,7 @@ class AttachFeatureDeviceTemplateArgs:
     def __init__(__self__, *,
                  attach_feature_device_template_id: pulumi.Input[_builtins.str],
                  devices: pulumi.Input[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]],
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a AttachFeatureDeviceTemplate resource.
 
@@ -62,23 +62,23 @@ class AttachFeatureDeviceTemplateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the device template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
 @pulumi.input_type
 class _AttachFeatureDeviceTemplateState:
     def __init__(__self__, *,
-                 attach_feature_device_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AttachFeatureDeviceTemplate resources.
 
@@ -95,38 +95,38 @@ class _AttachFeatureDeviceTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="attachFeatureDeviceTemplateId")
-    def attach_feature_device_template_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def attach_feature_device_template_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The ID of the device template
         """
         return pulumi.get(self, "attach_feature_device_template_id")
 
     @attach_feature_device_template_id.setter
-    def attach_feature_device_template_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def attach_feature_device_template_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "attach_feature_device_template_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]]]:
+    def devices(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]]]:
         """
         Devices
         """
         return pulumi.get(self, "devices")
 
     @devices.setter
-    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]]]):
+    def devices(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['AttachFeatureDeviceTemplateDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the device template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -136,9 +136,9 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attach_feature_device_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
+                 attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
@@ -233,9 +233,9 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 attach_feature_device_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
+                 attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -262,9 +262,9 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            attach_feature_device_template_id: Optional[pulumi.Input[_builtins.str]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'AttachFeatureDeviceTemplate':
+            attach_feature_device_template_id: pulumi.Input[Optional[_builtins.str]] = None,
+            devices: pulumi.Input[Optional[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'AttachFeatureDeviceTemplate':
         """
         Get an existing AttachFeatureDeviceTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

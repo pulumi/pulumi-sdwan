@@ -22,9 +22,9 @@ __all__ = ['RoutePolicyDefinitionArgs', 'RoutePolicyDefinition']
 class RoutePolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a RoutePolicyDefinition resource.
 
@@ -56,7 +56,7 @@ class RoutePolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default action, either `accept` or `reject`
           - Choices: `accept`, `reject`
@@ -64,43 +64,43 @@ class RoutePolicyDefinitionArgs:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]:
+    def sequences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]:
         """
         List of ACL sequences
         """
         return pulumi.get(self, "sequences")
 
     @sequences.setter
-    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]):
+    def sequences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]):
         pulumi.set(self, "sequences", value)
 
 
 @pulumi.input_type
 class _RoutePolicyDefinitionState:
     def __init__(__self__, *,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering RoutePolicyDefinition resources.
 
@@ -127,7 +127,7 @@ class _RoutePolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="defaultAction")
-    def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def default_action(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Default action, either `accept` or `reject`
           - Choices: `accept`, `reject`
@@ -135,67 +135,67 @@ class _RoutePolicyDefinitionState:
         return pulumi.get(self, "default_action")
 
     @default_action.setter
-    def default_action(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def default_action(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "default_action", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]:
+    def sequences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]:
         """
         List of ACL sequences
         """
         return pulumi.get(self, "sequences")
 
     @sequences.setter
-    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]):
+    def sequences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]]]):
         pulumi.set(self, "sequences", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -205,10 +205,10 @@ class RoutePolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Route Policy Definition .
@@ -317,10 +317,10 @@ class RoutePolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_action: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
+                 default_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -348,12 +348,12 @@ class RoutePolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_action: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'RoutePolicyDefinition':
+            default_action: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            sequences: pulumi.Input[Optional[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'RoutePolicyDefinition':
         """
         Get an existing RoutePolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

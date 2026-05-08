@@ -255,97 +255,97 @@ export interface CiscoWirelessLanFeatureTemplateState {
      * Set mobile express default gateway
      *   - Default value: `0.0.0.0`
      */
-    controllerDefaultGateway?: pulumi.Input<string>;
+    controllerDefaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerDefaultGatewayVariable?: pulumi.Input<string>;
+    controllerDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express controller address
      *   - Default value: `0.0.0.0`
      */
-    controllerIpAddress?: pulumi.Input<string>;
+    controllerIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerIpAddressVariable?: pulumi.Input<string>;
+    controllerIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express controller subnet mask
      *   - Default value: `0.0.0.0`
      */
-    controllerSubnetMask?: pulumi.Input<string>;
+    controllerSubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerSubnetMaskVariable?: pulumi.Input<string>;
+    controllerSubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Select country
      *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    countryVariable?: pulumi.Input<string>;
+    countryVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set management password
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * 2.4GHz Shutdown
      *   - Default value: `false`
      */
-    shutdown24ghz?: pulumi.Input<boolean>;
+    shutdown24ghz?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdown24ghzVariable?: pulumi.Input<string>;
+    shutdown24ghzVariable?: pulumi.Input<string | undefined>;
     /**
      * 5GHz Shutdown
      *   - Default value: `false`
      */
-    shutdown5ghz?: pulumi.Input<boolean>;
+    shutdown5ghz?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdown5ghzVariable?: pulumi.Input<string>;
+    shutdown5ghzVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Wi-Fi SSID
      */
-    ssids?: pulumi.Input<pulumi.Input<inputs.CiscoWirelessLanFeatureTemplateSsid>[]>;
+    ssids?: pulumi.Input<pulumi.Input<inputs.CiscoWirelessLanFeatureTemplateSsid>[] | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Set management username
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    usernameVariable?: pulumi.Input<string>;
+    usernameVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -356,38 +356,38 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      * Set mobile express default gateway
      *   - Default value: `0.0.0.0`
      */
-    controllerDefaultGateway?: pulumi.Input<string>;
+    controllerDefaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerDefaultGatewayVariable?: pulumi.Input<string>;
+    controllerDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express controller address
      *   - Default value: `0.0.0.0`
      */
-    controllerIpAddress?: pulumi.Input<string>;
+    controllerIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerIpAddressVariable?: pulumi.Input<string>;
+    controllerIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express controller subnet mask
      *   - Default value: `0.0.0.0`
      */
-    controllerSubnetMask?: pulumi.Input<string>;
+    controllerSubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerSubnetMaskVariable?: pulumi.Input<string>;
+    controllerSubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Select country
      *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    countryVariable?: pulumi.Input<string>;
+    countryVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -400,43 +400,43 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set management password
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * 2.4GHz Shutdown
      *   - Default value: `false`
      */
-    shutdown24ghz?: pulumi.Input<boolean>;
+    shutdown24ghz?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdown24ghzVariable?: pulumi.Input<string>;
+    shutdown24ghzVariable?: pulumi.Input<string | undefined>;
     /**
      * 5GHz Shutdown
      *   - Default value: `false`
      */
-    shutdown5ghz?: pulumi.Input<boolean>;
+    shutdown5ghz?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdown5ghzVariable?: pulumi.Input<string>;
+    shutdown5ghzVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Wi-Fi SSID
      */
-    ssids?: pulumi.Input<pulumi.Input<inputs.CiscoWirelessLanFeatureTemplateSsid>[]>;
+    ssids?: pulumi.Input<pulumi.Input<inputs.CiscoWirelessLanFeatureTemplateSsid>[] | undefined>;
     /**
      * Set management username
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    usernameVariable?: pulumi.Input<string>;
+    usernameVariable?: pulumi.Input<string | undefined>;
 }

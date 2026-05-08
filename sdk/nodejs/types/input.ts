@@ -9,7 +9,7 @@ export interface AllowUrlListPolicyObjectEntry {
     /**
      * URL
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 export interface AppProbeClassPolicyObjectMapping {
@@ -22,14 +22,14 @@ export interface AppProbeClassPolicyObjectMapping {
      * DSCP
      *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
 }
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Sequence ID
      */
@@ -38,11 +38,11 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequence {
      * Sequence IP type, either `ipv4`, `ipv6` or `all`
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    ipType?: pulumi.Input<string>;
+    ipType?: pulumi.Input<string | undefined>;
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -53,23 +53,23 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
     /**
      * Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `backupSlaPreferredColor`
      */
-    backupSlaPreferredColor?: pulumi.Input<string>;
+    backupSlaPreferredColor?: pulumi.Input<string | undefined>;
     /**
      * Cloud SLA, Attribute conditional on `type` equal to `cloudSaas`
      */
-    cloudSla?: pulumi.Input<boolean>;
+    cloudSla?: pulumi.Input<boolean | undefined>;
     /**
      * Counter name, Attribute conditional on `type` equal to `count`
      */
-    counter?: pulumi.Input<string>;
+    counter?: pulumi.Input<string | undefined>;
     /**
      * Enable logging, Attribute conditional on `type` equal to `log`
      */
-    log?: pulumi.Input<boolean>;
+    log?: pulumi.Input<boolean | undefined>;
     /**
      * List of SLA class parameters, Attribute conditional on `type` equal to `slaClass`
      */
-    slaClassParameters?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter>[]>;
+    slaClassParameters?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter>[] | undefined>;
     /**
      * Type of action entry
      *   - Choices: `backupSlaPreferredColor`, `count`, `log`, `slaClass`, `cloudSaas`
@@ -81,23 +81,23 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
     /**
      * preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
      */
-    preferredColor?: pulumi.Input<string>;
+    preferredColor?: pulumi.Input<string | undefined>;
     /**
      * Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      */
-    preferredColorGroupListId?: pulumi.Input<string>;
+    preferredColorGroupListId?: pulumi.Input<string | undefined>;
     /**
      * Preferred color group list version
      */
-    preferredColorGroupListVersion?: pulumi.Input<number>;
+    preferredColorGroupListVersion?: pulumi.Input<number | undefined>;
     /**
      * SLA class list ID, Attribute conditional on `type` equal to `name`
      */
-    slaClassListId?: pulumi.Input<string>;
+    slaClassListId?: pulumi.Input<string | undefined>;
     /**
      * SLA class list version
      */
-    slaClassListVersion?: pulumi.Input<number>;
+    slaClassListVersion?: pulumi.Input<number | undefined>;
     /**
      * Type of SLA class parameter
      *   - Choices: `name`, `preferredColor`, `preferredColorGroup`, `strict`, `fallbackToBestPath`
@@ -109,83 +109,83 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     /**
      * Application list ID, Attribute conditional on `type` equal to `appList`
      */
-    applicationListId?: pulumi.Input<string>;
+    applicationListId?: pulumi.Input<string | undefined>;
     /**
      * Application list version
      */
-    applicationListVersion?: pulumi.Input<number>;
+    applicationListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination Data Prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination Data Prefix list version
      */
-    destinationDataPrefixListVersion?: pulumi.Input<number>;
+    destinationDataPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IP, Attribute conditional on `type` equal to `destinationIp`
      */
-    destinationIp?: pulumi.Input<string>;
+    destinationIp?: pulumi.Input<string | undefined>;
     /**
      * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `destinationPort`
      */
-    destinationPort?: pulumi.Input<string>;
+    destinationPort?: pulumi.Input<string | undefined>;
     /**
      * Destination region, Attribute conditional on `type` equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
-    destinationRegion?: pulumi.Input<string>;
+    destinationRegion?: pulumi.Input<string | undefined>;
     /**
      * DNS request or response, Attribute conditional on `type` equal to `dns`
      *   - Choices: `request`, `response`
      */
-    dns?: pulumi.Input<string>;
+    dns?: pulumi.Input<string | undefined>;
     /**
      * DNS Application list ID, Attribute conditional on `type` equal to `dnsAppList`
      */
-    dnsApplicationListId?: pulumi.Input<string>;
+    dnsApplicationListId?: pulumi.Input<string | undefined>;
     /**
      * DNS Application list version
      */
-    dnsApplicationListVersion?: pulumi.Input<number>;
+    dnsApplicationListVersion?: pulumi.Input<number | undefined>;
     /**
      * DSCP value, Attribute conditional on `type` equal to `dscp`
      */
-    dscp?: pulumi.Input<string>;
+    dscp?: pulumi.Input<string | undefined>;
     /**
      * ICMP Message, Attribute conditional on `type` equal to `icmpMessage`
      */
-    icmpMessage?: pulumi.Input<string>;
+    icmpMessage?: pulumi.Input<string | undefined>;
     /**
      * PLP, Attribute conditional on `type` equal to `plp`
      *   - Choices: `low`, `high`
      */
-    plp?: pulumi.Input<string>;
+    plp?: pulumi.Input<string | undefined>;
     /**
      * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `protocol`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Source Data Prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source Data Prefix list version
      */
-    sourceDataPrefixListVersion?: pulumi.Input<number>;
+    sourceDataPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IP, Attribute conditional on `type` equal to `sourceIp`
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `sourcePort`
      */
-    sourcePort?: pulumi.Input<string>;
+    sourcePort?: pulumi.Input<string | undefined>;
     /**
      * Traffic to, Attribute conditional on `type` equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      */
-    trafficTo?: pulumi.Input<string>;
+    trafficTo?: pulumi.Input<string | undefined>;
     /**
      * Type of match entry
      *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
@@ -197,268 +197,268 @@ export interface ApplicationListPolicyObjectEntry {
     /**
      * Application name
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Application family name
      */
-    applicationFamily?: pulumi.Input<string>;
+    applicationFamily?: pulumi.Input<string | undefined>;
 }
 
 export interface ApplicationPriorityQosPolicyQosScheduler {
     /**
      * bandwidthPercent
      */
-    bandwidth?: pulumi.Input<string>;
+    bandwidth?: pulumi.Input<string | undefined>;
     /**
      * drops
      */
-    drops?: pulumi.Input<string>;
-    forwardingClassId?: pulumi.Input<string>;
+    drops?: pulumi.Input<string | undefined>;
+    forwardingClassId?: pulumi.Input<string | undefined>;
     /**
      * queue
      */
-    queue?: pulumi.Input<string>;
+    queue?: pulumi.Input<string | undefined>;
     /**
      * scheduling
      */
-    schedulingType?: pulumi.Input<string>;
+    schedulingType?: pulumi.Input<string | undefined>;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequence {
-    actions?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
      */
-    baseAction?: pulumi.Input<string>;
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry>[]>;
+    baseAction?: pulumi.Input<string | undefined>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry>[] | undefined>;
     /**
      * Sequence IP Type
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    sequenceId?: pulumi.Input<number>;
+    sequenceId?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    sequenceName?: pulumi.Input<string>;
+    sequenceName?: pulumi.Input<string | undefined>;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
-    appqoeDreOptimization?: pulumi.Input<boolean>;
-    appqoeServiceNodeGroup?: pulumi.Input<string>;
-    appqoeTcpOptimization?: pulumi.Input<boolean>;
+    appqoeDreOptimization?: pulumi.Input<boolean | undefined>;
+    appqoeServiceNodeGroup?: pulumi.Input<string | undefined>;
+    appqoeTcpOptimization?: pulumi.Input<boolean | undefined>;
     /**
      * Backup SLA perferred color
      */
-    backupSlaPreferredColors?: pulumi.Input<pulumi.Input<string>[]>;
-    cflowd?: pulumi.Input<boolean>;
-    cloudProbe?: pulumi.Input<boolean>;
-    cloudSaas?: pulumi.Input<boolean>;
-    count?: pulumi.Input<string>;
-    fallbackToRouting?: pulumi.Input<boolean>;
-    log?: pulumi.Input<boolean>;
+    backupSlaPreferredColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    cflowd?: pulumi.Input<boolean | undefined>;
+    cloudProbe?: pulumi.Input<boolean | undefined>;
+    cloudSaas?: pulumi.Input<boolean | undefined>;
+    count?: pulumi.Input<string | undefined>;
+    fallbackToRouting?: pulumi.Input<boolean | undefined>;
+    log?: pulumi.Input<boolean | undefined>;
     /**
      * - Range: `1`-`5`
      */
-    lossCorrectFecThreshold?: pulumi.Input<number>;
+    lossCorrectFecThreshold?: pulumi.Input<number | undefined>;
     /**
      * - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
-    lossCorrectType?: pulumi.Input<string>;
-    natBypass?: pulumi.Input<boolean>;
-    natDiaInterfaces?: pulumi.Input<pulumi.Input<string>[]>;
-    natDiaPools?: pulumi.Input<pulumi.Input<number>[]>;
-    natFallback?: pulumi.Input<boolean>;
+    lossCorrectType?: pulumi.Input<string | undefined>;
+    natBypass?: pulumi.Input<boolean | undefined>;
+    natDiaInterfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    natDiaPools?: pulumi.Input<pulumi.Input<number>[] | undefined>;
+    natFallback?: pulumi.Input<boolean | undefined>;
     /**
      * - Range: `1`-`31`
      */
-    natPool?: pulumi.Input<number>;
-    natVpn?: pulumi.Input<boolean>;
+    natPool?: pulumi.Input<number | undefined>;
+    natVpn?: pulumi.Input<boolean | undefined>;
     /**
      * - Choices: `ipAddress`, `dnsHost`
      */
-    redirectDnsField?: pulumi.Input<string>;
-    redirectDnsValue?: pulumi.Input<string>;
-    secureInternetGateway?: pulumi.Input<boolean>;
-    secureServiceEdge?: pulumi.Input<boolean>;
+    redirectDnsField?: pulumi.Input<string | undefined>;
+    redirectDnsValue?: pulumi.Input<string | undefined>;
+    secureInternetGateway?: pulumi.Input<boolean | undefined>;
+    secureServiceEdge?: pulumi.Input<boolean | undefined>;
     /**
      * - Choices: `Cisco-Secure-Access`, `zScaler`
      */
-    secureServiceEdgeInstance?: pulumi.Input<string>;
-    setParameters?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter>[]>;
+    secureServiceEdgeInstance?: pulumi.Input<string | undefined>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter>[] | undefined>;
     /**
      * slaClass
      */
-    slaClasses?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass>[]>;
+    slaClasses?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass>[] | undefined>;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter {
     /**
      * - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
-    forwardingClassListId?: pulumi.Input<string>;
-    localTlocListColors?: pulumi.Input<pulumi.Input<string>[]>;
+    dscp?: pulumi.Input<number | undefined>;
+    forwardingClassListId?: pulumi.Input<string | undefined>;
+    localTlocListColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `ipsec`, `gre`
      */
-    localTlocListEncapsulation?: pulumi.Input<string>;
-    localTlocListRestrict?: pulumi.Input<boolean>;
-    nextHopIpv4?: pulumi.Input<string>;
-    nextHopIpv6?: pulumi.Input<string>;
-    nextHopLoose?: pulumi.Input<boolean>;
-    policerId?: pulumi.Input<string>;
-    preferredColorGroupId?: pulumi.Input<string>;
-    preferredRemoteColorRestrict?: pulumi.Input<boolean>;
-    preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[]>;
-    serviceChainFallbackToRouting?: pulumi.Input<boolean>;
-    serviceChainLocal?: pulumi.Input<boolean>;
-    serviceChainTlocColors?: pulumi.Input<pulumi.Input<string>[]>;
+    localTlocListEncapsulation?: pulumi.Input<string | undefined>;
+    localTlocListRestrict?: pulumi.Input<boolean | undefined>;
+    nextHopIpv4?: pulumi.Input<string | undefined>;
+    nextHopIpv6?: pulumi.Input<string | undefined>;
+    nextHopLoose?: pulumi.Input<boolean | undefined>;
+    policerId?: pulumi.Input<string | undefined>;
+    preferredColorGroupId?: pulumi.Input<string | undefined>;
+    preferredRemoteColorRestrict?: pulumi.Input<boolean | undefined>;
+    preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    serviceChainFallbackToRouting?: pulumi.Input<boolean | undefined>;
+    serviceChainLocal?: pulumi.Input<boolean | undefined>;
+    serviceChainTlocColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `ipsec`, `gre`
      */
-    serviceChainTlocEncapsulation?: pulumi.Input<string>;
-    serviceChainTlocIp?: pulumi.Input<string>;
-    serviceChainTlocListId?: pulumi.Input<string>;
+    serviceChainTlocEncapsulation?: pulumi.Input<string | undefined>;
+    serviceChainTlocIp?: pulumi.Input<string | undefined>;
+    serviceChainTlocListId?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
      */
-    serviceChainType?: pulumi.Input<string>;
+    serviceChainType?: pulumi.Input<string | undefined>;
     /**
      * - Range: `0`-`65530`
      */
-    serviceChainVpn?: pulumi.Input<number>;
-    serviceLocal?: pulumi.Input<boolean>;
-    serviceRestrict?: pulumi.Input<boolean>;
-    serviceTlocColors?: pulumi.Input<pulumi.Input<string>[]>;
+    serviceChainVpn?: pulumi.Input<number | undefined>;
+    serviceLocal?: pulumi.Input<boolean | undefined>;
+    serviceRestrict?: pulumi.Input<boolean | undefined>;
+    serviceTlocColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `ipsec`, `gre`
      */
-    serviceTlocEncapsulation?: pulumi.Input<string>;
-    serviceTlocIp?: pulumi.Input<string>;
-    serviceTlocListId?: pulumi.Input<string>;
+    serviceTlocEncapsulation?: pulumi.Input<string | undefined>;
+    serviceTlocIp?: pulumi.Input<string | undefined>;
+    serviceTlocListId?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
      */
-    serviceType?: pulumi.Input<string>;
+    serviceType?: pulumi.Input<string | undefined>;
     /**
      * - Range: `0`-`65530`
      */
-    serviceVpn?: pulumi.Input<number>;
-    tlocColors?: pulumi.Input<pulumi.Input<string>[]>;
+    serviceVpn?: pulumi.Input<number | undefined>;
+    tlocColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `ipsec`, `gre`
      */
-    tlocEncapsulation?: pulumi.Input<string>;
-    tlocIp?: pulumi.Input<string>;
-    tlocListId?: pulumi.Input<string>;
+    tlocEncapsulation?: pulumi.Input<string | undefined>;
+    tlocIp?: pulumi.Input<string | undefined>;
+    tlocListId?: pulumi.Input<string | undefined>;
     /**
      * - Range: `0`-`65530`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
-    fallbackToBestPath?: pulumi.Input<boolean>;
-    preferredColorGroupListId?: pulumi.Input<string>;
-    preferredColors?: pulumi.Input<pulumi.Input<string>[]>;
-    preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[]>;
-    remoteColorRestrict?: pulumi.Input<boolean>;
-    slaClassListId?: pulumi.Input<string>;
-    strict?: pulumi.Input<boolean>;
+    fallbackToBestPath?: pulumi.Input<boolean | undefined>;
+    preferredColorGroupListId?: pulumi.Input<string | undefined>;
+    preferredColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    remoteColorRestrict?: pulumi.Input<boolean | undefined>;
+    slaClassListId?: pulumi.Input<string | undefined>;
+    strict?: pulumi.Input<boolean | undefined>;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
-    applicationListId?: pulumi.Input<string>;
-    destinationDataIpv4PrefixListId?: pulumi.Input<string>;
-    destinationDataIpv6PrefixListId?: pulumi.Input<string>;
+    applicationListId?: pulumi.Input<string | undefined>;
+    destinationDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
+    destinationDataIpv6PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination Data IP Prefix
      */
-    destinationIpv4Prefix?: pulumi.Input<string>;
+    destinationIpv4Prefix?: pulumi.Input<string | undefined>;
     /**
      * Destination Data IP Prefix
      */
-    destinationIpv6Prefix?: pulumi.Input<string>;
+    destinationIpv6Prefix?: pulumi.Input<string | undefined>;
     /**
      * Destination Port (0-65535) range or individual number separated by space
      */
-    destinationPorts?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationPorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Destination Region
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
-    destinationRegion?: pulumi.Input<string>;
+    destinationRegion?: pulumi.Input<string | undefined>;
     /**
      * Dns
      *   - Choices: `request`, `response`
      */
-    dns?: pulumi.Input<string>;
-    dnsApplicationListId?: pulumi.Input<string>;
+    dns?: pulumi.Input<string | undefined>;
+    dnsApplicationListId?: pulumi.Input<string | undefined>;
     /**
      * DSCP numbers
      */
-    dscps?: pulumi.Input<pulumi.Input<number>[]>;
+    dscps?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * ICMP6 Message
      */
-    icmp6Messages?: pulumi.Input<pulumi.Input<string>[]>;
+    icmp6Messages?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * ICMP Message
      */
-    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<string>;
+    packetLength?: pulumi.Input<string | undefined>;
     /**
      * protocol (0-255) range or individual number separated by space
      */
-    protocols?: pulumi.Input<pulumi.Input<string>[]>;
-    saasApplicationListId?: pulumi.Input<string>;
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    saasApplicationListId?: pulumi.Input<string | undefined>;
     /**
      * M365 Service Area
      */
-    serviceAreas?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceDataIpv4PrefixListId?: pulumi.Input<string>;
-    sourceDataIpv6PrefixListId?: pulumi.Input<string>;
+    serviceAreas?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
+    sourceDataIpv6PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source Data IP Prefix
      */
-    sourceIpv4Prefix?: pulumi.Input<string>;
+    sourceIpv4Prefix?: pulumi.Input<string | undefined>;
     /**
      * Source Data IP Prefix
      */
-    sourceIpv6Prefix?: pulumi.Input<string>;
+    sourceIpv6Prefix?: pulumi.Input<string | undefined>;
     /**
      * Source Port (0-65535) range or individual number separated by space
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<string>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * TCP States
      *   - Choices: `syn`
      */
-    tcp?: pulumi.Input<string>;
+    tcp?: pulumi.Input<string | undefined>;
     /**
      * M365 Traffic Category
      *   - Choices: `optimize-allow`, `optimize`, `all`
      */
-    trafficCategory?: pulumi.Input<string>;
+    trafficCategory?: pulumi.Input<string | undefined>;
     /**
      * Traffic Class
      *   - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
      */
-    trafficClass?: pulumi.Input<string>;
+    trafficClass?: pulumi.Input<string | undefined>;
     /**
      * Traffic to
      *   - Choices: `core`, `service`, `access`
      */
-    trafficTo?: pulumi.Input<string>;
+    trafficTo?: pulumi.Input<string | undefined>;
 }
 
 export interface AsPathListPolicyObjectEntry {
@@ -483,41 +483,41 @@ export interface BlockUrlListPolicyObjectEntry {
     /**
      * URL
      */
-    url?: pulumi.Input<string>;
+    url?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateAccountingRule {
     /**
      * Comma separated list of groups
      */
-    groups?: pulumi.Input<string>;
+    groups?: pulumi.Input<string | undefined>;
     /**
      * Configure Accounting Method
      *   - Choices: `commands`, `exec`, `network`, `system`
      */
-    method?: pulumi.Input<string>;
+    method?: pulumi.Input<string | undefined>;
     /**
      * Configure Accounting Rule ID
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Privilege level when method is commands
      *   - Choices: `1`, `15`
      */
-    privilegeLevel?: pulumi.Input<string>;
+    privilegeLevel?: pulumi.Input<string | undefined>;
     /**
      * Record start and stop without waiting
      *   - Default value: `true`
      */
-    startStop?: pulumi.Input<boolean>;
+    startStop?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    startStopVariable?: pulumi.Input<string>;
+    startStopVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateAuthorizationRule {
@@ -525,100 +525,100 @@ export interface CedgeAaaFeatureTemplateAuthorizationRule {
      * Succeed if user has authenticated
      *   - Default value: `false`
      */
-    authenticated?: pulumi.Input<boolean>;
+    authenticated?: pulumi.Input<boolean | undefined>;
     /**
      * Comma separated list of groups
      */
-    groups?: pulumi.Input<string>;
+    groups?: pulumi.Input<string | undefined>;
     /**
      * Method
      *   - Choices: `commands`
      */
-    method?: pulumi.Input<string>;
+    method?: pulumi.Input<string | undefined>;
     /**
      * Configure Authorization Rule ID
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Privilege level when method is commands
      *   - Choices: `1`, `15`
      */
-    privilegeLevel?: pulumi.Input<string>;
+    privilegeLevel?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateRadiusClient {
     /**
      * Client IP
      */
-    clientIp?: pulumi.Input<string>;
+    clientIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    clientIpVariable?: pulumi.Input<string>;
+    clientIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * VPN configuration
      */
-    vpnConfigurations?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusClientVpnConfiguration>[]>;
+    vpnConfigurations?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusClientVpnConfiguration>[] | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateRadiusClientVpnConfiguration {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Specify a RADIUS client server-key
      */
-    serverKey?: pulumi.Input<string>;
+    serverKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    serverKeyVariable?: pulumi.Input<string>;
+    serverKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN ID
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateRadiusServerGroup {
     /**
      * Set Radius server Group Name
      */
-    groupName?: pulumi.Input<string>;
+    groupName?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the Radius server
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusServerGroupServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateRadiusServerGroupServer>[] | undefined>;
     /**
      * Set interface to use to reach Radius server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which Radius server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateRadiusServerGroupServer {
@@ -627,383 +627,383 @@ export interface CedgeAaaFeatureTemplateRadiusServerGroupServer {
      *   - Range: `1`-`65534`
      *   - Default value: `1813`
      */
-    accountingPort?: pulumi.Input<number>;
+    accountingPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    accountingPortVariable?: pulumi.Input<string>;
+    accountingPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IP address of Radius server
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set Authentication port to use to connect to Radius server
      *   - Range: `1`-`65534`
      *   - Default value: `1812`
      */
-    authenticationPort?: pulumi.Input<number>;
+    authenticationPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationPortVariable?: pulumi.Input<string>;
+    authenticationPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Type of encyption. To be used for type 6
      *   - Choices: `6`, `7`
      */
-    encryptionType?: pulumi.Input<string>;
+    encryptionType?: pulumi.Input<string | undefined>;
     /**
      * Set the Radius server shared key
      */
-    key?: pulumi.Input<string>;
+    key?: pulumi.Input<string | undefined>;
     /**
      * key type
      *   - Choices: `key`, `pac`
      *   - Default value: `key`
      */
-    keyType?: pulumi.Input<string>;
+    keyType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyTypeVariable?: pulumi.Input<string>;
+    keyTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure how many times to contact this Radius server
      *   - Range: `1`-`100`
      *   - Default value: `3`
      */
-    retransmit?: pulumi.Input<number>;
+    retransmit?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    retransmitVariable?: pulumi.Input<string>;
+    retransmitVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Radius server shared type 7 encrypted key
      */
-    secretKey?: pulumi.Input<string>;
+    secretKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secretKeyVariable?: pulumi.Input<string>;
+    secretKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long to wait for replies from the Radius server
      *   - Range: `1`-`1000`
      *   - Default value: `5`
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeoutVariable?: pulumi.Input<string>;
+    timeoutVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateTacacsServerGroup {
     /**
      * Set TACACS server Group Name
      */
-    groupName?: pulumi.Input<string>;
+    groupName?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the TACACS server
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateTacacsServerGroupServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateTacacsServerGroupServer>[] | undefined>;
     /**
      * Set interface to use to reach TACACS server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which TACACS server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateTacacsServerGroupServer {
     /**
      * Set IP address of TACACS server
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Type of encyption. To be used for type 6
      *   - Choices: `6`, `7`
      */
-    encryptionType?: pulumi.Input<string>;
+    encryptionType?: pulumi.Input<string | undefined>;
     /**
      * Set the TACACS server shared key
      */
-    key?: pulumi.Input<string>;
+    key?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portVariable?: pulumi.Input<string>;
+    portVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the TACACS server shared type 7 encrypted key
      */
-    secretKey?: pulumi.Input<string>;
+    secretKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secretKeyVariable?: pulumi.Input<string>;
+    secretKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long to wait for replies from the TACACS server
      *   - Range: `1`-`1000`
      *   - Default value: `5`
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeoutVariable?: pulumi.Input<string>;
+    timeoutVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateUser {
     /**
      * Set the username
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the user password
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Set Privilege Level for this user
      *   - Choices: `1`, `15`
      *   - Default value: `15`
      */
-    privilegeLevel?: pulumi.Input<string>;
+    privilegeLevel?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privilegeLevelVariable?: pulumi.Input<string>;
+    privilegeLevelVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the user scrypt password/hash
      */
-    secret?: pulumi.Input<string>;
+    secret?: pulumi.Input<string | undefined>;
     /**
      * List of RSA public-keys per user
      */
-    sshPubkeys?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateUserSshPubkey>[]>;
+    sshPubkeys?: pulumi.Input<pulumi.Input<inputs.CedgeAaaFeatureTemplateUserSshPubkey>[] | undefined>;
 }
 
 export interface CedgeAaaFeatureTemplateUserSshPubkey {
     /**
      * Set the RSA key string
      */
-    keyString?: pulumi.Input<string>;
+    keyString?: pulumi.Input<string | undefined>;
     /**
      * Only RSA is supported
      */
-    keyType?: pulumi.Input<string>;
+    keyType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyTypeVariable?: pulumi.Input<string>;
+    keyTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CedgeIgmpFeatureTemplateInterface {
     /**
      * Configure static joins
      */
-    joinGroups?: pulumi.Input<pulumi.Input<inputs.CedgeIgmpFeatureTemplateInterfaceJoinGroup>[]>;
+    joinGroups?: pulumi.Input<pulumi.Input<inputs.CedgeIgmpFeatureTemplateInterfaceJoinGroup>[] | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CedgeIgmpFeatureTemplateInterfaceJoinGroup {
     /**
      * Set group address
      */
-    groupAddress?: pulumi.Input<string>;
+    groupAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    groupAddressVariable?: pulumi.Input<string>;
+    groupAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set source address
      */
-    source?: pulumi.Input<string>;
+    source?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceVariable?: pulumi.Input<string>;
+    sourceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgePimFeatureTemplateInterface {
     /**
      * Set interface name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
      *   - Range: `10`-`600`
      *   - Default value: `60`
      */
-    joinPruneInterval?: pulumi.Input<number>;
+    joinPruneInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    joinPruneIntervalVariable?: pulumi.Input<string>;
+    joinPruneIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set PIM query interval
      *   - Range: `1`-`18725`
      *   - Default value: `30`
      */
-    queryInterval?: pulumi.Input<number>;
+    queryInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    queryIntervalVariable?: pulumi.Input<string>;
+    queryIntervalVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgePimFeatureTemplateRpAddress {
     /**
      * Set Static RP Access List
      */
-    accessList?: pulumi.Input<string>;
+    accessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessListVariable?: pulumi.Input<string>;
+    accessListVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Static RP IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set override flag
      *   - Default value: `false`
      */
-    override?: pulumi.Input<boolean>;
+    override?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overrideVariable?: pulumi.Input<string>;
+    overrideVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgePimFeatureTemplateRpAnnounceField {
     /**
      * Set RP Announce Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set RP Announce Scope
      *   - Range: `1`-`255`
      */
-    scope?: pulumi.Input<number>;
+    scope?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    scopeVariable?: pulumi.Input<string>;
+    scopeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CedgePimFeatureTemplateRpCandidate {
     /**
      * Set IP Access List for PIM RP Candidate
      */
-    accessList?: pulumi.Input<string>;
+    accessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessListVariable?: pulumi.Input<string>;
+    accessListVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Autonomic-Networking virtual interface
      */
-    interface?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP candidate advertisement interval
      *   - Range: `1`-`16383`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set RP candidate priority
      *   - Range: `0`-`255`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CellularControllerFeatureTemplateDataProfile {
@@ -1011,40 +1011,40 @@ export interface CellularControllerFeatureTemplateDataProfile {
      * Set attach profile
      *   - Range: `1`-`16`
      */
-    attachProfile?: pulumi.Input<number>;
+    attachProfile?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    attachProfileVariable?: pulumi.Input<string>;
+    attachProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Set data profile
      *   - Range: `1`-`16`
      */
-    dataProfile?: pulumi.Input<number>;
+    dataProfile?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dataProfileVariable?: pulumi.Input<string>;
+    dataProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set slot number
      *   - Range: `0`-`1`
      */
-    slotNumber?: pulumi.Input<number>;
+    slotNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    slotNumberVariable?: pulumi.Input<string>;
+    slotNumberVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CentralizedPolicyDefinition {
     /**
      * List of entries
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.CentralizedPolicyDefinitionEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.CentralizedPolicyDefinitionEntry>[] | undefined>;
     /**
      * Policy definition ID
      */
@@ -1057,7 +1057,7 @@ export interface CentralizedPolicyDefinition {
     /**
      * Policy definition version
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface CentralizedPolicyDefinitionEntry {
@@ -1065,74 +1065,74 @@ export interface CentralizedPolicyDefinitionEntry {
      * Direction
      *   - Choices: `service`, `tunnel`, `all`, `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * List of region IDs
      */
-    regionIds?: pulumi.Input<pulumi.Input<string>[]>;
+    regionIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of region list IDs
      */
-    regionListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    regionListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of region list versions
      */
-    regionListVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    regionListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of site list IDs
      */
-    siteListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    siteListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of site list versions
      */
-    siteListVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    siteListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of VPN list IDs
      */
-    vpnListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    vpnListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of VPN list versions
      */
-    vpnListVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    vpnListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface CflowdPolicyDefinitionCollector {
     /**
      * BFD metrics exporting
      */
-    bfdMetricsExporting?: pulumi.Input<boolean>;
+    bfdMetricsExporting?: pulumi.Input<boolean | undefined>;
     /**
      * Export spreading
      *   - Choices: `enable`, `disable`
      */
-    exportSpreading?: pulumi.Input<string>;
+    exportSpreading?: pulumi.Input<string | undefined>;
     /**
      * Exporting interval
      */
-    exportingInterval?: pulumi.Input<number>;
+    exportingInterval?: pulumi.Input<number | undefined>;
     /**
      * IP address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Port
      *   - Range: `1024`-`65535`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * Source interface
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Transport protocol
      *   - Choices: `transportTcp`, `transportUdp`
      */
-    transport?: pulumi.Input<string>;
+    transport?: pulumi.Input<string | undefined>;
     /**
      * VPN ID
      *   - Range: `1`-`65535`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CiscoBfdFeatureTemplateColor {
@@ -1140,54 +1140,54 @@ export interface CiscoBfdFeatureTemplateColor {
      * Set color that identifies the WAN transport tunnel
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      */
-    color?: pulumi.Input<string>;
+    color?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    colorVariable?: pulumi.Input<string>;
+    colorVariable?: pulumi.Input<string | undefined>;
     /**
      * Set BFD Default DSCP value for tloc color
      *   - Range: `0`-`63`
      *   - Default value: `48`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dscpVariable?: pulumi.Input<string>;
+    dscpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often BFD sends Hello packets
      *   - Range: `100`-`300000`
      *   - Default value: `1000`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how many Hello packet intervals to wait before declaring that a tunnel has failed
      *   - Range: `1`-`60`
      *   - Default value: `7`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Control automatic path MTU discovery
      *   - Default value: `true`
      */
-    pmtuDiscovery?: pulumi.Input<boolean>;
+    pmtuDiscovery?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    pmtuDiscoveryVariable?: pulumi.Input<string>;
+    pmtuDiscoveryVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateAddressFamily {
@@ -1195,66 +1195,66 @@ export interface CiscoBgpFeatureTemplateAddressFamily {
      * BGP Default Information Originate
      *   - Default value: `false`
      */
-    defaultInformationOriginate?: pulumi.Input<boolean>;
+    defaultInformationOriginate?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    defaultInformationOriginateVariable?: pulumi.Input<string>;
+    defaultInformationOriginateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set BGP address family
      *   - Choices: `ipv4-unicast`, `ipv6-unicast`
      */
-    familyType?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
     /**
      * Aggregate prefixes in specific range
      */
-    ipv4AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddress>[]>;
+    ipv4AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddress>[] | undefined>;
     /**
      * Configure the networks for BGP to advertise
      */
-    ipv4Networks?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv4Network>[]>;
+    ipv4Networks?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv4Network>[] | undefined>;
     /**
      * IPv6 Aggregate prefixes in specific range
      */
-    ipv6AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddress>[]>;
+    ipv6AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddress>[] | undefined>;
     /**
      * Configure the networks for BGP to advertise
      */
-    ipv6Networks?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv6Network>[]>;
+    ipv6Networks?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyIpv6Network>[] | undefined>;
     /**
      * Set maximum number of parallel IBGP paths for multipath load sharing
      *   - Range: `0`-`32`
      */
-    maximumPaths?: pulumi.Input<number>;
+    maximumPaths?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumPathsVariable?: pulumi.Input<string>;
+    maximumPathsVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Redistribute routes into BGP
      */
-    redistributeRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyRedistributeRoute>[]>;
+    redistributeRoutes?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamilyRedistributeRoute>[] | undefined>;
     /**
      * Filter
      *   - Default value: `false`
      */
-    tableMapFilter?: pulumi.Input<boolean>;
+    tableMapFilter?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tableMapFilterVariable?: pulumi.Input<string>;
+    tableMapFilterVariable?: pulumi.Input<string | undefined>;
     /**
      * Map external entry attributes into routing table
      */
-    tableMapPolicy?: pulumi.Input<string>;
+    tableMapPolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tableMapPolicyVariable?: pulumi.Input<string>;
+    tableMapPolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddress {
@@ -1262,47 +1262,47 @@ export interface CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddress {
      * Set AS set path information
      *   - Default value: `false`
      */
-    asSetPath?: pulumi.Input<boolean>;
+    asSetPath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asSetPathVariable?: pulumi.Input<string>;
+    asSetPathVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the prefixes to aggregate
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Filter out more specific routes from updates
      *   - Default value: `false`
      */
-    summaryOnly?: pulumi.Input<boolean>;
+    summaryOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    summaryOnlyVariable?: pulumi.Input<string>;
+    summaryOnlyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateAddressFamilyIpv4Network {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the prefixes for BGP to announce
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddress {
@@ -1310,222 +1310,222 @@ export interface CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddress {
      * Set AS set path information
      *   - Default value: `false`
      */
-    asSetPath?: pulumi.Input<boolean>;
+    asSetPath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asSetPathVariable?: pulumi.Input<string>;
+    asSetPathVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the IPv6 prefixes to aggregate
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Filter out more specific routes from updates
      *   - Default value: `false`
      */
-    summaryOnly?: pulumi.Input<boolean>;
+    summaryOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    summaryOnlyVariable?: pulumi.Input<string>;
+    summaryOnlyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateAddressFamilyIpv6Network {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the prefixes for BGP to announce
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateAddressFamilyRedistributeRoute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `ospfv3`, `omp`, `eigrp`, `nat`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure policy to apply to prefixes received from BGP neighbor
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv4Neighbor {
     /**
      * Set neighbor address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4NeighborAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4NeighborAddressFamily>[] | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * As Number
      *   - Range: `1`-`10`
      */
-    allowAsIn?: pulumi.Input<number>;
+    allowAsIn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    allowAsInVariable?: pulumi.Input<string>;
+    allowAsInVariable?: pulumi.Input<string | undefined>;
     /**
      * As Override
      *   - Default value: `false`
      */
-    asOverride?: pulumi.Input<boolean>;
+    asOverride?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asOverrideVariable?: pulumi.Input<string>;
+    asOverrideVariable?: pulumi.Input<string | undefined>;
     /**
      * Set description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TTL value for peers that are not directly connected
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    ebgpMultihop?: pulumi.Input<number>;
+    ebgpMultihop?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ebgpMultihopVariable?: pulumi.Input<string>;
+    ebgpMultihopVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
      *   - Range: `0`-`65535`
      */
-    holdtime?: pulumi.Input<number>;
+    holdtime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdtimeVariable?: pulumi.Input<string>;
+    holdtimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often to advertise keepalive messages to BGP peer
      *   - Range: `0`-`65535`
      */
-    keepalive?: pulumi.Input<number>;
+    keepalive?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveVariable?: pulumi.Input<string>;
+    keepaliveVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      */
-    nextHopSelf?: pulumi.Input<boolean>;
+    nextHopSelf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nextHopSelfVariable?: pulumi.Input<string>;
+    nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<string>;
+    remoteAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Send community attribute
      *   - Default value: `true`
      */
-    sendCommunity?: pulumi.Input<boolean>;
+    sendCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendCommunityVariable?: pulumi.Input<string>;
+    sendCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send extended community attribute
      *   - Default value: `true`
      */
-    sendExtCommunity?: pulumi.Input<boolean>;
+    sendExtCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendExtCommunityVariable?: pulumi.Input<string>;
+    sendExtCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send label
      *   - Default value: `false`
      */
-    sendLabel?: pulumi.Input<boolean>;
+    sendLabel?: pulumi.Input<boolean | undefined>;
     /**
      * Send label
      *   - Default value: `false`
      */
-    sendLabelExplicit?: pulumi.Input<boolean>;
+    sendLabelExplicit?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLabelExplicitVariable?: pulumi.Input<string>;
+    sendLabelExplicitVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sendLabelVariable?: pulumi.Input<string>;
+    sendLabelVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable a BGP neighbor
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IP address of interface for TCP connection to BGP neighbor
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv4NeighborAddressFamily {
@@ -1533,51 +1533,51 @@ export interface CiscoBgpFeatureTemplateIpv4NeighborAddressFamily {
      * Set BGP address family
      *   - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
      */
-    familyType?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer
      *   - Range: `0`-`4294967295`
      */
-    maximumPrefixes?: pulumi.Input<number>;
+    maximumPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Set when to restart BGP connection if threshold is exceeded
      *   - Range: `0`-`65535`
      */
-    maximumPrefixesRestart?: pulumi.Input<number>;
+    maximumPrefixesRestart?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesRestartVariable?: pulumi.Input<string>;
+    maximumPrefixesRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold at which to generate a warning message
      *   - Range: `0`-`100`
      */
-    maximumPrefixesThreshold?: pulumi.Input<number>;
+    maximumPrefixesThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesThresholdVariable?: pulumi.Input<string>;
+    maximumPrefixesThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesVariable?: pulumi.Input<string>;
+    maximumPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Display only a warning message when threshold is exceeded
      *   - Default value: `false`
      */
-    maximumPrefixesWarningOnly?: pulumi.Input<boolean>;
+    maximumPrefixesWarningOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesWarningOnlyVariable?: pulumi.Input<string>;
+    maximumPrefixesWarningOnlyVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select route policy to apply to prefixes received from BGP neighbor
      */
-    routePolicies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicy>[]>;
+    routePolicies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicy>[] | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicy {
@@ -1585,224 +1585,224 @@ export interface CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicy {
      * Set direction for applying route policy
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure name of route policy
      */
-    policyName?: pulumi.Input<string>;
+    policyName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    policyNameVariable?: pulumi.Input<string>;
+    policyNameVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv4RouteTarget {
     /**
      * Export Target-VPN community for IPV4
      */
-    exports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTargetExport>[]>;
+    exports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTargetExport>[] | undefined>;
     /**
      * Import Target-VPN community for IPV4
      */
-    imports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTargetImport>[]>;
+    imports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv4RouteTargetImport>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * VPN ID for IPv4
      *   - Range: `1`-`65527`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv4RouteTargetExport {
     /**
      * asn-ip
      */
-    asnIp?: pulumi.Input<string>;
+    asnIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asnIpVariable?: pulumi.Input<string>;
+    asnIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv4RouteTargetImport {
     /**
      * asn-ip
      */
-    asnIp?: pulumi.Input<string>;
+    asnIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asnIpVariable?: pulumi.Input<string>;
+    asnIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv6Neighbor {
     /**
      * Set neighbor address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6NeighborAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6NeighborAddressFamily>[] | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * As Number
      *   - Range: `1`-`10`
      */
-    allowAsIn?: pulumi.Input<number>;
+    allowAsIn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    allowAsInVariable?: pulumi.Input<string>;
+    allowAsInVariable?: pulumi.Input<string | undefined>;
     /**
      * As Override
      *   - Default value: `false`
      */
-    asOverride?: pulumi.Input<boolean>;
+    asOverride?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asOverrideVariable?: pulumi.Input<string>;
+    asOverrideVariable?: pulumi.Input<string | undefined>;
     /**
      * Set description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TTL value for peers that are not directly connected
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    ebgpMultihop?: pulumi.Input<number>;
+    ebgpMultihop?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ebgpMultihopVariable?: pulumi.Input<string>;
+    ebgpMultihopVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
      *   - Range: `0`-`65535`
      */
-    holdtime?: pulumi.Input<number>;
+    holdtime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdtimeVariable?: pulumi.Input<string>;
+    holdtimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often to advertise keepalive messages to BGP peer
      *   - Range: `0`-`65535`
      */
-    keepalive?: pulumi.Input<number>;
+    keepalive?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveVariable?: pulumi.Input<string>;
+    keepaliveVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      */
-    nextHopSelf?: pulumi.Input<boolean>;
+    nextHopSelf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nextHopSelfVariable?: pulumi.Input<string>;
+    nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<string>;
+    remoteAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Send community attribute
      *   - Default value: `true`
      */
-    sendCommunity?: pulumi.Input<boolean>;
+    sendCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendCommunityVariable?: pulumi.Input<string>;
+    sendCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send extended community attribute
      *   - Default value: `true`
      */
-    sendExtCommunity?: pulumi.Input<boolean>;
+    sendExtCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendExtCommunityVariable?: pulumi.Input<string>;
+    sendExtCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send label
      *   - Default value: `false`
      */
-    sendLabel?: pulumi.Input<boolean>;
+    sendLabel?: pulumi.Input<boolean | undefined>;
     /**
      * Send label Explicit
      *   - Default value: `false`
      */
-    sendLabelExplicit?: pulumi.Input<boolean>;
+    sendLabelExplicit?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLabelExplicitVariable?: pulumi.Input<string>;
+    sendLabelExplicitVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sendLabelVariable?: pulumi.Input<string>;
+    sendLabelVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable a BGP neighbor
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IP address of interface for TCP connection to BGP neighbor
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv6NeighborAddressFamily {
@@ -1810,53 +1810,53 @@ export interface CiscoBgpFeatureTemplateIpv6NeighborAddressFamily {
      * Set BGP address family
      *   - Choices: `ipv6-unicast`
      */
-    familyType?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer
      *   - Range: `0`-`4294967295`
      *   - Default value: `0`
      */
-    maximumPrefixes?: pulumi.Input<number>;
+    maximumPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Set when to restart BGP connection if threshold is exceeded
      *   - Range: `0`-`65535`
      */
-    maximumPrefixesRestart?: pulumi.Input<number>;
+    maximumPrefixesRestart?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesRestartVariable?: pulumi.Input<string>;
+    maximumPrefixesRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold at which to generate a warning message
      *   - Range: `0`-`100`
      *   - Default value: `0`
      */
-    maximumPrefixesThreshold?: pulumi.Input<number>;
+    maximumPrefixesThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesThresholdVariable?: pulumi.Input<string>;
+    maximumPrefixesThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesVariable?: pulumi.Input<string>;
+    maximumPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Display only a warning message when threshold is exceeded
      *   - Default value: `false`
      */
-    maximumPrefixesWarningOnly?: pulumi.Input<boolean>;
+    maximumPrefixesWarningOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    maximumPrefixesWarningOnlyVariable?: pulumi.Input<string>;
+    maximumPrefixesWarningOnlyVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select route policy to apply to prefixes received from BGP neighbor
      */
-    routePolicies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicy>[]>;
+    routePolicies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicy>[] | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicy {
@@ -1864,159 +1864,159 @@ export interface CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicy {
      * Set direction for applying route policy
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure name of route policy
      */
-    policyName?: pulumi.Input<string>;
+    policyName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    policyNameVariable?: pulumi.Input<string>;
+    policyNameVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv6RouteTarget {
     /**
      * Export Target-VPN community for IPV6
      */
-    exports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTargetExport>[]>;
+    exports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTargetExport>[] | undefined>;
     /**
      * Import Target-VPN community for IPV6
      */
-    imports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTargetImport>[]>;
+    imports?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTargetImport>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * VPN ID for IPv6
      *   - Range: `1`-`65527`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv6RouteTargetExport {
     /**
      * asn-ip
      */
-    asnIp?: pulumi.Input<string>;
+    asnIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asnIpVariable?: pulumi.Input<string>;
+    asnIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateIpv6RouteTargetImport {
     /**
      * asn-ip
      */
-    asnIp?: pulumi.Input<string>;
+    asnIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asnIpVariable?: pulumi.Input<string>;
+    asnIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoBgpFeatureTemplateMplsInterface {
     /**
      * Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoDhcpServerFeatureTemplateOption {
     /**
      * Set ASCII value
      */
-    ascii?: pulumi.Input<string>;
+    ascii?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asciiVariable?: pulumi.Input<string>;
+    asciiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set HEX value
      */
-    hex?: pulumi.Input<string>;
+    hex?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hexVariable?: pulumi.Input<string>;
+    hexVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set ip address
      */
-    ipAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    ipAddresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set Option Code
      *   - Range: `1`-`254`
      */
-    optionCode?: pulumi.Input<number>;
+    optionCode?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    optionCodeVariable?: pulumi.Input<string>;
+    optionCodeVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoDhcpServerFeatureTemplateStaticLease {
     /**
      * Set client’s hostname
      */
-    hostname?: pulumi.Input<string>;
+    hostname?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameVariable?: pulumi.Input<string>;
+    hostnameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set client’s static IP address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MAC address of client
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoLoggingFeatureTemplateIpv4Server {
@@ -2024,68 +2024,68 @@ export interface CiscoLoggingFeatureTemplateIpv4Server {
      * Define custom profile
      *   - Default value: `false`
      */
-    customProfile?: pulumi.Input<boolean>;
+    customProfile?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    customProfileVariable?: pulumi.Input<string>;
+    customProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable TLS
      *   - Default value: `false`
      */
-    enableTls?: pulumi.Input<boolean>;
+    enableTls?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableTlsVariable?: pulumi.Input<string>;
+    enableTlsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hostname or IPv4 address of server
      */
-    hostnameIp?: pulumi.Input<string>;
+    hostnameIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameIpVariable?: pulumi.Input<string>;
+    hostnameIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set logging level for messages logged to server
      *   - Choices: `information`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
      *   - Default value: `information`
      */
-    loggingLevel?: pulumi.Input<string>;
+    loggingLevel?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    loggingLevelVariable?: pulumi.Input<string>;
+    loggingLevelVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure a TLS profile
      */
-    profile?: pulumi.Input<string>;
+    profile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profileVariable?: pulumi.Input<string>;
+    profileVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface to use to reach syslog server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which syslog server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoLoggingFeatureTemplateIpv6Server {
@@ -2093,68 +2093,68 @@ export interface CiscoLoggingFeatureTemplateIpv6Server {
      * Define custom profile
      *   - Default value: `false`
      */
-    customProfile?: pulumi.Input<boolean>;
+    customProfile?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    customProfileVariable?: pulumi.Input<string>;
+    customProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable TLS
      *   - Default value: `false`
      */
-    enableTls?: pulumi.Input<boolean>;
+    enableTls?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableTlsVariable?: pulumi.Input<string>;
+    enableTlsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IPv6 hostname or IPv6 address of server
      */
-    hostnameIp?: pulumi.Input<string>;
+    hostnameIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameIpVariable?: pulumi.Input<string>;
+    hostnameIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set logging level for messages logged to server
      *   - Choices: `information`, `debugging`, `notification`, `warn`, `error`, `critical`, `alert`, `emergency`
      *   - Default value: `information`
      */
-    loggingLevel?: pulumi.Input<string>;
+    loggingLevel?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    loggingLevelVariable?: pulumi.Input<string>;
+    loggingLevelVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure a TLS profile
      */
-    profile?: pulumi.Input<string>;
+    profile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profileVariable?: pulumi.Input<string>;
+    profileVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface to use to reach syslog server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which syslog server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoLoggingFeatureTemplateTlsProfile {
@@ -2162,37 +2162,37 @@ export interface CiscoLoggingFeatureTemplateTlsProfile {
      * Authentication Type
      *   - Choices: `Server`, `Mutual`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ciphersuiteListVariable?: pulumi.Input<string>;
+    ciphersuiteListVariable?: pulumi.Input<string | undefined>;
     /**
      * Syslog secure server ciphersuites. Possible values: `aes-128-cbc-sha`, `aes-256-cbc-sha`, `dhe-aes-cbc-sha2`, `dhe-aes-gcm-sha2`, `ecdhe-ecdsa-aes-gcm-sha2`, `ecdhe-rsa-aes-cbc-sha2`, `ecdhe-rsa-aes-gcm-sha2`, `rsa-aes-cbc-sha2`, `rsa-aes-gcm-sha2`
      */
-    ciphersuiteLists?: pulumi.Input<pulumi.Input<string>[]>;
+    ciphersuiteLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Specify the name of the TLS profile
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * TLS Version
      *   - Choices: `TLSv1.1`, `TLSv1.2`
      *   - Default value: `TLSv1.1`
      */
-    version?: pulumi.Input<string>;
+    version?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    versionVariable?: pulumi.Input<string>;
+    versionVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoNtpFeatureTemplateAuthenticationKey {
@@ -2200,23 +2200,23 @@ export interface CiscoNtpFeatureTemplateAuthenticationKey {
      * MD5 authentication key ID
      *   - Range: `1`-`65535`
      */
-    id?: pulumi.Input<number>;
+    id?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    idVariable?: pulumi.Input<string>;
+    idVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Enter cleartext or AES-encrypted MD5 authentication key
      */
-    value?: pulumi.Input<string>;
+    value?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    valueVariable?: pulumi.Input<string>;
+    valueVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoNtpFeatureTemplateServer {
@@ -2224,60 +2224,60 @@ export interface CiscoNtpFeatureTemplateServer {
      * Set authentication key for the server
      *   - Range: `1`-`65535`
      */
-    authenticationKeyId?: pulumi.Input<number>;
+    authenticationKeyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyIdVariable?: pulumi.Input<string>;
+    authenticationKeyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hostname or IP address of server
      */
-    hostnameIp?: pulumi.Input<string>;
+    hostnameIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameIpVariable?: pulumi.Input<string>;
+    hostnameIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefer this NTP server
      *   - Default value: `false`
      */
-    prefer?: pulumi.Input<boolean>;
+    prefer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    preferVariable?: pulumi.Input<string>;
+    preferVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface to use to reach NTP server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NTP version
      *   - Range: `1`-`4`
      *   - Default value: `4`
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    versionVariable?: pulumi.Input<string>;
+    versionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which NTP server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOmpFeatureTemplateAdvertiseIpv4Route {
@@ -2285,32 +2285,32 @@ export interface CiscoOmpFeatureTemplateAdvertiseIpv4Route {
      * Advertise OSPF external routes
      *   - Choices: `external`
      */
-    advertiseExternalOspf?: pulumi.Input<string>;
+    advertiseExternalOspf?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    advertiseExternalOspfVariable?: pulumi.Input<string>;
+    advertiseExternalOspfVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set routes to advertise
      *   - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `eigrp`, `lisp`, `isis`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOmpFeatureTemplateAdvertiseIpv6Route {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set routes to advertise
      *   - Choices: `bgp`, `ospf`, `connected`, `static`, `eigrp`, `lisp`, `isis`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfFeatureTemplateArea {
@@ -2318,191 +2318,191 @@ export interface CiscoOspfFeatureTemplateArea {
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoOspfFeatureTemplateAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoOspfFeatureTemplateAreaInterface>[] | undefined>;
     /**
      * NSSA area
      */
-    nssa?: pulumi.Input<boolean>;
+    nssa?: pulumi.Input<boolean | undefined>;
     /**
      * Do not inject interarea routes into NSSA
      *   - Default value: `false`
      */
-    nssaNoSummary?: pulumi.Input<boolean>;
+    nssaNoSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nssaNoSummaryVariable?: pulumi.Input<string>;
+    nssaNoSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.CiscoOspfFeatureTemplateAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.CiscoOspfFeatureTemplateAreaRange>[] | undefined>;
     /**
      * Stub area
      */
-    stub?: pulumi.Input<boolean>;
+    stub?: pulumi.Input<boolean | undefined>;
     /**
      * Do not inject interarea routes into stub
      *   - Default value: `false`
      */
-    stubNoSummary?: pulumi.Input<boolean>;
+    stubNoSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    stubNoSummaryVariable?: pulumi.Input<string>;
+    stubNoSummaryVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfFeatureTemplateAreaInterface {
     /**
      * Set MD5 authentication key
      */
-    authenticationMessageDigestKey?: pulumi.Input<string>;
+    authenticationMessageDigestKey?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 message digest key
      *   - Range: `1`-`255`
      */
-    authenticationMessageDigestKeyId?: pulumi.Input<number>;
+    authenticationMessageDigestKeyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationMessageDigestKeyIdVariable?: pulumi.Input<string>;
+    authenticationMessageDigestKeyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationMessageDigestKeyVariable?: pulumi.Input<string>;
+    authenticationMessageDigestKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication type
      *   - Choices: `simple`, `message-digest`, `null`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      *   - Default value: `broadcast`
      */
-    network?: pulumi.Input<string>;
+    network?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkVariable?: pulumi.Input<string>;
+    networkVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router’s priority to be elected as designated router
      *   - Range: `0`-`255`
      *   - Default value: `1`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    retransmitInterval?: pulumi.Input<number>;
+    retransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    retransmitIntervalVariable?: pulumi.Input<string>;
+    retransmitIntervalVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfFeatureTemplateAreaRange {
     /**
      * Set matching prefix
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoOspfFeatureTemplateMaxMetricRouterLsa {
@@ -2510,20 +2510,20 @@ export interface CiscoOspfFeatureTemplateMaxMetricRouterLsa {
      * Set the router LSA advertisement type
      *   - Choices: `administrative`, `on-startup`
      */
-    adType?: pulumi.Input<string>;
+    adType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set how long to advertise maximum metric after router starts up
      *   - Range: `5`-`86400`
      */
-    time?: pulumi.Input<number>;
+    time?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeVariable?: pulumi.Input<string>;
+    timeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfFeatureTemplateRedistribute {
@@ -2531,32 +2531,32 @@ export interface CiscoOspfFeatureTemplateRedistribute {
      * Enable NAT DIA for redistributed routes
      *   - Default value: `true`
      */
-    natDia?: pulumi.Input<boolean>;
+    natDia?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natDiaVariable?: pulumi.Input<string>;
+    natDiaVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the protocol
      *   - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Set route policy to apply to redistributed routes
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfFeatureTemplateRoutePolicy {
@@ -2564,23 +2564,23 @@ export interface CiscoOspfFeatureTemplateRoutePolicy {
      * Set direction to apply policy
      *   - Choices: `in`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    directionVariable?: pulumi.Input<string>;
+    directionVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of route policy
      */
-    policyName?: pulumi.Input<string>;
+    policyName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    policyNameVariable?: pulumi.Input<string>;
+    policyNameVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv4Area {
@@ -2588,199 +2588,199 @@ export interface CiscoOspfv3FeatureTemplateIpv4Area {
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv4AreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv4AreaInterface>[] | undefined>;
     /**
      * Area Type Normal
      *   - Default value: `false`
      */
-    normal?: pulumi.Input<boolean>;
+    normal?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    normalVariable?: pulumi.Input<string>;
+    normalVariable?: pulumi.Input<string | undefined>;
     /**
      * NSSA area
      */
-    nssa?: pulumi.Input<boolean>;
+    nssa?: pulumi.Input<boolean | undefined>;
     /**
      * Do not inject interarea routes into NSSA
      *   - Default value: `false`
      */
-    nssaNoSummary?: pulumi.Input<boolean>;
+    nssaNoSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nssaNoSummaryVariable?: pulumi.Input<string>;
+    nssaNoSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv4AreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv4AreaRange>[] | undefined>;
     /**
      * Stub area
      */
-    stub?: pulumi.Input<boolean>;
+    stub?: pulumi.Input<boolean | undefined>;
     /**
      * Do not inject interarea routes into stub
      *   - Default value: `false`
      */
-    stubNoSummary?: pulumi.Input<boolean>;
+    stubNoSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    stubNoSummaryVariable?: pulumi.Input<string>;
+    stubNoSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Always Translate LSAs on this ABR
      *   - Choices: `always`
      */
-    translate?: pulumi.Input<string>;
+    translate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateVariable?: pulumi.Input<string>;
+    translateVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv4AreaInterface {
     /**
      * Set OSPF interface authentication key
      */
-    authenticationKey?: pulumi.Input<string>;
+    authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication type
      *   - Choices: `md5`, `sha1`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
      */
-    ipsecSpi?: pulumi.Input<number>;
+    ipsecSpi?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecSpiVariable?: pulumi.Input<string>;
+    ipsecSpiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      *   - Default value: `broadcast`
      */
-    network?: pulumi.Input<string>;
+    network?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkVariable?: pulumi.Input<string>;
+    networkVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    retransmitInterval?: pulumi.Input<number>;
+    retransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    retransmitIntervalVariable?: pulumi.Input<string>;
+    retransmitIntervalVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv4AreaRange {
     /**
      * Set Matching Prefix
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsa {
@@ -2788,20 +2788,20 @@ export interface CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsa {
      * Set the router LSA advertisement type
      *   - Choices: `on-startup`
      */
-    adType?: pulumi.Input<string>;
+    adType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set how long to advertise maximum metric after router starts up
      *   - Range: `5`-`86400`
      */
-    time?: pulumi.Input<number>;
+    time?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeVariable?: pulumi.Input<string>;
+    timeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv4Redistribute {
@@ -2809,32 +2809,32 @@ export interface CiscoOspfv3FeatureTemplateIpv4Redistribute {
      * Enable NAT DIA for redistributed routes
      *   - Default value: `true`
      */
-    natDia?: pulumi.Input<boolean>;
+    natDia?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natDiaVariable?: pulumi.Input<string>;
+    natDiaVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the protocol
      *   - Choices: `bgp`, `connected`, `eigrp`, `isis`, `lisp`, `nat-route`, `omp`, `static`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Set route policy to apply to redistributed routes
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv6Area {
@@ -2842,199 +2842,199 @@ export interface CiscoOspfv3FeatureTemplateIpv6Area {
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv6AreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv6AreaInterface>[] | undefined>;
     /**
      * Area Type Normal
      *   - Default value: `false`
      */
-    normal?: pulumi.Input<boolean>;
+    normal?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    normalVariable?: pulumi.Input<string>;
+    normalVariable?: pulumi.Input<string | undefined>;
     /**
      * NSSA area
      */
-    nssa?: pulumi.Input<boolean>;
+    nssa?: pulumi.Input<boolean | undefined>;
     /**
      * Do not inject interarea routes into NSSA
      *   - Default value: `false`
      */
-    nssaNoSummary?: pulumi.Input<boolean>;
+    nssaNoSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nssaNoSummaryVariable?: pulumi.Input<string>;
+    nssaNoSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv6AreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.CiscoOspfv3FeatureTemplateIpv6AreaRange>[] | undefined>;
     /**
      * Stub area
      */
-    stub?: pulumi.Input<boolean>;
+    stub?: pulumi.Input<boolean | undefined>;
     /**
      * Do not inject interarea routes into stub
      *   - Default value: `false`
      */
-    stubNoSummary?: pulumi.Input<boolean>;
+    stubNoSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    stubNoSummaryVariable?: pulumi.Input<string>;
+    stubNoSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Always translate LSAs on this ABR
      *   - Choices: `always`
      */
-    translate?: pulumi.Input<string>;
+    translate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateVariable?: pulumi.Input<string>;
+    translateVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv6AreaInterface {
     /**
      * Set OSPF interface authentication key
      */
-    authenticationKey?: pulumi.Input<string>;
+    authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication type
      *   - Choices: `md5`, `sha1`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
      */
-    ipsecSpi?: pulumi.Input<number>;
+    ipsecSpi?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecSpiVariable?: pulumi.Input<string>;
+    ipsecSpiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      *   - Default value: `broadcast`
      */
-    network?: pulumi.Input<string>;
+    network?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkVariable?: pulumi.Input<string>;
+    networkVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    retransmitInterval?: pulumi.Input<number>;
+    retransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    retransmitIntervalVariable?: pulumi.Input<string>;
+    retransmitIntervalVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv6AreaRange {
     /**
      * Set Matching Prefix
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsa {
@@ -3042,43 +3042,43 @@ export interface CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsa {
      * Set the router LSA advertisement type
      *   - Choices: `on-startup`
      */
-    adType?: pulumi.Input<string>;
+    adType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set how long to advertise maximum metric after router starts up
      */
-    time?: pulumi.Input<number>;
+    time?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeVariable?: pulumi.Input<string>;
+    timeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoOspfv3FeatureTemplateIpv6Redistribute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the protocol
      *   - Choices: `bgp`, `connected`, `eigrp`, `isis`, `lisp`, `nat-route`, `omp`, `static`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Set route policy to apply to redistributed routes
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSecureInternetGatewayFeatureTemplateInterface {
@@ -3087,484 +3087,484 @@ export interface CiscoSecureInternetGatewayFeatureTemplateInterface {
      *   - Choices: `sig`
      *   - Default value: `sig`
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Auto Tunnel Mode
      *   - Default value: `false`
      */
-    autoTunnelMode?: pulumi.Input<boolean>;
+    autoTunnelMode?: pulumi.Input<boolean | undefined>;
     /**
      * IKE keepalive interval (seconds)
      *   - Range: `0`-`65535`
      *   - Default value: `10`
      */
-    deadPeerDetectionInterval?: pulumi.Input<number>;
+    deadPeerDetectionInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadPeerDetectionIntervalVariable?: pulumi.Input<string>;
+    deadPeerDetectionIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE keepalive retries
      *   - Range: `0`-`255`
      *   - Default value: `3`
      */
-    deadPeerDetectionRetries?: pulumi.Input<number>;
+    deadPeerDetectionRetries?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadPeerDetectionRetriesVariable?: pulumi.Input<string>;
+    deadPeerDetectionRetriesVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE identity the IKE preshared secret belongs to
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
      *   - Default value: `aes256-cbc-sha1`
      */
-    ikeCiphersuite?: pulumi.Input<string>;
+    ikeCiphersuite?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeCiphersuiteVariable?: pulumi.Input<string>;
+    ikeCiphersuiteVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE Diffie Hellman Groups
      *   - Choices: `2`, `14`, `15`, `16`
      *   - Default value: `14`
      */
-    ikeGroup?: pulumi.Input<string>;
+    ikeGroup?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikeGroupVariable?: pulumi.Input<string>;
+    ikeGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
      */
-    ikePreSharedKey?: pulumi.Input<string>;
+    ikePreSharedKey?: pulumi.Input<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
      *   - Default value: `true`
      */
-    ikePreSharedKeyDynamic?: pulumi.Input<boolean>;
+    ikePreSharedKeyDynamic?: pulumi.Input<boolean | undefined>;
     /**
      * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
      */
-    ikePreSharedKeyLocalId?: pulumi.Input<string>;
+    ikePreSharedKeyLocalId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyLocalIdVariable?: pulumi.Input<string>;
+    ikePreSharedKeyLocalIdVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
      */
-    ikePreSharedKeyRemoteId?: pulumi.Input<string>;
+    ikePreSharedKeyRemoteId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyRemoteIdVariable?: pulumi.Input<string>;
+    ikePreSharedKeyRemoteIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ikePreSharedKeyVariable?: pulumi.Input<string>;
+    ikePreSharedKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE rekey interval <300..1209600> seconds
      *   - Range: `300`-`1209600`
      *   - Default value: `14400`
      */
-    ikeRekeyInterval?: pulumi.Input<number>;
+    ikeRekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ikeRekeyIntervalVariable?: pulumi.Input<string>;
+    ikeRekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * IKE Version <1..2>
      *   - Range: `1`-`2`
      *   - Default value: `2`
      */
-    ikeVersion?: pulumi.Input<number>;
+    ikeVersion?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ikeVersionVariable?: pulumi.Input<string>;
+    ikeVersionVariable?: pulumi.Input<string | undefined>;
     /**
      * Unnumbered interface
      *   - Default value: `true`
      */
-    ipUnnumbered?: pulumi.Input<boolean>;
+    ipUnnumbered?: pulumi.Input<boolean | undefined>;
     /**
      * IPsec(ESP) encryption and integrity protocol
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
      *   - Default value: `aes256-gcm`
      */
-    ipsecCiphersuite?: pulumi.Input<string>;
+    ipsecCiphersuite?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipsecCiphersuiteVariable?: pulumi.Input<string>;
+    ipsecCiphersuiteVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec perfect forward secrecy settings
      *   - Choices: `group-2`, `group-14`, `group-15`, `group-16`, `none`
      *   - Default value: `none`
      */
-    ipsecPerfectForwardSecrecy?: pulumi.Input<string>;
+    ipsecPerfectForwardSecrecy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipsecPerfectForwardSecrecyVariable?: pulumi.Input<string>;
+    ipsecPerfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
     /**
      * IPsec rekey interval <300..1209600> seconds
      *   - Range: `300`-`1209600`
      *   - Default value: `3600`
      */
-    ipsecRekeyInterval?: pulumi.Input<number>;
+    ipsecRekeyInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecRekeyIntervalVariable?: pulumi.Input<string>;
+    ipsecRekeyIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Replay window size 32..8192 (must be a power of 2)
      *   - Range: `64`-`4096`
      *   - Default value: `512`
      */
-    ipsecReplayWindow?: pulumi.Input<number>;
+    ipsecReplayWindow?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ipsecReplayWindowVariable?: pulumi.Input<string>;
+    ipsecReplayWindowVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface MTU <576..2000>, in bytes
      *   - Range: `576`-`2000`
      *   - Default value: `1400`
      */
-    mtu?: pulumi.Input<number>;
+    mtu?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    mtuVariable?: pulumi.Input<string>;
+    mtuVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface name: IPsec when present
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Administrative state
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * SIG Tunnel Provider
      *   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
      *   - Default value: `secure-internet-gateway-umbrella`
      */
-    sigProvider?: pulumi.Input<string>;
+    sigProvider?: pulumi.Input<string | undefined>;
     /**
      * TCP MSS on SYN packets, in bytes
      *   - Range: `500`-`1460`
      */
-    tcpMss?: pulumi.Input<number>;
+    tcpMss?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tcpMssVariable?: pulumi.Input<string>;
+    tcpMssVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable SIG tracking
      *   - Default value: `true`
      */
-    trackEnable?: pulumi.Input<boolean>;
+    trackEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Enable tracker for this interface
      */
-    tracker?: pulumi.Input<string>;
+    tracker?: pulumi.Input<string | undefined>;
     /**
      * SIG Tunnel Data Center
      *   - Choices: `primary-dc`, `secondary-dc`
      *   - Default value: `primary-dc`
      */
-    tunnelDcPreference?: pulumi.Input<string>;
+    tunnelDcPreference?: pulumi.Input<string | undefined>;
     /**
      * Tunnel destination IP address
      */
-    tunnelDestination?: pulumi.Input<string>;
+    tunnelDestination?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelDestinationVariable?: pulumi.Input<string>;
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
     /**
      * Public IP required to setup GRE tunnel to Zscaler
      *   - Default value: `Auto`
      */
-    tunnelPublicIp?: pulumi.Input<string>;
+    tunnelPublicIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelPublicIpVariable?: pulumi.Input<string>;
+    tunnelPublicIpVariable?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelRouteVia?: pulumi.Input<string>;
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelRouteViaVariable?: pulumi.Input<string>;
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    tunnelSource?: pulumi.Input<string>;
+    tunnelSource?: pulumi.Input<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelSourceInterface?: pulumi.Input<string>;
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tunnelSourceVariable?: pulumi.Input<string>;
+    tunnelSourceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSecureInternetGatewayFeatureTemplateService {
     /**
      * Interface Pair for active and backup
      */
-    interfacePairs?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePair>[]>;
+    interfacePairs?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePair>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Service Type
      *   - Choices: `sig`
      *   - Default value: `sig`
      */
-    serviceType?: pulumi.Input<string>;
+    serviceType?: pulumi.Input<string | undefined>;
     /**
      * Umbrella Primary Datacenter
      *   - Default value: `Auto`
      */
-    umbrellaPrimaryDataCenter?: pulumi.Input<string>;
+    umbrellaPrimaryDataCenter?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaPrimaryDataCenterVariable?: pulumi.Input<string>;
+    umbrellaPrimaryDataCenterVariable?: pulumi.Input<string | undefined>;
     /**
      * Umbrella Secondary Datacenter
      *   - Default value: `Auto`
      */
-    umbrellaSecondaryDataCenter?: pulumi.Input<string>;
+    umbrellaSecondaryDataCenter?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaSecondaryDataCenterVariable?: pulumi.Input<string>;
+    umbrellaSecondaryDataCenterVariable?: pulumi.Input<string | undefined>;
     /**
      * For first-time Acceptable User Policy behavior, block Internet access
      *   - Default value: `false`
      */
-    zscalerAupBlockInternetUntilAccepted?: pulumi.Input<boolean>;
+    zscalerAupBlockInternetUntilAccepted?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Acceptable User Policy
      *   - Default value: `false`
      */
-    zscalerAupEnabled?: pulumi.Input<boolean>;
+    zscalerAupEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * For first-time Acceptable User Policy behavior, force SSL inspection
      *   - Default value: `false`
      */
-    zscalerAupForceSslInspection?: pulumi.Input<boolean>;
+    zscalerAupForceSslInspection?: pulumi.Input<boolean | undefined>;
     /**
      * Custom Acceptable User Policy frequency in days
      *   - Default value: `0`
      */
-    zscalerAupTimeout?: pulumi.Input<number>;
+    zscalerAupTimeout?: pulumi.Input<number | undefined>;
     /**
      * Enforce Authentication
      *   - Default value: `false`
      */
-    zscalerAuthenticationRequired?: pulumi.Input<boolean>;
+    zscalerAuthenticationRequired?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Caution
      *   - Default value: `false`
      */
-    zscalerCautionEnabled?: pulumi.Input<boolean>;
+    zscalerCautionEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Firewall enabled
      *   - Default value: `false`
      */
-    zscalerFirewallEnabled?: pulumi.Input<boolean>;
+    zscalerFirewallEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Enable IPS Control
      *   - Default value: `false`
      */
-    zscalerIpsControlEnabled?: pulumi.Input<boolean>;
+    zscalerIpsControlEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Zscaler location name (optional)
      *   - Default value: `Auto`
      */
-    zscalerLocationName?: pulumi.Input<string>;
+    zscalerLocationName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerLocationNameVariable?: pulumi.Input<string>;
+    zscalerLocationNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Custom Primary Datacenter
      *   - Default value: `Auto`
      */
-    zscalerPrimaryDataCenter?: pulumi.Input<string>;
+    zscalerPrimaryDataCenter?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPrimaryDataCenterVariable?: pulumi.Input<string>;
+    zscalerPrimaryDataCenterVariable?: pulumi.Input<string | undefined>;
     /**
      * Custom Secondary Datacenter
      *   - Default value: `Auto`
      */
-    zscalerSecondaryDataCenter?: pulumi.Input<string>;
+    zscalerSecondaryDataCenter?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerSecondaryDataCenterVariable?: pulumi.Input<string>;
+    zscalerSecondaryDataCenterVariable?: pulumi.Input<string | undefined>;
     /**
      * Display time unit
      *   - Choices: `MINUTE`, `HOUR`, `DAY`
      *   - Default value: `MINUTE`
      */
-    zscalerSurrogateDisplayTimeUnit?: pulumi.Input<string>;
+    zscalerSurrogateDisplayTimeUnit?: pulumi.Input<string | undefined>;
     /**
      * Idle time to disassociation
      *   - Default value: `0`
      */
-    zscalerSurrogateIdleTime?: pulumi.Input<number>;
+    zscalerSurrogateIdleTime?: pulumi.Input<number | undefined>;
     /**
      * Enable Surrogate IP
      *   - Default value: `false`
      */
-    zscalerSurrogateIp?: pulumi.Input<boolean>;
+    zscalerSurrogateIp?: pulumi.Input<boolean | undefined>;
     /**
      * Enforce Surrogate IP for known browsers
      *   - Default value: `false`
      */
-    zscalerSurrogateIpEnforceForKnownBrowsers?: pulumi.Input<boolean>;
+    zscalerSurrogateIpEnforceForKnownBrowsers?: pulumi.Input<boolean | undefined>;
     /**
      * Refresh time for re-validation of surrogacy in minutes
      *   - Default value: `0`
      */
-    zscalerSurrogateRefreshTime?: pulumi.Input<number>;
+    zscalerSurrogateRefreshTime?: pulumi.Input<number | undefined>;
     /**
      * Refresh Time unit
      *   - Choices: `MINUTE`, `HOUR`, `DAY`
      *   - Default value: `MINUTE`
      */
-    zscalerSurrogateRefreshTimeUnit?: pulumi.Input<string>;
+    zscalerSurrogateRefreshTimeUnit?: pulumi.Input<string | undefined>;
     /**
      * XFF forwarding enabled
      *   - Default value: `false`
      */
-    zscalerXffForward?: pulumi.Input<boolean>;
+    zscalerXffForward?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePair {
     /**
      * Active Tunnel Interface for SIG
      */
-    activeInterface?: pulumi.Input<string>;
+    activeInterface?: pulumi.Input<string | undefined>;
     /**
      * Active Tunnel Interface Weight
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    activeInterfaceWeight?: pulumi.Input<number>;
+    activeInterfaceWeight?: pulumi.Input<number | undefined>;
     /**
      * Backup Tunnel Interface for SIG
      */
-    backupInterface?: pulumi.Input<string>;
+    backupInterface?: pulumi.Input<string | undefined>;
     /**
      * Backup Tunnel Interface Weight
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    backupInterfaceWeight?: pulumi.Input<number>;
+    backupInterfaceWeight?: pulumi.Input<number | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoSecureInternetGatewayFeatureTemplateTracker {
     /**
      * API url of endpoint
      */
-    endpointApiUrl?: pulumi.Input<string>;
+    endpointApiUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointApiUrlVariable?: pulumi.Input<string>;
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * Probe interval <10..600> seconds
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Probe failure multiplier <1..10> failed attempts
      *   - Range: `1`-`10`
      *   - Default value: `3`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Probe Timeout threshold <100..1000> milliseconds
      *   - Range: `100`-`1000`
      *   - Default value: `300`
      */
-    threshold?: pulumi.Input<number>;
+    threshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    thresholdVariable?: pulumi.Input<string>;
+    thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `SIG`
      *   - Default value: ` SIG`
      */
-    trackerType?: pulumi.Input<string>;
+    trackerType?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSecurityFeatureTemplateKey {
@@ -3572,145 +3572,145 @@ export interface CiscoSecurityFeatureTemplateKey {
      * Configure Accept AO Mismatch
      *   - Default value: `false`
      */
-    acceptAoMismatch?: pulumi.Input<boolean>;
+    acceptAoMismatch?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    acceptAoMismatchVariable?: pulumi.Input<string>;
+    acceptAoMismatchVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Accept lifetime Duration
      *   - Range: `1`-`2147483646`
      */
-    acceptLifetimeDuration?: pulumi.Input<number>;
+    acceptLifetimeDuration?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    acceptLifetimeDurationVariable?: pulumi.Input<string>;
+    acceptLifetimeDurationVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      */
-    acceptLifetimeEndTime?: pulumi.Input<string>;
+    acceptLifetimeEndTime?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      *   - Choices: `infinite`, `duration`, `end-epoch`
      *   - Default value: `infinite`
      */
-    acceptLifetimeEndTimeFormat?: pulumi.Input<string>;
+    acceptLifetimeEndTimeFormat?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      */
-    acceptLifetimeInfinite?: pulumi.Input<boolean>;
+    acceptLifetimeInfinite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    acceptLifetimeInfiniteVariable?: pulumi.Input<string>;
+    acceptLifetimeInfiniteVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Accept Lifetime Local
      *   - Default value: `false`
      */
-    acceptLifetimeLocal?: pulumi.Input<boolean>;
+    acceptLifetimeLocal?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    acceptLifetimeLocalVariable?: pulumi.Input<string>;
+    acceptLifetimeLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime start time
      */
-    acceptLifetimeStartTime?: pulumi.Input<string>;
+    acceptLifetimeStartTime?: pulumi.Input<string | undefined>;
     /**
      * Select the chain name
      */
-    chainName?: pulumi.Input<string>;
+    chainName?: pulumi.Input<string | undefined>;
     /**
      * Crypto Algorithm
      *   - Choices: `aes-128-cmac`, `hmac-sha-1`, `hmac-sha-256`
      */
-    cryptoAlgorithm?: pulumi.Input<string>;
+    cryptoAlgorithm?: pulumi.Input<string | undefined>;
     /**
      * Select the Key ID
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Configure Include TCP Options
      *   - Default value: `false`
      */
-    includeTcpOptions?: pulumi.Input<boolean>;
+    includeTcpOptions?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    includeTcpOptionsVariable?: pulumi.Input<string>;
+    includeTcpOptionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify the Key String
      */
-    keyString?: pulumi.Input<string>;
+    keyString?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyStringVariable?: pulumi.Input<string>;
+    keyStringVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Specify the Receiver ID
      *   - Range: `0`-`255`
      *   - Default value: `0`
      */
-    receiveId?: pulumi.Input<number>;
+    receiveId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    receiveIdVariable?: pulumi.Input<string>;
+    receiveIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify the Send ID
      *   - Range: `0`-`255`
      *   - Default value: `0`
      */
-    sendId?: pulumi.Input<number>;
+    sendId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sendIdVariable?: pulumi.Input<string>;
+    sendIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Send lifetime Duration
      *   - Range: `1`-`2147483646`
      */
-    sendLifetimeDuration?: pulumi.Input<number>;
+    sendLifetimeDuration?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sendLifetimeDurationVariable?: pulumi.Input<string>;
+    sendLifetimeDurationVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      */
-    sendLifetimeEndTime?: pulumi.Input<string>;
+    sendLifetimeEndTime?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      *   - Choices: `infinite`, `duration`, `end-epoch`
      *   - Default value: `infinite`
      */
-    sendLifetimeEndTimeFormat?: pulumi.Input<string>;
+    sendLifetimeEndTimeFormat?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      */
-    sendLifetimeInfinite?: pulumi.Input<boolean>;
+    sendLifetimeInfinite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLifetimeInfiniteVariable?: pulumi.Input<string>;
+    sendLifetimeInfiniteVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Send lifetime Local
      *   - Default value: `false`
      */
-    sendLifetimeLocal?: pulumi.Input<boolean>;
+    sendLifetimeLocal?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLifetimeLocalVariable?: pulumi.Input<string>;
+    sendLifetimeLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime start time
      */
-    sendLifetimeStartTime?: pulumi.Input<string>;
+    sendLifetimeStartTime?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSecurityFeatureTemplateKeychain {
@@ -3718,15 +3718,15 @@ export interface CiscoSecurityFeatureTemplateKeychain {
      * Specify the Key ID
      *   - Range: `0`-`2147483647`
      */
-    keyId?: pulumi.Input<number>;
+    keyId?: pulumi.Input<number | undefined>;
     /**
      * Specify the name of the Keychain
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoSnmpFeatureTemplateCommunity {
@@ -3734,176 +3734,176 @@ export interface CiscoSnmpFeatureTemplateCommunity {
      * Configure access permissions
      *   - Choices: `read-only`
      */
-    authorization?: pulumi.Input<string>;
+    authorization?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authorizationVariable?: pulumi.Input<string>;
+    authorizationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set name of the SNMP community
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set name of the SNMP view
      */
-    view?: pulumi.Input<string>;
+    view?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    viewVariable?: pulumi.Input<string>;
+    viewVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSnmpFeatureTemplateGroup {
     /**
      * Name of the SNMP group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure security level
      *   - Choices: `no-auth-no-priv`, `auth-no-priv`, `auth-priv`
      */
-    securityLevel?: pulumi.Input<string>;
+    securityLevel?: pulumi.Input<string | undefined>;
     /**
      * Name of the SNMP view
      */
-    view?: pulumi.Input<string>;
+    view?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    viewVariable?: pulumi.Input<string>;
+    viewVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSnmpFeatureTemplateTrapTarget {
     /**
      * Set name of the SNMP community
      */
-    communityName?: pulumi.Input<string>;
+    communityName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    communityNameVariable?: pulumi.Input<string>;
+    communityNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IPv4/IPv6 address of SNMP server
      */
-    ip?: pulumi.Input<string>;
+    ip?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipVariable?: pulumi.Input<string>;
+    ipVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Source interface for outgoing SNMP traps
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set UDP port number to connect to SNMP server
      *   - Range: `1`-`65535`
      */
-    udpPort?: pulumi.Input<number>;
+    udpPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    udpPortVariable?: pulumi.Input<string>;
+    udpPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set name of the SNMP user
      */
-    user?: pulumi.Input<string>;
+    user?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    userVariable?: pulumi.Input<string>;
+    userVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which SNMP server is located
      *   - Range: `0`-`65530`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSnmpFeatureTemplateUser {
     /**
      * Specify authentication protocol password
      */
-    authenticationPassword?: pulumi.Input<string>;
+    authenticationPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationPasswordVariable?: pulumi.Input<string>;
+    authenticationPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure authentication protocol
      *   - Choices: `md5`, `sha`
      */
-    authenticationProtocol?: pulumi.Input<string>;
+    authenticationProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationProtocolVariable?: pulumi.Input<string>;
+    authenticationProtocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of the SNMP group
      */
-    group?: pulumi.Input<string>;
+    group?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    groupVariable?: pulumi.Input<string>;
+    groupVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of the SNMP user
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Specify privacy protocol password
      */
-    privacyPassword?: pulumi.Input<string>;
+    privacyPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privacyPasswordVariable?: pulumi.Input<string>;
+    privacyPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure privacy protocol
      *   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
      */
-    privacyProtocol?: pulumi.Input<string>;
+    privacyProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privacyProtocolVariable?: pulumi.Input<string>;
+    privacyProtocolVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSnmpFeatureTemplateView {
     /**
      * Set the name of the SNMP view
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP object identifier
      */
-    objectIdentifiers?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateViewObjectIdentifier>[]>;
+    objectIdentifiers?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateViewObjectIdentifier>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoSnmpFeatureTemplateViewObjectIdentifier {
@@ -3911,38 +3911,38 @@ export interface CiscoSnmpFeatureTemplateViewObjectIdentifier {
      * Exclude the OID
      *   - Default value: `false`
      */
-    exclude?: pulumi.Input<boolean>;
+    exclude?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    excludeVariable?: pulumi.Input<string>;
+    excludeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure identifier of subtree of MIB objects
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    idVariable?: pulumi.Input<string>;
+    idVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumber {
     /**
      * Mobile number, ex: +1231234414
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    numberVariable?: pulumi.Input<string>;
+    numberVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoSystemFeatureTemplateObjectTracker {
@@ -3950,83 +3950,83 @@ export interface CiscoSystemFeatureTemplateObjectTracker {
      * Type of grouping to be performed for tracker group
      *   - Choices: `and`, `or`
      */
-    boolean?: pulumi.Input<string>;
+    boolean?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    booleanVariable?: pulumi.Input<string>;
+    booleanVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracks id in group configuration
      */
-    groupTracksIds?: pulumi.Input<pulumi.Input<inputs.CiscoSystemFeatureTemplateObjectTrackerGroupTracksId>[]>;
+    groupTracksIds?: pulumi.Input<pulumi.Input<inputs.CiscoSystemFeatureTemplateObjectTrackerGroupTracksId>[] | undefined>;
     /**
      * interface name
      */
-    interface?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * IP address of route
      */
-    ip?: pulumi.Input<string>;
+    ip?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipVariable?: pulumi.Input<string>;
+    ipVariable?: pulumi.Input<string | undefined>;
     /**
      * Route Ip Mask
      *   - Default value: `0.0.0.0`
      */
-    mask?: pulumi.Input<string>;
+    mask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    maskVariable?: pulumi.Input<string>;
+    maskVariable?: pulumi.Input<string | undefined>;
     /**
      * Object tracker ID
      *   - Range: `1`-`1000`
      */
-    objectNumber?: pulumi.Input<number>;
+    objectNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    objectNumberVariable?: pulumi.Input<string>;
+    objectNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * service sig
      */
-    sig?: pulumi.Input<string>;
+    sig?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sigVariable?: pulumi.Input<string>;
+    sigVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CiscoSystemFeatureTemplateObjectTrackerGroupTracksId {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Track id
      *   - Range: `1`-`1000`
      */
-    trackId?: pulumi.Input<number>;
+    trackId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackIdVariable?: pulumi.Input<string>;
+    trackIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoSystemFeatureTemplateTracker {
@@ -4035,95 +4035,95 @@ export interface CiscoSystemFeatureTemplateTracker {
      *   - Choices: `or`, `and`
      *   - Default value: `or`
      */
-    boolean?: pulumi.Input<string>;
+    boolean?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    booleanVariable?: pulumi.Input<string>;
+    booleanVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker member names separated by space
      */
-    elements?: pulumi.Input<pulumi.Input<string>[]>;
+    elements?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    elementsVariable?: pulumi.Input<string>;
+    elementsVariable?: pulumi.Input<string | undefined>;
     /**
      * API url of endpoint
      */
-    endpointApiUrl?: pulumi.Input<string>;
+    endpointApiUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointApiUrlVariable?: pulumi.Input<string>;
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * DNS name of endpoint
      */
-    endpointDnsName?: pulumi.Input<string>;
+    endpointDnsName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointDnsNameVariable?: pulumi.Input<string>;
+    endpointDnsNameVariable?: pulumi.Input<string | undefined>;
     /**
      * IP address of endpoint
      */
-    endpointIp?: pulumi.Input<string>;
+    endpointIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endpointIpVariable?: pulumi.Input<string>;
+    endpointIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Probe interval <10..600> seconds
      *   - Range: `20`-`600`
      *   - Default value: `60`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Probe failure multiplier <1..10> failed attempts
      *   - Range: `1`-`10`
      *   - Default value: `3`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Probe Timeout threshold <100..1000> milliseconds
      *   - Range: `100`-`1000`
      *   - Default value: `300`
      */
-    threshold?: pulumi.Input<number>;
+    threshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    thresholdVariable?: pulumi.Input<string>;
+    thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Default(Interface)
      *   - Choices: `tracker-group`, `interface`, `static-route`
      *   - Default value: `interface`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    typeVariable?: pulumi.Input<string>;
+    typeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoThousandeyesFeatureTemplateVirtualApplication {
@@ -4131,96 +4131,96 @@ export interface CiscoThousandeyesFeatureTemplateVirtualApplication {
      * List of Virtual applications
      *   - Default value: `te`
      */
-    applicationType?: pulumi.Input<string>;
+    applicationType?: pulumi.Input<string | undefined>;
     /**
      * List of Virtual applications
      *   - Default value: `1`
      */
-    instanceId?: pulumi.Input<string>;
+    instanceId?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the Account Group Token
      */
-    teAccountGroupToken?: pulumi.Input<string>;
+    teAccountGroupToken?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    teAccountGroupTokenVariable?: pulumi.Input<string>;
+    teAccountGroupTokenVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Agent IP Address
      */
-    teAgentIp?: pulumi.Input<string>;
+    teAgentIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    teAgentIpVariable?: pulumi.Input<string>;
+    teAgentIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Agent default gateway
      */
-    teDefaultGateway?: pulumi.Input<string>;
+    teDefaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    teDefaultGatewayVariable?: pulumi.Input<string>;
+    teDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the host name
      */
-    teHostname?: pulumi.Input<string>;
+    teHostname?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    teHostnameVariable?: pulumi.Input<string>;
+    teHostnameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the name server
      */
-    teNameServer?: pulumi.Input<string>;
+    teNameServer?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    teNameServerVariable?: pulumi.Input<string>;
+    teNameServerVariable?: pulumi.Input<string | undefined>;
     /**
      * PAC URL
      */
-    tePacUrl?: pulumi.Input<string>;
+    tePacUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tePacUrlVariable?: pulumi.Input<string>;
+    tePacUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the proxy host
      */
-    teProxyHost?: pulumi.Input<string>;
+    teProxyHost?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    teProxyHostVariable?: pulumi.Input<string>;
+    teProxyHostVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the proxy port
      *   - Range: `0`-`65535`
      */
-    teProxyPort?: pulumi.Input<number>;
+    teProxyPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    teProxyPortVariable?: pulumi.Input<string>;
+    teProxyPortVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN number
      *   - Range: `1`-`65535`
      */
-    teVpn?: pulumi.Input<number>;
+    teVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    teVpnVariable?: pulumi.Input<string>;
+    teVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Web Proxy Type
      *   - Choices: `none`, `static`, `pac`
      *   - Default value: `none`
      */
-    teWebProxyType?: pulumi.Input<string>;
+    teWebProxyType?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoTrustsecFeatureTemplateSxpConnection {
@@ -4229,190 +4229,190 @@ export interface CiscoTrustsecFeatureTemplateSxpConnection {
      *   - Range: `0`-`65535`
      *   - Default value: `0`
      */
-    maximumHoldTime?: pulumi.Input<number>;
+    maximumHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    maximumHoldTimeVariable?: pulumi.Input<string>;
+    maximumHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Connection Minimum hold time <0..65535>
      *   - Range: `0`-`65535`
      *   - Default value: `0`
      */
-    minimumHoldTime?: pulumi.Input<number>;
+    minimumHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    minimumHoldTimeVariable?: pulumi.Input<string>;
+    minimumHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Define Mode of connection
      *   - Choices: `local`, `peer`
      *   - Default value: `local`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * Define Role of a device <speaker/listener/both>
      *   - Choices: `listener`, `speaker`, `both`
      *   - Default value: `speaker`
      */
-    modeType?: pulumi.Input<string>;
+    modeType?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure SXP Peer IP address (IPv4)
      */
-    peerIp?: pulumi.Input<string>;
+    peerIp?: pulumi.Input<string | undefined>;
     /**
      * Define Preshared Key type
      *   - Choices: `default`, `key-chain`, `none`
      *   - Default value: `none`
      */
-    presharedKey?: pulumi.Input<string>;
+    presharedKey?: pulumi.Input<string | undefined>;
     /**
      * Configure SXP Source IP address (IPv4)
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Connection VPN (VRF) ID
      *   - Range: `0`-`65527`
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateDnsHost {
     /**
      * Hostname
      */
-    hostname?: pulumi.Input<string>;
+    hostname?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameVariable?: pulumi.Input<string>;
+    hostnameVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipVariable?: pulumi.Input<string>;
+    ipVariable?: pulumi.Input<string | undefined>;
     /**
      * List of IP
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateDnsIpv4Server {
     /**
      * DNS Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Role
      *   - Choices: `primary`, `secondary`
      *   - Default value: `primary`
      */
-    role?: pulumi.Input<string>;
+    role?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    roleVariable?: pulumi.Input<string>;
+    roleVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateDnsIpv6Server {
     /**
      * DNS Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Role
      *   - Choices: `primary`, `secondary`
      *   - Default value: `primary`
      */
-    role?: pulumi.Input<string>;
+    role?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    roleVariable?: pulumi.Input<string>;
+    roleVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv4StaticGreRoute {
     /**
      * List of GRE Interfaces
      */
-    interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    interfacesVariable?: pulumi.Input<string>;
+    interfacesVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination VPN to resolve the prefix
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
     /**
      * List of IPSEC Interfaces (Separated by commas)
      */
-    interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    interfacesVariable?: pulumi.Input<string>;
+    interfacesVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination VPN to resolve the prefix
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv4StaticRoute {
@@ -4420,143 +4420,143 @@ export interface CiscoVpnFeatureTemplateIpv4StaticRoute {
      * Default Gateway obtained from DHCP
      *   - Default value: `false`
      */
-    dhcp?: pulumi.Input<boolean>;
+    dhcp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dhcpVariable?: pulumi.Input<string>;
+    dhcpVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    distance?: pulumi.Input<number>;
+    distance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceVariable?: pulumi.Input<string>;
+    distanceVariable?: pulumi.Input<string | undefined>;
     /**
      * IP gateway address
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRouteNextHop>[] | undefined>;
     /**
      * null0
      *   - Default value: `false`
      */
-    null0?: pulumi.Input<boolean>;
+    null0?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    null0Variable?: pulumi.Input<string>;
+    null0Variable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * IP gateway address
      */
-    trackNextHops?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHop>[]>;
+    trackNextHops?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHop>[] | undefined>;
     /**
      * Destination VPN(!=0 or !=512) to resolve the prefix
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv4StaticRouteNextHop {
     /**
      * IP Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    distance?: pulumi.Input<number>;
+    distance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceVariable?: pulumi.Input<string>;
+    distanceVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHop {
     /**
      * IP Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    distance?: pulumi.Input<number>;
+    distance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceVariable?: pulumi.Input<string>;
+    distanceVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Static route tracker
      */
-    tracker?: pulumi.Input<string>;
+    tracker?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerVariable?: pulumi.Input<string>;
+    trackerVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv4StaticServiceRoute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Service
      *   - Choices: `sig`
      *   - Default value: `sig`
      */
-    service?: pulumi.Input<string>;
+    service?: pulumi.Input<string | undefined>;
     /**
      * Destination VPN to resolve the prefix
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv6StaticRoute {
@@ -4565,121 +4565,121 @@ export interface CiscoVpnFeatureTemplateIpv6StaticRoute {
      *   - Choices: `NAT64`, `NAT66`
      *   - Default value: `NAT64`
      */
-    nat?: pulumi.Input<string>;
+    nat?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * IP gateway address
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv6StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateIpv6StaticRouteNextHop>[] | undefined>;
     /**
      * null0
      *   - Default value: `false`
      */
-    null0?: pulumi.Input<boolean>;
+    null0?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    null0Variable?: pulumi.Input<string>;
+    null0Variable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination VPN(!=0 or !=512) to resolve the prefix
      *   - Default value: `0`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateIpv6StaticRouteNextHop {
     /**
      * IP Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    distance?: pulumi.Input<number>;
+    distance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    distanceVariable?: pulumi.Input<string>;
+    distanceVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateNat64Pool {
     /**
      * Ending IP address of NAT pool range
      */
-    endAddress?: pulumi.Input<string>;
+    endAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    endAddressVariable?: pulumi.Input<string>;
+    endAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable Route Leaking from Global VPN to this Service VPN
      *   - Default value: `false`
      */
-    leakFromGlobal?: pulumi.Input<boolean>;
+    leakFromGlobal?: pulumi.Input<boolean | undefined>;
     /**
      * Select protocol for route leaking
      *   - Choices: `all`, `static`, `mobile`, `connected`, `rip`, `odr`
      */
-    leakFromGlobalProtocol?: pulumi.Input<string>;
+    leakFromGlobalProtocol?: pulumi.Input<string | undefined>;
     /**
      * Enable Route Leaking from this Service VPN to Global VPN
      *   - Default value: `false`
      */
-    leakToGlobal?: pulumi.Input<boolean>;
+    leakToGlobal?: pulumi.Input<boolean | undefined>;
     /**
      * NAT64 Pool name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * NAT 64 Overload Option
      *   - Default value: `false`
      */
-    overload?: pulumi.Input<boolean>;
+    overload?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overloadVariable?: pulumi.Input<string>;
+    overloadVariable?: pulumi.Input<string | undefined>;
     /**
      * Starting IP address of NAT pool range
      */
-    startAddress?: pulumi.Input<string>;
+    startAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    startAddressVariable?: pulumi.Input<string>;
+    startAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateNatPool {
@@ -4687,97 +4687,97 @@ export interface CiscoVpnFeatureTemplateNatPool {
      * Direction of NAT translation
      *   - Choices: `inside`, `outside`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    directionVariable?: pulumi.Input<string>;
+    directionVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Name, natpool1..31
      *   - Range: `1`-`31`
      */
-    name?: pulumi.Input<number>;
+    name?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Enable port translation(PAT)
      *   - Default value: `true`
      */
-    overload?: pulumi.Input<boolean>;
+    overload?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overloadVariable?: pulumi.Input<string>;
+    overloadVariable?: pulumi.Input<string | undefined>;
     /**
      * Ending IP address of NAT Pool Prefix Length
      *   - Range: `1`-`32`
      */
-    prefixLength?: pulumi.Input<number>;
+    prefixLength?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    prefixLengthVariable?: pulumi.Input<string>;
+    prefixLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * Ending IP address of NAT pool range
      */
-    rangeEnd?: pulumi.Input<string>;
+    rangeEnd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeEndVariable?: pulumi.Input<string>;
+    rangeEndVariable?: pulumi.Input<string | undefined>;
     /**
      * Starting IP address of NAT pool range
      */
-    rangeStart?: pulumi.Input<string>;
+    rangeStart?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeStartVariable?: pulumi.Input<string>;
+    rangeStartVariable?: pulumi.Input<string | undefined>;
     /**
      * Add Object/Object Group Tracker
      *   - Range: `1`-`1000`
      */
-    trackerId?: pulumi.Input<number>;
+    trackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackerIdVariable?: pulumi.Input<string>;
+    trackerIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
-    prefixes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefix>[]>;
+    optional?: pulumi.Input<boolean | undefined>;
+    prefixes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefix>[] | undefined>;
     /**
      * Advertised routes protocol
      *   - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `network`, `aggregate`, `eigrp`, `lisp`, `isis`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolSubTypeVariable?: pulumi.Input<string>;
-    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolSubTypeVariable?: pulumi.Input<string | undefined>;
+    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Route Policy to OMP
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefix {
@@ -4785,50 +4785,50 @@ export interface CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefix {
      * Aggregate Only
      *   - Default value: `false`
      */
-    aggregateOnly?: pulumi.Input<boolean>;
+    aggregateOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    aggregateOnlyVariable?: pulumi.Input<string>;
+    aggregateOnlyVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefixEntry?: pulumi.Input<string>;
+    prefixEntry?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixEntryVariable?: pulumi.Input<string>;
+    prefixEntryVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
-    prefixes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefix>[]>;
+    optional?: pulumi.Input<boolean | undefined>;
+    prefixes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefix>[] | undefined>;
     /**
      * Advertised routes protocol
      *   - Choices: `bgp`, `ospf`, `connected`, `static`, `network`, `aggregate`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolSubTypeVariable?: pulumi.Input<string>;
-    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolSubTypeVariable?: pulumi.Input<string | undefined>;
+    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicy?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefix {
@@ -4836,426 +4836,426 @@ export interface CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefix {
      * Aggregate Only
      *   - Default value: `false`
      */
-    aggregateOnly?: pulumi.Input<boolean>;
+    aggregateOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    aggregateOnlyVariable?: pulumi.Input<string>;
+    aggregateOnlyVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefixEntry?: pulumi.Input<string>;
+    prefixEntry?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixEntryVariable?: pulumi.Input<string>;
+    prefixEntryVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplatePortForwardRule {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * NAT Pool Name, natpool1..31
      */
-    poolName?: pulumi.Input<number>;
+    poolName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    poolNameVariable?: pulumi.Input<string>;
+    poolNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Port
      *   - Default value: `0`
      */
-    sourcePort?: pulumi.Input<number>;
+    sourcePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourcePortVariable?: pulumi.Input<string>;
+    sourcePortVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translateIp?: pulumi.Input<string>;
+    translateIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateIpVariable?: pulumi.Input<string>;
+    translateIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Translate Port
      *   - Default value: `0`
      */
-    translatePort?: pulumi.Input<number>;
+    translatePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    translatePortVariable?: pulumi.Input<string>;
+    translatePortVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateRouteGlobalExport {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select a Route Protocol to enable route leaking from this Service VPN to Global VPN
      *   - Choices: `static`, `connected`, `bgp`, `eigrp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolSubTypeVariable?: pulumi.Input<string>;
+    protocolSubTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * - Default value: `external`
      */
-    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable redistribution of replicated route protocol
      */
-    redistributes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalExportRedistribute>[]>;
+    redistributes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalExportRedistribute>[] | undefined>;
     /**
      * Select a Route Policy to enable route leaking from this Service VPN to Global VPN
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateRouteGlobalExportRedistribute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select a Route Protocol to enable redistribution
      *   - Choices: `bgp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Select a Route Policy to enable redistribution
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateRouteGlobalImport {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select a Route Protocol to enable route leaking from Global VPN to this Service VPN
      *   - Choices: `static`, `connected`, `bgp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolSubTypeVariable?: pulumi.Input<string>;
+    protocolSubTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * - Default value: `external`
      */
-    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable redistribution of replicated route protocol
      */
-    redistributes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalImportRedistribute>[]>;
+    redistributes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteGlobalImportRedistribute>[] | undefined>;
     /**
      * Select a Route Policy to enable route leaking from Global VPN to this Service VPN
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateRouteGlobalImportRedistribute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select a Route Protocol to enable redistribution
      *   - Choices: `bgp`, `eigrp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Select a Route Policy to enable redistribution
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateRouteVpnImport {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select a Route Protocol to enable route leaking to current VPN
      *   - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolSubTypeVariable?: pulumi.Input<string>;
+    protocolSubTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * - Default value: `external`
      */
-    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    protocolSubTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable redistribution of replicated route protocol
      */
-    redistributes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteVpnImportRedistribute>[]>;
+    redistributes?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateRouteVpnImportRedistribute>[] | undefined>;
     /**
      * Select a Route Policy to enable route leaking to current VPN
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
     /**
      * Select a Source VPN where route leaks from
      *   - Range: `1`-`65530`
      *   - Default value: `1`
      */
-    sourceVpnId?: pulumi.Input<number>;
+    sourceVpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnIdVariable?: pulumi.Input<string>;
+    sourceVpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateRouteVpnImportRedistribute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Select a Route Protocol to enable redistribution
      *   - Choices: `bgp`, `eigrp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Select a Route Policy to enable redistribution
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateService {
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * List of IPv4 address
      */
-    addresses?: pulumi.Input<pulumi.Input<string>[]>;
+    addresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Tracking Service
      */
-    interface?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Service Type
      *   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
      */
-    serviceTypes?: pulumi.Input<string>;
+    serviceTypes?: pulumi.Input<string | undefined>;
     /**
      * Tracking Service
      *   - Default value: `true`
      */
-    trackEnable?: pulumi.Input<boolean>;
+    trackEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackEnableVariable?: pulumi.Input<string>;
+    trackEnableVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateStaticNatRule {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * NAT Pool Name, natpool1..31
      */
-    poolName?: pulumi.Input<number>;
+    poolName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    poolNameVariable?: pulumi.Input<string>;
+    poolNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction of static NAT translation
      *   - Choices: `inside`, `outside`
      */
-    staticNatDirection?: pulumi.Input<string>;
+    staticNatDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    staticNatDirectionVariable?: pulumi.Input<string>;
+    staticNatDirectionVariable?: pulumi.Input<string | undefined>;
     /**
      * Add Object/Object Group Tracker
      *   - Range: `1`-`1000`
      */
-    trackerId?: pulumi.Input<number>;
+    trackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackerIdVariable?: pulumi.Input<string>;
+    trackerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translateIp?: pulumi.Input<string>;
+    translateIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateIpVariable?: pulumi.Input<string>;
+    translateIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnFeatureTemplateStaticNatSubnetRule {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Network Prefix Length
      *   - Range: `1`-`32`
      */
-    prefixLength?: pulumi.Input<number>;
+    prefixLength?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    prefixLengthVariable?: pulumi.Input<string>;
+    prefixLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP Subnet to be translated
      */
-    sourceIpSubnet?: pulumi.Input<string>;
+    sourceIpSubnet?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpSubnetVariable?: pulumi.Input<string>;
+    sourceIpSubnetVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction of static NAT translation
      *   - Choices: `inside`, `outside`
      */
-    staticNatDirection?: pulumi.Input<string>;
+    staticNatDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    staticNatDirectionVariable?: pulumi.Input<string>;
+    staticNatDirectionVariable?: pulumi.Input<string | undefined>;
     /**
      * Add Object/Object Group Tracker
      *   - Range: `1`-`1000`
      */
-    trackerId?: pulumi.Input<number>;
+    trackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackerIdVariable?: pulumi.Input<string>;
+    trackerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP Subnet
      */
-    translateIpSubnet?: pulumi.Input<string>;
+    translateIpSubnet?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateIpSubnetVariable?: pulumi.Input<string>;
+    translateIpSubnetVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddress {
     /**
      * IP Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv4Vrrp {
@@ -5263,93 +5263,93 @@ export interface CiscoVpnInterfaceFeatureTemplateIpv4Vrrp {
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VRRP Secondary IP address
      */
-    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddress>[]>;
+    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddress>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `100`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * change TLOC preference
      *   - Default value: `false`
      */
-    tlocPreferenceChange?: pulumi.Input<boolean>;
+    tlocPreferenceChange?: pulumi.Input<boolean | undefined>;
     /**
      * Set tloc preference change value
      *   - Range: `1`-`4294967295`
      */
-    tlocPreferenceChangeValue?: pulumi.Input<number>;
+    tlocPreferenceChangeValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tlocPreferenceChangeValueVariable?: pulumi.Input<string>;
+    tlocPreferenceChangeValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Track Prefix List
      */
-    trackPrefixList?: pulumi.Input<string>;
+    trackPrefixList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackPrefixListVariable?: pulumi.Input<string>;
+    trackPrefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * tracking object for VRRP configuration
      */
-    trackingObjects?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObject>[]>;
+    trackingObjects?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObject>[] | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddress {
     /**
      * VRRP Secondary IP address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObject {
@@ -5357,93 +5357,93 @@ export interface CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObject {
      * Decrement Value for VRRP priority
      *   - Range: `1`-`255`
      */
-    decrementValue?: pulumi.Input<number>;
+    decrementValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    decrementValueVariable?: pulumi.Input<string>;
+    decrementValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Track Action
      *   - Choices: `decrement`, `shutdown`
      *   - Default value: `decrement`
      */
-    trackAction?: pulumi.Input<string>;
+    trackAction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackActionVariable?: pulumi.Input<string>;
+    trackActionVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker ID
      *   - Range: `1`-`1000`
      */
-    trackerId?: pulumi.Input<number>;
+    trackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    trackerIdVariable?: pulumi.Input<string>;
+    trackerIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv6AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper {
     /**
      * DHCPv6 Helper address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * DHCPv6 Helper VPN
      *   - Range: `1`-`65536`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress {
     /**
      * IPv6 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv6Vrrp {
@@ -5451,250 +5451,250 @@ export interface CiscoVpnInterfaceFeatureTemplateIpv6Vrrp {
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 VRRP
      */
-    ipv6Addresses?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6Address>[]>;
+    ipv6Addresses?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6Address>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `100`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackOmpVariable?: pulumi.Input<string>;
+    trackOmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Prefix List
      */
-    trackPrefixList?: pulumi.Input<string>;
+    trackPrefixList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackPrefixListVariable?: pulumi.Input<string>;
+    trackPrefixListVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6Address {
     /**
      * Use link-local IPv6 Address
      */
-    ipv6LinkLocal?: pulumi.Input<string>;
+    ipv6LinkLocal?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv6LinkLocalVariable?: pulumi.Input<string>;
+    ipv6LinkLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Assign Global IPv6 Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateStaticArp {
     /**
      * IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC address
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macVariable?: pulumi.Input<string>;
+    macVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateStaticNat66Entry {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Source Prefix
      */
-    sourcePrefix?: pulumi.Input<string>;
+    sourcePrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourcePrefixVariable?: pulumi.Input<string>;
+    sourcePrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Source VPN ID
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    sourceVpnId?: pulumi.Input<number>;
+    sourceVpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnIdVariable?: pulumi.Input<string>;
+    sourceVpnIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Translated Source Prefix
      */
-    translatedSourcePrefix?: pulumi.Input<string>;
+    translatedSourcePrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedSourcePrefixVariable?: pulumi.Input<string>;
+    translatedSourcePrefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateStaticNatEntry {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VPN ID
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    sourceVpnId?: pulumi.Input<number>;
+    sourceVpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnIdVariable?: pulumi.Input<string>;
+    sourceVpnIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction of static NAT translation
      *   - Choices: `inside`, `outside`
      *   - Default value: `inside`
      */
-    staticNatDirection?: pulumi.Input<string>;
+    staticNatDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    staticNatDirectionVariable?: pulumi.Input<string>;
+    staticNatDirectionVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translateIp?: pulumi.Input<string>;
+    translateIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateIpVariable?: pulumi.Input<string>;
+    translateIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Protocol
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Port
      *   - Range: `0`-`65535`
      *   - Default value: `0`
      */
-    sourcePort?: pulumi.Input<number>;
+    sourcePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourcePortVariable?: pulumi.Input<string>;
+    sourcePortVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VPN ID
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    sourceVpnId?: pulumi.Input<number>;
+    sourceVpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnIdVariable?: pulumi.Input<string>;
+    sourceVpnIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction of static NAT translation
      *   - Choices: `inside`, `outside`
      *   - Default value: `inside`
      */
-    staticNatDirection?: pulumi.Input<string>;
+    staticNatDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    staticNatDirectionVariable?: pulumi.Input<string>;
+    staticNatDirectionVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translateIp?: pulumi.Input<string>;
+    translateIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateIpVariable?: pulumi.Input<string>;
+    translateIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Translate Port
      *   - Range: `0`-`65535`
      *   - Default value: `0`
      */
-    translatePort?: pulumi.Input<number>;
+    translatePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    translatePortVariable?: pulumi.Input<string>;
+    translatePortVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation {
@@ -5702,50 +5702,50 @@ export interface CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulation {
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface CiscoVpnInterfaceGreFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface CiscoWirelessLanFeatureTemplateSsid {
@@ -5753,97 +5753,97 @@ export interface CiscoWirelessLanFeatureTemplateSsid {
      * Set admin state
      *   - Default value: `true`
      */
-    adminState?: pulumi.Input<boolean>;
+    adminState?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    adminStateVariable?: pulumi.Input<string>;
+    adminStateVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable broadcast SSID
      *   - Default value: `true`
      */
-    broadcastSsid?: pulumi.Input<boolean>;
+    broadcastSsid?: pulumi.Input<boolean | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set passphrase
      */
-    passphrase?: pulumi.Input<string>;
+    passphrase?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passphraseVariable?: pulumi.Input<string>;
+    passphraseVariable?: pulumi.Input<string | undefined>;
     /**
      * Select QoS profile
      *   - Choices: `platinum`, `gold`, `silver`, `bronze`
      *   - Default value: `silver`
      */
-    qosProfile?: pulumi.Input<string>;
+    qosProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    qosProfileVariable?: pulumi.Input<string>;
+    qosProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Select radio type
      *   - Choices: `24ghz`, `5ghz`, `all`
      *   - Default value: `all`
      */
-    radioType?: pulumi.Input<string>;
+    radioType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radioTypeVariable?: pulumi.Input<string>;
+    radioTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server IP
      */
-    radiusServerIp?: pulumi.Input<string>;
+    radiusServerIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusServerIpVariable?: pulumi.Input<string>;
+    radiusServerIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server authentication port
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      */
-    radiusServerPort?: pulumi.Input<number>;
+    radiusServerPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    radiusServerPortVariable?: pulumi.Input<string>;
+    radiusServerPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server shared secret
      */
-    radiusServerSecret?: pulumi.Input<string>;
+    radiusServerSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radiusServerSecretVariable?: pulumi.Input<string>;
+    radiusServerSecretVariable?: pulumi.Input<string | undefined>;
     /**
      * Select security type
      *   - Choices: `enterprise`, `personal`, `open`
      *   - Default value: `personal`
      */
-    securityType?: pulumi.Input<string>;
+    securityType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    securityTypeVariable?: pulumi.Input<string>;
+    securityTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VLAN ID
      *   - Range: `1`-`4094`
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vlanIdVariable?: pulumi.Input<string>;
+    vlanIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure wlan SSID
      */
-    wirelessNetworkName?: pulumi.Input<string>;
+    wirelessNetworkName?: pulumi.Input<string | undefined>;
 }
 
 export interface ColorListPolicyObjectEntry {
@@ -5859,26 +5859,26 @@ export interface ConfigurationGroupDevice {
      * Deploy to device if enabled.
      *   - Default value: `false`
      */
-    deploy?: pulumi.Input<boolean>;
+    deploy?: pulumi.Input<boolean | undefined>;
     /**
      * Device ID
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
      */
-    topologyLabel?: pulumi.Input<string>;
+    topologyLabel?: pulumi.Input<string | undefined>;
     /**
      * List of variables
      */
-    variables?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDeviceVariable>[]>;
+    variables?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDeviceVariable>[] | undefined>;
 }
 
 export interface ConfigurationGroupDeviceVariable {
     /**
      * Use this instead of `value` in case value is of type `List`.
      */
-    listValues?: pulumi.Input<pulumi.Input<string>[]>;
+    listValues?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
@@ -5886,7 +5886,7 @@ export interface ConfigurationGroupDeviceVariable {
     /**
      * Variable value
      */
-    value?: pulumi.Input<string>;
+    value?: pulumi.Input<string | undefined>;
 }
 
 export interface ConfigurationGroupTopologyDevice {
@@ -5898,35 +5898,35 @@ export interface ConfigurationGroupTopologyDevice {
     /**
      * Criteria value
      */
-    criteriaValue?: pulumi.Input<string>;
+    criteriaValue?: pulumi.Input<string | undefined>;
     /**
      * List of unsupported features
      */
-    unsupportedFeatures?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDeviceUnsupportedFeature>[]>;
+    unsupportedFeatures?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDeviceUnsupportedFeature>[] | undefined>;
 }
 
 export interface ConfigurationGroupTopologyDeviceUnsupportedFeature {
     /**
      * Parcel ID
      */
-    parcelId?: pulumi.Input<string>;
+    parcelId?: pulumi.Input<string | undefined>;
     /**
      * Parcel type
      *   - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `route-policy`, `routing/bgp`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
      */
-    parcelType?: pulumi.Input<string>;
+    parcelType?: pulumi.Input<string | undefined>;
 }
 
 export interface CustomControlTopologyPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `reject`
      *   - Choices: `accept`, `reject`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      */
@@ -5935,11 +5935,11 @@ export interface CustomControlTopologyPolicyDefinitionSequence {
      * Sequence IP type, either `ipv4`, `ipv6` or `all`
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    ipType?: pulumi.Input<string>;
+    ipType?: pulumi.Input<string | undefined>;
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -5948,22 +5948,22 @@ export interface CustomControlTopologyPolicyDefinitionSequence {
      * Sequence type, either `route` or `tloc`
      *   - Choices: `route`, `tloc`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
     /**
      * Export to VPN list ID, Attribute conditional on `type` equal to `exportTo`
      */
-    exportToVpnListId?: pulumi.Input<string>;
+    exportToVpnListId?: pulumi.Input<string | undefined>;
     /**
      * Export to VPN list version
      */
-    exportToVpnListVersion?: pulumi.Input<number>;
+    exportToVpnListVersion?: pulumi.Input<number | undefined>;
     /**
      * List of set parameters, Attribute conditional on `type` equal to `set`
      */
-    setParameters?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter>[]>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter>[] | undefined>;
     /**
      * Type of action entry
      *   - Choices: `set`, `exportTo`
@@ -5975,78 +5975,78 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPara
     /**
      * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
      */
-    community?: pulumi.Input<string>;
+    community?: pulumi.Input<string | undefined>;
     /**
      * Community additive, Attribute conditional on `type` equal to `communityAdditive`
      */
-    communityAdditive?: pulumi.Input<boolean>;
+    communityAdditive?: pulumi.Input<boolean | undefined>;
     /**
      * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Service TLOC color, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocColor?: pulumi.Input<string>;
+    serviceTlocColor?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`
      */
-    serviceTlocEncapsulation?: pulumi.Input<string>;
+    serviceTlocEncapsulation?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC IP address, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocIp?: pulumi.Input<string>;
+    serviceTlocIp?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC list ID, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocListId?: pulumi.Input<string>;
+    serviceTlocListId?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC list version
      */
-    serviceTlocListVersion?: pulumi.Input<number>;
+    serviceTlocListVersion?: pulumi.Input<number | undefined>;
     /**
      * Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      */
-    serviceType?: pulumi.Input<string>;
+    serviceType?: pulumi.Input<string | undefined>;
     /**
      * Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      */
-    serviceVpnId?: pulumi.Input<number>;
+    serviceVpnId?: pulumi.Input<number | undefined>;
     /**
      * TLOC action, Attribute conditional on `type` equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      */
-    tlocAction?: pulumi.Input<string>;
+    tlocAction?: pulumi.Input<string | undefined>;
     /**
      * TLOC color, Attribute conditional on `type` equal to `tloc`
      */
-    tlocColor?: pulumi.Input<string>;
+    tlocColor?: pulumi.Input<string | undefined>;
     /**
      * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      */
-    tlocEncapsulation?: pulumi.Input<string>;
+    tlocEncapsulation?: pulumi.Input<string | undefined>;
     /**
      * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      */
-    tlocIp?: pulumi.Input<string>;
+    tlocIp?: pulumi.Input<string | undefined>;
     /**
      * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      */
-    tlocListId?: pulumi.Input<string>;
+    tlocListId?: pulumi.Input<string | undefined>;
     /**
      * TLOC list version
      */
-    tlocListVersion?: pulumi.Input<number>;
+    tlocListVersion?: pulumi.Input<number | undefined>;
     /**
      * Type of set parameter
      *   - Choices: `tlocList`, `tloc`, `tlocAction`, `preference`, `ompTag`, `community`, `communityAdditive`, `service`
@@ -6059,121 +6059,121 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      * Carrier, Attribute conditional on `type` equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      */
-    carrier?: pulumi.Input<string>;
+    carrier?: pulumi.Input<string | undefined>;
     /**
      * Color list ID, Attribute conditional on `type` equal to `colorList`
      */
-    colorListId?: pulumi.Input<string>;
+    colorListId?: pulumi.Input<string | undefined>;
     /**
      * Color list version
      */
-    colorListVersion?: pulumi.Input<number>;
+    colorListVersion?: pulumi.Input<number | undefined>;
     /**
      * Community list ID, Attribute conditional on `type` equal to `community`
      */
-    communityListId?: pulumi.Input<string>;
+    communityListId?: pulumi.Input<string | undefined>;
     /**
      * Community list version
      */
-    communityListVersion?: pulumi.Input<number>;
+    communityListVersion?: pulumi.Input<number | undefined>;
     /**
      * Domain ID, Attribute conditional on `type` equal to `domainId`
      *   - Range: `0`-`4294967295`
      */
-    domainId?: pulumi.Input<number>;
+    domainId?: pulumi.Input<number | undefined>;
     /**
      * Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      */
-    expandedCommunityListId?: pulumi.Input<string>;
+    expandedCommunityListId?: pulumi.Input<string | undefined>;
     /**
      * Expanded community list version
      */
-    expandedCommunityListVersion?: pulumi.Input<number>;
+    expandedCommunityListVersion?: pulumi.Input<number | undefined>;
     /**
      * Group ID, Attribute conditional on `type` equal to `groupId`
      *   - Range: `0`-`4294967295`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      */
-    origin?: pulumi.Input<string>;
+    origin?: pulumi.Input<string | undefined>;
     /**
      * Originator IP, Attribute conditional on `type` equal to `originator`
      */
-    originator?: pulumi.Input<string>;
+    originator?: pulumi.Input<string | undefined>;
     /**
      * Path type, Attribute conditional on `type` equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      */
-    pathType?: pulumi.Input<string>;
+    pathType?: pulumi.Input<string | undefined>;
     /**
      * Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Prefix list ID, Attribute conditional on `type` equal to `prefixList`
      */
-    prefixListId?: pulumi.Input<string>;
+    prefixListId?: pulumi.Input<string | undefined>;
     /**
      * Prefix list version
      */
-    prefixListVersion?: pulumi.Input<number>;
+    prefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Region ID, Attribute conditional on `type` equal to `regionId`
      *   - Range: `0`-`63`
      */
-    regionId?: pulumi.Input<number>;
+    regionId?: pulumi.Input<number | undefined>;
     /**
      * Region list ID, Attribute conditional on `type` equal to `regionList`
      */
-    regionListId?: pulumi.Input<string>;
+    regionListId?: pulumi.Input<string | undefined>;
     /**
      * Role, Attribute conditional on `type` equal to `role`
      *   - Choices: `border-router`, `edge-router`
      */
-    role?: pulumi.Input<string>;
+    role?: pulumi.Input<string | undefined>;
     /**
      * Site ID, Attribute conditional on `type` equal to `siteId`
      *   - Range: `0`-`4294967295`
      */
-    siteId?: pulumi.Input<number>;
+    siteId?: pulumi.Input<number | undefined>;
     /**
      * Site list ID, Attribute conditional on `type` equal to `siteList`
      */
-    siteListId?: pulumi.Input<string>;
+    siteListId?: pulumi.Input<string | undefined>;
     /**
      * Site list version
      */
-    siteListVersion?: pulumi.Input<number>;
+    siteListVersion?: pulumi.Input<number | undefined>;
     /**
      * TLOC color, Attribute conditional on `type` equal to `tloc`
      */
-    tlocColor?: pulumi.Input<string>;
+    tlocColor?: pulumi.Input<string | undefined>;
     /**
      * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      */
-    tlocEncapsulation?: pulumi.Input<string>;
+    tlocEncapsulation?: pulumi.Input<string | undefined>;
     /**
      * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      */
-    tlocIp?: pulumi.Input<string>;
+    tlocIp?: pulumi.Input<string | undefined>;
     /**
      * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      */
-    tlocListId?: pulumi.Input<string>;
+    tlocListId?: pulumi.Input<string | undefined>;
     /**
      * TLOC list version
      */
-    tlocListVersion?: pulumi.Input<number>;
+    tlocListVersion?: pulumi.Input<number | undefined>;
     /**
      * Type of match entry
      *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
@@ -6183,15 +6183,15 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      * VPN ID, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65536`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * VPN list ID, Attribute conditional on `type` equal to `vpnList`
      */
-    vpnListId?: pulumi.Input<string>;
+    vpnListId?: pulumi.Input<string | undefined>;
     /**
      * VPN list version
      */
-    vpnListVersion?: pulumi.Input<number>;
+    vpnListVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface DataFqdnPrefixListPolicyObjectEntry {
@@ -6219,284 +6219,284 @@ export interface DnsSecurityPolicyDefinitionTargetVpn {
     /**
      * Only relevant when `umbrellaDnsDefault` is `false`
      */
-    customDnsServerIp?: pulumi.Input<string>;
+    customDnsServerIp?: pulumi.Input<string | undefined>;
     /**
      * Should the local domain bypass list be enabled
      */
-    localDomainBypassEnabled?: pulumi.Input<boolean>;
+    localDomainBypassEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Should use umbrella as DNS Server
      */
-    umbrellaDnsDefault?: pulumi.Input<boolean>;
+    umbrellaDnsDefault?: pulumi.Input<boolean | undefined>;
     /**
      * VPN ID's separated by Comma
      */
-    vpnIds?: pulumi.Input<pulumi.Input<string>[]>;
+    vpnIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface DnsSecurityPolicyTargetVpn {
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    dnsServerIp?: pulumi.Input<string>;
+    dnsServerIp?: pulumi.Input<string | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    localDomainBypassEnabled?: pulumi.Input<boolean>;
+    localDomainBypassEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * non empty interger string
      */
-    uid?: pulumi.Input<string>;
+    uid?: pulumi.Input<string | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    umbrellaDefault?: pulumi.Input<boolean>;
-    vpns?: pulumi.Input<pulumi.Input<string>[]>;
+    umbrellaDefault?: pulumi.Input<boolean | undefined>;
+    vpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface DomainListPolicyObjectEntry {
     /**
      * Domain name, must not start with `*`
      */
-    domain?: pulumi.Input<string>;
+    domain?: pulumi.Input<string | undefined>;
 }
 
 export interface EigrpFeatureTemplateAddressFamily {
     /**
      * Configure the networks for EIGRP to advertise
      */
-    networks?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamilyNetwork>[]>;
+    networks?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamilyNetwork>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Redistribute routes into EIGRP
      */
-    redistributes?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamilyRedistribute>[]>;
+    redistributes?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateAddressFamilyRedistribute>[] | undefined>;
     /**
      * Set EIGRP address family
      *   - Choices: `ipv4`
      *   - Default value: `ipv4`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 export interface EigrpFeatureTemplateAddressFamilyNetwork {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure the prefixes for EIGRP to announce
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface EigrpFeatureTemplateAddressFamilyRedistribute {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure policy to apply to prefixes received from EIGRP neighbor
      */
-    routePolicy?: pulumi.Input<string>;
+    routePolicy?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routePolicyVariable?: pulumi.Input<string>;
+    routePolicyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface EigrpFeatureTemplateInterface {
     /**
      * Set interface name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Enable/disable EIGRP
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Set summary addresses
      */
-    summaryAddresses?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateInterfaceSummaryAddress>[]>;
+    summaryAddresses?: pulumi.Input<pulumi.Input<inputs.EigrpFeatureTemplateInterfaceSummaryAddress>[] | undefined>;
 }
 
 export interface EigrpFeatureTemplateInterfaceSummaryAddress {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set summary address prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface EigrpFeatureTemplateKey {
     /**
      * Set MD5 key
      */
-    md5AuthenticationKey?: pulumi.Input<string>;
+    md5AuthenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    md5AuthenticationKeyVariable?: pulumi.Input<string>;
+    md5AuthenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 key ID
      *   - Range: `1`-`255`
      */
-    md5KeyId?: pulumi.Input<number>;
+    md5KeyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    md5KeyIdVariable?: pulumi.Input<string>;
+    md5KeyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface EmbeddedSecurityNgfwPolicySequence {
     /**
      * can be empty array or with type or parameter
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceAction>[] | undefined>;
     /**
      * - Choices: `pass`, `inspect`, `drop`
      */
-    baseAction?: pulumi.Input<string>;
-    disableSequence?: pulumi.Input<boolean>;
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry>[]>;
-    sequenceId?: pulumi.Input<string>;
-    sequenceName?: pulumi.Input<string>;
-    sequenceType?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
+    disableSequence?: pulumi.Input<boolean | undefined>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntry>[] | undefined>;
+    sequenceId?: pulumi.Input<string | undefined>;
+    sequenceName?: pulumi.Input<string | undefined>;
+    sequenceType?: pulumi.Input<string | undefined>;
 }
 
 export interface EmbeddedSecurityNgfwPolicySequenceAction {
-    parameter?: pulumi.Input<string>;
-    parameterId?: pulumi.Input<string>;
+    parameter?: pulumi.Input<string | undefined>;
+    parameterId?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`, `log`, `connectionEvents`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 export interface EmbeddedSecurityNgfwPolicySequenceMatchEntry {
-    appListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    applicationFamilies?: pulumi.Input<pulumi.Input<string>[]>;
-    applications?: pulumi.Input<pulumi.Input<string>[]>;
-    destinationDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    destinationDataPrefixes?: pulumi.Input<pulumi.Input<string>[]>;
+    appListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    applicationFamilies?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    applications?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationDataPrefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    destinationDataPrefixesVariable?: pulumi.Input<string>;
-    destinationFqdnListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    destinationFqdns?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationDataPrefixesVariable?: pulumi.Input<string | undefined>;
+    destinationFqdnListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationFqdns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    destinationFqdnsVariable?: pulumi.Input<string>;
-    destinationGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    destinationGeoLocations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationFqdnsVariable?: pulumi.Input<string | undefined>;
+    destinationGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationGeoLocations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    destinationGeoLocationsVariable?: pulumi.Input<string>;
-    destinationPortListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    destinationPorts?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationGeoLocationsVariable?: pulumi.Input<string | undefined>;
+    destinationPortListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationPorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    destinationPortsVariable?: pulumi.Input<string>;
-    destinationScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    destinationSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    flatAppListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    protocolNameListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    protocolNames?: pulumi.Input<pulumi.Input<string>[]>;
-    protocols?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceDataPrefixes?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationPortsVariable?: pulumi.Input<string | undefined>;
+    destinationScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    destinationSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    flatAppListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    protocolNameListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    protocolNames?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    protocols?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceDataPrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceDataPrefixes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    sourceDataPrefixesVariable?: pulumi.Input<string>;
-    sourceGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceGeoLocations?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceDataPrefixesVariable?: pulumi.Input<string | undefined>;
+    sourceGeoLocationListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceGeoLocations?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    sourceGeoLocationsVariable?: pulumi.Input<string>;
-    sourceIdentityListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceIdentityUsergroups?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceIdentityUsers?: pulumi.Input<pulumi.Input<string>[]>;
-    sourcePortListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    sourcePorts?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceGeoLocationsVariable?: pulumi.Input<string | undefined>;
+    sourceIdentityListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceIdentityUsergroups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceIdentityUsers?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourcePortListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourcePorts?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    sourcePortsVariable?: pulumi.Input<string>;
-    sourceScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    sourcePortsVariable?: pulumi.Input<string | undefined>;
+    sourceScalableGroupTagListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    sourceSecurityGroupListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface EmbeddedSecurityPolicyAssembly {
-    advancedInspectionProfilePolicyId?: pulumi.Input<string>;
-    entries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssemblyEntry>[]>;
-    ngfwPolicyId?: pulumi.Input<string>;
-    sslDecryptionProfileId?: pulumi.Input<string>;
+    advancedInspectionProfilePolicyId?: pulumi.Input<string | undefined>;
+    entries?: pulumi.Input<pulumi.Input<inputs.EmbeddedSecurityPolicyAssemblyEntry>[] | undefined>;
+    ngfwPolicyId?: pulumi.Input<string | undefined>;
+    sslDecryptionProfileId?: pulumi.Input<string | undefined>;
 }
 
 export interface EmbeddedSecurityPolicyAssemblyEntry {
     /**
      * - Choices: `self`, `default`, `untrusted`
      */
-    destinationZone?: pulumi.Input<string>;
-    destinationZoneListId?: pulumi.Input<string>;
+    destinationZone?: pulumi.Input<string | undefined>;
+    destinationZoneListId?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `self`, `default`, `untrusted`
      */
-    sourceZone?: pulumi.Input<string>;
-    sourceZoneListId?: pulumi.Input<string>;
+    sourceZone?: pulumi.Input<string | undefined>;
+    sourceZoneListId?: pulumi.Input<string | undefined>;
 }
 
 export interface ExpandedCommunityListPolicyObjectEntry {
     /**
      * Expanded community value, e.g. `100:1000`
      */
-    community?: pulumi.Input<string>;
+    community?: pulumi.Input<string | undefined>;
 }
 
 export interface ExtendedCommunityListPolicyObjectEntry {
@@ -6514,7 +6514,7 @@ export interface FeatureDeviceTemplateGeneralTemplate {
     /**
      * List of sub templates
      */
-    subTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplateSubTemplate>[]>;
+    subTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplateSubTemplate>[] | undefined>;
     /**
      * Feature template type
      *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`, `virtual-application-utd`, `cellular-cedge-controller`
@@ -6523,7 +6523,7 @@ export interface FeatureDeviceTemplateGeneralTemplate {
     /**
      * Feature template version
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface FeatureDeviceTemplateGeneralTemplateSubTemplate {
@@ -6534,7 +6534,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplate {
     /**
      * List of sub templates
      */
-    subTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate>[]>;
+    subTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate>[] | undefined>;
     /**
      * Feature template type
      *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
@@ -6543,7 +6543,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplate {
     /**
      * Feature template version
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate {
@@ -6559,7 +6559,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate {
     /**
      * Feature template version
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface GeoLocationListPolicyObjectEntry {
@@ -6567,22 +6567,22 @@ export interface GeoLocationListPolicyObjectEntry {
      * Continent
      *   - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
      */
-    continent?: pulumi.Input<string>;
+    continent?: pulumi.Input<string | undefined>;
     /**
      * Country
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
 }
 
 export interface HubAndSpokeTopologyPolicyDefinitionTopology {
     /**
      * Advertise Hub TLOCs
      */
-    advertiseHubTlocs?: pulumi.Input<boolean>;
+    advertiseHubTlocs?: pulumi.Input<boolean | undefined>;
     /**
      * All hubs are equal (All Spokes Sites connect to all Hubs)
      */
-    allHubsAreEqual?: pulumi.Input<boolean>;
+    allHubsAreEqual?: pulumi.Input<boolean | undefined>;
     /**
      * Topology name
      */
@@ -6590,60 +6590,60 @@ export interface HubAndSpokeTopologyPolicyDefinitionTopology {
     /**
      * List of spokes
      */
-    spokes?: pulumi.Input<pulumi.Input<inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpoke>[]>;
+    spokes?: pulumi.Input<pulumi.Input<inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpoke>[] | undefined>;
     /**
      * TLOC list ID (required when `advertiseHubTlocs` is 'true')
      */
-    tlocListId?: pulumi.Input<string>;
+    tlocListId?: pulumi.Input<string | undefined>;
 }
 
 export interface HubAndSpokeTopologyPolicyDefinitionTopologySpoke {
     /**
      * List of hubs
      */
-    hubs?: pulumi.Input<pulumi.Input<inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpokeHub>[]>;
+    hubs?: pulumi.Input<pulumi.Input<inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpokeHub>[] | undefined>;
     /**
      * Site list ID
      */
-    siteListId?: pulumi.Input<string>;
+    siteListId?: pulumi.Input<string | undefined>;
     /**
      * Site list version
      */
-    siteListVersion?: pulumi.Input<number>;
+    siteListVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface HubAndSpokeTopologyPolicyDefinitionTopologySpokeHub {
     /**
      * List of IPv4 prefix list IDs
      */
-    ipv4PrefixListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    ipv4PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * List of IPv6 prefix list IDs
      */
-    ipv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    ipv6PrefixListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is 'false')
      */
-    preference?: pulumi.Input<string>;
+    preference?: pulumi.Input<string | undefined>;
     /**
      * Site list ID
      */
-    siteListId?: pulumi.Input<string>;
+    siteListId?: pulumi.Input<string | undefined>;
     /**
      * Site list version
      */
-    siteListVersion?: pulumi.Input<number>;
+    siteListVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface IntrusionPreventionPolicyDefinitionLogging {
     /**
      * External Syslog Server IP
      */
-    externalSyslogServerIp?: pulumi.Input<string>;
+    externalSyslogServerIp?: pulumi.Input<string | undefined>;
     /**
      * External Syslog Server VPN
      */
-    externalSyslogServerVpn?: pulumi.Input<string>;
+    externalSyslogServerVpn?: pulumi.Input<string | undefined>;
 }
 
 export interface IpsSignatureListPolicyObjectEntry {
@@ -6651,24 +6651,24 @@ export interface IpsSignatureListPolicyObjectEntry {
      * Signature generator ID
      *   - Range: `0`-`4294967295`
      */
-    generatorId?: pulumi.Input<number>;
+    generatorId?: pulumi.Input<number | undefined>;
     /**
      * Signature ID
      *   - Range: `0`-`4294967295`
      */
-    signatureId?: pulumi.Input<number>;
+    signatureId?: pulumi.Input<number | undefined>;
 }
 
 export interface Ipv4AclPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4AclPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4AclPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      *   - Range: `1`-`65534`
@@ -6677,7 +6677,7 @@ export interface Ipv4AclPolicyDefinitionSequence {
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4AclPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4AclPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -6688,39 +6688,39 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
     /**
      * Class map ID, Attribute conditional on `type` equal to `class`
      */
-    classMapId?: pulumi.Input<string>;
+    classMapId?: pulumi.Input<string | undefined>;
     /**
      * Class map version
      */
-    classMapVersion?: pulumi.Input<number>;
+    classMapVersion?: pulumi.Input<number | undefined>;
     /**
      * Counter name, Attribute conditional on `type` equal to `count`
      */
-    counterName?: pulumi.Input<string>;
+    counterName?: pulumi.Input<string | undefined>;
     /**
      * Enable logging, Attribute conditional on `type` equal to `log`
      */
-    log?: pulumi.Input<boolean>;
+    log?: pulumi.Input<boolean | undefined>;
     /**
      * Mirror ID, Attribute conditional on `type` equal to `mirror`
      */
-    mirrorId?: pulumi.Input<string>;
+    mirrorId?: pulumi.Input<string | undefined>;
     /**
      * Mirror version
      */
-    mirrorVersion?: pulumi.Input<number>;
+    mirrorVersion?: pulumi.Input<number | undefined>;
     /**
      * Policer ID, Attribute conditional on `type` equal to `policer`
      */
-    policerId?: pulumi.Input<string>;
+    policerId?: pulumi.Input<string | undefined>;
     /**
      * Policer version
      */
-    policerVersion?: pulumi.Input<number>;
+    policerVersion?: pulumi.Input<number | undefined>;
     /**
      * List of set parameters, Attribute conditional on `type` equal to `set`
      */
-    setParameters?: pulumi.Input<pulumi.Input<inputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter>[]>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter>[] | undefined>;
     /**
      * Type of action entry
      *   - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
@@ -6733,11 +6733,11 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
      * DSCP value, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
     /**
      * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
-    nextHop?: pulumi.Input<string>;
+    nextHop?: pulumi.Input<string | undefined>;
     /**
      * Type of set parameter
      *   - Choices: `dscp`, `nextHop`
@@ -6749,78 +6749,78 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
     /**
      * Class map ID, Attribute conditional on `type` equal to `class`
      */
-    classMapId?: pulumi.Input<string>;
+    classMapId?: pulumi.Input<string | undefined>;
     /**
      * Class map version
      */
-    classMapVersion?: pulumi.Input<number>;
+    classMapVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
-    destinationDataIpv4PrefixListId?: pulumi.Input<string>;
+    destinationDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination data IPv4 prefix list version
      */
-    destinationDataIpv4PrefixListVersion?: pulumi.Input<number>;
+    destinationDataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
      */
-    destinationIp?: pulumi.Input<string>;
+    destinationIp?: pulumi.Input<string | undefined>;
     /**
      * Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
      */
-    destinationIpVariable?: pulumi.Input<string>;
+    destinationIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      */
-    destinationPorts?: pulumi.Input<string>;
+    destinationPorts?: pulumi.Input<string | undefined>;
     /**
      * DSCP value, Attribute conditional on `type` equal to `dscp`
      */
-    dscp?: pulumi.Input<string>;
+    dscp?: pulumi.Input<string | undefined>;
     /**
      * ICMP Message, Attribute conditional on `type` equal to `icmpMessage`
      */
-    icmpMessage?: pulumi.Input<string>;
+    icmpMessage?: pulumi.Input<string | undefined>;
     /**
      * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<number | undefined>;
     /**
      * PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      */
-    priority?: pulumi.Input<string>;
+    priority?: pulumi.Input<string | undefined>;
     /**
      * Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` equal to `protocol`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
-    sourceDataIpv4PrefixListId?: pulumi.Input<string>;
+    sourceDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv4 prefix list version
      */
-    sourceDataIpv4PrefixListVersion?: pulumi.Input<number>;
+    sourceDataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
-    sourcePorts?: pulumi.Input<string>;
+    sourcePorts?: pulumi.Input<string | undefined>;
     /**
      * TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      */
-    tcp?: pulumi.Input<string>;
+    tcp?: pulumi.Input<string | undefined>;
     /**
      * Type of match entry
      *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
@@ -6832,12 +6832,12 @@ export interface Ipv4DeviceAclPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4DeviceAclPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4DeviceAclPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      *   - Range: `1`-`65534`
@@ -6846,7 +6846,7 @@ export interface Ipv4DeviceAclPolicyDefinitionSequence {
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -6857,7 +6857,7 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
      * Counter name, Attribute conditional on `type` equal to `count`
      */
-    counterName?: pulumi.Input<string>;
+    counterName?: pulumi.Input<string | undefined>;
     /**
      * Type of action entry
      *   - Choices: `count`
@@ -6869,44 +6869,44 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
      * Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
-    destinationDataIpv4PrefixListId?: pulumi.Input<string>;
+    destinationDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination data IPv4 prefix list version
      */
-    destinationDataIpv4PrefixListVersion?: pulumi.Input<number>;
+    destinationDataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
      */
-    destinationIp?: pulumi.Input<string>;
+    destinationIp?: pulumi.Input<string | undefined>;
     /**
      * Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
      */
-    destinationIpVariable?: pulumi.Input<string>;
+    destinationIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
-    destinationPort?: pulumi.Input<number>;
+    destinationPort?: pulumi.Input<number | undefined>;
     /**
      * Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
-    sourceDataIpv4PrefixListId?: pulumi.Input<string>;
+    sourceDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv4 prefix list version
      */
-    sourceDataIpv4PrefixListVersion?: pulumi.Input<number>;
+    sourceDataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
-    sourcePorts?: pulumi.Input<string>;
+    sourcePorts?: pulumi.Input<string | undefined>;
     /**
      * Type of match entry
      *   - Choices: `sourceIp`, `destinationIp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`
@@ -6918,11 +6918,11 @@ export interface Ipv4PrefixListPolicyObjectEntry {
     /**
      * Greater equal
      */
-    ge?: pulumi.Input<number>;
+    ge?: pulumi.Input<number | undefined>;
     /**
      * Lesser equal
      */
-    le?: pulumi.Input<number>;
+    le?: pulumi.Input<number | undefined>;
     /**
      * IP prefix list entry e.g., `10.0.0.0/12`
      */
@@ -6933,12 +6933,12 @@ export interface Ipv6AclPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6AclPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6AclPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      *   - Range: `1`-`65534`
@@ -6947,7 +6947,7 @@ export interface Ipv6AclPolicyDefinitionSequence {
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6AclPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6AclPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -6958,39 +6958,39 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
     /**
      * Class map ID, Attribute conditional on `type` equal to `class`
      */
-    classMapId?: pulumi.Input<string>;
+    classMapId?: pulumi.Input<string | undefined>;
     /**
      * Class map version
      */
-    classMapVersion?: pulumi.Input<number>;
+    classMapVersion?: pulumi.Input<number | undefined>;
     /**
      * Counter name, Attribute conditional on `type` equal to `count`
      */
-    counterName?: pulumi.Input<string>;
+    counterName?: pulumi.Input<string | undefined>;
     /**
      * Enable logging, Attribute conditional on `type` equal to `log`
      */
-    log?: pulumi.Input<boolean>;
+    log?: pulumi.Input<boolean | undefined>;
     /**
      * Mirror ID, Attribute conditional on `type` equal to `mirror`
      */
-    mirrorId?: pulumi.Input<string>;
+    mirrorId?: pulumi.Input<string | undefined>;
     /**
      * Mirror version
      */
-    mirrorVersion?: pulumi.Input<number>;
+    mirrorVersion?: pulumi.Input<number | undefined>;
     /**
      * Policer ID, Attribute conditional on `type` equal to `policer`
      */
-    policerId?: pulumi.Input<string>;
+    policerId?: pulumi.Input<string | undefined>;
     /**
      * Policer version
      */
-    policerVersion?: pulumi.Input<number>;
+    policerVersion?: pulumi.Input<number | undefined>;
     /**
      * List of set parameters, Attribute conditional on `type` equal to `set`
      */
-    setParameters?: pulumi.Input<pulumi.Input<inputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter>[]>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter>[] | undefined>;
     /**
      * Type of action entry
      *   - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
@@ -7002,12 +7002,12 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
      * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
-    nextHop?: pulumi.Input<string>;
+    nextHop?: pulumi.Input<string | undefined>;
     /**
      * Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      */
-    trafficClass?: pulumi.Input<number>;
+    trafficClass?: pulumi.Input<number | undefined>;
     /**
      * Type of set parameter
      *   - Choices: `trafficClass`, `nextHop`
@@ -7019,68 +7019,68 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
     /**
      * Class map ID, Attribute conditional on `type` equal to `class`
      */
-    classMapId?: pulumi.Input<string>;
+    classMapId?: pulumi.Input<string | undefined>;
     /**
      * Class map version
      */
-    classMapVersion?: pulumi.Input<number>;
+    classMapVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      */
-    destinationDataIpv6PrefixListId?: pulumi.Input<string>;
+    destinationDataIpv6PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination data prefix list version
      */
-    destinationDataIpv6PrefixListVersion?: pulumi.Input<number>;
+    destinationDataIpv6PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
      */
-    destinationIp?: pulumi.Input<string>;
+    destinationIp?: pulumi.Input<string | undefined>;
     /**
      * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      */
-    destinationPorts?: pulumi.Input<string>;
+    destinationPorts?: pulumi.Input<string | undefined>;
     /**
      * Next header, Attribute conditional on `type` equal to `nextHeader`
      *   - Range: `0`-`255`
      */
-    nextHeader?: pulumi.Input<number>;
+    nextHeader?: pulumi.Input<number | undefined>;
     /**
      * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<number | undefined>;
     /**
      * PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      */
-    priority?: pulumi.Input<string>;
+    priority?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      */
-    sourceDataIpv6PrefixListId?: pulumi.Input<string>;
+    sourceDataIpv6PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv6 prefix list version
      */
-    sourceDataIpv6PrefixListVersion?: pulumi.Input<number>;
+    sourceDataIpv6PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
-    sourcePorts?: pulumi.Input<string>;
+    sourcePorts?: pulumi.Input<string | undefined>;
     /**
      * TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      */
-    tcp?: pulumi.Input<string>;
+    tcp?: pulumi.Input<string | undefined>;
     /**
      * Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      */
-    trafficClass?: pulumi.Input<number>;
+    trafficClass?: pulumi.Input<number | undefined>;
     /**
      * Type of match entry
      *   - Choices: `nextHeader`, `sourceIpv6`, `destinationIpv6`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataIpv6PrefixList`, `destinationDataIpv6PrefixList`, `tcp`, `trafficClass`
@@ -7092,12 +7092,12 @@ export interface Ipv6DeviceAclPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6DeviceAclPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6DeviceAclPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      *   - Range: `1`-`65534`
@@ -7106,7 +7106,7 @@ export interface Ipv6DeviceAclPolicyDefinitionSequence {
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -7117,7 +7117,7 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
      * Counter name, Attribute conditional on `type` equal to `count`
      */
-    counterName?: pulumi.Input<string>;
+    counterName?: pulumi.Input<string | undefined>;
     /**
      * Type of action entry
      *   - Choices: `count`
@@ -7129,36 +7129,36 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
      * Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      */
-    destinationDataIpv6PrefixListId?: pulumi.Input<string>;
+    destinationDataIpv6PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination data IPv6 prefix list version
      */
-    destinationDataIpv6PrefixListVersion?: pulumi.Input<number>;
+    destinationDataIpv6PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
      */
-    destinationIp?: pulumi.Input<string>;
+    destinationIp?: pulumi.Input<string | undefined>;
     /**
      * Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
-    destinationPort?: pulumi.Input<number>;
+    destinationPort?: pulumi.Input<number | undefined>;
     /**
      * Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      */
-    sourceDataIpv6PrefixListId?: pulumi.Input<string>;
+    sourceDataIpv6PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv6 prefix list version
      */
-    sourceDataIpv6PrefixListVersion?: pulumi.Input<number>;
+    sourceDataIpv6PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
-    sourcePorts?: pulumi.Input<string>;
+    sourcePorts?: pulumi.Input<string | undefined>;
     /**
      * Type of match entry
      *   - Choices: `sourceIpv6`, `destinationIpv6`, `sourcePort`, `destinationPort`, `sourceDataIpv6PrefixList`, `destinationDataIpv6PrefixList`
@@ -7170,11 +7170,11 @@ export interface Ipv6PrefixListPolicyObjectEntry {
     /**
      * Greater equal
      */
-    ge?: pulumi.Input<number>;
+    ge?: pulumi.Input<number | undefined>;
     /**
      * Lesser equal
      */
-    le?: pulumi.Input<number>;
+    le?: pulumi.Input<number | undefined>;
     /**
      * IP prefix list entry, e.g. `2001:1:1:2::/64`
      */
@@ -7185,11 +7185,11 @@ export interface LocalApplicationListPolicyObjectEntry {
     /**
      * Application name
      */
-    application?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
     /**
      * Application family name
      */
-    applicationFamily?: pulumi.Input<string>;
+    applicationFamily?: pulumi.Input<string | undefined>;
 }
 
 export interface LocalizedPolicyDefinition {
@@ -7205,7 +7205,7 @@ export interface LocalizedPolicyDefinition {
     /**
      * Policy definition version
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface MeshTopologyPolicyDefinitionRegion {
@@ -7216,129 +7216,129 @@ export interface MeshTopologyPolicyDefinitionRegion {
     /**
      * Site list IDs
      */
-    siteListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    siteListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Site list versions
      */
-    siteListVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    siteListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface OtherThousandeyesFeatureVirtualApplication {
     /**
      * Set the Account Group Token
      */
-    accountGroupToken?: pulumi.Input<string>;
+    accountGroupToken?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accountGroupTokenVariable?: pulumi.Input<string>;
+    accountGroupTokenVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Agent default gateway
      */
-    agentDefaultGateway?: pulumi.Input<string>;
+    agentDefaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    agentDefaultGatewayVariable?: pulumi.Input<string>;
+    agentDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the host name
      */
-    hostname?: pulumi.Input<string>;
+    hostname?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameVariable?: pulumi.Input<string>;
+    hostnameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Agent IP Address
      */
-    managementIp?: pulumi.Input<string>;
+    managementIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    managementIpVariable?: pulumi.Input<string>;
+    managementIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Agent SubnetMask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    managementSubnetMask?: pulumi.Input<string>;
+    managementSubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    managementSubnetMaskVariable?: pulumi.Input<string>;
+    managementSubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the name server
      */
-    nameServerIp?: pulumi.Input<string>;
+    nameServerIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameServerIpVariable?: pulumi.Input<string>;
+    nameServerIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the proxy PAC url
      */
-    pacUrl?: pulumi.Input<string>;
+    pacUrl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    pacUrlVariable?: pulumi.Input<string>;
+    pacUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Proxy Host
      */
-    proxyHost?: pulumi.Input<string>;
+    proxyHost?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    proxyHostVariable?: pulumi.Input<string>;
+    proxyHostVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Proxy Port
      *   - Range: `1`-`65535`
      */
-    proxyPort?: pulumi.Input<number>;
+    proxyPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    proxyPortVariable?: pulumi.Input<string>;
+    proxyPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Select Web Proxy Type
      */
-    proxyType?: pulumi.Input<string>;
+    proxyType?: pulumi.Input<string | undefined>;
     /**
      * VPN number
      *   - Range: `0`-`65530`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface OtherUcseFeatureInterface {
     /**
      * Set Inteface name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * UCSE Interface VPN
      *   - Range: `1`-`65527`
      */
-    ucseInterfaceVpn?: pulumi.Input<number>;
+    ucseInterfaceVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ucseInterfaceVpnVariable?: pulumi.Input<string>;
+    ucseInterfaceVpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyGroupDevice {
@@ -7346,22 +7346,22 @@ export interface PolicyGroupDevice {
      * Deploy to device if enabled.
      *   - Default value: `false`
      */
-    deploy?: pulumi.Input<boolean>;
+    deploy?: pulumi.Input<boolean | undefined>;
     /**
      * Device ID
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * List of variables
      */
-    variables?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDeviceVariable>[]>;
+    variables?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDeviceVariable>[] | undefined>;
 }
 
 export interface PolicyGroupDeviceVariable {
     /**
      * Use this instead of `value` in case value is of type `List`.
      */
-    listValues?: pulumi.Input<pulumi.Input<string>[]>;
+    listValues?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
@@ -7369,19 +7369,19 @@ export interface PolicyGroupDeviceVariable {
     /**
      * Variable value
      */
-    value?: pulumi.Input<string>;
+    value?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectAppProbeClassEntry {
     /**
      * Forwarding Class Name
      */
-    forwardingClass?: pulumi.Input<string>;
-    forwardingClassId?: pulumi.Input<string>;
+    forwardingClass?: pulumi.Input<string | undefined>;
+    forwardingClassId?: pulumi.Input<string | undefined>;
     /**
      * Map
      */
-    maps?: pulumi.Input<pulumi.Input<inputs.PolicyObjectAppProbeClassEntryMap>[]>;
+    maps?: pulumi.Input<pulumi.Input<inputs.PolicyObjectAppProbeClassEntryMap>[] | undefined>;
 }
 
 export interface PolicyObjectAppProbeClassEntryMap {
@@ -7389,21 +7389,21 @@ export interface PolicyObjectAppProbeClassEntryMap {
      * Color
      *   - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
      */
-    color?: pulumi.Input<string>;
+    color?: pulumi.Input<string | undefined>;
     /**
      * DSCP number
      *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectApplicationListEntry {
-    application?: pulumi.Input<string>;
-    applicationFamily?: pulumi.Input<string>;
+    application?: pulumi.Input<string | undefined>;
+    applicationFamily?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectAsPathListEntry {
-    asPathList?: pulumi.Input<string>;
+    asPathList?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectClassMapEntry {
@@ -7411,45 +7411,45 @@ export interface PolicyObjectClassMapEntry {
      * select a queue
      *   - Choices: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
      */
-    queue?: pulumi.Input<string>;
+    queue?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectColorListEntry {
     /**
      * - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
      */
-    color?: pulumi.Input<string>;
+    color?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectDataIpv4PrefixListEntry {
     /**
      * IPv4 address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * IPv4 prefix Length
      *   - Range: `0`-`32`
      */
-    ipv4PrefixLength?: pulumi.Input<number>;
+    ipv4PrefixLength?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectDataIpv6PrefixListEntry {
     /**
      * IPv6 address
      */
-    ipv6Address?: pulumi.Input<string>;
+    ipv6Address?: pulumi.Input<string | undefined>;
     /**
      * IPv6 prefix
      *   - Range: `0`-`128`
      */
-    ipv6PrefixLength?: pulumi.Input<number>;
+    ipv6PrefixLength?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectExtendedCommunityListEntry {
     /**
      * can be soo 10.0.0.1:30 or rt 500:50 etc.
      */
-    extendedCommunity?: pulumi.Input<string>;
+    extendedCommunity?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectIpv4PrefixListEntry {
@@ -7457,21 +7457,21 @@ export interface PolicyObjectIpv4PrefixListEntry {
      * IPv4 prefix length with ge range operator
      *   - Range: `1`-`32`
      */
-    ge?: pulumi.Input<number>;
+    ge?: pulumi.Input<number | undefined>;
     /**
      * IPv4 address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * IPv4 prefix length
      *   - Range: `0`-`32`
      */
-    ipv4PrefixLength?: pulumi.Input<number>;
+    ipv4PrefixLength?: pulumi.Input<number | undefined>;
     /**
      * IPv4 prefix length with le range operator
      *   - Range: `1`-`32`
      */
-    le?: pulumi.Input<number>;
+    le?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectIpv6PrefixListEntry {
@@ -7479,32 +7479,32 @@ export interface PolicyObjectIpv6PrefixListEntry {
      * IPv6 prefix length with ge range operator
      *   - Range: `1`-`128`
      */
-    ge?: pulumi.Input<number>;
+    ge?: pulumi.Input<number | undefined>;
     /**
      * IPv6 address
      */
-    ipv6Address?: pulumi.Input<string>;
+    ipv6Address?: pulumi.Input<string | undefined>;
     /**
      * IPv6 prefix length
      *   - Range: `0`-`128`
      */
-    ipv6PrefixLength?: pulumi.Input<number>;
+    ipv6PrefixLength?: pulumi.Input<number | undefined>;
     /**
      * IPv6 prefix length with le range operator
      *   - Range: `1`-`128`
      */
-    le?: pulumi.Input<number>;
+    le?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectMirrorEntry {
     /**
      * remote destination ip address
      */
-    remoteDestinationIp?: pulumi.Input<string>;
+    remoteDestinationIp?: pulumi.Input<string | undefined>;
     /**
      * source ip address
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectPolicerEntry {
@@ -7512,47 +7512,47 @@ export interface PolicyObjectPolicerEntry {
      * Burst (Bytes)
      *   - Range: `15000`-`10000000`
      */
-    burstBytes?: pulumi.Input<number>;
+    burstBytes?: pulumi.Input<number | undefined>;
     /**
      * Exceed options such as Drop or Remark
      *   - Choices: `drop`, `remark`
      */
-    exceedAction?: pulumi.Input<string>;
+    exceedAction?: pulumi.Input<string | undefined>;
     /**
      * Rate (bps)
      *   - Range: `8`-`100000000000`
      */
-    rateBps?: pulumi.Input<number>;
+    rateBps?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectPreferredColorGroupEntry {
-    primaryColorPreferences?: pulumi.Input<pulumi.Input<string>[]>;
+    primaryColorPreferences?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `all-paths`, `direct-path`, `multi-hop-path`
      */
-    primaryPathPreference?: pulumi.Input<string>;
-    secondaryColorPreferences?: pulumi.Input<pulumi.Input<string>[]>;
+    primaryPathPreference?: pulumi.Input<string | undefined>;
+    secondaryColorPreferences?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `all-paths`, `direct-path`, `multi-hop-path`
      */
-    secondaryPathPreference?: pulumi.Input<string>;
-    tertiaryColorPreferences?: pulumi.Input<pulumi.Input<string>[]>;
+    secondaryPathPreference?: pulumi.Input<string | undefined>;
+    tertiaryColorPreferences?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Choices: `all-paths`, `direct-path`, `multi-hop-path`
      */
-    tertiaryPathPreference?: pulumi.Input<string>;
+    tertiaryPathPreference?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityDataIpv4PrefixListEntry {
-    ipPrefix?: pulumi.Input<string>;
+    ipPrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipPrefixVariable?: pulumi.Input<string>;
+    ipPrefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityFqdnListEntry {
-    pattern?: pulumi.Input<string>;
+    pattern?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityGeolocationListEntry {
@@ -7560,108 +7560,108 @@ export interface PolicyObjectSecurityGeolocationListEntry {
      * continent name
      *   - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
      */
-    continent?: pulumi.Input<string>;
+    continent?: pulumi.Input<string | undefined>;
     /**
      * country names
      *   - Choices: `AFG`, `ALB`, `ATA`, `DZA`, `ASM`, `AND`, `AGO`, `ATG`, `AZE`, `ARG`, `AUS`, `AUT`, `BHS`, `BHR`, `BGD`, `ARM`, `BRB`, `BEL`, `BMU`, `BTN`, `BOL`, `BIH`, `BWA`, `BVT`, `BRA`, `BLZ`, `IOT`, `SLB`, `VGB`, `BRN`, `BGR`, `MMR`, `BDI`, `BLR`, `KHM`, `CMR`, `CAN`, `CPV`, `CYM`, `CAF`, `LKA`, `TCD`, `CHL`, `CHN`, `TWN`, `CXR`, `CCK`, `COL`, `COM`, `MYT`, `COG`, `COD`, `COK`, `CRI`, `HRV`, `CUB`, `CYP`, `CZE`, `BEN`, `DNK`, `DMA`, `DOM`, `ECU`, `SLV`, `GNQ`, `ETH`, `ERI`, `EST`, `FRO`, `FLK`, `SGS`, `FJI`, `FIN`, `ALA`, `FRA`, `GUF`, `PYF`, `ATF`, `DJI`, `GAB`, `GEO`, `GMB`, `PSE`, `DEU`, `GHA`, `GIB`, `KIR`, `GRC`, `GRL`, `GRD`, `GLP`, `GUM`, `GTM`, `GIN`, `GUY`, `HTI`, `HMD`, `VAT`, `HND`, `HKG`, `HUN`, `ISL`, `IND`, `IDN`, `IRN`, `IRQ`, `IRL`, `ISR`, `ITA`, `CIV`, `JAM`, `JPN`, `KAZ`, `JOR`, `KEN`, `PRK`, `KOR`, `KWT`, `KGZ`, `LAO`, `LBN`, `LSO`, `LVA`, `LBR`, `LBY`, `LIE`, `LTU`, `LUX`, `MAC`, `MDG`, `MWI`, `MYS`, `MDV`, `MLI`, `MLT`, `MTQ`, `MRT`, `MUS`, `MEX`, `MCO`, `MNG`, `MDA`, `MNE`, `MSR`, `MAR`, `MOZ`, `OMN`, `NAM`, `NRU`, `NPL`, `NLD`, `ANT`, `CUW`, `ABW`, `SXM`, `BES`, `NCL`, `VUT`, `NZL`, `NIC`, `NER`, `NGA`, `NIU`, `NFK`, `NOR`, `MNP`, `UMI`, `FSM`, `MHL`, `PLW`, `PAK`, `PAN`, `PNG`, `PRY`, `PER`, `PHL`, `PCN`, `POL`, `PRT`, `GNB`, `TLS`, `PRI`, `QAT`, `REU`, `ROU`, `RUS`, `RWA`, `BLM`, `SHN`, `KNA`, `AIA`, `LCA`, `MAF`, `SPM`, `VCT`, `SMR`, `STP`, `SAU`, `SEN`, `SRB`, `SYC`, `SLE`, `SGP`, `SVK`, `VNM`, `SVN`, `SOM`, `ZAF`, `ZWE`, `ESP`, `SSD`, `ESH`, `SDN`, `SUR`, `SJM`, `SWZ`, `SWE`, `CHE`, `SYR`, `TJK`, `THA`, `TGO`, `TKL`, `TON`, `TTO`, `ARE`, `TUN`, `TUR`, `TKM`, `TCA`, `TUV`, `UGA`, `UKR`, `MKD`, `EGY`, `GBR`, `GGY`, `JEY`, `IMN`, `TZA`, `USA`, `VIR`, `BFA`, `URY`, `UZB`, `VEN`, `WLF`, `WSM`, `YEM`, `ZMB`
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityIdentityListEntry {
-    user?: pulumi.Input<string>;
-    userGroup?: pulumi.Input<string>;
+    user?: pulumi.Input<string | undefined>;
+    userGroup?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityIpsSignatureEntry {
-    generatorId?: pulumi.Input<string>;
-    signatureId?: pulumi.Input<string>;
+    generatorId?: pulumi.Input<string | undefined>;
+    signatureId?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityLocalApplicationListEntry {
-    app?: pulumi.Input<string>;
-    appFamily?: pulumi.Input<string>;
+    app?: pulumi.Input<string | undefined>;
+    appFamily?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityLocalDomainListEntry {
-    localDomain?: pulumi.Input<string>;
+    localDomain?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityPortListEntry {
     /**
      * can be single port or port range
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityProtocolListEntry {
     /**
      * - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrolAgent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvpTunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
      */
-    protocolName?: pulumi.Input<string>;
+    protocolName?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityScalableGroupTagListEntry {
-    sgtName?: pulumi.Input<string>;
-    tag?: pulumi.Input<string>;
+    sgtName?: pulumi.Input<string | undefined>;
+    tag?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityUrlAllowListEntry {
     /**
      * valid url pattern
      */
-    pattern?: pulumi.Input<string>;
+    pattern?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityUrlBlockListEntry {
     /**
      * valid url pattern
      */
-    pattern?: pulumi.Input<string>;
+    pattern?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSecurityZoneEntry {
-    interface?: pulumi.Input<string>;
-    vpn?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
+    vpn?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectSlaClassListEntry {
-    appProbeClassListId?: pulumi.Input<string>;
+    appProbeClassListId?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      */
-    fallbackBestTunnelCriteria?: pulumi.Input<string>;
+    fallbackBestTunnelCriteria?: pulumi.Input<string | undefined>;
     /**
      * - Range: `1`-`1000`
      */
-    fallbackBestTunnelJitterVariance?: pulumi.Input<number>;
+    fallbackBestTunnelJitterVariance?: pulumi.Input<number | undefined>;
     /**
      * - Range: `1`-`1000`
      */
-    fallbackBestTunnelLatencyVariance?: pulumi.Input<number>;
+    fallbackBestTunnelLatencyVariance?: pulumi.Input<number | undefined>;
     /**
      * - Range: `0`-`100`
      */
-    fallbackBestTunnelLossVariance?: pulumi.Input<number>;
+    fallbackBestTunnelLossVariance?: pulumi.Input<number | undefined>;
     /**
      * - Range: `1`-`1000`
      */
-    jitter?: pulumi.Input<number>;
+    jitter?: pulumi.Input<number | undefined>;
     /**
      * - Range: `1`-`1000`
      */
-    latency?: pulumi.Input<number>;
+    latency?: pulumi.Input<number | undefined>;
     /**
      * - Range: `0`-`100`
      */
-    loss?: pulumi.Input<number>;
+    loss?: pulumi.Input<number | undefined>;
 }
 
 export interface PolicyObjectStandardCommunityListEntry {
     /**
      * Standard Community
      */
-    standardCommunity?: pulumi.Input<string>;
+    standardCommunity?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectTlocListEntry {
@@ -7669,41 +7669,41 @@ export interface PolicyObjectTlocListEntry {
      * color
      *   - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
      */
-    color?: pulumi.Input<string>;
+    color?: pulumi.Input<string | undefined>;
     /**
      * encapsulation
      *   - Choices: `ipsec`, `gre`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Preference
      */
-    preference?: pulumi.Input<string>;
+    preference?: pulumi.Input<string | undefined>;
     /**
      * tloc
      */
-    tlocIp?: pulumi.Input<string>;
+    tlocIp?: pulumi.Input<string | undefined>;
 }
 
 export interface PolicyObjectVpnGroupEntry {
     /**
      * can be single vpn id or vpn id range
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 export interface PortListPolicyObjectEntry {
     /**
      * Port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface ProtocolListPolicyObjectEntry {
     /**
      * Protocol name
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface QosMapPolicyDefinitionQosScheduler {
@@ -7721,15 +7721,15 @@ export interface QosMapPolicyDefinitionQosScheduler {
      * Burst size
      *   - Range: `5000`-`10000000`
      */
-    burst?: pulumi.Input<number>;
+    burst?: pulumi.Input<number | undefined>;
     /**
      * Class map ID (can be empty for queue 0 when left as Control)
      */
-    classMapId?: pulumi.Input<string>;
+    classMapId?: pulumi.Input<string | undefined>;
     /**
      * Class map version
      */
-    classMapVersion?: pulumi.Input<number>;
+    classMapVersion?: pulumi.Input<number | undefined>;
     /**
      * Drop type
      *   - Choices: `tail-drop`, `red-drop`
@@ -7762,7 +7762,7 @@ export interface RewriteRulePolicyDefinitionRule {
     /**
      * Class map version
      */
-    classMapVersion?: pulumi.Input<number>;
+    classMapVersion?: pulumi.Input<number | undefined>;
     /**
      * DSCP
      *   - Range: `0`-`63`
@@ -7772,7 +7772,7 @@ export interface RewriteRulePolicyDefinitionRule {
      * Layer2 CoS
      *   - Range: `0`-`7`
      */
-    layer2Cos?: pulumi.Input<number>;
+    layer2Cos?: pulumi.Input<number | undefined>;
     /**
      * Priority
      *   - Choices: `high`, `low`
@@ -7784,12 +7784,12 @@ export interface RoutePolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `reject`
      *   - Choices: `accept`, `reject`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      *   - Range: `1`-`65534`
@@ -7799,11 +7799,11 @@ export interface RoutePolicyDefinitionSequence {
      * IP version, either `ipv4` or `ipv6`
      *   - Choices: `ipv4`, `ipv6`
      */
-    ipType?: pulumi.Input<string>;
+    ipType?: pulumi.Input<string | undefined>;
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.RoutePolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -7815,73 +7815,73 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
      * Aggregator, Attribute conditional on `type` equal to `aggregator`
      *   - Range: `0`-`4294967295`
      */
-    aggregator?: pulumi.Input<number>;
+    aggregator?: pulumi.Input<number | undefined>;
     /**
      * IP address, Attribute conditional on `type` equal to `aggregator`
      */
-    aggregatorIpAddress?: pulumi.Input<string>;
+    aggregatorIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Space separated list of ASN to exclude, Attribute conditional on `type` equal to `asPath`
      */
-    asPathExclude?: pulumi.Input<string>;
+    asPathExclude?: pulumi.Input<string | undefined>;
     /**
      * Space separated list of ASN to prepend, Attribute conditional on `type` equal to `asPath`
      */
-    asPathPrepend?: pulumi.Input<string>;
+    asPathPrepend?: pulumi.Input<string | undefined>;
     /**
      * Atomic aggregate, Attribute conditional on `type` equal to `atomicAggregate`
      */
-    atomicAggregate?: pulumi.Input<boolean>;
+    atomicAggregate?: pulumi.Input<boolean | undefined>;
     /**
      * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
      */
-    community?: pulumi.Input<string>;
+    community?: pulumi.Input<string | undefined>;
     /**
      * Community additive, Attribute conditional on `type` equal to `communityAdditive`
      */
-    communityAdditive?: pulumi.Input<boolean>;
+    communityAdditive?: pulumi.Input<boolean | undefined>;
     /**
      * Community variable, Attribute conditional on `type` equal to `community`
      */
-    communityVariable?: pulumi.Input<string>;
+    communityVariable?: pulumi.Input<string | undefined>;
     /**
      * Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
-    localPreference?: pulumi.Input<number>;
+    localPreference?: pulumi.Input<number | undefined>;
     /**
      * Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Metric type, Attribute conditional on `type` equal to `metricType`
      *   - Choices: `type1`, `type2`
      */
-    metricType?: pulumi.Input<string>;
+    metricType?: pulumi.Input<string | undefined>;
     /**
      * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
-    nextHop?: pulumi.Input<string>;
+    nextHop?: pulumi.Input<string | undefined>;
     /**
      * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      */
-    origin?: pulumi.Input<string>;
+    origin?: pulumi.Input<string | undefined>;
     /**
      * Originator IP, Attribute conditional on `type` equal to `originator`
      */
-    originator?: pulumi.Input<string>;
+    originator?: pulumi.Input<string | undefined>;
     /**
      * OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      */
-    ospfTag?: pulumi.Input<number>;
+    ospfTag?: pulumi.Input<number | undefined>;
     /**
      * Type of action entry
      *   - Choices: `aggregator`, `asPath`, `atomicAggregate`, `community`, `communityAdditive`, `localPreference`, `metric`, `weight`, `metricType`, `nextHop`, `ompTag`, `ospfTag`, `origin`, `originator`
@@ -7891,104 +7891,104 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
      * Weight, Attribute conditional on `type` equal to `weight`
      *   - Range: `0`-`4294967295`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
 }
 
 export interface RoutePolicyDefinitionSequenceMatchEntry {
     /**
      * AS path list ID, Attribute conditional on `type` equal to `asPath`
      */
-    asPathListId?: pulumi.Input<string>;
+    asPathListId?: pulumi.Input<string | undefined>;
     /**
      * AS path list version
      */
-    asPathListVersion?: pulumi.Input<number>;
+    asPathListVersion?: pulumi.Input<number | undefined>;
     /**
      * Community list ID, Attribute conditional on `type` equal to `community`
      */
-    communityListId?: pulumi.Input<string>;
+    communityListId?: pulumi.Input<string | undefined>;
     /**
      * Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
      */
-    communityListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    communityListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Community list match flag
      *   - Choices: `and`, `or`, `exact`
      */
-    communityListMatchFlag?: pulumi.Input<string>;
+    communityListMatchFlag?: pulumi.Input<string | undefined>;
     /**
      * Community list version
      */
-    communityListVersion?: pulumi.Input<number>;
+    communityListVersion?: pulumi.Input<number | undefined>;
     /**
      * Community list versions
      */
-    communityListVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    communityListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      */
-    expandedCommunityListId?: pulumi.Input<string>;
+    expandedCommunityListId?: pulumi.Input<string | undefined>;
     /**
      * Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
      */
-    expandedCommunityListVariable?: pulumi.Input<string>;
+    expandedCommunityListVariable?: pulumi.Input<string | undefined>;
     /**
      * Expanded community list version
      */
-    expandedCommunityListVersion?: pulumi.Input<number>;
+    expandedCommunityListVersion?: pulumi.Input<number | undefined>;
     /**
      * Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
      */
-    extendedCommunityListId?: pulumi.Input<string>;
+    extendedCommunityListId?: pulumi.Input<string | undefined>;
     /**
      * Extended community list version
      */
-    extendedCommunityListVersion?: pulumi.Input<number>;
+    extendedCommunityListVersion?: pulumi.Input<number | undefined>;
     /**
      * Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
-    localPreference?: pulumi.Input<number>;
+    localPreference?: pulumi.Input<number | undefined>;
     /**
      * Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
      */
-    nextHopPrefixListId?: pulumi.Input<string>;
+    nextHopPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Next hop prefix list version
      */
-    nextHopPrefixListVersion?: pulumi.Input<number>;
+    nextHopPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      */
-    origin?: pulumi.Input<string>;
+    origin?: pulumi.Input<string | undefined>;
     /**
      * OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      */
-    ospfTag?: pulumi.Input<number>;
+    ospfTag?: pulumi.Input<number | undefined>;
     /**
      * Peer IP, Attribute conditional on `type` equal to `peer`
      */
-    peer?: pulumi.Input<string>;
+    peer?: pulumi.Input<string | undefined>;
     /**
      * Prefix list ID, Attribute conditional on `type` equal to `address`
      */
-    prefixListId?: pulumi.Input<string>;
+    prefixListId?: pulumi.Input<string | undefined>;
     /**
      * Prefix list version
      */
-    prefixListVersion?: pulumi.Input<number>;
+    prefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Type of match entry
      *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
@@ -8000,63 +8000,63 @@ export interface RuleSetPolicyDefinitionRule {
     /**
      * Destination data FQDN prefix list ID
      */
-    destinationDataFqdnPrefixListId?: pulumi.Input<string>;
+    destinationDataFqdnPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination data FQDN prefix list version
      */
-    destinationDataFqdnPrefixListVersion?: pulumi.Input<number>;
+    destinationDataFqdnPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination data IPv4 prefix list ID
      */
-    destinationDataIpv4PrefixListId?: pulumi.Input<string>;
+    destinationDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination data IPv4 prefix list version
      */
-    destinationDataIpv4PrefixListVersion?: pulumi.Input<number>;
+    destinationDataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination fully qualified domain name
      */
-    destinationFqdn?: pulumi.Input<string>;
+    destinationFqdn?: pulumi.Input<string | undefined>;
     /**
      * Destination geo location
      */
-    destinationGeoLocation?: pulumi.Input<string>;
+    destinationGeoLocation?: pulumi.Input<string | undefined>;
     /**
      * Destination geo location list ID
      */
-    destinationGeoLocationListId?: pulumi.Input<string>;
+    destinationGeoLocationListId?: pulumi.Input<string | undefined>;
     /**
      * Destination geo location list version
      */
-    destinationGeoLocationListVersion?: pulumi.Input<number>;
+    destinationGeoLocationListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IPv4 prefix
      */
-    destinationIpv4Prefix?: pulumi.Input<string>;
+    destinationIpv4Prefix?: pulumi.Input<string | undefined>;
     /**
      * Destination IPv4 prefix variable name
      */
-    destinationIpv4PrefixVariable?: pulumi.Input<string>;
+    destinationIpv4PrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination object group ID
      */
-    destinationObjectGroupId?: pulumi.Input<string>;
+    destinationObjectGroupId?: pulumi.Input<string | undefined>;
     /**
      * Destination object group version
      */
-    destinationObjectGroupVersion?: pulumi.Input<number>;
+    destinationObjectGroupVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination port or range of ports
      */
-    destinationPort?: pulumi.Input<string>;
+    destinationPort?: pulumi.Input<string | undefined>;
     /**
      * Destination port list ID
      */
-    destinationPortListId?: pulumi.Input<string>;
+    destinationPortListId?: pulumi.Input<string | undefined>;
     /**
      * Destination port list version
      */
-    destinationPortListVersion?: pulumi.Input<number>;
+    destinationPortListVersion?: pulumi.Input<number | undefined>;
     /**
      * The name of the rule
      */
@@ -8068,80 +8068,80 @@ export interface RuleSetPolicyDefinitionRule {
     /**
      * Protocol name
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Protocol list ID
      */
-    protocolListId?: pulumi.Input<string>;
+    protocolListId?: pulumi.Input<string | undefined>;
     /**
      * Protocol list version
      */
-    protocolListVersion?: pulumi.Input<number>;
+    protocolListVersion?: pulumi.Input<number | undefined>;
     /**
      * Protocol number
      *   - Range: `0`-`255`
      */
-    protocolNumber?: pulumi.Input<number>;
+    protocolNumber?: pulumi.Input<number | undefined>;
     /**
      * Source data FQDN prefix list ID
      */
-    sourceDataFqdnPrefixListId?: pulumi.Input<string>;
+    sourceDataFqdnPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source data FQDN prefix list version
      */
-    sourceDataFqdnPrefixListVersion?: pulumi.Input<number>;
+    sourceDataFqdnPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source data IPv4 prefix list ID
      */
-    sourceDataIpv4PrefixListId?: pulumi.Input<string>;
+    sourceDataIpv4PrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source data IPv4 prefix list version
      */
-    sourceDataIpv4PrefixListVersion?: pulumi.Input<number>;
+    sourceDataIpv4PrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source fully qualified domain name
      */
-    sourceFqdn?: pulumi.Input<string>;
+    sourceFqdn?: pulumi.Input<string | undefined>;
     /**
      * Source geo location
      */
-    sourceGeoLocation?: pulumi.Input<string>;
+    sourceGeoLocation?: pulumi.Input<string | undefined>;
     /**
      * Source geo location list ID
      */
-    sourceGeoLocationListId?: pulumi.Input<string>;
+    sourceGeoLocationListId?: pulumi.Input<string | undefined>;
     /**
      * Source geo location list version
      */
-    sourceGeoLocationListVersion?: pulumi.Input<number>;
+    sourceGeoLocationListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IPv4 prefix
      */
-    sourceIpv4Prefix?: pulumi.Input<string>;
+    sourceIpv4Prefix?: pulumi.Input<string | undefined>;
     /**
      * Source IPv4 prefix variable name
      */
-    sourceIpv4PrefixVariable?: pulumi.Input<string>;
+    sourceIpv4PrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Source object group ID
      */
-    sourceObjectGroupId?: pulumi.Input<string>;
+    sourceObjectGroupId?: pulumi.Input<string | undefined>;
     /**
      * Source object group version
      */
-    sourceObjectGroupVersion?: pulumi.Input<number>;
+    sourceObjectGroupVersion?: pulumi.Input<number | undefined>;
     /**
      * Source port or range of ports
      */
-    sourcePort?: pulumi.Input<string>;
+    sourcePort?: pulumi.Input<string | undefined>;
     /**
      * Source port list ID
      */
-    sourcePortListId?: pulumi.Input<string>;
+    sourcePortListId?: pulumi.Input<string | undefined>;
     /**
      * Source port list version
      */
-    sourcePortListVersion?: pulumi.Input<number>;
+    sourcePortListVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface SecurityAppHostingFeatureTemplateVirtualApplication {
@@ -8150,85 +8150,85 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
      *   - Choices: `utd`
      *   - Default value: `utd`
      */
-    applicationType?: pulumi.Input<string>;
+    applicationType?: pulumi.Input<string | undefined>;
     /**
      * Data Gateway IP 
      *   - Default value: `192.0.2.1/24`
      */
-    dataGatewayIp?: pulumi.Input<string>;
+    dataGatewayIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    dataGatewayIpVariable?: pulumi.Input<string>;
+    dataGatewayIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Data Service IP
      *   - Default value: `192.0.2.2/24`
      */
-    dataServiceIp?: pulumi.Input<string>;
+    dataServiceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    dataServiceIpVariable?: pulumi.Input<string>;
+    dataServiceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Download URL Database on Device
      *   - Default value: `false`
      */
-    databaseUrl?: pulumi.Input<boolean>;
+    databaseUrl?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    databaseUrlVariable?: pulumi.Input<string>;
+    databaseUrlVariable?: pulumi.Input<string | undefined>;
     /**
      * List of Virtual applications
      *   - Default value: `1`
      */
-    instanceId?: pulumi.Input<string>;
+    instanceId?: pulumi.Input<string | undefined>;
     /**
      * Is Nat enabled
      *   - Default value: `true`
      */
-    nat?: pulumi.Input<boolean>;
+    nat?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Resource Profile
      *   - Choices: `low`, `medium`, `high`
      *   - Default value: `low`
      */
-    resourceProfile?: pulumi.Input<string>;
+    resourceProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    resourceProfileVariable?: pulumi.Input<string>;
+    resourceProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Service Gateway IP (Management interface)
      */
-    serviceGatewayIp?: pulumi.Input<string>;
+    serviceGatewayIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    serviceGatewayIpVariable?: pulumi.Input<string>;
+    serviceGatewayIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Service IP
      */
-    serviceIp?: pulumi.Input<string>;
+    serviceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    serviceIpVariable?: pulumi.Input<string>;
+    serviceIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SecurityPolicyDefinition {
     /**
      * List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
      */
-    entries?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyDefinitionEntry>[]>;
+    entries?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyDefinitionEntry>[] | undefined>;
     /**
      * Policy definition ID
      */
@@ -8241,394 +8241,394 @@ export interface SecurityPolicyDefinition {
     /**
      * Policy definition version
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface SecurityPolicyDefinitionEntry {
     /**
      * Destination Zone
      */
-    destinationZone?: pulumi.Input<string>;
+    destinationZone?: pulumi.Input<string | undefined>;
     /**
      * Source Zone
      */
-    sourceZone?: pulumi.Input<string>;
+    sourceZone?: pulumi.Input<string | undefined>;
 }
 
 export interface SecurityPolicyLogging {
     /**
      * External Syslog Server IP
      */
-    externalSyslogServerIp?: pulumi.Input<string>;
+    externalSyslogServerIp?: pulumi.Input<string | undefined>;
     /**
      * External Syslog Server Source Interface
      */
-    externalSyslogServerSourceInterface?: pulumi.Input<string>;
+    externalSyslogServerSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * External Syslog Server VPN
      */
-    externalSyslogServerVpn?: pulumi.Input<string>;
+    externalSyslogServerVpn?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceDhcpServerFeatureOptionCode {
     /**
      * Set ASCII value
      */
-    ascii?: pulumi.Input<string>;
+    ascii?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    asciiVariable?: pulumi.Input<string>;
+    asciiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Option Code
      *   - Range: `1`-`254`
      */
-    code?: pulumi.Input<number>;
+    code?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    codeVariable?: pulumi.Input<string>;
+    codeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set HEX value
      */
-    hex?: pulumi.Input<string>;
+    hex?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hexVariable?: pulumi.Input<string>;
+    hexVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipVariable?: pulumi.Input<string>;
+    ipVariable?: pulumi.Input<string | undefined>;
     /**
      * Set ip address
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface ServiceDhcpServerFeatureStaticLease {
     /**
      * Set client’s static IP address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MAC address of client
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv4AclFeatureSequence {
     /**
      * Define list of actions
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
      *   - Default value: `accept`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Define match conditions
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    sequenceId?: pulumi.Input<number>;
+    sequenceId?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    sequenceName?: pulumi.Input<string>;
+    sequenceName?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv4AclFeatureSequenceAction {
     /**
      * Counter Name
      */
-    acceptCounterName?: pulumi.Input<string>;
+    acceptCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    acceptLog?: pulumi.Input<boolean>;
-    acceptMirrorListId?: pulumi.Input<string>;
-    acceptPolicerId?: pulumi.Input<string>;
+    acceptLog?: pulumi.Input<boolean | undefined>;
+    acceptMirrorListId?: pulumi.Input<string | undefined>;
+    acceptPolicerId?: pulumi.Input<string | undefined>;
     /**
      * DSCP number
      *   - Range: `0`-`63`
      */
-    acceptSetDscp?: pulumi.Input<number>;
+    acceptSetDscp?: pulumi.Input<number | undefined>;
     /**
      * Set Next Hop (IPV4 address)
      */
-    acceptSetNextHop?: pulumi.Input<string>;
+    acceptSetNextHop?: pulumi.Input<string | undefined>;
     /**
      * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      *   - Default value: `false`
      */
-    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    acceptSetServiceChainFallback?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain Number
      *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
      */
-    acceptSetServiceChainName?: pulumi.Input<string>;
+    acceptSetServiceChainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    acceptSetServiceChainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    acceptSetServiceChainVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Counter Name
      */
-    dropCounterName?: pulumi.Input<string>;
+    dropCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    dropLog?: pulumi.Input<boolean>;
+    dropLog?: pulumi.Input<boolean | undefined>;
 }
 
 export interface ServiceIpv4AclFeatureSequenceMatchEntry {
     /**
      * Destination Data IP Prefix
      */
-    destinationDataPrefix?: pulumi.Input<string>;
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    destinationDataPrefix?: pulumi.Input<string | undefined>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    destinationDataPrefixVariable?: pulumi.Input<string>;
+    destinationDataPrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination Port List
      */
-    destinationPorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort>[] | undefined>;
     /**
      * DSCP number
      */
-    dscps?: pulumi.Input<pulumi.Input<number>[]>;
+    dscps?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * ICMP Message
      */
-    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<string>;
+    packetLength?: pulumi.Input<string | undefined>;
     /**
      * protocol number list with at least one item
      */
-    protocols?: pulumi.Input<pulumi.Input<number>[]>;
+    protocols?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Source Data IP Prefix
      */
-    sourceDataPrefix?: pulumi.Input<string>;
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    sourceDataPrefix?: pulumi.Input<string | undefined>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceDataPrefixVariable?: pulumi.Input<string>;
+    sourceDataPrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Port List
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntrySourcePort>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntrySourcePort>[] | undefined>;
     /**
      * TCP States
      *   - Choices: `syn`
      */
-    tcpState?: pulumi.Input<string>;
+    tcpState?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv6AclFeatureSequence {
     /**
      * Define list of actions
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
      *   - Default value: `accept`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Define match conditions
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    sequenceId?: pulumi.Input<number>;
+    sequenceId?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    sequenceName?: pulumi.Input<string>;
+    sequenceName?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv6AclFeatureSequenceAction {
     /**
      * Counter Name
      */
-    acceptCounterName?: pulumi.Input<string>;
+    acceptCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    acceptLog?: pulumi.Input<boolean>;
-    acceptMirrorListId?: pulumi.Input<string>;
-    acceptPolicerId?: pulumi.Input<string>;
+    acceptLog?: pulumi.Input<boolean | undefined>;
+    acceptMirrorListId?: pulumi.Input<string | undefined>;
+    acceptPolicerId?: pulumi.Input<string | undefined>;
     /**
      * Set Next Hop (IPV6 address)
      */
-    acceptSetNextHop?: pulumi.Input<string>;
+    acceptSetNextHop?: pulumi.Input<string | undefined>;
     /**
      * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      *   - Default value: `false`
      */
-    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    acceptSetServiceChainFallback?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain Number
      *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
      */
-    acceptSetServiceChainName?: pulumi.Input<string>;
+    acceptSetServiceChainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    acceptSetServiceChainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    acceptSetServiceChainVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * set traffic class number
      *   - Range: `0`-`63`
      */
-    acceptTrafficClass?: pulumi.Input<number>;
+    acceptTrafficClass?: pulumi.Input<number | undefined>;
     /**
      * Counter Name
      */
-    dropCounterName?: pulumi.Input<string>;
+    dropCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    dropLog?: pulumi.Input<boolean>;
+    dropLog?: pulumi.Input<boolean | undefined>;
 }
 
 export interface ServiceIpv6AclFeatureSequenceMatchEntry {
     /**
      * Destination Data IP Prefix
      */
-    destinationDataPrefix?: pulumi.Input<string>;
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    destinationDataPrefix?: pulumi.Input<string | undefined>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination Port List
      */
-    destinationPorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort>[] | undefined>;
     /**
      * ICMP6 Message
      */
-    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * next header number
      *   - Range: `0`-`255`
      */
-    nextHeader?: pulumi.Input<number>;
+    nextHeader?: pulumi.Input<number | undefined>;
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<string>;
+    packetLength?: pulumi.Input<string | undefined>;
     /**
      * Source Data IP Prefix
      */
-    sourceDataPrefix?: pulumi.Input<string>;
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    sourceDataPrefix?: pulumi.Input<string | undefined>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source Port List
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntrySourcePort>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntrySourcePort>[] | undefined>;
     /**
      * TCP States
      *   - Choices: `syn`
      */
-    tcpState?: pulumi.Input<string>;
+    tcpState?: pulumi.Input<string | undefined>;
     /**
      * Select Traffic Class
      */
-    trafficClasses?: pulumi.Input<pulumi.Input<number>[]>;
+    trafficClasses?: pulumi.Input<pulumi.Input<number>[] | undefined>;
 }
 
 export interface ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv4 {
     /**
      * IPv4 Prefix List
      */
-    prefixes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix>[]>;
+    prefixes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix>[] | undefined>;
     /**
      * Protocol
      *   - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `network`, `aggregate`, `eigrp`, `lisp`, `isis`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix {
@@ -8636,56 +8636,56 @@ export interface ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix {
      * Aggregate Only
      *   - Default value: `false`
      */
-    aggregateOnly?: pulumi.Input<boolean>;
-    networkAddress?: pulumi.Input<string>;
+    aggregateOnly?: pulumi.Input<boolean | undefined>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Applied to Region
      *   - Choices: `core-and-access`, `core`, `access`
      *   - Default value: `core-and-access`
      */
-    region?: pulumi.Input<string>;
+    region?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    regionVariable?: pulumi.Input<string>;
+    regionVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv6 {
     /**
      * IPv6 Prefix List
      */
-    prefixes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix>[]>;
+    prefixes?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix>[] | undefined>;
     /**
      * Protocol
      *   - Choices: `BGP`, `OSPF`, `Connected`, `Static`, `Network`, `Aggregate`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Protocol Sub Type
      *   - Choices: `External`
      */
-    protocolSubType?: pulumi.Input<string>;
+    protocolSubType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolSubTypeVariable?: pulumi.Input<string>;
+    protocolSubTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
@@ -8693,126 +8693,126 @@ export interface ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
      * Aggregate Only
      *   - Default value: `false`
      */
-    aggregateOnly?: pulumi.Input<boolean>;
+    aggregateOnly?: pulumi.Input<boolean | undefined>;
     /**
      * IPv6 Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Applied to Region
      *   - Choices: `core-and-access`, `core`, `access`
      *   - Default value: `core-and-access`
      */
-    region?: pulumi.Input<string>;
+    region?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    regionVariable?: pulumi.Input<string>;
+    regionVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureGreRoute {
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface
      */
-    interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * IP Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 export interface ServiceLanVpnFeatureHostMapping {
     /**
      * Hostname
      */
-    hostName?: pulumi.Input<string>;
+    hostName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostNameVariable?: pulumi.Input<string>;
+    hostNameVariable?: pulumi.Input<string | undefined>;
     /**
      * List of IP
      */
-    listOfIps?: pulumi.Input<pulumi.Input<string>[]>;
+    listOfIps?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    listOfIpsVariable?: pulumi.Input<string>;
+    listOfIpsVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpsecRoute {
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface
      */
-    interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * IP Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4ExportRouteTarget {
     /**
      * Route target
      */
-    routeTarget?: pulumi.Input<string>;
+    routeTarget?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeTargetVariable?: pulumi.Input<string>;
+    routeTargetVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
     /**
      * Route target
      */
-    routeTarget?: pulumi.Input<string>;
+    routeTarget?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeTargetVariable?: pulumi.Input<string>;
+    routeTargetVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRoute {
@@ -8820,151 +8820,151 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      * Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `gateway` equal to `null0`
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` equal to `dhcp`
      */
-    dhcp?: pulumi.Input<boolean>;
+    dhcp?: pulumi.Input<boolean | undefined>;
     /**
      * Gateway type
      *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      */
-    gateway?: pulumi.Input<string>;
+    gateway?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `gateway` equal to `staticRouteInterface`
      */
-    ipStaticRouteInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface>[]>;
+    ipStaticRouteInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface>[] | undefined>;
     /**
      * IP Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHopWithTrackers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker>[]>;
+    nextHopWithTrackers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker>[] | undefined>;
     /**
      * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop>[] | undefined>;
     /**
      * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
-    null0?: pulumi.Input<boolean>;
+    null0?: pulumi.Input<boolean | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Route Gateway VPN, Attribute conditional on `gateway` equal to `vpn`
      */
-    vpn?: pulumi.Input<boolean>;
+    vpn?: pulumi.Input<boolean | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface {
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
-    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop>[]>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop>[] | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop {
     /**
      * IPv4 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
-    trackerId?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
+    trackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv6ExportRouteTarget {
     /**
      * Route target
      */
-    routeTarget?: pulumi.Input<string>;
+    routeTarget?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeTargetVariable?: pulumi.Input<string>;
+    routeTargetVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv6ImportRouteTarget {
     /**
      * Route target
      */
-    routeTarget?: pulumi.Input<string>;
+    routeTarget?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeTargetVariable?: pulumi.Input<string>;
+    routeTargetVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv6StaticRoute {
@@ -8972,122 +8972,122 @@ export interface ServiceLanVpnFeatureIpv6StaticRoute {
      * Gateway type
      *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      */
-    gateway?: pulumi.Input<string>;
+    gateway?: pulumi.Input<string | undefined>;
     /**
      * , Attribute conditional on `gateway` equal to `staticRouteInterface`
      */
-    ipv6StaticRouteInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface>[]>;
+    ipv6StaticRouteInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface>[] | undefined>;
     /**
      * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
-    nat?: pulumi.Input<string>;
+    nat?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `gateway` equal to `nat`
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop>[] | undefined>;
     /**
      * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
-    null0?: pulumi.Input<boolean>;
+    null0?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface {
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
-    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop>[]>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop>[] | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop {
     /**
      * IPv6 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`254`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`254`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureNat64V4Pool {
     /**
      * NAT64 v4 Pool Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT64 Overload
      *   - Default value: `false`
      */
-    overload?: pulumi.Input<boolean>;
+    overload?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overloadVariable?: pulumi.Input<string>;
+    overloadVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT64 Pool Range End
      */
-    rangeEnd?: pulumi.Input<string>;
+    rangeEnd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeEndVariable?: pulumi.Input<string>;
+    rangeEndVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT64 Pool Range Start
      */
-    rangeStart?: pulumi.Input<string>;
+    rangeStart?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeStartVariable?: pulumi.Input<string>;
+    rangeStartVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureNatPool {
@@ -9095,55 +9095,55 @@ export interface ServiceLanVpnFeatureNatPool {
      * NAT Direction
      *   - Choices: `inside`, `outside`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    directionVariable?: pulumi.Input<string>;
+    directionVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Name
      *   - Range: `1`-`32`
      */
-    natPoolName?: pulumi.Input<number>;
+    natPoolName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natPoolNameVariable?: pulumi.Input<string>;
+    natPoolNameVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Overload
      *   - Default value: `true`
      */
-    overload?: pulumi.Input<boolean>;
+    overload?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overloadVariable?: pulumi.Input<string>;
+    overloadVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Prefix Length
      *   - Range: `1`-`30`
      */
-    prefixLength?: pulumi.Input<number>;
+    prefixLength?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    prefixLengthVariable?: pulumi.Input<string>;
+    prefixLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Range End
      */
-    rangeEnd?: pulumi.Input<string>;
+    rangeEnd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeEndVariable?: pulumi.Input<string>;
+    rangeEndVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Range Start
      */
-    rangeStart?: pulumi.Input<string>;
+    rangeStart?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeStartVariable?: pulumi.Input<string>;
-    trackerObjectId?: pulumi.Input<string>;
+    rangeStartVariable?: pulumi.Input<string | undefined>;
+    trackerObjectId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureNatPortForward {
@@ -9151,71 +9151,71 @@ export interface ServiceLanVpnFeatureNatPortForward {
      * NAT Pool Name
      *   - Range: `1`-`32`
      */
-    natPoolName?: pulumi.Input<number>;
+    natPoolName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natPoolNameVariable?: pulumi.Input<string>;
+    natPoolNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Protocol
      *   - Choices: `TCP`, `UDP`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP Address
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Port
      *   - Range: `0`-`65535`
      */
-    sourcePort?: pulumi.Input<number>;
+    sourcePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourcePortVariable?: pulumi.Input<string>;
+    sourcePortVariable?: pulumi.Input<string | undefined>;
     /**
      * Translate Port
      *   - Range: `0`-`65535`
      */
-    translatePort?: pulumi.Input<number>;
+    translatePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    translatePortVariable?: pulumi.Input<string>;
+    translatePortVariable?: pulumi.Input<string | undefined>;
     /**
      * Translated Source IP Address
      */
-    translatedSourceIp?: pulumi.Input<string>;
+    translatedSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedSourceIpVariable?: pulumi.Input<string>;
+    translatedSourceIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpn {
     /**
      * Redistribute Routes to specific Protocol on Service VPN
      */
-    redistributions?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution>[]>;
-    routePolicyId?: pulumi.Input<string>;
+    redistributions?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution>[] | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Leak Routes of particular protocol from Global to Service VPN
      *   - Choices: `static`, `connected`, `bgp`, `ospf`
      */
-    routeProtocol?: pulumi.Input<string>;
+    routeProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeProtocolVariable?: pulumi.Input<string>;
+    routeProtocolVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
@@ -9223,38 +9223,38 @@ export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
      * Protocol to restributed leaked routes
      *   - Choices: `bgp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    redistributionPolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    redistributionPolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureRouteLeakFromOtherService {
     /**
      * Redistribute Route to specific Protocol on Current Service VPN
      */
-    redistributions?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution>[]>;
-    routePolicyId?: pulumi.Input<string>;
+    redistributions?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution>[] | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Leak Route of particular protocol from Source Service VPN
      *   - Choices: `static`, `connected`, `bgp`, `ospf`
      */
-    routeProtocol?: pulumi.Input<string>;
+    routeProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeProtocolVariable?: pulumi.Input<string>;
+    routeProtocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Service VPN from where route are to be leaked
      *   - Range: `1`-`65530`
      */
-    sourceVpn?: pulumi.Input<number>;
+    sourceVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnVariable?: pulumi.Input<string>;
+    sourceVpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution {
@@ -9262,29 +9262,29 @@ export interface ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution {
      * Protocol to restributed leaked routes
      *   - Choices: `bgp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    redistributionPolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    redistributionPolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureRouteLeakToGlobalVpn {
     /**
      * Redistribute Routes to specific Protocol on Global VPN
      */
-    redistributions?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution>[]>;
-    routePolicyId?: pulumi.Input<string>;
+    redistributions?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution>[] | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Leak Routes of particular protocol from Service to Global VPN
      *   - Choices: `static`, `connected`, `bgp`, `ospf`
      */
-    routeProtocol?: pulumi.Input<string>;
+    routeProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeProtocolVariable?: pulumi.Input<string>;
+    routeProtocolVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution {
@@ -9292,83 +9292,83 @@ export interface ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution {
      * Protocol to restributed leaked routes
      *   - Choices: `bgp`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    redistributionPolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    redistributionPolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureService {
     /**
      * IPv4 Addresses (Maximum: 4)
      */
-    ipv4Addresses?: pulumi.Input<pulumi.Input<string>[]>;
+    ipv4Addresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressesVariable?: pulumi.Input<string>;
+    ipv4AddressesVariable?: pulumi.Input<string | undefined>;
     /**
      * Service Type
      *   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
      */
-    serviceType?: pulumi.Input<string>;
+    serviceType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    serviceTypeVariable?: pulumi.Input<string>;
+    serviceTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracking
      *   - Default value: `true`
      */
-    tracking?: pulumi.Input<boolean>;
+    tracking?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackingVariable?: pulumi.Input<string>;
+    trackingVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureServiceRoute {
     /**
      * IP Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Service
      *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      */
-    service?: pulumi.Input<string>;
+    service?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    serviceVariable?: pulumi.Input<string>;
+    serviceVariable?: pulumi.Input<string | undefined>;
     /**
      * SSE Instance name
      */
-    sseInstance?: pulumi.Input<string>;
+    sseInstance?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sseInstanceVariable?: pulumi.Input<string>;
+    sseInstanceVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 export interface ServiceLanVpnFeatureStaticNat {
@@ -9376,37 +9376,37 @@ export interface ServiceLanVpnFeatureStaticNat {
      * NAT Pool Name
      *   - Range: `1`-`32`
      */
-    natPoolName?: pulumi.Input<number>;
+    natPoolName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    natPoolNameVariable?: pulumi.Input<string>;
+    natPoolNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP Address
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Static NAT Direction
      *   - Choices: `inside`, `outside`
      */
-    staticNatDirection?: pulumi.Input<string>;
+    staticNatDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    staticNatDirectionVariable?: pulumi.Input<string>;
-    trackerObjectId?: pulumi.Input<string>;
+    staticNatDirectionVariable?: pulumi.Input<string | undefined>;
+    trackerObjectId?: pulumi.Input<string | undefined>;
     /**
      * Translated Source IP Address
      */
-    translatedSourceIp?: pulumi.Input<string>;
+    translatedSourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedSourceIpVariable?: pulumi.Input<string>;
+    translatedSourceIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnFeatureStaticNatSubnet {
@@ -9414,173 +9414,173 @@ export interface ServiceLanVpnFeatureStaticNatSubnet {
      * Network Prefix Length
      *   - Range: `1`-`32`
      */
-    prefixLength?: pulumi.Input<number>;
+    prefixLength?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    prefixLengthVariable?: pulumi.Input<string>;
+    prefixLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP Subnet
      */
-    sourceIpSubnet?: pulumi.Input<string>;
+    sourceIpSubnet?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpSubnetVariable?: pulumi.Input<string>;
+    sourceIpSubnetVariable?: pulumi.Input<string | undefined>;
     /**
      * Static NAT Direction
      *   - Choices: `inside`, `outside`
      */
-    staticNatDirection?: pulumi.Input<string>;
+    staticNatDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    staticNatDirectionVariable?: pulumi.Input<string>;
-    trackerObjectId?: pulumi.Input<string>;
+    staticNatDirectionVariable?: pulumi.Input<string | undefined>;
+    trackerObjectId?: pulumi.Input<string | undefined>;
     /**
      * Translated Source IP Subnet
      */
-    translatedSourceIpSubnet?: pulumi.Input<string>;
+    translatedSourceIpSubnet?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedSourceIpSubnetVariable?: pulumi.Input<string>;
+    translatedSourceIpSubnetVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureArp {
     /**
      * IPV4 Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC Address
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     /**
      * IpV4 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
     /**
      * VRRP Ip Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Follow RG state by default when B2B HA is configured
      *   - Default value: `true`
      */
-    followDualRouterHighAvailability?: pulumi.Input<boolean>;
+    followDualRouterHighAvailability?: pulumi.Input<boolean | undefined>;
     /**
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Minimum preempt delay in seconds
      *   - Range: `0`-`3600`
      */
-    minPreemptDelay?: pulumi.Input<number>;
+    minPreemptDelay?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    minPreemptDelayVariable?: pulumi.Input<string>;
+    minPreemptDelayVariable?: pulumi.Input<string | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * VRRP Secondary Ip Addresses
      */
-    secondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress>[]>;
+    secondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress>[] | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `1000`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `1`-`4294967295`
      */
-    tlocPrefChangeValue?: pulumi.Input<number>;
+    tlocPrefChangeValue?: pulumi.Input<number | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Default value: `false`
      */
-    tlocPrefixChange?: pulumi.Input<boolean>;
+    tlocPrefixChange?: pulumi.Input<boolean | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Tracking object for VRRP configuration
      */
-    trackingObjects?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObject>[]>;
+    trackingObjects?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObject>[] | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
     /**
      * Ip Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObject {
@@ -9588,63 +9588,63 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObject {
      * Decrement Value for VRRP priority
      *   - Range: `1`-`255`
      */
-    decrementValue?: pulumi.Input<number>;
+    decrementValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    decrementValueVariable?: pulumi.Input<string>;
+    decrementValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Action
      *   - Choices: `Decrement`, `Shutdown`
      */
-    trackerAction?: pulumi.Input<string>;
+    trackerAction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerActionVariable?: pulumi.Input<string>;
-    trackerId?: pulumi.Input<string>;
+    trackerActionVariable?: pulumi.Input<string | undefined>;
+    trackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper {
     /**
      * DHCPv6 Helper address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * DHCPv6 Helper VPN
      *   - Range: `1`-`65536`
      */
-    dhcpv6HelperVpn?: pulumi.Input<number>;
+    dhcpv6HelperVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dhcpv6HelperVpnVariable?: pulumi.Input<string>;
+    dhcpv6HelperVpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
     /**
      * IPv6 Address Secondary
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
     /**
      * IPv6 Address Secondary
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
@@ -9652,109 +9652,109 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
      * Follow RG state by default when B2B HA is configured
      *   - Default value: `true`
      */
-    followDualRouterHighAvailability?: pulumi.Input<boolean>;
+    followDualRouterHighAvailability?: pulumi.Input<boolean | undefined>;
     /**
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 VRRP
      */
-    ipv6Addresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address>[]>;
+    ipv6Addresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address>[] | undefined>;
     /**
      * Minimum preempt delay in seconds
      *   - Range: `0`-`3600`
      */
-    minPreemptDelay?: pulumi.Input<number>;
+    minPreemptDelay?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    minPreemptDelayVariable?: pulumi.Input<string>;
+    minPreemptDelayVariable?: pulumi.Input<string | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `1000`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address {
     /**
      * Assign Global IPv6 Prefix
      */
-    globalAddress?: pulumi.Input<string>;
+    globalAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    globalAddressVariable?: pulumi.Input<string>;
+    globalAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Use link-local IPv6 Address
      */
-    linkLocalAddress?: pulumi.Input<string>;
+    linkLocalAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    linkLocalAddressVariable?: pulumi.Input<string>;
+    linkLocalAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * Set lacp mode
      *   - Choices: `active`, `passive`
      *   - Default value: `active`
      */
-    lacpMode?: pulumi.Input<string>;
+    lacpMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    lacpModeVariable?: pulumi.Input<string>;
+    lacpModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set lacp port priority
      *   - Range: `1`-`65535`
      */
-    lacpPortPriority?: pulumi.Input<number>;
+    lacpPortPriority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lacpPortPriorityVariable?: pulumi.Input<string>;
+    lacpPortPriorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set lacp rate
      *   - Choices: `fast`, `normal`
      */
-    lacpRate?: pulumi.Input<string>;
+    lacpRate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    lacpRateVariable?: pulumi.Input<string>;
+    lacpRateVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureStaticNat {
@@ -9763,167 +9763,167 @@ export interface ServiceLanVpnInterfaceEthernetFeatureStaticNat {
      *   - Choices: `inside`, `outside`
      *   - Default value: `inside`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source VPN ID
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    sourceVpn?: pulumi.Input<number>;
+    sourceVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnVariable?: pulumi.Input<string>;
+    sourceVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translateIp?: pulumi.Input<string>;
+    translateIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translateIpVariable?: pulumi.Input<string>;
+    translateIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureArp {
     /**
      * IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC address
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress {
     /**
      * IpV4 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    ipv4SubnetMask?: pulumi.Input<string>;
+    ipv4SubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4SubnetMaskVariable?: pulumi.Input<string>;
+    ipv4SubnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
     /**
      * Assign IPV4 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Follow RG state by default when B2B HA is configured
      *   - Default value: `true`
      */
-    followDualRouterHighAvailability?: pulumi.Input<boolean>;
+    followDualRouterHighAvailability?: pulumi.Input<boolean | undefined>;
     /**
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Prefix List
      */
-    prefixList?: pulumi.Input<string>;
+    prefixList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixListVariable?: pulumi.Input<string>;
+    prefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * VRRP Secondary IPV4 address
      */
-    secondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress>[]>;
+    secondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress>[] | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `1000`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * change TLOC preference
      *   - Default value: `false`
      */
-    tlocPrefixChange?: pulumi.Input<boolean>;
+    tlocPrefixChange?: pulumi.Input<boolean | undefined>;
     /**
      * Set tloc preference change value
      *   - Range: `1`-`4294967295`
      */
-    tlocPrefixChangeValue?: pulumi.Input<number>;
+    tlocPrefixChangeValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tlocPrefixChangeValueVariable?: pulumi.Input<string>;
+    tlocPrefixChangeValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackOmpVariable?: pulumi.Input<string>;
+    trackOmpVariable?: pulumi.Input<string | undefined>;
     /**
      * tracking object for VRRP configuration
      */
-    trackingObjects?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject>[]>;
+    trackingObjects?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject>[] | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress {
     /**
      * VRRP Secondary IPV4 address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject {
@@ -9931,575 +9931,575 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject {
      * Decrement Value for VRRP priority
      *   - Range: `1`-`255`
      */
-    decrementValue?: pulumi.Input<number>;
+    decrementValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    decrementValueVariable?: pulumi.Input<string>;
+    decrementValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Action
      *   - Choices: `decrement`, `shutdown`
      */
-    trackAction?: pulumi.Input<string>;
+    trackAction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackActionVariable?: pulumi.Input<string>;
-    trackerId?: pulumi.Input<string>;
+    trackActionVariable?: pulumi.Input<string | undefined>;
+    trackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper {
     /**
      * DHCPv6 Helper address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * DHCPv6 Helper VPN
      *   - Range: `1`-`65536`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress {
     /**
      * IPv6 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
     /**
      * IPv6 VRRP
      */
-    addresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress>[]>;
+    addresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress>[] | undefined>;
     /**
      * Follow RG state by default when B2B HA is configured
      *   - Default value: `true`
      */
-    followDualRouterHighAvailability?: pulumi.Input<boolean>;
+    followDualRouterHighAvailability?: pulumi.Input<boolean | undefined>;
     /**
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 Secondary IP address
      */
-    secondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress>[]>;
+    secondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress>[] | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `1000`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackOmpVariable?: pulumi.Input<string>;
+    trackOmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Prefix List
      */
-    trackPrefixList?: pulumi.Input<string>;
+    trackPrefixList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackPrefixListVariable?: pulumi.Input<string>;
+    trackPrefixListVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress {
     /**
      * Assign Global IPv6 Prefix
      */
-    globalAddress?: pulumi.Input<string>;
+    globalAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    globalAddressVariable?: pulumi.Input<string>;
+    globalAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Use link-local IPv6 Address
      */
-    linkLocalAddress?: pulumi.Input<string>;
+    linkLocalAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    linkLocalAddressVariable?: pulumi.Input<string>;
+    linkLocalAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress {
     /**
      * IPv6 Secondary IP address
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeatureAutoRpAnnounce {
     /**
      * Set RP Announce Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP Announce Scope
      *   - Range: `1`-`255`
      */
-    scope?: pulumi.Input<number>;
+    scope?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    scopeVariable?: pulumi.Input<string>;
+    scopeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeatureAutoRpDiscovery {
     /**
      * Set RP Discovery Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP Discovery Scope
      *   - Range: `1`-`255`
      */
-    scope?: pulumi.Input<number>;
+    scope?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    scopeVariable?: pulumi.Input<string>;
+    scopeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeatureIgmpInterface {
     /**
      * Set interface name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure static joins
      */
-    joinGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterfaceJoinGroup>[]>;
+    joinGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterfaceJoinGroup>[] | undefined>;
     /**
      * igmp Version <1..3>
      *   - Range: `1`-`3`
      *   - Default value: `2`
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 export interface ServiceMulticastFeatureIgmpInterfaceJoinGroup {
     /**
      * Set group address
      */
-    groupAddress?: pulumi.Input<string>;
+    groupAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    groupAddressVariable?: pulumi.Input<string>;
+    groupAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set source address
      */
-    sourceAddress?: pulumi.Input<string>;
+    sourceAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceAddressVariable?: pulumi.Input<string>;
+    sourceAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeatureMsdpGroup {
     /**
      * Set MSDP mesh group
      */
-    meshGroupName?: pulumi.Input<string>;
+    meshGroupName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meshGroupNameVariable?: pulumi.Input<string>;
+    meshGroupNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure peer
      */
-    peers?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroupPeer>[]>;
+    peers?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroupPeer>[] | undefined>;
 }
 
 export interface ServiceMulticastFeatureMsdpGroupPeer {
     /**
      * Set MSDP peer ip connect-source interface
      */
-    connectionSourceInterface?: pulumi.Input<string>;
+    connectionSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    connectionSourceInterfaceVariable?: pulumi.Input<string>;
+    connectionSourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP default peer
      */
-    defaultPeer?: pulumi.Input<boolean>;
+    defaultPeer?: pulumi.Input<boolean | undefined>;
     /**
      * Set MSDP peer ip keepalive hold time
      *   - Range: `1`-`75`
      */
-    keepaliveHoldTime?: pulumi.Input<number>;
+    keepaliveHoldTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveHoldTimeVariable?: pulumi.Input<string>;
+    keepaliveHoldTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP peer ip keepalive interval
      *   - Range: `1`-`60`
      */
-    keepaliveInterval?: pulumi.Input<number>;
+    keepaliveInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveIntervalVariable?: pulumi.Input<string>;
+    keepaliveIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP peer ip password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    peerAuthenticationPassword?: pulumi.Input<string>;
+    peerAuthenticationPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    peerAuthenticationPasswordVariable?: pulumi.Input<string>;
+    peerAuthenticationPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP peer ip
      */
-    peerIp?: pulumi.Input<string>;
+    peerIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    peerIpVariable?: pulumi.Input<string>;
-    prefixListId?: pulumi.Input<string>;
+    peerIpVariable?: pulumi.Input<string | undefined>;
+    prefixListId?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP peer ip remote autonomous system number
      *   - Range: `1`-`65535`
      */
-    remoteAs?: pulumi.Input<number>;
+    remoteAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MSDP peer ip SA limit message number
      *   - Range: `1`-`2147483646`
      */
-    saLimit?: pulumi.Input<number>;
+    saLimit?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    saLimitVariable?: pulumi.Input<string>;
+    saLimitVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeaturePimBsrCandidate {
     /**
      * Set BSR RP candidate filter
      */
-    acceptCandidateAccessList?: pulumi.Input<string>;
+    acceptCandidateAccessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    acceptCandidateAccessListVariable?: pulumi.Input<string>;
+    acceptCandidateAccessListVariable?: pulumi.Input<string | undefined>;
     /**
      * Hash Mask length for RP selection
      *   - Range: `0`-`32`
      */
-    hashMaskLength?: pulumi.Input<number>;
+    hashMaskLength?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    hashMaskLengthVariable?: pulumi.Input<string>;
+    hashMaskLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Autonomic-Networking virtual interface
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP candidate priority
      *   - Range: `0`-`255`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeaturePimBsrRpCandidate {
     /**
      * Set IP Access List for PIM RP Candidate
      */
-    accessListId?: pulumi.Input<string>;
+    accessListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessListIdVariable?: pulumi.Input<string>;
+    accessListIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Autonomic-Networking virtual interface
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP candidate advertisement interval
      *   - Range: `1`-`16383`
      */
-    interval?: pulumi.Input<number>;
+    interval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    intervalVariable?: pulumi.Input<string>;
+    intervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RP candidate priority
      *   - Range: `0`-`255`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeaturePimInterface {
     /**
      * Set interface name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
      *   - Range: `10`-`600`
      *   - Default value: `60`
      */
-    joinPruneInterval?: pulumi.Input<number>;
+    joinPruneInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    joinPruneIntervalVariable?: pulumi.Input<string>;
+    joinPruneIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set PIM query interval
      *   - Range: `1`-`18725`
      *   - Default value: `30`
      */
-    queryInterval?: pulumi.Input<number>;
+    queryInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    queryIntervalVariable?: pulumi.Input<string>;
+    queryIntervalVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceMulticastFeatureStaticRpAddress {
     /**
      * Set Static RP Access List
      */
-    accessList?: pulumi.Input<string>;
+    accessList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    accessListVariable?: pulumi.Input<string>;
+    accessListVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Static RP IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set override flag
      *   - Default value: `false`
      */
-    override?: pulumi.Input<boolean>;
+    override?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overrideVariable?: pulumi.Input<string>;
+    overrideVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceObjectTrackerGroupFeatureTrackerElement {
-    objectTrackerId?: pulumi.Input<string>;
+    objectTrackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutePolicyFeatureSequence {
     /**
      * Define list of actions
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `reject`, `accept`
      *   - Default value: `reject`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    id?: pulumi.Input<number>;
+    id?: pulumi.Input<number | undefined>;
     /**
      * Define match conditions
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * protocol such as IPV4, IPV6, or BOTH
      *   - Choices: `IPV4`, `IPV6`, `BOTH`
      *   - Default value: `IPV4`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutePolicyFeatureSequenceAction {
-    asPathPrepends?: pulumi.Input<pulumi.Input<string>[]>;
-    communities?: pulumi.Input<pulumi.Input<string>[]>;
+    asPathPrepends?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    communities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Default value: `false`
      */
-    communityAdditive?: pulumi.Input<boolean>;
+    communityAdditive?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    communityVariable?: pulumi.Input<string>;
+    communityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Ipv4 Next Hop
      */
-    ipv4NextHop?: pulumi.Input<string>;
+    ipv4NextHop?: pulumi.Input<string | undefined>;
     /**
      * Set Ipv6 Next Hop
      */
-    ipv6NextHop?: pulumi.Input<string>;
+    ipv6NextHop?: pulumi.Input<string | undefined>;
     /**
      * Set Local Preference
      *   - Range: `0`-`4294967295`
      */
-    localPreference?: pulumi.Input<number>;
+    localPreference?: pulumi.Input<number | undefined>;
     /**
      * Set Metric
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Set Metric Type
      *   - Choices: `type1`, `type2`
      */
-    metricType?: pulumi.Input<string>;
+    metricType?: pulumi.Input<string | undefined>;
     /**
      * Set OMP Tag
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Set Origin
      *   - Choices: `EGP`, `IGP`, `Incomplete`
      */
-    origin?: pulumi.Input<string>;
+    origin?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF Tag
      *   - Range: `0`-`4294967295`
      */
-    ospfTag?: pulumi.Input<number>;
+    ospfTag?: pulumi.Input<number | undefined>;
     /**
      * Set Weight
      *   - Range: `0`-`65535`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
 }
 
 export interface ServiceRoutePolicyFeatureSequenceMatchEntry {
-    asPathListId?: pulumi.Input<string>;
+    asPathListId?: pulumi.Input<string | undefined>;
     /**
      * BGP Local Preference
      *   - Range: `0`-`4294967295`
      */
-    bgpLocalPreference?: pulumi.Input<number>;
-    expandedCommunityListId?: pulumi.Input<string>;
-    extendedCommunityListId?: pulumi.Input<string>;
-    ipv4AddressPrefixListId?: pulumi.Input<string>;
-    ipv4NextHopPrefixListId?: pulumi.Input<string>;
-    ipv6AddressPrefixListId?: pulumi.Input<string>;
-    ipv6NextHopPrefixListId?: pulumi.Input<string>;
+    bgpLocalPreference?: pulumi.Input<number | undefined>;
+    expandedCommunityListId?: pulumi.Input<string | undefined>;
+    extendedCommunityListId?: pulumi.Input<string | undefined>;
+    ipv4AddressPrefixListId?: pulumi.Input<string | undefined>;
+    ipv4NextHopPrefixListId?: pulumi.Input<string | undefined>;
+    ipv6AddressPrefixListId?: pulumi.Input<string | undefined>;
+    ipv6NextHopPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Select Metric
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Select OMP Tag
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Select OSPF Tag
      *   - Range: `0`-`4294967295`
      */
-    ospfTag?: pulumi.Input<number>;
+    ospfTag?: pulumi.Input<number | undefined>;
     /**
      * Select a condition such as OR, AND or EXACT
      *   - Choices: `OR`, `AND`, `EXACT`
      */
-    standardCommunityListCriteria?: pulumi.Input<string>;
+    standardCommunityListCriteria?: pulumi.Input<string | undefined>;
     /**
      * Select a standard community list
      */
-    standardCommunityLists?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList>[]>;
+    standardCommunityLists?: pulumi.Input<pulumi.Input<inputs.ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList>[] | undefined>;
 }
 
 export interface ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4AggregateAddress {
@@ -10507,181 +10507,181 @@ export interface ServiceRoutingBgpFeatureIpv4AggregateAddress {
      * Set AS set path information
      *   - Default value: `false`
      */
-    asSetPath?: pulumi.Input<boolean>;
+    asSetPath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asSetPathVariable?: pulumi.Input<string>;
-    networkAddress?: pulumi.Input<string>;
+    asSetPathVariable?: pulumi.Input<string | undefined>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Filter out more specific routes from updates
      *   - Default value: `false`
      */
-    summaryOnly?: pulumi.Input<boolean>;
+    summaryOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    summaryOnlyVariable?: pulumi.Input<string>;
+    summaryOnlyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set neighbor address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingBgpFeatureIpv4NeighborAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingBgpFeatureIpv4NeighborAddressFamily>[] | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * The number of accept as-path with my AS present in it
      *   - Range: `1`-`10`
      */
-    allowasInNumber?: pulumi.Input<number>;
+    allowasInNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    allowasInNumberVariable?: pulumi.Input<string>;
+    allowasInNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Override matching AS-number while sending update
      *   - Default value: `false`
      */
-    asOverride?: pulumi.Input<boolean>;
+    asOverride?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asOverrideVariable?: pulumi.Input<string>;
+    asOverrideVariable?: pulumi.Input<string | undefined>;
     /**
      * Set description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TTL value for peers that are not directly connected
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    ebgpMultihop?: pulumi.Input<number>;
+    ebgpMultihop?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ebgpMultihopVariable?: pulumi.Input<string>;
+    ebgpMultihopVariable?: pulumi.Input<string | undefined>;
     /**
      * Interval (seconds) not receiving a keepalive message declares a BGP peer down
      *   - Range: `0`-`65535`
      *   - Default value: `180`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Interval (seconds) of keepalive messages sent to its BGP peer
      *   - Range: `0`-`65535`
      *   - Default value: `60`
      */
-    keepaliveTime?: pulumi.Input<number>;
+    keepaliveTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveTimeVariable?: pulumi.Input<string>;
+    keepaliveTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number>;
+    localAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    localAsVariable?: pulumi.Input<string>;
+    localAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      */
-    nextHopSelf?: pulumi.Input<boolean>;
+    nextHopSelf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nextHopSelfVariable?: pulumi.Input<string>;
+    nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number>;
+    remoteAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Send community attribute
      *   - Default value: `true`
      */
-    sendCommunity?: pulumi.Input<boolean>;
+    sendCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendCommunityVariable?: pulumi.Input<string>;
+    sendCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send extended community attribute
      *   - Default value: `true`
      */
-    sendExtendedCommunity?: pulumi.Input<boolean>;
+    sendExtendedCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendExtendedCommunityVariable?: pulumi.Input<string>;
+    sendExtendedCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send label
      *   - Default value: `false`
      */
-    sendLabel?: pulumi.Input<boolean>;
+    sendLabel?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLabelVariable?: pulumi.Input<string>;
+    sendLabelVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable a BGP neighbor
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Source interface name for BGP neighbor
      */
-    updateSourceInterface?: pulumi.Input<string>;
+    updateSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    updateSourceInterfaceVariable?: pulumi.Input<string>;
+    updateSourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
@@ -10689,96 +10689,96 @@ export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
-    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    disablePeerThreshold?: pulumi.Input<number>;
+    disablePeerThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerThresholdVariable?: pulumi.Input<string>;
+    disablePeerThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IPv4 unicast address family
      *   - Choices: `ipv4-unicast`
      */
-    familyType?: pulumi.Input<string>;
-    inRoutePolicyId?: pulumi.Input<string>;
-    outRoutePolicyId?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
+    inRoutePolicyId?: pulumi.Input<string | undefined>;
+    outRoutePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Neighbor received maximum prefix policy is disabled.
      *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
-    policyType?: pulumi.Input<string>;
+    policyType?: pulumi.Input<string | undefined>;
     /**
      * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
-    restartInterval?: pulumi.Input<number>;
+    restartInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartIntervalVariable?: pulumi.Input<string>;
+    restartIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
-    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    restartMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    restartThreshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartThresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
-    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    warningMessageThreshold?: pulumi.Input<number>;
+    warningMessageThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageThresholdVariable?: pulumi.Input<string>;
+    warningMessageThresholdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4Network {
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4Redistribute {
@@ -10786,206 +10786,206 @@ export interface ServiceRoutingBgpFeatureIpv4Redistribute {
      * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    metricVariable?: pulumi.Input<string>;
+    metricVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRouteVariable?: pulumi.Input<string>;
+    ospfMatchRouteVariable?: pulumi.Input<string | undefined>;
     /**
      * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6AggregateAddress {
     /**
      * Configure the IPv6 prefixes to aggregate
      */
-    aggregatePrefix?: pulumi.Input<string>;
+    aggregatePrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aggregatePrefixVariable?: pulumi.Input<string>;
+    aggregatePrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Set AS set path information
      *   - Default value: `false`
      */
-    asSetPath?: pulumi.Input<boolean>;
+    asSetPath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asSetPathVariable?: pulumi.Input<string>;
+    asSetPathVariable?: pulumi.Input<string | undefined>;
     /**
      * Filter out more specific routes from updates
      *   - Default value: `false`
      */
-    summaryOnly?: pulumi.Input<boolean>;
+    summaryOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    summaryOnlyVariable?: pulumi.Input<string>;
+    summaryOnlyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set IPv6 neighbor address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set IPv6 BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingBgpFeatureIpv6NeighborAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingBgpFeatureIpv6NeighborAddressFamily>[] | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * The number of accept as-path with my AS present in it
      *   - Range: `1`-`10`
      */
-    allowasInNumber?: pulumi.Input<number>;
+    allowasInNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    allowasInNumberVariable?: pulumi.Input<string>;
+    allowasInNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Override matching AS-number while sending update
      *   - Default value: `false`
      */
-    asOverride?: pulumi.Input<boolean>;
+    asOverride?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asOverrideVariable?: pulumi.Input<string>;
+    asOverrideVariable?: pulumi.Input<string | undefined>;
     /**
      * Set description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TTL value for peers that are not directly connected
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    ebgpMultihop?: pulumi.Input<number>;
+    ebgpMultihop?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ebgpMultihopVariable?: pulumi.Input<string>;
+    ebgpMultihopVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
      *   - Range: `0`-`65535`
      *   - Default value: `180`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often to advertise keepalive messages to BGP peer
      *   - Range: `0`-`65535`
      *   - Default value: `60`
      */
-    keepaliveTime?: pulumi.Input<number>;
+    keepaliveTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveTimeVariable?: pulumi.Input<string>;
+    keepaliveTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number>;
+    localAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    localAsVariable?: pulumi.Input<string>;
+    localAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      */
-    nextHopSelf?: pulumi.Input<boolean>;
+    nextHopSelf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nextHopSelfVariable?: pulumi.Input<string>;
+    nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number>;
+    remoteAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Send community attribute
      *   - Default value: `true`
      */
-    sendCommunity?: pulumi.Input<boolean>;
+    sendCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendCommunityVariable?: pulumi.Input<string>;
+    sendCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send extended community attribute
      *   - Default value: `true`
      */
-    sendExtendedCommunity?: pulumi.Input<boolean>;
+    sendExtendedCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendExtendedCommunityVariable?: pulumi.Input<string>;
+    sendExtendedCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable a BGP neighbor
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Source interface name for BGP neighbor
      */
-    updateSourceInterface?: pulumi.Input<string>;
+    updateSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    updateSourceInterfaceVariable?: pulumi.Input<string>;
+    updateSourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
@@ -10993,91 +10993,91 @@ export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
-    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    disablePeerThreshold?: pulumi.Input<number>;
+    disablePeerThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerThresholdVariable?: pulumi.Input<string>;
+    disablePeerThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IPv6 unicast address family
      *   - Choices: `ipv6-unicast`
      */
-    familyType?: pulumi.Input<string>;
-    inRoutePolicyId?: pulumi.Input<string>;
-    outRoutePolicyId?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
+    inRoutePolicyId?: pulumi.Input<string | undefined>;
+    outRoutePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Neighbor received maximum prefix policy is disabled.
      *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
-    policyType?: pulumi.Input<string>;
+    policyType?: pulumi.Input<string | undefined>;
     /**
      * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
-    restartInterval?: pulumi.Input<number>;
+    restartInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartIntervalVariable?: pulumi.Input<string>;
+    restartIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
-    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    restartMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    restartThreshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartThresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
-    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    warningMessageThreshold?: pulumi.Input<number>;
+    warningMessageThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageThresholdVariable?: pulumi.Input<string>;
+    warningMessageThresholdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6Network {
     /**
      * Configure the prefixes for BGP to announce
      */
-    networkPrefix?: pulumi.Input<string>;
+    networkPrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkPrefixVariable?: pulumi.Input<string>;
+    networkPrefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6Redistribute {
@@ -11085,78 +11085,78 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
      * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `ospf`
      */
-    metricVariable?: pulumi.Input<string>;
+    metricVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRouteVariable?: pulumi.Input<string>;
+    ospfMatchRouteVariable?: pulumi.Input<string | undefined>;
     /**
      * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `omp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingEigrpFeatureInterface {
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable EIGRP
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Set summary addresses
      */
-    summaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterfaceSummaryAddress>[]>;
+    summaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterfaceSummaryAddress>[] | undefined>;
 }
 
 export interface ServiceRoutingEigrpFeatureInterfaceSummaryAddress {
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    mask?: pulumi.Input<string>;
+    mask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    maskVariable?: pulumi.Input<string>;
+    maskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingEigrpFeatureMd5Key {
@@ -11164,35 +11164,35 @@ export interface ServiceRoutingEigrpFeatureMd5Key {
      * Set MD5 key ID
      *   - Range: `1`-`255`
      */
-    keyId?: pulumi.Input<number>;
+    keyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keyIdVariable?: pulumi.Input<string>;
+    keyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    keyString?: pulumi.Input<string>;
+    keyString?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyStringVariable?: pulumi.Input<string>;
+    keyStringVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingEigrpFeatureNetwork {
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    mask?: pulumi.Input<string>;
+    mask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    maskVariable?: pulumi.Input<string>;
+    maskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingEigrpFeatureRedistribute {
@@ -11200,12 +11200,12 @@ export interface ServiceRoutingEigrpFeatureRedistribute {
      * Set the protocol to redistribute routes from
      *   - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfFeatureArea {
@@ -11213,33 +11213,33 @@ export interface ServiceRoutingOspfFeatureArea {
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * set the area type
      *   - Choices: `stub`, `nssa`
      */
-    areaType?: pulumi.Input<string>;
+    areaType?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureAreaInterface>[] | undefined>;
     /**
      * Do not inject interarea routes into STUB or NSSA
      *   - Default value: `false`
      */
-    noSummary?: pulumi.Input<boolean>;
+    noSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noSummaryVariable?: pulumi.Input<string>;
+    noSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureAreaRange>[] | undefined>;
 }
 
 export interface ServiceRoutingOspfFeatureAreaInterface {
@@ -11247,104 +11247,104 @@ export interface ServiceRoutingOspfFeatureAreaInterface {
      * Set OSPF interface authentication type
      *   - Choices: `message-digest`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router’s priority to be elected as designated router
      *   - Range: `0`-`255`
      *   - Default value: `1`
      */
-    designatedRouterPriority?: pulumi.Input<number>;
+    designatedRouterPriority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    designatedRouterPriorityVariable?: pulumi.Input<string>;
+    designatedRouterPriorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    lsaRetransmitInterval?: pulumi.Input<number>;
+    lsaRetransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lsaRetransmitIntervalVariable?: pulumi.Input<string>;
+    lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    messageDigestKey?: pulumi.Input<string>;
+    messageDigestKey?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 message digest key
      *   - Range: `1`-`255`
      */
-    messageDigestKeyId?: pulumi.Input<number>;
+    messageDigestKeyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    messageDigestKeyIdVariable?: pulumi.Input<string>;
+    messageDigestKeyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    messageDigestKeyVariable?: pulumi.Input<string>;
+    messageDigestKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      *   - Default value: `broadcast`
      */
-    networkType?: pulumi.Input<string>;
+    networkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkTypeVariable?: pulumi.Input<string>;
+    networkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfFeatureAreaRange {
@@ -11352,37 +11352,37 @@ export interface ServiceRoutingOspfFeatureAreaRange {
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfFeatureRedistribute {
@@ -11390,30 +11390,30 @@ export interface ServiceRoutingOspfFeatureRedistribute {
      * Enable NAT DIA for redistributed routes
      *   - Default value: `true`
      */
-    natDia?: pulumi.Input<boolean>;
+    natDia?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natDiaVariable?: pulumi.Input<string>;
+    natDiaVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the protocol
      *   - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfFeatureRouterLsa {
@@ -11421,147 +11421,147 @@ export interface ServiceRoutingOspfFeatureRouterLsa {
      * Set how long to advertise maximum metric after router starts up
      *   - Range: `5`-`86400`
      */
-    time?: pulumi.Input<number>;
+    time?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeVariable?: pulumi.Input<string>;
+    timeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the router LSA advertisement type
      *   - Choices: `administrative`, `on-startup`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv4FeatureArea {
     /**
      * Always translate type7 LSAs
      */
-    alwaysTranslate?: pulumi.Input<boolean>;
+    alwaysTranslate?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    alwaysTranslateVariable?: pulumi.Input<string>;
+    alwaysTranslateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPFv3 area type
      *   - Choices: `stub`, `nssa`, `normal`
      */
-    areaType?: pulumi.Input<string>;
+    areaType?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv4FeatureAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv4FeatureAreaInterface>[] | undefined>;
     /**
      * Do not inject inter-area routes
      */
-    noSummary?: pulumi.Input<boolean>;
+    noSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noSummaryVariable?: pulumi.Input<string>;
+    noSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv4FeatureAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv4FeatureAreaRange>[] | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
      */
-    authenticationKey?: pulumi.Input<string>;
+    authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
      */
-    authenticationSpi?: pulumi.Input<number>;
+    authenticationSpi?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationSpiVariable?: pulumi.Input<string>;
+    authenticationSpiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication configuration
      *   - Choices: `no-auth`, `ipsec-sha1`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    lsaRetransmitInterval?: pulumi.Input<number>;
+    lsaRetransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lsaRetransmitIntervalVariable?: pulumi.Input<string>;
+    lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      */
-    networkType?: pulumi.Input<string>;
+    networkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkTypeVariable?: pulumi.Input<string>;
+    networkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv4FeatureAreaRange {
@@ -11569,33 +11569,33 @@ export interface ServiceRoutingOspfv3Ipv4FeatureAreaRange {
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
-    ipAddress?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
@@ -11603,161 +11603,161 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
      * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      */
-    natDia?: pulumi.Input<boolean>;
+    natDia?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      */
-    natDiaVariable?: pulumi.Input<string>;
+    natDiaVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the protocol
      *   - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureArea {
     /**
      * Always translate type7 LSAs
      */
-    alwaysTranslate?: pulumi.Input<boolean>;
+    alwaysTranslate?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    alwaysTranslateVariable?: pulumi.Input<string>;
+    alwaysTranslateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPFv3 area type
      *   - Choices: `stub`, `nssa`, `normal`
      */
-    areaType?: pulumi.Input<string>;
+    areaType?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv6FeatureAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv6FeatureAreaInterface>[] | undefined>;
     /**
      * Do not inject inter-area routes
      */
-    noSummary?: pulumi.Input<boolean>;
+    noSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noSummaryVariable?: pulumi.Input<string>;
+    noSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv6FeatureAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfv3Ipv6FeatureAreaRange>[] | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
      */
-    authenticationKey?: pulumi.Input<string>;
+    authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
      */
-    authenticationSpi?: pulumi.Input<number>;
+    authenticationSpi?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationSpiVariable?: pulumi.Input<string>;
+    authenticationSpiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication configuration
      *   - Choices: `no-auth`, `ipsec-sha1`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    lsaRetransmitInterval?: pulumi.Input<number>;
+    lsaRetransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lsaRetransmitIntervalVariable?: pulumi.Input<string>;
+    lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      */
-    networkType?: pulumi.Input<string>;
+    networkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkTypeVariable?: pulumi.Input<string>;
+    networkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureAreaRange {
@@ -11765,28 +11765,28 @@ export interface ServiceRoutingOspfv3Ipv6FeatureAreaRange {
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 prefix,for example 2001::/64
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
@@ -11794,21 +11794,21 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
      * Set the protocol
      *   - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceSwitchportFeatureInterface {
@@ -11816,219 +11816,219 @@ export interface ServiceSwitchportFeatureInterface {
      * Set uni or bi directional authorization mode
      *   - Choices: `both`, `in`
      */
-    controlDirection?: pulumi.Input<string>;
+    controlDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controlDirectionVariable?: pulumi.Input<string>;
+    controlDirectionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Critical VLAN
      *   - Range: `1`-`4094`
      */
-    criticalVlan?: pulumi.Input<number>;
+    criticalVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    criticalVlanVariable?: pulumi.Input<string>;
+    criticalVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Duplex mode
      *   - Choices: `full`, `half`
      */
-    duplex?: pulumi.Input<string>;
+    duplex?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    duplexVariable?: pulumi.Input<string>;
+    duplexVariable?: pulumi.Input<string | undefined>;
     /**
      * Set 802.1x on off
      *   - Default value: `true`
      */
-    enableDot1x?: pulumi.Input<boolean>;
+    enableDot1x?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Periodic Reauthentication
      */
-    enablePeriodicReauth?: pulumi.Input<boolean>;
+    enablePeriodicReauth?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enablePeriodicReauthVariable?: pulumi.Input<string>;
+    enablePeriodicReauthVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable Critical Voice VLAN
      */
-    enableVoice?: pulumi.Input<boolean>;
+    enableVoice?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableVoiceVariable?: pulumi.Input<string>;
+    enableVoiceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set vlan to drop non-802.1x enabled clients into if client is not in MAB list
      *   - Range: `1`-`4094`
      */
-    guestVlan?: pulumi.Input<number>;
+    guestVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    guestVlanVariable?: pulumi.Input<string>;
+    guestVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Set host mode
      *   - Choices: `single-host`, `multi-auth`, `multi-host`, `multi-domain`
      */
-    hostMode?: pulumi.Input<string>;
+    hostMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostModeVariable?: pulumi.Input<string>;
+    hostModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Periodic Reauthentication Inactivity Timeout (in seconds)
      *   - Range: `1`-`65535`
      */
-    inactivity?: pulumi.Input<number>;
+    inactivity?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    inactivityVariable?: pulumi.Input<string>;
+    inactivityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Interface name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC Authentication Bypass
      */
-    macAuthenticationBypass?: pulumi.Input<boolean>;
+    macAuthenticationBypass?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    macAuthenticationBypassVariable?: pulumi.Input<string>;
+    macAuthenticationBypassVariable?: pulumi.Input<string | undefined>;
     /**
      * Set type of switch port: access/trunk
      *   - Choices: `access`, `trunk`
      */
-    mode?: pulumi.Input<string>;
+    mode?: pulumi.Input<string | undefined>;
     /**
      * Set 802.1x Interface Pae Type
      */
-    paeEnable?: pulumi.Input<boolean>;
+    paeEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    paeEnableVariable?: pulumi.Input<string>;
+    paeEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Port-Control Mode
      *   - Choices: `auto`, `force-unauthorized`, `force-authorized`
      */
-    portControl?: pulumi.Input<string>;
+    portControl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    portControlVariable?: pulumi.Input<string>;
+    portControlVariable?: pulumi.Input<string | undefined>;
     /**
      * Periodic Reauthentication Interval (in seconds)
      *   - Range: `1`-`1073741823`
      *   - Default value: `3600`
      */
-    reauthentication?: pulumi.Input<number>;
+    reauthentication?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    reauthenticationVariable?: pulumi.Input<string>;
+    reauthenticationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Restricted VLAN ID
      *   - Range: `1`-`4094`
      */
-    restrictedVlan?: pulumi.Input<number>;
+    restrictedVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    restrictedVlanVariable?: pulumi.Input<string>;
+    restrictedVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface speed
      *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      */
-    speed?: pulumi.Input<string>;
+    speed?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    speedVariable?: pulumi.Input<string>;
+    speedVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VLAN identifier associated with bridging domain
      *   - Range: `1`-`4094`
      */
-    switchportAccessVlan?: pulumi.Input<number>;
+    switchportAccessVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    switchportAccessVlanVariable?: pulumi.Input<string>;
+    switchportAccessVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VLAN IDs used with the trunk
      */
-    switchportTrunkAllowedVlans?: pulumi.Input<string>;
+    switchportTrunkAllowedVlans?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    switchportTrunkAllowedVlansVariable?: pulumi.Input<string>;
+    switchportTrunkAllowedVlansVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VLAN ID used for native VLAN
      *   - Range: `1`-`4094`
      */
-    switchportTrunkNativeVlan?: pulumi.Input<number>;
+    switchportTrunkNativeVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    switchportTrunkNativeVlanVariable?: pulumi.Input<string>;
+    switchportTrunkNativeVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Voice Vlan
      *   - Range: `1`-`4094`
      */
-    voiceVlan?: pulumi.Input<number>;
+    voiceVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    voiceVlanVariable?: pulumi.Input<string>;
+    voiceVlanVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceSwitchportFeatureStaticMacAddress {
     /**
      * Interface name: GigabitEthernet0/<>/<>
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MAC address in xxxx.xxxx.xxxx format
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VLAN ID used with the mac and interface
      *   - Range: `1`-`4094`
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vlanIdVariable?: pulumi.Input<string>;
+    vlanIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceTrackerGroupFeatureTrackerElement {
-    trackerId?: pulumi.Input<string>;
+    trackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface ServiceWirelessLanFeatureSsid {
@@ -12036,92 +12036,92 @@ export interface ServiceWirelessLanFeatureSsid {
      * Set admin state
      *   - Default value: `true`
      */
-    adminState?: pulumi.Input<boolean>;
+    adminState?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    adminStateVariable?: pulumi.Input<string>;
+    adminStateVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable broadcast SSID
      *   - Default value: `true`
      */
-    broadcastSsid?: pulumi.Input<boolean>;
+    broadcastSsid?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    broadcastSsidVariable?: pulumi.Input<string>;
+    broadcastSsidVariable?: pulumi.Input<string | undefined>;
     /**
      * Set passphrase, Attribute conditional on `securityType` equal to `personal`
      */
-    passphrase?: pulumi.Input<string>;
+    passphrase?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `personal`
      */
-    passphraseVariable?: pulumi.Input<string>;
+    passphraseVariable?: pulumi.Input<string | undefined>;
     /**
      * Select QoS profile
      *   - Choices: `platinum`, `gold`, `silver`, `bronze`
      *   - Default value: `silver`
      */
-    qosProfile?: pulumi.Input<string>;
+    qosProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    qosProfileVariable?: pulumi.Input<string>;
+    qosProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Select radio type
      *   - Choices: `24ghz`, `5ghz`, `all`
      *   - Default value: `all`
      */
-    radioType?: pulumi.Input<string>;
+    radioType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    radioTypeVariable?: pulumi.Input<string>;
+    radioTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server IP, Attribute conditional on `securityType` equal to `enterprise`
      */
-    radiusServerIp?: pulumi.Input<string>;
+    radiusServerIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
-    radiusServerIpVariable?: pulumi.Input<string>;
+    radiusServerIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server authentication port, Attribute conditional on `securityType` equal to `enterprise`
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      */
-    radiusServerPort?: pulumi.Input<number>;
+    radiusServerPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
-    radiusServerPortVariable?: pulumi.Input<string>;
+    radiusServerPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
      */
-    radiusServerSecret?: pulumi.Input<string>;
+    radiusServerSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
-    radiusServerSecretVariable?: pulumi.Input<string>;
+    radiusServerSecretVariable?: pulumi.Input<string | undefined>;
     /**
      * Select security type
      *   - Choices: `enterprise`, `personal`, `open`
      */
-    securityType?: pulumi.Input<string>;
+    securityType?: pulumi.Input<string | undefined>;
     /**
      * Configure wlan SSID
      */
-    ssidName?: pulumi.Input<string>;
+    ssidName?: pulumi.Input<string | undefined>;
     /**
      * Set VLAN ID
      *   - Range: `1`-`4094`
      */
-    vlanId?: pulumi.Input<number>;
+    vlanId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vlanIdVariable?: pulumi.Input<string>;
+    vlanIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SiteListPolicyObjectEntry {
@@ -12142,325 +12142,325 @@ export interface SwitchportFeatureTemplateInterface {
     /**
      * Variable name
      */
-    dot1xAuthenticationOrderVariable?: pulumi.Input<string>;
+    dot1xAuthenticationOrderVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify authentication methods in the order of preference
      */
-    dot1xAuthenticationOrders?: pulumi.Input<pulumi.Input<string>[]>;
+    dot1xAuthenticationOrders?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set uni or bi directional authorization mode
      *   - Choices: `both`, `in`
      *   - Default value: `both`
      */
-    dot1xControlDirection?: pulumi.Input<string>;
+    dot1xControlDirection?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    dot1xControlDirectionVariable?: pulumi.Input<string>;
+    dot1xControlDirectionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Critical VLAN
      *   - Range: `1`-`4094`
      */
-    dot1xCriticalVlan?: pulumi.Input<number>;
+    dot1xCriticalVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dot1xCriticalVlanVariable?: pulumi.Input<string>;
+    dot1xCriticalVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Set 802.1x on off
      *   - Default value: `true`
      */
-    dot1xEnable?: pulumi.Input<boolean>;
+    dot1xEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Enable Critical Voice VLAN
      *   - Default value: `false`
      */
-    dot1xEnableCriticialVoiceVlan?: pulumi.Input<boolean>;
+    dot1xEnableCriticialVoiceVlan?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xEnableCriticialVoiceVlanVariable?: pulumi.Input<string>;
+    dot1xEnableCriticialVoiceVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable Periodic Reauthentication
      *   - Default value: `false`
      */
-    dot1xEnablePeriodicReauth?: pulumi.Input<boolean>;
+    dot1xEnablePeriodicReauth?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xEnablePeriodicReauthVariable?: pulumi.Input<string>;
+    dot1xEnablePeriodicReauthVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    dot1xEnableVariable?: pulumi.Input<string>;
+    dot1xEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Set vlan to drop non-802.1x enabled clients into if client is not in MAB list
      *   - Range: `1`-`4094`
      */
-    dot1xGuestVlan?: pulumi.Input<number>;
+    dot1xGuestVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dot1xGuestVlanVariable?: pulumi.Input<string>;
+    dot1xGuestVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Set host mode
      *   - Choices: `single-host`, `multi-auth`, `multi-host`, `multi-domain`
      *   - Default value: `single-host`
      */
-    dot1xHostMode?: pulumi.Input<string>;
+    dot1xHostMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    dot1xHostModeVariable?: pulumi.Input<string>;
+    dot1xHostModeVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC Authentication Bypass
      *   - Default value: `false`
      */
-    dot1xMacAuthenticationBypass?: pulumi.Input<boolean>;
+    dot1xMacAuthenticationBypass?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xMacAuthenticationBypassVariable?: pulumi.Input<string>;
+    dot1xMacAuthenticationBypassVariable?: pulumi.Input<string | undefined>;
     /**
      * Set 802.1x Interface Pae Type
      *   - Default value: `true`
      */
-    dot1xPaeEnable?: pulumi.Input<boolean>;
+    dot1xPaeEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    dot1xPaeEnableVariable?: pulumi.Input<string>;
+    dot1xPaeEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Periodic Reauthentication Inactivity Timeout (in seconds)
      *   - Range: `1`-`1440`
      *   - Default value: `60`
      */
-    dot1xPeriodicReauthInactivityTimeout?: pulumi.Input<number>;
+    dot1xPeriodicReauthInactivityTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dot1xPeriodicReauthInactivityTimeoutVariable?: pulumi.Input<string>;
+    dot1xPeriodicReauthInactivityTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * Periodic Reauthentication Interval (in seconds)
      *   - Range: `0`-`1440`
      *   - Default value: `0`
      */
-    dot1xPeriodicReauthInterval?: pulumi.Input<number>;
+    dot1xPeriodicReauthInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dot1xPeriodicReauthIntervalVariable?: pulumi.Input<string>;
+    dot1xPeriodicReauthIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Port-Control Mode
      *   - Choices: `auto`, `force-unauthorized`, `force-authorized`
      *   - Default value: `auto`
      */
-    dot1xPortControl?: pulumi.Input<string>;
+    dot1xPortControl?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    dot1xPortControlVariable?: pulumi.Input<string>;
+    dot1xPortControlVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Restricted VLAN ID
      *   - Range: `1`-`4094`
      */
-    dot1xRestrictedVlan?: pulumi.Input<number>;
+    dot1xRestrictedVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dot1xRestrictedVlanVariable?: pulumi.Input<string>;
+    dot1xRestrictedVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Duplex mode
      *   - Choices: `full`, `half`
      */
-    duplex?: pulumi.Input<string>;
+    duplex?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    duplexVariable?: pulumi.Input<string>;
+    duplexVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Administrative state
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface speed
      *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
-    speed?: pulumi.Input<string>;
+    speed?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    speedVariable?: pulumi.Input<string>;
+    speedVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VLAN identifier associated with bridging domain
      *   - Range: `1`-`4094`
      */
-    switchportAccessVlan?: pulumi.Input<number>;
+    switchportAccessVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    switchportAccessVlanVariable?: pulumi.Input<string>;
+    switchportAccessVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Set type of switch port: access/trunk
      *   - Choices: `access`, `trunk`
      */
-    switchportMode?: pulumi.Input<string>;
+    switchportMode?: pulumi.Input<string | undefined>;
     /**
      * Configure VLAN IDs used with the trunk
      */
-    switchportTrunkAllowedVlans?: pulumi.Input<string>;
+    switchportTrunkAllowedVlans?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    switchportTrunkAllowedVlansVariable?: pulumi.Input<string>;
+    switchportTrunkAllowedVlansVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure VLAN ID used for native VLAN
      *   - Range: `1`-`4094`
      */
-    switchportTrunkNativeVlan?: pulumi.Input<number>;
+    switchportTrunkNativeVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    switchportTrunkNativeVlanVariable?: pulumi.Input<string>;
+    switchportTrunkNativeVlanVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Voice Vlan
      *   - Range: `1`-`4094`
      */
-    voiceVlan?: pulumi.Input<number>;
+    voiceVlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    voiceVlanVariable?: pulumi.Input<string>;
+    voiceVlanVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SwitchportFeatureTemplateStaticMacAddress {
     /**
      * Interface name: GigabitEthernet0/<>/<>
      */
-    ifName?: pulumi.Input<string>;
+    ifName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ifNameVariable?: pulumi.Input<string>;
+    ifNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MAC address in xxxx.xxxx.xxxx format
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Configure VLAN ID used with the mac and interface
      *   - Range: `1`-`4094`
      */
-    vlan?: pulumi.Input<number>;
+    vlan?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vlanVariable?: pulumi.Input<string>;
+    vlanVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureAccountingRule {
     /**
      * Use Server-group
      */
-    groups?: pulumi.Input<pulumi.Input<string>[]>;
+    groups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Privilege level when method is commands
      *   - Choices: `1`, `15`
      */
-    level?: pulumi.Input<string>;
+    level?: pulumi.Input<string | undefined>;
     /**
      * Configure Accounting Method
      *   - Choices: `commands`, `exec`, `network`, `system`
      */
-    method?: pulumi.Input<string>;
+    method?: pulumi.Input<string | undefined>;
     /**
      * Configure Accounting Rule ID
      */
-    ruleId?: pulumi.Input<string>;
+    ruleId?: pulumi.Input<string | undefined>;
     /**
      * Record start and stop without waiting
      *   - Default value: `true`
      */
-    startStop?: pulumi.Input<boolean>;
+    startStop?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    startStopVariable?: pulumi.Input<string>;
+    startStopVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureAuthorizationRule {
     /**
      * Use Server-group
      */
-    groups?: pulumi.Input<pulumi.Input<string>[]>;
+    groups?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Succeed if user has authenticated
      *   - Default value: `false`
      */
-    ifAuthenticated?: pulumi.Input<boolean>;
+    ifAuthenticated?: pulumi.Input<boolean | undefined>;
     /**
      * Privilege level when method is commands
      *   - Choices: `1`, `15`
      */
-    level?: pulumi.Input<string>;
+    level?: pulumi.Input<string | undefined>;
     /**
      * Method
      *   - Choices: `commands`
      */
-    method?: pulumi.Input<string>;
+    method?: pulumi.Input<string | undefined>;
     /**
      * Configure Authorization Rule ID
      */
-    ruleId?: pulumi.Input<string>;
+    ruleId?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureRadiusGroup {
     /**
      * Set Radius server Group Name
      */
-    groupName?: pulumi.Input<string>;
+    groupName?: pulumi.Input<string | undefined>;
     /**
      * Configure the Radius server
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureRadiusGroupServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureRadiusGroupServer>[] | undefined>;
     /**
      * Set interface to use to reach Radius server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which Radius server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 export interface SystemAaaFeatureRadiusGroupServer {
@@ -12469,198 +12469,198 @@ export interface SystemAaaFeatureRadiusGroupServer {
      *   - Range: `1`-`65534`
      *   - Default value: `1813`
      */
-    acctPort?: pulumi.Input<number>;
+    acctPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    acctPortVariable?: pulumi.Input<string>;
+    acctPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IP address of Radius server
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set Authentication port to use to connect to Radius server
      *   - Range: `1`-`65534`
      *   - Default value: `1812`
      */
-    authPort?: pulumi.Input<number>;
+    authPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authPortVariable?: pulumi.Input<string>;
+    authPortVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    key?: pulumi.Input<string>;
+    key?: pulumi.Input<string | undefined>;
     /**
      * Type of encyption. To be used for type 6
      *   - Choices: `6`, `7`
      */
-    keyEnum?: pulumi.Input<string>;
+    keyEnum?: pulumi.Input<string | undefined>;
     /**
      * key type
      *   - Choices: `key`, `pac`
      *   - Default value: `key`
      */
-    keyType?: pulumi.Input<string>;
+    keyType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyTypeVariable?: pulumi.Input<string>;
+    keyTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyVariable?: pulumi.Input<string>;
+    keyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how many times to contact this Radius server
      *   - Range: `1`-`100`
      *   - Default value: `3`
      */
-    retransmit?: pulumi.Input<number>;
+    retransmit?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    retransmitVariable?: pulumi.Input<string>;
+    retransmitVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the Radius server shared type 7 encrypted key
      */
-    secretKey?: pulumi.Input<string>;
+    secretKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secretKeyVariable?: pulumi.Input<string>;
+    secretKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long to wait for replies from the Radius server
      *   - Range: `1`-`1000`
      *   - Default value: `5`
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeoutVariable?: pulumi.Input<string>;
+    timeoutVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureTacacsGroup {
     /**
      * Set TACACS server Group Name
      */
-    groupName?: pulumi.Input<string>;
+    groupName?: pulumi.Input<string | undefined>;
     /**
      * Configure the TACACS server
      */
-    servers?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroupServer>[]>;
+    servers?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroupServer>[] | undefined>;
     /**
      * Set interface to use to reach TACACS server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which TACACS server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 export interface SystemAaaFeatureTacacsGroupServer {
     /**
      * Set IP address of TACACS server
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    key?: pulumi.Input<string>;
+    key?: pulumi.Input<string | undefined>;
     /**
      * Type of encyption. To be used for type 6
      *   - Choices: `6`, `7`
      */
-    keyEnum?: pulumi.Input<string>;
+    keyEnum?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyVariable?: pulumi.Input<string>;
+    keyVariable?: pulumi.Input<string | undefined>;
     /**
      * TACACS Port
      *   - Range: `1`-`65535`
      *   - Default value: `49`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portVariable?: pulumi.Input<string>;
+    portVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the TACACS server shared type 7 encrypted key
      */
-    secretKey?: pulumi.Input<string>;
+    secretKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secretKeyVariable?: pulumi.Input<string>;
+    secretKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure how long to wait for replies from the TACACS server
      *   - Range: `1`-`1000`
      *   - Default value: `5`
      */
-    timeout?: pulumi.Input<number>;
+    timeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeoutVariable?: pulumi.Input<string>;
+    timeoutVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureUser {
     /**
      * Set the username
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Privilege Level for this user
      *   - Choices: `1`, `15`
      *   - Default value: `15`
      */
-    privilege?: pulumi.Input<string>;
+    privilege?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privilegeVariable?: pulumi.Input<string>;
+    privilegeVariable?: pulumi.Input<string | undefined>;
     /**
      * List of RSA public-keys per user
      */
-    publicKeys?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureUserPublicKey>[]>;
+    publicKeys?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureUserPublicKey>[] | undefined>;
 }
 
 export interface SystemAaaFeatureUserPublicKey {
     /**
      * Set the RSA key string
      */
-    keyString?: pulumi.Input<string>;
+    keyString?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyStringVariable?: pulumi.Input<string>;
+    keyStringVariable?: pulumi.Input<string | undefined>;
     /**
      * Only RSA is supported
      *   - Choices: `ssh-rsa`
      */
-    keyType?: pulumi.Input<string>;
+    keyType?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemBasicFeatureAffinityPerVrf {
@@ -12668,30 +12668,30 @@ export interface SystemBasicFeatureAffinityPerVrf {
      * Affinity Group Number
      *   - Range: `1`-`63`
      */
-    affinityGroupNumber?: pulumi.Input<number>;
+    affinityGroupNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    affinityGroupNumberVariable?: pulumi.Input<string>;
+    affinityGroupNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Range of VRFs
      */
-    vrfRange?: pulumi.Input<string>;
+    vrfRange?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    vrfRangeVariable?: pulumi.Input<string>;
+    vrfRangeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemBasicFeatureGpsSmsMobileNumber {
     /**
      * Mobile number, ex: 1231234414
      */
-    number?: pulumi.Input<string>;
+    number?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    numberVariable?: pulumi.Input<string>;
+    numberVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemBfdFeatureColor {
@@ -12699,61 +12699,61 @@ export interface SystemBfdFeatureColor {
      * Color that identifies the WAN transport tunnel
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      */
-    color?: pulumi.Input<string>;
+    color?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    colorVariable?: pulumi.Input<string>;
+    colorVariable?: pulumi.Input<string | undefined>;
     /**
      * BFD Default DSCP value for tloc color
      *   - Range: `0`-`63`
      *   - Default value: `48`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    dscpVariable?: pulumi.Input<string>;
+    dscpVariable?: pulumi.Input<string | undefined>;
     /**
      * Hello Interval (milliseconds)
      *   - Range: `100`-`300000`
      *   - Default value: `1000`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Multiplier
      *   - Range: `1`-`60`
      *   - Default value: `7`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * Path MTU Discovery
      *   - Default value: `true`
      */
-    pmtuDiscovery?: pulumi.Input<boolean>;
+    pmtuDiscovery?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    pmtuDiscoveryVariable?: pulumi.Input<string>;
+    pmtuDiscoveryVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemCaCertificateFeatureCertificate {
     /**
      * UUID of Certificate Record in Database
      */
-    caCertificateId?: pulumi.Input<string>;
+    caCertificateId?: pulumi.Input<string | undefined>;
     /**
      * Trust Point Name of Certificate
      */
-    trustPointName?: pulumi.Input<string>;
+    trustPointName?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemIpv4DeviceAccessFeatureSequence {
@@ -12762,42 +12762,42 @@ export interface SystemIpv4DeviceAccessFeatureSequence {
      *   - Choices: `drop`, `accept`
      *   - Default value: `accept`
      */
-    baseAction?: pulumi.Input<string>;
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    destinationIpPrefixListVariable?: pulumi.Input<string>;
+    destinationIpPrefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination Data IP Prefix List
      */
-    destinationIpPrefixLists?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationIpPrefixLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * device access protocol
      */
-    deviceAccessPort?: pulumi.Input<number>;
+    deviceAccessPort?: pulumi.Input<number | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    id?: pulumi.Input<number>;
+    id?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    name?: pulumi.Input<string>;
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpPrefixListVariable?: pulumi.Input<string>;
+    sourceIpPrefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Data IP Prefix List
      */
-    sourceIpPrefixLists?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceIpPrefixLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source Port List
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<number>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<number>[] | undefined>;
 }
 
 export interface SystemIpv6DeviceAccessFeatureSequence {
@@ -12806,201 +12806,201 @@ export interface SystemIpv6DeviceAccessFeatureSequence {
      *   - Choices: `drop`, `accept`
      *   - Default value: `accept`
      */
-    baseAction?: pulumi.Input<string>;
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    destinationIpPrefixListVariable?: pulumi.Input<string>;
+    destinationIpPrefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination Data IP Prefix List
      */
-    destinationIpPrefixLists?: pulumi.Input<pulumi.Input<string>[]>;
+    destinationIpPrefixLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * device access protocol
      */
-    deviceAccessPort?: pulumi.Input<number>;
+    deviceAccessPort?: pulumi.Input<number | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    id?: pulumi.Input<number>;
+    id?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    name?: pulumi.Input<string>;
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpPrefixListVariable?: pulumi.Input<string>;
+    sourceIpPrefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Data IP Prefix List
      */
-    sourceIpPrefixLists?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceIpPrefixLists?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Source Port List
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<number>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<number>[] | undefined>;
 }
 
 export interface SystemLoggingFeatureIpv4Server {
     /**
      * Set IPv4 address of server
      */
-    hostnameIp?: pulumi.Input<string>;
+    hostnameIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameIpVariable?: pulumi.Input<string>;
+    hostnameIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set logging level for messages logged to server
      *   - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
      *   - Default value: `informational`
      */
-    priority?: pulumi.Input<string>;
+    priority?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface to use to reach syslog server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable TLS Profile
      *   - Default value: `false`
      */
-    tlsEnable?: pulumi.Input<boolean>;
+    tlsEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tlsEnableVariable?: pulumi.Input<string>;
+    tlsEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Define custom profile
      *   - Default value: `false`
      */
-    tlsPropertiesCustomProfile?: pulumi.Input<boolean>;
+    tlsPropertiesCustomProfile?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tlsPropertiesCustomProfileVariable?: pulumi.Input<string>;
+    tlsPropertiesCustomProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure a TLS profile
      */
-    tlsPropertiesProfile?: pulumi.Input<string>;
+    tlsPropertiesProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tlsPropertiesProfileVariable?: pulumi.Input<string>;
+    tlsPropertiesProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemLoggingFeatureIpv6Server {
     /**
      * Set IPv6 address of server
      */
-    hostnameIp?: pulumi.Input<string>;
+    hostnameIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameIpVariable?: pulumi.Input<string>;
+    hostnameIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Set logging level for messages logged to server
      *   - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
      *   - Default value: `informational`
      */
-    priority?: pulumi.Input<string>;
+    priority?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface to use to reach syslog server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable TLS Profile
      *   - Default value: `false`
      */
-    tlsEnable?: pulumi.Input<boolean>;
+    tlsEnable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tlsEnableVariable?: pulumi.Input<string>;
+    tlsEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Define custom profile
      *   - Default value: `false`
      */
-    tlsPropertiesCustomProfile?: pulumi.Input<boolean>;
+    tlsPropertiesCustomProfile?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    tlsPropertiesCustomProfileVariable?: pulumi.Input<string>;
+    tlsPropertiesCustomProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure a TLS profile
      */
-    tlsPropertiesProfile?: pulumi.Input<string>;
+    tlsPropertiesProfile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tlsPropertiesProfileVariable?: pulumi.Input<string>;
+    tlsPropertiesProfileVariable?: pulumi.Input<string | undefined>;
     /**
      * Set vpn of server
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemLoggingFeatureTlsProfile {
     /**
      * Syslog secure server ciphersuites
      */
-    cipherSuites?: pulumi.Input<pulumi.Input<string>[]>;
+    cipherSuites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    cipherSuitesVariable?: pulumi.Input<string>;
+    cipherSuitesVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify the name of the TLS profile
      */
-    profile?: pulumi.Input<string>;
+    profile?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    profileVariable?: pulumi.Input<string>;
+    profileVariable?: pulumi.Input<string | undefined>;
     /**
      * TLS Version
      *   - Choices: `TLSv1.1`, `TLSv1.2`
      *   - Default value: `TLSv1.1`
      */
-    tlsVersion?: pulumi.Input<string>;
+    tlsVersion?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    tlsVersionVariable?: pulumi.Input<string>;
+    tlsVersionVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemNtpFeatureAuthenticationKey {
@@ -13008,19 +13008,19 @@ export interface SystemNtpFeatureAuthenticationKey {
      * MD5 authentication key ID
      *   - Range: `1`-`4294967295`
      */
-    keyId?: pulumi.Input<number>;
+    keyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keyIdVariable?: pulumi.Input<string>;
+    keyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    md5Value?: pulumi.Input<string>;
+    md5Value?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    md5ValueVariable?: pulumi.Input<string>;
+    md5ValueVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemNtpFeatureServer {
@@ -13028,56 +13028,56 @@ export interface SystemNtpFeatureServer {
      * Set authentication key for the server
      *   - Range: `1`-`4294967295`
      */
-    authenticationKey?: pulumi.Input<number>;
+    authenticationKey?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set hostname or IP address of server
      */
-    hostnameIpAddress?: pulumi.Input<string>;
+    hostnameIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostnameIpAddressVariable?: pulumi.Input<string>;
+    hostnameIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set NTP version
      *   - Range: `1`-`4`
      *   - Default value: `4`
      */
-    ntpVersion?: pulumi.Input<number>;
+    ntpVersion?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ntpVersionVariable?: pulumi.Input<string>;
+    ntpVersionVariable?: pulumi.Input<string | undefined>;
     /**
      * Prefer this NTP server
      *   - Default value: `false`
      */
-    preferThisNtpServer?: pulumi.Input<boolean>;
+    preferThisNtpServer?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    preferThisNtpServerVariable?: pulumi.Input<string>;
+    preferThisNtpServerVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface to use to reach NTP server
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which NTP server is located
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemSecurityFeatureKey {
@@ -13085,139 +13085,139 @@ export interface SystemSecurityFeatureKey {
      * Configure Accept AO Mismatch
      *   - Default value: `false`
      */
-    acceptAoMismatch?: pulumi.Input<boolean>;
+    acceptAoMismatch?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    acceptAoMismatchVariable?: pulumi.Input<string>;
+    acceptAoMismatchVariable?: pulumi.Input<string | undefined>;
     /**
      * Send lifetime Duration (seconds)
      *   - Range: `1`-`2147483646`
      */
-    acceptLifeTimeDuration?: pulumi.Input<number>;
+    acceptLifeTimeDuration?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    acceptLifeTimeDurationVariable?: pulumi.Input<string>;
+    acceptLifeTimeDurationVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      */
-    acceptLifeTimeExact?: pulumi.Input<number>;
+    acceptLifeTimeExact?: pulumi.Input<number | undefined>;
     /**
      * Infinite lifetime
      */
-    acceptLifeTimeInfinite?: pulumi.Input<boolean>;
+    acceptLifeTimeInfinite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    acceptLifeTimeInfiniteVariable?: pulumi.Input<string>;
+    acceptLifeTimeInfiniteVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Send lifetime Local
      *   - Default value: `false`
      */
-    acceptLifeTimeLocal?: pulumi.Input<boolean>;
+    acceptLifeTimeLocal?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    acceptLifeTimeLocalVariable?: pulumi.Input<string>;
+    acceptLifeTimeLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime start time
      */
-    acceptLifeTimeStartEpoch?: pulumi.Input<number>;
+    acceptLifeTimeStartEpoch?: pulumi.Input<number | undefined>;
     /**
      * Crypto Algorithm
      *   - Choices: `aes-128-cmac`, `hmac-sha-1`, `hmac-sha-256`
      */
-    cryptoAlgorithm?: pulumi.Input<string>;
+    cryptoAlgorithm?: pulumi.Input<string | undefined>;
     /**
      * Select the Key ID
      */
-    id?: pulumi.Input<number>;
+    id?: pulumi.Input<number | undefined>;
     /**
      * Configure Include TCP Options
      *   - Default value: `false`
      */
-    includeTcpOptions?: pulumi.Input<boolean>;
+    includeTcpOptions?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    includeTcpOptionsVariable?: pulumi.Input<string>;
+    includeTcpOptionsVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify the Key String [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    keyString?: pulumi.Input<string>;
+    keyString?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    keyStringVariable?: pulumi.Input<string>;
+    keyStringVariable?: pulumi.Input<string | undefined>;
     /**
      * Select the chain name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Specify the Receiver ID
      *   - Range: `0`-`255`
      */
-    receiverId?: pulumi.Input<number>;
+    receiverId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    receiverIdVariable?: pulumi.Input<string>;
+    receiverIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Specify the Send ID
      *   - Range: `0`-`255`
      */
-    sendId?: pulumi.Input<number>;
+    sendId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sendIdVariable?: pulumi.Input<string>;
+    sendIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Send lifetime Duration (seconds)
      *   - Range: `1`-`2147483646`
      */
-    sendLifeTimeDuration?: pulumi.Input<number>;
+    sendLifeTimeDuration?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sendLifeTimeDurationVariable?: pulumi.Input<string>;
+    sendLifeTimeDurationVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime end time
      */
-    sendLifeTimeExact?: pulumi.Input<number>;
+    sendLifeTimeExact?: pulumi.Input<number | undefined>;
     /**
      * Infinite lifetime
      */
-    sendLifeTimeInfinite?: pulumi.Input<boolean>;
+    sendLifeTimeInfinite?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLifeTimeInfiniteVariable?: pulumi.Input<string>;
+    sendLifeTimeInfiniteVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Send lifetime Local
      *   - Default value: `false`
      */
-    sendLifeTimeLocal?: pulumi.Input<boolean>;
+    sendLifeTimeLocal?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendLifeTimeLocalVariable?: pulumi.Input<string>;
+    sendLifeTimeLocalVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Key lifetime start time
      */
-    sendLifeTimeStartEpoch?: pulumi.Input<number>;
+    sendLifeTimeStartEpoch?: pulumi.Input<number | undefined>;
 }
 
 export interface SystemSecurityFeatureKeychain {
     /**
      * Specify the name of the Keychain
      */
-    keyChainName?: pulumi.Input<string>;
+    keyChainName?: pulumi.Input<string | undefined>;
     /**
      * Specify the Key ID
      *   - Range: `0`-`2147483647`
      */
-    keyId?: pulumi.Input<number>;
+    keyId?: pulumi.Input<number | undefined>;
 }
 
 export interface SystemSnmpFeatureCommunity {
@@ -13225,160 +13225,160 @@ export interface SystemSnmpFeatureCommunity {
      * Configure access permissions
      *   - Choices: `read-only`, `read-write`
      */
-    authorization?: pulumi.Input<string>;
+    authorization?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authorizationVariable?: pulumi.Input<string>;
+    authorizationVariable?: pulumi.Input<string | undefined>;
     /**
      * Set name of the SNMP community [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set user label of the SNMP community
      */
-    userLabel?: pulumi.Input<string>;
+    userLabel?: pulumi.Input<string | undefined>;
     /**
      * Set name of the SNMP view
      */
-    view?: pulumi.Input<string>;
+    view?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    viewVariable?: pulumi.Input<string>;
+    viewVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemSnmpFeatureGroup {
     /**
      * Name of the SNMP group
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure security level
      *   - Choices: `no-auth-no-priv`, `auth-no-priv`, `auth-priv`
      */
-    securityLevel?: pulumi.Input<string>;
+    securityLevel?: pulumi.Input<string | undefined>;
     /**
      * Name of the SNMP view
      */
-    view?: pulumi.Input<string>;
+    view?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    viewVariable?: pulumi.Input<string>;
+    viewVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemSnmpFeatureTrapTargetServer {
     /**
      * Set IPv4/IPv6 address of SNMP server
      */
-    ip?: pulumi.Input<string>;
+    ip?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipVariable?: pulumi.Input<string>;
+    ipVariable?: pulumi.Input<string | undefined>;
     /**
      * Set UDP port number to connect to SNMP server
      *   - Range: `1`-`65535`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    portVariable?: pulumi.Input<string>;
+    portVariable?: pulumi.Input<string | undefined>;
     /**
      * Source interface for outgoing SNMP traps
      */
-    sourceInterface?: pulumi.Input<string>;
+    sourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceInterfaceVariable?: pulumi.Input<string>;
+    sourceInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set name of the SNMP user
      */
-    user?: pulumi.Input<string>;
+    user?: pulumi.Input<string | undefined>;
     /**
      * Set user label of the SNMP community
      */
-    userLabel?: pulumi.Input<string>;
+    userLabel?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    userVariable?: pulumi.Input<string>;
+    userVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VPN in which SNMP server is located
      *   - Range: `0`-`65530`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemSnmpFeatureUser {
     /**
      * Specify authentication protocol password
      */
-    authenticationPassword?: pulumi.Input<string>;
+    authenticationPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationPasswordVariable?: pulumi.Input<string>;
+    authenticationPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure authentication protocol
      *   - Choices: `sha`
      */
-    authenticationProtocol?: pulumi.Input<string>;
+    authenticationProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationProtocolVariable?: pulumi.Input<string>;
+    authenticationProtocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of the SNMP group
      */
-    group?: pulumi.Input<string>;
+    group?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    groupVariable?: pulumi.Input<string>;
+    groupVariable?: pulumi.Input<string | undefined>;
     /**
      * Name of the SNMP user
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Specify privacy protocol password
      */
-    privacyPassword?: pulumi.Input<string>;
+    privacyPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privacyPasswordVariable?: pulumi.Input<string>;
+    privacyPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure privacy protocol
      *   - Choices: `aes-cfb-128`, `aes-256-cfb-128`
      */
-    privacyProtocol?: pulumi.Input<string>;
+    privacyProtocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privacyProtocolVariable?: pulumi.Input<string>;
+    privacyProtocolVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemSnmpFeatureView {
     /**
      * Set the name of the SNMP view
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP object identifier
      */
-    oids?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureViewOid>[]>;
+    oids?: pulumi.Input<pulumi.Input<inputs.SystemSnmpFeatureViewOid>[] | undefined>;
 }
 
 export interface SystemSnmpFeatureViewOid {
@@ -13386,19 +13386,19 @@ export interface SystemSnmpFeatureViewOid {
      * Exclude the OID
      *   - Default value: `false`
      */
-    exclude?: pulumi.Input<boolean>;
+    exclude?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    excludeVariable?: pulumi.Input<string>;
+    excludeVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure identifier of subtree of MIB objects
      */
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    idVariable?: pulumi.Input<string>;
+    idVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TlocListPolicyObjectEntry {
@@ -13416,7 +13416,7 @@ export interface TlocListPolicyObjectEntry {
      * Preference
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * TLOC IP
      */
@@ -13428,23 +13428,23 @@ export interface TlsSslDecryptionPolicyDefinitionNetworkRule {
      * Rule base action
      *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Rule ID
      */
-    ruleId?: pulumi.Input<number>;
+    ruleId?: pulumi.Input<number | undefined>;
     /**
      * Rule name
      */
-    ruleName?: pulumi.Input<string>;
+    ruleName?: pulumi.Input<string | undefined>;
     /**
      * Rule type
      */
-    ruleType?: pulumi.Input<string>;
+    ruleType?: pulumi.Input<string | undefined>;
     /**
      * List of network source / destination configuration
      */
-    sourceAndDestinationConfigurations?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration>[]>;
+    sourceAndDestinationConfigurations?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration>[] | undefined>;
 }
 
 export interface TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfiguration {
@@ -13452,42 +13452,42 @@ export interface TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestination
      * source / destination option
      *   - Choices: `sourceIp`, `sourcePort`, `destinationVpn`, `destinationIp`, `destinationPort`
      */
-    option?: pulumi.Input<string>;
+    option?: pulumi.Input<string | undefined>;
     /**
      * source / destination option target
      */
-    value?: pulumi.Input<string>;
+    value?: pulumi.Input<string | undefined>;
 }
 
 export interface TlsSslDecryptionPolicyDefinitionUrlRule {
     /**
      * Country
      */
-    ruleName?: pulumi.Input<string>;
+    ruleName?: pulumi.Input<string | undefined>;
     /**
      * List of VPN IDs
      */
-    targetVpns?: pulumi.Input<pulumi.Input<string>[]>;
+    targetVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * TLS SSL Profile Policy ID
      */
-    tlsSslProfilePolicyId?: pulumi.Input<string>;
+    tlsSslProfilePolicyId?: pulumi.Input<string | undefined>;
     /**
      * TLS SSL Profile Policy version
      */
-    tlsSslProfilePolicyVersion?: pulumi.Input<number>;
+    tlsSslProfilePolicyVersion?: pulumi.Input<number | undefined>;
 }
 
 export interface TrafficDataPolicyDefinitionSequence {
     /**
      * List of action entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceActionEntry>[] | undefined>;
     /**
      * Base action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence ID
      */
@@ -13496,11 +13496,11 @@ export interface TrafficDataPolicyDefinitionSequence {
      * Sequence IP type, either `ipv4`, `ipv6` or `all`
      *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    ipType?: pulumi.Input<string>;
+    ipType?: pulumi.Input<string | undefined>;
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence name
      */
@@ -13516,86 +13516,86 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntry {
     /**
      * Enable cflowd, Attribute conditional on `type` equal to `cflowd`
      */
-    cflowd?: pulumi.Input<boolean>;
+    cflowd?: pulumi.Input<boolean | undefined>;
     /**
      * Counter name, Attribute conditional on `type` equal to `count`
      */
-    counter?: pulumi.Input<string>;
+    counter?: pulumi.Input<string | undefined>;
     /**
      * Enable DRE optimization, Attribute conditional on `type` equal to `dreOptimization`
      */
-    dreOptimization?: pulumi.Input<boolean>;
+    dreOptimization?: pulumi.Input<boolean | undefined>;
     /**
      * Enable fallback to routing, Attribute conditional on `type` equal to `fallbackToRouting`
      */
-    fallbackToRouting?: pulumi.Input<boolean>;
+    fallbackToRouting?: pulumi.Input<boolean | undefined>;
     /**
      * Enable logging, Attribute conditional on `type` equal to `log`
      */
-    log?: pulumi.Input<boolean>;
+    log?: pulumi.Input<boolean | undefined>;
     /**
      * Loss correction, Attribute conditional on `type` equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
-    lossCorrection?: pulumi.Input<string>;
+    lossCorrection?: pulumi.Input<string | undefined>;
     /**
      * Loss correction FEC, Attribute conditional on `type` equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
-    lossCorrectionFec?: pulumi.Input<string>;
+    lossCorrectionFec?: pulumi.Input<string | undefined>;
     /**
      * Loss correction FEC threshold, Attribute conditional on `type` equal to `lossProtectFec`
      */
-    lossCorrectionFecThreshold?: pulumi.Input<string>;
+    lossCorrectionFecThreshold?: pulumi.Input<string | undefined>;
     /**
      * Loss correction packet duplication, Attribute conditional on `type` equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
-    lossCorrectionPacketDuplication?: pulumi.Input<string>;
+    lossCorrectionPacketDuplication?: pulumi.Input<string | undefined>;
     /**
      * List of NAT parameters, Attribute conditional on `type` equal to `nat`
      */
-    natParameters?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter>[]>;
+    natParameters?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter>[] | undefined>;
     /**
      * NAT pool, Attribute conditional on `type` equal to `nat`
      *   - Choices: `pool`
      */
-    natPool?: pulumi.Input<string>;
+    natPool?: pulumi.Input<string | undefined>;
     /**
      * NAT pool ID, Attribute conditional on `type` equal to `nat`
      *   - Range: `1`-`31`
      */
-    natPoolId?: pulumi.Input<number>;
+    natPoolId?: pulumi.Input<number | undefined>;
     /**
      * Redirect DNS, Attribute conditional on `type` equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      */
-    redirectDns?: pulumi.Input<string>;
+    redirectDns?: pulumi.Input<string | undefined>;
     /**
      * Redirect DNS IP address, Attribute conditional on `redirectDns` equal to `ipAddress`
      */
-    redirectDnsAddress?: pulumi.Input<string>;
+    redirectDnsAddress?: pulumi.Input<string | undefined>;
     /**
      * Redirect DNS type, Attribute conditional on `redirectDns` equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      */
-    redirectDnsType?: pulumi.Input<string>;
+    redirectDnsType?: pulumi.Input<string | undefined>;
     /**
      * Enable secure internet gateway, Attribute conditional on `type` equal to `sig`
      */
-    secureInternetGateway?: pulumi.Input<boolean>;
+    secureInternetGateway?: pulumi.Input<boolean | undefined>;
     /**
      * Service node group, Attribute conditional on `type` equal to `serviceNodeGroup`
      */
-    serviceNodeGroup?: pulumi.Input<string>;
+    serviceNodeGroup?: pulumi.Input<string | undefined>;
     /**
      * List of set parameters, Attribute conditional on `type` equal to `set`
      */
-    setParameters?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter>[]>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter>[] | undefined>;
     /**
      * Enable TCP optimization, Attribute conditional on `type` equal to `tcpOptimization`
      */
-    tcpOptimization?: pulumi.Input<boolean>;
+    tcpOptimization?: pulumi.Input<boolean | undefined>;
     /**
      * Type of action entry
      *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
@@ -13607,7 +13607,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
     /**
      * Fallback, Attribute conditional on `type` equal to `fallback`
      */
-    fallback?: pulumi.Input<boolean>;
+    fallback?: pulumi.Input<boolean | undefined>;
     /**
      * Type of NAT parameter
      *   - Choices: `useVpn`, `fallback`
@@ -13616,7 +13616,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
     /**
      * DSCP, Attribute conditional on `type` equal to `useVpn`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
@@ -13624,108 +13624,108 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      * DSCP, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<number | undefined>;
     /**
      * Forwarding class, Attribute conditional on `type` equal to `forwardingClass`
      */
-    forwardingClass?: pulumi.Input<string>;
+    forwardingClass?: pulumi.Input<string | undefined>;
     /**
      * Local TLOC list color. Space separated list of colors., Attribute conditional on `type` equal to `localTlocList`
      */
-    localTlocListColor?: pulumi.Input<string>;
+    localTlocListColor?: pulumi.Input<string | undefined>;
     /**
      * Local TLOC list encapsulation., Attribute conditional on `type` equal to `localTlocList`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
-    localTlocListEncap?: pulumi.Input<string>;
+    localTlocListEncap?: pulumi.Input<string | undefined>;
     /**
      * Local TLOC list restrict, Attribute conditional on `type` equal to `localTlocList`
      */
-    localTlocListRestrict?: pulumi.Input<boolean>;
+    localTlocListRestrict?: pulumi.Input<boolean | undefined>;
     /**
      * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
-    nextHop?: pulumi.Input<string>;
+    nextHop?: pulumi.Input<string | undefined>;
     /**
      * Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` equal to `nextHopLoose`
      */
-    nextHopLoose?: pulumi.Input<boolean>;
+    nextHopLoose?: pulumi.Input<boolean | undefined>;
     /**
      * Policer list ID, Attribute conditional on `type` equal to `policer`
      */
-    policerListId?: pulumi.Input<string>;
+    policerListId?: pulumi.Input<string | undefined>;
     /**
      * Policer list version
      */
-    policerListVersion?: pulumi.Input<number>;
+    policerListVersion?: pulumi.Input<number | undefined>;
     /**
      * Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      */
-    preferredColorGroupListId?: pulumi.Input<string>;
+    preferredColorGroupListId?: pulumi.Input<string | undefined>;
     /**
      * Preferred color group list version
      */
-    preferredColorGroupListVersion?: pulumi.Input<number>;
+    preferredColorGroupListVersion?: pulumi.Input<number | undefined>;
     /**
      * Service TLOC color, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocColor?: pulumi.Input<string>;
+    serviceTlocColor?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
-    serviceTlocEncapsulation?: pulumi.Input<string>;
+    serviceTlocEncapsulation?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC IP address, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocIp?: pulumi.Input<string>;
+    serviceTlocIp?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC list ID, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocListId?: pulumi.Input<string>;
+    serviceTlocListId?: pulumi.Input<string | undefined>;
     /**
      * Service TLOC list version
      */
-    serviceTlocListVersion?: pulumi.Input<number>;
+    serviceTlocListVersion?: pulumi.Input<number | undefined>;
     /**
      * Service TLOC Local, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocLocal?: pulumi.Input<boolean>;
+    serviceTlocLocal?: pulumi.Input<boolean | undefined>;
     /**
      * Service TLOC Restrict, Attribute conditional on `type` equal to `service`
      */
-    serviceTlocRestrict?: pulumi.Input<boolean>;
+    serviceTlocRestrict?: pulumi.Input<boolean | undefined>;
     /**
      * Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      */
-    serviceType?: pulumi.Input<string>;
+    serviceType?: pulumi.Input<string | undefined>;
     /**
      * Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      */
-    serviceVpnId?: pulumi.Input<number>;
+    serviceVpnId?: pulumi.Input<number | undefined>;
     /**
      * TLOC color, Attribute conditional on `type` equal to `tloc`
      */
-    tlocColor?: pulumi.Input<string>;
+    tlocColor?: pulumi.Input<string | undefined>;
     /**
      * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
-    tlocEncapsulation?: pulumi.Input<string>;
+    tlocEncapsulation?: pulumi.Input<string | undefined>;
     /**
      * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      */
-    tlocIp?: pulumi.Input<string>;
+    tlocIp?: pulumi.Input<string | undefined>;
     /**
      * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      */
-    tlocListId?: pulumi.Input<string>;
+    tlocListId?: pulumi.Input<string | undefined>;
     /**
      * TLOC list version
      */
-    tlocListVersion?: pulumi.Input<number>;
+    tlocListVersion?: pulumi.Input<number | undefined>;
     /**
      * Type of set parameter
      *   - Choices: `dscp`, `forwardingClass`, `localTlocList`, `nextHop`, `nextHopLoose`, `policer`, `preferredColorGroup`, `tlocList`, `tloc`, `service`, `vpn`
@@ -13735,100 +13735,100 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      * DSCP, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65530`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
 }
 
 export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     /**
      * Application list ID, Attribute conditional on `type` equal to `appList`
      */
-    applicationListId?: pulumi.Input<string>;
+    applicationListId?: pulumi.Input<string | undefined>;
     /**
      * Application list version
      */
-    applicationListVersion?: pulumi.Input<number>;
+    applicationListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination Data Prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination Data Prefix list version
      */
-    destinationDataPrefixListVersion?: pulumi.Input<number>;
+    destinationDataPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Destination IP, Attribute conditional on `type` equal to `destinationIp`
      */
-    destinationIp?: pulumi.Input<string>;
+    destinationIp?: pulumi.Input<string | undefined>;
     /**
      * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `destinationPort`
      */
-    destinationPort?: pulumi.Input<string>;
+    destinationPort?: pulumi.Input<string | undefined>;
     /**
      * Destination region, Attribute conditional on `type` equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
-    destinationRegion?: pulumi.Input<string>;
+    destinationRegion?: pulumi.Input<string | undefined>;
     /**
      * DNS request or response, Attribute conditional on `type` equal to `dns`
      *   - Choices: `request`, `response`
      */
-    dns?: pulumi.Input<string>;
+    dns?: pulumi.Input<string | undefined>;
     /**
      * DNS Application list ID, Attribute conditional on `type` equal to `dnsAppList`
      */
-    dnsApplicationListId?: pulumi.Input<string>;
+    dnsApplicationListId?: pulumi.Input<string | undefined>;
     /**
      * DNS Application list version
      */
-    dnsApplicationListVersion?: pulumi.Input<number>;
+    dnsApplicationListVersion?: pulumi.Input<number | undefined>;
     /**
      * DSCP value, Attribute conditional on `type` equal to `dscp`
      */
-    dscp?: pulumi.Input<string>;
+    dscp?: pulumi.Input<string | undefined>;
     /**
      * ICMP Message, Attribute conditional on `type` equal to `icmpMessage`
      */
-    icmpMessage?: pulumi.Input<string>;
+    icmpMessage?: pulumi.Input<string | undefined>;
     /**
      * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<number | undefined>;
     /**
      * PLP, Attribute conditional on `type` equal to `plp`
      *   - Choices: `low`, `high`
      */
-    plp?: pulumi.Input<string>;
+    plp?: pulumi.Input<string | undefined>;
     /**
      * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `protocol`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Source Data Prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source Data Prefix list version
      */
-    sourceDataPrefixListVersion?: pulumi.Input<number>;
+    sourceDataPrefixListVersion?: pulumi.Input<number | undefined>;
     /**
      * Source IP, Attribute conditional on `type` equal to `sourceIp`
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `sourcePort`
      */
-    sourcePort?: pulumi.Input<string>;
+    sourcePort?: pulumi.Input<string | undefined>;
     /**
      * TCP flags, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      */
-    tcp?: pulumi.Input<string>;
+    tcp?: pulumi.Input<string | undefined>;
     /**
      * Traffic to, Attribute conditional on `type` equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      */
-    trafficTo?: pulumi.Input<string>;
+    trafficTo?: pulumi.Input<string | undefined>;
     /**
      * Type of match entry
      *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
@@ -13840,293 +13840,293 @@ export interface TransportIpv4AclFeatureSequence {
     /**
      * Define list of actions
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
      *   - Default value: `accept`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Define match conditions
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    sequenceId?: pulumi.Input<number>;
+    sequenceId?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    sequenceName?: pulumi.Input<string>;
+    sequenceName?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv4AclFeatureSequenceAction {
     /**
      * Counter Name
      */
-    acceptCounterName?: pulumi.Input<string>;
+    acceptCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    acceptLog?: pulumi.Input<boolean>;
-    acceptMirrorListId?: pulumi.Input<string>;
-    acceptPolicerId?: pulumi.Input<string>;
+    acceptLog?: pulumi.Input<boolean | undefined>;
+    acceptMirrorListId?: pulumi.Input<string | undefined>;
+    acceptPolicerId?: pulumi.Input<string | undefined>;
     /**
      * DSCP number
      *   - Range: `0`-`63`
      */
-    acceptSetDscp?: pulumi.Input<number>;
+    acceptSetDscp?: pulumi.Input<number | undefined>;
     /**
      * Set Next Hop (IPV4 address)
      */
-    acceptSetNextHop?: pulumi.Input<string>;
+    acceptSetNextHop?: pulumi.Input<string | undefined>;
     /**
      * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      *   - Default value: `false`
      */
-    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    acceptSetServiceChainFallback?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain Number
      *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
      */
-    acceptSetServiceChainName?: pulumi.Input<string>;
+    acceptSetServiceChainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    acceptSetServiceChainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    acceptSetServiceChainVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Counter Name
      */
-    dropCounterName?: pulumi.Input<string>;
+    dropCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    dropLog?: pulumi.Input<boolean>;
+    dropLog?: pulumi.Input<boolean | undefined>;
 }
 
 export interface TransportIpv4AclFeatureSequenceMatchEntry {
     /**
      * Destination Data IP Prefix
      */
-    destinationDataPrefix?: pulumi.Input<string>;
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    destinationDataPrefix?: pulumi.Input<string | undefined>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    destinationDataPrefixVariable?: pulumi.Input<string>;
+    destinationDataPrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination Port List
      */
-    destinationPorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntryDestinationPort>[] | undefined>;
     /**
      * DSCP number
      */
-    dscps?: pulumi.Input<pulumi.Input<number>[]>;
+    dscps?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * ICMP Message
      */
-    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<string>;
+    packetLength?: pulumi.Input<string | undefined>;
     /**
      * protocol number list with at least one item
      */
-    protocols?: pulumi.Input<pulumi.Input<number>[]>;
+    protocols?: pulumi.Input<pulumi.Input<number>[] | undefined>;
     /**
      * Source Data IP Prefix
      */
-    sourceDataPrefix?: pulumi.Input<string>;
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    sourceDataPrefix?: pulumi.Input<string | undefined>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceDataPrefixVariable?: pulumi.Input<string>;
+    sourceDataPrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Port List
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntrySourcePort>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntrySourcePort>[] | undefined>;
     /**
      * TCP States
      *   - Choices: `syn`
      */
-    tcpState?: pulumi.Input<string>;
+    tcpState?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv6AclFeatureSequence {
     /**
      * Define list of actions
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `drop`, `accept`
      *   - Default value: `accept`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Define match conditions
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    sequenceId?: pulumi.Input<number>;
+    sequenceId?: pulumi.Input<number | undefined>;
     /**
      * Sequence Name
      */
-    sequenceName?: pulumi.Input<string>;
+    sequenceName?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv6AclFeatureSequenceAction {
     /**
      * Counter Name
      */
-    acceptCounterName?: pulumi.Input<string>;
+    acceptCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    acceptLog?: pulumi.Input<boolean>;
-    acceptMirrorListId?: pulumi.Input<string>;
-    acceptPolicerId?: pulumi.Input<string>;
+    acceptLog?: pulumi.Input<boolean | undefined>;
+    acceptMirrorListId?: pulumi.Input<string | undefined>;
+    acceptPolicerId?: pulumi.Input<string | undefined>;
     /**
      * Set Next Hop (IPV6 address)
      */
-    acceptSetNextHop?: pulumi.Input<string>;
+    acceptSetNextHop?: pulumi.Input<string | undefined>;
     /**
      * fallback, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      *   - Default value: `false`
      */
-    acceptSetServiceChainFallback?: pulumi.Input<boolean>;
+    acceptSetServiceChainFallback?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainFallbackVariable?: pulumi.Input<string>;
+    acceptSetServiceChainFallbackVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain Number
      *   - Choices: `SC1`, `SC2`, `SC3`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
      */
-    acceptSetServiceChainName?: pulumi.Input<string>;
+    acceptSetServiceChainName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    acceptSetServiceChainNameVariable?: pulumi.Input<string>;
+    acceptSetServiceChainNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Service Chain VPN, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpn?: pulumi.Input<number>;
+    acceptSetServiceChainVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `acceptSetServiceChainName` being set or `acceptSetServiceChainNameVariable` being set
      */
-    acceptSetServiceChainVpnVariable?: pulumi.Input<string>;
+    acceptSetServiceChainVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * set traffic class number
      *   - Range: `0`-`63`
      */
-    acceptTrafficClass?: pulumi.Input<number>;
+    acceptTrafficClass?: pulumi.Input<number | undefined>;
     /**
      * Counter Name
      */
-    dropCounterName?: pulumi.Input<string>;
+    dropCounterName?: pulumi.Input<string | undefined>;
     /**
      * Enable Log
      *   - Default value: `false`
      */
-    dropLog?: pulumi.Input<boolean>;
+    dropLog?: pulumi.Input<boolean | undefined>;
 }
 
 export interface TransportIpv6AclFeatureSequenceMatchEntry {
     /**
      * Destination Data IP Prefix
      */
-    destinationDataPrefix?: pulumi.Input<string>;
-    destinationDataPrefixListId?: pulumi.Input<string>;
+    destinationDataPrefix?: pulumi.Input<string | undefined>;
+    destinationDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Destination Port List
      */
-    destinationPorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntryDestinationPort>[] | undefined>;
     /**
      * ICMP6 Message
      */
-    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * next header number
      *   - Range: `0`-`255`
      */
-    nextHeader?: pulumi.Input<number>;
+    nextHeader?: pulumi.Input<number | undefined>;
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<string>;
+    packetLength?: pulumi.Input<string | undefined>;
     /**
      * Source Data IP Prefix
      */
-    sourceDataPrefix?: pulumi.Input<string>;
-    sourceDataPrefixListId?: pulumi.Input<string>;
+    sourceDataPrefix?: pulumi.Input<string | undefined>;
+    sourceDataPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Source Port List
      */
-    sourcePorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntrySourcePort>[]>;
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntrySourcePort>[] | undefined>;
     /**
      * TCP States
      *   - Choices: `syn`
      */
-    tcpState?: pulumi.Input<string>;
+    tcpState?: pulumi.Input<string | undefined>;
     /**
      * Select Traffic Class
      */
-    trafficClasses?: pulumi.Input<pulumi.Input<number>[]>;
+    trafficClasses?: pulumi.Input<pulumi.Input<number>[] | undefined>;
 }
 
 export interface TransportIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<string>;
+    port?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportIpv6TrackerGroupFeatureTrackerElement {
-    trackerId?: pulumi.Input<string>;
+    trackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnFeatureIpv4StaticRoute {
@@ -14135,59 +14135,59 @@ export interface TransportManagementVpnFeatureIpv4StaticRoute {
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `gateway` equal to `null0`
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
     /**
      * Gateway
      *   - Choices: `nextHop`, `dhcp`, `null0`
      *   - Default value: `nextHop`
      */
-    gateway?: pulumi.Input<string>;
+    gateway?: pulumi.Input<string | undefined>;
     /**
      * IP Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnFeatureIpv4StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnFeatureIpv4StaticRouteNextHop>[] | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnFeatureIpv6StaticRoute {
@@ -14195,242 +14195,242 @@ export interface TransportManagementVpnFeatureIpv6StaticRoute {
      * Gateway
      *   - Choices: `nextHop`, `null0`, `nat`
      */
-    gateway?: pulumi.Input<string>;
+    gateway?: pulumi.Input<string | undefined>;
     /**
      * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
-    nat?: pulumi.Input<string>;
+    nat?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `gateway` equal to `nat`
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop>[] | undefined>;
     /**
      * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
-    null0?: pulumi.Input<boolean>;
+    null0?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`254`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnFeatureNewHostMapping {
     /**
      * Hostname
      */
-    hostName?: pulumi.Input<string>;
+    hostName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostNameVariable?: pulumi.Input<string>;
+    hostNameVariable?: pulumi.Input<string | undefined>;
     /**
      * List of IP
      */
-    listOfIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    listOfIpAddresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    listOfIpAddressesVariable?: pulumi.Input<string>;
+    listOfIpAddressesVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnInterfaceEthernetFeatureArpEntry {
     /**
      * IPV4 Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC Address
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     /**
      * IpV4 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutePolicyFeatureSequence {
     /**
      * Define list of actions
      */
-    actions?: pulumi.Input<pulumi.Input<inputs.TransportRoutePolicyFeatureSequenceAction>[]>;
+    actions?: pulumi.Input<pulumi.Input<inputs.TransportRoutePolicyFeatureSequenceAction>[] | undefined>;
     /**
      * Base Action
      *   - Choices: `reject`, `accept`
      *   - Default value: `reject`
      */
-    baseAction?: pulumi.Input<string>;
+    baseAction?: pulumi.Input<string | undefined>;
     /**
      * Sequence Id
      *   - Range: `1`-`65536`
      */
-    id?: pulumi.Input<number>;
+    id?: pulumi.Input<number | undefined>;
     /**
      * Define match conditions
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportRoutePolicyFeatureSequenceMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportRoutePolicyFeatureSequenceMatchEntry>[] | undefined>;
     /**
      * Sequence Name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * protocol such as IPV4, IPV6, or BOTH
      *   - Choices: `IPV4`, `IPV6`, `BOTH`
      *   - Default value: `IPV4`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutePolicyFeatureSequenceAction {
-    asPathPrepends?: pulumi.Input<pulumi.Input<string>[]>;
-    communities?: pulumi.Input<pulumi.Input<string>[]>;
+    asPathPrepends?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    communities?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * - Default value: `false`
      */
-    communityAdditive?: pulumi.Input<boolean>;
+    communityAdditive?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    communityVariable?: pulumi.Input<string>;
+    communityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set Ipv4 Next Hop
      */
-    ipv4NextHop?: pulumi.Input<string>;
+    ipv4NextHop?: pulumi.Input<string | undefined>;
     /**
      * Set Ipv6 Next Hop
      */
-    ipv6NextHop?: pulumi.Input<string>;
+    ipv6NextHop?: pulumi.Input<string | undefined>;
     /**
      * Set Local Preference
      *   - Range: `0`-`4294967295`
      */
-    localPreference?: pulumi.Input<number>;
+    localPreference?: pulumi.Input<number | undefined>;
     /**
      * Set Metric
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Set Metric Type
      *   - Choices: `type1`, `type2`
      */
-    metricType?: pulumi.Input<string>;
+    metricType?: pulumi.Input<string | undefined>;
     /**
      * Set OMP Tag
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Set Origin
      *   - Choices: `EGP`, `IGP`, `Incomplete`
      */
-    origin?: pulumi.Input<string>;
+    origin?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF Tag
      *   - Range: `0`-`4294967295`
      */
-    ospfTag?: pulumi.Input<number>;
+    ospfTag?: pulumi.Input<number | undefined>;
     /**
      * Set Weight
      *   - Range: `0`-`65535`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
 }
 
 export interface TransportRoutePolicyFeatureSequenceMatchEntry {
-    asPathListId?: pulumi.Input<string>;
+    asPathListId?: pulumi.Input<string | undefined>;
     /**
      * BGP Local Preference
      *   - Range: `0`-`4294967295`
      */
-    bgpLocalPreference?: pulumi.Input<number>;
-    expandedCommunityListId?: pulumi.Input<string>;
-    extendedCommunityListId?: pulumi.Input<string>;
-    ipv4AddressPrefixListId?: pulumi.Input<string>;
-    ipv4NextHopPrefixListId?: pulumi.Input<string>;
-    ipv6AddressPrefixListId?: pulumi.Input<string>;
-    ipv6NextHopPrefixListId?: pulumi.Input<string>;
+    bgpLocalPreference?: pulumi.Input<number | undefined>;
+    expandedCommunityListId?: pulumi.Input<string | undefined>;
+    extendedCommunityListId?: pulumi.Input<string | undefined>;
+    ipv4AddressPrefixListId?: pulumi.Input<string | undefined>;
+    ipv4NextHopPrefixListId?: pulumi.Input<string | undefined>;
+    ipv6AddressPrefixListId?: pulumi.Input<string | undefined>;
+    ipv6NextHopPrefixListId?: pulumi.Input<string | undefined>;
     /**
      * Select Metric
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Select OMP Tag
      *   - Range: `0`-`4294967295`
      */
-    ompTag?: pulumi.Input<number>;
+    ompTag?: pulumi.Input<number | undefined>;
     /**
      * Select OSPF Tag
      *   - Range: `0`-`4294967295`
      */
-    ospfTag?: pulumi.Input<number>;
+    ospfTag?: pulumi.Input<number | undefined>;
     /**
      * Select a condition such as OR, AND or EXACT
      *   - Choices: `OR`, `AND`, `EXACT`
      */
-    standardCommunityListCriteria?: pulumi.Input<string>;
+    standardCommunityListCriteria?: pulumi.Input<string | undefined>;
     /**
      * Select a standard community list
      */
-    standardCommunityLists?: pulumi.Input<pulumi.Input<inputs.TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList>[]>;
+    standardCommunityLists?: pulumi.Input<pulumi.Input<inputs.TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList>[] | undefined>;
 }
 
 export interface TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
-    id?: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv4AggregateAddress {
@@ -14438,186 +14438,186 @@ export interface TransportRoutingBgpFeatureIpv4AggregateAddress {
      * Set AS set path information
      *   - Default value: `false`
      */
-    asSetPath?: pulumi.Input<boolean>;
+    asSetPath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asSetPathVariable?: pulumi.Input<string>;
-    networkAddress?: pulumi.Input<string>;
+    asSetPathVariable?: pulumi.Input<string | undefined>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * Filter out more specific routes from updates
      *   - Default value: `false`
      */
-    summaryOnly?: pulumi.Input<boolean>;
+    summaryOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    summaryOnlyVariable?: pulumi.Input<string>;
+    summaryOnlyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set neighbor address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4NeighborAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4NeighborAddressFamily>[] | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * The number of accept as-path with my AS present in it
      *   - Range: `1`-`10`
      */
-    allowasInNumber?: pulumi.Input<number>;
+    allowasInNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    allowasInNumberVariable?: pulumi.Input<string>;
+    allowasInNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Override matching AS-number while sending update
      *   - Default value: `false`
      */
-    asOverride?: pulumi.Input<boolean>;
+    asOverride?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asOverrideVariable?: pulumi.Input<string>;
+    asOverrideVariable?: pulumi.Input<string | undefined>;
     /**
      * Set description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TTL value for peers that are not directly connected
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    ebgpMultihop?: pulumi.Input<number>;
+    ebgpMultihop?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ebgpMultihopVariable?: pulumi.Input<string>;
+    ebgpMultihopVariable?: pulumi.Input<string | undefined>;
     /**
      * Send explicit null label
      *   - Default value: `false`
      */
-    explicitNull?: pulumi.Input<boolean>;
+    explicitNull?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    explicitNullVariable?: pulumi.Input<string>;
+    explicitNullVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
      *   - Range: `0`-`65535`
      *   - Default value: `180`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set how often to advertise keepalive messages to BGP peer
      *   - Range: `0`-`65535`
      *   - Default value: `60`
      */
-    keepaliveTime?: pulumi.Input<number>;
+    keepaliveTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveTimeVariable?: pulumi.Input<string>;
+    keepaliveTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number>;
+    localAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    localAsVariable?: pulumi.Input<string>;
+    localAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      */
-    nextHopSelf?: pulumi.Input<boolean>;
+    nextHopSelf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nextHopSelfVariable?: pulumi.Input<string>;
+    nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number>;
+    remoteAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Send community attribute
      *   - Default value: `true`
      */
-    sendCommunity?: pulumi.Input<boolean>;
+    sendCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendCommunityVariable?: pulumi.Input<string>;
+    sendCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send extended community attribute
      *   - Default value: `true`
      */
-    sendExtendedCommunity?: pulumi.Input<boolean>;
+    sendExtendedCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendExtendedCommunityVariable?: pulumi.Input<string>;
+    sendExtendedCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send label
      *   - Default value: `false`
      */
-    sendLabel?: pulumi.Input<boolean>;
+    sendLabel?: pulumi.Input<boolean | undefined>;
     /**
      * Enable or disable a BGP neighbor
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Source interface name for BGP neighbor
      */
-    updateSourceInterface?: pulumi.Input<string>;
+    updateSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    updateSourceInterfaceVariable?: pulumi.Input<string>;
+    updateSourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
@@ -14625,96 +14625,96 @@ export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
-    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    disablePeerThreshold?: pulumi.Input<number>;
+    disablePeerThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerThresholdVariable?: pulumi.Input<string>;
+    disablePeerThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IPv4 unicast address family
      *   - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
      */
-    familyType?: pulumi.Input<string>;
-    inRoutePolicyId?: pulumi.Input<string>;
-    outRoutePolicyId?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
+    inRoutePolicyId?: pulumi.Input<string | undefined>;
+    outRoutePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Neighbor received maximum prefix policy is disabled.
      *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
-    policyType?: pulumi.Input<string>;
+    policyType?: pulumi.Input<string | undefined>;
     /**
      * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
-    restartInterval?: pulumi.Input<number>;
+    restartInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartIntervalVariable?: pulumi.Input<string>;
+    restartIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
-    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    restartMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    restartThreshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartThresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
-    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    warningMessageThreshold?: pulumi.Input<number>;
+    warningMessageThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageThresholdVariable?: pulumi.Input<string>;
+    warningMessageThresholdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv4Network {
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv4Redistribute {
@@ -14722,197 +14722,197 @@ export interface TransportRoutingBgpFeatureIpv4Redistribute {
      * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    metricVariable?: pulumi.Input<string>;
+    metricVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRouteVariable?: pulumi.Input<string>;
+    ospfMatchRouteVariable?: pulumi.Input<string | undefined>;
     /**
      * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `ospfv3`, `nat`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv6AggregateAddress {
     /**
      * Configure the IPv6 prefixes to aggregate
      */
-    aggregatePrefix?: pulumi.Input<string>;
+    aggregatePrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aggregatePrefixVariable?: pulumi.Input<string>;
+    aggregatePrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Set AS set path information
      *   - Default value: `false`
      */
-    asSetPath?: pulumi.Input<boolean>;
+    asSetPath?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asSetPathVariable?: pulumi.Input<string>;
+    asSetPathVariable?: pulumi.Input<string | undefined>;
     /**
      * Filter out more specific routes from updates
      *   - Default value: `false`
      */
-    summaryOnly?: pulumi.Input<boolean>;
+    summaryOnly?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    summaryOnlyVariable?: pulumi.Input<string>;
+    summaryOnlyVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set IPv6 neighbor address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Set IPv6 BGP address family
      */
-    addressFamilies?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6NeighborAddressFamily>[]>;
+    addressFamilies?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6NeighborAddressFamily>[] | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * The number of accept as-path with my AS present in it
      *   - Range: `1`-`10`
      */
-    allowasInNumber?: pulumi.Input<number>;
+    allowasInNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    allowasInNumberVariable?: pulumi.Input<string>;
+    allowasInNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Override matching AS-number while sending update
      *   - Default value: `false`
      */
-    asOverride?: pulumi.Input<boolean>;
+    asOverride?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    asOverrideVariable?: pulumi.Input<string>;
+    asOverrideVariable?: pulumi.Input<string | undefined>;
     /**
      * Set description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Set TTL value for peers that are not directly connected
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    ebgpMultihop?: pulumi.Input<number>;
+    ebgpMultihop?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ebgpMultihopVariable?: pulumi.Input<string>;
+    ebgpMultihopVariable?: pulumi.Input<string | undefined>;
     /**
      * Interval (seconds) not receiving a keepalive message declares a BGP peer down
      *   - Range: `0`-`65535`
      *   - Default value: `180`
      */
-    holdTime?: pulumi.Input<number>;
+    holdTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    holdTimeVariable?: pulumi.Input<string>;
+    holdTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Interval (seconds) of keepalive messages sent to its BGP peer
      *   - Range: `0`-`65535`
      *   - Default value: `60`
      */
-    keepaliveTime?: pulumi.Input<number>;
+    keepaliveTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    keepaliveTimeVariable?: pulumi.Input<string>;
+    keepaliveTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number>;
+    localAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    localAsVariable?: pulumi.Input<string>;
+    localAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      */
-    nextHopSelf?: pulumi.Input<boolean>;
+    nextHopSelf?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nextHopSelfVariable?: pulumi.Input<string>;
+    nextHopSelfVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number>;
+    remoteAs?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    remoteAsVariable?: pulumi.Input<string>;
+    remoteAsVariable?: pulumi.Input<string | undefined>;
     /**
      * Send community attribute
      *   - Default value: `true`
      */
-    sendCommunity?: pulumi.Input<boolean>;
+    sendCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendCommunityVariable?: pulumi.Input<string>;
+    sendCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Send extended community attribute
      *   - Default value: `true`
      */
-    sendExtendedCommunity?: pulumi.Input<boolean>;
+    sendExtendedCommunity?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    sendExtendedCommunityVariable?: pulumi.Input<string>;
+    sendExtendedCommunityVariable?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable a BGP neighbor
      *   - Default value: `false`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Source interface name for BGP neighbor
      */
-    updateSourceInterface?: pulumi.Input<string>;
+    updateSourceInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    updateSourceInterfaceVariable?: pulumi.Input<string>;
+    updateSourceInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
@@ -14920,91 +14920,91 @@ export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
-    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    disablePeerThreshold?: pulumi.Input<number>;
+    disablePeerThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
-    disablePeerThresholdVariable?: pulumi.Input<string>;
+    disablePeerThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set IPv6 unicast address family
      *   - Choices: `ipv6-unicast`, `vpnv6-unicast`
      */
-    familyType?: pulumi.Input<string>;
-    inRoutePolicyId?: pulumi.Input<string>;
-    outRoutePolicyId?: pulumi.Input<string>;
+    familyType?: pulumi.Input<string | undefined>;
+    inRoutePolicyId?: pulumi.Input<string | undefined>;
+    outRoutePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Neighbor received maximum prefix policy is disabled.
      *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
-    policyType?: pulumi.Input<string>;
+    policyType?: pulumi.Input<string | undefined>;
     /**
      * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
-    restartInterval?: pulumi.Input<number>;
+    restartInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartIntervalVariable?: pulumi.Input<string>;
+    restartIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
-    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    restartMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    restartThreshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
-    restartThresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
-    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    warningMessageThreshold?: pulumi.Input<number>;
+    warningMessageThreshold?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
-    warningMessageThresholdVariable?: pulumi.Input<string>;
+    warningMessageThresholdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv6Network {
     /**
      * Configure the prefixes for BGP to announce
      */
-    networkPrefix?: pulumi.Input<string>;
+    networkPrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkPrefixVariable?: pulumi.Input<string>;
+    networkPrefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureIpv6Redistribute {
@@ -15012,40 +15012,40 @@ export interface TransportRoutingBgpFeatureIpv6Redistribute {
      * Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred, Attribute conditional on `protocol` equal to `ospf`
      *   - Range: `0`-`4294967295`
      */
-    metric?: pulumi.Input<number>;
+    metric?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `ospf`
      */
-    metricVariable?: pulumi.Input<string>;
+    metricVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRouteVariable?: pulumi.Input<string>;
+    ospfMatchRouteVariable?: pulumi.Input<string | undefined>;
     /**
      * Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP., Attribute conditional on `protocol` equal to `ospf`
      */
-    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[]>;
+    ospfMatchRoutes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingBgpFeatureMplsInterface {
     /**
      * Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfFeatureArea {
@@ -15053,33 +15053,33 @@ export interface TransportRoutingOspfFeatureArea {
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * set the area type
      *   - Choices: `stub`, `nssa`
      */
-    areaType?: pulumi.Input<string>;
+    areaType?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfFeatureAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfFeatureAreaInterface>[] | undefined>;
     /**
      * Do not inject interarea routes into STUB or NSSA
      *   - Default value: `false`
      */
-    noSummary?: pulumi.Input<boolean>;
+    noSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noSummaryVariable?: pulumi.Input<string>;
+    noSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfFeatureAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfFeatureAreaRange>[] | undefined>;
 }
 
 export interface TransportRoutingOspfFeatureAreaInterface {
@@ -15087,104 +15087,104 @@ export interface TransportRoutingOspfFeatureAreaInterface {
      * Set OSPF interface authentication type
      *   - Choices: `message-digest`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationTypeVariable?: pulumi.Input<string>;
+    authenticationTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set router’s priority to be elected as designated router
      *   - Range: `0`-`255`
      *   - Default value: `1`
      */
-    designatedRouterPriority?: pulumi.Input<number>;
+    designatedRouterPriority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    designatedRouterPriorityVariable?: pulumi.Input<string>;
+    designatedRouterPriorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    lsaRetransmitInterval?: pulumi.Input<number>;
+    lsaRetransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lsaRetransmitIntervalVariable?: pulumi.Input<string>;
+    lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
-    messageDigestKey?: pulumi.Input<string>;
+    messageDigestKey?: pulumi.Input<string | undefined>;
     /**
      * Set MD5 message digest key
      *   - Range: `1`-`255`
      */
-    messageDigestKeyId?: pulumi.Input<number>;
+    messageDigestKeyId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    messageDigestKeyIdVariable?: pulumi.Input<string>;
+    messageDigestKeyIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    messageDigestKeyVariable?: pulumi.Input<string>;
+    messageDigestKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      *   - Default value: `broadcast`
      */
-    networkType?: pulumi.Input<string>;
+    networkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkTypeVariable?: pulumi.Input<string>;
+    networkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfFeatureAreaRange {
@@ -15192,37 +15192,37 @@ export interface TransportRoutingOspfFeatureAreaRange {
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfFeatureRedistribute {
@@ -15230,21 +15230,21 @@ export interface TransportRoutingOspfFeatureRedistribute {
      * Enable NAT DIA for redistributed routes
      *   - Default value: `true`
      */
-    natDia?: pulumi.Input<boolean>;
+    natDia?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    natDiaVariable?: pulumi.Input<string>;
+    natDiaVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the protocol
      *   - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfFeatureRouterLsa {
@@ -15252,147 +15252,147 @@ export interface TransportRoutingOspfFeatureRouterLsa {
      * Set how long to advertise maximum metric after router starts up
      *   - Range: `5`-`86400`
      */
-    time?: pulumi.Input<number>;
+    time?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timeVariable?: pulumi.Input<string>;
+    timeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the router LSA advertisement type
      *   - Choices: `administrative`, `on-startup`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv4FeatureArea {
     /**
      * Always translate type7 LSAs
      */
-    alwaysTranslate?: pulumi.Input<boolean>;
+    alwaysTranslate?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    alwaysTranslateVariable?: pulumi.Input<string>;
+    alwaysTranslateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPFv3 area type
      *   - Choices: `stub`, `nssa`, `normal`
      */
-    areaType?: pulumi.Input<string>;
+    areaType?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv4FeatureAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv4FeatureAreaInterface>[] | undefined>;
     /**
      * Do not inject inter-area routes
      */
-    noSummary?: pulumi.Input<boolean>;
+    noSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noSummaryVariable?: pulumi.Input<string>;
+    noSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv4FeatureAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv4FeatureAreaRange>[] | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
      */
-    authenticationKey?: pulumi.Input<string>;
+    authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
      */
-    authenticationSpi?: pulumi.Input<number>;
+    authenticationSpi?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationSpiVariable?: pulumi.Input<string>;
+    authenticationSpiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication configuration
      *   - Choices: `no-auth`, `ipsec-sha1`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    lsaRetransmitInterval?: pulumi.Input<number>;
+    lsaRetransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lsaRetransmitIntervalVariable?: pulumi.Input<string>;
+    lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      */
-    networkType?: pulumi.Input<string>;
+    networkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkTypeVariable?: pulumi.Input<string>;
+    networkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv4FeatureAreaRange {
@@ -15400,33 +15400,33 @@ export interface TransportRoutingOspfv3Ipv4FeatureAreaRange {
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
-    ipAddress?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
@@ -15434,161 +15434,161 @@ export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
      * Enable NAT DIA for redistributed routes, Attribute conditional on `protocol` equal to `nat-route`
      *   - Default value: `true`
      */
-    natDia?: pulumi.Input<boolean>;
+    natDia?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `nat-route`
      */
-    natDiaVariable?: pulumi.Input<string>;
+    natDiaVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the protocol
      *   - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv6FeatureArea {
     /**
      * Always translate type7 LSAs
      */
-    alwaysTranslate?: pulumi.Input<boolean>;
+    alwaysTranslate?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    alwaysTranslateVariable?: pulumi.Input<string>;
+    alwaysTranslateVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    areaNumber?: pulumi.Input<number>;
+    areaNumber?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    areaNumberVariable?: pulumi.Input<string>;
+    areaNumberVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPFv3 area type
      *   - Choices: `stub`, `nssa`, `normal`
      */
-    areaType?: pulumi.Input<string>;
+    areaType?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface parameters
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv6FeatureAreaInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv6FeatureAreaInterface>[] | undefined>;
     /**
      * Do not inject inter-area routes
      */
-    noSummary?: pulumi.Input<boolean>;
+    noSummary?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noSummaryVariable?: pulumi.Input<string>;
+    noSummaryVariable?: pulumi.Input<string | undefined>;
     /**
      * Summarize OSPF routes at an area boundary
      */
-    ranges?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv6FeatureAreaRange>[]>;
+    ranges?: pulumi.Input<pulumi.Input<inputs.TransportRoutingOspfv3Ipv6FeatureAreaRange>[] | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv6FeatureAreaInterface {
     /**
      * Set OSPF interface authentication IPSEC key
      */
-    authenticationKey?: pulumi.Input<string>;
+    authenticationKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    authenticationKeyVariable?: pulumi.Input<string>;
+    authenticationKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      *   - Range: `256`-`4294967295`
      */
-    authenticationSpi?: pulumi.Input<number>;
+    authenticationSpi?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    authenticationSpiVariable?: pulumi.Input<string>;
+    authenticationSpiVariable?: pulumi.Input<string | undefined>;
     /**
      * Set OSPF interface authentication configuration
      *   - Choices: `no-auth`, `ipsec-sha1`
      */
-    authenticationType?: pulumi.Input<string>;
+    authenticationType?: pulumi.Input<string | undefined>;
     /**
      * Set cost of OSPF interface
      *   - Range: `1`-`65535`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval after which neighbor is declared to be down
      *   - Range: `1`-`65535`
      *   - Default value: `40`
      */
-    deadInterval?: pulumi.Input<number>;
+    deadInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    deadIntervalVariable?: pulumi.Input<string>;
+    deadIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interval between OSPF hello packets
      *   - Range: `1`-`65535`
      *   - Default value: `10`
      */
-    helloInterval?: pulumi.Input<number>;
+    helloInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    helloIntervalVariable?: pulumi.Input<string>;
+    helloIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set time between retransmitting LSAs
      *   - Range: `1`-`65535`
      *   - Default value: `5`
      */
-    lsaRetransmitInterval?: pulumi.Input<number>;
+    lsaRetransmitInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lsaRetransmitIntervalVariable?: pulumi.Input<string>;
+    lsaRetransmitIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * Set interface name
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the OSPF network type
      *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
      */
-    networkType?: pulumi.Input<string>;
+    networkType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkTypeVariable?: pulumi.Input<string>;
+    networkTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set the interface to advertise its address, but not to actively run OSPF
      *   - Default value: `false`
      */
-    passiveInterface?: pulumi.Input<boolean>;
+    passiveInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    passiveInterfaceVariable?: pulumi.Input<string>;
+    passiveInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv6FeatureAreaRange {
@@ -15596,28 +15596,28 @@ export interface TransportRoutingOspfv3Ipv6FeatureAreaRange {
      * Set cost for this range
      *   - Range: `0`-`16777214`
      */
-    cost?: pulumi.Input<number>;
+    cost?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    costVariable?: pulumi.Input<string>;
+    costVariable?: pulumi.Input<string | undefined>;
     /**
      * Do not advertise this range
      *   - Default value: `false`
      */
-    noAdvertise?: pulumi.Input<boolean>;
+    noAdvertise?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    noAdvertiseVariable?: pulumi.Input<string>;
+    noAdvertiseVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 prefix,for example 2001::/64
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
@@ -15625,21 +15625,21 @@ export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
      * Set the protocol
      *   - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
-    routePolicyId?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
+    routePolicyId?: pulumi.Input<string | undefined>;
     /**
      * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
-    translateRibMetric?: pulumi.Input<boolean>;
+    translateRibMetric?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
-    translateRibMetricVariable?: pulumi.Input<string>;
+    translateRibMetricVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportT1E1ControllerFeatureEntry {
@@ -15647,97 +15647,97 @@ export interface TransportT1E1ControllerFeatureEntry {
      * Cable Config
      *   - Choices: `short`, `long`
      */
-    cableLength?: pulumi.Input<string>;
+    cableLength?: pulumi.Input<string | undefined>;
     /**
      * Channel Group List
      */
-    channelGroups?: pulumi.Input<pulumi.Input<inputs.TransportT1E1ControllerFeatureEntryChannelGroup>[]>;
+    channelGroups?: pulumi.Input<pulumi.Input<inputs.TransportT1E1ControllerFeatureEntryChannelGroup>[] | undefined>;
     /**
      * Clock Source
      *   - Choices: `line`, `internal`, `loop-timed`, `network`
      */
-    clockSource?: pulumi.Input<string>;
+    clockSource?: pulumi.Input<string | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Card Type
      *   - Choices: `E1`
      */
-    e1Description?: pulumi.Input<string>;
+    e1Description?: pulumi.Input<string | undefined>;
     /**
      * Framing
      *   - Choices: `crc4`, `no-crc4`
      */
-    e1Framing?: pulumi.Input<string>;
+    e1Framing?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    e1FramingVariable?: pulumi.Input<string>;
+    e1FramingVariable?: pulumi.Input<string | undefined>;
     /**
      * LineCode
      *   - Choices: `ami`, `hdb3`
      */
-    e1Linecode?: pulumi.Input<string>;
+    e1Linecode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    e1LinecodeVariable?: pulumi.Input<string>;
+    e1LinecodeVariable?: pulumi.Input<string | undefined>;
     /**
      * length, Attribute conditional on `cableLength` equal to `long`
      *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
      */
-    lengthLong?: pulumi.Input<string>;
+    lengthLong?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `cableLength` equal to `long`
      */
-    lengthLongVariable?: pulumi.Input<string>;
+    lengthLongVariable?: pulumi.Input<string | undefined>;
     /**
      * length, Attribute conditional on `cableLength` equal to `short`
      *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
      */
-    lengthShort?: pulumi.Input<string>;
+    lengthShort?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `cableLength` equal to `short`
      */
-    lengthShortVariable?: pulumi.Input<string>;
+    lengthShortVariable?: pulumi.Input<string | undefined>;
     /**
      * Line Mode
      *   - Choices: `secondary`, `primary`
      */
-    lineMode?: pulumi.Input<string>;
+    lineMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    lineModeVariable?: pulumi.Input<string>;
+    lineModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Card Type
      *   - Choices: `T1`
      */
-    t1Description?: pulumi.Input<string>;
+    t1Description?: pulumi.Input<string | undefined>;
     /**
      * Framing
      *   - Choices: `esf`, `sf`
      */
-    t1Framing?: pulumi.Input<string>;
+    t1Framing?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    t1FramingVariable?: pulumi.Input<string>;
+    t1FramingVariable?: pulumi.Input<string | undefined>;
     /**
      * LineCode
      *   - Choices: `ami`, `b8zs`
      */
-    t1Linecode?: pulumi.Input<string>;
+    t1Linecode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    t1LinecodeVariable?: pulumi.Input<string>;
+    t1LinecodeVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportT1E1ControllerFeatureEntryChannelGroup {
@@ -15745,23 +15745,23 @@ export interface TransportT1E1ControllerFeatureEntryChannelGroup {
      * Number
      *   - Range: `0`-`23`
      */
-    channelGroup?: pulumi.Input<number>;
+    channelGroup?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    channelGroupVariable?: pulumi.Input<string>;
+    channelGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * Time slots
      */
-    timeSlot?: pulumi.Input<string>;
+    timeSlot?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    timeSlotVariable?: pulumi.Input<string>;
+    timeSlotVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportTrackerGroupFeatureTrackerElement {
-    trackerId?: pulumi.Input<string>;
+    trackerId?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureIpv4StaticRoute {
@@ -15770,59 +15770,59 @@ export interface TransportWanVpnFeatureIpv4StaticRoute {
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name, Attribute conditional on `gateway` equal to `null0`
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
     /**
      * Gateway
      *   - Choices: `nextHop`, `dhcp`, `null0`
      *   - Default value: `nextHop`
      */
-    gateway?: pulumi.Input<string>;
+    gateway?: pulumi.Input<string | undefined>;
     /**
      * IP Address
      */
-    networkAddress?: pulumi.Input<string>;
+    networkAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    networkAddressVariable?: pulumi.Input<string>;
+    networkAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv4StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv4StaticRouteNextHop>[] | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureIpv6StaticRoute {
@@ -15830,108 +15830,108 @@ export interface TransportWanVpnFeatureIpv6StaticRoute {
      * Gateway
      *   - Choices: `nextHop`, `null0`, `nat`
      */
-    gateway?: pulumi.Input<string>;
+    gateway?: pulumi.Input<string | undefined>;
     /**
      * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
-    nat?: pulumi.Input<string>;
+    nat?: pulumi.Input<string | undefined>;
     /**
      * Variable name, Attribute conditional on `gateway` equal to `nat`
      */
-    natVariable?: pulumi.Input<string>;
+    natVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
-    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRouteNextHop>[]>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRouteNextHop>[] | undefined>;
     /**
      * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
-    null0?: pulumi.Input<boolean>;
+    null0?: pulumi.Input<boolean | undefined>;
     /**
      * Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Administrative distance
      *   - Range: `1`-`254`
      *   - Default value: `1`
      */
-    administrativeDistance?: pulumi.Input<number>;
+    administrativeDistance?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    administrativeDistanceVariable?: pulumi.Input<string>;
+    administrativeDistanceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureNat64V4Pool {
     /**
      * NAT64 v4 Pool Name
      */
-    nat64V4PoolName?: pulumi.Input<string>;
+    nat64V4PoolName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nat64V4PoolNameVariable?: pulumi.Input<string>;
+    nat64V4PoolNameVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT64 Overload
      *   - Default value: `false`
      */
-    nat64V4PoolOverload?: pulumi.Input<boolean>;
+    nat64V4PoolOverload?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nat64V4PoolOverloadVariable?: pulumi.Input<string>;
+    nat64V4PoolOverloadVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT64 Pool Range End
      */
-    nat64V4PoolRangeEnd?: pulumi.Input<string>;
+    nat64V4PoolRangeEnd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nat64V4PoolRangeEndVariable?: pulumi.Input<string>;
+    nat64V4PoolRangeEndVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT64 Pool Range Start
      */
-    nat64V4PoolRangeStart?: pulumi.Input<string>;
+    nat64V4PoolRangeStart?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nat64V4PoolRangeStartVariable?: pulumi.Input<string>;
+    nat64V4PoolRangeStartVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureNewHostMapping {
     /**
      * Hostname
      */
-    hostName?: pulumi.Input<string>;
+    hostName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    hostNameVariable?: pulumi.Input<string>;
+    hostNameVariable?: pulumi.Input<string | undefined>;
     /**
      * List of IP
      */
-    listOfIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+    listOfIpAddresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Variable name
      */
-    listOfIpAddressesVariable?: pulumi.Input<string>;
+    listOfIpAddressesVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnFeatureService {
@@ -15939,26 +15939,26 @@ export interface TransportWanVpnFeatureService {
      * Service Type
      *   - Choices: `TE`
      */
-    serviceType?: pulumi.Input<string>;
+    serviceType?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceCellularFeatureArp {
     /**
      * IP V4 Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC Address
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation {
@@ -15966,98 +15966,98 @@ export interface TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsula
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureArp {
     /**
      * IP V4 Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC Address
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
     /**
      * IpV4 Address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    subnetMask?: pulumi.Input<string>;
+    subnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    subnetMaskVariable?: pulumi.Input<string>;
+    subnetMaskVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
     /**
      * IPv6 Address Secondary
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
     /**
      * IPv6 Address Secondary
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback {
     /**
      * NAT Inside Source Loopback Interface
      */
-    loopbackInterface?: pulumi.Input<string>;
+    loopbackInterface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    loopbackInterfaceVariable?: pulumi.Input<string>;
+    loopbackInterfaceVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool {
@@ -16065,50 +16065,50 @@ export interface TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool {
      * Enable DualRouter HA Mapping
      *   - Default value: `false`
      */
-    enableDualRouterHaMapping?: pulumi.Input<boolean>;
+    enableDualRouterHaMapping?: pulumi.Input<boolean | undefined>;
     /**
      * NAT Pool Name
      *   - Range: `1`-`4095`
      */
-    name?: pulumi.Input<number>;
+    name?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Overload
      *   - Default value: `true`
      */
-    overload?: pulumi.Input<boolean>;
+    overload?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    overloadVariable?: pulumi.Input<string>;
+    overloadVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Prefix Length
      *   - Range: `1`-`32`
      */
-    prefixLength?: pulumi.Input<number>;
+    prefixLength?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    prefixLengthVariable?: pulumi.Input<string>;
+    prefixLengthVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Range End
      */
-    rangeEnd?: pulumi.Input<string>;
+    rangeEnd?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeEndVariable?: pulumi.Input<string>;
+    rangeEndVariable?: pulumi.Input<string | undefined>;
     /**
      * NAT Pool Range Start
      */
-    rangeStart?: pulumi.Input<string>;
+    rangeStart?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    rangeStartVariable?: pulumi.Input<string>;
+    rangeStartVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
@@ -16117,74 +16117,74 @@ export interface TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
      *   - Choices: `inside`
      *   - Default value: `inside`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Enable DualRouter HA Mapping
      *   - Default value: `false`
      */
-    enableDualRouterHaMapping?: pulumi.Input<boolean>;
+    enableDualRouterHaMapping?: pulumi.Input<boolean | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Source VPN ID
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    sourceVpn?: pulumi.Input<number>;
+    sourceVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnVariable?: pulumi.Input<string>;
+    sourceVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translatedIp?: pulumi.Input<string>;
+    translatedIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedIpVariable?: pulumi.Input<string>;
+    translatedIpVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
     /**
      * Set lacp mode
      *   - Choices: `active`, `passive`
      *   - Default value: `active`
      */
-    lacpMode?: pulumi.Input<string>;
+    lacpMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    lacpModeVariable?: pulumi.Input<string>;
+    lacpModeVariable?: pulumi.Input<string | undefined>;
     /**
      * Set lacp port priority
      *   - Range: `1`-`65535`
      */
-    lacpPortPriority?: pulumi.Input<number>;
+    lacpPortPriority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    lacpPortPriorityVariable?: pulumi.Input<string>;
+    lacpPortPriorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Set lacp rate
      *   - Choices: `fast`, `normal`
      */
-    lacpRate?: pulumi.Input<string>;
+    lacpRate?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    lacpRateVariable?: pulumi.Input<string>;
+    lacpRateVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
-    interfaceId?: pulumi.Input<string>;
+    interfaceId?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
@@ -16192,36 +16192,36 @@ export interface TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
      * Egress Interface
      *   - Default value: `false`
      */
-    egressInterface?: pulumi.Input<boolean>;
+    egressInterface?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    egressInterfaceVariable?: pulumi.Input<string>;
+    egressInterfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * Source Prefix
      */
-    sourcePrefix?: pulumi.Input<string>;
+    sourcePrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourcePrefixVariable?: pulumi.Input<string>;
+    sourcePrefixVariable?: pulumi.Input<string | undefined>;
     /**
      * Source VPN ID
      *   - Range: `0`-`65530`
      */
-    sourceVpnId?: pulumi.Input<number>;
+    sourceVpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnIdVariable?: pulumi.Input<string>;
+    sourceVpnIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Translated Source Prefix
      */
-    translatedSourcePrefix?: pulumi.Input<string>;
+    translatedSourcePrefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedSourcePrefixVariable?: pulumi.Input<string>;
+    translatedSourcePrefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureStaticPortForward {
@@ -16230,65 +16230,65 @@ export interface TransportWanVpnInterfaceEthernetFeatureStaticPortForward {
      *   - Choices: `inside`
      *   - Default value: `inside`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Enable DualRouter HA Mapping
      *   - Default value: `false`
      */
-    enableDualRouterHaMapping?: pulumi.Input<boolean>;
+    enableDualRouterHaMapping?: pulumi.Input<boolean | undefined>;
     /**
      * Protocol
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    protocolVariable?: pulumi.Input<string>;
+    protocolVariable?: pulumi.Input<string | undefined>;
     /**
      * Source IP address to be translated
      */
-    sourceIp?: pulumi.Input<string>;
+    sourceIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceIpVariable?: pulumi.Input<string>;
+    sourceIpVariable?: pulumi.Input<string | undefined>;
     /**
      * source port to be translated
      *   - Range: `1`-`65535`
      */
-    sourcePort?: pulumi.Input<number>;
+    sourcePort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourcePortVariable?: pulumi.Input<string>;
+    sourcePortVariable?: pulumi.Input<string | undefined>;
     /**
      * Source VPN ID
      *   - Range: `0`-`65530`
      *   - Default value: `0`
      */
-    sourceVpn?: pulumi.Input<number>;
+    sourceVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    sourceVpnVariable?: pulumi.Input<string>;
+    sourceVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      */
-    translatedIp?: pulumi.Input<string>;
+    translatedIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    translatedIpVariable?: pulumi.Input<string>;
+    translatedIpVariable?: pulumi.Input<string | undefined>;
     /**
      * Statically translated source IP address
      *   - Range: `1`-`65535`
      */
-    translatedPort?: pulumi.Input<number>;
+    translatedPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    translatedPortVariable?: pulumi.Input<string>;
+    translatedPortVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation {
@@ -16296,26 +16296,26 @@ export interface TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsula
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation {
@@ -16323,116 +16323,116 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsu
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface UrlFilteringPolicyDefinitionLogging {
     /**
      * External Syslog Server IP
      */
-    externalSyslogServerIp?: pulumi.Input<string>;
+    externalSyslogServerIp?: pulumi.Input<string | undefined>;
     /**
      * External Syslog Server VPN
      */
-    externalSyslogServerVpn?: pulumi.Input<string>;
+    externalSyslogServerVpn?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceCellularFeatureTemplateIpv4AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceCellularFeatureTemplateIpv6AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceCellularFeatureTemplateNatPortForward {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Ending port of port range
      *   - Range: `0`-`65535`
      */
-    portEndRange?: pulumi.Input<number>;
+    portEndRange?: pulumi.Input<number | undefined>;
     /**
      * Starting port of port range
      *   - Range: `0`-`65535`
      */
-    portStartRange?: pulumi.Input<number>;
+    portStartRange?: pulumi.Input<number | undefined>;
     /**
      * Private IP Address to translate to
      */
-    privateIpAddress?: pulumi.Input<string>;
+    privateIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privateIpAddressVariable?: pulumi.Input<string>;
+    privateIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN in which private IP Address resides
      *   - Range: `0`-`65535`
      */
-    privateVpn?: pulumi.Input<number>;
+    privateVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    privateVpnVariable?: pulumi.Input<string>;
+    privateVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Layer 4 protocol to apply port forwarding to
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceCellularFeatureTemplatePolicer {
@@ -16440,38 +16440,38 @@ export interface VpnInterfaceCellularFeatureTemplatePolicer {
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of policer
      */
-    policerName?: pulumi.Input<string>;
+    policerName?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceCellularFeatureTemplateStaticArp {
     /**
      * IP Address
      */
-    ipAddress?: pulumi.Input<string>;
+    ipAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipAddressVariable?: pulumi.Input<string>;
+    ipAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC address
      */
-    mac?: pulumi.Input<string>;
+    mac?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macVariable?: pulumi.Input<string>;
+    macVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation {
@@ -16479,89 +16479,89 @@ export interface VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslIpoeFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceDslIpoeFeatureTemplateNatPortForward {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Ending port of port range
      *   - Range: `0`-`65535`
      */
-    portEndRange?: pulumi.Input<number>;
+    portEndRange?: pulumi.Input<number | undefined>;
     /**
      * Starting port of port range
      *   - Range: `0`-`65535`
      */
-    portStartRange?: pulumi.Input<number>;
+    portStartRange?: pulumi.Input<number | undefined>;
     /**
      * Private IP Address to translate to
      */
-    privateIpAddress?: pulumi.Input<string>;
+    privateIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privateIpAddressVariable?: pulumi.Input<string>;
+    privateIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN in which private IP Address resides
      *   - Range: `0`-`65535`
      */
-    privateVpn?: pulumi.Input<number>;
+    privateVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    privateVpnVariable?: pulumi.Input<string>;
+    privateVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Layer 4 protocol to apply port forwarding to
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslIpoeFeatureTemplatePolicer {
@@ -16569,15 +16569,15 @@ export interface VpnInterfaceDslIpoeFeatureTemplatePolicer {
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of policer
      */
-    policerName?: pulumi.Input<string>;
+    policerName?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation {
@@ -16585,142 +16585,142 @@ export interface VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulation 
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslIpoeFeatureTemplateVdslConfiguration {
     /**
      * Set module slot/subslot/port number
      */
-    controllerVdslSlot?: pulumi.Input<string>;
+    controllerVdslSlot?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerVdslSlotVariable?: pulumi.Input<string>;
+    controllerVdslSlotVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VDSL operating mode to adsl1
      *   - Default value: `false`
      */
-    modeAdsl1?: pulumi.Input<boolean>;
+    modeAdsl1?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to adsl2
      *   - Default value: `false`
      */
-    modeAdsl2?: pulumi.Input<boolean>;
+    modeAdsl2?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to adsl2plus
      *   - Default value: `false`
      */
-    modeAdsl2plus?: pulumi.Input<boolean>;
+    modeAdsl2plus?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to ansi
      *   - Default value: `false`
      */
-    modeAnsi?: pulumi.Input<boolean>;
+    modeAnsi?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to vdsl2
      *   - Default value: `false`
      */
-    modeVdsl2?: pulumi.Input<boolean>;
+    modeVdsl2?: pulumi.Input<boolean | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Seamless rate adaption
      *   - Default value: `true`
      */
-    sra?: pulumi.Input<boolean>;
+    sra?: pulumi.Input<boolean | undefined>;
     /**
      * Set module slot/subslot/port number
      */
-    vdslModemConfiguration?: pulumi.Input<string>;
+    vdslModemConfiguration?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    vdslModemConfigurationVariable?: pulumi.Input<string>;
+    vdslModemConfigurationVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoaFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceDslPppoaFeatureTemplateNatPortForward {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Ending port of port range
      *   - Range: `0`-`65535`
      */
-    portEndRange?: pulumi.Input<number>;
+    portEndRange?: pulumi.Input<number | undefined>;
     /**
      * Starting port of port range
      *   - Range: `0`-`65535`
      */
-    portStartRange?: pulumi.Input<number>;
+    portStartRange?: pulumi.Input<number | undefined>;
     /**
      * Private IP Address to translate to
      */
-    privateIpAddress?: pulumi.Input<string>;
+    privateIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privateIpAddressVariable?: pulumi.Input<string>;
+    privateIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN in which private IP Address resides
      *   - Range: `0`-`65535`
      */
-    privateVpn?: pulumi.Input<number>;
+    privateVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    privateVpnVariable?: pulumi.Input<string>;
+    privateVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Layer 4 protocol to apply port forwarding to
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoaFeatureTemplatePolicer {
@@ -16728,15 +16728,15 @@ export interface VpnInterfaceDslPppoaFeatureTemplatePolicer {
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of policer
      */
-    policerName?: pulumi.Input<string>;
+    policerName?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoaFeatureTemplatePvc {
@@ -16744,87 +16744,87 @@ export interface VpnInterfaceDslPppoaFeatureTemplatePvc {
      * Dialer Pool corresponding to this pvc
      *   - Range: `1`-`255`
      */
-    atmDialerPoolMember?: pulumi.Input<number>;
+    atmDialerPoolMember?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmDialerPoolMemberVariable?: pulumi.Input<string>;
+    atmDialerPoolMemberVariable?: pulumi.Input<string | undefined>;
     /**
      * dialer
      */
-    atmEncapsulationAal5mux?: pulumi.Input<boolean>;
+    atmEncapsulationAal5mux?: pulumi.Input<boolean | undefined>;
     /**
      * aal5nlpid
      */
-    atmEncapsulationAal5nlpid?: pulumi.Input<boolean>;
+    atmEncapsulationAal5nlpid?: pulumi.Input<boolean | undefined>;
     /**
      * aal5snap
      */
-    atmEncapsulationAal5snap?: pulumi.Input<boolean>;
+    atmEncapsulationAal5snap?: pulumi.Input<boolean | undefined>;
     /**
      * Maximum Burst Size in Cells
      *   - Range: `1`-`65535`
      */
-    atmVbrNrtMaximumBurstSize?: pulumi.Input<number>;
+    atmVbrNrtMaximumBurstSize?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmVbrNrtMaximumBurstSizeVariable?: pulumi.Input<string>;
+    atmVbrNrtMaximumBurstSizeVariable?: pulumi.Input<string | undefined>;
     /**
      * Peak Cell Rate in Kbps
      *   - Range: `48`-`1015`
      */
-    atmVbrNrtPeakCellRate?: pulumi.Input<number>;
+    atmVbrNrtPeakCellRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmVbrNrtPeakCellRateVariable?: pulumi.Input<string>;
+    atmVbrNrtPeakCellRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Peak Cell Rate in Kbps
      */
-    atmVbrNrtSustainableCellRate?: pulumi.Input<number>;
+    atmVbrNrtSustainableCellRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmVbrNrtSustainableCellRateVariable?: pulumi.Input<string>;
+    atmVbrNrtSustainableCellRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Average Cell Rate in Kbps
      */
-    atmVbrRtAverageCellRate?: pulumi.Input<number>;
+    atmVbrRtAverageCellRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmVbrRtAverageCellRateVariable?: pulumi.Input<string>;
+    atmVbrRtAverageCellRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Maximum Burst Size in number of Cells
      *   - Range: `1`-`65535`
      */
-    atmVbrRtMaximumBurstSize?: pulumi.Input<number>;
+    atmVbrRtMaximumBurstSize?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmVbrRtMaximumBurstSizeVariable?: pulumi.Input<string>;
+    atmVbrRtMaximumBurstSizeVariable?: pulumi.Input<string | undefined>;
     /**
      * Peak Cell Rate in Kbps
      *   - Range: `48`-`25000`
      */
-    atmVbrRtPeakCellRate?: pulumi.Input<number>;
+    atmVbrRtPeakCellRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    atmVbrRtPeakCellRateVariable?: pulumi.Input<string>;
+    atmVbrRtPeakCellRateVariable?: pulumi.Input<string | undefined>;
     /**
      * VPI/VCI
      */
-    atmVpiAndVci?: pulumi.Input<string>;
+    atmVpiAndVci?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    atmVpiAndVciVariable?: pulumi.Input<string>;
+    atmVpiAndVciVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation {
@@ -16832,142 +16832,142 @@ export interface VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulation
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoaFeatureTemplateVdslConfiguration {
     /**
      * Set module slot/subslot/port number
      */
-    controllerVdslSlot?: pulumi.Input<string>;
+    controllerVdslSlot?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerVdslSlotVariable?: pulumi.Input<string>;
+    controllerVdslSlotVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VDSL operating mode to adsl1
      *   - Default value: `false`
      */
-    modeAdsl1?: pulumi.Input<boolean>;
+    modeAdsl1?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to adsl2
      *   - Default value: `false`
      */
-    modeAdsl2?: pulumi.Input<boolean>;
+    modeAdsl2?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to adsl2plus
      *   - Default value: `false`
      */
-    modeAdsl2plus?: pulumi.Input<boolean>;
+    modeAdsl2plus?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to ansi
      *   - Default value: `false`
      */
-    modeAnsi?: pulumi.Input<boolean>;
+    modeAnsi?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to vdsl2
      *   - Default value: `false`
      */
-    modeVdsl2?: pulumi.Input<boolean>;
+    modeVdsl2?: pulumi.Input<boolean | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Seamless rate adaption
      *   - Default value: `true`
      */
-    sra?: pulumi.Input<boolean>;
+    sra?: pulumi.Input<boolean | undefined>;
     /**
      * Set module slot/subslot/port number
      */
-    vdslModemConfiguration?: pulumi.Input<string>;
+    vdslModemConfiguration?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    vdslModemConfigurationVariable?: pulumi.Input<string>;
+    vdslModemConfigurationVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoeFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceDslPppoeFeatureTemplateNatPortForward {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Ending port of port range
      *   - Range: `0`-`65535`
      */
-    portEndRange?: pulumi.Input<number>;
+    portEndRange?: pulumi.Input<number | undefined>;
     /**
      * Starting port of port range
      *   - Range: `0`-`65535`
      */
-    portStartRange?: pulumi.Input<number>;
+    portStartRange?: pulumi.Input<number | undefined>;
     /**
      * Private IP Address to translate to
      */
-    privateIpAddress?: pulumi.Input<string>;
+    privateIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privateIpAddressVariable?: pulumi.Input<string>;
+    privateIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN in which private IP Address resides
      *   - Range: `0`-`65535`
      */
-    privateVpn?: pulumi.Input<number>;
+    privateVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    privateVpnVariable?: pulumi.Input<string>;
+    privateVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Layer 4 protocol to apply port forwarding to
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoeFeatureTemplatePolicer {
@@ -16975,15 +16975,15 @@ export interface VpnInterfaceDslPppoeFeatureTemplatePolicer {
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of policer
      */
-    policerName?: pulumi.Input<string>;
+    policerName?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation {
@@ -16991,142 +16991,142 @@ export interface VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulation
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceDslPppoeFeatureTemplateVdslConfiguration {
     /**
      * Set module slot/subslot/port number
      */
-    controllerVdslSlot?: pulumi.Input<string>;
+    controllerVdslSlot?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    controllerVdslSlotVariable?: pulumi.Input<string>;
+    controllerVdslSlotVariable?: pulumi.Input<string | undefined>;
     /**
      * Set VDSL operating mode to adsl1
      *   - Default value: `false`
      */
-    modeAdsl1?: pulumi.Input<boolean>;
+    modeAdsl1?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to adsl2
      *   - Default value: `false`
      */
-    modeAdsl2?: pulumi.Input<boolean>;
+    modeAdsl2?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to adsl2plus
      *   - Default value: `false`
      */
-    modeAdsl2plus?: pulumi.Input<boolean>;
+    modeAdsl2plus?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to ansi
      *   - Default value: `false`
      */
-    modeAnsi?: pulumi.Input<boolean>;
+    modeAnsi?: pulumi.Input<boolean | undefined>;
     /**
      * Set VDSL operating mode to vdsl2
      *   - Default value: `false`
      */
-    modeVdsl2?: pulumi.Input<boolean>;
+    modeVdsl2?: pulumi.Input<boolean | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Seamless rate adaption
      *   - Default value: `true`
      */
-    sra?: pulumi.Input<boolean>;
+    sra?: pulumi.Input<boolean | undefined>;
     /**
      * Set module slot/subslot/port number
      */
-    vdslModemConfiguration?: pulumi.Input<string>;
+    vdslModemConfiguration?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    vdslModemConfigurationVariable?: pulumi.Input<string>;
+    vdslModemConfigurationVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceEthernetPppoeFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceEthernetPppoeFeatureTemplateNatPortForward {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Ending port of port range
      *   - Range: `0`-`65535`
      */
-    portEndRange?: pulumi.Input<number>;
+    portEndRange?: pulumi.Input<number | undefined>;
     /**
      * Starting port of port range
      *   - Range: `0`-`65535`
      */
-    portStartRange?: pulumi.Input<number>;
+    portStartRange?: pulumi.Input<number | undefined>;
     /**
      * Private IP Address to translate to
      */
-    privateIpAddress?: pulumi.Input<string>;
+    privateIpAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    privateIpAddressVariable?: pulumi.Input<string>;
+    privateIpAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN in which private IP Address resides
      *   - Range: `0`-`65535`
      */
-    privateVpn?: pulumi.Input<number>;
+    privateVpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    privateVpnVariable?: pulumi.Input<string>;
+    privateVpnVariable?: pulumi.Input<string | undefined>;
     /**
      * Layer 4 protocol to apply port forwarding to
      *   - Choices: `tcp`, `udp`
      */
-    protocol?: pulumi.Input<string>;
+    protocol?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceEthernetPppoeFeatureTemplatePolicer {
@@ -17134,15 +17134,15 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplatePolicer {
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of policer
      */
-    policerName?: pulumi.Input<string>;
+    policerName?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulation {
@@ -17150,137 +17150,137 @@ export interface VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsul
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceMultilinkFeatureTemplateAccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceMultilinkFeatureTemplateIpv6AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceMultilinkFeatureTemplateMultilinkInterface {
     /**
      * Channel Group List
      */
-    channelGroupLists?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupList>[]>;
+    channelGroupLists?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupList>[] | undefined>;
     /**
      * Description
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    descriptionVariable?: pulumi.Input<string>;
+    descriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Framing
      */
-    framing?: pulumi.Input<string>;
+    framing?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    framingVariable?: pulumi.Input<string>;
+    framingVariable?: pulumi.Input<string | undefined>;
     /**
      * Card Type
      *   - Choices: `E1`, `T1`, `NIM-2T`, `NIM-4T`
      */
-    interfaceType?: pulumi.Input<string>;
+    interfaceType?: pulumi.Input<string | undefined>;
     /**
      * Internal
      *   - Default value: `false`
      */
-    internal?: pulumi.Input<boolean>;
+    internal?: pulumi.Input<boolean | undefined>;
     /**
      * Line Mode
      *   - Choices: `secondary`, `primary`
      */
-    lineMode?: pulumi.Input<string>;
+    lineMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    lineModeVariable?: pulumi.Input<string>;
+    lineModeVariable?: pulumi.Input<string | undefined>;
     /**
      * LineCode
      *   - Choices: `ami`, `b8zs`, `hdb3`
      */
-    linecode?: pulumi.Input<string>;
+    linecode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    linecodeVariable?: pulumi.Input<string>;
+    linecodeVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set length for long
      */
-    setLengthForLong?: pulumi.Input<string>;
+    setLengthForLong?: pulumi.Input<string | undefined>;
     /**
      * Set Length for short
      */
-    setLengthForShort?: pulumi.Input<string>;
+    setLengthForShort?: pulumi.Input<string | undefined>;
     /**
      * Slot number
      */
-    slot?: pulumi.Input<string>;
+    slot?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupList {
@@ -17288,23 +17288,23 @@ export interface VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGr
      * Number
      *   - Range: `0`-`30`
      */
-    channelGroup?: pulumi.Input<number>;
+    channelGroup?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    channelGroupVariable?: pulumi.Input<string>;
+    channelGroupVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    timeSlotVariable?: pulumi.Input<string>;
+    timeSlotVariable?: pulumi.Input<string | undefined>;
     /**
      * Time slots
      */
-    timeSlots?: pulumi.Input<pulumi.Input<string>[]>;
+    timeSlots?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface VpnInterfaceMultilinkFeatureTemplateNimInterfaceList {
@@ -17312,58 +17312,58 @@ export interface VpnInterfaceMultilinkFeatureTemplateNimInterfaceList {
      * Interface bandwidth capacity, in kbps
      *   - Range: `1`-`2147483647`
      */
-    bandwidth?: pulumi.Input<number>;
+    bandwidth?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    bandwidthVariable?: pulumi.Input<string>;
+    bandwidthVariable?: pulumi.Input<string | undefined>;
     /**
      * Set preference for interface Clock speed
      *   - Range: `1200`-`8000000`
      */
-    clockRate?: pulumi.Input<number>;
+    clockRate?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    clockRateVariable?: pulumi.Input<string>;
+    clockRateVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Encapsulation for interface
      *   - Choices: `hdlc`, `ppp`
      */
-    encapsulationSerial?: pulumi.Input<string>;
+    encapsulationSerial?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    encapsulationSerialVariable?: pulumi.Input<string>;
+    encapsulationSerialVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface description
      */
-    interfaceDescription?: pulumi.Input<string>;
+    interfaceDescription?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceDescriptionVariable?: pulumi.Input<string>;
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
     /**
      * Interface Name
      */
-    interfaceName?: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceNameVariable?: pulumi.Input<string>;
+    interfaceNameVariable?: pulumi.Input<string | undefined>;
     /**
      * NIM Serial interface type
      *   - Choices: `2t`, `4t`, `2T`, `4T`
      */
-    nimSerialInterfaceType?: pulumi.Input<string>;
+    nimSerialInterfaceType?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    nimSerialInterfaceTypeVariable?: pulumi.Input<string>;
+    nimSerialInterfaceTypeVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulation {
@@ -17371,65 +17371,65 @@ export interface VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulatio
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv4AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv4SecondaryAddress {
     /**
      * IP Address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv4Vrrp {
@@ -17437,97 +17437,97 @@ export interface VpnInterfaceSviFeatureTemplateIpv4Vrrp {
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Assign IP Address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * VRRP Secondary IP address
      */
-    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress>[]>;
+    ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `100`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * change TLOC preference
      *   - Default value: `false`
      */
-    tlocPreferenceChange?: pulumi.Input<boolean>;
+    tlocPreferenceChange?: pulumi.Input<boolean | undefined>;
     /**
      * Set tloc preference change value
      *   - Range: `1`-`4294967295`
      */
-    tlocPreferenceChangeValue?: pulumi.Input<number>;
+    tlocPreferenceChangeValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    tlocPreferenceChangeValueVariable?: pulumi.Input<string>;
+    tlocPreferenceChangeValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackOmpVariable?: pulumi.Input<string>;
+    trackOmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Prefix List
      */
-    trackPrefixList?: pulumi.Input<string>;
+    trackPrefixList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackPrefixListVariable?: pulumi.Input<string>;
+    trackPrefixListVariable?: pulumi.Input<string | undefined>;
     /**
      * tracking object for VRRP configuration
      */
-    trackingObjects?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject>[]>;
+    trackingObjects?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject>[] | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress {
     /**
      * VRRP Secondary IP address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject {
@@ -17535,93 +17535,93 @@ export interface VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject {
      * Decrement Value for VRRP priority
      *   - Range: `1`-`255`
      */
-    decrementValue?: pulumi.Input<number>;
+    decrementValue?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    decrementValueVariable?: pulumi.Input<string>;
+    decrementValueVariable?: pulumi.Input<string | undefined>;
     /**
      * Tracker ID
      *   - Range: `1`-`1000`
      */
-    name?: pulumi.Input<number>;
+    name?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    nameVariable?: pulumi.Input<string>;
+    nameVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Track Action
      *   - Choices: `decrement`, `shutdown`
      *   - Default value: `decrement`
      */
-    trackAction?: pulumi.Input<string>;
+    trackAction?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackActionVariable?: pulumi.Input<string>;
+    trackActionVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv6AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv6DhcpHelper {
     /**
      * DHCPv6 Helper address
      */
-    address?: pulumi.Input<string>;
+    address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    addressVariable?: pulumi.Input<string>;
+    addressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * DHCPv6 Helper VPN
      *   - Range: `1`-`65536`
      */
-    vpnId?: pulumi.Input<number>;
+    vpnId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnIdVariable?: pulumi.Input<string>;
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv6SecondaryAddress {
     /**
      * IPv6 Address
      */
-    ipv6Address?: pulumi.Input<string>;
+    ipv6Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv6AddressVariable?: pulumi.Input<string>;
+    ipv6AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv6Vrrp {
@@ -17629,98 +17629,98 @@ export interface VpnInterfaceSviFeatureTemplateIpv6Vrrp {
      * Group ID
      *   - Range: `1`-`255`
      */
-    groupId?: pulumi.Input<number>;
+    groupId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    groupIdVariable?: pulumi.Input<string>;
+    groupIdVariable?: pulumi.Input<string | undefined>;
     /**
      * IPv6 VRRP
      */
-    ipv6Addresses?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6Address>[]>;
+    ipv6Addresses?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6Address>[] | undefined>;
     /**
      * IPv6 Secondary IP address
      */
-    ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddress>[]>;
+    ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddress>[] | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set priority
      *   - Range: `1`-`254`
      *   - Default value: `100`
      */
-    priority?: pulumi.Input<number>;
+    priority?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    priorityVariable?: pulumi.Input<string>;
+    priorityVariable?: pulumi.Input<string | undefined>;
     /**
      * Timer interval for successive advertisements, in milliseconds
      *   - Range: `100`-`40950`
      *   - Default value: `100`
      */
-    timer?: pulumi.Input<number>;
+    timer?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    timerVariable?: pulumi.Input<string>;
+    timerVariable?: pulumi.Input<string | undefined>;
     /**
      * Track OMP status
      *   - Default value: `false`
      */
-    trackOmp?: pulumi.Input<boolean>;
+    trackOmp?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    trackOmpVariable?: pulumi.Input<string>;
+    trackOmpVariable?: pulumi.Input<string | undefined>;
     /**
      * Track Prefix List
      */
-    trackPrefixList?: pulumi.Input<string>;
+    trackPrefixList?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackPrefixListVariable?: pulumi.Input<string>;
+    trackPrefixListVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6Address {
     /**
      * Use link-local IPv6 Address
      */
-    linkLocalAddress?: pulumi.Input<string>;
+    linkLocalAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    linkLocalAddressVariable?: pulumi.Input<string>;
+    linkLocalAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Assign Global IPv6 Prefix
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddress {
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * IPv6 Secondary IP address
      */
-    prefix?: pulumi.Input<string>;
+    prefix?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    prefixVariable?: pulumi.Input<string>;
+    prefixVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplatePolicer {
@@ -17728,78 +17728,78 @@ export interface VpnInterfaceSviFeatureTemplatePolicer {
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Name of policer
      */
-    policerName?: pulumi.Input<string>;
+    policerName?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnInterfaceSviFeatureTemplateStaticArpEntry {
     /**
      * IP Address
      */
-    ipv4Address?: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    ipv4AddressVariable?: pulumi.Input<string>;
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * MAC address
      */
-    macAddress?: pulumi.Input<string>;
+    macAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    macAddressVariable?: pulumi.Input<string>;
+    macAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessList {
     /**
      * Name of access list
      */
-    aclName?: pulumi.Input<string>;
+    aclName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    aclNameVariable?: pulumi.Input<string>;
+    aclNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Direction
      *   - Choices: `in`, `out`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
 }
 
 export interface VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulation {
@@ -17807,30 +17807,30 @@ export interface VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulati
      * Encapsulation
      *   - Choices: `gre`, `ipsec`
      */
-    encapsulation?: pulumi.Input<string>;
+    encapsulation?: pulumi.Input<string | undefined>;
     /**
      * Indicates if list item is considered optional.
      */
-    optional?: pulumi.Input<boolean>;
+    optional?: pulumi.Input<boolean | undefined>;
     /**
      * Set preference for TLOC
      *   - Range: `0`-`4294967295`
      */
-    preference?: pulumi.Input<number>;
+    preference?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    preferenceVariable?: pulumi.Input<string>;
+    preferenceVariable?: pulumi.Input<string | undefined>;
     /**
      * Set weight for TLOC
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
-    weight?: pulumi.Input<number>;
+    weight?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    weightVariable?: pulumi.Input<string>;
+    weightVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface VpnListPolicyObjectEntry {
@@ -17844,37 +17844,37 @@ export interface VpnMembershipPolicyDefinitionSite {
     /**
      * Site list ID
      */
-    siteListId?: pulumi.Input<string>;
+    siteListId?: pulumi.Input<string | undefined>;
     /**
      * Site list version
      */
-    siteListVersion?: pulumi.Input<number>;
+    siteListVersion?: pulumi.Input<number | undefined>;
     /**
      * VPN list IDs
      */
-    vpnListIds?: pulumi.Input<pulumi.Input<string>[]>;
+    vpnListIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * VPN list versions
      */
-    vpnListVersions?: pulumi.Input<pulumi.Input<string>[]>;
+    vpnListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface ZoneBasedFirewallPolicyDefinitionApplyZonePair {
     /**
      * Destination Zone
      */
-    destinationZone?: pulumi.Input<string>;
+    destinationZone?: pulumi.Input<string | undefined>;
     /**
      * Source Zone
      */
-    sourceZone?: pulumi.Input<string>;
+    sourceZone?: pulumi.Input<string | undefined>;
 }
 
 export interface ZoneBasedFirewallPolicyDefinitionRule {
     /**
      * List of actions entries
      */
-    actionEntries?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntry>[]>;
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntry>[] | undefined>;
     /**
      * Base action
      *   - Choices: `pass`, `drop`, `inspect`
@@ -17884,11 +17884,11 @@ export interface ZoneBasedFirewallPolicyDefinitionRule {
      * Rule Type
      *   - Choices: `ipv4`, `ipv6`
      */
-    ipType?: pulumi.Input<string>;
+    ipType?: pulumi.Input<string | undefined>;
     /**
      * List of match entries
      */
-    matchEntries?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntry>[]>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntry>[] | undefined>;
     /**
      * Rule name
      */
@@ -17904,22 +17904,22 @@ export interface ZoneBasedFirewallPolicyDefinitionRuleActionEntry {
      * Type of action entry
      *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
 }
 
 export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
     /**
      * policy id for selected match entry
      */
-    policyId?: pulumi.Input<string>;
+    policyId?: pulumi.Input<string | undefined>;
     /**
      * Policy version
      */
-    policyVersion?: pulumi.Input<string>;
+    policyVersion?: pulumi.Input<string | undefined>;
     /**
      * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      */
-    protocolType?: pulumi.Input<string>;
+    protocolType?: pulumi.Input<string | undefined>;
     /**
      * Type of match entry
      *   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `appListFlat`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
@@ -17928,20 +17928,20 @@ export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
     /**
      * value for selected match entry
      */
-    value?: pulumi.Input<string>;
+    value?: pulumi.Input<string | undefined>;
     /**
      * variable value for selected match entry if it has variable option (sourceIp & destinationIp)
      */
-    valueVariable?: pulumi.Input<string>;
+    valueVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface ZoneListPolicyObjectEntry {
     /**
      * Interface name
      */
-    interface?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
     /**
      * VPN ID
      */
-    vpn?: pulumi.Input<string>;
+    vpn?: pulumi.Input<string | undefined>;
 }

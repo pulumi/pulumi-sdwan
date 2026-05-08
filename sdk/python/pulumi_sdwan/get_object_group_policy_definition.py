@@ -281,7 +281,7 @@ def get_object_group_policy_definition(id: Optional[_builtins.str] = None,
         port_list_id=pulumi.get(__ret__, 'port_list_id'),
         port_list_version=pulumi.get(__ret__, 'port_list_version'),
         version=pulumi.get(__ret__, 'version'))
-def get_object_group_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_object_group_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetObjectGroupPolicyDefinitionResult]:
     """
     This data source can read the Object Group Policy Definition .

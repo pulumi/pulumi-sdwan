@@ -285,8 +285,8 @@ def get_cisco_snmp_feature_template(id: Optional[_builtins.str] = None,
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'),
         views=pulumi.get(__ret__, 'views'))
-def get_cisco_snmp_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cisco_snmp_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                           name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoSnmpFeatureTemplateResult]:
     """
     This data source can read the Cisco SNMP feature template.

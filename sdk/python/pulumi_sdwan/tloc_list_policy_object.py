@@ -22,7 +22,7 @@ __all__ = ['TlocListPolicyObjectArgs', 'TlocListPolicyObject']
 class TlocListPolicyObjectArgs:
     def __init__(__self__, *,
                  entries: pulumi.Input[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TlocListPolicyObject resource.
 
@@ -47,23 +47,23 @@ class TlocListPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _TlocListPolicyObjectState:
     def __init__(__self__, *,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TlocListPolicyObject resources.
 
@@ -80,38 +80,38 @@ class _TlocListPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]]]:
+    def entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]]]:
         """
         List of entries
         """
         return pulumi.get(self, "entries")
 
     @entries.setter
-    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]]]):
+    def entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TlocListPolicyObjectEntryArgs']]]]):
         pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -121,8 +121,8 @@ class TlocListPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlocListPolicyObjectEntryArgs', 'TlocListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TlocListPolicyObjectEntryArgs', 'TlocListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a TLOC List Policy Object .
@@ -206,8 +206,8 @@ class TlocListPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlocListPolicyObjectEntryArgs', 'TlocListPolicyObjectEntryArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TlocListPolicyObjectEntryArgs', 'TlocListPolicyObjectEntryArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -232,9 +232,9 @@ class TlocListPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlocListPolicyObjectEntryArgs', 'TlocListPolicyObjectEntryArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'TlocListPolicyObject':
+            entries: pulumi.Input[Optional[Sequence[pulumi.Input[Union['TlocListPolicyObjectEntryArgs', 'TlocListPolicyObjectEntryArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'TlocListPolicyObject':
         """
         Get an existing TlocListPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -23,75 +23,75 @@ class CiscoOspfv3FeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]] = None,
-                 ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]] = None,
-                 ipv4_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]] = None,
-                 ipv4_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]] = None,
-                 ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]] = None,
-                 ipv6_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]] = None,
-                 ipv6_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 ipv4_areas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]] = None,
+                 ipv4_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]] = None,
+                 ipv4_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]] = None,
+                 ipv4_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_areas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]] = None,
+                 ipv6_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]] = None,
+                 ipv6_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]] = None,
+                 ipv6_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoOspfv3FeatureTemplate resource.
 
@@ -380,19 +380,19 @@ class CiscoOspfv3FeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="ipv4Areas")
-    def ipv4_areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]:
+    def ipv4_areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]:
         """
         Configure OSPF area
         """
         return pulumi.get(self, "ipv4_areas")
 
     @ipv4_areas.setter
-    def ipv4_areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]):
+    def ipv4_areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]):
         pulumi.set(self, "ipv4_areas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AutoCostReferenceBandwidth")
-    def ipv4_auto_cost_reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_auto_cost_reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -401,24 +401,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_auto_cost_reference_bandwidth")
 
     @ipv4_auto_cost_reference_bandwidth.setter
-    def ipv4_auto_cost_reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_auto_cost_reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_auto_cost_reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AutoCostReferenceBandwidthVariable")
-    def ipv4_auto_cost_reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_auto_cost_reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_auto_cost_reference_bandwidth_variable")
 
     @ipv4_auto_cost_reference_bandwidth_variable.setter
-    def ipv4_auto_cost_reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_auto_cost_reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_auto_cost_reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4CompatibleRfc1583")
-    def ipv4_compatible_rfc1583(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_compatible_rfc1583(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -426,24 +426,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_compatible_rfc1583")
 
     @ipv4_compatible_rfc1583.setter
-    def ipv4_compatible_rfc1583(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_compatible_rfc1583(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_compatible_rfc1583", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4CompatibleRfc1583Variable")
-    def ipv4_compatible_rfc1583_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_compatible_rfc1583_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_compatible_rfc1583_variable")
 
     @ipv4_compatible_rfc1583_variable.setter
-    def ipv4_compatible_rfc1583_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_compatible_rfc1583_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_compatible_rfc1583_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginate")
-    def ipv4_default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF
           - Default value: `false`
@@ -451,12 +451,12 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_default_information_originate")
 
     @ipv4_default_information_originate.setter
-    def ipv4_default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateAlways")
-    def ipv4_default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
           - Default value: `false`
@@ -464,24 +464,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_default_information_originate_always")
 
     @ipv4_default_information_originate_always.setter
-    def ipv4_default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateAlwaysVariable")
-    def ipv4_default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_default_information_originate_always_variable")
 
     @ipv4_default_information_originate_always_variable.setter
-    def ipv4_default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetric")
-    def ipv4_default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -489,12 +489,12 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_default_information_originate_metric")
 
     @ipv4_default_information_originate_metric.setter
-    def ipv4_default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetricType")
-    def ipv4_default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route type
           - Choices: `type1`, `type2`
@@ -502,36 +502,36 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_default_information_originate_metric_type")
 
     @ipv4_default_information_originate_metric_type.setter
-    def ipv4_default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetricTypeVariable")
-    def ipv4_default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_default_information_originate_metric_type_variable")
 
     @ipv4_default_information_originate_metric_type_variable.setter
-    def ipv4_default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetricVariable")
-    def ipv4_default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_default_information_originate_metric_variable")
 
     @ipv4_default_information_originate_metric_variable.setter
-    def ipv4_default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Distance")
-    def ipv4_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Distance
           - Range: `1`-`255`
@@ -540,12 +540,12 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_distance")
 
     @ipv4_distance.setter
-    def ipv4_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceExternal")
-    def ipv4_distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`254`
@@ -554,24 +554,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_distance_external")
 
     @ipv4_distance_external.setter
-    def ipv4_distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceExternalVariable")
-    def ipv4_distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_external_variable")
 
     @ipv4_distance_external_variable.setter
-    def ipv4_distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceInterArea")
-    def ipv4_distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`254`
@@ -580,24 +580,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_distance_inter_area")
 
     @ipv4_distance_inter_area.setter
-    def ipv4_distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceInterAreaVariable")
-    def ipv4_distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_inter_area_variable")
 
     @ipv4_distance_inter_area_variable.setter
-    def ipv4_distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceIntraArea")
-    def ipv4_distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`254`
@@ -606,36 +606,36 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_distance_intra_area")
 
     @ipv4_distance_intra_area.setter
-    def ipv4_distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceIntraAreaVariable")
-    def ipv4_distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_intra_area_variable")
 
     @ipv4_distance_intra_area_variable.setter
-    def ipv4_distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceVariable")
-    def ipv4_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_variable")
 
     @ipv4_distance_variable.setter
-    def ipv4_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Filter")
-    def ipv4_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Filter
           - Default value: `false`
@@ -643,96 +643,96 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_filter")
 
     @ipv4_filter.setter
-    def ipv4_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4FilterVariable")
-    def ipv4_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_filter_variable")
 
     @ipv4_filter_variable.setter
-    def ipv4_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4MaxMetricRouterLsas")
-    def ipv4_max_metric_router_lsas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]:
+    def ipv4_max_metric_router_lsas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]:
         """
         Advertise own router LSA with infinite distance
         """
         return pulumi.get(self, "ipv4_max_metric_router_lsas")
 
     @ipv4_max_metric_router_lsas.setter
-    def ipv4_max_metric_router_lsas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]):
+    def ipv4_max_metric_router_lsas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]):
         pulumi.set(self, "ipv4_max_metric_router_lsas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PolicyName")
-    def ipv4_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Policy Name
         """
         return pulumi.get(self, "ipv4_policy_name")
 
     @ipv4_policy_name.setter
-    def ipv4_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PolicyNameVariable")
-    def ipv4_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_policy_name_variable")
 
     @ipv4_policy_name_variable.setter
-    def ipv4_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Redistributes")
-    def ipv4_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]:
+    def ipv4_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "ipv4_redistributes")
 
     @ipv4_redistributes.setter
-    def ipv4_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]):
+    def ipv4_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]):
         pulumi.set(self, "ipv4_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4RouterId")
-    def ipv4_router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "ipv4_router_id")
 
     @ipv4_router_id.setter
-    def ipv4_router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4RouterIdVariable")
-    def ipv4_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_router_id_variable")
 
     @ipv4_router_id_variable.setter
-    def ipv4_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfDelay")
-    def ipv4_timers_spf_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_timers_spf_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `1`-`600000`
@@ -741,24 +741,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_timers_spf_delay")
 
     @ipv4_timers_spf_delay.setter
-    def ipv4_timers_spf_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_timers_spf_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_timers_spf_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfDelayVariable")
-    def ipv4_timers_spf_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_timers_spf_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_timers_spf_delay_variable")
 
     @ipv4_timers_spf_delay_variable.setter
-    def ipv4_timers_spf_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_timers_spf_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_timers_spf_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfInitialHold")
-    def ipv4_timers_spf_initial_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_timers_spf_initial_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -767,24 +767,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_timers_spf_initial_hold")
 
     @ipv4_timers_spf_initial_hold.setter
-    def ipv4_timers_spf_initial_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_timers_spf_initial_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_timers_spf_initial_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfInitialHoldVariable")
-    def ipv4_timers_spf_initial_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_timers_spf_initial_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_timers_spf_initial_hold_variable")
 
     @ipv4_timers_spf_initial_hold_variable.setter
-    def ipv4_timers_spf_initial_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_timers_spf_initial_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_timers_spf_initial_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfMaxHold")
-    def ipv4_timers_spf_max_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_timers_spf_max_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -793,36 +793,36 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv4_timers_spf_max_hold")
 
     @ipv4_timers_spf_max_hold.setter
-    def ipv4_timers_spf_max_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_timers_spf_max_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_timers_spf_max_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfMaxHoldVariable")
-    def ipv4_timers_spf_max_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_timers_spf_max_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_timers_spf_max_hold_variable")
 
     @ipv4_timers_spf_max_hold_variable.setter
-    def ipv4_timers_spf_max_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_timers_spf_max_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_timers_spf_max_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Areas")
-    def ipv6_areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]:
+    def ipv6_areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]:
         """
         Configure OSPF area
         """
         return pulumi.get(self, "ipv6_areas")
 
     @ipv6_areas.setter
-    def ipv6_areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]):
+    def ipv6_areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]):
         pulumi.set(self, "ipv6_areas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AutoCostReferenceBandwidth")
-    def ipv6_auto_cost_reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_auto_cost_reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -831,24 +831,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_auto_cost_reference_bandwidth")
 
     @ipv6_auto_cost_reference_bandwidth.setter
-    def ipv6_auto_cost_reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_auto_cost_reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_auto_cost_reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AutoCostReferenceBandwidthVariable")
-    def ipv6_auto_cost_reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_auto_cost_reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_auto_cost_reference_bandwidth_variable")
 
     @ipv6_auto_cost_reference_bandwidth_variable.setter
-    def ipv6_auto_cost_reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_auto_cost_reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_auto_cost_reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6CompatibleRfc1583")
-    def ipv6_compatible_rfc1583(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_compatible_rfc1583(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -856,24 +856,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_compatible_rfc1583")
 
     @ipv6_compatible_rfc1583.setter
-    def ipv6_compatible_rfc1583(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_compatible_rfc1583(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_compatible_rfc1583", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6CompatibleRfc1583Variable")
-    def ipv6_compatible_rfc1583_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_compatible_rfc1583_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_compatible_rfc1583_variable")
 
     @ipv6_compatible_rfc1583_variable.setter
-    def ipv6_compatible_rfc1583_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_compatible_rfc1583_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_compatible_rfc1583_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginate")
-    def ipv6_default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF
           - Default value: `false`
@@ -881,12 +881,12 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_default_information_originate")
 
     @ipv6_default_information_originate.setter
-    def ipv6_default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateAlways")
-    def ipv6_default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
           - Default value: `false`
@@ -894,24 +894,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_default_information_originate_always")
 
     @ipv6_default_information_originate_always.setter
-    def ipv6_default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateAlwaysVariable")
-    def ipv6_default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_default_information_originate_always_variable")
 
     @ipv6_default_information_originate_always_variable.setter
-    def ipv6_default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetric")
-    def ipv6_default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -919,12 +919,12 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_default_information_originate_metric")
 
     @ipv6_default_information_originate_metric.setter
-    def ipv6_default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetricType")
-    def ipv6_default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route type
           - Choices: `type1`, `type2`
@@ -932,36 +932,36 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_default_information_originate_metric_type")
 
     @ipv6_default_information_originate_metric_type.setter
-    def ipv6_default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetricTypeVariable")
-    def ipv6_default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_default_information_originate_metric_type_variable")
 
     @ipv6_default_information_originate_metric_type_variable.setter
-    def ipv6_default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetricVariable")
-    def ipv6_default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_default_information_originate_metric_variable")
 
     @ipv6_default_information_originate_metric_variable.setter
-    def ipv6_default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Distance")
-    def ipv6_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Distance
           - Range: `1`-`254`
@@ -970,12 +970,12 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_distance")
 
     @ipv6_distance.setter
-    def ipv6_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceExternal")
-    def ipv6_distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`254`
@@ -984,24 +984,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_distance_external")
 
     @ipv6_distance_external.setter
-    def ipv6_distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceExternalVariable")
-    def ipv6_distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_external_variable")
 
     @ipv6_distance_external_variable.setter
-    def ipv6_distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceInterArea")
-    def ipv6_distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`254`
@@ -1010,24 +1010,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_distance_inter_area")
 
     @ipv6_distance_inter_area.setter
-    def ipv6_distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceInterAreaVariable")
-    def ipv6_distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_inter_area_variable")
 
     @ipv6_distance_inter_area_variable.setter
-    def ipv6_distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceIntraArea")
-    def ipv6_distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`254`
@@ -1036,36 +1036,36 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_distance_intra_area")
 
     @ipv6_distance_intra_area.setter
-    def ipv6_distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceIntraAreaVariable")
-    def ipv6_distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_intra_area_variable")
 
     @ipv6_distance_intra_area_variable.setter
-    def ipv6_distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceVariable")
-    def ipv6_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_variable")
 
     @ipv6_distance_variable.setter
-    def ipv6_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Filter")
-    def ipv6_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Filter
           - Default value: `false`
@@ -1073,96 +1073,96 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_filter")
 
     @ipv6_filter.setter
-    def ipv6_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6FilterVariable")
-    def ipv6_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_filter_variable")
 
     @ipv6_filter_variable.setter
-    def ipv6_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6MaxMetricRouterLsas")
-    def ipv6_max_metric_router_lsas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]:
+    def ipv6_max_metric_router_lsas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]:
         """
         Advertise own router LSA with infinite distance
         """
         return pulumi.get(self, "ipv6_max_metric_router_lsas")
 
     @ipv6_max_metric_router_lsas.setter
-    def ipv6_max_metric_router_lsas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]):
+    def ipv6_max_metric_router_lsas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]):
         pulumi.set(self, "ipv6_max_metric_router_lsas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PolicyName")
-    def ipv6_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "ipv6_policy_name")
 
     @ipv6_policy_name.setter
-    def ipv6_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PolicyNameVariable")
-    def ipv6_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_policy_name_variable")
 
     @ipv6_policy_name_variable.setter
-    def ipv6_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Redistributes")
-    def ipv6_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]:
+    def ipv6_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "ipv6_redistributes")
 
     @ipv6_redistributes.setter
-    def ipv6_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]):
+    def ipv6_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]):
         pulumi.set(self, "ipv6_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6RouterId")
-    def ipv6_router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "ipv6_router_id")
 
     @ipv6_router_id.setter
-    def ipv6_router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6RouterIdVariable")
-    def ipv6_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_router_id_variable")
 
     @ipv6_router_id_variable.setter
-    def ipv6_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfDelay")
-    def ipv6_timers_spf_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_timers_spf_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `0`-`600000`
@@ -1171,24 +1171,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_timers_spf_delay")
 
     @ipv6_timers_spf_delay.setter
-    def ipv6_timers_spf_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_timers_spf_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_timers_spf_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfDelayVariable")
-    def ipv6_timers_spf_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_timers_spf_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_timers_spf_delay_variable")
 
     @ipv6_timers_spf_delay_variable.setter
-    def ipv6_timers_spf_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_timers_spf_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_timers_spf_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfInitialHold")
-    def ipv6_timers_spf_initial_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_timers_spf_initial_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `0`-`600000`
@@ -1197,24 +1197,24 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_timers_spf_initial_hold")
 
     @ipv6_timers_spf_initial_hold.setter
-    def ipv6_timers_spf_initial_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_timers_spf_initial_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_timers_spf_initial_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfInitialHoldVariable")
-    def ipv6_timers_spf_initial_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_timers_spf_initial_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_timers_spf_initial_hold_variable")
 
     @ipv6_timers_spf_initial_hold_variable.setter
-    def ipv6_timers_spf_initial_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_timers_spf_initial_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_timers_spf_initial_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfMaxHold")
-    def ipv6_timers_spf_max_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_timers_spf_max_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `0`-`600000`
@@ -1223,110 +1223,110 @@ class CiscoOspfv3FeatureTemplateArgs:
         return pulumi.get(self, "ipv6_timers_spf_max_hold")
 
     @ipv6_timers_spf_max_hold.setter
-    def ipv6_timers_spf_max_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_timers_spf_max_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_timers_spf_max_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfMaxHoldVariable")
-    def ipv6_timers_spf_max_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_timers_spf_max_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_timers_spf_max_hold_variable")
 
     @ipv6_timers_spf_max_hold_variable.setter
-    def ipv6_timers_spf_max_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_timers_spf_max_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_timers_spf_max_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _CiscoOspfv3FeatureTemplateState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]] = None,
-                 ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]] = None,
-                 ipv4_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]] = None,
-                 ipv4_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]] = None,
-                 ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]] = None,
-                 ipv6_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]] = None,
-                 ipv6_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipv4_areas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]] = None,
+                 ipv4_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]] = None,
+                 ipv4_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]] = None,
+                 ipv4_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_areas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]] = None,
+                 ipv6_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]] = None,
+                 ipv6_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]] = None,
+                 ipv6_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoOspfv3FeatureTemplate resources.
 
@@ -1598,19 +1598,19 @@ class _CiscoOspfv3FeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -1618,24 +1618,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Areas")
-    def ipv4_areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]:
+    def ipv4_areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]:
         """
         Configure OSPF area
         """
         return pulumi.get(self, "ipv4_areas")
 
     @ipv4_areas.setter
-    def ipv4_areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]):
+    def ipv4_areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]):
         pulumi.set(self, "ipv4_areas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AutoCostReferenceBandwidth")
-    def ipv4_auto_cost_reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_auto_cost_reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -1644,24 +1644,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_auto_cost_reference_bandwidth")
 
     @ipv4_auto_cost_reference_bandwidth.setter
-    def ipv4_auto_cost_reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_auto_cost_reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_auto_cost_reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4AutoCostReferenceBandwidthVariable")
-    def ipv4_auto_cost_reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_auto_cost_reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_auto_cost_reference_bandwidth_variable")
 
     @ipv4_auto_cost_reference_bandwidth_variable.setter
-    def ipv4_auto_cost_reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_auto_cost_reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_auto_cost_reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4CompatibleRfc1583")
-    def ipv4_compatible_rfc1583(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_compatible_rfc1583(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -1669,24 +1669,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_compatible_rfc1583")
 
     @ipv4_compatible_rfc1583.setter
-    def ipv4_compatible_rfc1583(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_compatible_rfc1583(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_compatible_rfc1583", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4CompatibleRfc1583Variable")
-    def ipv4_compatible_rfc1583_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_compatible_rfc1583_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_compatible_rfc1583_variable")
 
     @ipv4_compatible_rfc1583_variable.setter
-    def ipv4_compatible_rfc1583_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_compatible_rfc1583_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_compatible_rfc1583_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginate")
-    def ipv4_default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF
           - Default value: `false`
@@ -1694,12 +1694,12 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_default_information_originate")
 
     @ipv4_default_information_originate.setter
-    def ipv4_default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateAlways")
-    def ipv4_default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
           - Default value: `false`
@@ -1707,24 +1707,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_default_information_originate_always")
 
     @ipv4_default_information_originate_always.setter
-    def ipv4_default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateAlwaysVariable")
-    def ipv4_default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_default_information_originate_always_variable")
 
     @ipv4_default_information_originate_always_variable.setter
-    def ipv4_default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetric")
-    def ipv4_default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -1732,12 +1732,12 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_default_information_originate_metric")
 
     @ipv4_default_information_originate_metric.setter
-    def ipv4_default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetricType")
-    def ipv4_default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route type
           - Choices: `type1`, `type2`
@@ -1745,36 +1745,36 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_default_information_originate_metric_type")
 
     @ipv4_default_information_originate_metric_type.setter
-    def ipv4_default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetricTypeVariable")
-    def ipv4_default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_default_information_originate_metric_type_variable")
 
     @ipv4_default_information_originate_metric_type_variable.setter
-    def ipv4_default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DefaultInformationOriginateMetricVariable")
-    def ipv4_default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_default_information_originate_metric_variable")
 
     @ipv4_default_information_originate_metric_variable.setter
-    def ipv4_default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Distance")
-    def ipv4_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Distance
           - Range: `1`-`255`
@@ -1783,12 +1783,12 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_distance")
 
     @ipv4_distance.setter
-    def ipv4_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceExternal")
-    def ipv4_distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`254`
@@ -1797,24 +1797,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_distance_external")
 
     @ipv4_distance_external.setter
-    def ipv4_distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceExternalVariable")
-    def ipv4_distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_external_variable")
 
     @ipv4_distance_external_variable.setter
-    def ipv4_distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceInterArea")
-    def ipv4_distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`254`
@@ -1823,24 +1823,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_distance_inter_area")
 
     @ipv4_distance_inter_area.setter
-    def ipv4_distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceInterAreaVariable")
-    def ipv4_distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_inter_area_variable")
 
     @ipv4_distance_inter_area_variable.setter
-    def ipv4_distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceIntraArea")
-    def ipv4_distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`254`
@@ -1849,36 +1849,36 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_distance_intra_area")
 
     @ipv4_distance_intra_area.setter
-    def ipv4_distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceIntraAreaVariable")
-    def ipv4_distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_intra_area_variable")
 
     @ipv4_distance_intra_area_variable.setter
-    def ipv4_distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4DistanceVariable")
-    def ipv4_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_distance_variable")
 
     @ipv4_distance_variable.setter
-    def ipv4_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Filter")
-    def ipv4_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv4_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Filter
           - Default value: `false`
@@ -1886,96 +1886,96 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_filter")
 
     @ipv4_filter.setter
-    def ipv4_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv4_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv4_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4FilterVariable")
-    def ipv4_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_filter_variable")
 
     @ipv4_filter_variable.setter
-    def ipv4_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4MaxMetricRouterLsas")
-    def ipv4_max_metric_router_lsas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]:
+    def ipv4_max_metric_router_lsas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]:
         """
         Advertise own router LSA with infinite distance
         """
         return pulumi.get(self, "ipv4_max_metric_router_lsas")
 
     @ipv4_max_metric_router_lsas.setter
-    def ipv4_max_metric_router_lsas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]):
+    def ipv4_max_metric_router_lsas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]):
         pulumi.set(self, "ipv4_max_metric_router_lsas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PolicyName")
-    def ipv4_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Policy Name
         """
         return pulumi.get(self, "ipv4_policy_name")
 
     @ipv4_policy_name.setter
-    def ipv4_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PolicyNameVariable")
-    def ipv4_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_policy_name_variable")
 
     @ipv4_policy_name_variable.setter
-    def ipv4_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4Redistributes")
-    def ipv4_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]:
+    def ipv4_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "ipv4_redistributes")
 
     @ipv4_redistributes.setter
-    def ipv4_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]):
+    def ipv4_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]):
         pulumi.set(self, "ipv4_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4RouterId")
-    def ipv4_router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "ipv4_router_id")
 
     @ipv4_router_id.setter
-    def ipv4_router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4RouterIdVariable")
-    def ipv4_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_router_id_variable")
 
     @ipv4_router_id_variable.setter
-    def ipv4_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfDelay")
-    def ipv4_timers_spf_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_timers_spf_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `1`-`600000`
@@ -1984,24 +1984,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_timers_spf_delay")
 
     @ipv4_timers_spf_delay.setter
-    def ipv4_timers_spf_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_timers_spf_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_timers_spf_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfDelayVariable")
-    def ipv4_timers_spf_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_timers_spf_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_timers_spf_delay_variable")
 
     @ipv4_timers_spf_delay_variable.setter
-    def ipv4_timers_spf_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_timers_spf_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_timers_spf_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfInitialHold")
-    def ipv4_timers_spf_initial_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_timers_spf_initial_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -2010,24 +2010,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_timers_spf_initial_hold")
 
     @ipv4_timers_spf_initial_hold.setter
-    def ipv4_timers_spf_initial_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_timers_spf_initial_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_timers_spf_initial_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfInitialHoldVariable")
-    def ipv4_timers_spf_initial_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_timers_spf_initial_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_timers_spf_initial_hold_variable")
 
     @ipv4_timers_spf_initial_hold_variable.setter
-    def ipv4_timers_spf_initial_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_timers_spf_initial_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_timers_spf_initial_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfMaxHold")
-    def ipv4_timers_spf_max_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_timers_spf_max_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `1`-`600000`
@@ -2036,36 +2036,36 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv4_timers_spf_max_hold")
 
     @ipv4_timers_spf_max_hold.setter
-    def ipv4_timers_spf_max_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_timers_spf_max_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_timers_spf_max_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4TimersSpfMaxHoldVariable")
-    def ipv4_timers_spf_max_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_timers_spf_max_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_timers_spf_max_hold_variable")
 
     @ipv4_timers_spf_max_hold_variable.setter
-    def ipv4_timers_spf_max_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_timers_spf_max_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_timers_spf_max_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Areas")
-    def ipv6_areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]:
+    def ipv6_areas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]:
         """
         Configure OSPF area
         """
         return pulumi.get(self, "ipv6_areas")
 
     @ipv6_areas.setter
-    def ipv6_areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]):
+    def ipv6_areas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]):
         pulumi.set(self, "ipv6_areas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AutoCostReferenceBandwidth")
-    def ipv6_auto_cost_reference_bandwidth(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_auto_cost_reference_bandwidth(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set reference bandwidth method to assign OSPF cost
           - Range: `1`-`4294967`
@@ -2074,24 +2074,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_auto_cost_reference_bandwidth")
 
     @ipv6_auto_cost_reference_bandwidth.setter
-    def ipv6_auto_cost_reference_bandwidth(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_auto_cost_reference_bandwidth(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_auto_cost_reference_bandwidth", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6AutoCostReferenceBandwidthVariable")
-    def ipv6_auto_cost_reference_bandwidth_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_auto_cost_reference_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_auto_cost_reference_bandwidth_variable")
 
     @ipv6_auto_cost_reference_bandwidth_variable.setter
-    def ipv6_auto_cost_reference_bandwidth_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_auto_cost_reference_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_auto_cost_reference_bandwidth_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6CompatibleRfc1583")
-    def ipv6_compatible_rfc1583(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_compatible_rfc1583(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Calculate summary route cost based on RFC 1583
           - Default value: `true`
@@ -2099,24 +2099,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_compatible_rfc1583")
 
     @ipv6_compatible_rfc1583.setter
-    def ipv6_compatible_rfc1583(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_compatible_rfc1583(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_compatible_rfc1583", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6CompatibleRfc1583Variable")
-    def ipv6_compatible_rfc1583_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_compatible_rfc1583_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_compatible_rfc1583_variable")
 
     @ipv6_compatible_rfc1583_variable.setter
-    def ipv6_compatible_rfc1583_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_compatible_rfc1583_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_compatible_rfc1583_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginate")
-    def ipv6_default_information_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_default_information_originate(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Distribute default external route into OSPF
           - Default value: `false`
@@ -2124,12 +2124,12 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_default_information_originate")
 
     @ipv6_default_information_originate.setter
-    def ipv6_default_information_originate(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_default_information_originate(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_default_information_originate", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateAlways")
-    def ipv6_default_information_originate_always(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_default_information_originate_always(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Always advertise default route
           - Default value: `false`
@@ -2137,24 +2137,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_default_information_originate_always")
 
     @ipv6_default_information_originate_always.setter
-    def ipv6_default_information_originate_always(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_default_information_originate_always(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_default_information_originate_always", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateAlwaysVariable")
-    def ipv6_default_information_originate_always_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_always_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_default_information_originate_always_variable")
 
     @ipv6_default_information_originate_always_variable.setter
-    def ipv6_default_information_originate_always_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_always_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_always_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetric")
-    def ipv6_default_information_originate_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_default_information_originate_metric(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set metric used to generate default route <0..16777214>
           - Range: `0`-`16777214`
@@ -2162,12 +2162,12 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_default_information_originate_metric")
 
     @ipv6_default_information_originate_metric.setter
-    def ipv6_default_information_originate_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_default_information_originate_metric(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_default_information_originate_metric", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetricType")
-    def ipv6_default_information_originate_metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_metric_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set default route type
           - Choices: `type1`, `type2`
@@ -2175,36 +2175,36 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_default_information_originate_metric_type")
 
     @ipv6_default_information_originate_metric_type.setter
-    def ipv6_default_information_originate_metric_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_metric_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_metric_type", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetricTypeVariable")
-    def ipv6_default_information_originate_metric_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_metric_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_default_information_originate_metric_type_variable")
 
     @ipv6_default_information_originate_metric_type_variable.setter
-    def ipv6_default_information_originate_metric_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_metric_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_metric_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DefaultInformationOriginateMetricVariable")
-    def ipv6_default_information_originate_metric_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_default_information_originate_metric_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_default_information_originate_metric_variable")
 
     @ipv6_default_information_originate_metric_variable.setter
-    def ipv6_default_information_originate_metric_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_default_information_originate_metric_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_default_information_originate_metric_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Distance")
-    def ipv6_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Distance
           - Range: `1`-`254`
@@ -2213,12 +2213,12 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_distance")
 
     @ipv6_distance.setter
-    def ipv6_distance(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceExternal")
-    def ipv6_distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance_external(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for external routes
           - Range: `1`-`254`
@@ -2227,24 +2227,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_distance_external")
 
     @ipv6_distance_external.setter
-    def ipv6_distance_external(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance_external(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance_external", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceExternalVariable")
-    def ipv6_distance_external_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_external_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_external_variable")
 
     @ipv6_distance_external_variable.setter
-    def ipv6_distance_external_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_external_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_external_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceInterArea")
-    def ipv6_distance_inter_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance_inter_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for inter-area routes
           - Range: `1`-`254`
@@ -2253,24 +2253,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_distance_inter_area")
 
     @ipv6_distance_inter_area.setter
-    def ipv6_distance_inter_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance_inter_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance_inter_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceInterAreaVariable")
-    def ipv6_distance_inter_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_inter_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_inter_area_variable")
 
     @ipv6_distance_inter_area_variable.setter
-    def ipv6_distance_inter_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_inter_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_inter_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceIntraArea")
-    def ipv6_distance_intra_area(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_distance_intra_area(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set distance for intra-area routes
           - Range: `1`-`254`
@@ -2279,36 +2279,36 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_distance_intra_area")
 
     @ipv6_distance_intra_area.setter
-    def ipv6_distance_intra_area(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_distance_intra_area(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_distance_intra_area", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceIntraAreaVariable")
-    def ipv6_distance_intra_area_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_intra_area_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_intra_area_variable")
 
     @ipv6_distance_intra_area_variable.setter
-    def ipv6_distance_intra_area_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_intra_area_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_intra_area_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6DistanceVariable")
-    def ipv6_distance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_distance_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_distance_variable")
 
     @ipv6_distance_variable.setter
-    def ipv6_distance_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_distance_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_distance_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Filter")
-    def ipv6_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipv6_filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Filter
           - Default value: `false`
@@ -2316,96 +2316,96 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_filter")
 
     @ipv6_filter.setter
-    def ipv6_filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipv6_filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipv6_filter", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6FilterVariable")
-    def ipv6_filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_filter_variable")
 
     @ipv6_filter_variable.setter
-    def ipv6_filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6MaxMetricRouterLsas")
-    def ipv6_max_metric_router_lsas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]:
+    def ipv6_max_metric_router_lsas(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]:
         """
         Advertise own router LSA with infinite distance
         """
         return pulumi.get(self, "ipv6_max_metric_router_lsas")
 
     @ipv6_max_metric_router_lsas.setter
-    def ipv6_max_metric_router_lsas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]):
+    def ipv6_max_metric_router_lsas(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]):
         pulumi.set(self, "ipv6_max_metric_router_lsas", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PolicyName")
-    def ipv6_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Name
         """
         return pulumi.get(self, "ipv6_policy_name")
 
     @ipv6_policy_name.setter
-    def ipv6_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PolicyNameVariable")
-    def ipv6_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_policy_name_variable")
 
     @ipv6_policy_name_variable.setter
-    def ipv6_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Redistributes")
-    def ipv6_redistributes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]:
+    def ipv6_redistributes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]:
         """
         Redistribute routes
         """
         return pulumi.get(self, "ipv6_redistributes")
 
     @ipv6_redistributes.setter
-    def ipv6_redistributes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]):
+    def ipv6_redistributes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]):
         pulumi.set(self, "ipv6_redistributes", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6RouterId")
-    def ipv6_router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_router_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set OSPF router ID to override system IP address
         """
         return pulumi.get(self, "ipv6_router_id")
 
     @ipv6_router_id.setter
-    def ipv6_router_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_router_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_router_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6RouterIdVariable")
-    def ipv6_router_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_router_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_router_id_variable")
 
     @ipv6_router_id_variable.setter
-    def ipv6_router_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_router_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_router_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfDelay")
-    def ipv6_timers_spf_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_timers_spf_delay(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set delay from first change received until performing SPF calculation
           - Range: `0`-`600000`
@@ -2414,24 +2414,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_timers_spf_delay")
 
     @ipv6_timers_spf_delay.setter
-    def ipv6_timers_spf_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_timers_spf_delay(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_timers_spf_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfDelayVariable")
-    def ipv6_timers_spf_delay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_timers_spf_delay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_timers_spf_delay_variable")
 
     @ipv6_timers_spf_delay_variable.setter
-    def ipv6_timers_spf_delay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_timers_spf_delay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_timers_spf_delay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfInitialHold")
-    def ipv6_timers_spf_initial_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_timers_spf_initial_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set initial hold time between consecutive SPF calculations
           - Range: `0`-`600000`
@@ -2440,24 +2440,24 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_timers_spf_initial_hold")
 
     @ipv6_timers_spf_initial_hold.setter
-    def ipv6_timers_spf_initial_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_timers_spf_initial_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_timers_spf_initial_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfInitialHoldVariable")
-    def ipv6_timers_spf_initial_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_timers_spf_initial_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_timers_spf_initial_hold_variable")
 
     @ipv6_timers_spf_initial_hold_variable.setter
-    def ipv6_timers_spf_initial_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_timers_spf_initial_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_timers_spf_initial_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfMaxHold")
-    def ipv6_timers_spf_max_hold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_timers_spf_max_hold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum hold time between consecutive SPF calculations
           - Range: `0`-`600000`
@@ -2466,55 +2466,55 @@ class _CiscoOspfv3FeatureTemplateState:
         return pulumi.get(self, "ipv6_timers_spf_max_hold")
 
     @ipv6_timers_spf_max_hold.setter
-    def ipv6_timers_spf_max_hold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_timers_spf_max_hold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_timers_spf_max_hold", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6TimersSpfMaxHoldVariable")
-    def ipv6_timers_spf_max_hold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_timers_spf_max_hold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_timers_spf_max_hold_variable")
 
     @ipv6_timers_spf_max_hold_variable.setter
-    def ipv6_timers_spf_max_hold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_timers_spf_max_hold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_timers_spf_max_hold_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -2524,77 +2524,77 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
-                 ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
-                 ipv4_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
-                 ipv4_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
-                 ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
-                 ipv6_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
-                 ipv6_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipv4_areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
+                 ipv4_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
+                 ipv4_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
+                 ipv4_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
+                 ipv6_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
+                 ipv6_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
+                 ipv6_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco OSPFv3 feature template.
@@ -2988,77 +2988,77 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
-                 ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
-                 ipv4_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
-                 ipv4_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
-                 ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv6_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
-                 ipv6_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
-                 ipv6_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ipv4_areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
+                 ipv4_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
+                 ipv4_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
+                 ipv4_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
+                 ipv6_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv6_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
+                 ipv6_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
+                 ipv6_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -3155,79 +3155,79 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
-            ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_distance: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
-            ipv4_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
-            ipv4_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
-            ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_compatible_rfc1583: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_compatible_rfc1583_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_default_information_originate: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_default_information_originate_always: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_default_information_originate_always_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_default_information_originate_metric: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_default_information_originate_metric_type: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_default_information_originate_metric_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_default_information_originate_metric_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_distance: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_distance_external: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_distance_external_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_distance_inter_area: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_distance_inter_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_distance_intra_area: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_distance_intra_area_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_distance_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv6_filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
-            ipv6_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
-            ipv6_router_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_router_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_timers_spf_delay: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_timers_spf_delay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_timers_spf_initial_hold: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_timers_spf_initial_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_timers_spf_max_hold: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_timers_spf_max_hold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoOspfv3FeatureTemplate':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ipv4_areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
+            ipv4_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_distance: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
+            ipv4_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
+            ipv4_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_areas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
+            ipv6_auto_cost_reference_bandwidth: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_auto_cost_reference_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_compatible_rfc1583: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_compatible_rfc1583_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_default_information_originate: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_default_information_originate_always: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_default_information_originate_always_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_default_information_originate_metric: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_default_information_originate_metric_type: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_default_information_originate_metric_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_default_information_originate_metric_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_distance: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_distance_external: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_distance_external_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_distance_inter_area: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_distance_inter_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_distance_intra_area: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_distance_intra_area_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_distance_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv6_filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_max_metric_router_lsas: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
+            ipv6_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_redistributes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
+            ipv6_router_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_timers_spf_delay: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_timers_spf_delay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_timers_spf_initial_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_timers_spf_initial_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_timers_spf_max_hold: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_timers_spf_max_hold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoOspfv3FeatureTemplate':
         """
         Get an existing CiscoOspfv3FeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

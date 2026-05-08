@@ -23,9 +23,9 @@ class HubAndSpokeTopologyPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  topologies: pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         The set of arguments for constructing a HubAndSpokeTopologyPolicyDefinition resource.
 
@@ -70,51 +70,51 @@ class HubAndSpokeTopologyPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListId")
-    def vpn_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         VPN list ID
         """
         return pulumi.get(self, "vpn_list_id")
 
     @vpn_list_id.setter
-    def vpn_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListVersion")
-    def vpn_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN list version
         """
         return pulumi.get(self, "vpn_list_version")
 
     @vpn_list_version.setter
-    def vpn_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn_list_version", value)
 
 
 @pulumi.input_type
 class _HubAndSpokeTopologyPolicyDefinitionState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 topologies: Optional[pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering HubAndSpokeTopologyPolicyDefinition resources.
 
@@ -143,86 +143,86 @@ class _HubAndSpokeTopologyPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def topologies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]]]:
+    def topologies(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]]]:
         """
         List of topologies
         """
         return pulumi.get(self, "topologies")
 
     @topologies.setter
-    def topologies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]]]):
+    def topologies(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologyArgs']]]]):
         pulumi.set(self, "topologies", value)
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Type
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListId")
-    def vpn_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vpn_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         VPN list ID
         """
         return pulumi.get(self, "vpn_list_id")
 
     @vpn_list_id.setter
-    def vpn_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vpn_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vpnListVersion")
-    def vpn_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vpn_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VPN list version
         """
         return pulumi.get(self, "vpn_list_version")
 
     @vpn_list_version.setter
-    def vpn_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vpn_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn_list_version", value)
 
 
@@ -232,11 +232,11 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 topologies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         """
         This resource can manage a Hub and Spoke Topology Policy Definition .
@@ -341,11 +341,11 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 topologies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
-                 vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
+                 vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -376,13 +376,13 @@ class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            topologies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
-            type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vpn_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None) -> 'HubAndSpokeTopologyPolicyDefinition':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            topologies: pulumi.Input[Optional[Sequence[pulumi.Input[Union['HubAndSpokeTopologyPolicyDefinitionTopologyArgs', 'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict']]]]] = None,
+            type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vpn_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            vpn_list_version: pulumi.Input[Optional[_builtins.int]] = None) -> 'HubAndSpokeTopologyPolicyDefinition':
         """
         Get an existing HubAndSpokeTopologyPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -22,18 +22,18 @@ __all__ = ['LocalizedPolicyArgs', 'LocalizedPolicy']
 class LocalizedPolicyArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 application_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 application_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos_service_side: Optional[pulumi.Input[_builtins.bool]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]] = None,
-                 flow_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flow_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 implicit_acl_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_frequency: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 application_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 application_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos_service_side: pulumi.Input[Optional[_builtins.bool]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]] = None,
+                 flow_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flow_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 implicit_acl_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_frequency: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a LocalizedPolicy resource.
 
@@ -99,7 +99,7 @@ class LocalizedPolicyArgs:
 
     @_builtins.property
     @pulumi.getter(name="applicationVisibilityIpv4")
-    def application_visibility_ipv4(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def application_visibility_ipv4(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv4 application visibility
           - Default value: `false`
@@ -107,12 +107,12 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "application_visibility_ipv4")
 
     @application_visibility_ipv4.setter
-    def application_visibility_ipv4(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def application_visibility_ipv4(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "application_visibility_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="applicationVisibilityIpv6")
-    def application_visibility_ipv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def application_visibility_ipv6(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv6 application visibility
           - Default value: `false`
@@ -120,48 +120,48 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "application_visibility_ipv6")
 
     @application_visibility_ipv6.setter
-    def application_visibility_ipv6(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def application_visibility_ipv6(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "application_visibility_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudQos")
-    def cloud_qos(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_qos(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud QoS
         """
         return pulumi.get(self, "cloud_qos")
 
     @cloud_qos.setter
-    def cloud_qos(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_qos(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_qos", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudQosServiceSide")
-    def cloud_qos_service_side(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_qos_service_side(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud QoS service side
         """
         return pulumi.get(self, "cloud_qos_service_side")
 
     @cloud_qos_service_side.setter
-    def cloud_qos_service_side(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_qos_service_side(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_qos_service_side", value)
 
     @_builtins.property
     @pulumi.getter
-    def definitions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]:
+    def definitions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]:
         """
         List of policy definitions
         """
         return pulumi.get(self, "definitions")
 
     @definitions.setter
-    def definitions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]):
+    def definitions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]):
         pulumi.set(self, "definitions", value)
 
     @_builtins.property
     @pulumi.getter(name="flowVisibilityIpv4")
-    def flow_visibility_ipv4(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def flow_visibility_ipv4(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv4 flow visibility
           - Default value: `false`
@@ -169,12 +169,12 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "flow_visibility_ipv4")
 
     @flow_visibility_ipv4.setter
-    def flow_visibility_ipv4(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def flow_visibility_ipv4(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "flow_visibility_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="flowVisibilityIpv6")
-    def flow_visibility_ipv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def flow_visibility_ipv6(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv6 flow visibility
           - Default value: `false`
@@ -182,12 +182,12 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "flow_visibility_ipv6")
 
     @flow_visibility_ipv6.setter
-    def flow_visibility_ipv6(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def flow_visibility_ipv6(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "flow_visibility_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="implicitAclLogging")
-    def implicit_acl_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def implicit_acl_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Implicit ACL logging
           - Default value: `false`
@@ -195,12 +195,12 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "implicit_acl_logging")
 
     @implicit_acl_logging.setter
-    def implicit_acl_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def implicit_acl_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "implicit_acl_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4VisibilityCacheEntries")
-    def ipv4_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_visibility_cache_entries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv4 visibility cache entries
           - Range: `16`-`2000000`
@@ -208,12 +208,12 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "ipv4_visibility_cache_entries")
 
     @ipv4_visibility_cache_entries.setter
-    def ipv4_visibility_cache_entries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_visibility_cache_entries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_visibility_cache_entries", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6VisibilityCacheEntries")
-    def ipv6_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_visibility_cache_entries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv6 visibility cache entries
           - Range: `16`-`2000000`
@@ -221,12 +221,12 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "ipv6_visibility_cache_entries")
 
     @ipv6_visibility_cache_entries.setter
-    def ipv6_visibility_cache_entries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_visibility_cache_entries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_visibility_cache_entries", value)
 
     @_builtins.property
     @pulumi.getter(name="logFrequency")
-    def log_frequency(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def log_frequency(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Log frequency
           - Range: `1`-`2147483647`
@@ -234,39 +234,39 @@ class LocalizedPolicyArgs:
         return pulumi.get(self, "log_frequency")
 
     @log_frequency.setter
-    def log_frequency(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def log_frequency(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "log_frequency", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the localized policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _LocalizedPolicyState:
     def __init__(__self__, *,
-                 application_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 application_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos_service_side: Optional[pulumi.Input[_builtins.bool]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 flow_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flow_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 implicit_acl_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_frequency: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 application_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 application_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos_service_side: pulumi.Input[Optional[_builtins.bool]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 flow_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flow_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 implicit_acl_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_frequency: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering LocalizedPolicy resources.
 
@@ -324,7 +324,7 @@ class _LocalizedPolicyState:
 
     @_builtins.property
     @pulumi.getter(name="applicationVisibilityIpv4")
-    def application_visibility_ipv4(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def application_visibility_ipv4(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv4 application visibility
           - Default value: `false`
@@ -332,12 +332,12 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "application_visibility_ipv4")
 
     @application_visibility_ipv4.setter
-    def application_visibility_ipv4(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def application_visibility_ipv4(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "application_visibility_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="applicationVisibilityIpv6")
-    def application_visibility_ipv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def application_visibility_ipv6(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv6 application visibility
           - Default value: `false`
@@ -345,60 +345,60 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "application_visibility_ipv6")
 
     @application_visibility_ipv6.setter
-    def application_visibility_ipv6(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def application_visibility_ipv6(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "application_visibility_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudQos")
-    def cloud_qos(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_qos(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud QoS
         """
         return pulumi.get(self, "cloud_qos")
 
     @cloud_qos.setter
-    def cloud_qos(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_qos(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_qos", value)
 
     @_builtins.property
     @pulumi.getter(name="cloudQosServiceSide")
-    def cloud_qos_service_side(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def cloud_qos_service_side(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Cloud QoS service side
         """
         return pulumi.get(self, "cloud_qos_service_side")
 
     @cloud_qos_service_side.setter
-    def cloud_qos_service_side(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def cloud_qos_service_side(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "cloud_qos_service_side", value)
 
     @_builtins.property
     @pulumi.getter
-    def definitions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]:
+    def definitions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]:
         """
         List of policy definitions
         """
         return pulumi.get(self, "definitions")
 
     @definitions.setter
-    def definitions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]):
+    def definitions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['LocalizedPolicyDefinitionArgs']]]]):
         pulumi.set(self, "definitions", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the localized policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="flowVisibilityIpv4")
-    def flow_visibility_ipv4(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def flow_visibility_ipv4(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv4 flow visibility
           - Default value: `false`
@@ -406,12 +406,12 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "flow_visibility_ipv4")
 
     @flow_visibility_ipv4.setter
-    def flow_visibility_ipv4(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def flow_visibility_ipv4(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "flow_visibility_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="flowVisibilityIpv6")
-    def flow_visibility_ipv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def flow_visibility_ipv6(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         IPv6 flow visibility
           - Default value: `false`
@@ -419,12 +419,12 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "flow_visibility_ipv6")
 
     @flow_visibility_ipv6.setter
-    def flow_visibility_ipv6(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def flow_visibility_ipv6(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "flow_visibility_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="implicitAclLogging")
-    def implicit_acl_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def implicit_acl_logging(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Implicit ACL logging
           - Default value: `false`
@@ -432,12 +432,12 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "implicit_acl_logging")
 
     @implicit_acl_logging.setter
-    def implicit_acl_logging(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def implicit_acl_logging(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "implicit_acl_logging", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4VisibilityCacheEntries")
-    def ipv4_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_visibility_cache_entries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv4 visibility cache entries
           - Range: `16`-`2000000`
@@ -445,12 +445,12 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "ipv4_visibility_cache_entries")
 
     @ipv4_visibility_cache_entries.setter
-    def ipv4_visibility_cache_entries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_visibility_cache_entries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_visibility_cache_entries", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6VisibilityCacheEntries")
-    def ipv6_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_visibility_cache_entries(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv6 visibility cache entries
           - Range: `16`-`2000000`
@@ -458,12 +458,12 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "ipv6_visibility_cache_entries")
 
     @ipv6_visibility_cache_entries.setter
-    def ipv6_visibility_cache_entries(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_visibility_cache_entries(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_visibility_cache_entries", value)
 
     @_builtins.property
     @pulumi.getter(name="logFrequency")
-    def log_frequency(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def log_frequency(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Log frequency
           - Range: `1`-`2147483647`
@@ -471,31 +471,31 @@ class _LocalizedPolicyState:
         return pulumi.get(self, "log_frequency")
 
     @log_frequency.setter
-    def log_frequency(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def log_frequency(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "log_frequency", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the localized policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -505,19 +505,19 @@ class LocalizedPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 application_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 application_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos_service_side: Optional[pulumi.Input[_builtins.bool]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 flow_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flow_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 implicit_acl_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_frequency: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 application_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 application_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos_service_side: pulumi.Input[Optional[_builtins.bool]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 flow_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flow_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 implicit_acl_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_frequency: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Localized Policy .
@@ -638,19 +638,19 @@ class LocalizedPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 application_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 application_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos: Optional[pulumi.Input[_builtins.bool]] = None,
-                 cloud_qos_service_side: Optional[pulumi.Input[_builtins.bool]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 flow_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-                 flow_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-                 implicit_acl_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipv4_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_frequency: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 application_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 application_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos: pulumi.Input[Optional[_builtins.bool]] = None,
+                 cloud_qos_service_side: pulumi.Input[Optional[_builtins.bool]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 flow_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+                 flow_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+                 implicit_acl_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipv4_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_frequency: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -686,20 +686,20 @@ class LocalizedPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            application_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-            application_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-            cloud_qos: Optional[pulumi.Input[_builtins.bool]] = None,
-            cloud_qos_service_side: Optional[pulumi.Input[_builtins.bool]] = None,
-            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            flow_visibility_ipv4: Optional[pulumi.Input[_builtins.bool]] = None,
-            flow_visibility_ipv6: Optional[pulumi.Input[_builtins.bool]] = None,
-            implicit_acl_logging: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipv4_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_visibility_cache_entries: Optional[pulumi.Input[_builtins.int]] = None,
-            log_frequency: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'LocalizedPolicy':
+            application_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+            application_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+            cloud_qos: pulumi.Input[Optional[_builtins.bool]] = None,
+            cloud_qos_service_side: pulumi.Input[Optional[_builtins.bool]] = None,
+            definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            flow_visibility_ipv4: pulumi.Input[Optional[_builtins.bool]] = None,
+            flow_visibility_ipv6: pulumi.Input[Optional[_builtins.bool]] = None,
+            implicit_acl_logging: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipv4_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_visibility_cache_entries: pulumi.Input[Optional[_builtins.int]] = None,
+            log_frequency: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'LocalizedPolicy':
         """
         Get an existing LocalizedPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

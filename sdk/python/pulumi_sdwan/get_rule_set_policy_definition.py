@@ -126,7 +126,7 @@ def get_rule_set_policy_definition(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         rules=pulumi.get(__ret__, 'rules'),
         version=pulumi.get(__ret__, 'version'))
-def get_rule_set_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_rule_set_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRuleSetPolicyDefinitionResult]:
     """
     This data source can read the Rule Set Policy Definition .

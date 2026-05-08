@@ -155,35 +155,35 @@ export interface ApplicationAwareRoutingPolicyDefinitionState {
      * Type of default action
      *   - Choices: `slaClass`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      */
-    defaultActionSlaClassListId?: pulumi.Input<string>;
+    defaultActionSlaClassListId?: pulumi.Input<string | undefined>;
     /**
      * SLA class list version
      */
-    defaultActionSlaClassListVersion?: pulumi.Input<number>;
+    defaultActionSlaClassListVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of sequences
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.ApplicationAwareRoutingPolicyDefinitionSequence>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -194,15 +194,15 @@ export interface ApplicationAwareRoutingPolicyDefinitionArgs {
      * Type of default action
      *   - Choices: `slaClass`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * SLA class list ID, Attribute conditional on `defaultAction` equal to `slaClass`
      */
-    defaultActionSlaClassListId?: pulumi.Input<string>;
+    defaultActionSlaClassListId?: pulumi.Input<string | undefined>;
     /**
      * SLA class list version
      */
-    defaultActionSlaClassListVersion?: pulumi.Input<number>;
+    defaultActionSlaClassListVersion?: pulumi.Input<number | undefined>;
     /**
      * The description of the policy definition
      */
@@ -210,7 +210,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of sequences
      */

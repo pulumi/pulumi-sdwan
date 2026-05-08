@@ -152,7 +152,7 @@ def get_traffic_data_policy_definition(id: Optional[_builtins.str] = None,
         sequences=pulumi.get(__ret__, 'sequences'),
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
-def get_traffic_data_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_traffic_data_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTrafficDataPolicyDefinitionResult]:
     """
     This data source can read the Traffic Data Policy Definition .

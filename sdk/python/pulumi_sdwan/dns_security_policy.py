@@ -29,9 +29,9 @@ class DnsSecurityPolicyArgs:
                  local_domain_bypass_list_id: pulumi.Input[_builtins.str],
                  match_all_vpn: pulumi.Input[_builtins.bool],
                  umbrella_default: pulumi.Input[_builtins.bool],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]] = None):
         """
         The set of arguments for constructing a DnsSecurityPolicy resource.
 
@@ -156,56 +156,56 @@ class DnsSecurityPolicyArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]:
         """
         Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]):
         pulumi.set(self, "target_vpns", value)
 
 
 @pulumi.input_type
 class _DnsSecurityPolicyState:
     def __init__(__self__, *,
-                 child_org_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_crypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_domain_bypass_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]] = None,
-                 umbrella_default: Optional[pulumi.Input[_builtins.bool]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 child_org_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_crypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_domain_bypass_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]] = None,
+                 umbrella_default: pulumi.Input[Optional[_builtins.bool]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering DnsSecurityPolicy resources.
 
@@ -248,143 +248,143 @@ class _DnsSecurityPolicyState:
 
     @_builtins.property
     @pulumi.getter(name="childOrgId")
-    def child_org_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def child_org_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
         """
         return pulumi.get(self, "child_org_id")
 
     @child_org_id.setter
-    def child_org_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def child_org_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "child_org_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsCrypt")
-    def dns_crypt(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def dns_crypt(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
         """
         return pulumi.get(self, "dns_crypt")
 
     @dns_crypt.setter
-    def dns_crypt(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def dns_crypt(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "dns_crypt", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServerIp")
-    def dns_server_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def dns_server_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` equal to `true`
         """
         return pulumi.get(self, "dns_server_ip")
 
     @dns_server_ip.setter
-    def dns_server_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def dns_server_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "dns_server_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="localDomainBypassEnabled")
-    def local_domain_bypass_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def local_domain_bypass_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         """
         return pulumi.get(self, "local_domain_bypass_enabled")
 
     @local_domain_bypass_enabled.setter
-    def local_domain_bypass_enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def local_domain_bypass_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "local_domain_bypass_enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="localDomainBypassListId")
-    def local_domain_bypass_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def local_domain_bypass_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "local_domain_bypass_list_id")
 
     @local_domain_bypass_list_id.setter
-    def local_domain_bypass_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def local_domain_bypass_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_domain_bypass_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="matchAllVpn")
-    def match_all_vpn(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def match_all_vpn(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
         """
         return pulumi.get(self, "match_all_vpn")
 
     @match_all_vpn.setter
-    def match_all_vpn(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def match_all_vpn(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "match_all_vpn", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]:
         """
         Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` equal to `false`
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['DnsSecurityPolicyTargetVpnArgs']]]]):
         pulumi.set(self, "target_vpns", value)
 
     @_builtins.property
     @pulumi.getter(name="umbrellaDefault")
-    def umbrella_default(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def umbrella_default(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
         """
         return pulumi.get(self, "umbrella_default")
 
     @umbrella_default.setter
-    def umbrella_default(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def umbrella_default(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "umbrella_default", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Policy
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -394,17 +394,17 @@ class DnsSecurityPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 child_org_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_crypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_domain_bypass_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]]] = None,
-                 umbrella_default: Optional[pulumi.Input[_builtins.bool]] = None,
+                 child_org_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_crypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_domain_bypass_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]]] = None,
+                 umbrella_default: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage a DNS Security Policy.
@@ -508,17 +508,17 @@ class DnsSecurityPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 child_org_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_crypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_domain_bypass_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]]] = None,
-                 umbrella_default: Optional[pulumi.Input[_builtins.bool]] = None,
+                 child_org_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dns_crypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 local_domain_bypass_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]]] = None,
+                 umbrella_default: pulumi.Input[Optional[_builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -566,18 +566,18 @@ class DnsSecurityPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            child_org_id: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            dns_crypt: Optional[pulumi.Input[_builtins.bool]] = None,
-            dns_server_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            local_domain_bypass_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            local_domain_bypass_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            match_all_vpn: Optional[pulumi.Input[_builtins.bool]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]]] = None,
-            umbrella_default: Optional[pulumi.Input[_builtins.bool]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'DnsSecurityPolicy':
+            child_org_id: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            dns_crypt: pulumi.Input[Optional[_builtins.bool]] = None,
+            dns_server_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            local_domain_bypass_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+            local_domain_bypass_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            match_all_vpn: pulumi.Input[Optional[_builtins.bool]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[Union['DnsSecurityPolicyTargetVpnArgs', 'DnsSecurityPolicyTargetVpnArgsDict']]]]] = None,
+            umbrella_default: pulumi.Input[Optional[_builtins.bool]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'DnsSecurityPolicy':
         """
         Get an existing DnsSecurityPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

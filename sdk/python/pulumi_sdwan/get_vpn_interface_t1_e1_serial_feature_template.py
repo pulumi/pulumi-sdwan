@@ -1663,8 +1663,8 @@ def get_vpn_interface_t1_e1_serial_feature_template(id: Optional[_builtins.str] 
         version=pulumi.get(__ret__, 'version'),
         write_rule=pulumi.get(__ret__, 'write_rule'),
         write_rule_variable=pulumi.get(__ret__, 'write_rule_variable'))
-def get_vpn_interface_t1_e1_serial_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_vpn_interface_t1_e1_serial_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                           name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVpnInterfaceT1E1SerialFeatureTemplateResult]:
     """
     This data source can read the VPN Interface T1 E1 Serial feature template.

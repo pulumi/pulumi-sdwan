@@ -20,22 +20,22 @@ __all__ = ['SystemMrfFeatureArgs', 'SystemMrfFeature']
 class SystemMrfFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_management_region: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_management_region_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_migration_to_mrf: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 management_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 management_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrf_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vrf_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_management_region: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_management_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_migration_to_mrf: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 management_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 management_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrf_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vrf_id_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemMrfFeature resource.
 
@@ -112,19 +112,19 @@ class SystemMrfFeatureArgs:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="enableManagementRegion")
-    def enable_management_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_management_region(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable management region
           - Default value: `false`
@@ -132,24 +132,24 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "enable_management_region")
 
     @enable_management_region.setter
-    def enable_management_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_management_region(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_management_region", value)
 
     @_builtins.property
     @pulumi.getter(name="enableManagementRegionVariable")
-    def enable_management_region_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_management_region_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable_management_region_variable")
 
     @enable_management_region_variable.setter
-    def enable_management_region_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_management_region_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_management_region_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMigrationToMrf")
-    def enable_migration_to_mrf(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_migration_to_mrf(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable migration mode to Multi-Region Fabric
           - Choices: `enabled`, `enabled-from-bgp-core`
@@ -157,36 +157,36 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "enable_migration_to_mrf")
 
     @enable_migration_to_mrf.setter
-    def enable_migration_to_mrf(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_migration_to_mrf(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_migration_to_mrf", value)
 
     @_builtins.property
     @pulumi.getter(name="gatewayPreferenceVariable")
-    def gateway_preference_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway_preference_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "gateway_preference_variable")
 
     @gateway_preference_variable.setter
-    def gateway_preference_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway_preference_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway_preference_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gatewayPreferences")
-    def gateway_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def gateway_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         List of affinity group preferences for VRF
         """
         return pulumi.get(self, "gateway_preferences")
 
     @gateway_preferences.setter
-    def gateway_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def gateway_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "gateway_preferences", value)
 
     @_builtins.property
     @pulumi.getter(name="managementGateway")
-    def management_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def management_gateway(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable management gateway
           - Default value: `false`
@@ -194,24 +194,24 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "management_gateway")
 
     @management_gateway.setter
-    def management_gateway(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def management_gateway(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "management_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="managementGatewayVariable")
-    def management_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def management_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "management_gateway_variable")
 
     @management_gateway_variable.setter
-    def management_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def management_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "management_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="migrationBgpCommunity")
-    def migration_bgp_community(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def migration_bgp_community(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set BGP community during migration from BGP-core based network
           - Range: `1`-`4294967295`
@@ -219,24 +219,24 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "migration_bgp_community")
 
     @migration_bgp_community.setter
-    def migration_bgp_community(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def migration_bgp_community(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "migration_bgp_community", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the role for router
           - Choices: `edge-router`, `border-router`
@@ -244,24 +244,24 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "role")
 
     @role.setter
-    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="roleVariable")
-    def role_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "role_variable")
 
     @role_variable.setter
-    def role_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionId")
-    def secondary_region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def secondary_region_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set secondary region ID
           - Range: `1`-`63`
@@ -269,24 +269,24 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "secondary_region_id")
 
     @secondary_region_id.setter
-    def secondary_region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def secondary_region_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "secondary_region_id", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionIdVariable")
-    def secondary_region_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_region_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "secondary_region_id_variable")
 
     @secondary_region_id_variable.setter
-    def secondary_region_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_region_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_region_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="vrfId")
-    def vrf_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vrf_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VRF name for management region
           - Range: `1`-`65531`
@@ -294,43 +294,43 @@ class SystemMrfFeatureArgs:
         return pulumi.get(self, "vrf_id")
 
     @vrf_id.setter
-    def vrf_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vrf_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vrf_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vrfIdVariable")
-    def vrf_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vrf_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vrf_id_variable")
 
     @vrf_id_variable.setter
-    def vrf_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vrf_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vrf_id_variable", value)
 
 
 @pulumi.input_type
 class _SystemMrfFeatureState:
     def __init__(__self__, *,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_management_region: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_management_region_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_migration_to_mrf: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 management_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 management_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None,
-                 vrf_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vrf_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_management_region: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_management_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_migration_to_mrf: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 management_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 management_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 vrf_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vrf_id_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SystemMrfFeature resources.
 
@@ -399,19 +399,19 @@ class _SystemMrfFeatureState:
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="enableManagementRegion")
-    def enable_management_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_management_region(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable management region
           - Default value: `false`
@@ -419,24 +419,24 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "enable_management_region")
 
     @enable_management_region.setter
-    def enable_management_region(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_management_region(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_management_region", value)
 
     @_builtins.property
     @pulumi.getter(name="enableManagementRegionVariable")
-    def enable_management_region_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_management_region_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable_management_region_variable")
 
     @enable_management_region_variable.setter
-    def enable_management_region_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_management_region_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_management_region_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMigrationToMrf")
-    def enable_migration_to_mrf(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_migration_to_mrf(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable migration mode to Multi-Region Fabric
           - Choices: `enabled`, `enabled-from-bgp-core`
@@ -444,48 +444,48 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "enable_migration_to_mrf")
 
     @enable_migration_to_mrf.setter
-    def enable_migration_to_mrf(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_migration_to_mrf(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_migration_to_mrf", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="gatewayPreferenceVariable")
-    def gateway_preference_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def gateway_preference_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "gateway_preference_variable")
 
     @gateway_preference_variable.setter
-    def gateway_preference_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def gateway_preference_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "gateway_preference_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gatewayPreferences")
-    def gateway_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def gateway_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         List of affinity group preferences for VRF
         """
         return pulumi.get(self, "gateway_preferences")
 
     @gateway_preferences.setter
-    def gateway_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def gateway_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "gateway_preferences", value)
 
     @_builtins.property
     @pulumi.getter(name="managementGateway")
-    def management_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def management_gateway(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable management gateway
           - Default value: `false`
@@ -493,24 +493,24 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "management_gateway")
 
     @management_gateway.setter
-    def management_gateway(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def management_gateway(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "management_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="managementGatewayVariable")
-    def management_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def management_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "management_gateway_variable")
 
     @management_gateway_variable.setter
-    def management_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def management_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "management_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="migrationBgpCommunity")
-    def migration_bgp_community(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def migration_bgp_community(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set BGP community during migration from BGP-core based network
           - Range: `1`-`4294967295`
@@ -518,24 +518,24 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "migration_bgp_community")
 
     @migration_bgp_community.setter
-    def migration_bgp_community(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def migration_bgp_community(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "migration_bgp_community", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the role for router
           - Choices: `edge-router`, `border-router`
@@ -543,24 +543,24 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "role")
 
     @role.setter
-    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="roleVariable")
-    def role_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "role_variable")
 
     @role_variable.setter
-    def role_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionId")
-    def secondary_region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def secondary_region_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set secondary region ID
           - Range: `1`-`63`
@@ -568,36 +568,36 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "secondary_region_id")
 
     @secondary_region_id.setter
-    def secondary_region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def secondary_region_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "secondary_region_id", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionIdVariable")
-    def secondary_region_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_region_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "secondary_region_id_variable")
 
     @secondary_region_id_variable.setter
-    def secondary_region_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_region_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_region_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
     @_builtins.property
     @pulumi.getter(name="vrfId")
-    def vrf_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vrf_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         VRF name for management region
           - Range: `1`-`65531`
@@ -605,19 +605,19 @@ class _SystemMrfFeatureState:
         return pulumi.get(self, "vrf_id")
 
     @vrf_id.setter
-    def vrf_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vrf_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vrf_id", value)
 
     @_builtins.property
     @pulumi.getter(name="vrfIdVariable")
-    def vrf_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def vrf_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "vrf_id_variable")
 
     @vrf_id_variable.setter
-    def vrf_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def vrf_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vrf_id_variable", value)
 
 
@@ -627,23 +627,23 @@ class SystemMrfFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_management_region: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_management_region_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_migration_to_mrf: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 management_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 management_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrf_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vrf_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_management_region: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_management_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_migration_to_mrf: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 management_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 management_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrf_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vrf_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System MRF Feature.
@@ -761,23 +761,23 @@ class SystemMrfFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_management_region: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_management_region_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_migration_to_mrf: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 gateway_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 management_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 management_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 vrf_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 vrf_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_management_region: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_management_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_migration_to_mrf: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 gateway_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 management_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 management_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vrf_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vrf_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -817,24 +817,24 @@ class SystemMrfFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_management_region: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_management_region_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_migration_to_mrf: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            gateway_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            gateway_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-            management_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-            management_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            role: Optional[pulumi.Input[_builtins.str]] = None,
-            role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-            secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None,
-            vrf_id: Optional[pulumi.Input[_builtins.int]] = None,
-            vrf_id_variable: Optional[pulumi.Input[_builtins.str]] = None) -> 'SystemMrfFeature':
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_management_region: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_management_region_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_migration_to_mrf: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            gateway_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            gateway_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            management_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+            management_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            role: pulumi.Input[Optional[_builtins.str]] = None,
+            role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+            secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None,
+            vrf_id: pulumi.Input[Optional[_builtins.int]] = None,
+            vrf_id_variable: pulumi.Input[Optional[_builtins.str]] = None) -> 'SystemMrfFeature':
         """
         Get an existing SystemMrfFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

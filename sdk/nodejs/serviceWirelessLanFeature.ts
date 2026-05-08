@@ -252,94 +252,94 @@ export interface ServiceWirelessLanFeatureState {
      * Select country
      *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    countryVariable?: pulumi.Input<string>;
+    countryVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * 2.4GHz Enabled
      *   - Default value: `true`
      */
-    enable24g?: pulumi.Input<boolean>;
+    enable24g?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enable24gVariable?: pulumi.Input<string>;
+    enable24gVariable?: pulumi.Input<string | undefined>;
     /**
      * 5GHz Enabled
      *   - Default value: `true`
      */
-    enable5g?: pulumi.Input<boolean>;
+    enable5g?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enable5gVariable?: pulumi.Input<string>;
+    enable5gVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express default gateway
      */
-    meDefaultGateway?: pulumi.Input<string>;
+    meDefaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meDefaultGatewayVariable?: pulumi.Input<string>;
+    meDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * ME management IP dynamic allocated by DHCP
      */
-    meDynamicIpEnabled?: pulumi.Input<boolean>;
+    meDynamicIpEnabled?: pulumi.Input<boolean | undefined>;
     /**
      * Set mobile express controller address
      */
-    meIpv4Address?: pulumi.Input<string>;
+    meIpv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meIpv4AddressVariable?: pulumi.Input<string>;
+    meIpv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express controller subnet mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    meSubnetMask?: pulumi.Input<string>;
+    meSubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meSubnetMaskVariable?: pulumi.Input<string>;
+    meSubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Wi-Fi SSID profile
      */
-    ssids?: pulumi.Input<pulumi.Input<inputs.ServiceWirelessLanFeatureSsid>[]>;
+    ssids?: pulumi.Input<pulumi.Input<inputs.ServiceWirelessLanFeatureSsid>[] | undefined>;
     /**
      * Set management username
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    usernameVariable?: pulumi.Input<string>;
+    usernameVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -350,33 +350,33 @@ export interface ServiceWirelessLanFeatureArgs {
      * Select country
      *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
-    country?: pulumi.Input<string>;
+    country?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    countryVariable?: pulumi.Input<string>;
+    countryVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * 2.4GHz Enabled
      *   - Default value: `true`
      */
-    enable24g?: pulumi.Input<boolean>;
+    enable24g?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enable24gVariable?: pulumi.Input<string>;
+    enable24gVariable?: pulumi.Input<string | undefined>;
     /**
      * 5GHz Enabled
      *   - Default value: `true`
      */
-    enable5g?: pulumi.Input<boolean>;
+    enable5g?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enable5gVariable?: pulumi.Input<string>;
+    enable5gVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -384,11 +384,11 @@ export interface ServiceWirelessLanFeatureArgs {
     /**
      * Set mobile express default gateway
      */
-    meDefaultGateway?: pulumi.Input<string>;
+    meDefaultGateway?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meDefaultGatewayVariable?: pulumi.Input<string>;
+    meDefaultGatewayVariable?: pulumi.Input<string | undefined>;
     /**
      * ME management IP dynamic allocated by DHCP
      */
@@ -396,32 +396,32 @@ export interface ServiceWirelessLanFeatureArgs {
     /**
      * Set mobile express controller address
      */
-    meIpv4Address?: pulumi.Input<string>;
+    meIpv4Address?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meIpv4AddressVariable?: pulumi.Input<string>;
+    meIpv4AddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Set mobile express controller subnet mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    meSubnetMask?: pulumi.Input<string>;
+    meSubnetMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    meSubnetMaskVariable?: pulumi.Input<string>;
+    meSubnetMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
      */
-    password?: pulumi.Input<string>;
+    password?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    passwordVariable?: pulumi.Input<string>;
+    passwordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure Wi-Fi SSID profile
      */
@@ -429,9 +429,9 @@ export interface ServiceWirelessLanFeatureArgs {
     /**
      * Set management username
      */
-    username?: pulumi.Input<string>;
+    username?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    usernameVariable?: pulumi.Input<string>;
+    usernameVariable?: pulumi.Input<string | undefined>;
 }

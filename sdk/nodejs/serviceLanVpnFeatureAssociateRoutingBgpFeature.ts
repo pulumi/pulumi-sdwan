@@ -121,19 +121,19 @@ export interface ServiceLanVpnFeatureAssociateRoutingBgpFeatureState {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
-    serviceLanVpnFeatureId?: pulumi.Input<string>;
+    serviceLanVpnFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Service Routing BGP Feature ID
      */
-    serviceRoutingBgpFeatureId?: pulumi.Input<string>;
+    serviceRoutingBgpFeatureId?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**

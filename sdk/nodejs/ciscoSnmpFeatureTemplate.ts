@@ -228,69 +228,69 @@ export interface CiscoSnmpFeatureTemplateState {
     /**
      * Configure SNMP community
      */
-    communities?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateCommunity>[]>;
+    communities?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateCommunity>[] | undefined>;
     /**
      * Set the contact for this managed node
      */
-    contact?: pulumi.Input<string>;
+    contact?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    contactVariable?: pulumi.Input<string>;
+    contactVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Configure an SNMP group
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateGroup>[] | undefined>;
     /**
      * Set the physical location of this managed node
      */
-    location?: pulumi.Input<string>;
+    location?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    locationVariable?: pulumi.Input<string>;
+    locationVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable SNMP
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP server to receive SNMP traps
      */
-    trapTargets?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateTrapTarget>[]>;
+    trapTargets?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateTrapTarget>[] | undefined>;
     /**
      * Configure an SNMP user
      */
-    users?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateUser>[] | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Configure a view record
      */
-    views?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateView>[]>;
+    views?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateView>[] | undefined>;
 }
 
 /**
@@ -300,15 +300,15 @@ export interface CiscoSnmpFeatureTemplateArgs {
     /**
      * Configure SNMP community
      */
-    communities?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateCommunity>[]>;
+    communities?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateCommunity>[] | undefined>;
     /**
      * Set the contact for this managed node
      */
-    contact?: pulumi.Input<string>;
+    contact?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    contactVariable?: pulumi.Input<string>;
+    contactVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -321,38 +321,38 @@ export interface CiscoSnmpFeatureTemplateArgs {
     /**
      * Configure an SNMP group
      */
-    groups?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateGroup>[]>;
+    groups?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateGroup>[] | undefined>;
     /**
      * Set the physical location of this managed node
      */
-    location?: pulumi.Input<string>;
+    location?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    locationVariable?: pulumi.Input<string>;
+    locationVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable or disable SNMP
      *   - Default value: `true`
      */
-    shutdown?: pulumi.Input<boolean>;
+    shutdown?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    shutdownVariable?: pulumi.Input<string>;
+    shutdownVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure SNMP server to receive SNMP traps
      */
-    trapTargets?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateTrapTarget>[]>;
+    trapTargets?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateTrapTarget>[] | undefined>;
     /**
      * Configure an SNMP user
      */
-    users?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateUser>[]>;
+    users?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateUser>[] | undefined>;
     /**
      * Configure a view record
      */
-    views?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateView>[]>;
+    views?: pulumi.Input<pulumi.Input<inputs.CiscoSnmpFeatureTemplateView>[] | undefined>;
 }

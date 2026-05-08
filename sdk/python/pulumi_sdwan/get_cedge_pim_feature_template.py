@@ -454,8 +454,8 @@ def get_cedge_pim_feature_template(id: Optional[_builtins.str] = None,
         spt_threshold_variable=pulumi.get(__ret__, 'spt_threshold_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-def get_cedge_pim_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cedge_pim_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCedgePimFeatureTemplateResult]:
     """
     This data source can read the cEdge PIM feature template.

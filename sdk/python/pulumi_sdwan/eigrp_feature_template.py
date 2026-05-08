@@ -23,24 +23,24 @@ class EigrpFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a EigrpFeatureTemplate resource.
 
@@ -139,19 +139,19 @@ class EigrpFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="addressFamilies")
-    def address_families(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]:
+    def address_families(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]:
         """
         Set EIGRP address family
         """
         return pulumi.get(self, "address_families")
 
     @address_families.setter
-    def address_families(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]):
+    def address_families(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]):
         pulumi.set(self, "address_families", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set autonomous system ID <1..65535>
           - Range: `1`-`65535`
@@ -159,24 +159,24 @@ class EigrpFeatureTemplateArgs:
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumberVariable")
-    def as_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "as_number_variable")
 
     @as_number_variable.setter
-    def as_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationType")
-    def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set EIGRP router authentication type
           - Choices: `md5`, `hmac-sha-256`
@@ -184,24 +184,24 @@ class EigrpFeatureTemplateArgs:
         return pulumi.get(self, "authentication_type")
 
     @authentication_type.setter
-    def authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Selective route download
           - Default value: `false`
@@ -209,24 +209,24 @@ class EigrpFeatureTemplateArgs:
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter(name="filterVariable")
-    def filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "filter_variable")
 
     @filter_variable.setter
-    def filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hello_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hello interval
           - Range: `0`-`65535`
@@ -235,48 +235,48 @@ class EigrpFeatureTemplateArgs:
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hello_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="helloIntervalVariable")
-    def hello_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hello_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hello_interval_variable")
 
     @hello_interval_variable.setter
-    def hello_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hello_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hello_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKey")
-    def hmac_authentication_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key
         """
         return pulumi.get(self, "hmac_authentication_key")
 
     @hmac_authentication_key.setter
-    def hmac_authentication_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
-    def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
     @hmac_authentication_key_variable.setter
-    def hmac_authentication_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hold time
           - Range: `0`-`65535`
@@ -285,107 +285,107 @@ class EigrpFeatureTemplateArgs:
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTimeVariable")
-    def hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hold_time_variable")
 
     @hold_time_variable.setter
-    def hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]:
         """
         Configure IPv4 Static Routes
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]:
+    def keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]:
         """
         Set keychain name
         """
         return pulumi.get(self, "keys")
 
     @keys.setter
-    def keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]):
+    def keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]):
         pulumi.set(self, "keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyName")
-    def route_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure policy to apply to prefixes received from EIGRP neighbor
         """
         return pulumi.get(self, "route_policy_name")
 
     @route_policy_name.setter
-    def route_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyNameVariable")
-    def route_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "route_policy_name_variable")
 
     @route_policy_name_variable.setter
-    def route_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_name_variable", value)
 
 
 @pulumi.input_type
 class _EigrpFeatureTemplateState:
     def __init__(__self__, *,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering EigrpFeatureTemplate resources.
 
@@ -467,19 +467,19 @@ class _EigrpFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="addressFamilies")
-    def address_families(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]:
+    def address_families(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]:
         """
         Set EIGRP address family
         """
         return pulumi.get(self, "address_families")
 
     @address_families.setter
-    def address_families(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]):
+    def address_families(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]]]):
         pulumi.set(self, "address_families", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set autonomous system ID <1..65535>
           - Range: `1`-`65535`
@@ -487,24 +487,24 @@ class _EigrpFeatureTemplateState:
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
     @pulumi.getter(name="asNumberVariable")
-    def as_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def as_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "as_number_variable")
 
     @as_number_variable.setter
-    def as_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def as_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationType")
-    def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set EIGRP router authentication type
           - Choices: `md5`, `hmac-sha-256`
@@ -512,36 +512,36 @@ class _EigrpFeatureTemplateState:
         return pulumi.get(self, "authentication_type")
 
     @authentication_type.setter
-    def authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -549,12 +549,12 @@ class _EigrpFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def filter(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Selective route download
           - Default value: `false`
@@ -562,24 +562,24 @@ class _EigrpFeatureTemplateState:
         return pulumi.get(self, "filter")
 
     @filter.setter
-    def filter(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def filter(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "filter", value)
 
     @_builtins.property
     @pulumi.getter(name="filterVariable")
-    def filter_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def filter_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "filter_variable")
 
     @filter_variable.setter
-    def filter_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def filter_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "filter_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hello_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hello interval
           - Range: `0`-`65535`
@@ -588,48 +588,48 @@ class _EigrpFeatureTemplateState:
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hello_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="helloIntervalVariable")
-    def hello_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hello_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hello_interval_variable")
 
     @hello_interval_variable.setter
-    def hello_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hello_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hello_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKey")
-    def hmac_authentication_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set hmac-sha-256 authentication key
         """
         return pulumi.get(self, "hmac_authentication_key")
 
     @hmac_authentication_key.setter
-    def hmac_authentication_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key", value)
 
     @_builtins.property
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
-    def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hmac_authentication_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
     @hmac_authentication_key_variable.setter
-    def hmac_authentication_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hmac_authentication_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hmac_authentication_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set EIGRP hold time
           - Range: `0`-`65535`
@@ -638,103 +638,103 @@ class _EigrpFeatureTemplateState:
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
     @pulumi.getter(name="holdTimeVariable")
-    def hold_time_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hold_time_variable")
 
     @hold_time_variable.setter
-    def hold_time_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hold_time_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]:
+    def interfaces(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]:
         """
         Configure IPv4 Static Routes
         """
         return pulumi.get(self, "interfaces")
 
     @interfaces.setter
-    def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]):
+    def interfaces(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
 
     @_builtins.property
     @pulumi.getter
-    def keys(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]:
+    def keys(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]:
         """
         Set keychain name
         """
         return pulumi.get(self, "keys")
 
     @keys.setter
-    def keys(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]):
+    def keys(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]]]):
         pulumi.set(self, "keys", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyName")
-    def route_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure policy to apply to prefixes received from EIGRP neighbor
         """
         return pulumi.get(self, "route_policy_name")
 
     @route_policy_name.setter
-    def route_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="routePolicyNameVariable")
-    def route_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def route_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "route_policy_name_variable")
 
     @route_policy_name_variable.setter
-    def route_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def route_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "route_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -744,26 +744,26 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a eigrp feature template.
@@ -915,26 +915,26 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
-                 as_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 filter: Optional[pulumi.Input[_builtins.bool]] = None,
-                 filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-                 hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 filter: pulumi.Input[Optional[_builtins.bool]] = None,
+                 filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
+                 keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -980,28 +980,28 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
-            as_number: Optional[pulumi.Input[_builtins.int]] = None,
-            as_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            filter: Optional[pulumi.Input[_builtins.bool]] = None,
-            filter_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            hello_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            hmac_authentication_key: Optional[pulumi.Input[_builtins.str]] = None,
-            hmac_authentication_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            hold_time: Optional[pulumi.Input[_builtins.int]] = None,
-            hold_time_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
-            keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            route_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-            route_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'EigrpFeatureTemplate':
+            address_families: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
+            as_number: pulumi.Input[Optional[_builtins.int]] = None,
+            as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            filter: pulumi.Input[Optional[_builtins.bool]] = None,
+            filter_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hello_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            hello_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key: pulumi.Input[Optional[_builtins.str]] = None,
+            hmac_authentication_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+            hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            interfaces: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]]] = None,
+            keys: pulumi.Input[Optional[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+            route_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'EigrpFeatureTemplate':
         """
         Get an existing EigrpFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

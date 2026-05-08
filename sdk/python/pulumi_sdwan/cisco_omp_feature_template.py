@@ -23,35 +23,35 @@ class CiscoOmpFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]] = None,
-                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 send_path_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]] = None,
+                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_path_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 send_path_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoOmpFeatureTemplate resource.
 
@@ -194,31 +194,31 @@ class CiscoOmpFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Routes")
-    def advertise_ipv4_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]:
+    def advertise_ipv4_routes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]:
         """
         Advertise locally learned routes to OMP
         """
         return pulumi.get(self, "advertise_ipv4_routes")
 
     @advertise_ipv4_routes.setter
-    def advertise_ipv4_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]):
+    def advertise_ipv4_routes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]):
         pulumi.set(self, "advertise_ipv4_routes", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Routes")
-    def advertise_ipv6_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]:
+    def advertise_ipv6_routes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]:
         """
         Advertise locally learned routes to OMP
         """
         return pulumi.get(self, "advertise_ipv6_routes")
 
     @advertise_ipv6_routes.setter
-    def advertise_ipv6_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]):
+    def advertise_ipv6_routes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]):
         pulumi.set(self, "advertise_ipv6_routes", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementInterval")
-    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def advertisement_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the time between OMP Update packets
           - Range: `0`-`65535`
@@ -227,24 +227,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "advertisement_interval")
 
     @advertisement_interval.setter
-    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def advertisement_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "advertisement_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementIntervalVariable")
-    def advertisement_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertisement_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertisement_interval_variable")
 
     @advertisement_interval_variable.setter
-    def advertisement_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertisement_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertisement_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimit")
-    def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in vEdge route table
           - Range: `1`-`16`
@@ -253,24 +253,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "ecmp_limit")
 
     @ecmp_limit.setter
-    def ecmp_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ecmp_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ecmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimitVariable")
-    def ecmp_limit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ecmp_limit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ecmp_limit_variable")
 
     @ecmp_limit_variable.setter
-    def ecmp_limit_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ecmp_limit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ecmp_limit_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimer")
-    def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eor_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         End of RIB timer <1..604800> seconds
           - Range: `1`-`3600`
@@ -279,24 +279,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "eor_timer")
 
     @eor_timer.setter
-    def eor_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eor_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eor_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimerVariable")
-    def eor_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eor_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "eor_timer_variable")
 
     @eor_timer_variable.setter
-    def eor_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eor_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eor_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestart")
-    def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def graceful_restart(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable OMP graceful restart
           - Default value: `true`
@@ -304,12 +304,12 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "graceful_restart")
 
     @graceful_restart.setter
-    def graceful_restart(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def graceful_restart(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "graceful_restart", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimer")
-    def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def graceful_restart_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the OMP graceful restart timer
           - Range: `1`-`604800`
@@ -318,36 +318,36 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "graceful_restart_timer")
 
     @graceful_restart_timer.setter
-    def graceful_restart_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def graceful_restart_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "graceful_restart_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimerVariable")
-    def graceful_restart_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_timer_variable")
 
     @graceful_restart_timer_variable.setter
-    def graceful_restart_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartVariable")
-    def graceful_restart_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_variable")
 
     @graceful_restart_variable.setter
-    def graceful_restart_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how long to wait before closing OMP peer connection
           - Default value: `60`
@@ -355,24 +355,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "holdtime")
 
     @holdtime.setter
-    def holdtime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def holdtime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "holdtime", value)
 
     @_builtins.property
     @pulumi.getter(name="holdtimeVariable")
-    def holdtime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def holdtime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "holdtime_variable")
 
     @holdtime_variable.setter
-    def holdtime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def holdtime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "holdtime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLength")
-    def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ignore_region_path_length(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Ignore Region-Path Length During Best-Path Algorithm
           - Default value: `false`
@@ -380,36 +380,36 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "ignore_region_path_length")
 
     @ignore_region_path_length.setter
-    def ignore_region_path_length(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ignore_region_path_length(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ignore_region_path_length", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLengthVariable")
-    def ignore_region_path_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ignore_region_path_length_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ignore_region_path_length_variable")
 
     @ignore_region_path_length_variable.setter
-    def ignore_region_path_length_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ignore_region_path_length_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ignore_region_path_length_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4")
-    def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv4(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         omp-admin-distance-ipv4
           - Range: `1`-`255`
@@ -417,24 +417,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
     @omp_admin_distance_ipv4.setter
-    def omp_admin_distance_ipv4(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv4(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4Variable")
-    def omp_admin_distance_ipv4_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv4_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv4_variable")
 
     @omp_admin_distance_ipv4_variable.setter
-    def omp_admin_distance_ipv4_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv4_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv4_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6")
-    def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv6(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         omp-admin-distance-ipv6
           - Range: `1`-`255`
@@ -442,24 +442,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
     @omp_admin_distance_ipv6.setter
-    def omp_admin_distance_ipv6(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv6(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6Variable")
-    def omp_admin_distance_ipv6_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv6_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv6_variable")
 
     @omp_admin_distance_ipv6_variable.setter
-    def omp_admin_distance_ipv6_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv6_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv6_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAs")
-    def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def overlay_as(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Overlay AS number <1..4294967295> or <XX.YY>
           - Range: `1`-`4294967295`
@@ -467,24 +467,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "overlay_as")
 
     @overlay_as.setter
-    def overlay_as(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def overlay_as(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "overlay_as", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAsVariable")
-    def overlay_as_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def overlay_as_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "overlay_as_variable")
 
     @overlay_as_variable.setter
-    def overlay_as_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def overlay_as_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "overlay_as_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sendPathLimit")
-    def send_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def send_path_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set number of TLOC routes advertised between vSmart and vEdge
           - Range: `1`-`16`
@@ -493,24 +493,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "send_path_limit")
 
     @send_path_limit.setter
-    def send_path_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def send_path_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "send_path_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="sendPathLimitVariable")
-    def send_path_limit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def send_path_limit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "send_path_limit_variable")
 
     @send_path_limit_variable.setter
-    def send_path_limit_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def send_path_limit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "send_path_limit_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable OMP
           - Default value: `false`
@@ -518,24 +518,24 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")
-    def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Transport gateway path computation
           - Choices: `prefer`, `ecmp-with-direct-path`
@@ -543,58 +543,58 @@ class CiscoOmpFeatureTemplateArgs:
         return pulumi.get(self, "transport_gateway")
 
     @transport_gateway.setter
-    def transport_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGatewayVariable")
-    def transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "transport_gateway_variable")
 
     @transport_gateway_variable.setter
-    def transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway_variable", value)
 
 
 @pulumi.input_type
 class _CiscoOmpFeatureTemplateState:
     def __init__(__self__, *,
-                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]] = None,
-                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 send_path_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]] = None,
+                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_path_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 send_path_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoOmpFeatureTemplate resources.
 
@@ -720,31 +720,31 @@ class _CiscoOmpFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Routes")
-    def advertise_ipv4_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]:
+    def advertise_ipv4_routes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]:
         """
         Advertise locally learned routes to OMP
         """
         return pulumi.get(self, "advertise_ipv4_routes")
 
     @advertise_ipv4_routes.setter
-    def advertise_ipv4_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]):
+    def advertise_ipv4_routes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]):
         pulumi.set(self, "advertise_ipv4_routes", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Routes")
-    def advertise_ipv6_routes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]:
+    def advertise_ipv6_routes(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]:
         """
         Advertise locally learned routes to OMP
         """
         return pulumi.get(self, "advertise_ipv6_routes")
 
     @advertise_ipv6_routes.setter
-    def advertise_ipv6_routes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]):
+    def advertise_ipv6_routes(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]):
         pulumi.set(self, "advertise_ipv6_routes", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementInterval")
-    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def advertisement_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the time between OMP Update packets
           - Range: `0`-`65535`
@@ -753,36 +753,36 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "advertisement_interval")
 
     @advertisement_interval.setter
-    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def advertisement_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "advertisement_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementIntervalVariable")
-    def advertisement_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertisement_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertisement_interval_variable")
 
     @advertisement_interval_variable.setter
-    def advertisement_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertisement_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertisement_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -790,12 +790,12 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimit")
-    def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in vEdge route table
           - Range: `1`-`16`
@@ -804,24 +804,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "ecmp_limit")
 
     @ecmp_limit.setter
-    def ecmp_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ecmp_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ecmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimitVariable")
-    def ecmp_limit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ecmp_limit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ecmp_limit_variable")
 
     @ecmp_limit_variable.setter
-    def ecmp_limit_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ecmp_limit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ecmp_limit_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimer")
-    def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eor_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         End of RIB timer <1..604800> seconds
           - Range: `1`-`3600`
@@ -830,24 +830,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "eor_timer")
 
     @eor_timer.setter
-    def eor_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eor_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eor_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimerVariable")
-    def eor_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eor_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "eor_timer_variable")
 
     @eor_timer_variable.setter
-    def eor_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eor_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eor_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestart")
-    def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def graceful_restart(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable OMP graceful restart
           - Default value: `true`
@@ -855,12 +855,12 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "graceful_restart")
 
     @graceful_restart.setter
-    def graceful_restart(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def graceful_restart(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "graceful_restart", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimer")
-    def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def graceful_restart_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the OMP graceful restart timer
           - Range: `1`-`604800`
@@ -869,36 +869,36 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "graceful_restart_timer")
 
     @graceful_restart_timer.setter
-    def graceful_restart_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def graceful_restart_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "graceful_restart_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimerVariable")
-    def graceful_restart_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_timer_variable")
 
     @graceful_restart_timer_variable.setter
-    def graceful_restart_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartVariable")
-    def graceful_restart_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_variable")
 
     @graceful_restart_variable.setter
-    def graceful_restart_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how long to wait before closing OMP peer connection
           - Default value: `60`
@@ -906,24 +906,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "holdtime")
 
     @holdtime.setter
-    def holdtime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def holdtime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "holdtime", value)
 
     @_builtins.property
     @pulumi.getter(name="holdtimeVariable")
-    def holdtime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def holdtime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "holdtime_variable")
 
     @holdtime_variable.setter
-    def holdtime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def holdtime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "holdtime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLength")
-    def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ignore_region_path_length(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Ignore Region-Path Length During Best-Path Algorithm
           - Default value: `false`
@@ -931,36 +931,36 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "ignore_region_path_length")
 
     @ignore_region_path_length.setter
-    def ignore_region_path_length(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ignore_region_path_length(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ignore_region_path_length", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLengthVariable")
-    def ignore_region_path_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ignore_region_path_length_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ignore_region_path_length_variable")
 
     @ignore_region_path_length_variable.setter
-    def ignore_region_path_length_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ignore_region_path_length_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ignore_region_path_length_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4")
-    def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv4(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         omp-admin-distance-ipv4
           - Range: `1`-`255`
@@ -968,24 +968,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
     @omp_admin_distance_ipv4.setter
-    def omp_admin_distance_ipv4(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv4(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4Variable")
-    def omp_admin_distance_ipv4_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv4_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv4_variable")
 
     @omp_admin_distance_ipv4_variable.setter
-    def omp_admin_distance_ipv4_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv4_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv4_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6")
-    def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv6(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         omp-admin-distance-ipv6
           - Range: `1`-`255`
@@ -993,24 +993,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
     @omp_admin_distance_ipv6.setter
-    def omp_admin_distance_ipv6(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv6(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6Variable")
-    def omp_admin_distance_ipv6_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv6_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv6_variable")
 
     @omp_admin_distance_ipv6_variable.setter
-    def omp_admin_distance_ipv6_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv6_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv6_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAs")
-    def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def overlay_as(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Overlay AS number <1..4294967295> or <XX.YY>
           - Range: `1`-`4294967295`
@@ -1018,24 +1018,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "overlay_as")
 
     @overlay_as.setter
-    def overlay_as(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def overlay_as(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "overlay_as", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAsVariable")
-    def overlay_as_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def overlay_as_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "overlay_as_variable")
 
     @overlay_as_variable.setter
-    def overlay_as_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def overlay_as_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "overlay_as_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="sendPathLimit")
-    def send_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def send_path_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set number of TLOC routes advertised between vSmart and vEdge
           - Range: `1`-`16`
@@ -1044,24 +1044,24 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "send_path_limit")
 
     @send_path_limit.setter
-    def send_path_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def send_path_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "send_path_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="sendPathLimitVariable")
-    def send_path_limit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def send_path_limit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "send_path_limit_variable")
 
     @send_path_limit_variable.setter
-    def send_path_limit_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def send_path_limit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "send_path_limit_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable OMP
           - Default value: `false`
@@ -1069,36 +1069,36 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")
-    def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Transport gateway path computation
           - Choices: `prefer`, `ecmp-with-direct-path`
@@ -1106,31 +1106,31 @@ class _CiscoOmpFeatureTemplateState:
         return pulumi.get(self, "transport_gateway")
 
     @transport_gateway.setter
-    def transport_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGatewayVariable")
-    def transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "transport_gateway_variable")
 
     @transport_gateway_variable.setter
-    def transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1140,37 +1140,37 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
-                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 send_path_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
+                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_path_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 send_path_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco OMP feature template.
@@ -1336,37 +1336,37 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
-                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 send_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 send_path_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
+                 advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 send_path_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 send_path_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1423,39 +1423,39 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
-            advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
-            advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-            ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-            graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-            holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-            ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-            omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-            omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-            overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            send_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
-            send_path_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-            shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoOmpFeatureTemplate':
+            advertise_ipv4_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
+            advertise_ipv6_routes: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
+            advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+            graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+            holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+            ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+            overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            send_path_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            send_path_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoOmpFeatureTemplate':
         """
         Get an existing CiscoOmpFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

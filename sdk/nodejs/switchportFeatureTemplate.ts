@@ -210,57 +210,57 @@ export interface SwitchportFeatureTemplateState {
      *   - Range: `0`-`1000000`
      *   - Default value: `300`
      */
-    ageOutTime?: pulumi.Input<number>;
+    ageOutTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ageOutTimeVariable?: pulumi.Input<string>;
+    ageOutTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateInterface>[] | undefined>;
     /**
      * Module type
      *   - Choices: `4`, `8`, `22`, `50`
      */
-    moduleType?: pulumi.Input<string>;
+    moduleType?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Number of Slots
      *   - Range: `0`-`31`
      *   - Default value: `0`
      */
-    slot?: pulumi.Input<number>;
+    slot?: pulumi.Input<number | undefined>;
     /**
      * Add static MAC address entries for interface
      */
-    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateStaticMacAddress>[]>;
+    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateStaticMacAddress>[] | undefined>;
     /**
      * Number of Sub-Slots
      *   - Range: `0`-`31`
      *   - Default value: `0`
      */
-    subSlot?: pulumi.Input<number>;
+    subSlot?: pulumi.Input<number | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -272,11 +272,11 @@ export interface SwitchportFeatureTemplateArgs {
      *   - Range: `0`-`1000000`
      *   - Default value: `300`
      */
-    ageOutTime?: pulumi.Input<number>;
+    ageOutTime?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    ageOutTimeVariable?: pulumi.Input<string>;
+    ageOutTimeVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the feature template
      */
@@ -289,30 +289,30 @@ export interface SwitchportFeatureTemplateArgs {
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    interfaces?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateInterface>[]>;
+    interfaces?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateInterface>[] | undefined>;
     /**
      * Module type
      *   - Choices: `4`, `8`, `22`, `50`
      */
-    moduleType?: pulumi.Input<string>;
+    moduleType?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Number of Slots
      *   - Range: `0`-`31`
      *   - Default value: `0`
      */
-    slot?: pulumi.Input<number>;
+    slot?: pulumi.Input<number | undefined>;
     /**
      * Add static MAC address entries for interface
      */
-    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateStaticMacAddress>[]>;
+    staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateStaticMacAddress>[] | undefined>;
     /**
      * Number of Sub-Slots
      *   - Range: `0`-`31`
      *   - Default value: `0`
      */
-    subSlot?: pulumi.Input<number>;
+    subSlot?: pulumi.Input<number | undefined>;
 }

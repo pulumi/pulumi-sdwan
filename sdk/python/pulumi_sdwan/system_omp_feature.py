@@ -20,70 +20,70 @@ __all__ = ['SystemOmpFeatureArgs', 'SystemOmpFeature']
 class SystemOmpFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
-                 advertise_ipv4_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 paths_advertised_per_prefix: Optional[pulumi.Input[_builtins.int]] = None,
-                 paths_advertised_per_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 advertise_ipv4_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aspath_auto_translation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 paths_advertised_per_prefix: pulumi.Input[Optional[_builtins.int]] = None,
+                 paths_advertised_per_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types_for_transport_gateways: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemOmpFeature resource.
 
@@ -333,7 +333,7 @@ class SystemOmpFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Bgp")
-    def advertise_ipv4_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_bgp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP
           - Default value: `false`
@@ -341,24 +341,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_bgp")
 
     @advertise_ipv4_bgp.setter
-    def advertise_ipv4_bgp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_bgp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_bgp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4BgpVariable")
-    def advertise_ipv4_bgp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_bgp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_bgp_variable")
 
     @advertise_ipv4_bgp_variable.setter
-    def advertise_ipv4_bgp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_bgp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_bgp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Connected")
-    def advertise_ipv4_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_connected(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Connected
           - Default value: `true`
@@ -366,24 +366,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_connected")
 
     @advertise_ipv4_connected.setter
-    def advertise_ipv4_connected(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_connected(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_connected", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4ConnectedVariable")
-    def advertise_ipv4_connected_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_connected_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_connected_variable")
 
     @advertise_ipv4_connected_variable.setter
-    def advertise_ipv4_connected_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_connected_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_connected_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Eigrp")
-    def advertise_ipv4_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_eigrp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         EIGRP
           - Default value: `false`
@@ -391,24 +391,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_eigrp")
 
     @advertise_ipv4_eigrp.setter
-    def advertise_ipv4_eigrp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_eigrp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_eigrp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4EigrpVariable")
-    def advertise_ipv4_eigrp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_eigrp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_eigrp_variable")
 
     @advertise_ipv4_eigrp_variable.setter
-    def advertise_ipv4_eigrp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_eigrp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_eigrp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Isis")
-    def advertise_ipv4_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_isis(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         ISIS
           - Default value: `false`
@@ -416,24 +416,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_isis")
 
     @advertise_ipv4_isis.setter
-    def advertise_ipv4_isis(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_isis(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_isis", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4IsisVariable")
-    def advertise_ipv4_isis_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_isis_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_isis_variable")
 
     @advertise_ipv4_isis_variable.setter
-    def advertise_ipv4_isis_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_isis_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_isis_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Lisp")
-    def advertise_ipv4_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_lisp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         LISP
           - Default value: `false`
@@ -441,24 +441,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_lisp")
 
     @advertise_ipv4_lisp.setter
-    def advertise_ipv4_lisp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_lisp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_lisp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4LispVariable")
-    def advertise_ipv4_lisp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_lisp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_lisp_variable")
 
     @advertise_ipv4_lisp_variable.setter
-    def advertise_ipv4_lisp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_lisp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_lisp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Ospf")
-    def advertise_ipv4_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_ospf(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         OSPF
           - Default value: `false`
@@ -466,12 +466,12 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_ospf")
 
     @advertise_ipv4_ospf.setter
-    def advertise_ipv4_ospf(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_ospf(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_ospf", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4OspfV3")
-    def advertise_ipv4_ospf_v3(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_ospf_v3(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         OSPFV3
           - Default value: `false`
@@ -479,36 +479,36 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_ospf_v3")
 
     @advertise_ipv4_ospf_v3.setter
-    def advertise_ipv4_ospf_v3(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_ospf_v3(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_ospf_v3", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4OspfV3Variable")
-    def advertise_ipv4_ospf_v3_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_ospf_v3_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_ospf_v3_variable")
 
     @advertise_ipv4_ospf_v3_variable.setter
-    def advertise_ipv4_ospf_v3_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_ospf_v3_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_ospf_v3_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4OspfVariable")
-    def advertise_ipv4_ospf_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_ospf_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_ospf_variable")
 
     @advertise_ipv4_ospf_variable.setter
-    def advertise_ipv4_ospf_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_ospf_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_ospf_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Static")
-    def advertise_ipv4_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_static(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Static
           - Default value: `true`
@@ -516,24 +516,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv4_static")
 
     @advertise_ipv4_static.setter
-    def advertise_ipv4_static(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_static(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_static", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4StaticVariable")
-    def advertise_ipv4_static_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_static_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_static_variable")
 
     @advertise_ipv4_static_variable.setter
-    def advertise_ipv4_static_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_static_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_static_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Bgp")
-    def advertise_ipv6_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_bgp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP
           - Default value: `false`
@@ -541,24 +541,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_bgp")
 
     @advertise_ipv6_bgp.setter
-    def advertise_ipv6_bgp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_bgp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_bgp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6BgpVariable")
-    def advertise_ipv6_bgp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_bgp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_bgp_variable")
 
     @advertise_ipv6_bgp_variable.setter
-    def advertise_ipv6_bgp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_bgp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_bgp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Connected")
-    def advertise_ipv6_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_connected(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Connected
           - Default value: `true`
@@ -566,24 +566,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_connected")
 
     @advertise_ipv6_connected.setter
-    def advertise_ipv6_connected(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_connected(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_connected", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6ConnectedVariable")
-    def advertise_ipv6_connected_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_connected_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_connected_variable")
 
     @advertise_ipv6_connected_variable.setter
-    def advertise_ipv6_connected_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_connected_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_connected_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Eigrp")
-    def advertise_ipv6_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_eigrp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         EIGRP
           - Default value: `false`
@@ -591,24 +591,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_eigrp")
 
     @advertise_ipv6_eigrp.setter
-    def advertise_ipv6_eigrp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_eigrp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_eigrp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6EigrpVariable")
-    def advertise_ipv6_eigrp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_eigrp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_eigrp_variable")
 
     @advertise_ipv6_eigrp_variable.setter
-    def advertise_ipv6_eigrp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_eigrp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_eigrp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Isis")
-    def advertise_ipv6_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_isis(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         ISIS
           - Default value: `false`
@@ -616,24 +616,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_isis")
 
     @advertise_ipv6_isis.setter
-    def advertise_ipv6_isis(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_isis(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_isis", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6IsisVariable")
-    def advertise_ipv6_isis_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_isis_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_isis_variable")
 
     @advertise_ipv6_isis_variable.setter
-    def advertise_ipv6_isis_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_isis_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_isis_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Lisp")
-    def advertise_ipv6_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_lisp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         LISP
           - Default value: `false`
@@ -641,24 +641,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_lisp")
 
     @advertise_ipv6_lisp.setter
-    def advertise_ipv6_lisp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_lisp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_lisp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6LispVariable")
-    def advertise_ipv6_lisp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_lisp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_lisp_variable")
 
     @advertise_ipv6_lisp_variable.setter
-    def advertise_ipv6_lisp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_lisp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_lisp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Ospf")
-    def advertise_ipv6_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_ospf(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         OSPF
           - Default value: `false`
@@ -666,24 +666,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_ospf")
 
     @advertise_ipv6_ospf.setter
-    def advertise_ipv6_ospf(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_ospf(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_ospf", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6OspfVariable")
-    def advertise_ipv6_ospf_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_ospf_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_ospf_variable")
 
     @advertise_ipv6_ospf_variable.setter
-    def advertise_ipv6_ospf_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_ospf_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_ospf_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Static")
-    def advertise_ipv6_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_static(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Static
           - Default value: `true`
@@ -691,24 +691,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertise_ipv6_static")
 
     @advertise_ipv6_static.setter
-    def advertise_ipv6_static(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_static(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_static", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6StaticVariable")
-    def advertise_ipv6_static_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_static_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_static_variable")
 
     @advertise_ipv6_static_variable.setter
-    def advertise_ipv6_static_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_static_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_static_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementInterval")
-    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def advertisement_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Advertisement Interval (seconds)
           - Range: `0`-`65535`
@@ -717,24 +717,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "advertisement_interval")
 
     @advertisement_interval.setter
-    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def advertisement_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "advertisement_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementIntervalVariable")
-    def advertisement_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertisement_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertisement_interval_variable")
 
     @advertisement_interval_variable.setter
-    def advertisement_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertisement_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertisement_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aspathAutoTranslation")
-    def aspath_auto_translation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def aspath_auto_translation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable BGP AS Path Auto-Translation
           - Default value: `false`
@@ -742,36 +742,36 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "aspath_auto_translation")
 
     @aspath_auto_translation.setter
-    def aspath_auto_translation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def aspath_auto_translation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "aspath_auto_translation", value)
 
     @_builtins.property
     @pulumi.getter(name="aspathAutoTranslationVariable")
-    def aspath_auto_translation_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aspath_auto_translation_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aspath_auto_translation_variable")
 
     @aspath_auto_translation_variable.setter
-    def aspath_auto_translation_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aspath_auto_translation_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aspath_auto_translation_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimit")
-    def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
           - Range: `1`-`0`
@@ -780,24 +780,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "ecmp_limit")
 
     @ecmp_limit.setter
-    def ecmp_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ecmp_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ecmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimitVariable")
-    def ecmp_limit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ecmp_limit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ecmp_limit_variable")
 
     @ecmp_limit_variable.setter
-    def ecmp_limit_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ecmp_limit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ecmp_limit_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimer")
-    def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eor_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EOR Timer
           - Range: `1`-`3600`
@@ -806,24 +806,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "eor_timer")
 
     @eor_timer.setter
-    def eor_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eor_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eor_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimerVariable")
-    def eor_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eor_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "eor_timer_variable")
 
     @eor_timer_variable.setter
-    def eor_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eor_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eor_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestart")
-    def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def graceful_restart(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Graceful Restart for OMP
           - Default value: `true`
@@ -831,12 +831,12 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "graceful_restart")
 
     @graceful_restart.setter
-    def graceful_restart(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def graceful_restart(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "graceful_restart", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimer")
-    def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def graceful_restart_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Graceful Restart Timer (seconds)
           - Range: `1`-`604800`
@@ -845,36 +845,36 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "graceful_restart_timer")
 
     @graceful_restart_timer.setter
-    def graceful_restart_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def graceful_restart_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "graceful_restart_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimerVariable")
-    def graceful_restart_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_timer_variable")
 
     @graceful_restart_timer_variable.setter
-    def graceful_restart_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartVariable")
-    def graceful_restart_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_variable")
 
     @graceful_restart_variable.setter
-    def graceful_restart_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
           - Default value: `60`
@@ -882,24 +882,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "holdtime")
 
     @holdtime.setter
-    def holdtime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def holdtime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "holdtime", value)
 
     @_builtins.property
     @pulumi.getter(name="holdtimeVariable")
-    def holdtime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def holdtime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "holdtime_variable")
 
     @holdtime_variable.setter
-    def holdtime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def holdtime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "holdtime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLength")
-    def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ignore_region_path_length(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Treat hierarchical and direct (secondary region) paths equally
           - Default value: `false`
@@ -907,36 +907,36 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "ignore_region_path_length")
 
     @ignore_region_path_length.setter
-    def ignore_region_path_length(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ignore_region_path_length(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ignore_region_path_length", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLengthVariable")
-    def ignore_region_path_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ignore_region_path_length_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ignore_region_path_length_variable")
 
     @ignore_region_path_length_variable.setter
-    def ignore_region_path_length_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ignore_region_path_length_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ignore_region_path_length_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4")
-    def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv4(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OMP Admin Distance IPv4
           - Range: `1`-`255`
@@ -945,24 +945,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
     @omp_admin_distance_ipv4.setter
-    def omp_admin_distance_ipv4(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv4(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4Variable")
-    def omp_admin_distance_ipv4_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv4_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv4_variable")
 
     @omp_admin_distance_ipv4_variable.setter
-    def omp_admin_distance_ipv4_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv4_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv4_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6")
-    def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv6(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OMP Admin Distance IPv6
           - Range: `1`-`255`
@@ -971,24 +971,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
     @omp_admin_distance_ipv6.setter
-    def omp_admin_distance_ipv6(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv6(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6Variable")
-    def omp_admin_distance_ipv6_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv6_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv6_variable")
 
     @omp_admin_distance_ipv6_variable.setter
-    def omp_admin_distance_ipv6_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv6_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv6_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAs")
-    def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def overlay_as(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Overlay AS Number
           - Range: `1`-`4294967295`
@@ -996,24 +996,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "overlay_as")
 
     @overlay_as.setter
-    def overlay_as(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def overlay_as(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "overlay_as", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAsVariable")
-    def overlay_as_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def overlay_as_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "overlay_as_variable")
 
     @overlay_as_variable.setter
-    def overlay_as_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def overlay_as_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "overlay_as_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="pathsAdvertisedPerPrefix")
-    def paths_advertised_per_prefix(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def paths_advertised_per_prefix(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of Paths Advertised per Prefix
           - Range: `1`-`16`
@@ -1022,24 +1022,24 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "paths_advertised_per_prefix")
 
     @paths_advertised_per_prefix.setter
-    def paths_advertised_per_prefix(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def paths_advertised_per_prefix(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "paths_advertised_per_prefix", value)
 
     @_builtins.property
     @pulumi.getter(name="pathsAdvertisedPerPrefixVariable")
-    def paths_advertised_per_prefix_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def paths_advertised_per_prefix_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "paths_advertised_per_prefix_variable")
 
     @paths_advertised_per_prefix_variable.setter
-    def paths_advertised_per_prefix_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def paths_advertised_per_prefix_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "paths_advertised_per_prefix_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Shutdown
           - Default value: `false`
@@ -1047,72 +1047,72 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypes")
-    def site_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def site_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Site Types for 20.12 backward compatiblity
         """
         return pulumi.get(self, "site_types")
 
     @site_types.setter
-    def site_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def site_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "site_types", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesForTransportGatewayVariable")
-    def site_types_for_transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def site_types_for_transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "site_types_for_transport_gateway_variable")
 
     @site_types_for_transport_gateway_variable.setter
-    def site_types_for_transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def site_types_for_transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "site_types_for_transport_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesForTransportGateways")
-    def site_types_for_transport_gateways(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def site_types_for_transport_gateways(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Site Types
         """
         return pulumi.get(self, "site_types_for_transport_gateways")
 
     @site_types_for_transport_gateways.setter
-    def site_types_for_transport_gateways(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def site_types_for_transport_gateways(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "site_types_for_transport_gateways", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesVariable")
-    def site_types_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def site_types_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "site_types_variable")
 
     @site_types_variable.setter
-    def site_types_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def site_types_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "site_types_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")
-    def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Transport Gateway Path Behavior
           - Choices: `prefer`, `ecmp-with-direct-path`
@@ -1120,91 +1120,91 @@ class SystemOmpFeatureArgs:
         return pulumi.get(self, "transport_gateway")
 
     @transport_gateway.setter
-    def transport_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGatewayVariable")
-    def transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "transport_gateway_variable")
 
     @transport_gateway_variable.setter
-    def transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway_variable", value)
 
 
 @pulumi.input_type
 class _SystemOmpFeatureState:
     def __init__(__self__, *,
-                 advertise_ipv4_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 paths_advertised_per_prefix: Optional[pulumi.Input[_builtins.int]] = None,
-                 paths_advertised_per_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 advertise_ipv4_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aspath_auto_translation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 paths_advertised_per_prefix: pulumi.Input[Optional[_builtins.int]] = None,
+                 paths_advertised_per_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types_for_transport_gateways: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemOmpFeature resources.
 
@@ -1446,7 +1446,7 @@ class _SystemOmpFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Bgp")
-    def advertise_ipv4_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_bgp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP
           - Default value: `false`
@@ -1454,24 +1454,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_bgp")
 
     @advertise_ipv4_bgp.setter
-    def advertise_ipv4_bgp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_bgp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_bgp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4BgpVariable")
-    def advertise_ipv4_bgp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_bgp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_bgp_variable")
 
     @advertise_ipv4_bgp_variable.setter
-    def advertise_ipv4_bgp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_bgp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_bgp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Connected")
-    def advertise_ipv4_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_connected(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Connected
           - Default value: `true`
@@ -1479,24 +1479,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_connected")
 
     @advertise_ipv4_connected.setter
-    def advertise_ipv4_connected(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_connected(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_connected", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4ConnectedVariable")
-    def advertise_ipv4_connected_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_connected_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_connected_variable")
 
     @advertise_ipv4_connected_variable.setter
-    def advertise_ipv4_connected_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_connected_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_connected_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Eigrp")
-    def advertise_ipv4_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_eigrp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         EIGRP
           - Default value: `false`
@@ -1504,24 +1504,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_eigrp")
 
     @advertise_ipv4_eigrp.setter
-    def advertise_ipv4_eigrp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_eigrp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_eigrp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4EigrpVariable")
-    def advertise_ipv4_eigrp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_eigrp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_eigrp_variable")
 
     @advertise_ipv4_eigrp_variable.setter
-    def advertise_ipv4_eigrp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_eigrp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_eigrp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Isis")
-    def advertise_ipv4_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_isis(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         ISIS
           - Default value: `false`
@@ -1529,24 +1529,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_isis")
 
     @advertise_ipv4_isis.setter
-    def advertise_ipv4_isis(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_isis(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_isis", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4IsisVariable")
-    def advertise_ipv4_isis_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_isis_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_isis_variable")
 
     @advertise_ipv4_isis_variable.setter
-    def advertise_ipv4_isis_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_isis_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_isis_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Lisp")
-    def advertise_ipv4_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_lisp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         LISP
           - Default value: `false`
@@ -1554,24 +1554,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_lisp")
 
     @advertise_ipv4_lisp.setter
-    def advertise_ipv4_lisp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_lisp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_lisp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4LispVariable")
-    def advertise_ipv4_lisp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_lisp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_lisp_variable")
 
     @advertise_ipv4_lisp_variable.setter
-    def advertise_ipv4_lisp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_lisp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_lisp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Ospf")
-    def advertise_ipv4_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_ospf(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         OSPF
           - Default value: `false`
@@ -1579,12 +1579,12 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_ospf")
 
     @advertise_ipv4_ospf.setter
-    def advertise_ipv4_ospf(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_ospf(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_ospf", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4OspfV3")
-    def advertise_ipv4_ospf_v3(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_ospf_v3(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         OSPFV3
           - Default value: `false`
@@ -1592,36 +1592,36 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_ospf_v3")
 
     @advertise_ipv4_ospf_v3.setter
-    def advertise_ipv4_ospf_v3(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_ospf_v3(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_ospf_v3", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4OspfV3Variable")
-    def advertise_ipv4_ospf_v3_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_ospf_v3_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_ospf_v3_variable")
 
     @advertise_ipv4_ospf_v3_variable.setter
-    def advertise_ipv4_ospf_v3_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_ospf_v3_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_ospf_v3_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4OspfVariable")
-    def advertise_ipv4_ospf_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_ospf_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_ospf_variable")
 
     @advertise_ipv4_ospf_variable.setter
-    def advertise_ipv4_ospf_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_ospf_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_ospf_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4Static")
-    def advertise_ipv4_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv4_static(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Static
           - Default value: `true`
@@ -1629,24 +1629,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv4_static")
 
     @advertise_ipv4_static.setter
-    def advertise_ipv4_static(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv4_static(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv4_static", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv4StaticVariable")
-    def advertise_ipv4_static_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv4_static_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv4_static_variable")
 
     @advertise_ipv4_static_variable.setter
-    def advertise_ipv4_static_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv4_static_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv4_static_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Bgp")
-    def advertise_ipv6_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_bgp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         BGP
           - Default value: `false`
@@ -1654,24 +1654,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_bgp")
 
     @advertise_ipv6_bgp.setter
-    def advertise_ipv6_bgp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_bgp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_bgp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6BgpVariable")
-    def advertise_ipv6_bgp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_bgp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_bgp_variable")
 
     @advertise_ipv6_bgp_variable.setter
-    def advertise_ipv6_bgp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_bgp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_bgp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Connected")
-    def advertise_ipv6_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_connected(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Connected
           - Default value: `true`
@@ -1679,24 +1679,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_connected")
 
     @advertise_ipv6_connected.setter
-    def advertise_ipv6_connected(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_connected(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_connected", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6ConnectedVariable")
-    def advertise_ipv6_connected_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_connected_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_connected_variable")
 
     @advertise_ipv6_connected_variable.setter
-    def advertise_ipv6_connected_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_connected_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_connected_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Eigrp")
-    def advertise_ipv6_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_eigrp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         EIGRP
           - Default value: `false`
@@ -1704,24 +1704,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_eigrp")
 
     @advertise_ipv6_eigrp.setter
-    def advertise_ipv6_eigrp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_eigrp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_eigrp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6EigrpVariable")
-    def advertise_ipv6_eigrp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_eigrp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_eigrp_variable")
 
     @advertise_ipv6_eigrp_variable.setter
-    def advertise_ipv6_eigrp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_eigrp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_eigrp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Isis")
-    def advertise_ipv6_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_isis(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         ISIS
           - Default value: `false`
@@ -1729,24 +1729,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_isis")
 
     @advertise_ipv6_isis.setter
-    def advertise_ipv6_isis(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_isis(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_isis", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6IsisVariable")
-    def advertise_ipv6_isis_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_isis_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_isis_variable")
 
     @advertise_ipv6_isis_variable.setter
-    def advertise_ipv6_isis_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_isis_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_isis_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Lisp")
-    def advertise_ipv6_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_lisp(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         LISP
           - Default value: `false`
@@ -1754,24 +1754,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_lisp")
 
     @advertise_ipv6_lisp.setter
-    def advertise_ipv6_lisp(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_lisp(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_lisp", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6LispVariable")
-    def advertise_ipv6_lisp_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_lisp_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_lisp_variable")
 
     @advertise_ipv6_lisp_variable.setter
-    def advertise_ipv6_lisp_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_lisp_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_lisp_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Ospf")
-    def advertise_ipv6_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_ospf(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         OSPF
           - Default value: `false`
@@ -1779,24 +1779,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_ospf")
 
     @advertise_ipv6_ospf.setter
-    def advertise_ipv6_ospf(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_ospf(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_ospf", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6OspfVariable")
-    def advertise_ipv6_ospf_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_ospf_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_ospf_variable")
 
     @advertise_ipv6_ospf_variable.setter
-    def advertise_ipv6_ospf_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_ospf_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_ospf_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6Static")
-    def advertise_ipv6_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def advertise_ipv6_static(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Static
           - Default value: `true`
@@ -1804,24 +1804,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertise_ipv6_static")
 
     @advertise_ipv6_static.setter
-    def advertise_ipv6_static(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def advertise_ipv6_static(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "advertise_ipv6_static", value)
 
     @_builtins.property
     @pulumi.getter(name="advertiseIpv6StaticVariable")
-    def advertise_ipv6_static_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertise_ipv6_static_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertise_ipv6_static_variable")
 
     @advertise_ipv6_static_variable.setter
-    def advertise_ipv6_static_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertise_ipv6_static_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertise_ipv6_static_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementInterval")
-    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def advertisement_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Advertisement Interval (seconds)
           - Range: `0`-`65535`
@@ -1830,24 +1830,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "advertisement_interval")
 
     @advertisement_interval.setter
-    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def advertisement_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "advertisement_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="advertisementIntervalVariable")
-    def advertisement_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def advertisement_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "advertisement_interval_variable")
 
     @advertisement_interval_variable.setter
-    def advertisement_interval_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def advertisement_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "advertisement_interval_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aspathAutoTranslation")
-    def aspath_auto_translation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def aspath_auto_translation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable BGP AS Path Auto-Translation
           - Default value: `false`
@@ -1855,36 +1855,36 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "aspath_auto_translation")
 
     @aspath_auto_translation.setter
-    def aspath_auto_translation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def aspath_auto_translation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "aspath_auto_translation", value)
 
     @_builtins.property
     @pulumi.getter(name="aspathAutoTranslationVariable")
-    def aspath_auto_translation_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aspath_auto_translation_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aspath_auto_translation_variable")
 
     @aspath_auto_translation_variable.setter
-    def aspath_auto_translation_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aspath_auto_translation_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aspath_auto_translation_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimit")
-    def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
           - Range: `1`-`0`
@@ -1893,24 +1893,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "ecmp_limit")
 
     @ecmp_limit.setter
-    def ecmp_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ecmp_limit(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ecmp_limit", value)
 
     @_builtins.property
     @pulumi.getter(name="ecmpLimitVariable")
-    def ecmp_limit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ecmp_limit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ecmp_limit_variable")
 
     @ecmp_limit_variable.setter
-    def ecmp_limit_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ecmp_limit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ecmp_limit_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimer")
-    def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def eor_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         EOR Timer
           - Range: `1`-`3600`
@@ -1919,36 +1919,36 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "eor_timer")
 
     @eor_timer.setter
-    def eor_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def eor_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "eor_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="eorTimerVariable")
-    def eor_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def eor_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "eor_timer_variable")
 
     @eor_timer_variable.setter
-    def eor_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def eor_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "eor_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestart")
-    def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def graceful_restart(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Graceful Restart for OMP
           - Default value: `true`
@@ -1956,12 +1956,12 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "graceful_restart")
 
     @graceful_restart.setter
-    def graceful_restart(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def graceful_restart(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "graceful_restart", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimer")
-    def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def graceful_restart_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Graceful Restart Timer (seconds)
           - Range: `1`-`604800`
@@ -1970,36 +1970,36 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "graceful_restart_timer")
 
     @graceful_restart_timer.setter
-    def graceful_restart_timer(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def graceful_restart_timer(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "graceful_restart_timer", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartTimerVariable")
-    def graceful_restart_timer_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_timer_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_timer_variable")
 
     @graceful_restart_timer_variable.setter
-    def graceful_restart_timer_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_timer_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_timer_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="gracefulRestartVariable")
-    def graceful_restart_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def graceful_restart_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "graceful_restart_variable")
 
     @graceful_restart_variable.setter
-    def graceful_restart_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def graceful_restart_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "graceful_restart_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
           - Default value: `60`
@@ -2007,24 +2007,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "holdtime")
 
     @holdtime.setter
-    def holdtime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def holdtime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "holdtime", value)
 
     @_builtins.property
     @pulumi.getter(name="holdtimeVariable")
-    def holdtime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def holdtime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "holdtime_variable")
 
     @holdtime_variable.setter
-    def holdtime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def holdtime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "holdtime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLength")
-    def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ignore_region_path_length(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Treat hierarchical and direct (secondary region) paths equally
           - Default value: `false`
@@ -2032,36 +2032,36 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "ignore_region_path_length")
 
     @ignore_region_path_length.setter
-    def ignore_region_path_length(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ignore_region_path_length(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ignore_region_path_length", value)
 
     @_builtins.property
     @pulumi.getter(name="ignoreRegionPathLengthVariable")
-    def ignore_region_path_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ignore_region_path_length_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ignore_region_path_length_variable")
 
     @ignore_region_path_length_variable.setter
-    def ignore_region_path_length_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ignore_region_path_length_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ignore_region_path_length_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4")
-    def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv4(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OMP Admin Distance IPv4
           - Range: `1`-`255`
@@ -2070,24 +2070,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
     @omp_admin_distance_ipv4.setter
-    def omp_admin_distance_ipv4(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv4(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv4", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv4Variable")
-    def omp_admin_distance_ipv4_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv4_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv4_variable")
 
     @omp_admin_distance_ipv4_variable.setter
-    def omp_admin_distance_ipv4_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv4_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv4_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6")
-    def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def omp_admin_distance_ipv6(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OMP Admin Distance IPv6
           - Range: `1`-`255`
@@ -2096,24 +2096,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
     @omp_admin_distance_ipv6.setter
-    def omp_admin_distance_ipv6(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def omp_admin_distance_ipv6(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "omp_admin_distance_ipv6", value)
 
     @_builtins.property
     @pulumi.getter(name="ompAdminDistanceIpv6Variable")
-    def omp_admin_distance_ipv6_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def omp_admin_distance_ipv6_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "omp_admin_distance_ipv6_variable")
 
     @omp_admin_distance_ipv6_variable.setter
-    def omp_admin_distance_ipv6_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def omp_admin_distance_ipv6_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "omp_admin_distance_ipv6_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAs")
-    def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def overlay_as(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Overlay AS Number
           - Range: `1`-`4294967295`
@@ -2121,24 +2121,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "overlay_as")
 
     @overlay_as.setter
-    def overlay_as(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def overlay_as(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "overlay_as", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayAsVariable")
-    def overlay_as_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def overlay_as_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "overlay_as_variable")
 
     @overlay_as_variable.setter
-    def overlay_as_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def overlay_as_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "overlay_as_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="pathsAdvertisedPerPrefix")
-    def paths_advertised_per_prefix(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def paths_advertised_per_prefix(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Number of Paths Advertised per Prefix
           - Range: `1`-`16`
@@ -2147,24 +2147,24 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "paths_advertised_per_prefix")
 
     @paths_advertised_per_prefix.setter
-    def paths_advertised_per_prefix(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def paths_advertised_per_prefix(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "paths_advertised_per_prefix", value)
 
     @_builtins.property
     @pulumi.getter(name="pathsAdvertisedPerPrefixVariable")
-    def paths_advertised_per_prefix_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def paths_advertised_per_prefix_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "paths_advertised_per_prefix_variable")
 
     @paths_advertised_per_prefix_variable.setter
-    def paths_advertised_per_prefix_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def paths_advertised_per_prefix_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "paths_advertised_per_prefix_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Shutdown
           - Default value: `false`
@@ -2172,72 +2172,72 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "shutdown")
 
     @shutdown.setter
-    def shutdown(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "shutdown", value)
 
     @_builtins.property
     @pulumi.getter(name="shutdownVariable")
-    def shutdown_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "shutdown_variable")
 
     @shutdown_variable.setter
-    def shutdown_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "shutdown_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypes")
-    def site_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def site_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Site Types for 20.12 backward compatiblity
         """
         return pulumi.get(self, "site_types")
 
     @site_types.setter
-    def site_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def site_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "site_types", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesForTransportGatewayVariable")
-    def site_types_for_transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def site_types_for_transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "site_types_for_transport_gateway_variable")
 
     @site_types_for_transport_gateway_variable.setter
-    def site_types_for_transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def site_types_for_transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "site_types_for_transport_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesForTransportGateways")
-    def site_types_for_transport_gateways(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def site_types_for_transport_gateways(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Site Types
         """
         return pulumi.get(self, "site_types_for_transport_gateways")
 
     @site_types_for_transport_gateways.setter
-    def site_types_for_transport_gateways(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def site_types_for_transport_gateways(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "site_types_for_transport_gateways", value)
 
     @_builtins.property
     @pulumi.getter(name="siteTypesVariable")
-    def site_types_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def site_types_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "site_types_variable")
 
     @site_types_variable.setter
-    def site_types_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def site_types_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "site_types_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")
-    def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Transport Gateway Path Behavior
           - Choices: `prefer`, `ecmp-with-direct-path`
@@ -2245,31 +2245,31 @@ class _SystemOmpFeatureState:
         return pulumi.get(self, "transport_gateway")
 
     @transport_gateway.setter
-    def transport_gateway(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGatewayVariable")
-    def transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "transport_gateway_variable")
 
     @transport_gateway_variable.setter
-    def transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -2279,71 +2279,71 @@ class SystemOmpFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 paths_advertised_per_prefix: Optional[pulumi.Input[_builtins.int]] = None,
-                 paths_advertised_per_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertise_ipv4_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aspath_auto_translation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 paths_advertised_per_prefix: pulumi.Input[Optional[_builtins.int]] = None,
+                 paths_advertised_per_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types_for_transport_gateways: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System OMP Feature.
@@ -2586,71 +2586,71 @@ class SystemOmpFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_ospf_v3_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv4_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv4_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertise_ipv6_static: Optional[pulumi.Input[_builtins.bool]] = None,
-                 advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-                 ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-                 graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-                 graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-                 holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-                 omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 paths_advertised_per_prefix: Optional[pulumi.Input[_builtins.int]] = None,
-                 paths_advertised_per_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-                 shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 advertise_ipv4_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_ospf_v3_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv4_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv4_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertise_ipv6_static: pulumi.Input[Optional[_builtins.bool]] = None,
+                 advertise_ipv6_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aspath_auto_translation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aspath_auto_translation_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+                 ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+                 graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+                 graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+                 holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+                 omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 paths_advertised_per_prefix: pulumi.Input[Optional[_builtins.int]] = None,
+                 paths_advertised_per_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_for_transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_types_for_transport_gateways: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 site_types_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -2738,72 +2738,72 @@ class SystemOmpFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advertise_ipv4_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_ospf_v3: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_ospf_v3_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv4_static: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv4_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_bgp: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_bgp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_connected: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_connected_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_eigrp: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_eigrp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_isis: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_isis_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_lisp: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_lisp_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_ospf: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_ospf_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertise_ipv6_static: Optional[pulumi.Input[_builtins.bool]] = None,
-            advertise_ipv6_static_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
-            advertisement_interval_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            aspath_auto_translation: Optional[pulumi.Input[_builtins.bool]] = None,
-            aspath_auto_translation_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            ecmp_limit: Optional[pulumi.Input[_builtins.int]] = None,
-            ecmp_limit_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            eor_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            eor_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            graceful_restart: Optional[pulumi.Input[_builtins.bool]] = None,
-            graceful_restart_timer: Optional[pulumi.Input[_builtins.int]] = None,
-            graceful_restart_timer_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            graceful_restart_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            holdtime: Optional[pulumi.Input[_builtins.int]] = None,
-            holdtime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ignore_region_path_length: Optional[pulumi.Input[_builtins.bool]] = None,
-            ignore_region_path_length_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            omp_admin_distance_ipv4: Optional[pulumi.Input[_builtins.int]] = None,
-            omp_admin_distance_ipv4_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            omp_admin_distance_ipv6: Optional[pulumi.Input[_builtins.int]] = None,
-            omp_admin_distance_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            overlay_as: Optional[pulumi.Input[_builtins.int]] = None,
-            overlay_as_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            paths_advertised_per_prefix: Optional[pulumi.Input[_builtins.int]] = None,
-            paths_advertised_per_prefix_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            shutdown: Optional[pulumi.Input[_builtins.bool]] = None,
-            shutdown_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            site_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            site_types_for_transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            site_types_for_transport_gateways: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            site_types_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            transport_gateway: Optional[pulumi.Input[_builtins.str]] = None,
-            transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemOmpFeature':
+            advertise_ipv4_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_ospf_v3: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_ospf_v3_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv4_static: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv4_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_bgp: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_bgp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_connected: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_connected_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_eigrp: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_eigrp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_isis: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_isis_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_lisp: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_lisp_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_ospf: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_ospf_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertise_ipv6_static: pulumi.Input[Optional[_builtins.bool]] = None,
+            advertise_ipv6_static_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            advertisement_interval: pulumi.Input[Optional[_builtins.int]] = None,
+            advertisement_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aspath_auto_translation: pulumi.Input[Optional[_builtins.bool]] = None,
+            aspath_auto_translation_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            ecmp_limit: pulumi.Input[Optional[_builtins.int]] = None,
+            ecmp_limit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            eor_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            eor_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            graceful_restart: pulumi.Input[Optional[_builtins.bool]] = None,
+            graceful_restart_timer: pulumi.Input[Optional[_builtins.int]] = None,
+            graceful_restart_timer_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            graceful_restart_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            holdtime: pulumi.Input[Optional[_builtins.int]] = None,
+            holdtime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ignore_region_path_length: pulumi.Input[Optional[_builtins.bool]] = None,
+            ignore_region_path_length_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv4: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv4_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            omp_admin_distance_ipv6: pulumi.Input[Optional[_builtins.int]] = None,
+            omp_admin_distance_ipv6_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            overlay_as: pulumi.Input[Optional[_builtins.int]] = None,
+            overlay_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            paths_advertised_per_prefix: pulumi.Input[Optional[_builtins.int]] = None,
+            paths_advertised_per_prefix_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+            shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            site_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            site_types_for_transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            site_types_for_transport_gateways: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            site_types_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_gateway: pulumi.Input[Optional[_builtins.str]] = None,
+            transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemOmpFeature':
         """
         Get an existing SystemOmpFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

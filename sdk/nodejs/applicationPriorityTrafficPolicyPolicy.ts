@@ -162,32 +162,32 @@ export interface ApplicationPriorityTrafficPolicyPolicyState {
     /**
      * - Choices: `drop`, `accept`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `service`, `tunnel`, `all`
      */
-    direction?: pulumi.Input<string>;
+    direction?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Traffic policy sequence list
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequence>[] | undefined>;
     /**
      * The version of the Policy
      */
-    version?: pulumi.Input<number>;
-    vpns?: pulumi.Input<pulumi.Input<string>[]>;
+    version?: pulumi.Input<number | undefined>;
+    vpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -201,7 +201,7 @@ export interface ApplicationPriorityTrafficPolicyPolicyArgs {
     /**
      * The description of the Policy
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `service`, `tunnel`, `all`
      */
@@ -213,10 +213,10 @@ export interface ApplicationPriorityTrafficPolicyPolicyArgs {
     /**
      * The name of the Policy
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Traffic policy sequence list
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequence>[] | undefined>;
     vpns: pulumi.Input<pulumi.Input<string>[]>;
 }

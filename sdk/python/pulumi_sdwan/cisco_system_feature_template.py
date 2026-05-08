@@ -23,78 +23,78 @@ class CiscoSystemFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 admin_tech_on_failure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 admin_tech_on_failure_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 affinity_group_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 console_baud_rate: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_baud_rate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 control_session_pps: Optional[pulumi.Input[_builtins.int]] = None,
-                 control_session_pps_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
-                 geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing_sms: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_sms_phone_numbers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]] = None,
-                 hostname: Optional[pulumi.Input[_builtins.str]] = None,
-                 hostname_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 latitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 location: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 longitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_omp_sessions: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_omp_sessions_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 multi_tenant: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multi_tenant_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_trackers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]] = None,
-                 on_demand_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
-                 on_demand_tunnel_idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 on_demand_tunnel_idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 on_demand_tunnel_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_hopping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_hopping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_offset: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_offset_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 site_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_default_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_interface_tag: Optional[pulumi.Input[_builtins.int]] = None,
-                 track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 admin_tech_on_failure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 admin_tech_on_failure_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 affinity_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 console_baud_rate: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_baud_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 control_session_pps: pulumi.Input[Optional[_builtins.int]] = None,
+                 control_session_pps_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_mrf_migration: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
+                 geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]] = None,
+                 hostname: pulumi.Input[Optional[_builtins.str]] = None,
+                 hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 latitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 location: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 longitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_omp_sessions: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_omp_sessions_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]] = None,
+                 on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
+                 on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 on_demand_tunnel_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_hopping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_hopping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_offset: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_offset_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 site_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_default_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_interface_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CiscoSystemFeatureTemplate resource.
 
@@ -384,7 +384,7 @@ class CiscoSystemFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="adminTechOnFailure")
-    def admin_tech_on_failure(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def admin_tech_on_failure(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Collect admin-tech before reboot due to daemon failure
           - Default value: `true`
@@ -392,24 +392,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "admin_tech_on_failure")
 
     @admin_tech_on_failure.setter
-    def admin_tech_on_failure(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def admin_tech_on_failure(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "admin_tech_on_failure", value)
 
     @_builtins.property
     @pulumi.getter(name="adminTechOnFailureVariable")
-    def admin_tech_on_failure_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admin_tech_on_failure_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "admin_tech_on_failure_variable")
 
     @admin_tech_on_failure_variable.setter
-    def admin_tech_on_failure_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admin_tech_on_failure_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admin_tech_on_failure_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupNumber")
-    def affinity_group_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def affinity_group_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the affinity group number for router
           - Range: `1`-`255`
@@ -417,48 +417,48 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "affinity_group_number")
 
     @affinity_group_number.setter
-    def affinity_group_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def affinity_group_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "affinity_group_number", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupNumberVariable")
-    def affinity_group_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def affinity_group_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "affinity_group_number_variable")
 
     @affinity_group_number_variable.setter
-    def affinity_group_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def affinity_group_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "affinity_group_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupPreferenceVariable")
-    def affinity_group_preference_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def affinity_group_preference_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "affinity_group_preference_variable")
 
     @affinity_group_preference_variable.setter
-    def affinity_group_preference_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def affinity_group_preference_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "affinity_group_preference_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupPreferences")
-    def affinity_group_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def affinity_group_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Set the affinity group preference
         """
         return pulumi.get(self, "affinity_group_preferences")
 
     @affinity_group_preferences.setter
-    def affinity_group_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def affinity_group_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "affinity_group_preferences", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleBaudRate")
-    def console_baud_rate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_baud_rate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the console baud rate
           - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
@@ -467,24 +467,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "console_baud_rate")
 
     @console_baud_rate.setter
-    def console_baud_rate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_baud_rate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_baud_rate", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleBaudRateVariable")
-    def console_baud_rate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_baud_rate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "console_baud_rate_variable")
 
     @console_baud_rate_variable.setter
-    def console_baud_rate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_baud_rate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_baud_rate_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="controlSessionPps")
-    def control_session_pps(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def control_session_pps(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the policer rate for control sessions
           - Range: `1`-`65535`
@@ -493,72 +493,72 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "control_session_pps")
 
     @control_session_pps.setter
-    def control_session_pps(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def control_session_pps(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "control_session_pps", value)
 
     @_builtins.property
     @pulumi.getter(name="controlSessionPpsVariable")
-    def control_session_pps_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def control_session_pps_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "control_session_pps_variable")
 
     @control_session_pps_variable.setter
-    def control_session_pps_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def control_session_pps_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "control_session_pps_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="controllerGroupListVariable")
-    def controller_group_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def controller_group_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "controller_group_list_variable")
 
     @controller_group_list_variable.setter
-    def controller_group_list_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def controller_group_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "controller_group_list_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="controllerGroupLists")
-    def controller_group_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def controller_group_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Configure a list of comma-separated device groups
         """
         return pulumi.get(self, "controller_group_lists")
 
     @controller_group_lists.setter
-    def controller_group_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def controller_group_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "controller_group_lists", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceGroups")
-    def device_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Device groups (Use comma(,) for multiple groups)
         """
         return pulumi.get(self, "device_groups")
 
     @device_groups.setter
-    def device_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceGroupsVariable")
-    def device_groups_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_groups_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "device_groups_variable")
 
     @device_groups_variable.setter
-    def device_groups_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_groups_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_groups_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMrfMigration")
-    def enable_mrf_migration(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_mrf_migration(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable migration mode to Multi-Region Fabric
           - Choices: `enabled`, `enabled-from-bgp-core`
@@ -566,12 +566,12 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "enable_mrf_migration")
 
     @enable_mrf_migration.setter
-    def enable_mrf_migration(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_mrf_migration(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_mrf_migration", value)
 
     @_builtins.property
     @pulumi.getter(name="enhancedAppAwareRouting")
-    def enhanced_app_aware_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enhanced_app_aware_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enhanced App Aware Routing
           - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
@@ -580,24 +580,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "enhanced_app_aware_routing")
 
     @enhanced_app_aware_routing.setter
-    def enhanced_app_aware_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enhanced_app_aware_routing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enhanced_app_aware_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="enhancedAppAwareRoutingVariable")
-    def enhanced_app_aware_routing_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enhanced_app_aware_routing_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enhanced_app_aware_routing_variable")
 
     @enhanced_app_aware_routing_variable.setter
-    def enhanced_app_aware_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enhanced_app_aware_routing_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enhanced_app_aware_routing_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencing")
-    def geo_fencing(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def geo_fencing(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Geo fencing
           - Default value: `false`
@@ -605,12 +605,12 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "geo_fencing")
 
     @geo_fencing.setter
-    def geo_fencing(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def geo_fencing(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "geo_fencing", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingRange")
-    def geo_fencing_range(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def geo_fencing_range(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the device’s geo fencing range
           - Range: `100`-`10000`
@@ -619,24 +619,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "geo_fencing_range")
 
     @geo_fencing_range.setter
-    def geo_fencing_range(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def geo_fencing_range(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "geo_fencing_range", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingRangeVariable")
-    def geo_fencing_range_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def geo_fencing_range_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "geo_fencing_range_variable")
 
     @geo_fencing_range_variable.setter
-    def geo_fencing_range_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def geo_fencing_range_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "geo_fencing_range_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingSms")
-    def geo_fencing_sms(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def geo_fencing_sms(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Geo fencing
           - Default value: `false`
@@ -644,48 +644,48 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "geo_fencing_sms")
 
     @geo_fencing_sms.setter
-    def geo_fencing_sms(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def geo_fencing_sms(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "geo_fencing_sms", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingSmsPhoneNumbers")
-    def geo_fencing_sms_phone_numbers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]:
+    def geo_fencing_sms_phone_numbers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]:
         """
         Set device’s geo fencing SMS phone number
         """
         return pulumi.get(self, "geo_fencing_sms_phone_numbers")
 
     @geo_fencing_sms_phone_numbers.setter
-    def geo_fencing_sms_phone_numbers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]):
+    def geo_fencing_sms_phone_numbers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]):
         pulumi.set(self, "geo_fencing_sms_phone_numbers", value)
 
     @_builtins.property
     @pulumi.getter
-    def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hostname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the hostname
         """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
-    def hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hostname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hostname", value)
 
     @_builtins.property
     @pulumi.getter(name="hostnameVariable")
-    def hostname_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hostname_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hostname_variable")
 
     @hostname_variable.setter
-    def hostname_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hostname_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hostname_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimeout")
-    def idle_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def idle_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Idle CLI timeout in minutes
           - Range: `0`-`300`
@@ -693,24 +693,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "idle_timeout")
 
     @idle_timeout.setter
-    def idle_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def idle_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "idle_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimeoutVariable")
-    def idle_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def idle_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "idle_timeout_variable")
 
     @idle_timeout_variable.setter
-    def idle_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def idle_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "idle_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def latitude(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def latitude(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Set the device’s physical latitude
           - Range: `-90`-`90`
@@ -718,48 +718,48 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "latitude")
 
     @latitude.setter
-    def latitude(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def latitude(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "latitude", value)
 
     @_builtins.property
     @pulumi.getter(name="latitudeVariable")
-    def latitude_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def latitude_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "latitude_variable")
 
     @latitude_variable.setter
-    def latitude_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def latitude_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "latitude_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def location(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def location(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the location of the device
         """
         return pulumi.get(self, "location")
 
     @location.setter
-    def location(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def location(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "location", value)
 
     @_builtins.property
     @pulumi.getter(name="locationVariable")
-    def location_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def location_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "location_variable")
 
     @location_variable.setter
-    def location_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def location_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "location_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def longitude(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def longitude(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Set the device’s physical longitude
           - Range: `-180`-`180`
@@ -767,24 +767,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "longitude")
 
     @longitude.setter
-    def longitude(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def longitude(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "longitude", value)
 
     @_builtins.property
     @pulumi.getter(name="longitudeVariable")
-    def longitude_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def longitude_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "longitude_variable")
 
     @longitude_variable.setter
-    def longitude_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def longitude_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "longitude_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="maxOmpSessions")
-    def max_omp_sessions(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_omp_sessions(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the maximum number of OMP sessions <1..100> the device can have
           - Range: `1`-`100`
@@ -792,24 +792,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "max_omp_sessions")
 
     @max_omp_sessions.setter
-    def max_omp_sessions(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_omp_sessions(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_omp_sessions", value)
 
     @_builtins.property
     @pulumi.getter(name="maxOmpSessionsVariable")
-    def max_omp_sessions_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_omp_sessions_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "max_omp_sessions_variable")
 
     @max_omp_sessions_variable.setter
-    def max_omp_sessions_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_omp_sessions_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_omp_sessions_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="migrationBgpCommunity")
-    def migration_bgp_community(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def migration_bgp_community(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set BGP community during migration from BGP-core based network
           - Range: `1`-`4294967295`
@@ -817,12 +817,12 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "migration_bgp_community")
 
     @migration_bgp_community.setter
-    def migration_bgp_community(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def migration_bgp_community(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "migration_bgp_community", value)
 
     @_builtins.property
     @pulumi.getter(name="multiTenant")
-    def multi_tenant(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def multi_tenant(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Device is multi-tenant
           - Default value: `false`
@@ -830,48 +830,48 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "multi_tenant")
 
     @multi_tenant.setter
-    def multi_tenant(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def multi_tenant(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "multi_tenant", value)
 
     @_builtins.property
     @pulumi.getter(name="multiTenantVariable")
-    def multi_tenant_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multi_tenant_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multi_tenant_variable")
 
     @multi_tenant_variable.setter
-    def multi_tenant_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multi_tenant_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multi_tenant_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackers")
-    def object_trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]:
+    def object_trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]:
         """
         Object Track configuration
         """
         return pulumi.get(self, "object_trackers")
 
     @object_trackers.setter
-    def object_trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]):
+    def object_trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]):
         pulumi.set(self, "object_trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnel")
-    def on_demand_tunnel(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def on_demand_tunnel(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable On-demand Tunnel
           - Default value: `false`
@@ -879,12 +879,12 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "on_demand_tunnel")
 
     @on_demand_tunnel.setter
-    def on_demand_tunnel(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def on_demand_tunnel(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "on_demand_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnelIdleTimeout")
-    def on_demand_tunnel_idle_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def on_demand_tunnel_idle_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Idle CLI timeout in minutes
           - Range: `0`-`300`
@@ -892,36 +892,36 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "on_demand_tunnel_idle_timeout")
 
     @on_demand_tunnel_idle_timeout.setter
-    def on_demand_tunnel_idle_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def on_demand_tunnel_idle_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "on_demand_tunnel_idle_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnelIdleTimeoutVariable")
-    def on_demand_tunnel_idle_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def on_demand_tunnel_idle_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "on_demand_tunnel_idle_timeout_variable")
 
     @on_demand_tunnel_idle_timeout_variable.setter
-    def on_demand_tunnel_idle_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def on_demand_tunnel_idle_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "on_demand_tunnel_idle_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnelVariable")
-    def on_demand_tunnel_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def on_demand_tunnel_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "on_demand_tunnel_variable")
 
     @on_demand_tunnel_variable.setter
-    def on_demand_tunnel_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def on_demand_tunnel_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "on_demand_tunnel_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayId")
-    def overlay_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def overlay_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the Overlay ID
           - Range: `1`-`4294967295`
@@ -930,24 +930,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "overlay_id")
 
     @overlay_id.setter
-    def overlay_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def overlay_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "overlay_id", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayIdVariable")
-    def overlay_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def overlay_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "overlay_id_variable")
 
     @overlay_id_variable.setter
-    def overlay_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def overlay_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "overlay_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="portHopping")
-    def port_hopping(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def port_hopping(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable port hopping
           - Default value: `true`
@@ -955,24 +955,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "port_hopping")
 
     @port_hopping.setter
-    def port_hopping(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def port_hopping(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "port_hopping", value)
 
     @_builtins.property
     @pulumi.getter(name="portHoppingVariable")
-    def port_hopping_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_hopping_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "port_hopping_variable")
 
     @port_hopping_variable.setter
-    def port_hopping_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_hopping_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_hopping_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="portOffset")
-    def port_offset(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port_offset(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the TLOC port offset when multiple devices are behind a NAT
           - Range: `0`-`19`
@@ -981,24 +981,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "port_offset")
 
     @port_offset.setter
-    def port_offset(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port_offset(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port_offset", value)
 
     @_builtins.property
     @pulumi.getter(name="portOffsetVariable")
-    def port_offset_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_offset_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "port_offset_variable")
 
     @port_offset_variable.setter
-    def port_offset_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_offset_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_offset_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="regionId")
-    def region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def region_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set region ID
           - Range: `1`-`63`
@@ -1006,24 +1006,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "region_id")
 
     @region_id.setter
-    def region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def region_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "region_id", value)
 
     @_builtins.property
     @pulumi.getter(name="regionIdVariable")
-    def region_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def region_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "region_id_variable")
 
     @region_id_variable.setter
-    def region_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def region_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the role for router
           - Choices: `edge-router`, `border-router`
@@ -1031,24 +1031,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "role")
 
     @role.setter
-    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="roleVariable")
-    def role_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "role_variable")
 
     @role_variable.setter
-    def role_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionId")
-    def secondary_region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def secondary_region_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set secondary region ID
           - Range: `1`-`63`
@@ -1056,24 +1056,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "secondary_region_id")
 
     @secondary_region_id.setter
-    def secondary_region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def secondary_region_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "secondary_region_id", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionIdVariable")
-    def secondary_region_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_region_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "secondary_region_id_variable")
 
     @secondary_region_id_variable.setter
-    def secondary_region_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_region_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_region_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="siteId")
-    def site_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def site_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the site identifier
           - Range: `1`-`4294967295`
@@ -1081,72 +1081,72 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "site_id")
 
     @site_id.setter
-    def site_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def site_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "site_id", value)
 
     @_builtins.property
     @pulumi.getter(name="siteIdVariable")
-    def site_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def site_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "site_id_variable")
 
     @site_id_variable.setter
-    def site_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def site_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "site_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="systemDescription")
-    def system_description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set a text description of the device
         """
         return pulumi.get(self, "system_description")
 
     @system_description.setter
-    def system_description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_description", value)
 
     @_builtins.property
     @pulumi.getter(name="systemDescriptionVariable")
-    def system_description_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "system_description_variable")
 
     @system_description_variable.setter
-    def system_description_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_description_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="systemIp")
-    def system_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the system IP address
         """
         return pulumi.get(self, "system_ip")
 
     @system_ip.setter
-    def system_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="systemIpVariable")
-    def system_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "system_ip_variable")
 
     @system_ip_variable.setter
-    def system_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def timezone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timezone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the timezone
           - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
@@ -1155,24 +1155,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "timezone")
 
     @timezone.setter
-    def timezone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timezone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timezone", value)
 
     @_builtins.property
     @pulumi.getter(name="timezoneVariable")
-    def timezone_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timezone_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timezone_variable")
 
     @timezone_variable.setter
-    def timezone_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timezone_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timezone_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackDefaultGateway")
-    def track_default_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def track_default_gateway(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable default gateway tracking
           - Default value: `true`
@@ -1180,24 +1180,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "track_default_gateway")
 
     @track_default_gateway.setter
-    def track_default_gateway(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def track_default_gateway(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "track_default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="trackDefaultGatewayVariable")
-    def track_default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "track_default_gateway_variable")
 
     @track_default_gateway_variable.setter
-    def track_default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "track_default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackInterfaceTag")
-    def track_interface_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def track_interface_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OMP Tag attached to routes based on interface tracking
           - Range: `1`-`4294967295`
@@ -1205,24 +1205,24 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "track_interface_tag")
 
     @track_interface_tag.setter
-    def track_interface_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def track_interface_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "track_interface_tag", value)
 
     @_builtins.property
     @pulumi.getter(name="trackInterfaceTagVariable")
-    def track_interface_tag_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_interface_tag_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "track_interface_tag_variable")
 
     @track_interface_tag_variable.setter
-    def track_interface_tag_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_interface_tag_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "track_interface_tag_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackTransport")
-    def track_transport(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def track_transport(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tracking of transport
           - Default value: `true`
@@ -1230,36 +1230,36 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "track_transport")
 
     @track_transport.setter
-    def track_transport(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def track_transport(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "track_transport", value)
 
     @_builtins.property
     @pulumi.getter(name="trackTransportVariable")
-    def track_transport_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_transport_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "track_transport_variable")
 
     @track_transport_variable.setter
-    def track_transport_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_transport_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "track_transport_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]:
+    def trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]:
         """
         Tracker configuration
         """
         return pulumi.get(self, "trackers")
 
     @trackers.setter
-    def trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]):
+    def trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]):
         pulumi.set(self, "trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")
-    def transport_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def transport_gateway(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable transport gateway
           - Default value: `false`
@@ -1267,101 +1267,101 @@ class CiscoSystemFeatureTemplateArgs:
         return pulumi.get(self, "transport_gateway")
 
     @transport_gateway.setter
-    def transport_gateway(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def transport_gateway(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "transport_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGatewayVariable")
-    def transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "transport_gateway_variable")
 
     @transport_gateway_variable.setter
-    def transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway_variable", value)
 
 
 @pulumi.input_type
 class _CiscoSystemFeatureTemplateState:
     def __init__(__self__, *,
-                 admin_tech_on_failure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 admin_tech_on_failure_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 affinity_group_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 console_baud_rate: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_baud_rate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 control_session_pps: Optional[pulumi.Input[_builtins.int]] = None,
-                 control_session_pps_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
-                 geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing_sms: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_sms_phone_numbers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]] = None,
-                 hostname: Optional[pulumi.Input[_builtins.str]] = None,
-                 hostname_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 latitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 location: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 longitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_omp_sessions: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_omp_sessions_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 multi_tenant: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multi_tenant_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_trackers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]] = None,
-                 on_demand_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
-                 on_demand_tunnel_idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 on_demand_tunnel_idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 on_demand_tunnel_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_hopping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_hopping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_offset: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_offset_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 site_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_default_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_interface_tag: Optional[pulumi.Input[_builtins.int]] = None,
-                 track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 admin_tech_on_failure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 admin_tech_on_failure_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 affinity_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 console_baud_rate: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_baud_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 control_session_pps: pulumi.Input[Optional[_builtins.int]] = None,
+                 control_session_pps_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enable_mrf_migration: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
+                 geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]] = None,
+                 hostname: pulumi.Input[Optional[_builtins.str]] = None,
+                 hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 latitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 location: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 longitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_omp_sessions: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_omp_sessions_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]] = None,
+                 on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
+                 on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 on_demand_tunnel_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_hopping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_hopping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_offset: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_offset_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 site_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_default_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_interface_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoSystemFeatureTemplate resources.
 
@@ -1634,7 +1634,7 @@ class _CiscoSystemFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="adminTechOnFailure")
-    def admin_tech_on_failure(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def admin_tech_on_failure(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Collect admin-tech before reboot due to daemon failure
           - Default value: `true`
@@ -1642,24 +1642,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "admin_tech_on_failure")
 
     @admin_tech_on_failure.setter
-    def admin_tech_on_failure(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def admin_tech_on_failure(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "admin_tech_on_failure", value)
 
     @_builtins.property
     @pulumi.getter(name="adminTechOnFailureVariable")
-    def admin_tech_on_failure_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def admin_tech_on_failure_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "admin_tech_on_failure_variable")
 
     @admin_tech_on_failure_variable.setter
-    def admin_tech_on_failure_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def admin_tech_on_failure_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "admin_tech_on_failure_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupNumber")
-    def affinity_group_number(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def affinity_group_number(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the affinity group number for router
           - Range: `1`-`255`
@@ -1667,48 +1667,48 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "affinity_group_number")
 
     @affinity_group_number.setter
-    def affinity_group_number(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def affinity_group_number(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "affinity_group_number", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupNumberVariable")
-    def affinity_group_number_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def affinity_group_number_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "affinity_group_number_variable")
 
     @affinity_group_number_variable.setter
-    def affinity_group_number_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def affinity_group_number_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "affinity_group_number_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupPreferenceVariable")
-    def affinity_group_preference_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def affinity_group_preference_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "affinity_group_preference_variable")
 
     @affinity_group_preference_variable.setter
-    def affinity_group_preference_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def affinity_group_preference_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "affinity_group_preference_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="affinityGroupPreferences")
-    def affinity_group_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def affinity_group_preferences(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Set the affinity group preference
         """
         return pulumi.get(self, "affinity_group_preferences")
 
     @affinity_group_preferences.setter
-    def affinity_group_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def affinity_group_preferences(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "affinity_group_preferences", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleBaudRate")
-    def console_baud_rate(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_baud_rate(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the console baud rate
           - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
@@ -1717,24 +1717,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "console_baud_rate")
 
     @console_baud_rate.setter
-    def console_baud_rate(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_baud_rate(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_baud_rate", value)
 
     @_builtins.property
     @pulumi.getter(name="consoleBaudRateVariable")
-    def console_baud_rate_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def console_baud_rate_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "console_baud_rate_variable")
 
     @console_baud_rate_variable.setter
-    def console_baud_rate_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def console_baud_rate_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "console_baud_rate_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="controlSessionPps")
-    def control_session_pps(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def control_session_pps(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the policer rate for control sessions
           - Range: `1`-`65535`
@@ -1743,84 +1743,84 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "control_session_pps")
 
     @control_session_pps.setter
-    def control_session_pps(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def control_session_pps(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "control_session_pps", value)
 
     @_builtins.property
     @pulumi.getter(name="controlSessionPpsVariable")
-    def control_session_pps_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def control_session_pps_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "control_session_pps_variable")
 
     @control_session_pps_variable.setter
-    def control_session_pps_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def control_session_pps_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "control_session_pps_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="controllerGroupListVariable")
-    def controller_group_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def controller_group_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "controller_group_list_variable")
 
     @controller_group_list_variable.setter
-    def controller_group_list_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def controller_group_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "controller_group_list_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="controllerGroupLists")
-    def controller_group_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
+    def controller_group_lists(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]:
         """
         Configure a list of comma-separated device groups
         """
         return pulumi.get(self, "controller_group_lists")
 
     @controller_group_lists.setter
-    def controller_group_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]):
+    def controller_group_lists(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]]):
         pulumi.set(self, "controller_group_lists", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceGroups")
-    def device_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_groups(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Device groups (Use comma(,) for multiple groups)
         """
         return pulumi.get(self, "device_groups")
 
     @device_groups.setter
-    def device_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_groups(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_groups", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceGroupsVariable")
-    def device_groups_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def device_groups_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "device_groups_variable")
 
     @device_groups_variable.setter
-    def device_groups_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def device_groups_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "device_groups_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -1828,12 +1828,12 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter(name="enableMrfMigration")
-    def enable_mrf_migration(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_mrf_migration(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enable migration mode to Multi-Region Fabric
           - Choices: `enabled`, `enabled-from-bgp-core`
@@ -1841,12 +1841,12 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "enable_mrf_migration")
 
     @enable_mrf_migration.setter
-    def enable_mrf_migration(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_mrf_migration(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_mrf_migration", value)
 
     @_builtins.property
     @pulumi.getter(name="enhancedAppAwareRouting")
-    def enhanced_app_aware_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enhanced_app_aware_routing(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Enhanced App Aware Routing
           - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
@@ -1855,24 +1855,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "enhanced_app_aware_routing")
 
     @enhanced_app_aware_routing.setter
-    def enhanced_app_aware_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enhanced_app_aware_routing(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enhanced_app_aware_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="enhancedAppAwareRoutingVariable")
-    def enhanced_app_aware_routing_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enhanced_app_aware_routing_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enhanced_app_aware_routing_variable")
 
     @enhanced_app_aware_routing_variable.setter
-    def enhanced_app_aware_routing_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enhanced_app_aware_routing_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enhanced_app_aware_routing_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencing")
-    def geo_fencing(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def geo_fencing(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Geo fencing
           - Default value: `false`
@@ -1880,12 +1880,12 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "geo_fencing")
 
     @geo_fencing.setter
-    def geo_fencing(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def geo_fencing(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "geo_fencing", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingRange")
-    def geo_fencing_range(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def geo_fencing_range(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the device’s geo fencing range
           - Range: `100`-`10000`
@@ -1894,24 +1894,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "geo_fencing_range")
 
     @geo_fencing_range.setter
-    def geo_fencing_range(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def geo_fencing_range(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "geo_fencing_range", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingRangeVariable")
-    def geo_fencing_range_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def geo_fencing_range_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "geo_fencing_range_variable")
 
     @geo_fencing_range_variable.setter
-    def geo_fencing_range_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def geo_fencing_range_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "geo_fencing_range_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingSms")
-    def geo_fencing_sms(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def geo_fencing_sms(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Geo fencing
           - Default value: `false`
@@ -1919,48 +1919,48 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "geo_fencing_sms")
 
     @geo_fencing_sms.setter
-    def geo_fencing_sms(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def geo_fencing_sms(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "geo_fencing_sms", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencingSmsPhoneNumbers")
-    def geo_fencing_sms_phone_numbers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]:
+    def geo_fencing_sms_phone_numbers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]:
         """
         Set device’s geo fencing SMS phone number
         """
         return pulumi.get(self, "geo_fencing_sms_phone_numbers")
 
     @geo_fencing_sms_phone_numbers.setter
-    def geo_fencing_sms_phone_numbers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]):
+    def geo_fencing_sms_phone_numbers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs']]]]):
         pulumi.set(self, "geo_fencing_sms_phone_numbers", value)
 
     @_builtins.property
     @pulumi.getter
-    def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hostname(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the hostname
         """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
-    def hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hostname(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hostname", value)
 
     @_builtins.property
     @pulumi.getter(name="hostnameVariable")
-    def hostname_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def hostname_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "hostname_variable")
 
     @hostname_variable.setter
-    def hostname_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def hostname_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "hostname_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimeout")
-    def idle_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def idle_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Idle CLI timeout in minutes
           - Range: `0`-`300`
@@ -1968,24 +1968,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "idle_timeout")
 
     @idle_timeout.setter
-    def idle_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def idle_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "idle_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="idleTimeoutVariable")
-    def idle_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def idle_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "idle_timeout_variable")
 
     @idle_timeout_variable.setter
-    def idle_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def idle_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "idle_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def latitude(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def latitude(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Set the device’s physical latitude
           - Range: `-90`-`90`
@@ -1993,48 +1993,48 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "latitude")
 
     @latitude.setter
-    def latitude(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def latitude(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "latitude", value)
 
     @_builtins.property
     @pulumi.getter(name="latitudeVariable")
-    def latitude_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def latitude_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "latitude_variable")
 
     @latitude_variable.setter
-    def latitude_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def latitude_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "latitude_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def location(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def location(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the location of the device
         """
         return pulumi.get(self, "location")
 
     @location.setter
-    def location(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def location(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "location", value)
 
     @_builtins.property
     @pulumi.getter(name="locationVariable")
-    def location_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def location_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "location_variable")
 
     @location_variable.setter
-    def location_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def location_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "location_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def longitude(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def longitude(self) -> pulumi.Input[Optional[_builtins.float]]:
         """
         Set the device’s physical longitude
           - Range: `-180`-`180`
@@ -2042,24 +2042,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "longitude")
 
     @longitude.setter
-    def longitude(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def longitude(self, value: pulumi.Input[Optional[_builtins.float]]):
         pulumi.set(self, "longitude", value)
 
     @_builtins.property
     @pulumi.getter(name="longitudeVariable")
-    def longitude_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def longitude_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "longitude_variable")
 
     @longitude_variable.setter
-    def longitude_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def longitude_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "longitude_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="maxOmpSessions")
-    def max_omp_sessions(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def max_omp_sessions(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the maximum number of OMP sessions <1..100> the device can have
           - Range: `1`-`100`
@@ -2067,24 +2067,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "max_omp_sessions")
 
     @max_omp_sessions.setter
-    def max_omp_sessions(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def max_omp_sessions(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "max_omp_sessions", value)
 
     @_builtins.property
     @pulumi.getter(name="maxOmpSessionsVariable")
-    def max_omp_sessions_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def max_omp_sessions_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "max_omp_sessions_variable")
 
     @max_omp_sessions_variable.setter
-    def max_omp_sessions_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def max_omp_sessions_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "max_omp_sessions_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="migrationBgpCommunity")
-    def migration_bgp_community(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def migration_bgp_community(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set BGP community during migration from BGP-core based network
           - Range: `1`-`4294967295`
@@ -2092,12 +2092,12 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "migration_bgp_community")
 
     @migration_bgp_community.setter
-    def migration_bgp_community(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def migration_bgp_community(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "migration_bgp_community", value)
 
     @_builtins.property
     @pulumi.getter(name="multiTenant")
-    def multi_tenant(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def multi_tenant(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Device is multi-tenant
           - Default value: `false`
@@ -2105,48 +2105,48 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "multi_tenant")
 
     @multi_tenant.setter
-    def multi_tenant(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def multi_tenant(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "multi_tenant", value)
 
     @_builtins.property
     @pulumi.getter(name="multiTenantVariable")
-    def multi_tenant_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def multi_tenant_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "multi_tenant_variable")
 
     @multi_tenant_variable.setter
-    def multi_tenant_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def multi_tenant_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "multi_tenant_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="objectTrackers")
-    def object_trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]:
+    def object_trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]:
         """
         Object Track configuration
         """
         return pulumi.get(self, "object_trackers")
 
     @object_trackers.setter
-    def object_trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]):
+    def object_trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerArgs']]]]):
         pulumi.set(self, "object_trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnel")
-    def on_demand_tunnel(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def on_demand_tunnel(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable On-demand Tunnel
           - Default value: `false`
@@ -2154,12 +2154,12 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "on_demand_tunnel")
 
     @on_demand_tunnel.setter
-    def on_demand_tunnel(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def on_demand_tunnel(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "on_demand_tunnel", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnelIdleTimeout")
-    def on_demand_tunnel_idle_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def on_demand_tunnel_idle_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Idle CLI timeout in minutes
           - Range: `0`-`300`
@@ -2167,36 +2167,36 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "on_demand_tunnel_idle_timeout")
 
     @on_demand_tunnel_idle_timeout.setter
-    def on_demand_tunnel_idle_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def on_demand_tunnel_idle_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "on_demand_tunnel_idle_timeout", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnelIdleTimeoutVariable")
-    def on_demand_tunnel_idle_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def on_demand_tunnel_idle_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "on_demand_tunnel_idle_timeout_variable")
 
     @on_demand_tunnel_idle_timeout_variable.setter
-    def on_demand_tunnel_idle_timeout_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def on_demand_tunnel_idle_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "on_demand_tunnel_idle_timeout_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="onDemandTunnelVariable")
-    def on_demand_tunnel_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def on_demand_tunnel_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "on_demand_tunnel_variable")
 
     @on_demand_tunnel_variable.setter
-    def on_demand_tunnel_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def on_demand_tunnel_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "on_demand_tunnel_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayId")
-    def overlay_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def overlay_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the Overlay ID
           - Range: `1`-`4294967295`
@@ -2205,24 +2205,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "overlay_id")
 
     @overlay_id.setter
-    def overlay_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def overlay_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "overlay_id", value)
 
     @_builtins.property
     @pulumi.getter(name="overlayIdVariable")
-    def overlay_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def overlay_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "overlay_id_variable")
 
     @overlay_id_variable.setter
-    def overlay_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def overlay_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "overlay_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="portHopping")
-    def port_hopping(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def port_hopping(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable port hopping
           - Default value: `true`
@@ -2230,24 +2230,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "port_hopping")
 
     @port_hopping.setter
-    def port_hopping(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def port_hopping(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "port_hopping", value)
 
     @_builtins.property
     @pulumi.getter(name="portHoppingVariable")
-    def port_hopping_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_hopping_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "port_hopping_variable")
 
     @port_hopping_variable.setter
-    def port_hopping_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_hopping_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_hopping_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="portOffset")
-    def port_offset(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port_offset(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the TLOC port offset when multiple devices are behind a NAT
           - Range: `0`-`19`
@@ -2256,24 +2256,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "port_offset")
 
     @port_offset.setter
-    def port_offset(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port_offset(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "port_offset", value)
 
     @_builtins.property
     @pulumi.getter(name="portOffsetVariable")
-    def port_offset_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def port_offset_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "port_offset_variable")
 
     @port_offset_variable.setter
-    def port_offset_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def port_offset_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "port_offset_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="regionId")
-    def region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def region_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set region ID
           - Range: `1`-`63`
@@ -2281,24 +2281,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "region_id")
 
     @region_id.setter
-    def region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def region_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "region_id", value)
 
     @_builtins.property
     @pulumi.getter(name="regionIdVariable")
-    def region_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def region_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "region_id_variable")
 
     @region_id_variable.setter
-    def region_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def region_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "region_id_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the role for router
           - Choices: `edge-router`, `border-router`
@@ -2306,24 +2306,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "role")
 
     @role.setter
-    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="roleVariable")
-    def role_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def role_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "role_variable")
 
     @role_variable.setter
-    def role_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def role_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "role_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionId")
-    def secondary_region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def secondary_region_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set secondary region ID
           - Range: `1`-`63`
@@ -2331,24 +2331,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "secondary_region_id")
 
     @secondary_region_id.setter
-    def secondary_region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def secondary_region_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "secondary_region_id", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryRegionIdVariable")
-    def secondary_region_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_region_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "secondary_region_id_variable")
 
     @secondary_region_id_variable.setter
-    def secondary_region_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_region_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_region_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="siteId")
-    def site_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def site_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set the site identifier
           - Range: `1`-`4294967295`
@@ -2356,84 +2356,84 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "site_id")
 
     @site_id.setter
-    def site_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def site_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "site_id", value)
 
     @_builtins.property
     @pulumi.getter(name="siteIdVariable")
-    def site_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def site_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "site_id_variable")
 
     @site_id_variable.setter
-    def site_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def site_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "site_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="systemDescription")
-    def system_description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set a text description of the device
         """
         return pulumi.get(self, "system_description")
 
     @system_description.setter
-    def system_description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_description", value)
 
     @_builtins.property
     @pulumi.getter(name="systemDescriptionVariable")
-    def system_description_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "system_description_variable")
 
     @system_description_variable.setter
-    def system_description_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_description_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="systemIp")
-    def system_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the system IP address
         """
         return pulumi.get(self, "system_ip")
 
     @system_ip.setter
-    def system_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="systemIpVariable")
-    def system_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def system_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "system_ip_variable")
 
     @system_ip_variable.setter
-    def system_ip_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def system_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "system_ip_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def timezone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timezone(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the timezone
           - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
@@ -2442,24 +2442,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "timezone")
 
     @timezone.setter
-    def timezone(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timezone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timezone", value)
 
     @_builtins.property
     @pulumi.getter(name="timezoneVariable")
-    def timezone_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def timezone_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "timezone_variable")
 
     @timezone_variable.setter
-    def timezone_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def timezone_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "timezone_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackDefaultGateway")
-    def track_default_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def track_default_gateway(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable or disable default gateway tracking
           - Default value: `true`
@@ -2467,24 +2467,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "track_default_gateway")
 
     @track_default_gateway.setter
-    def track_default_gateway(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def track_default_gateway(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "track_default_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="trackDefaultGatewayVariable")
-    def track_default_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_default_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "track_default_gateway_variable")
 
     @track_default_gateway_variable.setter
-    def track_default_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_default_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "track_default_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackInterfaceTag")
-    def track_interface_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def track_interface_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         OMP Tag attached to routes based on interface tracking
           - Range: `1`-`4294967295`
@@ -2492,24 +2492,24 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "track_interface_tag")
 
     @track_interface_tag.setter
-    def track_interface_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def track_interface_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "track_interface_tag", value)
 
     @_builtins.property
     @pulumi.getter(name="trackInterfaceTagVariable")
-    def track_interface_tag_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_interface_tag_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "track_interface_tag_variable")
 
     @track_interface_tag_variable.setter
-    def track_interface_tag_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_interface_tag_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "track_interface_tag_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="trackTransport")
-    def track_transport(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def track_transport(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Configure tracking of transport
           - Default value: `true`
@@ -2517,36 +2517,36 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "track_transport")
 
     @track_transport.setter
-    def track_transport(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def track_transport(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "track_transport", value)
 
     @_builtins.property
     @pulumi.getter(name="trackTransportVariable")
-    def track_transport_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_transport_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "track_transport_variable")
 
     @track_transport_variable.setter
-    def track_transport_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_transport_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "track_transport_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def trackers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]:
+    def trackers(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]:
         """
         Tracker configuration
         """
         return pulumi.get(self, "trackers")
 
     @trackers.setter
-    def trackers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]):
+    def trackers(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateTrackerArgs']]]]):
         pulumi.set(self, "trackers", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGateway")
-    def transport_gateway(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def transport_gateway(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable transport gateway
           - Default value: `false`
@@ -2554,31 +2554,31 @@ class _CiscoSystemFeatureTemplateState:
         return pulumi.get(self, "transport_gateway")
 
     @transport_gateway.setter
-    def transport_gateway(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def transport_gateway(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "transport_gateway", value)
 
     @_builtins.property
     @pulumi.getter(name="transportGatewayVariable")
-    def transport_gateway_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def transport_gateway_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "transport_gateway_variable")
 
     @transport_gateway_variable.setter
-    def transport_gateway_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def transport_gateway_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "transport_gateway_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -2588,80 +2588,80 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_tech_on_failure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 admin_tech_on_failure_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 affinity_group_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 console_baud_rate: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_baud_rate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 control_session_pps: Optional[pulumi.Input[_builtins.int]] = None,
-                 control_session_pps_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
-                 geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing_sms: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_sms_phone_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
-                 hostname: Optional[pulumi.Input[_builtins.str]] = None,
-                 hostname_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 latitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 location: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 longitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_omp_sessions: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_omp_sessions_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 multi_tenant: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multi_tenant_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
-                 on_demand_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
-                 on_demand_tunnel_idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 on_demand_tunnel_idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 on_demand_tunnel_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_hopping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_hopping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_offset: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_offset_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 site_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_default_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_interface_tag: Optional[pulumi.Input[_builtins.int]] = None,
-                 track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 admin_tech_on_failure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 admin_tech_on_failure_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 affinity_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 console_baud_rate: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_baud_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 control_session_pps: pulumi.Input[Optional[_builtins.int]] = None,
+                 control_session_pps_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enable_mrf_migration: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
+                 geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
+                 hostname: pulumi.Input[Optional[_builtins.str]] = None,
+                 hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 latitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 location: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 longitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_omp_sessions: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_omp_sessions_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
+                 on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
+                 on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 on_demand_tunnel_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_hopping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_hopping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_offset: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_offset_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 site_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_default_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_interface_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco System feature template.
@@ -2681,8 +2681,8 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
             hostname="Router1",
             system_description="My Description",
             location="Building 1",
-            latitude=40,
-            longitude=50,
+            latitude=float(40),
+            longitude=float(50),
             geo_fencing=True,
             geo_fencing_range=1000,
             geo_fencing_sms=True,
@@ -2873,8 +2873,8 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
             hostname="Router1",
             system_description="My Description",
             location="Building 1",
-            latitude=40,
-            longitude=50,
+            latitude=float(40),
+            longitude=float(50),
             geo_fencing=True,
             geo_fencing_range=1000,
             geo_fencing_sms=True,
@@ -2942,80 +2942,80 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_tech_on_failure: Optional[pulumi.Input[_builtins.bool]] = None,
-                 admin_tech_on_failure_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_number: Optional[pulumi.Input[_builtins.int]] = None,
-                 affinity_group_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 console_baud_rate: Optional[pulumi.Input[_builtins.str]] = None,
-                 console_baud_rate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 control_session_pps: Optional[pulumi.Input[_builtins.int]] = None,
-                 control_session_pps_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
-                 enhanced_app_aware_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
-                 geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 geo_fencing_sms: Optional[pulumi.Input[_builtins.bool]] = None,
-                 geo_fencing_sms_phone_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
-                 hostname: Optional[pulumi.Input[_builtins.str]] = None,
-                 hostname_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 latitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 latitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 location: Optional[pulumi.Input[_builtins.str]] = None,
-                 location_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 longitude: Optional[pulumi.Input[_builtins.float]] = None,
-                 longitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_omp_sessions: Optional[pulumi.Input[_builtins.int]] = None,
-                 max_omp_sessions_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-                 multi_tenant: Optional[pulumi.Input[_builtins.bool]] = None,
-                 multi_tenant_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 object_trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
-                 on_demand_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
-                 on_demand_tunnel_idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 on_demand_tunnel_idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 on_demand_tunnel_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 overlay_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 overlay_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_hopping: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port_hopping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 port_offset: Optional[pulumi.Input[_builtins.int]] = None,
-                 port_offset_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 role: Optional[pulumi.Input[_builtins.str]] = None,
-                 role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 site_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 site_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 system_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone: Optional[pulumi.Input[_builtins.str]] = None,
-                 timezone_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_default_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_interface_tag: Optional[pulumi.Input[_builtins.int]] = None,
-                 track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
-                 track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
-                 transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-                 transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 admin_tech_on_failure: pulumi.Input[Optional[_builtins.bool]] = None,
+                 admin_tech_on_failure_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 affinity_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 affinity_group_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 console_baud_rate: pulumi.Input[Optional[_builtins.str]] = None,
+                 console_baud_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 control_session_pps: pulumi.Input[Optional[_builtins.int]] = None,
+                 control_session_pps_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 enable_mrf_migration: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing: pulumi.Input[Optional[_builtins.str]] = None,
+                 enhanced_app_aware_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
+                 geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
+                 geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
+                 hostname: pulumi.Input[Optional[_builtins.str]] = None,
+                 hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 latitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 latitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 location: pulumi.Input[Optional[_builtins.str]] = None,
+                 location_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 longitude: pulumi.Input[Optional[_builtins.float]] = None,
+                 longitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 max_omp_sessions: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_omp_sessions_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+                 multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
+                 multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
+                 on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
+                 on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 on_demand_tunnel_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 overlay_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 overlay_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_hopping: pulumi.Input[Optional[_builtins.bool]] = None,
+                 port_hopping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 port_offset: pulumi.Input[Optional[_builtins.int]] = None,
+                 port_offset_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 site_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 site_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 system_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone: pulumi.Input[Optional[_builtins.str]] = None,
+                 timezone_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_default_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_interface_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
+                 transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+                 transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -3115,82 +3115,82 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            admin_tech_on_failure: Optional[pulumi.Input[_builtins.bool]] = None,
-            admin_tech_on_failure_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            affinity_group_number: Optional[pulumi.Input[_builtins.int]] = None,
-            affinity_group_number_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            affinity_group_preference_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-            console_baud_rate: Optional[pulumi.Input[_builtins.str]] = None,
-            console_baud_rate_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            control_session_pps: Optional[pulumi.Input[_builtins.int]] = None,
-            control_session_pps_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            controller_group_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
-            enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
-            enhanced_app_aware_routing_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
-            geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
-            geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            geo_fencing_sms: Optional[pulumi.Input[_builtins.bool]] = None,
-            geo_fencing_sms_phone_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
-            hostname: Optional[pulumi.Input[_builtins.str]] = None,
-            hostname_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            latitude: Optional[pulumi.Input[_builtins.float]] = None,
-            latitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            location: Optional[pulumi.Input[_builtins.str]] = None,
-            location_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            longitude: Optional[pulumi.Input[_builtins.float]] = None,
-            longitude_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            max_omp_sessions: Optional[pulumi.Input[_builtins.int]] = None,
-            max_omp_sessions_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            migration_bgp_community: Optional[pulumi.Input[_builtins.int]] = None,
-            multi_tenant: Optional[pulumi.Input[_builtins.bool]] = None,
-            multi_tenant_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            object_trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
-            on_demand_tunnel: Optional[pulumi.Input[_builtins.bool]] = None,
-            on_demand_tunnel_idle_timeout: Optional[pulumi.Input[_builtins.int]] = None,
-            on_demand_tunnel_idle_timeout_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            on_demand_tunnel_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            overlay_id: Optional[pulumi.Input[_builtins.int]] = None,
-            overlay_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            port_hopping: Optional[pulumi.Input[_builtins.bool]] = None,
-            port_hopping_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            port_offset: Optional[pulumi.Input[_builtins.int]] = None,
-            port_offset_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            region_id: Optional[pulumi.Input[_builtins.int]] = None,
-            region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            role: Optional[pulumi.Input[_builtins.str]] = None,
-            role_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            secondary_region_id: Optional[pulumi.Input[_builtins.int]] = None,
-            secondary_region_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            site_id: Optional[pulumi.Input[_builtins.int]] = None,
-            site_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            system_description: Optional[pulumi.Input[_builtins.str]] = None,
-            system_description_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            system_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            system_ip_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            timezone: Optional[pulumi.Input[_builtins.str]] = None,
-            timezone_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            track_default_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-            track_default_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            track_interface_tag: Optional[pulumi.Input[_builtins.int]] = None,
-            track_interface_tag_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            track_transport: Optional[pulumi.Input[_builtins.bool]] = None,
-            track_transport_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            trackers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
-            transport_gateway: Optional[pulumi.Input[_builtins.bool]] = None,
-            transport_gateway_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CiscoSystemFeatureTemplate':
+            admin_tech_on_failure: pulumi.Input[Optional[_builtins.bool]] = None,
+            admin_tech_on_failure_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            affinity_group_number: pulumi.Input[Optional[_builtins.int]] = None,
+            affinity_group_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            affinity_group_preference_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            affinity_group_preferences: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            console_baud_rate: pulumi.Input[Optional[_builtins.str]] = None,
+            console_baud_rate_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            control_session_pps: pulumi.Input[Optional[_builtins.int]] = None,
+            control_session_pps_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_group_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            controller_group_lists: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.int]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_groups: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            device_groups_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            enable_mrf_migration: pulumi.Input[Optional[_builtins.str]] = None,
+            enhanced_app_aware_routing: pulumi.Input[Optional[_builtins.str]] = None,
+            enhanced_app_aware_routing_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_fencing: pulumi.Input[Optional[_builtins.bool]] = None,
+            geo_fencing_range: pulumi.Input[Optional[_builtins.int]] = None,
+            geo_fencing_range_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            geo_fencing_sms: pulumi.Input[Optional[_builtins.bool]] = None,
+            geo_fencing_sms_phone_numbers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs', 'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict']]]]] = None,
+            hostname: pulumi.Input[Optional[_builtins.str]] = None,
+            hostname_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            latitude: pulumi.Input[Optional[_builtins.float]] = None,
+            latitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            location: pulumi.Input[Optional[_builtins.str]] = None,
+            location_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            longitude: pulumi.Input[Optional[_builtins.float]] = None,
+            longitude_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            max_omp_sessions: pulumi.Input[Optional[_builtins.int]] = None,
+            max_omp_sessions_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            migration_bgp_community: pulumi.Input[Optional[_builtins.int]] = None,
+            multi_tenant: pulumi.Input[Optional[_builtins.bool]] = None,
+            multi_tenant_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            object_trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateObjectTrackerArgs', 'CiscoSystemFeatureTemplateObjectTrackerArgsDict']]]]] = None,
+            on_demand_tunnel: pulumi.Input[Optional[_builtins.bool]] = None,
+            on_demand_tunnel_idle_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+            on_demand_tunnel_idle_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            on_demand_tunnel_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            overlay_id: pulumi.Input[Optional[_builtins.int]] = None,
+            overlay_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            port_hopping: pulumi.Input[Optional[_builtins.bool]] = None,
+            port_hopping_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            port_offset: pulumi.Input[Optional[_builtins.int]] = None,
+            port_offset_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            region_id: pulumi.Input[Optional[_builtins.int]] = None,
+            region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            role: pulumi.Input[Optional[_builtins.str]] = None,
+            role_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_region_id: pulumi.Input[Optional[_builtins.int]] = None,
+            secondary_region_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            site_id: pulumi.Input[Optional[_builtins.int]] = None,
+            site_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            system_description: pulumi.Input[Optional[_builtins.str]] = None,
+            system_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            system_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            system_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            timezone: pulumi.Input[Optional[_builtins.str]] = None,
+            timezone_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            track_default_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+            track_default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            track_interface_tag: pulumi.Input[Optional[_builtins.int]] = None,
+            track_interface_tag_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            track_transport: pulumi.Input[Optional[_builtins.bool]] = None,
+            track_transport_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trackers: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CiscoSystemFeatureTemplateTrackerArgs', 'CiscoSystemFeatureTemplateTrackerArgsDict']]]]] = None,
+            transport_gateway: pulumi.Input[Optional[_builtins.bool]] = None,
+            transport_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CiscoSystemFeatureTemplate':
         """
         Get an existing CiscoSystemFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

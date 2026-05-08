@@ -273,8 +273,8 @@ def get_system_snmp_feature(feature_profile_id: Optional[_builtins.str] = None,
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'),
         views=pulumi.get(__ret__, 'views'))
-def get_system_snmp_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                   id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_system_snmp_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                   id: pulumi.Input[Optional[_builtins.str]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemSnmpFeatureResult]:
     """
     This data source can read the System SNMP Feature.

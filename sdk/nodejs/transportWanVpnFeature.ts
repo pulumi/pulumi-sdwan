@@ -248,82 +248,82 @@ export interface TransportWanVpnFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enhance ECMP Keying
      *   - Default value: `false`
      */
-    enhanceEcmpKeying?: pulumi.Input<boolean>;
+    enhanceEcmpKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enhanceEcmpKeyingVariable?: pulumi.Input<string>;
+    enhanceEcmpKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * IPv4 Static Route
      */
-    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv4StaticRoute>[]>;
+    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv4StaticRoute>[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRoute>[]>;
+    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRoute>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NAT64 V4 Pool
      */
-    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNat64V4Pool>[]>;
-    newHostMappings?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNewHostMapping>[]>;
+    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNat64V4Pool>[] | undefined>;
+    newHostMappings?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNewHostMapping>[] | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    primaryDnsAddressIpv4?: pulumi.Input<string>;
+    primaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    primaryDnsAddressIpv6?: pulumi.Input<string>;
+    primaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    secondaryDnsAddressIpv4?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    secondaryDnsAddressIpv6?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    services?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureService>[] | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * VPN
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -333,16 +333,16 @@ export interface TransportWanVpnFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Enhance ECMP Keying
      *   - Default value: `false`
      */
-    enhanceEcmpKeying?: pulumi.Input<boolean>;
+    enhanceEcmpKeying?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enhanceEcmpKeyingVariable?: pulumi.Input<string>;
+    enhanceEcmpKeyingVariable?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -350,59 +350,59 @@ export interface TransportWanVpnFeatureArgs {
     /**
      * IPv4 Static Route
      */
-    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv4StaticRoute>[]>;
+    ipv4StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv4StaticRoute>[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRoute>[]>;
+    ipv6StaticRoutes?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRoute>[] | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * NAT64 V4 Pool
      */
-    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNat64V4Pool>[]>;
-    newHostMappings?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNewHostMapping>[]>;
+    nat64V4Pools?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNat64V4Pool>[] | undefined>;
+    newHostMappings?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureNewHostMapping>[] | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    primaryDnsAddressIpv4?: pulumi.Input<string>;
+    primaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    primaryDnsAddressIpv6?: pulumi.Input<string>;
+    primaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    primaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    primaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    secondaryDnsAddressIpv4?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv4Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv4Variable?: pulumi.Input<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    secondaryDnsAddressIpv6?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    secondaryDnsAddressIpv6Variable?: pulumi.Input<string>;
+    secondaryDnsAddressIpv6Variable?: pulumi.Input<string | undefined>;
     /**
      * Service
      */
-    services?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureService>[]>;
+    services?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureService>[] | undefined>;
     /**
      * VPN
      *   - Default value: `0`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
 }

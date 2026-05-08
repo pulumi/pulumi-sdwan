@@ -113,7 +113,7 @@ def get_data_ipv4_prefix_list_policy_object(id: Optional[_builtins.str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-def get_data_ipv4_prefix_list_policy_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_data_ipv4_prefix_list_policy_object_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDataIpv4PrefixListPolicyObjectResult]:
     """
     This data source can read the Data IPv4 Prefix List Policy Object .

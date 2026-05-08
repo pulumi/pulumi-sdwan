@@ -21,7 +21,7 @@ class MirrorPolicyObjectArgs:
     def __init__(__self__, *,
                  remote_destination_ip: pulumi.Input[_builtins.str],
                  source_ip: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a MirrorPolicyObject resource.
 
@@ -60,24 +60,24 @@ class MirrorPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _MirrorPolicyObjectState:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 remote_destination_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 remote_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering MirrorPolicyObject resources.
 
@@ -97,50 +97,50 @@ class _MirrorPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="remoteDestinationIp")
-    def remote_destination_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def remote_destination_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Remote destination IP
         """
         return pulumi.get(self, "remote_destination_ip")
 
     @remote_destination_ip.setter
-    def remote_destination_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def remote_destination_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_destination_ip", value)
 
     @_builtins.property
     @pulumi.getter(name="sourceIp")
-    def source_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def source_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Source IP
         """
         return pulumi.get(self, "source_ip")
 
     @source_ip.setter
-    def source_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def source_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_ip", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -150,9 +150,9 @@ class MirrorPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 remote_destination_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_ip: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 remote_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Mirror Policy Object .
@@ -229,9 +229,9 @@ class MirrorPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 remote_destination_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_ip: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 remote_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_ip: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -259,10 +259,10 @@ class MirrorPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            remote_destination_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            source_ip: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'MirrorPolicyObject':
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            remote_destination_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'MirrorPolicyObject':
         """
         Get an existing MirrorPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

@@ -165,7 +165,7 @@ def get_hub_and_spoke_topology_policy_definition(id: Optional[_builtins.str] = N
         version=pulumi.get(__ret__, 'version'),
         vpn_list_id=pulumi.get(__ret__, 'vpn_list_id'),
         vpn_list_version=pulumi.get(__ret__, 'vpn_list_version'))
-def get_hub_and_spoke_topology_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_hub_and_spoke_topology_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetHubAndSpokeTopologyPolicyDefinitionResult]:
     """
     This data source can read the Hub and Spoke Topology Policy Definition .

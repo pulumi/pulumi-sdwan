@@ -139,7 +139,7 @@ def get_vpn_membership_policy_definition(id: Optional[_builtins.str] = None,
         sites=pulumi.get(__ret__, 'sites'),
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
-def get_vpn_membership_policy_definition_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_vpn_membership_policy_definition_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVpnMembershipPolicyDefinitionResult]:
     """
     This data source can read the VPN Membership Policy Definition .

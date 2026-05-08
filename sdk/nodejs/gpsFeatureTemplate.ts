@@ -206,77 +206,77 @@ export interface GpsFeatureTemplateState {
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Destination address
      */
-    destinationAddress?: pulumi.Input<string>;
+    destinationAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    destinationAddressVariable?: pulumi.Input<string>;
+    destinationAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination port
      *   - Range: `1`-`65535`
      */
-    destinationPort?: pulumi.Input<number>;
+    destinationPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    destinationPortVariable?: pulumi.Input<string>;
+    destinationPortVariable?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * Enable/disable GPS
      *   - Default value: `false`
      */
-    enable?: pulumi.Input<boolean>;
+    enable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableVariable?: pulumi.Input<string>;
+    enableVariable?: pulumi.Input<string | undefined>;
     /**
      * Select GPS mode
      *   - Choices: `ms-based`, `standalone`
      *   - Default value: `ms-based`
      */
-    gpsMode?: pulumi.Input<string>;
+    gpsMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    gpsModeVariable?: pulumi.Input<string>;
+    gpsModeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable NMEA data
      *   - Default value: `false`
      */
-    nmea?: pulumi.Input<boolean>;
+    nmea?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nmeaVariable?: pulumi.Input<string>;
+    nmeaVariable?: pulumi.Input<string | undefined>;
     /**
      * Source address
      */
-    sourceAddress?: pulumi.Input<string>;
+    sourceAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceAddressVariable?: pulumi.Input<string>;
+    sourceAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -290,20 +290,20 @@ export interface GpsFeatureTemplateArgs {
     /**
      * Destination address
      */
-    destinationAddress?: pulumi.Input<string>;
+    destinationAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    destinationAddressVariable?: pulumi.Input<string>;
+    destinationAddressVariable?: pulumi.Input<string | undefined>;
     /**
      * Destination port
      *   - Range: `1`-`65535`
      */
-    destinationPort?: pulumi.Input<number>;
+    destinationPort?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    destinationPortVariable?: pulumi.Input<string>;
+    destinationPortVariable?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -313,40 +313,40 @@ export interface GpsFeatureTemplateArgs {
      * Enable/disable GPS
      *   - Default value: `false`
      */
-    enable?: pulumi.Input<boolean>;
+    enable?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    enableVariable?: pulumi.Input<string>;
+    enableVariable?: pulumi.Input<string | undefined>;
     /**
      * Select GPS mode
      *   - Choices: `ms-based`, `standalone`
      *   - Default value: `ms-based`
      */
-    gpsMode?: pulumi.Input<string>;
+    gpsMode?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    gpsModeVariable?: pulumi.Input<string>;
+    gpsModeVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Enable/disable NMEA data
      *   - Default value: `false`
      */
-    nmea?: pulumi.Input<boolean>;
+    nmea?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    nmeaVariable?: pulumi.Input<string>;
+    nmeaVariable?: pulumi.Input<string | undefined>;
     /**
      * Source address
      */
-    sourceAddress?: pulumi.Input<string>;
+    sourceAddress?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    sourceAddressVariable?: pulumi.Input<string>;
+    sourceAddressVariable?: pulumi.Input<string | undefined>;
 }

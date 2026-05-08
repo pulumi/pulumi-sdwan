@@ -187,63 +187,63 @@ export interface TransportCellularControllerFeatureState {
     /**
      * Cellular ID
      */
-    cellularId?: pulumi.Input<string>;
+    cellularId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    cellularIdVariable?: pulumi.Input<string>;
+    cellularIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Enable/Disable Firmware Auto Sim
      *   - Default value: `true`
      */
-    firmwareAutoSim?: pulumi.Input<boolean>;
+    firmwareAutoSim?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    firmwareAutoSimVariable?: pulumi.Input<string>;
+    firmwareAutoSimVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set primary SIM slot
      *   - Range: `0`-`1`
      */
-    primarySimSlot?: pulumi.Input<number>;
+    primarySimSlot?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    primarySimSlotVariable?: pulumi.Input<string>;
+    primarySimSlotVariable?: pulumi.Input<string | undefined>;
     /**
      * Set SIM failover retries
      *   - Range: `0`-`65535`
      */
-    simFailoverRetries?: pulumi.Input<number>;
+    simFailoverRetries?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    simFailoverRetriesVariable?: pulumi.Input<string>;
+    simFailoverRetriesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set SIM failover timeout in minutes
      *   - Range: `3`-`7`
      */
-    simFailoverTimeout?: pulumi.Input<number>;
+    simFailoverTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    simFailoverTimeoutVariable?: pulumi.Input<string>;
+    simFailoverTimeoutVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -257,11 +257,11 @@ export interface TransportCellularControllerFeatureArgs {
     /**
      * Variable name
      */
-    cellularIdVariable?: pulumi.Input<string>;
+    cellularIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -270,40 +270,40 @@ export interface TransportCellularControllerFeatureArgs {
      * Enable/Disable Firmware Auto Sim
      *   - Default value: `true`
      */
-    firmwareAutoSim?: pulumi.Input<boolean>;
+    firmwareAutoSim?: pulumi.Input<boolean | undefined>;
     /**
      * Variable name
      */
-    firmwareAutoSimVariable?: pulumi.Input<string>;
+    firmwareAutoSimVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Set primary SIM slot
      *   - Range: `0`-`1`
      */
-    primarySimSlot?: pulumi.Input<number>;
+    primarySimSlot?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    primarySimSlotVariable?: pulumi.Input<string>;
+    primarySimSlotVariable?: pulumi.Input<string | undefined>;
     /**
      * Set SIM failover retries
      *   - Range: `0`-`65535`
      */
-    simFailoverRetries?: pulumi.Input<number>;
+    simFailoverRetries?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    simFailoverRetriesVariable?: pulumi.Input<string>;
+    simFailoverRetriesVariable?: pulumi.Input<string | undefined>;
     /**
      * Set SIM failover timeout in minutes
      *   - Range: `3`-`7`
      */
-    simFailoverTimeout?: pulumi.Input<number>;
+    simFailoverTimeout?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    simFailoverTimeoutVariable?: pulumi.Input<string>;
+    simFailoverTimeoutVariable?: pulumi.Input<string | undefined>;
 }

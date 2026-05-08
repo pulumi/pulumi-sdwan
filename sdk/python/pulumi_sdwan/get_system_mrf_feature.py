@@ -311,8 +311,8 @@ def get_system_mrf_feature(feature_profile_id: Optional[_builtins.str] = None,
         version=pulumi.get(__ret__, 'version'),
         vrf_id=pulumi.get(__ret__, 'vrf_id'),
         vrf_id_variable=pulumi.get(__ret__, 'vrf_id_variable'))
-def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                  id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_system_mrf_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  id: pulumi.Input[Optional[_builtins.str]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemMrfFeatureResult]:
     """
     This data source can read the System MRF Feature.

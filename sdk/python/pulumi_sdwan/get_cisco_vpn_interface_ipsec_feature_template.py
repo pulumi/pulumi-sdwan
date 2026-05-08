@@ -830,8 +830,8 @@ def get_cisco_vpn_interface_ipsec_feature_template(id: Optional[_builtins.str] =
         tunnel_source_interface_variable=pulumi.get(__ret__, 'tunnel_source_interface_variable'),
         tunnel_source_variable=pulumi.get(__ret__, 'tunnel_source_variable'),
         version=pulumi.get(__ret__, 'version'))
-def get_cisco_vpn_interface_ipsec_feature_template_output(id: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_cisco_vpn_interface_ipsec_feature_template_output(id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoVpnInterfaceIpsecFeatureTemplateResult]:
     """
     This data source can read the Cisco VPN Interface IPSec feature template.

@@ -278,8 +278,8 @@ def get_policy_object_unified_tls_ssl_decryption(feature_profile_id: Optional[_b
         unsupported_protocol_versions=pulumi.get(__ret__, 'unsupported_protocol_versions'),
         untrusted_certificate=pulumi.get(__ret__, 'untrusted_certificate'),
         version=pulumi.get(__ret__, 'version'))
-def get_policy_object_unified_tls_ssl_decryption_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                                        id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_policy_object_unified_tls_ssl_decryption_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                        id: pulumi.Input[Optional[_builtins.str]] = None,
                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectUnifiedTlsSslDecryptionResult]:
     """
     This data source can read the Policy Object Unified TLS SSL Decryption Policy_object.

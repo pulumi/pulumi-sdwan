@@ -21,47 +21,47 @@ class SystemRemoteAccessFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[_builtins.str],
                  radius_group_name: pulumi.Input[_builtins.str],
-                 aaa_derive_name_from_peer_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_enable_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aaa_enable_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 any_connect_eap_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 connection_type_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_certificate_list_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_certificate_list_check_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_anti_dos_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_anti_dos_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_anti_replay_window_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_anti_replay_window_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_anti_replay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_perfect_foward_secrecy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_perfect_foward_secrecy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 aaa_derive_name_from_peer_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_domain_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_enable_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aaa_enable_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_certificate_list_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_certificate_list_check_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_anti_dos_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_anti_dos_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_anti_replay_window_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_anti_replay_window_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_anti_replay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_perfect_foward_secrecy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_perfect_foward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SystemRemoteAccessFeature resource.
 
@@ -230,55 +230,55 @@ class SystemRemoteAccessFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerDomain")
-    def aaa_derive_name_from_peer_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain")
 
     @aaa_derive_name_from_peer_domain.setter
-    def aaa_derive_name_from_peer_domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_domain", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerDomainVariable")
-    def aaa_derive_name_from_peer_domain_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_domain_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain_variable")
 
     @aaa_derive_name_from_peer_domain_variable.setter
-    def aaa_derive_name_from_peer_domain_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_domain_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_domain_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentity")
-    def aaa_derive_name_from_peer_identity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_identity(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity")
 
     @aaa_derive_name_from_peer_identity.setter
-    def aaa_derive_name_from_peer_identity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_identity(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_identity", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentityVariable")
-    def aaa_derive_name_from_peer_identity_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_identity_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity_variable")
 
     @aaa_derive_name_from_peer_identity_variable.setter
-    def aaa_derive_name_from_peer_identity_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_identity_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_identity_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaEnableAccounting")
-    def aaa_enable_accounting(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def aaa_enable_accounting(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Accounting
           - Default value: `true`
@@ -286,66 +286,66 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "aaa_enable_accounting")
 
     @aaa_enable_accounting.setter
-    def aaa_enable_accounting(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def aaa_enable_accounting(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "aaa_enable_accounting", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaEnableAccountingVariable")
-    def aaa_enable_accounting_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_enable_accounting_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aaa_enable_accounting_variable")
 
     @aaa_enable_accounting_variable.setter
-    def aaa_enable_accounting_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_enable_accounting_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_enable_accounting_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyName")
-    def aaa_specify_name_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "aaa_specify_name_policy_name")
 
     @aaa_specify_name_policy_name.setter
-    def aaa_specify_name_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyNameVariable")
-    def aaa_specify_name_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aaa_specify_name_policy_name_variable")
 
     @aaa_specify_name_policy_name_variable.setter
-    def aaa_specify_name_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPassword")
-    def aaa_specify_name_policy_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "aaa_specify_name_policy_password")
 
     @aaa_specify_name_policy_password.setter
-    def aaa_specify_name_policy_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_password", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPasswordVariable")
-    def aaa_specify_name_policy_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aaa_specify_name_policy_password_variable")
 
     @aaa_specify_name_policy_password_variable.setter
-    def aaa_specify_name_policy_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
-    def any_connect_eap_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def any_connect_eap_authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `user`, `device`
@@ -353,12 +353,12 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "any_connect_eap_authentication_type")
 
     @any_connect_eap_authentication_type.setter
-    def any_connect_eap_authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def any_connect_eap_authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "any_connect_eap_authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="connectionTypeSsl")
-    def connection_type_ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def connection_type_ssl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enabled SSL VPN
           - Default value: `false`
@@ -366,48 +366,48 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "connection_type_ssl")
 
     @connection_type_ssl.setter
-    def connection_type_ssl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def connection_type_ssl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "connection_type_ssl", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="enableCertificateListCheck")
-    def enable_certificate_list_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_certificate_list_check(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         - Default value: `false`
         """
         return pulumi.get(self, "enable_certificate_list_check")
 
     @enable_certificate_list_check.setter
-    def enable_certificate_list_check(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_certificate_list_check(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_certificate_list_check", value)
 
     @_builtins.property
     @pulumi.getter(name="enableCertificateListCheckVariable")
-    def enable_certificate_list_check_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_certificate_list_check_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable_certificate_list_check_variable")
 
     @enable_certificate_list_check_variable.setter
-    def enable_certificate_list_check_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_certificate_list_check_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_certificate_list_check_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2AntiDosThreshold")
-    def ikev2_anti_dos_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ikev2_anti_dos_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `10`-`1000`
@@ -416,24 +416,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ikev2_anti_dos_threshold")
 
     @ikev2_anti_dos_threshold.setter
-    def ikev2_anti_dos_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ikev2_anti_dos_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ikev2_anti_dos_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2AntiDosThresholdVariable")
-    def ikev2_anti_dos_threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_anti_dos_threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_anti_dos_threshold_variable")
 
     @ikev2_anti_dos_threshold_variable.setter
-    def ikev2_anti_dos_threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_anti_dos_threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_anti_dos_threshold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityType")
-    def ikev2_local_ike_identity_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
@@ -441,48 +441,48 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ikev2_local_ike_identity_type")
 
     @ikev2_local_ike_identity_type.setter
-    def ikev2_local_ike_identity_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_type", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityTypeVariable")
-    def ikev2_local_ike_identity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type_variable")
 
     @ikev2_local_ike_identity_type_variable.setter
-    def ikev2_local_ike_identity_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityValue")
-    def ikev2_local_ike_identity_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value")
 
     @ikev2_local_ike_identity_value.setter
-    def ikev2_local_ike_identity_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_value", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityValueVariable")
-    def ikev2_local_ike_identity_value_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_value_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value_variable")
 
     @ikev2_local_ike_identity_value_variable.setter
-    def ikev2_local_ike_identity_value_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_value_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_value_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2SecurityAssociationLifetime")
-    def ikev2_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ikev2_security_association_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
@@ -491,24 +491,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ikev2_security_association_lifetime")
 
     @ikev2_security_association_lifetime.setter
-    def ikev2_security_association_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ikev2_security_association_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ikev2_security_association_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2SecurityAssociationLifetimeVariable")
-    def ikev2_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_security_association_lifetime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_security_association_lifetime_variable")
 
     @ikev2_security_association_lifetime_variable.setter
-    def ikev2_security_association_lifetime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_security_association_lifetime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_security_association_lifetime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecAntiReplayWindowSize")
-    def ipsec_anti_replay_window_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipsec_anti_replay_window_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
           - Default value: `64`
@@ -516,24 +516,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ipsec_anti_replay_window_size")
 
     @ipsec_anti_replay_window_size.setter
-    def ipsec_anti_replay_window_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipsec_anti_replay_window_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipsec_anti_replay_window_size", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecAntiReplayWindowSizeVariable")
-    def ipsec_anti_replay_window_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_anti_replay_window_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size_variable")
 
     @ipsec_anti_replay_window_size_variable.setter
-    def ipsec_anti_replay_window_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_anti_replay_window_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_anti_replay_window_size_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnableAntiReplay")
-    def ipsec_enable_anti_replay(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipsec_enable_anti_replay(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `true`
@@ -541,24 +541,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ipsec_enable_anti_replay")
 
     @ipsec_enable_anti_replay.setter
-    def ipsec_enable_anti_replay(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipsec_enable_anti_replay(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipsec_enable_anti_replay", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnableAntiReplayVariable")
-    def ipsec_enable_anti_replay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_enable_anti_replay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay_variable")
 
     @ipsec_enable_anti_replay_variable.setter
-    def ipsec_enable_anti_replay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_enable_anti_replay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_enable_anti_replay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecy")
-    def ipsec_enable_perfect_foward_secrecy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipsec_enable_perfect_foward_secrecy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `false`
@@ -566,24 +566,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy")
 
     @ipsec_enable_perfect_foward_secrecy.setter
-    def ipsec_enable_perfect_foward_secrecy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipsec_enable_perfect_foward_secrecy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipsec_enable_perfect_foward_secrecy", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecyVariable")
-    def ipsec_enable_perfect_foward_secrecy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_enable_perfect_foward_secrecy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy_variable")
 
     @ipsec_enable_perfect_foward_secrecy_variable.setter
-    def ipsec_enable_perfect_foward_secrecy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_enable_perfect_foward_secrecy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_enable_perfect_foward_secrecy_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecSecurityAssociationLifetime")
-    def ipsec_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipsec_security_association_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
@@ -592,24 +592,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ipsec_security_association_lifetime")
 
     @ipsec_security_association_lifetime.setter
-    def ipsec_security_association_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipsec_security_association_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipsec_security_association_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecSecurityAssociationLifetimeVariable")
-    def ipsec_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_security_association_lifetime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_security_association_lifetime_variable")
 
     @ipsec_security_association_lifetime_variable.setter
-    def ipsec_security_association_lifetime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_security_association_lifetime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_security_association_lifetime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PoolSize")
-    def ipv4_pool_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_pool_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv4 Pool Size
           - Default value: `1000`
@@ -617,24 +617,24 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ipv4_pool_size")
 
     @ipv4_pool_size.setter
-    def ipv4_pool_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_pool_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_pool_size", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PoolSizeVariable")
-    def ipv4_pool_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_pool_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_pool_size_variable")
 
     @ipv4_pool_size_variable.setter
-    def ipv4_pool_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_pool_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_pool_size_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PoolSize")
-    def ipv6_pool_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_pool_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv6 Pool Size
           - Default value: `1024`
@@ -642,60 +642,60 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "ipv6_pool_size")
 
     @ipv6_pool_size.setter
-    def ipv6_pool_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_pool_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_pool_size", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PoolSizeVariable")
-    def ipv6_pool_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_pool_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_pool_size_variable")
 
     @ipv6_pool_size_variable.setter
-    def ipv6_pool_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_pool_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_pool_size_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationPreSharedKey")
-    def psk_authentication_pre_shared_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_pre_shared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
     @psk_authentication_pre_shared_key.setter
-    def psk_authentication_pre_shared_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_pre_shared_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_pre_shared_key", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationPreSharedKeyVariable")
-    def psk_authentication_pre_shared_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_pre_shared_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
 
     @psk_authentication_pre_shared_key_variable.setter
-    def psk_authentication_pre_shared_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_pre_shared_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_pre_shared_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationType")
-    def psk_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `aaa`, `group`
@@ -703,81 +703,81 @@ class SystemRemoteAccessFeatureArgs:
         return pulumi.get(self, "psk_authentication_type")
 
     @psk_authentication_type.setter
-    def psk_authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationTypeVariable")
-    def psk_authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "psk_authentication_type_variable")
 
     @psk_authentication_type_variable.setter
-    def psk_authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusGroupNameVariable")
-    def radius_group_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_group_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_group_name_variable")
 
     @radius_group_name_variable.setter
-    def radius_group_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_group_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_group_name_variable", value)
 
 
 @pulumi.input_type
 class _SystemRemoteAccessFeatureState:
     def __init__(__self__, *,
-                 aaa_derive_name_from_peer_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_enable_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aaa_enable_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 any_connect_eap_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 connection_type_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_certificate_list_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_certificate_list_check_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_anti_dos_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_anti_dos_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_anti_replay_window_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_anti_replay_window_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_anti_replay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_perfect_foward_secrecy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_perfect_foward_secrecy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 aaa_derive_name_from_peer_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_domain_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_enable_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aaa_enable_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_certificate_list_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_certificate_list_check_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_anti_dos_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_anti_dos_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_anti_replay_window_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_anti_replay_window_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_anti_replay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_perfect_foward_secrecy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_perfect_foward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemRemoteAccessFeature resources.
 
@@ -930,55 +930,55 @@ class _SystemRemoteAccessFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerDomain")
-    def aaa_derive_name_from_peer_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_domain(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain")
 
     @aaa_derive_name_from_peer_domain.setter
-    def aaa_derive_name_from_peer_domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_domain(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_domain", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerDomainVariable")
-    def aaa_derive_name_from_peer_domain_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_domain_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain_variable")
 
     @aaa_derive_name_from_peer_domain_variable.setter
-    def aaa_derive_name_from_peer_domain_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_domain_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_domain_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentity")
-    def aaa_derive_name_from_peer_identity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_identity(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity")
 
     @aaa_derive_name_from_peer_identity.setter
-    def aaa_derive_name_from_peer_identity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_identity(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_identity", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentityVariable")
-    def aaa_derive_name_from_peer_identity_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_derive_name_from_peer_identity_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity_variable")
 
     @aaa_derive_name_from_peer_identity_variable.setter
-    def aaa_derive_name_from_peer_identity_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_derive_name_from_peer_identity_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_derive_name_from_peer_identity_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaEnableAccounting")
-    def aaa_enable_accounting(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def aaa_enable_accounting(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Accounting
           - Default value: `true`
@@ -986,66 +986,66 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "aaa_enable_accounting")
 
     @aaa_enable_accounting.setter
-    def aaa_enable_accounting(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def aaa_enable_accounting(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "aaa_enable_accounting", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaEnableAccountingVariable")
-    def aaa_enable_accounting_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_enable_accounting_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aaa_enable_accounting_variable")
 
     @aaa_enable_accounting_variable.setter
-    def aaa_enable_accounting_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_enable_accounting_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_enable_accounting_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyName")
-    def aaa_specify_name_policy_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "aaa_specify_name_policy_name")
 
     @aaa_specify_name_policy_name.setter
-    def aaa_specify_name_policy_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_name", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyNameVariable")
-    def aaa_specify_name_policy_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aaa_specify_name_policy_name_variable")
 
     @aaa_specify_name_policy_name_variable.setter
-    def aaa_specify_name_policy_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPassword")
-    def aaa_specify_name_policy_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "aaa_specify_name_policy_password")
 
     @aaa_specify_name_policy_password.setter
-    def aaa_specify_name_policy_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_password", value)
 
     @_builtins.property
     @pulumi.getter(name="aaaSpecifyNamePolicyPasswordVariable")
-    def aaa_specify_name_policy_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def aaa_specify_name_policy_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "aaa_specify_name_policy_password_variable")
 
     @aaa_specify_name_policy_password_variable.setter
-    def aaa_specify_name_policy_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def aaa_specify_name_policy_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "aaa_specify_name_policy_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
-    def any_connect_eap_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def any_connect_eap_authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `user`, `device`
@@ -1053,12 +1053,12 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "any_connect_eap_authentication_type")
 
     @any_connect_eap_authentication_type.setter
-    def any_connect_eap_authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def any_connect_eap_authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "any_connect_eap_authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="connectionTypeSsl")
-    def connection_type_ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def connection_type_ssl(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enabled SSL VPN
           - Default value: `false`
@@ -1066,60 +1066,60 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "connection_type_ssl")
 
     @connection_type_ssl.setter
-    def connection_type_ssl(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def connection_type_ssl(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "connection_type_ssl", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Feature
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="enableCertificateListCheck")
-    def enable_certificate_list_check(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enable_certificate_list_check(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         - Default value: `false`
         """
         return pulumi.get(self, "enable_certificate_list_check")
 
     @enable_certificate_list_check.setter
-    def enable_certificate_list_check(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enable_certificate_list_check(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "enable_certificate_list_check", value)
 
     @_builtins.property
     @pulumi.getter(name="enableCertificateListCheckVariable")
-    def enable_certificate_list_check_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def enable_certificate_list_check_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "enable_certificate_list_check_variable")
 
     @enable_certificate_list_check_variable.setter
-    def enable_certificate_list_check_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def enable_certificate_list_check_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "enable_certificate_list_check_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2AntiDosThreshold")
-    def ikev2_anti_dos_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ikev2_anti_dos_threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `10`-`1000`
@@ -1128,24 +1128,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ikev2_anti_dos_threshold")
 
     @ikev2_anti_dos_threshold.setter
-    def ikev2_anti_dos_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ikev2_anti_dos_threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ikev2_anti_dos_threshold", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2AntiDosThresholdVariable")
-    def ikev2_anti_dos_threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_anti_dos_threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_anti_dos_threshold_variable")
 
     @ikev2_anti_dos_threshold_variable.setter
-    def ikev2_anti_dos_threshold_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_anti_dos_threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_anti_dos_threshold_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityType")
-    def ikev2_local_ike_identity_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
@@ -1153,48 +1153,48 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ikev2_local_ike_identity_type")
 
     @ikev2_local_ike_identity_type.setter
-    def ikev2_local_ike_identity_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_type", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityTypeVariable")
-    def ikev2_local_ike_identity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type_variable")
 
     @ikev2_local_ike_identity_type_variable.setter
-    def ikev2_local_ike_identity_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityValue")
-    def ikev2_local_ike_identity_value(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_value(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value")
 
     @ikev2_local_ike_identity_value.setter
-    def ikev2_local_ike_identity_value(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_value(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_value", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2LocalIkeIdentityValueVariable")
-    def ikev2_local_ike_identity_value_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_local_ike_identity_value_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value_variable")
 
     @ikev2_local_ike_identity_value_variable.setter
-    def ikev2_local_ike_identity_value_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_local_ike_identity_value_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_local_ike_identity_value_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2SecurityAssociationLifetime")
-    def ikev2_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ikev2_security_association_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
@@ -1203,24 +1203,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ikev2_security_association_lifetime")
 
     @ikev2_security_association_lifetime.setter
-    def ikev2_security_association_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ikev2_security_association_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ikev2_security_association_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="ikev2SecurityAssociationLifetimeVariable")
-    def ikev2_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ikev2_security_association_lifetime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_security_association_lifetime_variable")
 
     @ikev2_security_association_lifetime_variable.setter
-    def ikev2_security_association_lifetime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ikev2_security_association_lifetime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ikev2_security_association_lifetime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecAntiReplayWindowSize")
-    def ipsec_anti_replay_window_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipsec_anti_replay_window_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
           - Default value: `64`
@@ -1228,24 +1228,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ipsec_anti_replay_window_size")
 
     @ipsec_anti_replay_window_size.setter
-    def ipsec_anti_replay_window_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipsec_anti_replay_window_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipsec_anti_replay_window_size", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecAntiReplayWindowSizeVariable")
-    def ipsec_anti_replay_window_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_anti_replay_window_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size_variable")
 
     @ipsec_anti_replay_window_size_variable.setter
-    def ipsec_anti_replay_window_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_anti_replay_window_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_anti_replay_window_size_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnableAntiReplay")
-    def ipsec_enable_anti_replay(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipsec_enable_anti_replay(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `true`
@@ -1253,24 +1253,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ipsec_enable_anti_replay")
 
     @ipsec_enable_anti_replay.setter
-    def ipsec_enable_anti_replay(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipsec_enable_anti_replay(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipsec_enable_anti_replay", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnableAntiReplayVariable")
-    def ipsec_enable_anti_replay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_enable_anti_replay_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay_variable")
 
     @ipsec_enable_anti_replay_variable.setter
-    def ipsec_enable_anti_replay_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_enable_anti_replay_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_enable_anti_replay_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecy")
-    def ipsec_enable_perfect_foward_secrecy(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def ipsec_enable_perfect_foward_secrecy(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `false`
@@ -1278,24 +1278,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy")
 
     @ipsec_enable_perfect_foward_secrecy.setter
-    def ipsec_enable_perfect_foward_secrecy(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def ipsec_enable_perfect_foward_secrecy(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "ipsec_enable_perfect_foward_secrecy", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecyVariable")
-    def ipsec_enable_perfect_foward_secrecy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_enable_perfect_foward_secrecy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy_variable")
 
     @ipsec_enable_perfect_foward_secrecy_variable.setter
-    def ipsec_enable_perfect_foward_secrecy_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_enable_perfect_foward_secrecy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_enable_perfect_foward_secrecy_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecSecurityAssociationLifetime")
-    def ipsec_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipsec_security_association_lifetime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
@@ -1304,24 +1304,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ipsec_security_association_lifetime")
 
     @ipsec_security_association_lifetime.setter
-    def ipsec_security_association_lifetime(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipsec_security_association_lifetime(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipsec_security_association_lifetime", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsecSecurityAssociationLifetimeVariable")
-    def ipsec_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipsec_security_association_lifetime_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_security_association_lifetime_variable")
 
     @ipsec_security_association_lifetime_variable.setter
-    def ipsec_security_association_lifetime_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipsec_security_association_lifetime_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipsec_security_association_lifetime_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PoolSize")
-    def ipv4_pool_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv4_pool_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv4 Pool Size
           - Default value: `1000`
@@ -1329,24 +1329,24 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ipv4_pool_size")
 
     @ipv4_pool_size.setter
-    def ipv4_pool_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv4_pool_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv4_pool_size", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv4PoolSizeVariable")
-    def ipv4_pool_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv4_pool_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv4_pool_size_variable")
 
     @ipv4_pool_size_variable.setter
-    def ipv4_pool_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv4_pool_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv4_pool_size_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PoolSize")
-    def ipv6_pool_size(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ipv6_pool_size(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPv6 Pool Size
           - Default value: `1024`
@@ -1354,60 +1354,60 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "ipv6_pool_size")
 
     @ipv6_pool_size.setter
-    def ipv6_pool_size(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ipv6_pool_size(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ipv6_pool_size", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6PoolSizeVariable")
-    def ipv6_pool_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ipv6_pool_size_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "ipv6_pool_size_variable")
 
     @ipv6_pool_size_variable.setter
-    def ipv6_pool_size_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ipv6_pool_size_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ipv6_pool_size_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Feature
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationPreSharedKey")
-    def psk_authentication_pre_shared_key(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_pre_shared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
     @psk_authentication_pre_shared_key.setter
-    def psk_authentication_pre_shared_key(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_pre_shared_key(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_pre_shared_key", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationPreSharedKeyVariable")
-    def psk_authentication_pre_shared_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_pre_shared_key_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
 
     @psk_authentication_pre_shared_key_variable.setter
-    def psk_authentication_pre_shared_key_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_pre_shared_key_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_pre_shared_key_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationType")
-    def psk_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `aaa`, `group`
@@ -1415,52 +1415,52 @@ class _SystemRemoteAccessFeatureState:
         return pulumi.get(self, "psk_authentication_type")
 
     @psk_authentication_type.setter
-    def psk_authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="pskAuthenticationTypeVariable")
-    def psk_authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def psk_authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "psk_authentication_type_variable")
 
     @psk_authentication_type_variable.setter
-    def psk_authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def psk_authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "psk_authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusGroupName")
-    def radius_group_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_group_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "radius_group_name")
 
     @radius_group_name.setter
-    def radius_group_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_group_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_group_name", value)
 
     @_builtins.property
     @pulumi.getter(name="radiusGroupNameVariable")
-    def radius_group_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def radius_group_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "radius_group_name_variable")
 
     @radius_group_name_variable.setter
-    def radius_group_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def radius_group_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "radius_group_name_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Feature
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -1470,49 +1470,49 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aaa_derive_name_from_peer_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_enable_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aaa_enable_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 any_connect_eap_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 connection_type_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_certificate_list_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_certificate_list_check_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_anti_dos_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_anti_dos_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_anti_replay_window_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_anti_replay_window_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_anti_replay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_perfect_foward_secrecy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_perfect_foward_secrecy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_domain_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_enable_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aaa_enable_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_certificate_list_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_certificate_list_check_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_anti_dos_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_anti_dos_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_anti_replay_window_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_anti_replay_window_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_anti_replay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_perfect_foward_secrecy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_perfect_foward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a System Remote Access Feature.
@@ -1680,49 +1680,49 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aaa_derive_name_from_peer_domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_derive_name_from_peer_identity_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_enable_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-                 aaa_enable_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 aaa_specify_name_policy_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 any_connect_eap_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 connection_type_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 enable_certificate_list_check: Optional[pulumi.Input[_builtins.bool]] = None,
-                 enable_certificate_list_check_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_anti_dos_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_anti_dos_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_local_ike_identity_value_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ikev2_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ikev2_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_anti_replay_window_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_anti_replay_window_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_anti_replay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_enable_perfect_foward_secrecy: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ipsec_enable_perfect_foward_secrecy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipsec_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipsec_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv4_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv6_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-                 ipv6_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_pre_shared_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 psk_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 radius_group_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_domain: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_domain_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_derive_name_from_peer_identity_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_enable_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aaa_enable_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 enable_certificate_list_check: pulumi.Input[Optional[_builtins.bool]] = None,
+                 enable_certificate_list_check_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_anti_dos_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_anti_dos_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_local_ike_identity_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ikev2_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ikev2_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_anti_replay_window_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_anti_replay_window_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_anti_replay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_enable_perfect_foward_secrecy: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ipsec_enable_perfect_foward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv4_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv6_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 radius_group_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1790,50 +1790,50 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            aaa_derive_name_from_peer_domain: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_derive_name_from_peer_identity: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_derive_name_from_peer_identity_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_enable_accounting: Optional[pulumi.Input[_builtins.bool]] = None,
-            aaa_enable_accounting_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_specify_name_policy_name: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_specify_name_policy_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_specify_name_policy_password: Optional[pulumi.Input[_builtins.str]] = None,
-            aaa_specify_name_policy_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            any_connect_eap_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-            connection_type_ssl: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            enable_certificate_list_check: Optional[pulumi.Input[_builtins.bool]] = None,
-            enable_certificate_list_check_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ikev2_anti_dos_threshold: Optional[pulumi.Input[_builtins.int]] = None,
-            ikev2_anti_dos_threshold_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ikev2_local_ike_identity_type: Optional[pulumi.Input[_builtins.str]] = None,
-            ikev2_local_ike_identity_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ikev2_local_ike_identity_value: Optional[pulumi.Input[_builtins.str]] = None,
-            ikev2_local_ike_identity_value_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ikev2_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-            ikev2_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipsec_anti_replay_window_size: Optional[pulumi.Input[_builtins.int]] = None,
-            ipsec_anti_replay_window_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipsec_enable_anti_replay: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipsec_enable_anti_replay_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipsec_enable_perfect_foward_secrecy: Optional[pulumi.Input[_builtins.bool]] = None,
-            ipsec_enable_perfect_foward_secrecy_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipsec_security_association_lifetime: Optional[pulumi.Input[_builtins.int]] = None,
-            ipsec_security_association_lifetime_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv4_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv6_pool_size: Optional[pulumi.Input[_builtins.int]] = None,
-            ipv6_pool_size_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            psk_authentication_pre_shared_key: Optional[pulumi.Input[_builtins.str]] = None,
-            psk_authentication_pre_shared_key_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            psk_authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-            psk_authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_group_name: Optional[pulumi.Input[_builtins.str]] = None,
-            radius_group_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SystemRemoteAccessFeature':
+            aaa_derive_name_from_peer_domain: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_derive_name_from_peer_domain_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_derive_name_from_peer_identity: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_derive_name_from_peer_identity_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_enable_accounting: pulumi.Input[Optional[_builtins.bool]] = None,
+            aaa_enable_accounting_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_name: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_password: pulumi.Input[Optional[_builtins.str]] = None,
+            aaa_specify_name_policy_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            any_connect_eap_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            connection_type_ssl: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            enable_certificate_list_check: pulumi.Input[Optional[_builtins.bool]] = None,
+            enable_certificate_list_check_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ikev2_anti_dos_threshold: pulumi.Input[Optional[_builtins.int]] = None,
+            ikev2_anti_dos_threshold_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ikev2_local_ike_identity_type: pulumi.Input[Optional[_builtins.str]] = None,
+            ikev2_local_ike_identity_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ikev2_local_ike_identity_value: pulumi.Input[Optional[_builtins.str]] = None,
+            ikev2_local_ike_identity_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ikev2_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+            ikev2_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_anti_replay_window_size: pulumi.Input[Optional[_builtins.int]] = None,
+            ipsec_anti_replay_window_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_enable_anti_replay: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipsec_enable_anti_replay_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_enable_perfect_foward_secrecy: pulumi.Input[Optional[_builtins.bool]] = None,
+            ipsec_enable_perfect_foward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipsec_security_association_lifetime: pulumi.Input[Optional[_builtins.int]] = None,
+            ipsec_security_association_lifetime_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv4_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv4_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            ipv6_pool_size: pulumi.Input[Optional[_builtins.int]] = None,
+            ipv6_pool_size_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_pre_shared_key: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_pre_shared_key_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            psk_authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_group_name: pulumi.Input[Optional[_builtins.str]] = None,
+            radius_group_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemRemoteAccessFeature':
         """
         Get an existing SystemRemoteAccessFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

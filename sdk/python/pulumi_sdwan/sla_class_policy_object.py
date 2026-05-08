@@ -19,16 +19,16 @@ __all__ = ['SlaClassPolicyObjectArgs', 'SlaClassPolicyObject']
 @pulumi.input_type
 class SlaClassPolicyObjectArgs:
     def __init__(__self__, *,
-                 app_probe_class_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 app_probe_class_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_criteria: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_best_tunnel_jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 app_probe_class_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 app_probe_class_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_criteria: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_best_tunnel_jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a SlaClassPolicyObject resource.
 
@@ -72,43 +72,43 @@ class SlaClassPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter(name="appProbeClassId")
-    def app_probe_class_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def app_probe_class_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         App Probe Class Policy Object ID
         """
         return pulumi.get(self, "app_probe_class_id")
 
     @app_probe_class_id.setter
-    def app_probe_class_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def app_probe_class_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "app_probe_class_id", value)
 
     @_builtins.property
     @pulumi.getter(name="appProbeClassVersion")
-    def app_probe_class_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def app_probe_class_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         App Probe Class Policy Object version
         """
         return pulumi.get(self, "app_probe_class_version")
 
     @app_probe_class_version.setter
-    def app_probe_class_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def app_probe_class_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "app_probe_class_version", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelCriteria")
-    def fallback_best_tunnel_criteria(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fallback_best_tunnel_criteria(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         """
         return pulumi.get(self, "fallback_best_tunnel_criteria")
 
     @fallback_best_tunnel_criteria.setter
-    def fallback_best_tunnel_criteria(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fallback_best_tunnel_criteria(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fallback_best_tunnel_criteria", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelJitter")
-    def fallback_best_tunnel_jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def fallback_best_tunnel_jitter(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Jitter variance in ms
           - Range: `1`-`1000`
@@ -116,12 +116,12 @@ class SlaClassPolicyObjectArgs:
         return pulumi.get(self, "fallback_best_tunnel_jitter")
 
     @fallback_best_tunnel_jitter.setter
-    def fallback_best_tunnel_jitter(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def fallback_best_tunnel_jitter(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "fallback_best_tunnel_jitter", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelLatency")
-    def fallback_best_tunnel_latency(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def fallback_best_tunnel_latency(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Latency variance in ms
           - Range: `1`-`1000`
@@ -129,12 +129,12 @@ class SlaClassPolicyObjectArgs:
         return pulumi.get(self, "fallback_best_tunnel_latency")
 
     @fallback_best_tunnel_latency.setter
-    def fallback_best_tunnel_latency(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def fallback_best_tunnel_latency(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "fallback_best_tunnel_latency", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelLoss")
-    def fallback_best_tunnel_loss(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def fallback_best_tunnel_loss(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Loss variance in percent
           - Range: `1`-`100`
@@ -142,12 +142,12 @@ class SlaClassPolicyObjectArgs:
         return pulumi.get(self, "fallback_best_tunnel_loss")
 
     @fallback_best_tunnel_loss.setter
-    def fallback_best_tunnel_loss(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def fallback_best_tunnel_loss(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "fallback_best_tunnel_loss", value)
 
     @_builtins.property
     @pulumi.getter
-    def jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def jitter(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Jitter in ms
           - Range: `1`-`1000`
@@ -155,12 +155,12 @@ class SlaClassPolicyObjectArgs:
         return pulumi.get(self, "jitter")
 
     @jitter.setter
-    def jitter(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def jitter(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "jitter", value)
 
     @_builtins.property
     @pulumi.getter
-    def latency(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def latency(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Latency in ms
           - Range: `1`-`1000`
@@ -168,12 +168,12 @@ class SlaClassPolicyObjectArgs:
         return pulumi.get(self, "latency")
 
     @latency.setter
-    def latency(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def latency(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "latency", value)
 
     @_builtins.property
     @pulumi.getter
-    def loss(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def loss(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Loss in percent
           - Range: `1`-`100`
@@ -181,36 +181,36 @@ class SlaClassPolicyObjectArgs:
         return pulumi.get(self, "loss")
 
     @loss.setter
-    def loss(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def loss(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "loss", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _SlaClassPolicyObjectState:
     def __init__(__self__, *,
-                 app_probe_class_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 app_probe_class_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_criteria: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_best_tunnel_jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 app_probe_class_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 app_probe_class_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_criteria: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_best_tunnel_jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SlaClassPolicyObject resources.
 
@@ -257,43 +257,43 @@ class _SlaClassPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter(name="appProbeClassId")
-    def app_probe_class_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def app_probe_class_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         App Probe Class Policy Object ID
         """
         return pulumi.get(self, "app_probe_class_id")
 
     @app_probe_class_id.setter
-    def app_probe_class_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def app_probe_class_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "app_probe_class_id", value)
 
     @_builtins.property
     @pulumi.getter(name="appProbeClassVersion")
-    def app_probe_class_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def app_probe_class_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         App Probe Class Policy Object version
         """
         return pulumi.get(self, "app_probe_class_version")
 
     @app_probe_class_version.setter
-    def app_probe_class_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def app_probe_class_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "app_probe_class_version", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelCriteria")
-    def fallback_best_tunnel_criteria(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def fallback_best_tunnel_criteria(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         """
         return pulumi.get(self, "fallback_best_tunnel_criteria")
 
     @fallback_best_tunnel_criteria.setter
-    def fallback_best_tunnel_criteria(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def fallback_best_tunnel_criteria(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "fallback_best_tunnel_criteria", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelJitter")
-    def fallback_best_tunnel_jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def fallback_best_tunnel_jitter(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Jitter variance in ms
           - Range: `1`-`1000`
@@ -301,12 +301,12 @@ class _SlaClassPolicyObjectState:
         return pulumi.get(self, "fallback_best_tunnel_jitter")
 
     @fallback_best_tunnel_jitter.setter
-    def fallback_best_tunnel_jitter(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def fallback_best_tunnel_jitter(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "fallback_best_tunnel_jitter", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelLatency")
-    def fallback_best_tunnel_latency(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def fallback_best_tunnel_latency(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Latency variance in ms
           - Range: `1`-`1000`
@@ -314,12 +314,12 @@ class _SlaClassPolicyObjectState:
         return pulumi.get(self, "fallback_best_tunnel_latency")
 
     @fallback_best_tunnel_latency.setter
-    def fallback_best_tunnel_latency(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def fallback_best_tunnel_latency(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "fallback_best_tunnel_latency", value)
 
     @_builtins.property
     @pulumi.getter(name="fallbackBestTunnelLoss")
-    def fallback_best_tunnel_loss(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def fallback_best_tunnel_loss(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Loss variance in percent
           - Range: `1`-`100`
@@ -327,12 +327,12 @@ class _SlaClassPolicyObjectState:
         return pulumi.get(self, "fallback_best_tunnel_loss")
 
     @fallback_best_tunnel_loss.setter
-    def fallback_best_tunnel_loss(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def fallback_best_tunnel_loss(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "fallback_best_tunnel_loss", value)
 
     @_builtins.property
     @pulumi.getter
-    def jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def jitter(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Jitter in ms
           - Range: `1`-`1000`
@@ -340,12 +340,12 @@ class _SlaClassPolicyObjectState:
         return pulumi.get(self, "jitter")
 
     @jitter.setter
-    def jitter(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def jitter(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "jitter", value)
 
     @_builtins.property
     @pulumi.getter
-    def latency(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def latency(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Latency in ms
           - Range: `1`-`1000`
@@ -353,12 +353,12 @@ class _SlaClassPolicyObjectState:
         return pulumi.get(self, "latency")
 
     @latency.setter
-    def latency(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def latency(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "latency", value)
 
     @_builtins.property
     @pulumi.getter
-    def loss(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def loss(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Loss in percent
           - Range: `1`-`100`
@@ -366,31 +366,31 @@ class _SlaClassPolicyObjectState:
         return pulumi.get(self, "loss")
 
     @loss.setter
-    def loss(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def loss(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "loss", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -400,16 +400,16 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 app_probe_class_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 app_probe_class_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_criteria: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_best_tunnel_jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 app_probe_class_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 app_probe_class_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_criteria: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_best_tunnel_jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a SLA Class Policy Object .
@@ -509,16 +509,16 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 app_probe_class_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 app_probe_class_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_criteria: Optional[pulumi.Input[_builtins.str]] = None,
-                 fallback_best_tunnel_jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 fallback_best_tunnel_loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 jitter: Optional[pulumi.Input[_builtins.int]] = None,
-                 latency: Optional[pulumi.Input[_builtins.int]] = None,
-                 loss: Optional[pulumi.Input[_builtins.int]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 app_probe_class_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 app_probe_class_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_criteria: pulumi.Input[Optional[_builtins.str]] = None,
+                 fallback_best_tunnel_jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 fallback_best_tunnel_loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 jitter: pulumi.Input[Optional[_builtins.int]] = None,
+                 latency: pulumi.Input[Optional[_builtins.int]] = None,
+                 loss: pulumi.Input[Optional[_builtins.int]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -549,17 +549,17 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            app_probe_class_id: Optional[pulumi.Input[_builtins.str]] = None,
-            app_probe_class_version: Optional[pulumi.Input[_builtins.int]] = None,
-            fallback_best_tunnel_criteria: Optional[pulumi.Input[_builtins.str]] = None,
-            fallback_best_tunnel_jitter: Optional[pulumi.Input[_builtins.int]] = None,
-            fallback_best_tunnel_latency: Optional[pulumi.Input[_builtins.int]] = None,
-            fallback_best_tunnel_loss: Optional[pulumi.Input[_builtins.int]] = None,
-            jitter: Optional[pulumi.Input[_builtins.int]] = None,
-            latency: Optional[pulumi.Input[_builtins.int]] = None,
-            loss: Optional[pulumi.Input[_builtins.int]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'SlaClassPolicyObject':
+            app_probe_class_id: pulumi.Input[Optional[_builtins.str]] = None,
+            app_probe_class_version: pulumi.Input[Optional[_builtins.int]] = None,
+            fallback_best_tunnel_criteria: pulumi.Input[Optional[_builtins.str]] = None,
+            fallback_best_tunnel_jitter: pulumi.Input[Optional[_builtins.int]] = None,
+            fallback_best_tunnel_latency: pulumi.Input[Optional[_builtins.int]] = None,
+            fallback_best_tunnel_loss: pulumi.Input[Optional[_builtins.int]] = None,
+            jitter: pulumi.Input[Optional[_builtins.int]] = None,
+            latency: pulumi.Input[Optional[_builtins.int]] = None,
+            loss: pulumi.Input[Optional[_builtins.int]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SlaClassPolicyObject':
         """
         Get an existing SlaClassPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

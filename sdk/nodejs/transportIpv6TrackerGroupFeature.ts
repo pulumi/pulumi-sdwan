@@ -157,41 +157,41 @@ export interface TransportIpv6TrackerGroupFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * tracker ref list combine boolean and or
      *   - Choices: `and`, `or`
      *   - Default value: `or`
      */
-    trackerBoolean?: pulumi.Input<string>;
+    trackerBoolean?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerBooleanVariable?: pulumi.Input<string>;
+    trackerBooleanVariable?: pulumi.Input<string | undefined>;
     /**
      * trackers ref list
      */
-    trackerElements?: pulumi.Input<pulumi.Input<inputs.TransportIpv6TrackerGroupFeatureTrackerElement>[]>;
+    trackerElements?: pulumi.Input<pulumi.Input<inputs.TransportIpv6TrackerGroupFeatureTrackerElement>[] | undefined>;
     /**
      * Tracker Name
      */
-    trackerName?: pulumi.Input<string>;
+    trackerName?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerNameVariable?: pulumi.Input<string>;
+    trackerNameVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -201,7 +201,7 @@ export interface TransportIpv6TrackerGroupFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -209,21 +209,21 @@ export interface TransportIpv6TrackerGroupFeatureArgs {
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * tracker ref list combine boolean and or
      *   - Choices: `and`, `or`
      *   - Default value: `or`
      */
-    trackerBoolean?: pulumi.Input<string>;
+    trackerBoolean?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    trackerBooleanVariable?: pulumi.Input<string>;
+    trackerBooleanVariable?: pulumi.Input<string | undefined>;
     /**
      * trackers ref list
      */
-    trackerElements?: pulumi.Input<pulumi.Input<inputs.TransportIpv6TrackerGroupFeatureTrackerElement>[]>;
+    trackerElements?: pulumi.Input<pulumi.Input<inputs.TransportIpv6TrackerGroupFeatureTrackerElement>[] | undefined>;
     /**
      * Tracker Name
      */
@@ -231,5 +231,5 @@ export interface TransportIpv6TrackerGroupFeatureArgs {
     /**
      * Variable name
      */
-    trackerNameVariable?: pulumi.Input<string>;
+    trackerNameVariable?: pulumi.Input<string | undefined>;
 }

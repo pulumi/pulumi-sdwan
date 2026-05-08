@@ -192,68 +192,68 @@ export interface ServiceObjectTrackerFeatureState {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * interface name
      */
-    interface?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Object tracker ID
      *   - Range: `1`-`1000`
      */
-    objectTrackerId?: pulumi.Input<number>;
+    objectTrackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    objectTrackerIdVariable?: pulumi.Input<string>;
+    objectTrackerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * objectTrackerType:Interface SIG Route
      *   - Choices: `Interface`, `SIG`, `Route`
      */
-    objectTrackerType?: pulumi.Input<string>;
+    objectTrackerType?: pulumi.Input<string | undefined>;
     /**
      * IP address
      */
-    routeIp?: pulumi.Input<string>;
+    routeIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeIpVariable?: pulumi.Input<string>;
+    routeIpVariable?: pulumi.Input<string | undefined>;
     /**
      * IP mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      *   - Default value: `0.0.0.0`
      */
-    routeMask?: pulumi.Input<string>;
+    routeMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeMaskVariable?: pulumi.Input<string>;
+    routeMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * VPN
      *   - Range: `0`-`65530`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -263,7 +263,7 @@ export interface ServiceObjectTrackerFeatureArgs {
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -271,24 +271,24 @@ export interface ServiceObjectTrackerFeatureArgs {
     /**
      * interface name
      */
-    interface?: pulumi.Input<string>;
+    interface?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    interfaceVariable?: pulumi.Input<string>;
+    interfaceVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * Object tracker ID
      *   - Range: `1`-`1000`
      */
-    objectTrackerId?: pulumi.Input<number>;
+    objectTrackerId?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    objectTrackerIdVariable?: pulumi.Input<string>;
+    objectTrackerIdVariable?: pulumi.Input<string | undefined>;
     /**
      * objectTrackerType:Interface SIG Route
      *   - Choices: `Interface`, `SIG`, `Route`
@@ -297,28 +297,28 @@ export interface ServiceObjectTrackerFeatureArgs {
     /**
      * IP address
      */
-    routeIp?: pulumi.Input<string>;
+    routeIp?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeIpVariable?: pulumi.Input<string>;
+    routeIpVariable?: pulumi.Input<string | undefined>;
     /**
      * IP mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      *   - Default value: `0.0.0.0`
      */
-    routeMask?: pulumi.Input<string>;
+    routeMask?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    routeMaskVariable?: pulumi.Input<string>;
+    routeMaskVariable?: pulumi.Input<string | undefined>;
     /**
      * VPN
      *   - Range: `0`-`65530`
      */
-    vpn?: pulumi.Input<number>;
+    vpn?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    vpnVariable?: pulumi.Input<string>;
+    vpnVariable?: pulumi.Input<string | undefined>;
 }

@@ -172,50 +172,50 @@ export interface SystemBfdFeatureState {
     /**
      * Set color that identifies the WAN transport tunnel
      */
-    colors?: pulumi.Input<pulumi.Input<inputs.SystemBfdFeatureColor>[]>;
+    colors?: pulumi.Input<pulumi.Input<inputs.SystemBfdFeatureColor>[] | undefined>;
     /**
      * - Range: `0`-`63`
      *   - Default value: `48`
      */
-    defaultDscp?: pulumi.Input<number>;
+    defaultDscp?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    defaultDscpVariable?: pulumi.Input<string>;
+    defaultDscpVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * - Range: `1`-`6`
      *   - Default value: `6`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Range: `1`-`4294967295`
      *   - Default value: `600000`
      */
-    pollInterval?: pulumi.Input<number>;
+    pollInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pollIntervalVariable?: pulumi.Input<string>;
+    pollIntervalVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the Feature
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -225,20 +225,20 @@ export interface SystemBfdFeatureArgs {
     /**
      * Set color that identifies the WAN transport tunnel
      */
-    colors?: pulumi.Input<pulumi.Input<inputs.SystemBfdFeatureColor>[]>;
+    colors?: pulumi.Input<pulumi.Input<inputs.SystemBfdFeatureColor>[] | undefined>;
     /**
      * - Range: `0`-`63`
      *   - Default value: `48`
      */
-    defaultDscp?: pulumi.Input<number>;
+    defaultDscp?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    defaultDscpVariable?: pulumi.Input<string>;
+    defaultDscpVariable?: pulumi.Input<string | undefined>;
     /**
      * The description of the Feature
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * Feature Profile ID
      */
@@ -247,22 +247,22 @@ export interface SystemBfdFeatureArgs {
      * - Range: `1`-`6`
      *   - Default value: `6`
      */
-    multiplier?: pulumi.Input<number>;
+    multiplier?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    multiplierVariable?: pulumi.Input<string>;
+    multiplierVariable?: pulumi.Input<string | undefined>;
     /**
      * The name of the Feature
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * - Range: `1`-`4294967295`
      *   - Default value: `600000`
      */
-    pollInterval?: pulumi.Input<number>;
+    pollInterval?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    pollIntervalVariable?: pulumi.Input<string>;
+    pollIntervalVariable?: pulumi.Input<string | undefined>;
 }

@@ -131,23 +131,23 @@ export interface ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureSta
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
-    serviceLanVpnFeatureId?: pulumi.Input<string>;
+    serviceLanVpnFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Interface Ethernet Feature ID
      */
-    serviceLanVpnInterfaceEthernetFeatureId?: pulumi.Input<string>;
+    serviceLanVpnInterfaceEthernetFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Service Tracker Feature ID
      */
-    serviceTrackerFeatureId?: pulumi.Input<string>;
+    serviceTrackerFeatureId?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**

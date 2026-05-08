@@ -22,8 +22,8 @@ __all__ = ['CentralizedPolicyArgs', 'CentralizedPolicy']
 class CentralizedPolicyArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CentralizedPolicy resource.
 
@@ -51,36 +51,36 @@ class CentralizedPolicyArgs:
 
     @_builtins.property
     @pulumi.getter
-    def definitions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]:
+    def definitions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]:
         """
         List of policy definitions
         """
         return pulumi.get(self, "definitions")
 
     @definitions.setter
-    def definitions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]):
+    def definitions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]):
         pulumi.set(self, "definitions", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the centralized policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
 class _CentralizedPolicyState:
     def __init__(__self__, *,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CentralizedPolicy resources.
 
@@ -100,50 +100,50 @@ class _CentralizedPolicyState:
 
     @_builtins.property
     @pulumi.getter
-    def definitions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]:
+    def definitions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]:
         """
         List of policy definitions
         """
         return pulumi.get(self, "definitions")
 
     @definitions.setter
-    def definitions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]):
+    def definitions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionArgs']]]]):
         pulumi.set(self, "definitions", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the centralized policy
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the centralized policy
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -153,9 +153,9 @@ class CentralizedPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Centralized Policy .
@@ -248,9 +248,9 @@ class CentralizedPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -276,10 +276,10 @@ class CentralizedPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CentralizedPolicy':
+            definitions: pulumi.Input[Optional[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CentralizedPolicy':
         """
         Get an existing CentralizedPolicy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

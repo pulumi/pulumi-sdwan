@@ -121,19 +121,19 @@ export interface TransportWanVpnFeatureAssociateRoutingBgpFeatureState {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId?: pulumi.Input<string | undefined>;
     /**
      * Transport Routing BGP Feature ID
      */
-    transportRoutingBgpFeatureId?: pulumi.Input<string>;
+    transportRoutingBgpFeatureId?: pulumi.Input<string | undefined>;
     /**
      * Transport WAN VPN Feature ID
      */
-    transportWanVpnFeatureId?: pulumi.Input<string>;
+    transportWanVpnFeatureId?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**

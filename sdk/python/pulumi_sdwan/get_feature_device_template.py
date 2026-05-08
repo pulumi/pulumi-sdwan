@@ -204,7 +204,7 @@ def get_feature_device_template(id: Optional[_builtins.str] = None,
         security_policy_id=pulumi.get(__ret__, 'security_policy_id'),
         security_policy_version=pulumi.get(__ret__, 'security_policy_version'),
         version=pulumi.get(__ret__, 'version'))
-def get_feature_device_template_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_feature_device_template_output(id: pulumi.Input[Optional[_builtins.str]] = None,
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFeatureDeviceTemplateResult]:
     """
     This data source can read the Feature Device Template .

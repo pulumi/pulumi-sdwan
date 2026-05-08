@@ -267,113 +267,113 @@ export interface CiscoSigCredentialsFeatureTemplateState {
     /**
      * The description of the feature template
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * List of supported device types
      *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
+    deviceTypes?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * The template type
      */
-    templateType?: pulumi.Input<string>;
+    templateType?: pulumi.Input<string | undefined>;
     /**
      * API Key
      */
-    umbrellaApiKey?: pulumi.Input<string>;
+    umbrellaApiKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaApiKeyVariable?: pulumi.Input<string>;
+    umbrellaApiKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * API Secret
      */
-    umbrellaApiSecret?: pulumi.Input<string>;
+    umbrellaApiSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaApiSecretVariable?: pulumi.Input<string>;
+    umbrellaApiSecretVariable?: pulumi.Input<string | undefined>;
     /**
      * Ord ID
      */
-    umbrellaOrganizationId?: pulumi.Input<string>;
+    umbrellaOrganizationId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaOrganizationIdVariable?: pulumi.Input<string>;
+    umbrellaOrganizationIdVariable?: pulumi.Input<string | undefined>;
     /**
      * The version of the feature template
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
     /**
      * Third Party Cloud Name
      *   - Range: `0`-`255`
      */
-    zscalerCloudName?: pulumi.Input<number>;
+    zscalerCloudName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    zscalerCloudNameVariable?: pulumi.Input<string>;
+    zscalerCloudNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Organization Name
      */
-    zscalerOrganization?: pulumi.Input<string>;
+    zscalerOrganization?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerOrganizationVariable?: pulumi.Input<string>;
+    zscalerOrganizationVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner API Key
      */
-    zscalerPartnerApiKey?: pulumi.Input<string>;
+    zscalerPartnerApiKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerApiKeyVariable?: pulumi.Input<string>;
+    zscalerPartnerApiKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner Base URI to be used in REST calls
      */
-    zscalerPartnerBaseUri?: pulumi.Input<string>;
+    zscalerPartnerBaseUri?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerBaseUriVariable?: pulumi.Input<string>;
+    zscalerPartnerBaseUriVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner Password
      */
-    zscalerPartnerPassword?: pulumi.Input<string>;
+    zscalerPartnerPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerPasswordVariable?: pulumi.Input<string>;
+    zscalerPartnerPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner User Name
      */
-    zscalerPartnerUsername?: pulumi.Input<string>;
+    zscalerPartnerUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerUsernameVariable?: pulumi.Input<string>;
+    zscalerPartnerUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * Password of Zscaler partner account
      */
-    zscalerPassword?: pulumi.Input<string>;
+    zscalerPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPasswordVariable?: pulumi.Input<string>;
+    zscalerPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Username of Zscaler partner account
      */
-    zscalerUsername?: pulumi.Input<string>;
+    zscalerUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerUsernameVariable?: pulumi.Input<string>;
+    zscalerUsernameVariable?: pulumi.Input<string | undefined>;
 }
 
 /**
@@ -392,94 +392,94 @@ export interface CiscoSigCredentialsFeatureTemplateArgs {
     /**
      * The name of the feature template
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * API Key
      */
-    umbrellaApiKey?: pulumi.Input<string>;
+    umbrellaApiKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaApiKeyVariable?: pulumi.Input<string>;
+    umbrellaApiKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * API Secret
      */
-    umbrellaApiSecret?: pulumi.Input<string>;
+    umbrellaApiSecret?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaApiSecretVariable?: pulumi.Input<string>;
+    umbrellaApiSecretVariable?: pulumi.Input<string | undefined>;
     /**
      * Ord ID
      */
-    umbrellaOrganizationId?: pulumi.Input<string>;
+    umbrellaOrganizationId?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    umbrellaOrganizationIdVariable?: pulumi.Input<string>;
+    umbrellaOrganizationIdVariable?: pulumi.Input<string | undefined>;
     /**
      * Third Party Cloud Name
      *   - Range: `0`-`255`
      */
-    zscalerCloudName?: pulumi.Input<number>;
+    zscalerCloudName?: pulumi.Input<number | undefined>;
     /**
      * Variable name
      */
-    zscalerCloudNameVariable?: pulumi.Input<string>;
+    zscalerCloudNameVariable?: pulumi.Input<string | undefined>;
     /**
      * Organization Name
      */
-    zscalerOrganization?: pulumi.Input<string>;
+    zscalerOrganization?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerOrganizationVariable?: pulumi.Input<string>;
+    zscalerOrganizationVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner API Key
      */
-    zscalerPartnerApiKey?: pulumi.Input<string>;
+    zscalerPartnerApiKey?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerApiKeyVariable?: pulumi.Input<string>;
+    zscalerPartnerApiKeyVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner Base URI to be used in REST calls
      */
-    zscalerPartnerBaseUri?: pulumi.Input<string>;
+    zscalerPartnerBaseUri?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerBaseUriVariable?: pulumi.Input<string>;
+    zscalerPartnerBaseUriVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner Password
      */
-    zscalerPartnerPassword?: pulumi.Input<string>;
+    zscalerPartnerPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerPasswordVariable?: pulumi.Input<string>;
+    zscalerPartnerPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Partner User Name
      */
-    zscalerPartnerUsername?: pulumi.Input<string>;
+    zscalerPartnerUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPartnerUsernameVariable?: pulumi.Input<string>;
+    zscalerPartnerUsernameVariable?: pulumi.Input<string | undefined>;
     /**
      * Password of Zscaler partner account
      */
-    zscalerPassword?: pulumi.Input<string>;
+    zscalerPassword?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerPasswordVariable?: pulumi.Input<string>;
+    zscalerPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Username of Zscaler partner account
      */
-    zscalerUsername?: pulumi.Input<string>;
+    zscalerUsername?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
-    zscalerUsernameVariable?: pulumi.Input<string>;
+    zscalerUsernameVariable?: pulumi.Input<string | undefined>;
 }

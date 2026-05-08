@@ -131,23 +131,23 @@ export interface QosMapPolicyDefinitionState {
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of QoS schedulers
      */
-    qosSchedulers?: pulumi.Input<pulumi.Input<inputs.QosMapPolicyDefinitionQosScheduler>[]>;
+    qosSchedulers?: pulumi.Input<pulumi.Input<inputs.QosMapPolicyDefinitionQosScheduler>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -161,7 +161,7 @@ export interface QosMapPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of QoS schedulers
      */

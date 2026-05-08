@@ -306,8 +306,8 @@ def get_other_ucse_feature(feature_profile_id: Optional[_builtins.str] = None,
         version=pulumi.get(__ret__, 'version'),
         vlan_id=pulumi.get(__ret__, 'vlan_id'),
         vlan_id_variable=pulumi.get(__ret__, 'vlan_id_variable'))
-def get_other_ucse_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                                  id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_other_ucse_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  id: pulumi.Input[Optional[_builtins.str]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetOtherUcseFeatureResult]:
     """
     This data source can read the Other UCSE Feature.

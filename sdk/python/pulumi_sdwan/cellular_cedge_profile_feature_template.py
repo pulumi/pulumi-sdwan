@@ -21,21 +21,21 @@ class CellularCedgeProfileFeatureTemplateArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
                  device_types: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 access_point_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_point_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_overwrite: Optional[pulumi.Input[_builtins.bool]] = None,
-                 no_overwrite_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username_variable: Optional[pulumi.Input[_builtins.str]] = None):
+                 access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_overwrite: pulumi.Input[Optional[_builtins.bool]] = None,
+                 no_overwrite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a CellularCedgeProfileFeatureTemplate resource.
 
@@ -123,31 +123,31 @@ class CellularCedgeProfileFeatureTemplateArgs:
 
     @_builtins.property
     @pulumi.getter(name="accessPointName")
-    def access_point_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_point_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set access point name
         """
         return pulumi.get(self, "access_point_name")
 
     @access_point_name.setter
-    def access_point_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_point_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_point_name", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPointNameVariable")
-    def access_point_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_point_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "access_point_name_variable")
 
     @access_point_name_variable.setter
-    def access_point_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_point_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_point_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationType")
-    def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set authentication type
           - Choices: `none`, `pap`, `chap`, `pap_chap`
@@ -156,60 +156,60 @@ class CellularCedgeProfileFeatureTemplateArgs:
         return pulumi.get(self, "authentication_type")
 
     @authentication_type.setter
-    def authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="noOverwrite")
-    def no_overwrite(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def no_overwrite(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         No Overwrite
         """
         return pulumi.get(self, "no_overwrite")
 
     @no_overwrite.setter
-    def no_overwrite(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def no_overwrite(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "no_overwrite", value)
 
     @_builtins.property
     @pulumi.getter(name="noOverwriteVariable")
-    def no_overwrite_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def no_overwrite_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "no_overwrite_variable")
 
     @no_overwrite_variable.setter
-    def no_overwrite_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def no_overwrite_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "no_overwrite_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="packetDataNetworkType")
-    def packet_data_network_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def packet_data_network_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set packet data network type
           - Choices: `ipv4`, `ipv4v6`, `ipv6`
@@ -218,24 +218,24 @@ class CellularCedgeProfileFeatureTemplateArgs:
         return pulumi.get(self, "packet_data_network_type")
 
     @packet_data_network_type.setter
-    def packet_data_network_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def packet_data_network_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "packet_data_network_type", value)
 
     @_builtins.property
     @pulumi.getter(name="packetDataNetworkTypeVariable")
-    def packet_data_network_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def packet_data_network_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "packet_data_network_type_variable")
 
     @packet_data_network_type_variable.setter
-    def packet_data_network_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def packet_data_network_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "packet_data_network_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def profile_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Profile ID
           - Range: `1`-`16`
@@ -243,92 +243,92 @@ class CellularCedgeProfileFeatureTemplateArgs:
         return pulumi.get(self, "profile_id")
 
     @profile_id.setter
-    def profile_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def profile_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="profileIdVariable")
-    def profile_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "profile_id_variable")
 
     @profile_id_variable.setter
-    def profile_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="profilePassword")
-    def profile_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the profile password
         """
         return pulumi.get(self, "profile_password")
 
     @profile_password.setter
-    def profile_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_password", value)
 
     @_builtins.property
     @pulumi.getter(name="profilePasswordVariable")
-    def profile_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "profile_password_variable")
 
     @profile_password_variable.setter
-    def profile_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="profileUsername")
-    def profile_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the profile username
         """
         return pulumi.get(self, "profile_username")
 
     @profile_username.setter
-    def profile_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_username", value)
 
     @_builtins.property
     @pulumi.getter(name="profileUsernameVariable")
-    def profile_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "profile_username_variable")
 
     @profile_username_variable.setter
-    def profile_username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_username_variable", value)
 
 
 @pulumi.input_type
 class _CellularCedgeProfileFeatureTemplateState:
     def __init__(__self__, *,
-                 access_point_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_point_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_overwrite: Optional[pulumi.Input[_builtins.bool]] = None,
-                 no_overwrite_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 template_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_overwrite: pulumi.Input[Optional[_builtins.bool]] = None,
+                 no_overwrite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 template_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CellularCedgeProfileFeatureTemplate resources.
 
@@ -399,31 +399,31 @@ class _CellularCedgeProfileFeatureTemplateState:
 
     @_builtins.property
     @pulumi.getter(name="accessPointName")
-    def access_point_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_point_name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set access point name
         """
         return pulumi.get(self, "access_point_name")
 
     @access_point_name.setter
-    def access_point_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_point_name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_point_name", value)
 
     @_builtins.property
     @pulumi.getter(name="accessPointNameVariable")
-    def access_point_name_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def access_point_name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "access_point_name_variable")
 
     @access_point_name_variable.setter
-    def access_point_name_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def access_point_name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "access_point_name_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationType")
-    def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set authentication type
           - Choices: `none`, `pap`, `chap`, `pap_chap`
@@ -432,36 +432,36 @@ class _CellularCedgeProfileFeatureTemplateState:
         return pulumi.get(self, "authentication_type")
 
     @authentication_type.setter
-    def authentication_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationTypeVariable")
-    def authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def authentication_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "authentication_type_variable")
 
     @authentication_type_variable.setter
-    def authentication_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def authentication_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "authentication_type_variable", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the feature template
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="deviceTypes")
-    def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def device_types(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of supported device types
           - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
@@ -469,48 +469,48 @@ class _CellularCedgeProfileFeatureTemplateState:
         return pulumi.get(self, "device_types")
 
     @device_types.setter
-    def device_types(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def device_types(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "device_types", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the feature template
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="noOverwrite")
-    def no_overwrite(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def no_overwrite(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         No Overwrite
         """
         return pulumi.get(self, "no_overwrite")
 
     @no_overwrite.setter
-    def no_overwrite(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def no_overwrite(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "no_overwrite", value)
 
     @_builtins.property
     @pulumi.getter(name="noOverwriteVariable")
-    def no_overwrite_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def no_overwrite_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "no_overwrite_variable")
 
     @no_overwrite_variable.setter
-    def no_overwrite_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def no_overwrite_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "no_overwrite_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="packetDataNetworkType")
-    def packet_data_network_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def packet_data_network_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set packet data network type
           - Choices: `ipv4`, `ipv4v6`, `ipv6`
@@ -519,24 +519,24 @@ class _CellularCedgeProfileFeatureTemplateState:
         return pulumi.get(self, "packet_data_network_type")
 
     @packet_data_network_type.setter
-    def packet_data_network_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def packet_data_network_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "packet_data_network_type", value)
 
     @_builtins.property
     @pulumi.getter(name="packetDataNetworkTypeVariable")
-    def packet_data_network_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def packet_data_network_type_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "packet_data_network_type_variable")
 
     @packet_data_network_type_variable.setter
-    def packet_data_network_type_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def packet_data_network_type_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "packet_data_network_type_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def profile_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set Profile ID
           - Range: `1`-`16`
@@ -544,91 +544,91 @@ class _CellularCedgeProfileFeatureTemplateState:
         return pulumi.get(self, "profile_id")
 
     @profile_id.setter
-    def profile_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def profile_id(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="profileIdVariable")
-    def profile_id_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "profile_id_variable")
 
     @profile_id_variable.setter
-    def profile_id_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_id_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="profilePassword")
-    def profile_password(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_password(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the profile password
         """
         return pulumi.get(self, "profile_password")
 
     @profile_password.setter
-    def profile_password(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_password(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_password", value)
 
     @_builtins.property
     @pulumi.getter(name="profilePasswordVariable")
-    def profile_password_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_password_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "profile_password_variable")
 
     @profile_password_variable.setter
-    def profile_password_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_password_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_password_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="profileUsername")
-    def profile_username(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_username(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set the profile username
         """
         return pulumi.get(self, "profile_username")
 
     @profile_username.setter
-    def profile_username(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_username(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_username", value)
 
     @_builtins.property
     @pulumi.getter(name="profileUsernameVariable")
-    def profile_username_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def profile_username_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Variable name
         """
         return pulumi.get(self, "profile_username_variable")
 
     @profile_username_variable.setter
-    def profile_username_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def profile_username_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "profile_username_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="templateType")
-    def template_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def template_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The template type
         """
         return pulumi.get(self, "template_type")
 
     @template_type.setter
-    def template_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def template_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "template_type", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the feature template
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -638,23 +638,23 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_point_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_point_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_overwrite: Optional[pulumi.Input[_builtins.bool]] = None,
-                 no_overwrite_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_overwrite: pulumi.Input[Optional[_builtins.bool]] = None,
+                 no_overwrite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Cellular cEdge Profile feature template.
@@ -767,23 +767,23 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_point_name: Optional[pulumi.Input[_builtins.str]] = None,
-                 access_point_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_overwrite: Optional[pulumi.Input[_builtins.bool]] = None,
-                 no_overwrite_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type: Optional[pulumi.Input[_builtins.str]] = None,
-                 packet_data_network_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_id: Optional[pulumi.Input[_builtins.int]] = None,
-                 profile_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
+                 access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_overwrite: pulumi.Input[Optional[_builtins.bool]] = None,
+                 no_overwrite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+                 profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -826,25 +826,25 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_point_name: Optional[pulumi.Input[_builtins.str]] = None,
-            access_point_name_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_type: Optional[pulumi.Input[_builtins.str]] = None,
-            authentication_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            no_overwrite: Optional[pulumi.Input[_builtins.bool]] = None,
-            no_overwrite_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            packet_data_network_type: Optional[pulumi.Input[_builtins.str]] = None,
-            packet_data_network_type_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            profile_id: Optional[pulumi.Input[_builtins.int]] = None,
-            profile_id_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            profile_password: Optional[pulumi.Input[_builtins.str]] = None,
-            profile_password_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            profile_username: Optional[pulumi.Input[_builtins.str]] = None,
-            profile_username_variable: Optional[pulumi.Input[_builtins.str]] = None,
-            template_type: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'CellularCedgeProfileFeatureTemplate':
+            access_point_name: pulumi.Input[Optional[_builtins.str]] = None,
+            access_point_name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type: pulumi.Input[Optional[_builtins.str]] = None,
+            authentication_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            device_types: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            no_overwrite: pulumi.Input[Optional[_builtins.bool]] = None,
+            no_overwrite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            packet_data_network_type: pulumi.Input[Optional[_builtins.str]] = None,
+            packet_data_network_type_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_id: pulumi.Input[Optional[_builtins.int]] = None,
+            profile_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_password_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_username: pulumi.Input[Optional[_builtins.str]] = None,
+            profile_username_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            template_type: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'CellularCedgeProfileFeatureTemplate':
         """
         Get an existing CellularCedgeProfileFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

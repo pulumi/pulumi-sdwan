@@ -25,12 +25,12 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
                  no_decrypt_categories: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  pass_through_categories: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  reputation: pulumi.Input[_builtins.bool],
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold_categories: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold_categories: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectUnifiedTlsSslProfile resource.
 
@@ -120,7 +120,7 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="decryptThreshold")
-    def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def decrypt_threshold(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -128,36 +128,36 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
         return pulumi.get(self, "decrypt_threshold")
 
     @decrypt_threshold.setter
-    def decrypt_threshold(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def decrypt_threshold(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "decrypt_threshold", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy_object
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy_object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="thresholdCategories")
-    def threshold_categories(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threshold_categories(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -165,44 +165,44 @@ class PolicyObjectUnifiedTlsSslProfileArgs:
         return pulumi.get(self, "threshold_categories")
 
     @threshold_categories.setter
-    def threshold_categories(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threshold_categories(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threshold_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="urlAllowListId")
-    def url_allow_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_allow_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_allow_list_id")
 
     @url_allow_list_id.setter
-    def url_allow_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_allow_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_allow_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="urlBlockListId")
-    def url_block_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_block_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_block_list_id")
 
     @url_block_list_id.setter
-    def url_block_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_block_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_block_list_id", value)
 
 
 @pulumi.input_type
 class _PolicyObjectUnifiedTlsSslProfileState:
     def __init__(__self__, *,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 pass_through_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 threshold_categories: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 pass_through_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 threshold_categories: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslProfile resources.
 
@@ -244,16 +244,16 @@ class _PolicyObjectUnifiedTlsSslProfileState:
 
     @_builtins.property
     @pulumi.getter(name="decryptCategories")
-    def decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "decrypt_categories")
 
     @decrypt_categories.setter
-    def decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="decryptThreshold")
-    def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def decrypt_threshold(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -261,84 +261,84 @@ class _PolicyObjectUnifiedTlsSslProfileState:
         return pulumi.get(self, "decrypt_threshold")
 
     @decrypt_threshold.setter
-    def decrypt_threshold(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def decrypt_threshold(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "decrypt_threshold", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the Policy_object
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="failDecrypt")
-    def fail_decrypt(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def fail_decrypt(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "fail_decrypt")
 
     @fail_decrypt.setter
-    def fail_decrypt(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def fail_decrypt(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "fail_decrypt", value)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the Policy_object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="noDecryptCategories")
-    def no_decrypt_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def no_decrypt_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "no_decrypt_categories")
 
     @no_decrypt_categories.setter
-    def no_decrypt_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def no_decrypt_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "no_decrypt_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="passThroughCategories")
-    def pass_through_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def pass_through_categories(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         return pulumi.get(self, "pass_through_categories")
 
     @pass_through_categories.setter
-    def pass_through_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def pass_through_categories(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "pass_through_categories", value)
 
     @_builtins.property
     @pulumi.getter
-    def reputation(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def reputation(self) -> pulumi.Input[Optional[_builtins.bool]]:
         return pulumi.get(self, "reputation")
 
     @reputation.setter
-    def reputation(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def reputation(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "reputation", value)
 
     @_builtins.property
     @pulumi.getter(name="thresholdCategories")
-    def threshold_categories(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def threshold_categories(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         , Attribute conditional on `reputation` equal to `true`
           - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
@@ -346,37 +346,37 @@ class _PolicyObjectUnifiedTlsSslProfileState:
         return pulumi.get(self, "threshold_categories")
 
     @threshold_categories.setter
-    def threshold_categories(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def threshold_categories(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "threshold_categories", value)
 
     @_builtins.property
     @pulumi.getter(name="urlAllowListId")
-    def url_allow_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_allow_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_allow_list_id")
 
     @url_allow_list_id.setter
-    def url_allow_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_allow_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_allow_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="urlBlockListId")
-    def url_block_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def url_block_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         return pulumi.get(self, "url_block_list_id")
 
     @url_block_list_id.setter
-    def url_block_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def url_block_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "url_block_list_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the Policy_object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -386,18 +386,18 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 pass_through_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 threshold_categories: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 pass_through_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 threshold_categories: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
@@ -502,18 +502,18 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 no_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 pass_through_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-                 threshold_categories: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 no_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 pass_through_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+                 threshold_categories: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -558,19 +558,19 @@ class PolicyObjectUnifiedTlsSslProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            decrypt_threshold: Optional[pulumi.Input[_builtins.str]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            fail_decrypt: Optional[pulumi.Input[_builtins.bool]] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            no_decrypt_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            pass_through_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            reputation: Optional[pulumi.Input[_builtins.bool]] = None,
-            threshold_categories: Optional[pulumi.Input[_builtins.str]] = None,
-            url_allow_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            url_block_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'PolicyObjectUnifiedTlsSslProfile':
+            decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            decrypt_threshold: pulumi.Input[Optional[_builtins.str]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            fail_decrypt: pulumi.Input[Optional[_builtins.bool]] = None,
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            no_decrypt_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            pass_through_categories: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            reputation: pulumi.Input[Optional[_builtins.bool]] = None,
+            threshold_categories: pulumi.Input[Optional[_builtins.str]] = None,
+            url_allow_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            url_block_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PolicyObjectUnifiedTlsSslProfile':
         """
         Get an existing PolicyObjectUnifiedTlsSslProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

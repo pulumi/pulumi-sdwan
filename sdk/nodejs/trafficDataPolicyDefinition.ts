@@ -146,27 +146,27 @@ export interface TrafficDataPolicyDefinitionState {
      * Default action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
-    description?: pulumi.Input<string>;
+    description?: pulumi.Input<string | undefined>;
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of sequences
      */
-    sequences?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.TrafficDataPolicyDefinitionSequence>[] | undefined>;
     /**
      * Type
      */
-    type?: pulumi.Input<string>;
+    type?: pulumi.Input<string | undefined>;
     /**
      * The version of the object
      */
-    version?: pulumi.Input<number>;
+    version?: pulumi.Input<number | undefined>;
 }
 
 /**
@@ -177,7 +177,7 @@ export interface TrafficDataPolicyDefinitionArgs {
      * Default action, either `accept` or `drop`
      *   - Choices: `accept`, `drop`
      */
-    defaultAction?: pulumi.Input<string>;
+    defaultAction?: pulumi.Input<string | undefined>;
     /**
      * The description of the policy definition
      */
@@ -185,7 +185,7 @@ export interface TrafficDataPolicyDefinitionArgs {
     /**
      * The name of the policy definition
      */
-    name?: pulumi.Input<string>;
+    name?: pulumi.Input<string | undefined>;
     /**
      * List of sequences
      */

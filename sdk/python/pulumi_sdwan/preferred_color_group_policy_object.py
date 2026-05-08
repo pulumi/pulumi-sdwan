@@ -20,12 +20,12 @@ __all__ = ['PreferredColorGroupPolicyObjectArgs', 'PreferredColorGroupPolicyObje
 class PreferredColorGroupPolicyObjectArgs:
     def __init__(__self__, *,
                  primary_color_preference: pulumi.Input[_builtins.str],
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_path_preference: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_path_preference: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a PreferredColorGroupPolicyObject resource.
 
@@ -68,19 +68,19 @@ class PreferredColorGroupPolicyObjectArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="primaryPathPreference")
-    def primary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_path_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Path preference
           - Choices: `direct-path`, `multi-hop-path`, `all-paths`
@@ -88,24 +88,24 @@ class PreferredColorGroupPolicyObjectArgs:
         return pulumi.get(self, "primary_path_preference")
 
     @primary_path_preference.setter
-    def primary_path_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_path_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_path_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryColorPreference")
-    def secondary_color_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_color_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Color or space separated list of colors
         """
         return pulumi.get(self, "secondary_color_preference")
 
     @secondary_color_preference.setter
-    def secondary_color_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_color_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_color_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryPathPreference")
-    def secondary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_path_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Path preference
           - Choices: `direct-path`, `multi-hop-path`, `all-paths`
@@ -113,24 +113,24 @@ class PreferredColorGroupPolicyObjectArgs:
         return pulumi.get(self, "secondary_path_preference")
 
     @secondary_path_preference.setter
-    def secondary_path_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_path_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_path_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="tertiaryColorPreference")
-    def tertiary_color_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tertiary_color_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Color or space separated list of colors
         """
         return pulumi.get(self, "tertiary_color_preference")
 
     @tertiary_color_preference.setter
-    def tertiary_color_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tertiary_color_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tertiary_color_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="tertiaryPathPreference")
-    def tertiary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tertiary_path_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Path preference
           - Choices: `direct-path`, `multi-hop-path`, `all-paths`
@@ -138,21 +138,21 @@ class PreferredColorGroupPolicyObjectArgs:
         return pulumi.get(self, "tertiary_path_preference")
 
     @tertiary_path_preference.setter
-    def tertiary_path_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tertiary_path_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tertiary_path_preference", value)
 
 
 @pulumi.input_type
 class _PreferredColorGroupPolicyObjectState:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PreferredColorGroupPolicyObject resources.
 
@@ -187,31 +187,31 @@ class _PreferredColorGroupPolicyObjectState:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy object
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="primaryColorPreference")
-    def primary_color_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_color_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Color or space separated list of colors
         """
         return pulumi.get(self, "primary_color_preference")
 
     @primary_color_preference.setter
-    def primary_color_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_color_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_color_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="primaryPathPreference")
-    def primary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def primary_path_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Path preference
           - Choices: `direct-path`, `multi-hop-path`, `all-paths`
@@ -219,24 +219,24 @@ class _PreferredColorGroupPolicyObjectState:
         return pulumi.get(self, "primary_path_preference")
 
     @primary_path_preference.setter
-    def primary_path_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def primary_path_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "primary_path_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryColorPreference")
-    def secondary_color_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_color_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Color or space separated list of colors
         """
         return pulumi.get(self, "secondary_color_preference")
 
     @secondary_color_preference.setter
-    def secondary_color_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_color_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_color_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="secondaryPathPreference")
-    def secondary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def secondary_path_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Path preference
           - Choices: `direct-path`, `multi-hop-path`, `all-paths`
@@ -244,24 +244,24 @@ class _PreferredColorGroupPolicyObjectState:
         return pulumi.get(self, "secondary_path_preference")
 
     @secondary_path_preference.setter
-    def secondary_path_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def secondary_path_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "secondary_path_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="tertiaryColorPreference")
-    def tertiary_color_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tertiary_color_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Color or space separated list of colors
         """
         return pulumi.get(self, "tertiary_color_preference")
 
     @tertiary_color_preference.setter
-    def tertiary_color_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tertiary_color_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tertiary_color_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="tertiaryPathPreference")
-    def tertiary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def tertiary_path_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Path preference
           - Choices: `direct-path`, `multi-hop-path`, `all-paths`
@@ -269,19 +269,19 @@ class _PreferredColorGroupPolicyObjectState:
         return pulumi.get(self, "tertiary_path_preference")
 
     @tertiary_path_preference.setter
-    def tertiary_path_preference(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def tertiary_path_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "tertiary_path_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -291,13 +291,13 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Preferred Color Group Policy Object .
@@ -389,13 +389,13 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 secondary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-                 tertiary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 primary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 secondary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tertiary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -425,14 +425,14 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            primary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            primary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            secondary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            secondary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            tertiary_color_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            tertiary_path_preference: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'PreferredColorGroupPolicyObject':
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            primary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            secondary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            tertiary_color_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            tertiary_path_preference: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'PreferredColorGroupPolicyObject':
         """
         Get an existing PreferredColorGroupPolicyObject resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

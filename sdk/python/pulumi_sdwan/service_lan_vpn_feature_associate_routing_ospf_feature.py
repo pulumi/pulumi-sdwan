@@ -73,10 +73,10 @@ class ServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs:
 @pulumi.input_type
 class _ServiceLanVpnFeatureAssociateRoutingOspfFeatureState:
     def __init__(__self__, *,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_routing_ospf_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_routing_ospf_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnFeatureAssociateRoutingOspfFeature resources.
 
@@ -96,50 +96,50 @@ class _ServiceLanVpnFeatureAssociateRoutingOspfFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Feature Profile ID
         """
         return pulumi.get(self, "feature_profile_id")
 
     @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def feature_profile_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "feature_profile_id", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service_lan_vpn_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Service LAN VPN Feature ID
         """
         return pulumi.get(self, "service_lan_vpn_feature_id")
 
     @service_lan_vpn_feature_id.setter
-    def service_lan_vpn_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service_lan_vpn_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @_builtins.property
     @pulumi.getter(name="serviceRoutingOspfFeatureId")
-    def service_routing_ospf_feature_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def service_routing_ospf_feature_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Service Routing OSPF Feature ID
         """
         return pulumi.get(self, "service_routing_ospf_feature_id")
 
     @service_routing_ospf_feature_id.setter
-    def service_routing_ospf_feature_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def service_routing_ospf_feature_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "service_routing_ospf_feature_id", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -149,9 +149,9 @@ class ServiceLanVpnFeatureAssociateRoutingOspfFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_routing_ospf_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_routing_ospf_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service LAN VPN Feature Associate Routing OSPF Feature .
@@ -234,9 +234,9 @@ class ServiceLanVpnFeatureAssociateRoutingOspfFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 service_routing_ospf_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_routing_ospf_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -266,10 +266,10 @@ class ServiceLanVpnFeatureAssociateRoutingOspfFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
-            service_lan_vpn_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            service_routing_ospf_feature_id: Optional[pulumi.Input[_builtins.str]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ServiceLanVpnFeatureAssociateRoutingOspfFeature':
+            feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            service_routing_ospf_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ServiceLanVpnFeatureAssociateRoutingOspfFeature':
         """
         Get an existing ServiceLanVpnFeatureAssociateRoutingOspfFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

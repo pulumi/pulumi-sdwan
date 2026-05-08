@@ -22,16 +22,16 @@ __all__ = ['IntrusionPreventionPolicyDefinitionArgs', 'IntrusionPreventionPolicy
 class IntrusionPreventionPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[_builtins.str],
-                 custom_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 inspection_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature_set: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 inspection_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a IntrusionPreventionPolicyDefinition resource.
 
@@ -86,19 +86,19 @@ class IntrusionPreventionPolicyDefinitionArgs:
 
     @_builtins.property
     @pulumi.getter(name="customSignature")
-    def custom_signature(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def custom_signature(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Custom signature
         """
         return pulumi.get(self, "custom_signature")
 
     @custom_signature.setter
-    def custom_signature(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def custom_signature(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "custom_signature", value)
 
     @_builtins.property
     @pulumi.getter(name="inspectionMode")
-    def inspection_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def inspection_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The inspection mode
           - Choices: `protection`, `detection`
@@ -106,36 +106,36 @@ class IntrusionPreventionPolicyDefinitionArgs:
         return pulumi.get(self, "inspection_mode")
 
     @inspection_mode.setter
-    def inspection_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def inspection_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "inspection_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsSignatureListId")
-    def ips_signature_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ips_signature_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPS signature list ID
         """
         return pulumi.get(self, "ips_signature_list_id")
 
     @ips_signature_list_id.setter
-    def ips_signature_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ips_signature_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ips_signature_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsSignatureListVersion")
-    def ips_signature_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ips_signature_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPS signature list version
         """
         return pulumi.get(self, "ips_signature_list_version")
 
     @ips_signature_list_version.setter
-    def ips_signature_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ips_signature_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ips_signature_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="logLevel")
-    def log_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def log_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Log level
           - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
@@ -143,21 +143,21 @@ class IntrusionPreventionPolicyDefinitionArgs:
         return pulumi.get(self, "log_level")
 
     @log_level.setter
-    def log_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def log_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "log_level", value)
 
     @_builtins.property
     @pulumi.getter
-    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]:
+    def loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]:
         return pulumi.get(self, "loggings")
 
     @loggings.setter
-    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]):
+    def loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]):
         pulumi.set(self, "loggings", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -165,24 +165,24 @@ class IntrusionPreventionPolicyDefinitionArgs:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="signatureSet")
-    def signature_set(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def signature_set(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Signature set
           - Choices: `balanced`, `connectivity`, `security`
@@ -190,37 +190,37 @@ class IntrusionPreventionPolicyDefinitionArgs:
         return pulumi.get(self, "signature_set")
 
     @signature_set.setter
-    def signature_set(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def signature_set(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "signature_set", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of VPN IDs
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_vpns", value)
 
 
 @pulumi.input_type
 class _IntrusionPreventionPolicyDefinitionState:
     def __init__(__self__, *,
-                 custom_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 inspection_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature_set: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 version: Optional[pulumi.Input[_builtins.int]] = None):
+                 custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 inspection_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 version: pulumi.Input[Optional[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering IntrusionPreventionPolicyDefinition resources.
 
@@ -267,31 +267,31 @@ class _IntrusionPreventionPolicyDefinitionState:
 
     @_builtins.property
     @pulumi.getter(name="customSignature")
-    def custom_signature(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def custom_signature(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
         Custom signature
         """
         return pulumi.get(self, "custom_signature")
 
     @custom_signature.setter
-    def custom_signature(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def custom_signature(self, value: pulumi.Input[Optional[_builtins.bool]]):
         pulumi.set(self, "custom_signature", value)
 
     @_builtins.property
     @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def description(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The description of the policy definition
         """
         return pulumi.get(self, "description")
 
     @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
 
     @_builtins.property
     @pulumi.getter(name="inspectionMode")
-    def inspection_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def inspection_mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The inspection mode
           - Choices: `protection`, `detection`
@@ -299,36 +299,36 @@ class _IntrusionPreventionPolicyDefinitionState:
         return pulumi.get(self, "inspection_mode")
 
     @inspection_mode.setter
-    def inspection_mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def inspection_mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "inspection_mode", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsSignatureListId")
-    def ips_signature_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ips_signature_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         IPS signature list ID
         """
         return pulumi.get(self, "ips_signature_list_id")
 
     @ips_signature_list_id.setter
-    def ips_signature_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ips_signature_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "ips_signature_list_id", value)
 
     @_builtins.property
     @pulumi.getter(name="ipsSignatureListVersion")
-    def ips_signature_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def ips_signature_list_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         IPS signature list version
         """
         return pulumi.get(self, "ips_signature_list_version")
 
     @ips_signature_list_version.setter
-    def ips_signature_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def ips_signature_list_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "ips_signature_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="logLevel")
-    def log_level(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def log_level(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Log level
           - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
@@ -336,21 +336,21 @@ class _IntrusionPreventionPolicyDefinitionState:
         return pulumi.get(self, "log_level")
 
     @log_level.setter
-    def log_level(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def log_level(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "log_level", value)
 
     @_builtins.property
     @pulumi.getter
-    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]:
+    def loggings(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]:
         return pulumi.get(self, "loggings")
 
     @loggings.setter
-    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]):
+    def loggings(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]):
         pulumi.set(self, "loggings", value)
 
     @_builtins.property
     @pulumi.getter
-    def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The policy mode
           - Choices: `security`, `unified`
@@ -358,24 +358,24 @@ class _IntrusionPreventionPolicyDefinitionState:
         return pulumi.get(self, "mode")
 
     @mode.setter
-    def mode(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "mode", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         The name of the policy definition
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter(name="signatureSet")
-    def signature_set(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def signature_set(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Signature set
           - Choices: `balanced`, `connectivity`, `security`
@@ -383,31 +383,31 @@ class _IntrusionPreventionPolicyDefinitionState:
         return pulumi.get(self, "signature_set")
 
     @signature_set.setter
-    def signature_set(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def signature_set(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "signature_set", value)
 
     @_builtins.property
     @pulumi.getter(name="targetVpns")
-    def target_vpns(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def target_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         List of VPN IDs
         """
         return pulumi.get(self, "target_vpns")
 
     @target_vpns.setter
-    def target_vpns(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def target_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_vpns", value)
 
     @_builtins.property
     @pulumi.getter
-    def version(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         The version of the object
         """
         return pulumi.get(self, "version")
 
     @version.setter
-    def version(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "version", value)
 
 
@@ -417,17 +417,17 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 custom_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 inspection_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature_set: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 inspection_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
@@ -533,17 +533,17 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 custom_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 inspection_mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips_signature_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-                 log_level: Optional[pulumi.Input[_builtins.str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
-                 mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 signature_set: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+                 description: pulumi.Input[Optional[_builtins.str]] = None,
+                 inspection_mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ips_signature_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 log_level: pulumi.Input[Optional[_builtins.str]] = None,
+                 loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -577,18 +577,18 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            custom_signature: Optional[pulumi.Input[_builtins.bool]] = None,
-            description: Optional[pulumi.Input[_builtins.str]] = None,
-            inspection_mode: Optional[pulumi.Input[_builtins.str]] = None,
-            ips_signature_list_id: Optional[pulumi.Input[_builtins.str]] = None,
-            ips_signature_list_version: Optional[pulumi.Input[_builtins.int]] = None,
-            log_level: Optional[pulumi.Input[_builtins.str]] = None,
-            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
-            mode: Optional[pulumi.Input[_builtins.str]] = None,
-            name: Optional[pulumi.Input[_builtins.str]] = None,
-            signature_set: Optional[pulumi.Input[_builtins.str]] = None,
-            target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            version: Optional[pulumi.Input[_builtins.int]] = None) -> 'IntrusionPreventionPolicyDefinition':
+            custom_signature: pulumi.Input[Optional[_builtins.bool]] = None,
+            description: pulumi.Input[Optional[_builtins.str]] = None,
+            inspection_mode: pulumi.Input[Optional[_builtins.str]] = None,
+            ips_signature_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+            ips_signature_list_version: pulumi.Input[Optional[_builtins.int]] = None,
+            log_level: pulumi.Input[Optional[_builtins.str]] = None,
+            loggings: pulumi.Input[Optional[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
+            mode: pulumi.Input[Optional[_builtins.str]] = None,
+            name: pulumi.Input[Optional[_builtins.str]] = None,
+            signature_set: pulumi.Input[Optional[_builtins.str]] = None,
+            target_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'IntrusionPreventionPolicyDefinition':
         """
         Get an existing IntrusionPreventionPolicyDefinition resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
