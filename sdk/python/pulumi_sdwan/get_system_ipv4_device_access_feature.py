@@ -124,6 +124,7 @@ class AwaitableGetSystemIpv4DeviceAccessFeatureResult(GetSystemIpv4DeviceAccessF
 
 def get_system_ipv4_device_access_feature(feature_profile_id: Optional[_builtins.str] = None,
                                           id: Optional[_builtins.str] = None,
+                                          name: Optional[_builtins.str] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSystemIpv4DeviceAccessFeatureResult:
     """
     This data source can read the System IPv4 Device Access Feature.
@@ -141,10 +142,12 @@ def get_system_ipv4_device_access_feature(feature_profile_id: Optional[_builtins
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature', __args__, opts=opts, typ=GetSystemIpv4DeviceAccessFeatureResult).value
 
@@ -157,7 +160,8 @@ def get_system_ipv4_device_access_feature(feature_profile_id: Optional[_builtins
         sequences=pulumi.get(__ret__, 'sequences'),
         version=pulumi.get(__ret__, 'version'))
 def get_system_ipv4_device_access_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                 id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                 name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemIpv4DeviceAccessFeatureResult]:
     """
     This data source can read the System IPv4 Device Access Feature.
@@ -175,10 +179,12 @@ def get_system_ipv4_device_access_feature_output(feature_profile_id: pulumi.Inpu
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature', __args__, opts=opts, typ=GetSystemIpv4DeviceAccessFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemIpv4DeviceAccessFeatureResult(

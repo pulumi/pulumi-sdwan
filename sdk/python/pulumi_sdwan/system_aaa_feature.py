@@ -37,6 +37,9 @@ class SystemAaaFeatureArgs:
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]] = None,
                  tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]] = None,
+                 trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
                  users: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None):
         """
         The set of arguments for constructing a SystemAaaFeature resource.
@@ -61,6 +64,9 @@ class SystemAaaFeatureArgs:
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list: CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_radius_group: RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]] users: Create local login account
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -93,6 +99,12 @@ class SystemAaaFeatureArgs:
             pulumi.set(__self__, "radius_groups", radius_groups)
         if tacacs_groups is not None:
             pulumi.set(__self__, "tacacs_groups", tacacs_groups)
+        if trustsec_cts_auth_list is not None:
+            pulumi.set(__self__, "trustsec_cts_auth_list", trustsec_cts_auth_list)
+        if trustsec_cts_auth_list_variable is not None:
+            pulumi.set(__self__, "trustsec_cts_auth_list_variable", trustsec_cts_auth_list_variable)
+        if trustsec_radius_group is not None:
+            pulumi.set(__self__, "trustsec_radius_group", trustsec_radius_group)
         if users is not None:
             pulumi.set(__self__, "users", users)
 
@@ -293,6 +305,42 @@ class SystemAaaFeatureArgs:
         pulumi.set(self, "tacacs_groups", value)
 
     @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthList")
+    def trustsec_cts_auth_list(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list")
+
+    @trustsec_cts_auth_list.setter
+    def trustsec_cts_auth_list(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_cts_auth_list", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthListVariable")
+    def trustsec_cts_auth_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list_variable")
+
+    @trustsec_cts_auth_list_variable.setter
+    def trustsec_cts_auth_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_cts_auth_list_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRadiusGroup")
+    def trustsec_radius_group(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_radius_group")
+
+    @trustsec_radius_group.setter
+    def trustsec_radius_group(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_radius_group", value)
+
+    @_builtins.property
     @pulumi.getter
     def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]:
         """
@@ -324,6 +372,9 @@ class _SystemAaaFeatureState:
                  radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]]] = None,
                  server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]]] = None,
+                 trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
                  users: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]] = None,
                  version: pulumi.Input[Optional[_builtins.int]] = None):
         """
@@ -349,6 +400,9 @@ class _SystemAaaFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupArgs']]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupArgs']]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list: CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_radius_group: RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]] users: Create local login account
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -384,6 +438,12 @@ class _SystemAaaFeatureState:
             pulumi.set(__self__, "server_auth_orders", server_auth_orders)
         if tacacs_groups is not None:
             pulumi.set(__self__, "tacacs_groups", tacacs_groups)
+        if trustsec_cts_auth_list is not None:
+            pulumi.set(__self__, "trustsec_cts_auth_list", trustsec_cts_auth_list)
+        if trustsec_cts_auth_list_variable is not None:
+            pulumi.set(__self__, "trustsec_cts_auth_list_variable", trustsec_cts_auth_list_variable)
+        if trustsec_radius_group is not None:
+            pulumi.set(__self__, "trustsec_radius_group", trustsec_radius_group)
         if users is not None:
             pulumi.set(__self__, "users", users)
         if version is not None:
@@ -586,6 +646,42 @@ class _SystemAaaFeatureState:
         pulumi.set(self, "tacacs_groups", value)
 
     @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthList")
+    def trustsec_cts_auth_list(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list")
+
+    @trustsec_cts_auth_list.setter
+    def trustsec_cts_auth_list(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_cts_auth_list", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthListVariable")
+    def trustsec_cts_auth_list_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list_variable")
+
+    @trustsec_cts_auth_list_variable.setter
+    def trustsec_cts_auth_list_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_cts_auth_list_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRadiusGroup")
+    def trustsec_radius_group(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_radius_group")
+
+    @trustsec_radius_group.setter
+    def trustsec_radius_group(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "trustsec_radius_group", value)
+
+    @_builtins.property
     @pulumi.getter
     def users(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserArgs']]]]:
         """
@@ -632,6 +728,9 @@ class SystemAaaFeature(pulumi.CustomResource):
                  radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
                  server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+                 trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
                  users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
                  __props__=None):
         """
@@ -676,6 +775,8 @@ class SystemAaaFeature(pulumi.CustomResource):
                     "key_type": "key",
                 }],
             }],
+            trustsec_cts_auth_list="list1",
+            trustsec_radius_group="RGROUP1",
             tacacs_groups=[{
                 "group_name": "TGROUP1",
                 "vpn": 10,
@@ -740,6 +841,9 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list: CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_radius_group: RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]] users: Create local login account
         """
         ...
@@ -790,6 +894,8 @@ class SystemAaaFeature(pulumi.CustomResource):
                     "key_type": "key",
                 }],
             }],
+            trustsec_cts_auth_list="list1",
+            trustsec_radius_group="RGROUP1",
             tacacs_groups=[{
                 "group_name": "TGROUP1",
                 "vpn": 10,
@@ -863,6 +969,9 @@ class SystemAaaFeature(pulumi.CustomResource):
                  radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
                  server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+                 trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
                  users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -893,6 +1002,9 @@ class SystemAaaFeature(pulumi.CustomResource):
                 raise TypeError("Missing required property 'server_auth_orders'")
             __props__.__dict__["server_auth_orders"] = server_auth_orders
             __props__.__dict__["tacacs_groups"] = tacacs_groups
+            __props__.__dict__["trustsec_cts_auth_list"] = trustsec_cts_auth_list
+            __props__.__dict__["trustsec_cts_auth_list_variable"] = trustsec_cts_auth_list_variable
+            __props__.__dict__["trustsec_radius_group"] = trustsec_radius_group
             __props__.__dict__["users"] = users
             __props__.__dict__["version"] = None
         super(SystemAaaFeature, __self__).__init__(
@@ -921,6 +1033,9 @@ class SystemAaaFeature(pulumi.CustomResource):
             radius_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]]] = None,
             server_auth_orders: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tacacs_groups: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]]] = None,
+            trustsec_cts_auth_list: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_cts_auth_list_variable: pulumi.Input[Optional[_builtins.str]] = None,
+            trustsec_radius_group: pulumi.Input[Optional[_builtins.str]] = None,
             users: pulumi.Input[Optional[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]]] = None,
             version: pulumi.Input[Optional[_builtins.int]] = None) -> 'SystemAaaFeature':
         """
@@ -950,6 +1065,9 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureRadiusGroupArgs', 'SystemAaaFeatureRadiusGroupArgsDict']]]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureTacacsGroupArgs', 'SystemAaaFeatureTacacsGroupArgsDict']]]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list: CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_cts_auth_list_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        :param pulumi.Input[_builtins.str] trustsec_radius_group: RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureUserArgs', 'SystemAaaFeatureUserArgsDict']]]] users: Create local login account
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -973,6 +1091,9 @@ class SystemAaaFeature(pulumi.CustomResource):
         __props__.__dict__["radius_groups"] = radius_groups
         __props__.__dict__["server_auth_orders"] = server_auth_orders
         __props__.__dict__["tacacs_groups"] = tacacs_groups
+        __props__.__dict__["trustsec_cts_auth_list"] = trustsec_cts_auth_list
+        __props__.__dict__["trustsec_cts_auth_list_variable"] = trustsec_cts_auth_list_variable
+        __props__.__dict__["trustsec_radius_group"] = trustsec_radius_group
         __props__.__dict__["users"] = users
         __props__.__dict__["version"] = version
         return SystemAaaFeature(resource_name, opts=opts, __props__=__props__)
@@ -1108,6 +1229,30 @@ class SystemAaaFeature(pulumi.CustomResource):
         Configure the TACACS serverGroup
         """
         return pulumi.get(self, "tacacs_groups")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthList")
+    def trustsec_cts_auth_list(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthListVariable")
+    def trustsec_cts_auth_list_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRadiusGroup")
+    def trustsec_radius_group(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "trustsec_radius_group")
 
     @_builtins.property
     @pulumi.getter

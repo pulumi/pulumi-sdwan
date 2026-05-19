@@ -75,6 +75,8 @@ namespace Pulumi.Sdwan
     ///                 },
     ///             },
     ///         },
+    ///         TrustsecCtsAuthList = "list1",
+    ///         TrustsecRadiusGroup = "RGROUP1",
     ///         TacacsGroups = new[]
     ///         {
     ///             new Sdwan.Inputs.SystemAaaFeatureTacacsGroupArgs
@@ -243,6 +245,24 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("tacacsGroups")]
         public Output<ImmutableArray<Outputs.SystemAaaFeatureTacacsGroup>> TacacsGroups { get; private set; } = null!;
+
+        /// <summary>
+        /// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("trustsecCtsAuthList")]
+        public Output<string?> TrustsecCtsAuthList { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("trustsecCtsAuthListVariable")]
+        public Output<string?> TrustsecCtsAuthListVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("trustsecRadiusGroup")]
+        public Output<string?> TrustsecRadiusGroup { get; private set; } = null!;
 
         /// <summary>
         /// Create local login account
@@ -432,6 +452,24 @@ namespace Pulumi.Sdwan
             set => _tacacsGroups = value;
         }
 
+        /// <summary>
+        /// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("trustsecCtsAuthList")]
+        public Input<string>? TrustsecCtsAuthList { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("trustsecCtsAuthListVariable")]
+        public Input<string>? TrustsecCtsAuthListVariable { get; set; }
+
+        /// <summary>
+        /// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("trustsecRadiusGroup")]
+        public Input<string>? TrustsecRadiusGroup { get; set; }
+
         [Input("users")]
         private InputList<Inputs.SystemAaaFeatureUserArgs>? _users;
 
@@ -581,6 +619,24 @@ namespace Pulumi.Sdwan
             get => _tacacsGroups ?? (_tacacsGroups = new InputList<Inputs.SystemAaaFeatureTacacsGroupGetArgs>());
             set => _tacacsGroups = value;
         }
+
+        /// <summary>
+        /// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("trustsecCtsAuthList")]
+        public Input<string>? TrustsecCtsAuthList { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("trustsecCtsAuthListVariable")]
+        public Input<string>? TrustsecCtsAuthListVariable { get; set; }
+
+        /// <summary>
+        /// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("trustsecRadiusGroup")]
+        public Input<string>? TrustsecRadiusGroup { get; set; }
 
         [Input("users")]
         private InputList<Inputs.SystemAaaFeatureUserGetArgs>? _users;

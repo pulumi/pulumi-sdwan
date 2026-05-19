@@ -26,6 +26,7 @@ export function getTransportIpv6AclFeature(args: GetTransportIpv6AclFeatureArgs,
     return pulumi.runtime.invoke("sdwan:index/getTransportIpv6AclFeature:getTransportIpv6AclFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetTransportIpv6AclFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -96,6 +101,7 @@ export function getTransportIpv6AclFeatureOutput(args: GetTransportIpv6AclFeatur
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportIpv6AclFeature:getTransportIpv6AclFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -110,5 +116,9 @@ export interface GetTransportIpv6AclFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

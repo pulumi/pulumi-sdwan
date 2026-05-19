@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetServiceDhcpServerFeatureOptionCode;
 import com.pulumi.sdwan.outputs.GetServiceDhcpServerFeatureStaticLease;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,6 +30,16 @@ public final class GetServiceDhcpServerFeatureResult {
      * 
      */
     private String description;
+    /**
+     * @return DHCP sync enable/disable for dual home edges
+     * 
+     */
+    private Boolean dhcpHaEnable;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String dhcpHaEnableVariable;
     /**
      * @return Configure one or more DNS server IP addresses
      * 
@@ -161,6 +172,20 @@ public final class GetServiceDhcpServerFeatureResult {
      */
     public String description() {
         return this.description;
+    }
+    /**
+     * @return DHCP sync enable/disable for dual home edges
+     * 
+     */
+    public Boolean dhcpHaEnable() {
+        return this.dhcpHaEnable;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String dhcpHaEnableVariable() {
+        return this.dhcpHaEnableVariable;
     }
     /**
      * @return Configure one or more DNS server IP addresses
@@ -329,6 +354,8 @@ public final class GetServiceDhcpServerFeatureResult {
         private String defaultGateway;
         private String defaultGatewayVariable;
         private String description;
+        private Boolean dhcpHaEnable;
+        private String dhcpHaEnableVariable;
         private List<String> dnsServers;
         private String dnsServersVariable;
         private String domainName;
@@ -357,6 +384,8 @@ public final class GetServiceDhcpServerFeatureResult {
     	      this.defaultGateway = defaults.defaultGateway;
     	      this.defaultGatewayVariable = defaults.defaultGatewayVariable;
     	      this.description = defaults.description;
+    	      this.dhcpHaEnable = defaults.dhcpHaEnable;
+    	      this.dhcpHaEnableVariable = defaults.dhcpHaEnableVariable;
     	      this.dnsServers = defaults.dnsServers;
     	      this.dnsServersVariable = defaults.dnsServersVariable;
     	      this.domainName = defaults.domainName;
@@ -403,6 +432,22 @@ public final class GetServiceDhcpServerFeatureResult {
               throw new MissingRequiredPropertyException("GetServiceDhcpServerFeatureResult", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dhcpHaEnable(Boolean dhcpHaEnable) {
+            if (dhcpHaEnable == null) {
+              throw new MissingRequiredPropertyException("GetServiceDhcpServerFeatureResult", "dhcpHaEnable");
+            }
+            this.dhcpHaEnable = dhcpHaEnable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dhcpHaEnableVariable(String dhcpHaEnableVariable) {
+            if (dhcpHaEnableVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceDhcpServerFeatureResult", "dhcpHaEnableVariable");
+            }
+            this.dhcpHaEnableVariable = dhcpHaEnableVariable;
             return this;
         }
         @CustomType.Setter
@@ -601,6 +646,8 @@ public final class GetServiceDhcpServerFeatureResult {
             _resultValue.defaultGateway = defaultGateway;
             _resultValue.defaultGatewayVariable = defaultGatewayVariable;
             _resultValue.description = description;
+            _resultValue.dhcpHaEnable = dhcpHaEnable;
+            _resultValue.dhcpHaEnableVariable = dhcpHaEnableVariable;
             _resultValue.dnsServers = dnsServers;
             _resultValue.dnsServersVariable = dnsServersVariable;
             _resultValue.domainName = domainName;

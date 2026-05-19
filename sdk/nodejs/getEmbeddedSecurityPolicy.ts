@@ -26,6 +26,7 @@ export function getEmbeddedSecurityPolicy(args: GetEmbeddedSecurityPolicyArgs, o
     return pulumi.runtime.invoke("sdwan:index/getEmbeddedSecurityPolicy:getEmbeddedSecurityPolicy", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetEmbeddedSecurityPolicyArgs {
     /**
      * The id of the Policy
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy
+     */
+    name?: string;
 }
 
 /**
@@ -125,6 +130,7 @@ export function getEmbeddedSecurityPolicyOutput(args: GetEmbeddedSecurityPolicyO
     return pulumi.runtime.invokeOutput("sdwan:index/getEmbeddedSecurityPolicy:getEmbeddedSecurityPolicy", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -139,5 +145,9 @@ export interface GetEmbeddedSecurityPolicyOutputArgs {
     /**
      * The id of the Policy
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy
+     */
+    name?: pulumi.Input<string | undefined>;
 }

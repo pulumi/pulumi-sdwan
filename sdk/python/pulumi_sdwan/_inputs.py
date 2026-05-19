@@ -51582,7 +51582,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    local_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    local_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
     """
@@ -51607,7 +51607,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    remote_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    remote_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set remote autonomous system number
     """
@@ -51678,13 +51678,13 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
                  keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 local_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_as: pulumi.Input[Optional[_builtins.str]] = None,
                  local_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  next_hop_self: pulumi.Input[Optional[_builtins.bool]] = None,
                  next_hop_self_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 remote_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 remote_as: pulumi.Input[Optional[_builtins.str]] = None,
                  remote_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  send_community: pulumi.Input[Optional[_builtins.bool]] = None,
                  send_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -51720,14 +51720,14 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
                  - Range: `0`-`65535`
                  - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_as: Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        :param pulumi.Input[_builtins.str] local_as: Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         :param pulumi.Input[_builtins.str] local_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
         :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
+        :param pulumi.Input[_builtins.str] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] send_community: Send community attribute
                  - Default value: `true`
@@ -52001,14 +52001,14 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="localAs")
-    def local_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def local_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         """
         return pulumi.get(self, "local_as")
 
     @local_as.setter
-    def local_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def local_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_as", value)
 
     @_builtins.property
@@ -52074,14 +52074,14 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
-    def remote_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def remote_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set remote autonomous system number
         """
         return pulumi.get(self, "remote_as")
 
     @remote_as.setter
-    def remote_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def remote_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_as", value)
 
     @_builtins.property
@@ -53089,7 +53089,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    local_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    local_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
     """
@@ -53114,7 +53114,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    remote_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    remote_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set remote autonomous system number
     """
@@ -53176,13 +53176,13 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
                  keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 local_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_as: pulumi.Input[Optional[_builtins.str]] = None,
                  local_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  next_hop_self: pulumi.Input[Optional[_builtins.bool]] = None,
                  next_hop_self_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 remote_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 remote_as: pulumi.Input[Optional[_builtins.str]] = None,
                  remote_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  send_community: pulumi.Input[Optional[_builtins.bool]] = None,
                  send_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -53216,14 +53216,14 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
                  - Range: `0`-`65535`
                  - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_as: Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        :param pulumi.Input[_builtins.str] local_as: Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         :param pulumi.Input[_builtins.str] local_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
         :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
+        :param pulumi.Input[_builtins.str] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] send_community: Send community attribute
                  - Default value: `true`
@@ -53490,14 +53490,14 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="localAs")
-    def local_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def local_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         """
         return pulumi.get(self, "local_as")
 
     @local_as.setter
-    def local_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def local_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_as", value)
 
     @_builtins.property
@@ -53563,14 +53563,14 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
-    def remote_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def remote_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set remote autonomous system number
         """
         return pulumi.get(self, "remote_as")
 
     @remote_as.setter
-    def remote_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def remote_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_as", value)
 
     @_builtins.property
@@ -60580,6 +60580,10 @@ class SystemAaaFeatureRadiusGroupArgsDict(TypedDict):
       - Range: `0`-`65530`
       - Default value: `0`
     """
+    vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
 
 @pulumi.input_type
 class SystemAaaFeatureRadiusGroupArgs:
@@ -60588,7 +60592,8 @@ class SystemAaaFeatureRadiusGroupArgs:
                  servers: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupServerArgs']]]] = None,
                  source_interface: pulumi.Input[Optional[_builtins.str]] = None,
                  source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 vpn: pulumi.Input[Optional[_builtins.int]] = None):
+                 vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] group_name: Set Radius server Group Name
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupServerArgs']]] servers: Configure the Radius server
@@ -60597,6 +60602,7 @@ class SystemAaaFeatureRadiusGroupArgs:
         :param pulumi.Input[_builtins.int] vpn: Set VPN in which Radius server is located
                  - Range: `0`-`65530`
                  - Default value: `0`
+        :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         if group_name is not None:
             pulumi.set(__self__, "group_name", group_name)
@@ -60608,6 +60614,8 @@ class SystemAaaFeatureRadiusGroupArgs:
             pulumi.set(__self__, "source_interface_variable", source_interface_variable)
         if vpn is not None:
             pulumi.set(__self__, "vpn", vpn)
+        if vpn_variable is not None:
+            pulumi.set(__self__, "vpn_variable", vpn_variable)
 
     @_builtins.property
     @pulumi.getter(name="groupName")
@@ -60670,6 +60678,18 @@ class SystemAaaFeatureRadiusGroupArgs:
     @vpn.setter
     def vpn(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnVariable")
+    def vpn_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_variable")
+
+    @vpn_variable.setter
+    def vpn_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "vpn_variable", value)
 
 
 class SystemAaaFeatureRadiusGroupServerArgsDict(TypedDict):
@@ -61057,6 +61077,10 @@ class SystemAaaFeatureTacacsGroupArgsDict(TypedDict):
       - Range: `0`-`65530`
       - Default value: `0`
     """
+    vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
 
 @pulumi.input_type
 class SystemAaaFeatureTacacsGroupArgs:
@@ -61065,7 +61089,8 @@ class SystemAaaFeatureTacacsGroupArgs:
                  servers: pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupServerArgs']]]] = None,
                  source_interface: pulumi.Input[Optional[_builtins.str]] = None,
                  source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 vpn: pulumi.Input[Optional[_builtins.int]] = None):
+                 vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] group_name: Set TACACS server Group Name
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupServerArgs']]] servers: Configure the TACACS server
@@ -61074,6 +61099,7 @@ class SystemAaaFeatureTacacsGroupArgs:
         :param pulumi.Input[_builtins.int] vpn: Set VPN in which TACACS server is located
                  - Range: `0`-`65530`
                  - Default value: `0`
+        :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         if group_name is not None:
             pulumi.set(__self__, "group_name", group_name)
@@ -61085,6 +61111,8 @@ class SystemAaaFeatureTacacsGroupArgs:
             pulumi.set(__self__, "source_interface_variable", source_interface_variable)
         if vpn is not None:
             pulumi.set(__self__, "vpn", vpn)
+        if vpn_variable is not None:
+            pulumi.set(__self__, "vpn_variable", vpn_variable)
 
     @_builtins.property
     @pulumi.getter(name="groupName")
@@ -61147,6 +61175,18 @@ class SystemAaaFeatureTacacsGroupArgs:
     @vpn.setter
     def vpn(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnVariable")
+    def vpn_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_variable")
+
+    @vpn_variable.setter
+    def vpn_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "vpn_variable", value)
 
 
 class SystemAaaFeatureTacacsGroupServerArgsDict(TypedDict):
@@ -70300,7 +70340,7 @@ class TransportRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    local_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    local_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
     """
@@ -70325,7 +70365,7 @@ class TransportRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    remote_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    remote_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set remote autonomous system number
     """
@@ -70394,13 +70434,13 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
                  keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 local_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_as: pulumi.Input[Optional[_builtins.str]] = None,
                  local_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  next_hop_self: pulumi.Input[Optional[_builtins.bool]] = None,
                  next_hop_self_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 remote_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 remote_as: pulumi.Input[Optional[_builtins.str]] = None,
                  remote_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  send_community: pulumi.Input[Optional[_builtins.bool]] = None,
                  send_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -70438,14 +70478,14 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
                  - Range: `0`-`65535`
                  - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_as: Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        :param pulumi.Input[_builtins.str] local_as: Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         :param pulumi.Input[_builtins.str] local_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
         :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
+        :param pulumi.Input[_builtins.str] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] send_community: Send community attribute
                  - Default value: `true`
@@ -70745,14 +70785,14 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="localAs")
-    def local_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def local_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         """
         return pulumi.get(self, "local_as")
 
     @local_as.setter
-    def local_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def local_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_as", value)
 
     @_builtins.property
@@ -70818,14 +70858,14 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
-    def remote_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def remote_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set remote autonomous system number
         """
         return pulumi.get(self, "remote_as")
 
     @remote_as.setter
-    def remote_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def remote_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_as", value)
 
     @_builtins.property
@@ -71778,7 +71818,7 @@ class TransportRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    local_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    local_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
     """
@@ -71803,7 +71843,7 @@ class TransportRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     Variable name
     """
-    remote_as: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    remote_as: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Set remote autonomous system number
     """
@@ -71865,13 +71905,13 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
                  hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  keepalive_time: pulumi.Input[Optional[_builtins.int]] = None,
                  keepalive_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 local_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 local_as: pulumi.Input[Optional[_builtins.str]] = None,
                  local_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  next_hop_self: pulumi.Input[Optional[_builtins.bool]] = None,
                  next_hop_self_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  password_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 remote_as: pulumi.Input[Optional[_builtins.int]] = None,
+                 remote_as: pulumi.Input[Optional[_builtins.str]] = None,
                  remote_as_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  send_community: pulumi.Input[Optional[_builtins.bool]] = None,
                  send_community_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -71905,14 +71945,14 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
                  - Range: `0`-`65535`
                  - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_as: Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        :param pulumi.Input[_builtins.str] local_as: Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         :param pulumi.Input[_builtins.str] local_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] next_hop_self: Set router to be next hop for routes advertised to neighbor
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] next_hop_self_variable: Variable name
         :param pulumi.Input[_builtins.str] password: Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.int] remote_as: Set remote autonomous system number
+        :param pulumi.Input[_builtins.str] remote_as: Set remote autonomous system number
         :param pulumi.Input[_builtins.str] remote_as_variable: Variable name
         :param pulumi.Input[_builtins.bool] send_community: Send community attribute
                  - Default value: `true`
@@ -72179,14 +72219,14 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="localAs")
-    def local_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def local_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         """
         return pulumi.get(self, "local_as")
 
     @local_as.setter
-    def local_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def local_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "local_as", value)
 
     @_builtins.property
@@ -72252,14 +72292,14 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
 
     @_builtins.property
     @pulumi.getter(name="remoteAs")
-    def remote_as(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def remote_as(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set remote autonomous system number
         """
         return pulumi.get(self, "remote_as")
 
     @remote_as.setter
-    def remote_as(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def remote_as(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "remote_as", value)
 
     @_builtins.property

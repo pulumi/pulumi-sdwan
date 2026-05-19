@@ -26,6 +26,7 @@ export function getPolicyObjectClassMap(args: GetPolicyObjectClassMapArgs, opts?
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectClassMap:getPolicyObjectClassMap", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectClassMapArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getPolicyObjectClassMapOutput(args: GetPolicyObjectClassMapOutpu
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectClassMap:getPolicyObjectClassMap", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetPolicyObjectClassMapOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

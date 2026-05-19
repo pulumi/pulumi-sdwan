@@ -48,6 +48,8 @@ import * as utilities from "./utilities";
  *             keyType: "key",
  *         }],
  *     }],
+ *     trustsecCtsAuthList: "list1",
+ *     trustsecRadiusGroup: "RGROUP1",
  *     tacacsGroups: [{
  *         groupName: "TGROUP1",
  *         vpn: 10,
@@ -187,6 +189,18 @@ export class SystemAaaFeature extends pulumi.CustomResource {
      */
     declare public readonly tacacsGroups: pulumi.Output<outputs.SystemAaaFeatureTacacsGroup[] | undefined>;
     /**
+     * CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly trustsecCtsAuthList: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly trustsecCtsAuthListVariable: pulumi.Output<string | undefined>;
+    /**
+     * RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly trustsecRadiusGroup: pulumi.Output<string | undefined>;
+    /**
      * Create local login account
      */
     declare public readonly users: pulumi.Output<outputs.SystemAaaFeatureUser[] | undefined>;
@@ -224,6 +238,9 @@ export class SystemAaaFeature extends pulumi.CustomResource {
             resourceInputs["radiusGroups"] = state?.radiusGroups;
             resourceInputs["serverAuthOrders"] = state?.serverAuthOrders;
             resourceInputs["tacacsGroups"] = state?.tacacsGroups;
+            resourceInputs["trustsecCtsAuthList"] = state?.trustsecCtsAuthList;
+            resourceInputs["trustsecCtsAuthListVariable"] = state?.trustsecCtsAuthListVariable;
+            resourceInputs["trustsecRadiusGroup"] = state?.trustsecRadiusGroup;
             resourceInputs["users"] = state?.users;
             resourceInputs["version"] = state?.version;
         } else {
@@ -250,6 +267,9 @@ export class SystemAaaFeature extends pulumi.CustomResource {
             resourceInputs["radiusGroups"] = args?.radiusGroups;
             resourceInputs["serverAuthOrders"] = args?.serverAuthOrders;
             resourceInputs["tacacsGroups"] = args?.tacacsGroups;
+            resourceInputs["trustsecCtsAuthList"] = args?.trustsecCtsAuthList;
+            resourceInputs["trustsecCtsAuthListVariable"] = args?.trustsecCtsAuthListVariable;
+            resourceInputs["trustsecRadiusGroup"] = args?.trustsecRadiusGroup;
             resourceInputs["users"] = args?.users;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -330,6 +350,18 @@ export interface SystemAaaFeatureState {
      * Configure the TACACS serverGroup
      */
     tacacsGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroup>[] | undefined>;
+    /**
+     * CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    trustsecCtsAuthList?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    trustsecCtsAuthListVariable?: pulumi.Input<string | undefined>;
+    /**
+     * RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    trustsecRadiusGroup?: pulumi.Input<string | undefined>;
     /**
      * Create local login account
      */
@@ -412,6 +444,18 @@ export interface SystemAaaFeatureArgs {
      * Configure the TACACS serverGroup
      */
     tacacsGroups?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureTacacsGroup>[] | undefined>;
+    /**
+     * CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    trustsecCtsAuthList?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    trustsecCtsAuthListVariable?: pulumi.Input<string | undefined>;
+    /**
+     * RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    trustsecRadiusGroup?: pulumi.Input<string | undefined>;
     /**
      * Create local login account
      */

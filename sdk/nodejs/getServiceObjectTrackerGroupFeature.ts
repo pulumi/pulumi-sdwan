@@ -26,6 +26,7 @@ export function getServiceObjectTrackerGroupFeature(args: GetServiceObjectTracke
     return pulumi.runtime.invoke("sdwan:index/getServiceObjectTrackerGroupFeature:getServiceObjectTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceObjectTrackerGroupFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -108,6 +113,7 @@ export function getServiceObjectTrackerGroupFeatureOutput(args: GetServiceObject
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceObjectTrackerGroupFeature:getServiceObjectTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -122,5 +128,9 @@ export interface GetServiceObjectTrackerGroupFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

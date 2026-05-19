@@ -97,6 +97,21 @@ public final class SystemAaaFeatureRadiusGroupArgs extends com.pulumi.resources.
         return Optional.ofNullable(this.vpn);
     }
 
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="vpnVariable")
+    private @Nullable Output<String> vpnVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> vpnVariable() {
+        return Optional.ofNullable(this.vpnVariable);
+    }
+
     private SystemAaaFeatureRadiusGroupArgs() {}
 
     private SystemAaaFeatureRadiusGroupArgs(SystemAaaFeatureRadiusGroupArgs $) {
@@ -105,6 +120,7 @@ public final class SystemAaaFeatureRadiusGroupArgs extends com.pulumi.resources.
         this.sourceInterface = $.sourceInterface;
         this.sourceInterfaceVariable = $.sourceInterfaceVariable;
         this.vpn = $.vpn;
+        this.vpnVariable = $.vpnVariable;
     }
 
     public static Builder builder() {
@@ -242,6 +258,27 @@ public final class SystemAaaFeatureRadiusGroupArgs extends com.pulumi.resources.
          */
         public Builder vpn(Integer vpn) {
             return vpn(Output.of(vpn));
+        }
+
+        /**
+         * @param vpnVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnVariable(@Nullable Output<String> vpnVariable) {
+            $.vpnVariable = vpnVariable;
+            return this;
+        }
+
+        /**
+         * @param vpnVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnVariable(String vpnVariable) {
+            return vpnVariable(Output.of(vpnVariable));
         }
 
         public SystemAaaFeatureRadiusGroupArgs build() {

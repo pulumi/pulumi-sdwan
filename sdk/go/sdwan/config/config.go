@@ -11,6 +11,11 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+func GetApiToken(ctx *pulumi.Context) string {
+	return config.Get(ctx, "sdwan:apiToken")
+}
+
 // Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 func GetInsecure(ctx *pulumi.Context) bool {
 	return config.GetBool(ctx, "sdwan:insecure")

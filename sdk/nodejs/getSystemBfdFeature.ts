@@ -26,6 +26,7 @@ export function getSystemBfdFeature(args: GetSystemBfdFeatureArgs, opts?: pulumi
     return pulumi.runtime.invoke("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemBfdFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -107,6 +112,7 @@ export function getSystemBfdFeatureOutput(args: GetSystemBfdFeatureOutputArgs, o
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -121,5 +127,9 @@ export interface GetSystemBfdFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

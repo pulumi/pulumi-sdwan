@@ -65,7 +65,7 @@ import javax.annotation.Nullable;
  *             .name("Example")
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .asNumber(429)
+ *             .asNumber("429")
  *             .routerId("1.2.3.4")
  *             .propagateAsPath(false)
  *             .propagateCommunity(false)
@@ -83,8 +83,8 @@ import javax.annotation.Nullable;
  *                 .address("1.2.3.4")
  *                 .description("neighbor1")
  *                 .shutdown(false)
- *                 .remoteAs(200)
- *                 .localAs(200)
+ *                 .remoteAs("200")
+ *                 .localAs("200")
  *                 .keepaliveTime(40)
  *                 .holdTime(200)
  *                 .updateSourceInterface("GigabitEthernet0")
@@ -109,8 +109,8 @@ import javax.annotation.Nullable;
  *                 .address("2001::1")
  *                 .description("neighbor2")
  *                 .shutdown(false)
- *                 .remoteAs(200)
- *                 .localAs(200)
+ *                 .remoteAs("200")
+ *                 .localAs("200")
  *                 .keepaliveTime(180)
  *                 .holdTime(60)
  *                 .updateSourceInterface("Loopback1")
@@ -210,14 +210,14 @@ public class TransportRoutingBgpFeature extends com.pulumi.resources.CustomResou
      * Set autonomous system number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
      * 
      */
-    @Export(name="asNumber", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> asNumber;
+    @Export(name="asNumber", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> asNumber;
 
     /**
      * @return Set autonomous system number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
      * 
      */
-    public Output<Optional<Integer>> asNumber() {
+    public Output<Optional<String>> asNumber() {
         return Codegen.optional(this.asNumber);
     }
     /**

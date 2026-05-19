@@ -24,6 +24,7 @@ export function getTransportCellularControllerFeature(args: GetTransportCellular
     return pulumi.runtime.invoke("sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetTransportCellularControllerFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -126,6 +131,7 @@ export function getTransportCellularControllerFeatureOutput(args: GetTransportCe
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -140,5 +146,9 @@ export interface GetTransportCellularControllerFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -26,6 +26,7 @@ export function getOtherThousandeyesFeature(args: GetOtherThousandeyesFeatureArg
     return pulumi.runtime.invoke("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetOtherThousandeyesFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getOtherThousandeyesFeatureOutput(args: GetOtherThousandeyesFeat
     return pulumi.runtime.invokeOutput("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetOtherThousandeyesFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

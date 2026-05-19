@@ -103,8 +103,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Protocol, either `Ipv4`, `Ipv6` or `All`
-        ///   - Choices: `Ipv4`, `Ipv6`, `All`
+        /// Protocol, either `Ipv4`, `Ipv6` or `Both`
+        ///   - Choices: `Ipv4`, `Ipv6`, `Both`
         /// </summary>
         [Output("protocol")]
         public Output<string?> Protocol { get; private set; } = null!;
@@ -232,8 +232,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `Ipv4`, `Ipv6` or `All`
-        ///   - Choices: `Ipv4`, `Ipv6`, `All`
+        /// Protocol, either `Ipv4`, `Ipv6` or `Both`
+        ///   - Choices: `Ipv4`, `Ipv6`, `Both`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -311,8 +311,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `Ipv4`, `Ipv6` or `All`
-        ///   - Choices: `Ipv4`, `Ipv6`, `All`
+        /// Protocol, either `Ipv4`, `Ipv6` or `Both`
+        ///   - Choices: `Ipv4`, `Ipv6`, `Both`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

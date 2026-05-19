@@ -24,6 +24,7 @@ export function getServiceTrackerFeature(args: GetServiceTrackerFeatureArgs, opt
     return pulumi.runtime.invoke("sdwan:index/getServiceTrackerFeature:getServiceTrackerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetServiceTrackerFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -168,6 +173,7 @@ export function getServiceTrackerFeatureOutput(args: GetServiceTrackerFeatureOut
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceTrackerFeature:getServiceTrackerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -182,5 +188,9 @@ export interface GetServiceTrackerFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

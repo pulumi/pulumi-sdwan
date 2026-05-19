@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetSystemSecurityFeature(ctx, &sdwan.LookupSystemSecurityFeatureArgs{
-//				Id:               "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id:               pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //				FeatureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //			}, nil)
 //			if err != nil {
@@ -54,7 +54,9 @@ type LookupSystemSecurityFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the Feature
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSystemSecurityFeature.
@@ -109,7 +111,9 @@ type LookupSystemSecurityFeatureOutputArgs struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the Feature
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSystemSecurityFeatureOutputArgs) ElementType() reflect.Type {

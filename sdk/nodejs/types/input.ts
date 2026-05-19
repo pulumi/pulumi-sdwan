@@ -10608,7 +10608,7 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number | undefined>;
+    localAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -10633,7 +10633,7 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number | undefined>;
+    remoteAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -10921,7 +10921,7 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number | undefined>;
+    localAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -10946,7 +10946,7 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number | undefined>;
+    remoteAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -12461,6 +12461,10 @@ export interface SystemAaaFeatureRadiusGroup {
      *   - Default value: `0`
      */
     vpn?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureRadiusGroupServer {
@@ -12564,6 +12568,10 @@ export interface SystemAaaFeatureTacacsGroup {
      *   - Default value: `0`
      */
     vpn?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    vpnVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface SystemAaaFeatureTacacsGroupServer {
@@ -14548,7 +14556,7 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number | undefined>;
+    localAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -14573,7 +14581,7 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number | undefined>;
+    remoteAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -14848,7 +14856,7 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: pulumi.Input<number | undefined>;
+    localAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -14873,7 +14881,7 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: pulumi.Input<number | undefined>;
+    remoteAs?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */

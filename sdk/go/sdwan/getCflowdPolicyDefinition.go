@@ -70,7 +70,7 @@ type LookupCflowdPolicyDefinitionResult struct {
 	InactiveFlowTimeout int `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name string `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all`
+	// Protocol, either `ipv4`, `ipv6` or `both`
 	Protocol string `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp bool `pulumi:"remarkedDscp"`
@@ -153,7 +153,7 @@ func (o LookupCflowdPolicyDefinitionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCflowdPolicyDefinitionResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Protocol, either `ipv4`, `ipv6` or `all`
+// Protocol, either `ipv4`, `ipv6` or `both`
 func (o LookupCflowdPolicyDefinitionResultOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCflowdPolicyDefinitionResult) string { return v.Protocol }).(pulumi.StringOutput)
 }

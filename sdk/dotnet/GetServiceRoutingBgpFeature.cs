@@ -99,8 +99,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceRoutingBgpFeatureArgs()
         {
@@ -119,8 +125,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceRoutingBgpFeatureInvokeArgs()
         {
@@ -143,7 +155,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Set autonomous system number \n\n or \n\n
         /// </summary>
-        public readonly int AsNumber;
+        public readonly string AsNumber;
         /// <summary>
         /// Variable name
         /// </summary>
@@ -353,7 +365,7 @@ namespace Pulumi.Sdwan
 
             string alwaysCompareMedVariable,
 
-            int asNumber,
+            string asNumber,
 
             string asNumberVariable,
 

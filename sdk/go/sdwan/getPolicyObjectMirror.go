@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetPolicyObjectMirror(ctx, &sdwan.LookupPolicyObjectMirrorArgs{
-//				Id:               "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id:               pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //				FeatureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //			}, nil)
 //			if err != nil {
@@ -54,7 +54,9 @@ type LookupPolicyObjectMirrorArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Policy_object
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the Policy_object
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getPolicyObjectMirror.
@@ -87,7 +89,9 @@ type LookupPolicyObjectMirrorOutputArgs struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput `pulumi:"featureProfileId"`
 	// The id of the Policy_object
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the Policy_object
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupPolicyObjectMirrorOutputArgs) ElementType() reflect.Type {

@@ -43,8 +43,8 @@ class CflowdPolicyDefinitionArgs:
         :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
-                 - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `both`
+                 - Choices: `ipv4`, `ipv6`, `both`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
         :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
@@ -148,8 +148,8 @@ class CflowdPolicyDefinitionArgs:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Protocol, either `ipv4`, `ipv6` or `all`
-          - Choices: `ipv4`, `ipv6`, `all`
+        Protocol, either `ipv4`, `ipv6` or `both`
+          - Choices: `ipv4`, `ipv6`, `both`
         """
         return pulumi.get(self, "protocol")
 
@@ -222,8 +222,8 @@ class _CflowdPolicyDefinitionState:
         :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
-                 - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `both`
+                 - Choices: `ipv4`, `ipv6`, `both`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
         :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
@@ -335,8 +335,8 @@ class _CflowdPolicyDefinitionState:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Protocol, either `ipv4`, `ipv6` or `all`
-          - Choices: `ipv4`, `ipv6`, `all`
+        Protocol, either `ipv4`, `ipv6` or `both`
+          - Choices: `ipv4`, `ipv6`, `both`
         """
         return pulumi.get(self, "protocol")
 
@@ -474,8 +474,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
-                 - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `both`
+                 - Choices: `ipv4`, `ipv6`, `both`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
         :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
@@ -615,8 +615,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
                  - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
-                 - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `both`
+                 - Choices: `ipv4`, `ipv6`, `both`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
         :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
                  - Range: `1`-`65536`
@@ -697,8 +697,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Protocol, either `ipv4`, `ipv6` or `all`
-          - Choices: `ipv4`, `ipv6`, `all`
+        Protocol, either `ipv4`, `ipv6` or `both`
+          - Choices: `ipv4`, `ipv6`, `both`
         """
         return pulumi.get(self, "protocol")
 

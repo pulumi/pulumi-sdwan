@@ -8,6 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetPolicyObjectSecurityFqdnListArgs extends com.pulumi.resources.InvokeArgs {
@@ -33,15 +35,30 @@ public final class GetPolicyObjectSecurityFqdnListArgs extends com.pulumi.resour
      * The id of the Policy_object
      * 
      */
-    @Import(name="id", required=true)
-    private Output<String> id;
+    @Import(name="id")
+    private @Nullable Output<String> id;
 
     /**
      * @return The id of the Policy_object
      * 
      */
-    public Output<String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
+    }
+
+    /**
+     * The name of the Policy_object
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the Policy_object
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetPolicyObjectSecurityFqdnListArgs() {}
@@ -49,6 +66,7 @@ public final class GetPolicyObjectSecurityFqdnListArgs extends com.pulumi.resour
     private GetPolicyObjectSecurityFqdnListArgs(GetPolicyObjectSecurityFqdnListArgs $) {
         this.featureProfileId = $.featureProfileId;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -96,7 +114,7 @@ public final class GetPolicyObjectSecurityFqdnListArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder id(Output<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -111,12 +129,30 @@ public final class GetPolicyObjectSecurityFqdnListArgs extends com.pulumi.resour
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the Policy_object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Policy_object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
         public GetPolicyObjectSecurityFqdnListArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("GetPolicyObjectSecurityFqdnListArgs", "featureProfileId");
-            }
-            if ($.id == null) {
-                throw new MissingRequiredPropertyException("GetPolicyObjectSecurityFqdnListArgs", "id");
             }
             return $;
         }

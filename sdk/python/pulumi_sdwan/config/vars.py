@@ -21,6 +21,13 @@ __config__ = pulumi.Config('sdwan')
 
 class _ExportableConfig(types.ModuleType):
     @_builtins.property
+    def api_token(self) -> Optional[str]:
+        """
+        API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        """
+        return __config__.get('apiToken')
+
+    @_builtins.property
     def insecure(self) -> Optional[bool]:
         """
         Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.

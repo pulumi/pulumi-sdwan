@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan
     ///         Name = "Example",
     ///         Description = "My Example",
     ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-    ///         AsNumber = 429,
+    ///         AsNumber = "429",
     ///         RouterId = "1.2.3.4",
     ///         PropagateAsPath = false,
     ///         PropagateCommunity = false,
@@ -49,8 +49,8 @@ namespace Pulumi.Sdwan
     ///                 Address = "1.2.3.4",
     ///                 Description = "neighbor1",
     ///                 Shutdown = false,
-    ///                 RemoteAs = 200,
-    ///                 LocalAs = 200,
+    ///                 RemoteAs = "200",
+    ///                 LocalAs = "200",
     ///                 KeepaliveTime = 40,
     ///                 HoldTime = 200,
     ///                 UpdateSourceInterface = "GigabitEthernet0",
@@ -83,8 +83,8 @@ namespace Pulumi.Sdwan
     ///                 Address = "2001::1",
     ///                 Description = "neighbor2",
     ///                 Shutdown = false,
-    ///                 RemoteAs = 200,
-    ///                 LocalAs = 200,
+    ///                 RemoteAs = "200",
+    ///                 LocalAs = "200",
     ///                 KeepaliveTime = 180,
     ///                 HoldTime = 60,
     ///                 UpdateSourceInterface = "Loopback1",
@@ -190,7 +190,7 @@ namespace Pulumi.Sdwan
         /// Set autonomous system number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
         /// </summary>
         [Output("asNumber")]
-        public Output<int?> AsNumber { get; private set; } = null!;
+        public Output<string?> AsNumber { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -583,7 +583,7 @@ namespace Pulumi.Sdwan
         /// Set autonomous system number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
         /// </summary>
         [Input("asNumber")]
-        public Input<int>? AsNumber { get; set; }
+        public Input<string>? AsNumber { get; set; }
 
         /// <summary>
         /// Variable name
@@ -986,7 +986,7 @@ namespace Pulumi.Sdwan
         /// Set autonomous system number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
         /// </summary>
         [Input("asNumber")]
-        public Input<int>? AsNumber { get; set; }
+        public Input<string>? AsNumber { get; set; }
 
         /// <summary>
         /// Variable name

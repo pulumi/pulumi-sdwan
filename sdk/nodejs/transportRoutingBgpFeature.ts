@@ -20,7 +20,7 @@ import * as utilities from "./utilities";
  *     name: "Example",
  *     description: "My Example",
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
- *     asNumber: 429,
+ *     asNumber: "429",
  *     routerId: "1.2.3.4",
  *     propagateAsPath: false,
  *     propagateCommunity: false,
@@ -38,8 +38,8 @@ import * as utilities from "./utilities";
  *         address: "1.2.3.4",
  *         description: "neighbor1",
  *         shutdown: false,
- *         remoteAs: 200,
- *         localAs: 200,
+ *         remoteAs: "200",
+ *         localAs: "200",
  *         keepaliveTime: 40,
  *         holdTime: 200,
  *         updateSourceInterface: "GigabitEthernet0",
@@ -64,8 +64,8 @@ import * as utilities from "./utilities";
  *         address: "2001::1",
  *         description: "neighbor2",
  *         shutdown: false,
- *         remoteAs: 200,
- *         localAs: 200,
+ *         remoteAs: "200",
+ *         localAs: "200",
  *         keepaliveTime: 180,
  *         holdTime: 60,
  *         updateSourceInterface: "Loopback1",
@@ -164,7 +164,7 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    declare public readonly asNumber: pulumi.Output<number | undefined>;
+    declare public readonly asNumber: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -540,7 +540,7 @@ export interface TransportRoutingBgpFeatureState {
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    asNumber?: pulumi.Input<number | undefined>;
+    asNumber?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */
@@ -783,7 +783,7 @@ export interface TransportRoutingBgpFeatureArgs {
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    asNumber?: pulumi.Input<number | undefined>;
+    asNumber?: pulumi.Input<string | undefined>;
     /**
      * Variable name
      */

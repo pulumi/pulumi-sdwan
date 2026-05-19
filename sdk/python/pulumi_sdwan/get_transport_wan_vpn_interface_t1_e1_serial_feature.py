@@ -1366,6 +1366,7 @@ class AwaitableGetTransportWanVpnInterfaceT1E1SerialFeatureResult(GetTransportWa
 
 def get_transport_wan_vpn_interface_t1_e1_serial_feature(feature_profile_id: Optional[_builtins.str] = None,
                                                          id: Optional[_builtins.str] = None,
+                                                         name: Optional[_builtins.str] = None,
                                                          transport_wan_vpn_feature_id: Optional[_builtins.str] = None,
                                                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTransportWanVpnInterfaceT1E1SerialFeatureResult:
     """
@@ -1385,11 +1386,13 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature(feature_profile_id: Opt
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     :param _builtins.str transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature', __args__, opts=opts, typ=GetTransportWanVpnInterfaceT1E1SerialFeatureResult).value
@@ -1508,7 +1511,8 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature(feature_profile_id: Opt
         tunnel_qos_mode_variable=pulumi.get(__ret__, 'tunnel_qos_mode_variable'),
         version=pulumi.get(__ret__, 'version'))
 def get_transport_wan_vpn_interface_t1_e1_serial_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                                                id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                                name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                                 transport_wan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnInterfaceT1E1SerialFeatureResult]:
     """
@@ -1528,11 +1532,13 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature_output(feature_profile_
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     :param _builtins.str transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature', __args__, opts=opts, typ=GetTransportWanVpnInterfaceT1E1SerialFeatureResult)

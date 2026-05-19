@@ -24,6 +24,7 @@ export function getTransportIpv6TrackerFeature(args: GetTransportIpv6TrackerFeat
     return pulumi.runtime.invoke("sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetTransportIpv6TrackerFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -162,6 +167,7 @@ export function getTransportIpv6TrackerFeatureOutput(args: GetTransportIpv6Track
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -176,5 +182,9 @@ export interface GetTransportIpv6TrackerFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

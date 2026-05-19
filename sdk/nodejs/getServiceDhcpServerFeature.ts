@@ -26,6 +26,7 @@ export function getServiceDhcpServerFeature(args: GetServiceDhcpServerFeatureArg
     return pulumi.runtime.invoke("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceDhcpServerFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -59,6 +64,14 @@ export interface GetServiceDhcpServerFeatureResult {
      * The description of the Feature
      */
     readonly description: string;
+    /**
+     * DHCP sync enable/disable for dual home edges
+     */
+    readonly dhcpHaEnable: boolean;
+    /**
+     * Variable name
+     */
+    readonly dhcpHaEnableVariable: string;
     /**
      * Configure one or more DNS server IP addresses
      */
@@ -168,6 +181,7 @@ export function getServiceDhcpServerFeatureOutput(args: GetServiceDhcpServerFeat
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -182,5 +196,9 @@ export interface GetServiceDhcpServerFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

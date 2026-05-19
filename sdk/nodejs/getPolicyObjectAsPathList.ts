@@ -26,6 +26,7 @@ export function getPolicyObjectAsPathList(args: GetPolicyObjectAsPathListArgs, o
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectAsPathList:getPolicyObjectAsPathList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectAsPathListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -96,6 +101,7 @@ export function getPolicyObjectAsPathListOutput(args: GetPolicyObjectAsPathListO
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectAsPathList:getPolicyObjectAsPathList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -110,5 +116,9 @@ export interface GetPolicyObjectAsPathListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

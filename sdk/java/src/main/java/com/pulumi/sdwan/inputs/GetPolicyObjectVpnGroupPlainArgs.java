@@ -7,6 +7,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetPolicyObjectVpnGroupPlainArgs extends com.pulumi.resources.InvokeArgs {
@@ -32,15 +34,30 @@ public final class GetPolicyObjectVpnGroupPlainArgs extends com.pulumi.resources
      * The id of the Policy_object
      * 
      */
-    @Import(name="id", required=true)
-    private String id;
+    @Import(name="id")
+    private @Nullable String id;
 
     /**
      * @return The id of the Policy_object
      * 
      */
-    public String id() {
-        return this.id;
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
+    }
+
+    /**
+     * The name of the Policy_object
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return The name of the Policy_object
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetPolicyObjectVpnGroupPlainArgs() {}
@@ -48,6 +65,7 @@ public final class GetPolicyObjectVpnGroupPlainArgs extends com.pulumi.resources
     private GetPolicyObjectVpnGroupPlainArgs(GetPolicyObjectVpnGroupPlainArgs $) {
         this.featureProfileId = $.featureProfileId;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -85,17 +103,25 @@ public final class GetPolicyObjectVpnGroupPlainArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(@Nullable String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Policy_object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 
         public GetPolicyObjectVpnGroupPlainArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("GetPolicyObjectVpnGroupPlainArgs", "featureProfileId");
-            }
-            if ($.id == null) {
-                throw new MissingRequiredPropertyException("GetPolicyObjectVpnGroupPlainArgs", "id");
             }
             return $;
         }

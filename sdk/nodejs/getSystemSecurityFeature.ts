@@ -26,6 +26,7 @@ export function getSystemSecurityFeature(args: GetSystemSecurityFeatureArgs, opt
     return pulumi.runtime.invoke("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemSecurityFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -136,6 +141,7 @@ export function getSystemSecurityFeatureOutput(args: GetSystemSecurityFeatureOut
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -150,5 +156,9 @@ export interface GetSystemSecurityFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -102,7 +102,7 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
      * @return Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      * 
      */
-    private @Nullable Integer localAs;
+    private @Nullable String localAs;
     /**
      * @return Variable name
      * 
@@ -133,7 +133,7 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
      * @return Set remote autonomous system number
      * 
      */
-    private @Nullable Integer remoteAs;
+    private @Nullable String remoteAs;
     /**
      * @return Variable name
      * 
@@ -301,7 +301,7 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
      * @return Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      * 
      */
-    public Optional<Integer> localAs() {
+    public Optional<String> localAs() {
         return Optional.ofNullable(this.localAs);
     }
     /**
@@ -344,7 +344,7 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
      * @return Set remote autonomous system number
      * 
      */
-    public Optional<Integer> remoteAs() {
+    public Optional<String> remoteAs() {
         return Optional.ofNullable(this.remoteAs);
     }
     /**
@@ -438,13 +438,13 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
         private @Nullable String holdTimeVariable;
         private @Nullable Integer keepaliveTime;
         private @Nullable String keepaliveTimeVariable;
-        private @Nullable Integer localAs;
+        private @Nullable String localAs;
         private @Nullable String localAsVariable;
         private @Nullable Boolean nextHopSelf;
         private @Nullable String nextHopSelfVariable;
         private @Nullable String password;
         private @Nullable String passwordVariable;
-        private @Nullable Integer remoteAs;
+        private @Nullable String remoteAs;
         private @Nullable String remoteAsVariable;
         private @Nullable Boolean sendCommunity;
         private @Nullable String sendCommunityVariable;
@@ -584,7 +584,7 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder localAs(@Nullable Integer localAs) {
+        public Builder localAs(@Nullable String localAs) {
 
             this.localAs = localAs;
             return this;
@@ -620,7 +620,7 @@ public final class ServiceRoutingBgpFeatureIpv6Neighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder remoteAs(@Nullable Integer remoteAs) {
+        public Builder remoteAs(@Nullable String remoteAs) {
 
             this.remoteAs = remoteAs;
             return this;

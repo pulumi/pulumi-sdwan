@@ -18,6 +18,8 @@ import (
 type Provider struct {
 	pulumi.ProviderResourceState
 
+	// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+	ApiToken pulumi.StringPtrOutput `pulumi:"apiToken"`
 	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
@@ -33,10 +35,14 @@ func NewProvider(ctx *pulumi.Context,
 		args = &ProviderArgs{}
 	}
 
+	if args.ApiToken != nil {
+		args.ApiToken = pulumi.ToSecret(args.ApiToken).(pulumi.StringPtrInput)
+	}
 	if args.Password != nil {
 		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringPtrInput)
 	}
 	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"apiToken",
 		"password",
 	})
 	opts = append(opts, secrets)
@@ -50,6 +56,8 @@ func NewProvider(ctx *pulumi.Context,
 }
 
 type providerArgs struct {
+	// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+	ApiToken *string `pulumi:"apiToken"`
 	// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 	Insecure *bool `pulumi:"insecure"`
 	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
@@ -66,6 +74,8 @@ type providerArgs struct {
 
 // The set of arguments for constructing a Provider resource.
 type ProviderArgs struct {
+	// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+	ApiToken pulumi.StringPtrInput
 	// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 	Insecure pulumi.BoolPtrInput
 	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
@@ -138,6 +148,11 @@ func (o ProviderOutput) ToProviderOutput() ProviderOutput {
 
 func (o ProviderOutput) ToProviderOutputWithContext(ctx context.Context) ProviderOutput {
 	return o
+}
+
+// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+func (o ProviderOutput) ApiToken() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.ApiToken }).(pulumi.StringPtrOutput)
 }
 
 // Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.

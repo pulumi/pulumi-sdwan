@@ -36,7 +36,7 @@ public final class GetTransportRoutingBgpFeatureResult {
      * @return Set autonomous system number \n\n or \n\n
      * 
      */
-    private Integer asNumber;
+    private String asNumber;
     /**
      * @return Variable name
      * 
@@ -314,7 +314,7 @@ public final class GetTransportRoutingBgpFeatureResult {
      * @return Set autonomous system number \n\n or \n\n
      * 
      */
-    public Integer asNumber() {
+    public String asNumber() {
         return this.asNumber;
     }
     /**
@@ -692,7 +692,7 @@ public final class GetTransportRoutingBgpFeatureResult {
     public static final class Builder {
         private Boolean alwaysCompareMed;
         private String alwaysCompareMedVariable;
-        private Integer asNumber;
+        private String asNumber;
         private String asNumberVariable;
         private Boolean compareRouterId;
         private String compareRouterIdVariable;
@@ -824,7 +824,7 @@ public final class GetTransportRoutingBgpFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder asNumber(Integer asNumber) {
+        public Builder asNumber(String asNumber) {
             if (asNumber == null) {
               throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureResult", "asNumber");
             }

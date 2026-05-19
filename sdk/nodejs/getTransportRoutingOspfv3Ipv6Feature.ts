@@ -26,6 +26,7 @@ export function getTransportRoutingOspfv3Ipv6Feature(args: GetTransportRoutingOs
     return pulumi.runtime.invoke("sdwan:index/getTransportRoutingOspfv3Ipv6Feature:getTransportRoutingOspfv3Ipv6Feature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetTransportRoutingOspfv3Ipv6FeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -225,6 +230,7 @@ export function getTransportRoutingOspfv3Ipv6FeatureOutput(args: GetTransportRou
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutingOspfv3Ipv6Feature:getTransportRoutingOspfv3Ipv6Feature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -239,5 +245,9 @@ export interface GetTransportRoutingOspfv3Ipv6FeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

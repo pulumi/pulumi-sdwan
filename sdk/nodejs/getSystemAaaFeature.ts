@@ -26,6 +26,7 @@ export function getSystemAaaFeature(args: GetSystemAaaFeatureArgs, opts?: pulumi
     return pulumi.runtime.invoke("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemAaaFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -116,6 +121,18 @@ export interface GetSystemAaaFeatureResult {
      */
     readonly tacacsGroups: outputs.GetSystemAaaFeatureTacacsGroup[];
     /**
+     * CTS Authorization List
+     */
+    readonly trustsecCtsAuthList: string;
+    /**
+     * Variable name
+     */
+    readonly trustsecCtsAuthListVariable: string;
+    /**
+     * RADIUS group
+     */
+    readonly trustsecRadiusGroup: string;
+    /**
      * Create local login account
      */
     readonly users: outputs.GetSystemAaaFeatureUser[];
@@ -144,6 +161,7 @@ export function getSystemAaaFeatureOutput(args: GetSystemAaaFeatureOutputArgs, o
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -158,5 +176,9 @@ export interface GetSystemAaaFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

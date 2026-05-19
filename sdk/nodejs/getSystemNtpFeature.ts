@@ -26,6 +26,7 @@ export function getSystemNtpFeature(args: GetSystemNtpFeatureArgs, opts?: pulumi
     return pulumi.runtime.invoke("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemNtpFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -128,6 +133,7 @@ export function getSystemNtpFeatureOutput(args: GetSystemNtpFeatureOutputArgs, o
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -142,5 +148,9 @@ export interface GetSystemNtpFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

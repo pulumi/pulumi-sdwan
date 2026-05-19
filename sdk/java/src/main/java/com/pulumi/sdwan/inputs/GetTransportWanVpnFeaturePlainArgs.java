@@ -7,6 +7,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetTransportWanVpnFeaturePlainArgs extends com.pulumi.resources.InvokeArgs {
@@ -32,15 +34,30 @@ public final class GetTransportWanVpnFeaturePlainArgs extends com.pulumi.resourc
      * The id of the Feature
      * 
      */
-    @Import(name="id", required=true)
-    private String id;
+    @Import(name="id")
+    private @Nullable String id;
 
     /**
      * @return The id of the Feature
      * 
      */
-    public String id() {
-        return this.id;
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
+    }
+
+    /**
+     * The name of the Feature
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return The name of the Feature
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetTransportWanVpnFeaturePlainArgs() {}
@@ -48,6 +65,7 @@ public final class GetTransportWanVpnFeaturePlainArgs extends com.pulumi.resourc
     private GetTransportWanVpnFeaturePlainArgs(GetTransportWanVpnFeaturePlainArgs $) {
         this.featureProfileId = $.featureProfileId;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -85,17 +103,25 @@ public final class GetTransportWanVpnFeaturePlainArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(@Nullable String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Feature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 
         public GetTransportWanVpnFeaturePlainArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("GetTransportWanVpnFeaturePlainArgs", "featureProfileId");
-            }
-            if ($.id == null) {
-                throw new MissingRequiredPropertyException("GetTransportWanVpnFeaturePlainArgs", "id");
             }
             return $;
         }

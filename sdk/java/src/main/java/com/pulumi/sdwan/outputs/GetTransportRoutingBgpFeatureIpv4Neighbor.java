@@ -103,7 +103,7 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
      * @return Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      * 
      */
-    private Integer localAs;
+    private String localAs;
     /**
      * @return Variable name
      * 
@@ -133,7 +133,7 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
      * @return Set remote autonomous system number
      * 
      */
-    private Integer remoteAs;
+    private String remoteAs;
     /**
      * @return Variable name
      * 
@@ -309,7 +309,7 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
      * @return Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      * 
      */
-    public Integer localAs() {
+    public String localAs() {
         return this.localAs;
     }
     /**
@@ -351,7 +351,7 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
      * @return Set remote autonomous system number
      * 
      */
-    public Integer remoteAs() {
+    public String remoteAs() {
         return this.remoteAs;
     }
     /**
@@ -451,13 +451,13 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
         private String holdTimeVariable;
         private Integer keepaliveTime;
         private String keepaliveTimeVariable;
-        private Integer localAs;
+        private String localAs;
         private String localAsVariable;
         private Boolean nextHopSelf;
         private String nextHopSelfVariable;
         private String password;
         private String passwordVariable;
-        private Integer remoteAs;
+        private String remoteAs;
         private String remoteAsVariable;
         private Boolean sendCommunity;
         private String sendCommunityVariable;
@@ -647,7 +647,7 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder localAs(Integer localAs) {
+        public Builder localAs(String localAs) {
             if (localAs == null) {
               throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4Neighbor", "localAs");
             }
@@ -695,7 +695,7 @@ public final class GetTransportRoutingBgpFeatureIpv4Neighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder remoteAs(Integer remoteAs) {
+        public Builder remoteAs(String remoteAs) {
             if (remoteAs == null) {
               throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4Neighbor", "remoteAs");
             }

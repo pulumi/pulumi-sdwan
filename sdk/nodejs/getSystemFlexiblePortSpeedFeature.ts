@@ -24,6 +24,7 @@ export function getSystemFlexiblePortSpeedFeature(args: GetSystemFlexiblePortSpe
     return pulumi.runtime.invoke("sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemFlexiblePortSpeedFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -94,6 +99,7 @@ export function getSystemFlexiblePortSpeedFeatureOutput(args: GetSystemFlexibleP
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -108,5 +114,9 @@ export interface GetSystemFlexiblePortSpeedFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

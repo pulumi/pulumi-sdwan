@@ -19,6 +19,12 @@ namespace Pulumi.Sdwan
     public partial class Provider : global::Pulumi.ProviderResource
     {
         /// <summary>
+        /// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        /// </summary>
+        [Output("apiToken")]
+        public Output<string?> ApiToken { get; private set; } = null!;
+
+        /// <summary>
         /// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         /// </summary>
         [Output("password")]
@@ -56,6 +62,7 @@ namespace Pulumi.Sdwan
                 Version = Utilities.Version,
                 AdditionalSecretOutputs =
                 {
+                    "apiToken",
                     "password",
                 },
             };
@@ -74,6 +81,22 @@ namespace Pulumi.Sdwan
 
     public sealed class ProviderArgs : global::Pulumi.ResourceArgs
     {
+        [Input("apiToken")]
+        private Input<string>? _apiToken;
+
+        /// <summary>
+        /// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        /// </summary>
+        public Input<string>? ApiToken
+        {
+            get => _apiToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _apiToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
         /// <summary>
         /// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `True`.
         /// </summary>

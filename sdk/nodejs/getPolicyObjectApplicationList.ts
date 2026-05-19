@@ -26,6 +26,7 @@ export function getPolicyObjectApplicationList(args: GetPolicyObjectApplicationL
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectApplicationList:getPolicyObjectApplicationList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectApplicationListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getPolicyObjectApplicationListOutput(args: GetPolicyObjectApplic
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectApplicationList:getPolicyObjectApplicationList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetPolicyObjectApplicationListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -26,6 +26,7 @@ export function getPolicyObjectExtendedCommunityList(args: GetPolicyObjectExtend
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectExtendedCommunityList:getPolicyObjectExtendedCommunityList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectExtendedCommunityListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getPolicyObjectExtendedCommunityListOutput(args: GetPolicyObject
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectExtendedCommunityList:getPolicyObjectExtendedCommunityList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetPolicyObjectExtendedCommunityListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -41,6 +41,11 @@ public final class SystemAaaFeatureTacacsGroup {
      * 
      */
     private @Nullable Integer vpn;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String vpnVariable;
 
     private SystemAaaFeatureTacacsGroup() {}
     /**
@@ -80,6 +85,13 @@ public final class SystemAaaFeatureTacacsGroup {
     public Optional<Integer> vpn() {
         return Optional.ofNullable(this.vpn);
     }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> vpnVariable() {
+        return Optional.ofNullable(this.vpnVariable);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -95,6 +107,7 @@ public final class SystemAaaFeatureTacacsGroup {
         private @Nullable String sourceInterface;
         private @Nullable String sourceInterfaceVariable;
         private @Nullable Integer vpn;
+        private @Nullable String vpnVariable;
         public Builder() {}
         public Builder(SystemAaaFeatureTacacsGroup defaults) {
     	      Objects.requireNonNull(defaults);
@@ -103,6 +116,7 @@ public final class SystemAaaFeatureTacacsGroup {
     	      this.sourceInterface = defaults.sourceInterface;
     	      this.sourceInterfaceVariable = defaults.sourceInterfaceVariable;
     	      this.vpn = defaults.vpn;
+    	      this.vpnVariable = defaults.vpnVariable;
         }
 
         @CustomType.Setter
@@ -138,6 +152,12 @@ public final class SystemAaaFeatureTacacsGroup {
             this.vpn = vpn;
             return this;
         }
+        @CustomType.Setter
+        public Builder vpnVariable(@Nullable String vpnVariable) {
+
+            this.vpnVariable = vpnVariable;
+            return this;
+        }
         public SystemAaaFeatureTacacsGroup build() {
             final var _resultValue = new SystemAaaFeatureTacacsGroup();
             _resultValue.groupName = groupName;
@@ -145,6 +165,7 @@ public final class SystemAaaFeatureTacacsGroup {
             _resultValue.sourceInterface = sourceInterface;
             _resultValue.sourceInterfaceVariable = sourceInterfaceVariable;
             _resultValue.vpn = vpn;
+            _resultValue.vpnVariable = vpnVariable;
             return _resultValue;
         }
     }

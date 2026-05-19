@@ -71,6 +71,8 @@ import (
 //						},
 //					},
 //				},
+//				TrustsecCtsAuthList: pulumi.String("list1"),
+//				TrustsecRadiusGroup: pulumi.String("RGROUP1"),
 //				TacacsGroups: sdwan.SystemAaaFeatureTacacsGroupArray{
 //					&sdwan.SystemAaaFeatureTacacsGroupArgs{
 //						GroupName:       pulumi.String("TGROUP1"),
@@ -170,6 +172,12 @@ type SystemAaaFeature struct {
 	ServerAuthOrders pulumi.StringArrayOutput `pulumi:"serverAuthOrders"`
 	// Configure the TACACS serverGroup
 	TacacsGroups SystemAaaFeatureTacacsGroupArrayOutput `pulumi:"tacacsGroups"`
+	// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthList pulumi.StringPtrOutput `pulumi:"trustsecCtsAuthList"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthListVariable pulumi.StringPtrOutput `pulumi:"trustsecCtsAuthListVariable"`
+	// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecRadiusGroup pulumi.StringPtrOutput `pulumi:"trustsecRadiusGroup"`
 	// Create local login account
 	Users SystemAaaFeatureUserArrayOutput `pulumi:"users"`
 	// The version of the Feature
@@ -248,6 +256,12 @@ type systemAaaFeatureState struct {
 	ServerAuthOrders []string `pulumi:"serverAuthOrders"`
 	// Configure the TACACS serverGroup
 	TacacsGroups []SystemAaaFeatureTacacsGroup `pulumi:"tacacsGroups"`
+	// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthList *string `pulumi:"trustsecCtsAuthList"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthListVariable *string `pulumi:"trustsecCtsAuthListVariable"`
+	// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecRadiusGroup *string `pulumi:"trustsecRadiusGroup"`
 	// Create local login account
 	Users []SystemAaaFeatureUser `pulumi:"users"`
 	// The version of the Feature
@@ -291,6 +305,12 @@ type SystemAaaFeatureState struct {
 	ServerAuthOrders pulumi.StringArrayInput
 	// Configure the TACACS serverGroup
 	TacacsGroups SystemAaaFeatureTacacsGroupArrayInput
+	// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthList pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthListVariable pulumi.StringPtrInput
+	// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecRadiusGroup pulumi.StringPtrInput
 	// Create local login account
 	Users SystemAaaFeatureUserArrayInput
 	// The version of the Feature
@@ -338,6 +358,12 @@ type systemAaaFeatureArgs struct {
 	ServerAuthOrders []string `pulumi:"serverAuthOrders"`
 	// Configure the TACACS serverGroup
 	TacacsGroups []SystemAaaFeatureTacacsGroup `pulumi:"tacacsGroups"`
+	// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthList *string `pulumi:"trustsecCtsAuthList"`
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthListVariable *string `pulumi:"trustsecCtsAuthListVariable"`
+	// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecRadiusGroup *string `pulumi:"trustsecRadiusGroup"`
 	// Create local login account
 	Users []SystemAaaFeatureUser `pulumi:"users"`
 }
@@ -380,6 +406,12 @@ type SystemAaaFeatureArgs struct {
 	ServerAuthOrders pulumi.StringArrayInput
 	// Configure the TACACS serverGroup
 	TacacsGroups SystemAaaFeatureTacacsGroupArrayInput
+	// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthList pulumi.StringPtrInput
+	// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecCtsAuthListVariable pulumi.StringPtrInput
+	// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+	TrustsecRadiusGroup pulumi.StringPtrInput
 	// Create local login account
 	Users SystemAaaFeatureUserArrayInput
 }
@@ -553,6 +585,21 @@ func (o SystemAaaFeatureOutput) ServerAuthOrders() pulumi.StringArrayOutput {
 // Configure the TACACS serverGroup
 func (o SystemAaaFeatureOutput) TacacsGroups() SystemAaaFeatureTacacsGroupArrayOutput {
 	return o.ApplyT(func(v *SystemAaaFeature) SystemAaaFeatureTacacsGroupArrayOutput { return v.TacacsGroups }).(SystemAaaFeatureTacacsGroupArrayOutput)
+}
+
+// CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o SystemAaaFeatureOutput) TrustsecCtsAuthList() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemAaaFeature) pulumi.StringPtrOutput { return v.TrustsecCtsAuthList }).(pulumi.StringPtrOutput)
+}
+
+// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o SystemAaaFeatureOutput) TrustsecCtsAuthListVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemAaaFeature) pulumi.StringPtrOutput { return v.TrustsecCtsAuthListVariable }).(pulumi.StringPtrOutput)
+}
+
+// RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+func (o SystemAaaFeatureOutput) TrustsecRadiusGroup() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemAaaFeature) pulumi.StringPtrOutput { return v.TrustsecRadiusGroup }).(pulumi.StringPtrOutput)
 }
 
 // Create local login account

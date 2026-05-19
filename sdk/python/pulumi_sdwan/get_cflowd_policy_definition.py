@@ -128,7 +128,7 @@ class GetCflowdPolicyDefinitionResult:
     @pulumi.getter
     def protocol(self) -> _builtins.str:
         """
-        Protocol, either `ipv4`, `ipv6` or `all`
+        Protocol, either `ipv4`, `ipv6` or `both`
         """
         return pulumi.get(self, "protocol")
 

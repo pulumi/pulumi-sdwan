@@ -33,6 +33,10 @@ namespace Pulumi.Sdwan.Outputs
         /// Set VPN in which Radius server is located
         /// </summary>
         public readonly int Vpn;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string VpnVariable;
 
         [OutputConstructor]
         private GetSystemAaaFeatureRadiusGroupResult(
@@ -44,13 +48,16 @@ namespace Pulumi.Sdwan.Outputs
 
             string sourceInterfaceVariable,
 
-            int vpn)
+            int vpn,
+
+            string vpnVariable)
         {
             GroupName = groupName;
             Servers = servers;
             SourceInterface = sourceInterface;
             SourceInterfaceVariable = sourceInterfaceVariable;
             Vpn = vpn;
+            VpnVariable = vpnVariable;
         }
     }
 }

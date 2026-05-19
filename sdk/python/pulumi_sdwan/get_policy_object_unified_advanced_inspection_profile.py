@@ -144,6 +144,7 @@ class AwaitableGetPolicyObjectUnifiedAdvancedInspectionProfileResult(GetPolicyOb
 
 def get_policy_object_unified_advanced_inspection_profile(feature_profile_id: Optional[_builtins.str] = None,
                                                           id: Optional[_builtins.str] = None,
+                                                          name: Optional[_builtins.str] = None,
                                                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyObjectUnifiedAdvancedInspectionProfileResult:
     """
     This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
@@ -161,10 +162,12 @@ def get_policy_object_unified_advanced_inspection_profile(feature_profile_id: Op
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy_object
+    :param _builtins.str name: The name of the Policy_object
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getPolicyObjectUnifiedAdvancedInspectionProfile:getPolicyObjectUnifiedAdvancedInspectionProfile', __args__, opts=opts, typ=GetPolicyObjectUnifiedAdvancedInspectionProfileResult).value
 
@@ -180,7 +183,8 @@ def get_policy_object_unified_advanced_inspection_profile(feature_profile_id: Op
         url_filtering_list_id=pulumi.get(__ret__, 'url_filtering_list_id'),
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_unified_advanced_inspection_profile_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                                                 id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                                 id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                                 name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectUnifiedAdvancedInspectionProfileResult]:
     """
     This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
@@ -198,10 +202,12 @@ def get_policy_object_unified_advanced_inspection_profile_output(feature_profile
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy_object
+    :param _builtins.str name: The name of the Policy_object
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectUnifiedAdvancedInspectionProfile:getPolicyObjectUnifiedAdvancedInspectionProfile', __args__, opts=opts, typ=GetPolicyObjectUnifiedAdvancedInspectionProfileResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectUnifiedAdvancedInspectionProfileResult(

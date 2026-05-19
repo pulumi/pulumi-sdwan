@@ -70,7 +70,7 @@ export interface GetCflowdPolicyDefinitionResult {
      */
     readonly name: string;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all`
+     * Protocol, either `ipv4`, `ipv6` or `both`
      */
     readonly protocol: string;
     /**

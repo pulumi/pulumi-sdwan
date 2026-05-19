@@ -35,6 +35,10 @@ namespace Pulumi.Sdwan.Outputs
         ///   - Default value: `0`
         /// </summary>
         public readonly int? Vpn;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? VpnVariable;
 
         [OutputConstructor]
         private SystemAaaFeatureRadiusGroup(
@@ -46,13 +50,16 @@ namespace Pulumi.Sdwan.Outputs
 
             string? sourceInterfaceVariable,
 
-            int? vpn)
+            int? vpn,
+
+            string? vpnVariable)
         {
             GroupName = groupName;
             Servers = servers;
             SourceInterface = sourceInterface;
             SourceInterfaceVariable = sourceInterfaceVariable;
             Vpn = vpn;
+            VpnVariable = vpnVariable;
         }
     }
 }

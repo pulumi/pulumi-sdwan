@@ -121,6 +121,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &CliFeatureProfile{}
 	case "sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate":
 		r = &CliTemplateFeatureTemplate{}
+	case "sdwan:index/cloudProviderSettings:CloudProviderSettings":
+		r = &CloudProviderSettings{}
 	case "sdwan:index/colorListPolicyObject:ColorListPolicyObject":
 		r = &ColorListPolicyObject{}
 	case "sdwan:index/configurationGroup:ConfigurationGroup":
@@ -792,6 +794,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/cliTemplateFeatureTemplate",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/cloudProviderSettings",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

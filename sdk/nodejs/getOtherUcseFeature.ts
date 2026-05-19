@@ -26,6 +26,7 @@ export function getOtherUcseFeature(args: GetOtherUcseFeatureArgs, opts?: pulumi
     return pulumi.runtime.invoke("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetOtherUcseFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -138,6 +143,7 @@ export function getOtherUcseFeatureOutput(args: GetOtherUcseFeatureOutputArgs, o
     return pulumi.runtime.invokeOutput("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -152,5 +158,9 @@ export interface GetOtherUcseFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

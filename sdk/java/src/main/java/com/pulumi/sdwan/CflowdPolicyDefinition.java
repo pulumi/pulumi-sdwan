@@ -175,16 +175,16 @@ public class CflowdPolicyDefinition extends com.pulumi.resources.CustomResource 
         return this.name;
     }
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> protocol;
 
     /**
-     * @return Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * @return Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      * 
      */
     public Output<Optional<String>> protocol() {

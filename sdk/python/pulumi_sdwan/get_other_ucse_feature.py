@@ -262,6 +262,7 @@ class AwaitableGetOtherUcseFeatureResult(GetOtherUcseFeatureResult):
 
 def get_other_ucse_feature(feature_profile_id: Optional[_builtins.str] = None,
                            id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetOtherUcseFeatureResult:
     """
     This data source can read the Other UCSE Feature.
@@ -279,10 +280,12 @@ def get_other_ucse_feature(feature_profile_id: Optional[_builtins.str] = None,
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getOtherUcseFeature:getOtherUcseFeature', __args__, opts=opts, typ=GetOtherUcseFeatureResult).value
 
@@ -307,7 +310,8 @@ def get_other_ucse_feature(feature_profile_id: Optional[_builtins.str] = None,
         vlan_id=pulumi.get(__ret__, 'vlan_id'),
         vlan_id_variable=pulumi.get(__ret__, 'vlan_id_variable'))
 def get_other_ucse_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                  id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                  name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetOtherUcseFeatureResult]:
     """
     This data source can read the Other UCSE Feature.
@@ -325,10 +329,12 @@ def get_other_ucse_feature_output(feature_profile_id: pulumi.Input[Optional[_bui
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getOtherUcseFeature:getOtherUcseFeature', __args__, opts=opts, typ=GetOtherUcseFeatureResult)
     return __ret__.apply(lambda __response__: GetOtherUcseFeatureResult(

@@ -26,6 +26,7 @@ export function getPolicyObjectTlocList(args: GetPolicyObjectTlocListArgs, opts?
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectTlocListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getPolicyObjectTlocListOutput(args: GetPolicyObjectTlocListOutpu
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetPolicyObjectTlocListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -26,6 +26,7 @@ export function getEmbeddedSecurityNgfwPolicy(args: GetEmbeddedSecurityNgfwPolic
     return pulumi.runtime.invoke("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetEmbeddedSecurityNgfwPolicyArgs {
     /**
      * The id of the Policy
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy
+     */
+    name?: string;
 }
 
 /**
@@ -90,6 +95,7 @@ export function getEmbeddedSecurityNgfwPolicyOutput(args: GetEmbeddedSecurityNgf
     return pulumi.runtime.invokeOutput("sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -104,5 +110,9 @@ export interface GetEmbeddedSecurityNgfwPolicyOutputArgs {
     /**
      * The id of the Policy
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy
+     */
+    name?: pulumi.Input<string | undefined>;
 }

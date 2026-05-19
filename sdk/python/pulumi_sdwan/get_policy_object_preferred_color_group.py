@@ -112,6 +112,7 @@ class AwaitableGetPolicyObjectPreferredColorGroupResult(GetPolicyObjectPreferred
 
 def get_policy_object_preferred_color_group(feature_profile_id: Optional[_builtins.str] = None,
                                             id: Optional[_builtins.str] = None,
+                                            name: Optional[_builtins.str] = None,
                                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyObjectPreferredColorGroupResult:
     """
     This data source can read the Policy Object Preferred Color Group Policy_object.
@@ -129,10 +130,12 @@ def get_policy_object_preferred_color_group(feature_profile_id: Optional[_builti
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy_object
+    :param _builtins.str name: The name of the Policy_object
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getPolicyObjectPreferredColorGroup:getPolicyObjectPreferredColorGroup', __args__, opts=opts, typ=GetPolicyObjectPreferredColorGroupResult).value
 
@@ -144,7 +147,8 @@ def get_policy_object_preferred_color_group(feature_profile_id: Optional[_builti
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_preferred_color_group_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                                   id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                   id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectPreferredColorGroupResult]:
     """
     This data source can read the Policy Object Preferred Color Group Policy_object.
@@ -162,10 +166,12 @@ def get_policy_object_preferred_color_group_output(feature_profile_id: pulumi.In
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy_object
+    :param _builtins.str name: The name of the Policy_object
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectPreferredColorGroup:getPolicyObjectPreferredColorGroup', __args__, opts=opts, typ=GetPolicyObjectPreferredColorGroupResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectPreferredColorGroupResult(

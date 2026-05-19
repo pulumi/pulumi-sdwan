@@ -327,6 +327,7 @@ class AwaitableGetTransportIpv6TrackerFeatureResult(GetTransportIpv6TrackerFeatu
 
 def get_transport_ipv6_tracker_feature(feature_profile_id: Optional[_builtins.str] = None,
                                        id: Optional[_builtins.str] = None,
+                                       name: Optional[_builtins.str] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTransportIpv6TrackerFeatureResult:
     """
     This data source can read the Transport IPv6 Tracker Feature.
@@ -344,10 +345,12 @@ def get_transport_ipv6_tracker_feature(feature_profile_id: Optional[_builtins.st
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature', __args__, opts=opts, typ=GetTransportIpv6TrackerFeatureResult).value
 
@@ -377,7 +380,8 @@ def get_transport_ipv6_tracker_feature(feature_profile_id: Optional[_builtins.st
         tracker_type_variable=pulumi.get(__ret__, 'tracker_type_variable'),
         version=pulumi.get(__ret__, 'version'))
 def get_transport_ipv6_tracker_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                              id: pulumi.Input[Optional[_builtins.str]] = None,
+                                              id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                              name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportIpv6TrackerFeatureResult]:
     """
     This data source can read the Transport IPv6 Tracker Feature.
@@ -395,10 +399,12 @@ def get_transport_ipv6_tracker_feature_output(feature_profile_id: pulumi.Input[O
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature', __args__, opts=opts, typ=GetTransportIpv6TrackerFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportIpv6TrackerFeatureResult(

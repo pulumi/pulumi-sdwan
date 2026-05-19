@@ -24,7 +24,7 @@ class TransportRoutingBgpFeatureArgs:
                  feature_profile_id: pulumi.Input[_builtins.str],
                  always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
                  always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
                  as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
                  compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -82,7 +82,7 @@ class TransportRoutingBgpFeatureArgs:
         :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
+        :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
         :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
                  - Default value: `false`
@@ -301,14 +301,14 @@ class TransportRoutingBgpFeatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
@@ -933,7 +933,7 @@ class _TransportRoutingBgpFeatureState:
     def __init__(__self__, *,
                  always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
                  always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
                  as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
                  compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -992,7 +992,7 @@ class _TransportRoutingBgpFeatureState:
         :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
+        :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
         :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
                  - Default value: `false`
@@ -1204,14 +1204,14 @@ class _TransportRoutingBgpFeatureState:
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> pulumi.Input[Optional[_builtins.int]]:
+    def as_number(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """
         return pulumi.get(self, "as_number")
 
     @as_number.setter
-    def as_number(self, value: pulumi.Input[Optional[_builtins.int]]):
+    def as_number(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "as_number", value)
 
     @_builtins.property
@@ -1863,7 +1863,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
                  always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
                  as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
                  compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1930,7 +1930,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
             name="Example",
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            as_number=429,
+            as_number="429",
             router_id="1.2.3.4",
             propagate_as_path=False,
             propagate_community=False,
@@ -1948,8 +1948,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                 "address": "1.2.3.4",
                 "description": "neighbor1",
                 "shutdown": False,
-                "remote_as": 200,
-                "local_as": 200,
+                "remote_as": "200",
+                "local_as": "200",
                 "keepalive_time": 40,
                 "hold_time": 200,
                 "update_source_interface": "GigabitEthernet0",
@@ -1974,8 +1974,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                 "address": "2001::1",
                 "description": "neighbor2",
                 "shutdown": False,
-                "remote_as": 200,
-                "local_as": 200,
+                "remote_as": "200",
+                "local_as": "200",
                 "keepalive_time": 180,
                 "hold_time": 60,
                 "update_source_interface": "Loopback1",
@@ -2039,7 +2039,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
+        :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
         :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
                  - Default value: `false`
@@ -2132,7 +2132,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
             name="Example",
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            as_number=429,
+            as_number="429",
             router_id="1.2.3.4",
             propagate_as_path=False,
             propagate_community=False,
@@ -2150,8 +2150,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                 "address": "1.2.3.4",
                 "description": "neighbor1",
                 "shutdown": False,
-                "remote_as": 200,
-                "local_as": 200,
+                "remote_as": "200",
+                "local_as": "200",
                 "keepalive_time": 40,
                 "hold_time": 200,
                 "update_source_interface": "GigabitEthernet0",
@@ -2176,8 +2176,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                 "address": "2001::1",
                 "description": "neighbor2",
                 "shutdown": False,
-                "remote_as": 200,
-                "local_as": 200,
+                "remote_as": "200",
+                "local_as": "200",
                 "keepalive_time": 180,
                 "hold_time": 60,
                 "update_source_interface": "Loopback1",
@@ -2253,7 +2253,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
                  always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
-                 as_number: pulumi.Input[Optional[_builtins.int]] = None,
+                 as_number: pulumi.Input[Optional[_builtins.str]] = None,
                  as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
                  compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2383,7 +2383,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             always_compare_med: pulumi.Input[Optional[_builtins.bool]] = None,
             always_compare_med_variable: pulumi.Input[Optional[_builtins.str]] = None,
-            as_number: pulumi.Input[Optional[_builtins.int]] = None,
+            as_number: pulumi.Input[Optional[_builtins.str]] = None,
             as_number_variable: pulumi.Input[Optional[_builtins.str]] = None,
             compare_router_id: pulumi.Input[Optional[_builtins.bool]] = None,
             compare_router_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
@@ -2446,7 +2446,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
+        :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
         :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
                  - Default value: `false`
@@ -2600,7 +2600,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="asNumber")
-    def as_number(self) -> pulumi.Output[Optional[_builtins.int]]:
+    def as_number(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Set autonomous system number <1..4294967295> or <XX.YY>
         """

@@ -26,6 +26,7 @@ export function getTransportManagementVpnFeature(args: GetTransportManagementVpn
     return pulumi.runtime.invoke("sdwan:index/getTransportManagementVpnFeature:getTransportManagementVpnFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetTransportManagementVpnFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -137,6 +142,7 @@ export function getTransportManagementVpnFeatureOutput(args: GetTransportManagem
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportManagementVpnFeature:getTransportManagementVpnFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -151,5 +157,9 @@ export interface GetTransportManagementVpnFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

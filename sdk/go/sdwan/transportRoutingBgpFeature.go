@@ -33,7 +33,7 @@ import (
 //				Name:                   pulumi.String("Example"),
 //				Description:            pulumi.String("My Example"),
 //				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
-//				AsNumber:               pulumi.Int(429),
+//				AsNumber:               pulumi.String("429"),
 //				RouterId:               pulumi.String("1.2.3.4"),
 //				PropagateAsPath:        pulumi.Bool(false),
 //				PropagateCommunity:     pulumi.Bool(false),
@@ -52,8 +52,8 @@ import (
 //						Address:               pulumi.String("1.2.3.4"),
 //						Description:           pulumi.String("neighbor1"),
 //						Shutdown:              pulumi.Bool(false),
-//						RemoteAs:              pulumi.Int(200),
-//						LocalAs:               pulumi.Int(200),
+//						RemoteAs:              pulumi.String("200"),
+//						LocalAs:               pulumi.String("200"),
 //						KeepaliveTime:         pulumi.Int(40),
 //						HoldTime:              pulumi.Int(200),
 //						UpdateSourceInterface: pulumi.String("GigabitEthernet0"),
@@ -82,8 +82,8 @@ import (
 //						Address:               pulumi.String("2001::1"),
 //						Description:           pulumi.String("neighbor2"),
 //						Shutdown:              pulumi.Bool(false),
-//						RemoteAs:              pulumi.Int(200),
-//						LocalAs:               pulumi.Int(200),
+//						RemoteAs:              pulumi.String("200"),
+//						LocalAs:               pulumi.String("200"),
 //						KeepaliveTime:         pulumi.Int(180),
 //						HoldTime:              pulumi.Int(60),
 //						UpdateSourceInterface: pulumi.String("Loopback1"),
@@ -170,7 +170,7 @@ type TransportRoutingBgpFeature struct {
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrOutput `pulumi:"alwaysCompareMedVariable"`
 	// Set autonomous system number <1..4294967295> or <XX.YY>
-	AsNumber pulumi.IntPtrOutput `pulumi:"asNumber"`
+	AsNumber pulumi.StringPtrOutput `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable pulumi.StringPtrOutput `pulumi:"asNumberVariable"`
 	// Compare router IDs when selecting active BGP paths
@@ -336,7 +336,7 @@ type transportRoutingBgpFeatureState struct {
 	// Variable name
 	AlwaysCompareMedVariable *string `pulumi:"alwaysCompareMedVariable"`
 	// Set autonomous system number <1..4294967295> or <XX.YY>
-	AsNumber *int `pulumi:"asNumber"`
+	AsNumber *string `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
 	// Compare router IDs when selecting active BGP paths
@@ -470,7 +470,7 @@ type TransportRoutingBgpFeatureState struct {
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrInput
 	// Set autonomous system number <1..4294967295> or <XX.YY>
-	AsNumber pulumi.IntPtrInput
+	AsNumber pulumi.StringPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
 	// Compare router IDs when selecting active BGP paths
@@ -608,7 +608,7 @@ type transportRoutingBgpFeatureArgs struct {
 	// Variable name
 	AlwaysCompareMedVariable *string `pulumi:"alwaysCompareMedVariable"`
 	// Set autonomous system number <1..4294967295> or <XX.YY>
-	AsNumber *int `pulumi:"asNumber"`
+	AsNumber *string `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
 	// Compare router IDs when selecting active BGP paths
@@ -741,7 +741,7 @@ type TransportRoutingBgpFeatureArgs struct {
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrInput
 	// Set autonomous system number <1..4294967295> or <XX.YY>
-	AsNumber pulumi.IntPtrInput
+	AsNumber pulumi.StringPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
 	// Compare router IDs when selecting active BGP paths
@@ -965,8 +965,8 @@ func (o TransportRoutingBgpFeatureOutput) AlwaysCompareMedVariable() pulumi.Stri
 }
 
 // Set autonomous system number <1..4294967295> or <XX.YY>
-func (o TransportRoutingBgpFeatureOutput) AsNumber() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *TransportRoutingBgpFeature) pulumi.IntPtrOutput { return v.AsNumber }).(pulumi.IntPtrOutput)
+func (o TransportRoutingBgpFeatureOutput) AsNumber() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportRoutingBgpFeature) pulumi.StringPtrOutput { return v.AsNumber }).(pulumi.StringPtrOutput)
 }
 
 // Variable name

@@ -1393,6 +1393,7 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
 
 def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[_builtins.str] = None,
                                                    id: Optional[_builtins.str] = None,
+                                                   name: Optional[_builtins.str] = None,
                                                    service_lan_vpn_feature_id: Optional[_builtins.str] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult:
     """
@@ -1412,11 +1413,13 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     :param _builtins.str service_lan_vpn_feature_id: Service LAN VPN Feature ID
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceEthernetFeatureResult).value
@@ -1538,7 +1541,8 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         xconnect=pulumi.get(__ret__, 'xconnect'),
         xconnect_variable=pulumi.get(__ret__, 'xconnect_variable'))
 def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                                          id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                          id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                          name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                           service_lan_vpn_feature_id: pulumi.Input[Optional[_builtins.str]] = None,
                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnInterfaceEthernetFeatureResult]:
     """
@@ -1558,11 +1562,13 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: pu
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     :param _builtins.str service_lan_vpn_feature_id: Service LAN VPN Feature ID
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceEthernetFeatureResult)

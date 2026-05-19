@@ -26,6 +26,7 @@ export function getPolicyObjectSecurityFqdnList(args: GetPolicyObjectSecurityFqd
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectSecurityFqdnList:getPolicyObjectSecurityFqdnList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectSecurityFqdnListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -89,6 +94,7 @@ export function getPolicyObjectSecurityFqdnListOutput(args: GetPolicyObjectSecur
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSecurityFqdnList:getPolicyObjectSecurityFqdnList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -103,5 +109,9 @@ export interface GetPolicyObjectSecurityFqdnListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

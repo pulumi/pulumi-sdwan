@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetServiceRoutingBgpFeature(ctx, &sdwan.LookupServiceRoutingBgpFeatureArgs{
-//				Id:               "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id:               pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //				FeatureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //			}, nil)
 //			if err != nil {
@@ -54,7 +54,9 @@ type LookupServiceRoutingBgpFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the Feature
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getServiceRoutingBgpFeature.
@@ -64,7 +66,7 @@ type LookupServiceRoutingBgpFeatureResult struct {
 	// Variable name
 	AlwaysCompareMedVariable string `pulumi:"alwaysCompareMedVariable"`
 	// Set autonomous system number \n\n or \n\n
-	AsNumber int `pulumi:"asNumber"`
+	AsNumber string `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable string `pulumi:"asNumberVariable"`
 	// Compare router IDs when selecting active BGP paths
@@ -183,7 +185,9 @@ type LookupServiceRoutingBgpFeatureOutputArgs struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the Feature
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupServiceRoutingBgpFeatureOutputArgs) ElementType() reflect.Type {
@@ -216,8 +220,8 @@ func (o LookupServiceRoutingBgpFeatureResultOutput) AlwaysCompareMedVariable() p
 }
 
 // Set autonomous system number \n\n or \n\n
-func (o LookupServiceRoutingBgpFeatureResultOutput) AsNumber() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupServiceRoutingBgpFeatureResult) int { return v.AsNumber }).(pulumi.IntOutput)
+func (o LookupServiceRoutingBgpFeatureResultOutput) AsNumber() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceRoutingBgpFeatureResult) string { return v.AsNumber }).(pulumi.StringOutput)
 }
 
 // Variable name

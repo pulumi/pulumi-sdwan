@@ -26,6 +26,7 @@ export function getServiceRoutingEigrpFeature(args: GetServiceRoutingEigrpFeatur
     return pulumi.runtime.invoke("sdwan:index/getServiceRoutingEigrpFeature:getServiceRoutingEigrpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceRoutingEigrpFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -153,6 +158,7 @@ export function getServiceRoutingEigrpFeatureOutput(args: GetServiceRoutingEigrp
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceRoutingEigrpFeature:getServiceRoutingEigrpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -167,5 +173,9 @@ export interface GetServiceRoutingEigrpFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }
