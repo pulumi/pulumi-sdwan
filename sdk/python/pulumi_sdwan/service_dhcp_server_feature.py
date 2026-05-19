@@ -25,6 +25,8 @@ class ServiceDhcpServerFeatureArgs:
                  default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
                  default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_ha_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_ha_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  domain_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -51,6 +53,9 @@ class ServiceDhcpServerFeatureArgs:
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] dhcp_ha_enable: DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] dhcp_ha_enable_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
@@ -70,7 +75,7 @@ class ServiceDhcpServerFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -82,6 +87,10 @@ class ServiceDhcpServerFeatureArgs:
             pulumi.set(__self__, "default_gateway_variable", default_gateway_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if dhcp_ha_enable is not None:
+            pulumi.set(__self__, "dhcp_ha_enable", dhcp_ha_enable)
+        if dhcp_ha_enable_variable is not None:
+            pulumi.set(__self__, "dhcp_ha_enable_variable", dhcp_ha_enable_variable)
         if dns_servers is not None:
             pulumi.set(__self__, "dns_servers", dns_servers)
         if dns_servers_variable is not None:
@@ -168,6 +177,31 @@ class ServiceDhcpServerFeatureArgs:
     @description.setter
     def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnable")
+    def dhcp_ha_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "dhcp_ha_enable")
+
+    @dhcp_ha_enable.setter
+    def dhcp_ha_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "dhcp_ha_enable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnableVariable")
+    def dhcp_ha_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "dhcp_ha_enable_variable")
+
+    @dhcp_ha_enable_variable.setter
+    def dhcp_ha_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dhcp_ha_enable_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
@@ -357,7 +391,7 @@ class ServiceDhcpServerFeatureArgs:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -408,6 +442,8 @@ class _ServiceDhcpServerFeatureState:
                  default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
                  default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_ha_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_ha_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  domain_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -435,6 +471,9 @@ class _ServiceDhcpServerFeatureState:
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] dhcp_ha_enable: DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] dhcp_ha_enable_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
@@ -455,7 +494,7 @@ class _ServiceDhcpServerFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -467,6 +506,10 @@ class _ServiceDhcpServerFeatureState:
             pulumi.set(__self__, "default_gateway_variable", default_gateway_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if dhcp_ha_enable is not None:
+            pulumi.set(__self__, "dhcp_ha_enable", dhcp_ha_enable)
+        if dhcp_ha_enable_variable is not None:
+            pulumi.set(__self__, "dhcp_ha_enable_variable", dhcp_ha_enable_variable)
         if dns_servers is not None:
             pulumi.set(__self__, "dns_servers", dns_servers)
         if dns_servers_variable is not None:
@@ -545,6 +588,31 @@ class _ServiceDhcpServerFeatureState:
     @description.setter
     def description(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnable")
+    def dhcp_ha_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "dhcp_ha_enable")
+
+    @dhcp_ha_enable.setter
+    def dhcp_ha_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "dhcp_ha_enable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnableVariable")
+    def dhcp_ha_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "dhcp_ha_enable_variable")
+
+    @dhcp_ha_enable_variable.setter
+    def dhcp_ha_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dhcp_ha_enable_variable", value)
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
@@ -746,7 +814,7 @@ class _ServiceDhcpServerFeatureState:
     def subnet_mask(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -812,6 +880,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
                  default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
                  default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_ha_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_ha_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  domain_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -863,7 +933,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
             option_codes=[{
                 "code": 250,
                 "ascii": "example",
-            }])
+            }],
+            dhcp_ha_enable=False)
         ```
 
         ## Import
@@ -882,6 +953,9 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] dhcp_ha_enable: DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] dhcp_ha_enable_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
@@ -902,7 +976,7 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -943,7 +1017,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
             option_codes=[{
                 "code": 250,
                 "ascii": "example",
-            }])
+            }],
+            dhcp_ha_enable=False)
         ```
 
         ## Import
@@ -975,6 +1050,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
                  default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
                  default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
+                 dhcp_ha_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dhcp_ha_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  domain_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1007,6 +1084,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
             __props__.__dict__["default_gateway"] = default_gateway
             __props__.__dict__["default_gateway_variable"] = default_gateway_variable
             __props__.__dict__["description"] = description
+            __props__.__dict__["dhcp_ha_enable"] = dhcp_ha_enable
+            __props__.__dict__["dhcp_ha_enable_variable"] = dhcp_ha_enable_variable
             __props__.__dict__["dns_servers"] = dns_servers
             __props__.__dict__["dns_servers_variable"] = dns_servers_variable
             __props__.__dict__["domain_name"] = domain_name
@@ -1043,6 +1122,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
             default_gateway: pulumi.Input[Optional[_builtins.str]] = None,
             default_gateway_variable: pulumi.Input[Optional[_builtins.str]] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
+            dhcp_ha_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+            dhcp_ha_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
             dns_servers: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             dns_servers_variable: pulumi.Input[Optional[_builtins.str]] = None,
             domain_name: pulumi.Input[Optional[_builtins.str]] = None,
@@ -1074,6 +1155,9 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
+        :param pulumi.Input[_builtins.bool] dhcp_ha_enable: DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] dhcp_ha_enable_variable: Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
@@ -1094,7 +1178,7 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
         :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
-                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -1107,6 +1191,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         __props__.__dict__["default_gateway"] = default_gateway
         __props__.__dict__["default_gateway_variable"] = default_gateway_variable
         __props__.__dict__["description"] = description
+        __props__.__dict__["dhcp_ha_enable"] = dhcp_ha_enable
+        __props__.__dict__["dhcp_ha_enable_variable"] = dhcp_ha_enable_variable
         __props__.__dict__["dns_servers"] = dns_servers
         __props__.__dict__["dns_servers_variable"] = dns_servers_variable
         __props__.__dict__["domain_name"] = domain_name
@@ -1153,6 +1239,23 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         The description of the Feature
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnable")
+    def dhcp_ha_enable(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+          - Default value: `false`
+        """
+        return pulumi.get(self, "dhcp_ha_enable")
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnableVariable")
+    def dhcp_ha_enable_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        """
+        return pulumi.get(self, "dhcp_ha_enable_variable")
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
@@ -1290,7 +1393,7 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     def subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Subnet Mask
-          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 

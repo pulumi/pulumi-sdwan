@@ -27,6 +27,7 @@ export function getTransportWanVpnInterfaceT1E1SerialFeature(args: GetTransportW
     return pulumi.runtime.invoke("sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
         "transportWanVpnFeatureId": args.transportWanVpnFeatureId,
     }, opts);
 }
@@ -42,7 +43,11 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
     /**
      * Transport WAN VPN Feature ID
      */
@@ -505,6 +510,7 @@ export function getTransportWanVpnInterfaceT1E1SerialFeatureOutput(args: GetTran
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
         "transportWanVpnFeatureId": args.transportWanVpnFeatureId,
     }, opts);
 }
@@ -520,7 +526,11 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
     /**
      * Transport WAN VPN Feature ID
      */

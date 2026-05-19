@@ -193,6 +193,7 @@ class AwaitableGetDnsSecurityPolicyResult(GetDnsSecurityPolicyResult):
 
 def get_dns_security_policy(feature_profile_id: Optional[_builtins.str] = None,
                             id: Optional[_builtins.str] = None,
+                            name: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDnsSecurityPolicyResult:
     """
     This data source can read the DNS Security Policy.
@@ -210,10 +211,12 @@ def get_dns_security_policy(feature_profile_id: Optional[_builtins.str] = None,
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy
+    :param _builtins.str name: The name of the Policy
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy', __args__, opts=opts, typ=GetDnsSecurityPolicyResult).value
 
@@ -232,7 +235,8 @@ def get_dns_security_policy(feature_profile_id: Optional[_builtins.str] = None,
         umbrella_default=pulumi.get(__ret__, 'umbrella_default'),
         version=pulumi.get(__ret__, 'version'))
 def get_dns_security_policy_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                   id: pulumi.Input[Optional[_builtins.str]] = None,
+                                   id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                   name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDnsSecurityPolicyResult]:
     """
     This data source can read the DNS Security Policy.
@@ -250,10 +254,12 @@ def get_dns_security_policy_output(feature_profile_id: pulumi.Input[Optional[_bu
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy
+    :param _builtins.str name: The name of the Policy
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy', __args__, opts=opts, typ=GetDnsSecurityPolicyResult)
     return __ret__.apply(lambda __response__: GetDnsSecurityPolicyResult(

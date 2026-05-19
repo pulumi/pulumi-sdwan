@@ -104,6 +104,21 @@ public final class GetSystemAaaFeatureResult {
      */
     private List<GetSystemAaaFeatureTacacsGroup> tacacsGroups;
     /**
+     * @return CTS Authorization List
+     * 
+     */
+    private String trustsecCtsAuthList;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String trustsecCtsAuthListVariable;
+    /**
+     * @return RADIUS group
+     * 
+     */
+    private String trustsecRadiusGroup;
+    /**
      * @return Create local login account
      * 
      */
@@ -235,6 +250,27 @@ public final class GetSystemAaaFeatureResult {
         return this.tacacsGroups;
     }
     /**
+     * @return CTS Authorization List
+     * 
+     */
+    public String trustsecCtsAuthList() {
+        return this.trustsecCtsAuthList;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String trustsecCtsAuthListVariable() {
+        return this.trustsecCtsAuthListVariable;
+    }
+    /**
+     * @return RADIUS group
+     * 
+     */
+    public String trustsecRadiusGroup() {
+        return this.trustsecRadiusGroup;
+    }
+    /**
      * @return Create local login account
      * 
      */
@@ -275,6 +311,9 @@ public final class GetSystemAaaFeatureResult {
         private List<GetSystemAaaFeatureRadiusGroup> radiusGroups;
         private List<String> serverAuthOrders;
         private List<GetSystemAaaFeatureTacacsGroup> tacacsGroups;
+        private String trustsecCtsAuthList;
+        private String trustsecCtsAuthListVariable;
+        private String trustsecRadiusGroup;
         private List<GetSystemAaaFeatureUser> users;
         private Integer version;
         public Builder() {}
@@ -297,6 +336,9 @@ public final class GetSystemAaaFeatureResult {
     	      this.radiusGroups = defaults.radiusGroups;
     	      this.serverAuthOrders = defaults.serverAuthOrders;
     	      this.tacacsGroups = defaults.tacacsGroups;
+    	      this.trustsecCtsAuthList = defaults.trustsecCtsAuthList;
+    	      this.trustsecCtsAuthListVariable = defaults.trustsecCtsAuthListVariable;
+    	      this.trustsecRadiusGroup = defaults.trustsecRadiusGroup;
     	      this.users = defaults.users;
     	      this.version = defaults.version;
         }
@@ -453,6 +495,30 @@ public final class GetSystemAaaFeatureResult {
             return tacacsGroups(List.of(tacacsGroups));
         }
         @CustomType.Setter
+        public Builder trustsecCtsAuthList(String trustsecCtsAuthList) {
+            if (trustsecCtsAuthList == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureResult", "trustsecCtsAuthList");
+            }
+            this.trustsecCtsAuthList = trustsecCtsAuthList;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecCtsAuthListVariable(String trustsecCtsAuthListVariable) {
+            if (trustsecCtsAuthListVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureResult", "trustsecCtsAuthListVariable");
+            }
+            this.trustsecCtsAuthListVariable = trustsecCtsAuthListVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trustsecRadiusGroup(String trustsecRadiusGroup) {
+            if (trustsecRadiusGroup == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureResult", "trustsecRadiusGroup");
+            }
+            this.trustsecRadiusGroup = trustsecRadiusGroup;
+            return this;
+        }
+        @CustomType.Setter
         public Builder users(List<GetSystemAaaFeatureUser> users) {
             if (users == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureResult", "users");
@@ -490,6 +556,9 @@ public final class GetSystemAaaFeatureResult {
             _resultValue.radiusGroups = radiusGroups;
             _resultValue.serverAuthOrders = serverAuthOrders;
             _resultValue.tacacsGroups = tacacsGroups;
+            _resultValue.trustsecCtsAuthList = trustsecCtsAuthList;
+            _resultValue.trustsecCtsAuthListVariable = trustsecCtsAuthListVariable;
+            _resultValue.trustsecRadiusGroup = trustsecRadiusGroup;
             _resultValue.users = users;
             _resultValue.version = version;
             return _resultValue;

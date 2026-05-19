@@ -26,6 +26,7 @@ export function getTransportRoutingBgpFeature(args: GetTransportRoutingBgpFeatur
     return pulumi.runtime.invoke("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetTransportRoutingBgpFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -58,7 +63,7 @@ export interface GetTransportRoutingBgpFeatureResult {
     /**
      * Set autonomous system number \n\n or \n\n
      */
-    readonly asNumber: number;
+    readonly asNumber: string;
     /**
      * Variable name
      */
@@ -286,6 +291,7 @@ export function getTransportRoutingBgpFeatureOutput(args: GetTransportRoutingBgp
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -300,5 +306,9 @@ export interface GetTransportRoutingBgpFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

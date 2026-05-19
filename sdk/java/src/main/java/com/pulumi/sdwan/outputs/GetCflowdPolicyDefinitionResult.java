@@ -50,7 +50,7 @@ public final class GetCflowdPolicyDefinitionResult {
      */
     private String name;
     /**
-     * @return Protocol, either `ipv4`, `ipv6` or `all`
+     * @return Protocol, either `ipv4`, `ipv6` or `both`
      * 
      */
     private String protocol;
@@ -131,7 +131,7 @@ public final class GetCflowdPolicyDefinitionResult {
         return this.name;
     }
     /**
-     * @return Protocol, either `ipv4`, `ipv6` or `all`
+     * @return Protocol, either `ipv4`, `ipv6` or `both`
      * 
      */
     public String protocol() {

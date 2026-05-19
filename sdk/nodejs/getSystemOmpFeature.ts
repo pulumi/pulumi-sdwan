@@ -24,6 +24,7 @@ export function getSystemOmpFeature(args: GetSystemOmpFeatureArgs, opts?: pulumi
     return pulumi.runtime.invoke("sdwan:index/getSystemOmpFeature:getSystemOmpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemOmpFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -334,6 +339,7 @@ export function getSystemOmpFeatureOutput(args: GetSystemOmpFeatureOutputArgs, o
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemOmpFeature:getSystemOmpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -348,5 +354,9 @@ export interface GetSystemOmpFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.ServiceDhcpServerFeatureOptionCodeArgs;
 import com.pulumi.sdwan.inputs.ServiceDhcpServerFeatureStaticLeaseArgs;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -63,6 +64,38 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="dhcpHaEnable")
+    private @Nullable Output<Boolean> dhcpHaEnable;
+
+    /**
+     * @return DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> dhcpHaEnable() {
+        return Optional.ofNullable(this.dhcpHaEnable);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="dhcpHaEnableVariable")
+    private @Nullable Output<String> dhcpHaEnableVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> dhcpHaEnableVariable() {
+        return Optional.ofNullable(this.dhcpHaEnableVariable);
     }
 
     /**
@@ -313,7 +346,7 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
 
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="subnetMask")
@@ -321,7 +354,7 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
 
     /**
      * @return Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> subnetMask() {
@@ -379,6 +412,8 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         this.defaultGateway = $.defaultGateway;
         this.defaultGatewayVariable = $.defaultGatewayVariable;
         this.description = $.description;
+        this.dhcpHaEnable = $.dhcpHaEnable;
+        this.dhcpHaEnableVariable = $.dhcpHaEnableVariable;
         this.dnsServers = $.dnsServers;
         this.dnsServersVariable = $.dnsServersVariable;
         this.domainName = $.domainName;
@@ -480,6 +515,50 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param dhcpHaEnable DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dhcpHaEnable(@Nullable Output<Boolean> dhcpHaEnable) {
+            $.dhcpHaEnable = dhcpHaEnable;
+            return this;
+        }
+
+        /**
+         * @param dhcpHaEnable DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dhcpHaEnable(Boolean dhcpHaEnable) {
+            return dhcpHaEnable(Output.of(dhcpHaEnable));
+        }
+
+        /**
+         * @param dhcpHaEnableVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dhcpHaEnableVariable(@Nullable Output<String> dhcpHaEnableVariable) {
+            $.dhcpHaEnableVariable = dhcpHaEnableVariable;
+            return this;
+        }
+
+        /**
+         * @param dhcpHaEnableVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dhcpHaEnableVariable(String dhcpHaEnableVariable) {
+            return dhcpHaEnableVariable(Output.of(dhcpHaEnableVariable));
         }
 
         /**
@@ -866,7 +945,7 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
 
         /**
          * @param subnetMask Subnet Mask
-         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -878,7 +957,7 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
 
         /**
          * @param subnetMask Subnet Mask
-         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 

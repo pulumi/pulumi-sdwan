@@ -265,13 +265,13 @@ public final class TransportRoutingBgpFeatureIpv6NeighborArgs extends com.pulumi
      * 
      */
     @Import(name="localAs")
-    private @Nullable Output<Integer> localAs;
+    private @Nullable Output<String> localAs;
 
     /**
      * @return Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      * 
      */
-    public Optional<Output<Integer>> localAs() {
+    public Optional<Output<String>> localAs() {
         return Optional.ofNullable(this.localAs);
     }
 
@@ -357,13 +357,13 @@ public final class TransportRoutingBgpFeatureIpv6NeighborArgs extends com.pulumi
      * 
      */
     @Import(name="remoteAs")
-    private @Nullable Output<Integer> remoteAs;
+    private @Nullable Output<String> remoteAs;
 
     /**
      * @return Set remote autonomous system number
      * 
      */
-    public Optional<Output<Integer>> remoteAs() {
+    public Optional<Output<String>> remoteAs() {
         return Optional.ofNullable(this.remoteAs);
     }
 
@@ -909,7 +909,7 @@ public final class TransportRoutingBgpFeatureIpv6NeighborArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder localAs(@Nullable Output<Integer> localAs) {
+        public Builder localAs(@Nullable Output<String> localAs) {
             $.localAs = localAs;
             return this;
         }
@@ -920,7 +920,7 @@ public final class TransportRoutingBgpFeatureIpv6NeighborArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder localAs(Integer localAs) {
+        public Builder localAs(String localAs) {
             return localAs(Output.of(localAs));
         }
 
@@ -1037,7 +1037,7 @@ public final class TransportRoutingBgpFeatureIpv6NeighborArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder remoteAs(@Nullable Output<Integer> remoteAs) {
+        public Builder remoteAs(@Nullable Output<String> remoteAs) {
             $.remoteAs = remoteAs;
             return this;
         }
@@ -1048,7 +1048,7 @@ public final class TransportRoutingBgpFeatureIpv6NeighborArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder remoteAs(Integer remoteAs) {
+        public Builder remoteAs(String remoteAs) {
             return remoteAs(Output.of(remoteAs));
         }
 

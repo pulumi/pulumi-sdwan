@@ -203,6 +203,8 @@ import com.pulumi.sdwan.inputs.GetPolicyObjectExpandedCommunityListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectExtendedCommunityListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfilePlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectIpv4PrefixListPlainArgs;
@@ -548,6 +550,7 @@ import com.pulumi.sdwan.outputs.GetCliConfigFeatureResult;
 import com.pulumi.sdwan.outputs.GetCliDeviceTemplateResult;
 import com.pulumi.sdwan.outputs.GetCliFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetCliTemplateFeatureTemplateResult;
+import com.pulumi.sdwan.outputs.GetCloudProviderSettingsResult;
 import com.pulumi.sdwan.outputs.GetColorListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetConfigurationGroupResult;
 import com.pulumi.sdwan.outputs.GetCustomControlTopologyPolicyDefinitionResult;
@@ -596,6 +599,7 @@ import com.pulumi.sdwan.outputs.GetPolicyObjectDataIpv4PrefixListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectDataIpv6PrefixListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectExpandedCommunityListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectExtendedCommunityListResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectFeatureProfileParcelsResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectIpv4PrefixListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectIpv6PrefixListResult;
@@ -12770,6 +12774,265 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", TypeShape.of(GetCliTemplateFeatureTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCloudProviderSettingsResult> getCloudProviderSettings() {
+        return getCloudProviderSettings(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetCloudProviderSettingsResult> getCloudProviderSettingsPlain() {
+        return getCloudProviderSettingsPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCloudProviderSettingsResult> getCloudProviderSettings(InvokeArgs args) {
+        return getCloudProviderSettings(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetCloudProviderSettingsResult> getCloudProviderSettingsPlain(InvokeArgs args) {
+        return getCloudProviderSettingsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCloudProviderSettingsResult> getCloudProviderSettings(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getCloudProviderSettings:getCloudProviderSettings", TypeShape.of(GetCloudProviderSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCloudProviderSettingsResult> getCloudProviderSettings(InvokeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getCloudProviderSettings:getCloudProviderSettings", TypeShape.of(GetCloudProviderSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Cloud Provider Settings .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCloudProviderSettings(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetCloudProviderSettingsResult> getCloudProviderSettingsPlain(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getCloudProviderSettings:getCloudProviderSettings", TypeShape.of(GetCloudProviderSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Color List Policy Object .
      * 
      * ## Example Usage
@@ -22885,6 +23148,206 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetPolicyObjectFeatureProfileResult> getPolicyObjectFeatureProfilePlain(GetPolicyObjectFeatureProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", TypeShape.of(GetPolicyObjectFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the parcels of a Policy Object Feature Profile.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectFeatureProfileParcelsResult> getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs args) {
+        return getPolicyObjectFeatureProfileParcels(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the parcels of a Policy Object Feature Profile.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectFeatureProfileParcelsResult> getPolicyObjectFeatureProfileParcelsPlain(GetPolicyObjectFeatureProfileParcelsPlainArgs args) {
+        return getPolicyObjectFeatureProfileParcelsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the parcels of a Policy Object Feature Profile.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectFeatureProfileParcelsResult> getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels", TypeShape.of(GetPolicyObjectFeatureProfileParcelsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the parcels of a Policy Object Feature Profile.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectFeatureProfileParcelsResult> getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels", TypeShape.of(GetPolicyObjectFeatureProfileParcelsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the parcels of a Policy Object Feature Profile.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectFeatureProfileParcelsArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectFeatureProfileParcels(GetPolicyObjectFeatureProfileParcelsArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectFeatureProfileParcelsResult> getPolicyObjectFeatureProfileParcelsPlain(GetPolicyObjectFeatureProfileParcelsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels", TypeShape.of(GetPolicyObjectFeatureProfileParcelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Policy Object IPv4 Prefix List Policy_object.

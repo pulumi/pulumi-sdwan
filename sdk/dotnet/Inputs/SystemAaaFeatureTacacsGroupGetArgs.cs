@@ -50,6 +50,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }
 
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("vpnVariable")]
+        public Input<string>? VpnVariable { get; set; }
+
         public SystemAaaFeatureTacacsGroupGetArgs()
         {
         }

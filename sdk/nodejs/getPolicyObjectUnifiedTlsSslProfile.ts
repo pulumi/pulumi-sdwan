@@ -24,6 +24,7 @@ export function getPolicyObjectUnifiedTlsSslProfile(args: GetPolicyObjectUnified
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectUnifiedTlsSslProfile:getPolicyObjectUnifiedTlsSslProfile", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetPolicyObjectUnifiedTlsSslProfileArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -95,6 +100,7 @@ export function getPolicyObjectUnifiedTlsSslProfileOutput(args: GetPolicyObjectU
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectUnifiedTlsSslProfile:getPolicyObjectUnifiedTlsSslProfile", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -109,5 +115,9 @@ export interface GetPolicyObjectUnifiedTlsSslProfileOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

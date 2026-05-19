@@ -26,6 +26,7 @@ export function getServiceWirelessLanFeature(args: GetServiceWirelessLanFeatureA
     return pulumi.runtime.invoke("sdwan:index/getServiceWirelessLanFeature:getServiceWirelessLanFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceWirelessLanFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -160,6 +165,7 @@ export function getServiceWirelessLanFeatureOutput(args: GetServiceWirelessLanFe
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceWirelessLanFeature:getServiceWirelessLanFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -174,5 +180,9 @@ export interface GetServiceWirelessLanFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

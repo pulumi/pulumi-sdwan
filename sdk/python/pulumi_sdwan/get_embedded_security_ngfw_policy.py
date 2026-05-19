@@ -118,6 +118,7 @@ class AwaitableGetEmbeddedSecurityNgfwPolicyResult(GetEmbeddedSecurityNgfwPolicy
 
 def get_embedded_security_ngfw_policy(feature_profile_id: Optional[_builtins.str] = None,
                                       id: Optional[_builtins.str] = None,
+                                      name: Optional[_builtins.str] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetEmbeddedSecurityNgfwPolicyResult:
     """
     This data source can read the Embedded Security NGFW Policy.
@@ -135,10 +136,12 @@ def get_embedded_security_ngfw_policy(feature_profile_id: Optional[_builtins.str
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy
+    :param _builtins.str name: The name of the Policy
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy', __args__, opts=opts, typ=GetEmbeddedSecurityNgfwPolicyResult).value
 
@@ -151,7 +154,8 @@ def get_embedded_security_ngfw_policy(feature_profile_id: Optional[_builtins.str
         sequences=pulumi.get(__ret__, 'sequences'),
         version=pulumi.get(__ret__, 'version'))
 def get_embedded_security_ngfw_policy_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                             id: pulumi.Input[Optional[_builtins.str]] = None,
+                                             id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                             name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEmbeddedSecurityNgfwPolicyResult]:
     """
     This data source can read the Embedded Security NGFW Policy.
@@ -169,10 +173,12 @@ def get_embedded_security_ngfw_policy_output(feature_profile_id: pulumi.Input[Op
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy
+    :param _builtins.str name: The name of the Policy
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getEmbeddedSecurityNgfwPolicy:getEmbeddedSecurityNgfwPolicy', __args__, opts=opts, typ=GetEmbeddedSecurityNgfwPolicyResult)
     return __ret__.apply(lambda __response__: GetEmbeddedSecurityNgfwPolicyResult(

@@ -62,6 +62,7 @@ namespace Pulumi.Sdwan
     ///                 Ascii = "example",
     ///             },
     ///         },
+    ///         DhcpHaEnable = false,
     ///     });
     /// 
     /// });
@@ -97,6 +98,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
+
+        /// <summary>
+        /// DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("dhcpHaEnable")]
+        public Output<bool?> DhcpHaEnable { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Output("dhcpHaEnableVariable")]
+        public Output<string?> DhcpHaEnableVariable { get; private set; } = null!;
 
         /// <summary>
         /// Configure one or more DNS server IP addresses
@@ -199,7 +213,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Subnet Mask
-        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("subnetMask")]
         public Output<string?> SubnetMask { get; private set; } = null!;
@@ -291,6 +305,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
+
+        /// <summary>
+        /// DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("dhcpHaEnable")]
+        public Input<bool>? DhcpHaEnable { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("dhcpHaEnableVariable")]
+        public Input<string>? DhcpHaEnableVariable { get; set; }
 
         [Input("dnsServers")]
         private InputList<string>? _dnsServers;
@@ -417,7 +444,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Subnet Mask
-        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("subnetMask")]
         public Input<string>? SubnetMask { get; set; }
@@ -471,6 +498,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
+
+        /// <summary>
+        /// DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("dhcpHaEnable")]
+        public Input<bool>? DhcpHaEnable { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+        /// </summary>
+        [Input("dhcpHaEnableVariable")]
+        public Input<string>? DhcpHaEnableVariable { get; set; }
 
         [Input("dnsServers")]
         private InputList<string>? _dnsServers;
@@ -597,7 +637,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Subnet Mask
-        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("subnetMask")]
         public Input<string>? SubnetMask { get; set; }

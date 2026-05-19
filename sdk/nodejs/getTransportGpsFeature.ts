@@ -24,6 +24,7 @@ export function getTransportGpsFeature(args: GetTransportGpsFeatureArgs, opts?: 
     return pulumi.runtime.invoke("sdwan:index/getTransportGpsFeature:getTransportGpsFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetTransportGpsFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -134,6 +139,7 @@ export function getTransportGpsFeatureOutput(args: GetTransportGpsFeatureOutputA
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportGpsFeature:getTransportGpsFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -148,5 +154,9 @@ export interface GetTransportGpsFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

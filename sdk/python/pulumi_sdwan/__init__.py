@@ -56,6 +56,7 @@ from .cli_config_feature import *
 from .cli_device_template import *
 from .cli_feature_profile import *
 from .cli_template_feature_template import *
+from .cloud_provider_settings import *
 from .color_list_policy_object import *
 from .configuration_group import *
 from .custom_control_topology_policy_definition import *
@@ -122,6 +123,7 @@ from .get_cli_config_feature import *
 from .get_cli_device_template import *
 from .get_cli_feature_profile import *
 from .get_cli_template_feature_template import *
+from .get_cloud_provider_settings import *
 from .get_color_list_policy_object import *
 from .get_configuration_group import *
 from .get_custom_control_topology_policy_definition import *
@@ -171,6 +173,7 @@ from .get_policy_object_data_ipv6_prefix_list import *
 from .get_policy_object_expanded_community_list import *
 from .get_policy_object_extended_community_list import *
 from .get_policy_object_feature_profile import *
+from .get_policy_object_feature_profile_parcels import *
 from .get_policy_object_ipv4_prefix_list import *
 from .get_policy_object_ipv6_prefix_list import *
 from .get_policy_object_mirror import *
@@ -910,6 +913,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate": "CliTemplateFeatureTemplate"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/cloudProviderSettings",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/cloudProviderSettings:CloudProviderSettings": "CloudProviderSettings"
   }
  },
  {

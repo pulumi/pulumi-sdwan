@@ -7,6 +7,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs extends com.pulumi.resources.InvokeArgs {
@@ -32,15 +34,30 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs extends
      * The id of the Feature
      * 
      */
-    @Import(name="id", required=true)
-    private String id;
+    @Import(name="id")
+    private @Nullable String id;
 
     /**
      * @return The id of the Feature
      * 
      */
-    public String id() {
-        return this.id;
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
+    }
+
+    /**
+     * The name of the Feature
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return The name of the Feature
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,6 +80,7 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs extends
     private GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs(GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs $) {
         this.featureProfileId = $.featureProfileId;
         this.id = $.id;
+        this.name = $.name;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
     }
 
@@ -101,8 +119,19 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs extends
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(@Nullable String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Feature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 
@@ -120,9 +149,6 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs extends
         public GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs", "featureProfileId");
-            }
-            if ($.id == null) {
-                throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs", "id");
             }
             if ($.transportWanVpnFeatureId == null) {
                 throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs", "transportWanVpnFeatureId");

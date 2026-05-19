@@ -24,6 +24,7 @@ export function getSystemRemoteAccessFeature(args: GetSystemRemoteAccessFeatureA
     return pulumi.runtime.invoke("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemRemoteAccessFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -219,6 +224,7 @@ export function getSystemRemoteAccessFeatureOutput(args: GetSystemRemoteAccessFe
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -233,5 +239,9 @@ export interface GetSystemRemoteAccessFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

@@ -26,6 +26,7 @@ export function getSystemCaCertificateFeature(args: GetSystemCaCertificateFeatur
     return pulumi.runtime.invoke("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemCaCertificateFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getSystemCaCertificateFeatureOutput(args: GetSystemCaCertificate
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetSystemCaCertificateFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

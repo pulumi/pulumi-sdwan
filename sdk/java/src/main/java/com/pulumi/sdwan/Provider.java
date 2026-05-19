@@ -24,6 +24,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="pulumi:providers:sdwan")
 public class Provider extends com.pulumi.resources.ProviderResource {
     /**
+     * API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+     * 
+     */
+    @Export(name="apiToken", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> apiToken;
+
+    /**
+     * @return API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+     * 
+     */
+    public Output<Optional<String>> apiToken() {
+        return Codegen.optional(this.apiToken);
+    }
+    /**
      * Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
      * 
      */
@@ -102,6 +116,7 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
+                "apiToken",
                 "password"
             ))
             .build();

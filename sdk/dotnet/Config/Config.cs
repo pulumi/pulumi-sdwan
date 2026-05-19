@@ -32,6 +32,16 @@ namespace Pulumi.Sdwan
 
         private static readonly global::Pulumi.Config __config = new global::Pulumi.Config("sdwan");
 
+        private static readonly __Value<string?> _apiToken = new __Value<string?>(() => __config.Get("apiToken"));
+        /// <summary>
+        /// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        /// </summary>
+        public static string? ApiToken
+        {
+            get => _apiToken.Get();
+            set => _apiToken.Set(value);
+        }
+
         private static readonly __Value<bool?> _insecure = new __Value<bool?>(() => __config.GetBoolean("insecure"));
         /// <summary>
         /// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `True`.

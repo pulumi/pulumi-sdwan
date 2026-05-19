@@ -26,6 +26,7 @@ export function getTransportT1E1ControllerFeature(args: GetTransportT1E1Controll
     return pulumi.runtime.invoke("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetTransportT1E1ControllerFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -104,6 +109,7 @@ export function getTransportT1E1ControllerFeatureOutput(args: GetTransportT1E1Co
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -118,5 +124,9 @@ export interface GetTransportT1E1ControllerFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

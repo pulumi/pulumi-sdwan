@@ -26,6 +26,7 @@ export function getSystemLoggingFeature(args: GetSystemLoggingFeatureArgs, opts?
     return pulumi.runtime.invoke("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemLoggingFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -124,6 +129,7 @@ export function getSystemLoggingFeatureOutput(args: GetSystemLoggingFeatureOutpu
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -138,5 +144,9 @@ export interface GetSystemLoggingFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

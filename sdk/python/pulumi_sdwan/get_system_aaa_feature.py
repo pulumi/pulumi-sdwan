@@ -27,7 +27,7 @@ class GetSystemAaaFeatureResult:
     """
     A collection of values returned by getSystemAaaFeature.
     """
-    def __init__(__self__, accounting_group=None, accounting_group_variable=None, accounting_rules=None, authentication_group=None, authentication_group_variable=None, authorization_config_commands=None, authorization_config_commands_variable=None, authorization_console=None, authorization_console_variable=None, authorization_rules=None, description=None, feature_profile_id=None, id=None, name=None, radius_groups=None, server_auth_orders=None, tacacs_groups=None, users=None, version=None):
+    def __init__(__self__, accounting_group=None, accounting_group_variable=None, accounting_rules=None, authentication_group=None, authentication_group_variable=None, authorization_config_commands=None, authorization_config_commands_variable=None, authorization_console=None, authorization_console_variable=None, authorization_rules=None, description=None, feature_profile_id=None, id=None, name=None, radius_groups=None, server_auth_orders=None, tacacs_groups=None, trustsec_cts_auth_list=None, trustsec_cts_auth_list_variable=None, trustsec_radius_group=None, users=None, version=None):
         if accounting_group and not isinstance(accounting_group, bool):
             raise TypeError("Expected argument 'accounting_group' to be a bool")
         pulumi.set(__self__, "accounting_group", accounting_group)
@@ -79,6 +79,15 @@ class GetSystemAaaFeatureResult:
         if tacacs_groups and not isinstance(tacacs_groups, list):
             raise TypeError("Expected argument 'tacacs_groups' to be a list")
         pulumi.set(__self__, "tacacs_groups", tacacs_groups)
+        if trustsec_cts_auth_list and not isinstance(trustsec_cts_auth_list, str):
+            raise TypeError("Expected argument 'trustsec_cts_auth_list' to be a str")
+        pulumi.set(__self__, "trustsec_cts_auth_list", trustsec_cts_auth_list)
+        if trustsec_cts_auth_list_variable and not isinstance(trustsec_cts_auth_list_variable, str):
+            raise TypeError("Expected argument 'trustsec_cts_auth_list_variable' to be a str")
+        pulumi.set(__self__, "trustsec_cts_auth_list_variable", trustsec_cts_auth_list_variable)
+        if trustsec_radius_group and not isinstance(trustsec_radius_group, str):
+            raise TypeError("Expected argument 'trustsec_radius_group' to be a str")
+        pulumi.set(__self__, "trustsec_radius_group", trustsec_radius_group)
         if users and not isinstance(users, list):
             raise TypeError("Expected argument 'users' to be a list")
         pulumi.set(__self__, "users", users)
@@ -223,6 +232,30 @@ class GetSystemAaaFeatureResult:
         return pulumi.get(self, "tacacs_groups")
 
     @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthList")
+    def trustsec_cts_auth_list(self) -> _builtins.str:
+        """
+        CTS Authorization List
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecCtsAuthListVariable")
+    def trustsec_cts_auth_list_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "trustsec_cts_auth_list_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="trustsecRadiusGroup")
+    def trustsec_radius_group(self) -> _builtins.str:
+        """
+        RADIUS group
+        """
+        return pulumi.get(self, "trustsec_radius_group")
+
+    @_builtins.property
     @pulumi.getter
     def users(self) -> Sequence['outputs.GetSystemAaaFeatureUserResult']:
         """
@@ -262,12 +295,16 @@ class AwaitableGetSystemAaaFeatureResult(GetSystemAaaFeatureResult):
             radius_groups=self.radius_groups,
             server_auth_orders=self.server_auth_orders,
             tacacs_groups=self.tacacs_groups,
+            trustsec_cts_auth_list=self.trustsec_cts_auth_list,
+            trustsec_cts_auth_list_variable=self.trustsec_cts_auth_list_variable,
+            trustsec_radius_group=self.trustsec_radius_group,
             users=self.users,
             version=self.version)
 
 
 def get_system_aaa_feature(feature_profile_id: Optional[_builtins.str] = None,
                            id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSystemAaaFeatureResult:
     """
     This data source can read the System AAA Feature.
@@ -285,10 +322,12 @@ def get_system_aaa_feature(feature_profile_id: Optional[_builtins.str] = None,
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getSystemAaaFeature:getSystemAaaFeature', __args__, opts=opts, typ=GetSystemAaaFeatureResult).value
 
@@ -310,10 +349,14 @@ def get_system_aaa_feature(feature_profile_id: Optional[_builtins.str] = None,
         radius_groups=pulumi.get(__ret__, 'radius_groups'),
         server_auth_orders=pulumi.get(__ret__, 'server_auth_orders'),
         tacacs_groups=pulumi.get(__ret__, 'tacacs_groups'),
+        trustsec_cts_auth_list=pulumi.get(__ret__, 'trustsec_cts_auth_list'),
+        trustsec_cts_auth_list_variable=pulumi.get(__ret__, 'trustsec_cts_auth_list_variable'),
+        trustsec_radius_group=pulumi.get(__ret__, 'trustsec_radius_group'),
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'))
 def get_system_aaa_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                  id: pulumi.Input[Optional[_builtins.str]] = None,
+                                  id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                  name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemAaaFeatureResult]:
     """
     This data source can read the System AAA Feature.
@@ -331,10 +374,12 @@ def get_system_aaa_feature_output(feature_profile_id: pulumi.Input[Optional[_bui
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemAaaFeature:getSystemAaaFeature', __args__, opts=opts, typ=GetSystemAaaFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemAaaFeatureResult(
@@ -355,5 +400,8 @@ def get_system_aaa_feature_output(feature_profile_id: pulumi.Input[Optional[_bui
         radius_groups=pulumi.get(__response__, 'radius_groups'),
         server_auth_orders=pulumi.get(__response__, 'server_auth_orders'),
         tacacs_groups=pulumi.get(__response__, 'tacacs_groups'),
+        trustsec_cts_auth_list=pulumi.get(__response__, 'trustsec_cts_auth_list'),
+        trustsec_cts_auth_list_variable=pulumi.get(__response__, 'trustsec_cts_auth_list_variable'),
+        trustsec_radius_group=pulumi.get(__response__, 'trustsec_radius_group'),
         users=pulumi.get(__response__, 'users'),
         version=pulumi.get(__response__, 'version')))

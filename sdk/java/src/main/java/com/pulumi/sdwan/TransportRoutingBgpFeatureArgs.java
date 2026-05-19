@@ -65,13 +65,13 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="asNumber")
-    private @Nullable Output<Integer> asNumber;
+    private @Nullable Output<String> asNumber;
 
     /**
      * @return Set autonomous system number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
      * 
      */
-    public Optional<Output<Integer>> asNumber() {
+    public Optional<Output<String>> asNumber() {
         return Optional.ofNullable(this.asNumber);
     }
 
@@ -995,7 +995,7 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder asNumber(@Nullable Output<Integer> asNumber) {
+        public Builder asNumber(@Nullable Output<String> asNumber) {
             $.asNumber = asNumber;
             return this;
         }
@@ -1006,7 +1006,7 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder asNumber(Integer asNumber) {
+        public Builder asNumber(String asNumber) {
             return asNumber(Output.of(asNumber));
         }
 

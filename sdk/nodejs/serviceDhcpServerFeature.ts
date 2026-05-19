@@ -37,6 +37,7 @@ import * as utilities from "./utilities";
  *         code: 250,
  *         ascii: "example",
  *     }],
+ *     dhcpHaEnable: false,
  * });
  * ```
  *
@@ -90,6 +91,15 @@ export class ServiceDhcpServerFeature extends pulumi.CustomResource {
      * The description of the Feature
      */
     declare public readonly description: pulumi.Output<string | undefined>;
+    /**
+     * DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    declare public readonly dhcpHaEnable: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    declare public readonly dhcpHaEnableVariable: pulumi.Output<string | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
@@ -159,7 +169,7 @@ export class ServiceDhcpServerFeature extends pulumi.CustomResource {
     declare public readonly staticLeases: pulumi.Output<outputs.ServiceDhcpServerFeatureStaticLease[] | undefined>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     declare public readonly subnetMask: pulumi.Output<string | undefined>;
     /**
@@ -195,6 +205,8 @@ export class ServiceDhcpServerFeature extends pulumi.CustomResource {
             resourceInputs["defaultGateway"] = state?.defaultGateway;
             resourceInputs["defaultGatewayVariable"] = state?.defaultGatewayVariable;
             resourceInputs["description"] = state?.description;
+            resourceInputs["dhcpHaEnable"] = state?.dhcpHaEnable;
+            resourceInputs["dhcpHaEnableVariable"] = state?.dhcpHaEnableVariable;
             resourceInputs["dnsServers"] = state?.dnsServers;
             resourceInputs["dnsServersVariable"] = state?.dnsServersVariable;
             resourceInputs["domainName"] = state?.domainName;
@@ -224,6 +236,8 @@ export class ServiceDhcpServerFeature extends pulumi.CustomResource {
             resourceInputs["defaultGateway"] = args?.defaultGateway;
             resourceInputs["defaultGatewayVariable"] = args?.defaultGatewayVariable;
             resourceInputs["description"] = args?.description;
+            resourceInputs["dhcpHaEnable"] = args?.dhcpHaEnable;
+            resourceInputs["dhcpHaEnableVariable"] = args?.dhcpHaEnableVariable;
             resourceInputs["dnsServers"] = args?.dnsServers;
             resourceInputs["dnsServersVariable"] = args?.dnsServersVariable;
             resourceInputs["domainName"] = args?.domainName;
@@ -267,6 +281,15 @@ export interface ServiceDhcpServerFeatureState {
      * The description of the Feature
      */
     description?: pulumi.Input<string | undefined>;
+    /**
+     * DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    dhcpHaEnable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    dhcpHaEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
@@ -336,7 +359,7 @@ export interface ServiceDhcpServerFeatureState {
     staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[] | undefined>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string | undefined>;
     /**
@@ -373,6 +396,15 @@ export interface ServiceDhcpServerFeatureArgs {
      * The description of the Feature
      */
     description?: pulumi.Input<string | undefined>;
+    /**
+     * DHCP sync enable/disable for dual home edges, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     *   - Default value: `false`
+     */
+    dhcpHaEnable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     */
+    dhcpHaEnableVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
@@ -442,7 +474,7 @@ export interface ServiceDhcpServerFeatureArgs {
     staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[] | undefined>;
     /**
      * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.248.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string | undefined>;
     /**

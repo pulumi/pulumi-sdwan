@@ -26,6 +26,7 @@ export function getPolicyObjectSecurityScalableGroupTagList(args: GetPolicyObjec
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectSecurityScalableGroupTagListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -89,6 +94,7 @@ export function getPolicyObjectSecurityScalableGroupTagListOutput(args: GetPolic
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -103,5 +109,9 @@ export interface GetPolicyObjectSecurityScalableGroupTagListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

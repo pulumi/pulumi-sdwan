@@ -87,6 +87,8 @@ import javax.annotation.Nullable;
  *                     .keyType("key")
  *                     .build())
  *                 .build())
+ *             .trustsecCtsAuthList("list1")
+ *             .trustsecRadiusGroup("RGROUP1")
  *             .tacacsGroups(SystemAaaFeatureTacacsGroupArgs.builder()
  *                 .groupName("TGROUP1")
  *                 .vpn(10)
@@ -367,6 +369,48 @@ public class SystemAaaFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<SystemAaaFeatureTacacsGroup>>> tacacsGroups() {
         return Codegen.optional(this.tacacsGroups);
+    }
+    /**
+     * CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="trustsecCtsAuthList", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> trustsecCtsAuthList;
+
+    /**
+     * @return CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> trustsecCtsAuthList() {
+        return Codegen.optional(this.trustsecCtsAuthList);
+    }
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="trustsecCtsAuthListVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> trustsecCtsAuthListVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> trustsecCtsAuthListVariable() {
+        return Codegen.optional(this.trustsecCtsAuthListVariable);
+    }
+    /**
+     * RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Export(name="trustsecRadiusGroup", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> trustsecRadiusGroup;
+
+    /**
+     * @return RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Output<Optional<String>> trustsecRadiusGroup() {
+        return Codegen.optional(this.trustsecRadiusGroup);
     }
     /**
      * Create local login account

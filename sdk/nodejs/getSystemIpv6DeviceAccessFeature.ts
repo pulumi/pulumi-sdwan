@@ -26,6 +26,7 @@ export function getSystemIpv6DeviceAccessFeature(args: GetSystemIpv6DeviceAccess
     return pulumi.runtime.invoke("sdwan:index/getSystemIpv6DeviceAccessFeature:getSystemIpv6DeviceAccessFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemIpv6DeviceAccessFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -96,6 +101,7 @@ export function getSystemIpv6DeviceAccessFeatureOutput(args: GetSystemIpv6Device
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemIpv6DeviceAccessFeature:getSystemIpv6DeviceAccessFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -110,5 +116,9 @@ export interface GetSystemIpv6DeviceAccessFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

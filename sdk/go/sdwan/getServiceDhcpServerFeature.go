@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetServiceDhcpServerFeature(ctx, &sdwan.LookupServiceDhcpServerFeatureArgs{
-//				Id:               "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id:               pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //				FeatureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //			}, nil)
 //			if err != nil {
@@ -54,7 +54,9 @@ type LookupServiceDhcpServerFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the Feature
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getServiceDhcpServerFeature.
@@ -65,6 +67,10 @@ type LookupServiceDhcpServerFeatureResult struct {
 	DefaultGatewayVariable string `pulumi:"defaultGatewayVariable"`
 	// The description of the Feature
 	Description string `pulumi:"description"`
+	// DHCP sync enable/disable for dual home edges
+	DhcpHaEnable bool `pulumi:"dhcpHaEnable"`
+	// Variable name
+	DhcpHaEnableVariable string `pulumi:"dhcpHaEnableVariable"`
 	// Configure one or more DNS server IP addresses
 	DnsServers []string `pulumi:"dnsServers"`
 	// Variable name
@@ -125,7 +131,9 @@ type LookupServiceDhcpServerFeatureOutputArgs struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the Feature
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupServiceDhcpServerFeatureOutputArgs) ElementType() reflect.Type {
@@ -160,6 +168,16 @@ func (o LookupServiceDhcpServerFeatureResultOutput) DefaultGatewayVariable() pul
 // The description of the Feature
 func (o LookupServiceDhcpServerFeatureResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceDhcpServerFeatureResult) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// DHCP sync enable/disable for dual home edges
+func (o LookupServiceDhcpServerFeatureResultOutput) DhcpHaEnable() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceDhcpServerFeatureResult) bool { return v.DhcpHaEnable }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupServiceDhcpServerFeatureResultOutput) DhcpHaEnableVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceDhcpServerFeatureResult) string { return v.DhcpHaEnableVariable }).(pulumi.StringOutput)
 }
 
 // Configure one or more DNS server IP addresses

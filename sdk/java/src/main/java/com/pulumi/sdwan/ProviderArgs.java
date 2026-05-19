@@ -18,6 +18,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProviderArgs Empty = new ProviderArgs();
 
     /**
+     * API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+     * 
+     */
+    @Import(name="apiToken")
+    private @Nullable Output<String> apiToken;
+
+    /**
+     * @return API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+     * 
+     */
+    public Optional<Output<String>> apiToken() {
+        return Optional.ofNullable(this.apiToken);
+    }
+
+    /**
      * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
      * 
      */
@@ -110,6 +125,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     private ProviderArgs() {}
 
     private ProviderArgs(ProviderArgs $) {
+        this.apiToken = $.apiToken;
         this.insecure = $.insecure;
         this.password = $.password;
         this.retries = $.retries;
@@ -134,6 +150,27 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(ProviderArgs defaults) {
             $ = new ProviderArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param apiToken API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiToken(@Nullable Output<String> apiToken) {
+            $.apiToken = apiToken;
+            return this;
+        }
+
+        /**
+         * @param apiToken API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiToken(String apiToken) {
+            return apiToken(Output.of(apiToken));
         }
 
         /**

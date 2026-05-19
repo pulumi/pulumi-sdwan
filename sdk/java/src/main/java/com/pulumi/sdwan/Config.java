@@ -13,6 +13,13 @@ public final class Config {
 
     private static final com.pulumi.Config config = com.pulumi.Config.of("sdwan");
 /**
+ * API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+ * 
+ */
+    public Optional<String> apiToken() {
+        return Codegen.stringProp("apiToken").config(config).get();
+    }
+/**
  * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
  * 
  */

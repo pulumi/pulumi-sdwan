@@ -24,6 +24,7 @@ export function getSystemPerformanceMonitoringFeature(args: GetSystemPerformance
     return pulumi.runtime.invoke("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemPerformanceMonitoringFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -110,6 +115,7 @@ export function getSystemPerformanceMonitoringFeatureOutput(args: GetSystemPerfo
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -124,5 +130,9 @@ export interface GetSystemPerformanceMonitoringFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

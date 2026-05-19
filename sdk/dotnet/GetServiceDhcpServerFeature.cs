@@ -99,8 +99,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceDhcpServerFeatureArgs()
         {
@@ -119,8 +125,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceDhcpServerFeatureInvokeArgs()
         {
@@ -144,6 +156,14 @@ namespace Pulumi.Sdwan
         /// The description of the Feature
         /// </summary>
         public readonly string Description;
+        /// <summary>
+        /// DHCP sync enable/disable for dual home edges
+        /// </summary>
+        public readonly bool DhcpHaEnable;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string DhcpHaEnableVariable;
         /// <summary>
         /// Configure one or more DNS server IP addresses
         /// </summary>
@@ -241,6 +261,10 @@ namespace Pulumi.Sdwan
 
             string description,
 
+            bool dhcpHaEnable,
+
+            string dhcpHaEnableVariable,
+
             ImmutableArray<string> dnsServers,
 
             string dnsServersVariable,
@@ -288,6 +312,8 @@ namespace Pulumi.Sdwan
             DefaultGateway = defaultGateway;
             DefaultGatewayVariable = defaultGatewayVariable;
             Description = description;
+            DhcpHaEnable = dhcpHaEnable;
+            DhcpHaEnableVariable = dhcpHaEnableVariable;
             DnsServers = dnsServers;
             DnsServersVariable = dnsServersVariable;
             DomainName = domainName;

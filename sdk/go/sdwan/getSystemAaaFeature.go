@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetSystemAaaFeature(ctx, &sdwan.LookupSystemAaaFeatureArgs{
-//				Id:               "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//				Id:               pulumi.StringRef("f6b2c44c-693c-4763-b010-895aa3d236bd"),
 //				FeatureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
 //			}, nil)
 //			if err != nil {
@@ -54,7 +54,9 @@ type LookupSystemAaaFeatureArgs struct {
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id string `pulumi:"id"`
+	Id *string `pulumi:"id"`
+	// The name of the Feature
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSystemAaaFeature.
@@ -93,6 +95,12 @@ type LookupSystemAaaFeatureResult struct {
 	ServerAuthOrders []string `pulumi:"serverAuthOrders"`
 	// Configure the TACACS serverGroup
 	TacacsGroups []GetSystemAaaFeatureTacacsGroup `pulumi:"tacacsGroups"`
+	// CTS Authorization List
+	TrustsecCtsAuthList string `pulumi:"trustsecCtsAuthList"`
+	// Variable name
+	TrustsecCtsAuthListVariable string `pulumi:"trustsecCtsAuthListVariable"`
+	// RADIUS group
+	TrustsecRadiusGroup string `pulumi:"trustsecRadiusGroup"`
 	// Create local login account
 	Users []GetSystemAaaFeatureUser `pulumi:"users"`
 	// The version of the Feature
@@ -113,7 +121,9 @@ type LookupSystemAaaFeatureOutputArgs struct {
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput `pulumi:"featureProfileId"`
 	// The id of the Feature
-	Id pulumi.StringInput `pulumi:"id"`
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The name of the Feature
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSystemAaaFeatureOutputArgs) ElementType() reflect.Type {
@@ -220,6 +230,21 @@ func (o LookupSystemAaaFeatureResultOutput) ServerAuthOrders() pulumi.StringArra
 // Configure the TACACS serverGroup
 func (o LookupSystemAaaFeatureResultOutput) TacacsGroups() GetSystemAaaFeatureTacacsGroupArrayOutput {
 	return o.ApplyT(func(v LookupSystemAaaFeatureResult) []GetSystemAaaFeatureTacacsGroup { return v.TacacsGroups }).(GetSystemAaaFeatureTacacsGroupArrayOutput)
+}
+
+// CTS Authorization List
+func (o LookupSystemAaaFeatureResultOutput) TrustsecCtsAuthList() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemAaaFeatureResult) string { return v.TrustsecCtsAuthList }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupSystemAaaFeatureResultOutput) TrustsecCtsAuthListVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemAaaFeatureResult) string { return v.TrustsecCtsAuthListVariable }).(pulumi.StringOutput)
+}
+
+// RADIUS group
+func (o LookupSystemAaaFeatureResultOutput) TrustsecRadiusGroup() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemAaaFeatureResult) string { return v.TrustsecRadiusGroup }).(pulumi.StringOutput)
 }
 
 // Create local login account

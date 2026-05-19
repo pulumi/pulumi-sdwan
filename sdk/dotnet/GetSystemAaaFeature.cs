@@ -99,8 +99,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetSystemAaaFeatureArgs()
         {
@@ -119,8 +125,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetSystemAaaFeatureInvokeArgs()
         {
@@ -201,6 +213,18 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSystemAaaFeatureTacacsGroupResult> TacacsGroups;
         /// <summary>
+        /// CTS Authorization List
+        /// </summary>
+        public readonly string TrustsecCtsAuthList;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TrustsecCtsAuthListVariable;
+        /// <summary>
+        /// RADIUS group
+        /// </summary>
+        public readonly string TrustsecRadiusGroup;
+        /// <summary>
         /// Create local login account
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSystemAaaFeatureUserResult> Users;
@@ -245,6 +269,12 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetSystemAaaFeatureTacacsGroupResult> tacacsGroups,
 
+            string trustsecCtsAuthList,
+
+            string trustsecCtsAuthListVariable,
+
+            string trustsecRadiusGroup,
+
             ImmutableArray<Outputs.GetSystemAaaFeatureUserResult> users,
 
             int version)
@@ -266,6 +296,9 @@ namespace Pulumi.Sdwan
             RadiusGroups = radiusGroups;
             ServerAuthOrders = serverAuthOrders;
             TacacsGroups = tacacsGroups;
+            TrustsecCtsAuthList = trustsecCtsAuthList;
+            TrustsecCtsAuthListVariable = trustsecCtsAuthListVariable;
+            TrustsecRadiusGroup = trustsecRadiusGroup;
             Users = users;
             Version = version;
         }

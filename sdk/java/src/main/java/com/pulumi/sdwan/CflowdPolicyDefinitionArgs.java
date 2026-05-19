@@ -117,16 +117,16 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * @return Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -356,8 +356,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param protocol Protocol, either `ipv4`, `ipv6` or `all`
-         *   - Choices: `ipv4`, `ipv6`, `all`
+         * @param protocol Protocol, either `ipv4`, `ipv6` or `both`
+         *   - Choices: `ipv4`, `ipv6`, `both`
          * 
          * @return builder
          * 
@@ -368,8 +368,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param protocol Protocol, either `ipv4`, `ipv6` or `all`
-         *   - Choices: `ipv4`, `ipv6`, `all`
+         * @param protocol Protocol, either `ipv4`, `ipv6` or `both`
+         *   - Choices: `ipv4`, `ipv6`, `both`
          * 
          * @return builder
          * 

@@ -189,6 +189,7 @@ class AwaitableGetPolicyObjectUnifiedUrlFilteringResult(GetPolicyObjectUnifiedUr
 
 def get_policy_object_unified_url_filtering(feature_profile_id: Optional[_builtins.str] = None,
                                             id: Optional[_builtins.str] = None,
+                                            name: Optional[_builtins.str] = None,
                                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyObjectUnifiedUrlFilteringResult:
     """
     This data source can read the Policy Object Unified URL Filtering Policy_object.
@@ -206,10 +207,12 @@ def get_policy_object_unified_url_filtering(feature_profile_id: Optional[_builti
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy_object
+    :param _builtins.str name: The name of the Policy_object
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering', __args__, opts=opts, typ=GetPolicyObjectUnifiedUrlFilteringResult).value
 
@@ -230,7 +233,8 @@ def get_policy_object_unified_url_filtering(feature_profile_id: Optional[_builti
         web_categories_action=pulumi.get(__ret__, 'web_categories_action'),
         web_reputation=pulumi.get(__ret__, 'web_reputation'))
 def get_policy_object_unified_url_filtering_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                                   id: pulumi.Input[Optional[_builtins.str]] = None,
+                                                   id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                                   name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectUnifiedUrlFilteringResult]:
     """
     This data source can read the Policy Object Unified URL Filtering Policy_object.
@@ -248,10 +252,12 @@ def get_policy_object_unified_url_filtering_output(feature_profile_id: pulumi.In
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Policy_object
+    :param _builtins.str name: The name of the Policy_object
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering', __args__, opts=opts, typ=GetPolicyObjectUnifiedUrlFilteringResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectUnifiedUrlFilteringResult(

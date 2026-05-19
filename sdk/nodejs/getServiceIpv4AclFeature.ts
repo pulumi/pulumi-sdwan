@@ -26,6 +26,7 @@ export function getServiceIpv4AclFeature(args: GetServiceIpv4AclFeatureArgs, opt
     return pulumi.runtime.invoke("sdwan:index/getServiceIpv4AclFeature:getServiceIpv4AclFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceIpv4AclFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -96,6 +101,7 @@ export function getServiceIpv4AclFeatureOutput(args: GetServiceIpv4AclFeatureOut
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceIpv4AclFeature:getServiceIpv4AclFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -110,5 +116,9 @@ export interface GetServiceIpv4AclFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

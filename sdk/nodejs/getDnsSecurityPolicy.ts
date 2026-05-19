@@ -26,6 +26,7 @@ export function getDnsSecurityPolicy(args: GetDnsSecurityPolicyArgs, opts?: pulu
     return pulumi.runtime.invoke("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetDnsSecurityPolicyArgs {
     /**
      * The id of the Policy
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy
+     */
+    name?: string;
 }
 
 /**
@@ -117,6 +122,7 @@ export function getDnsSecurityPolicyOutput(args: GetDnsSecurityPolicyOutputArgs,
     return pulumi.runtime.invokeOutput("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -131,5 +137,9 @@ export interface GetDnsSecurityPolicyOutputArgs {
     /**
      * The id of the Policy
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy
+     */
+    name?: pulumi.Input<string | undefined>;
 }

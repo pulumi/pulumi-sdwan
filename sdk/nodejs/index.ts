@@ -255,6 +255,11 @@ export type CliTemplateFeatureTemplate = import("./cliTemplateFeatureTemplate").
 export const CliTemplateFeatureTemplate: typeof import("./cliTemplateFeatureTemplate").CliTemplateFeatureTemplate = null as any;
 utilities.lazyLoad(exports, ["CliTemplateFeatureTemplate"], () => require("./cliTemplateFeatureTemplate"));
 
+export { CloudProviderSettingsArgs, CloudProviderSettingsState } from "./cloudProviderSettings";
+export type CloudProviderSettings = import("./cloudProviderSettings").CloudProviderSettings;
+export const CloudProviderSettings: typeof import("./cloudProviderSettings").CloudProviderSettings = null as any;
+utilities.lazyLoad(exports, ["CloudProviderSettings"], () => require("./cloudProviderSettings"));
+
 export { ColorListPolicyObjectArgs, ColorListPolicyObjectState } from "./colorListPolicyObject";
 export type ColorListPolicyObject = import("./colorListPolicyObject").ColorListPolicyObject;
 export const ColorListPolicyObject: typeof import("./colorListPolicyObject").ColorListPolicyObject = null as any;
@@ -585,6 +590,11 @@ export const getCliTemplateFeatureTemplate: typeof import("./getCliTemplateFeatu
 export const getCliTemplateFeatureTemplateOutput: typeof import("./getCliTemplateFeatureTemplate").getCliTemplateFeatureTemplateOutput = null as any;
 utilities.lazyLoad(exports, ["getCliTemplateFeatureTemplate","getCliTemplateFeatureTemplateOutput"], () => require("./getCliTemplateFeatureTemplate"));
 
+export { GetCloudProviderSettingsResult } from "./getCloudProviderSettings";
+export const getCloudProviderSettings: typeof import("./getCloudProviderSettings").getCloudProviderSettings = null as any;
+export const getCloudProviderSettingsOutput: typeof import("./getCloudProviderSettings").getCloudProviderSettingsOutput = null as any;
+utilities.lazyLoad(exports, ["getCloudProviderSettings","getCloudProviderSettingsOutput"], () => require("./getCloudProviderSettings"));
+
 export { GetColorListPolicyObjectArgs, GetColorListPolicyObjectResult, GetColorListPolicyObjectOutputArgs } from "./getColorListPolicyObject";
 export const getColorListPolicyObject: typeof import("./getColorListPolicyObject").getColorListPolicyObject = null as any;
 export const getColorListPolicyObjectOutput: typeof import("./getColorListPolicyObject").getColorListPolicyObjectOutput = null as any;
@@ -829,6 +839,11 @@ export { GetPolicyObjectFeatureProfileArgs, GetPolicyObjectFeatureProfileResult,
 export const getPolicyObjectFeatureProfile: typeof import("./getPolicyObjectFeatureProfile").getPolicyObjectFeatureProfile = null as any;
 export const getPolicyObjectFeatureProfileOutput: typeof import("./getPolicyObjectFeatureProfile").getPolicyObjectFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectFeatureProfile","getPolicyObjectFeatureProfileOutput"], () => require("./getPolicyObjectFeatureProfile"));
+
+export { GetPolicyObjectFeatureProfileParcelsArgs, GetPolicyObjectFeatureProfileParcelsResult, GetPolicyObjectFeatureProfileParcelsOutputArgs } from "./getPolicyObjectFeatureProfileParcels";
+export const getPolicyObjectFeatureProfileParcels: typeof import("./getPolicyObjectFeatureProfileParcels").getPolicyObjectFeatureProfileParcels = null as any;
+export const getPolicyObjectFeatureProfileParcelsOutput: typeof import("./getPolicyObjectFeatureProfileParcels").getPolicyObjectFeatureProfileParcelsOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectFeatureProfileParcels","getPolicyObjectFeatureProfileParcelsOutput"], () => require("./getPolicyObjectFeatureProfileParcels"));
 
 export { GetPolicyObjectIpv4PrefixListArgs, GetPolicyObjectIpv4PrefixListResult, GetPolicyObjectIpv4PrefixListOutputArgs } from "./getPolicyObjectIpv4PrefixList";
 export const getPolicyObjectIpv4PrefixList: typeof import("./getPolicyObjectIpv4PrefixList").getPolicyObjectIpv4PrefixList = null as any;
@@ -2582,6 +2597,8 @@ const _module = {
                 return new CliFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate":
                 return new CliTemplateFeatureTemplate(name, <any>undefined, { urn })
+            case "sdwan:index/cloudProviderSettings:CloudProviderSettings":
+                return new CloudProviderSettings(name, <any>undefined, { urn })
             case "sdwan:index/colorListPolicyObject:ColorListPolicyObject":
                 return new ColorListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/configurationGroup:ConfigurationGroup":
@@ -3029,6 +3046,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/cliConfigFeature", _module
 pulumi.runtime.registerResourceModule("sdwan", "index/cliDeviceTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/cliFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/cliTemplateFeatureTemplate", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/cloudProviderSettings", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/colorListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/customControlTopologyPolicyDefinition", _module)

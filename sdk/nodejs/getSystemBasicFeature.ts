@@ -26,6 +26,7 @@ export function getSystemBasicFeature(args: GetSystemBasicFeatureArgs, opts?: pu
     return pulumi.runtime.invoke("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemBasicFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -336,6 +341,7 @@ export function getSystemBasicFeatureOutput(args: GetSystemBasicFeatureOutputArg
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -350,5 +356,9 @@ export interface GetSystemBasicFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

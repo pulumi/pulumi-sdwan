@@ -85,8 +85,8 @@ type CflowdPolicyDefinition struct {
 	InactiveFlowTimeout pulumi.IntPtrOutput `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all`
-	//   - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `both`
+	//   - Choices: `ipv4`, `ipv6`, `both`
 	Protocol pulumi.StringPtrOutput `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp pulumi.BoolPtrOutput `pulumi:"remarkedDscp"`
@@ -152,8 +152,8 @@ type cflowdPolicyDefinitionState struct {
 	InactiveFlowTimeout *int `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name *string `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all`
-	//   - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `both`
+	//   - Choices: `ipv4`, `ipv6`, `both`
 	Protocol *string `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp *bool `pulumi:"remarkedDscp"`
@@ -184,8 +184,8 @@ type CflowdPolicyDefinitionState struct {
 	InactiveFlowTimeout pulumi.IntPtrInput
 	// The name of the policy definition
 	Name pulumi.StringPtrInput
-	// Protocol, either `ipv4`, `ipv6` or `all`
-	//   - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `both`
+	//   - Choices: `ipv4`, `ipv6`, `both`
 	Protocol pulumi.StringPtrInput
 	// Collect remarked DSCP
 	RemarkedDscp pulumi.BoolPtrInput
@@ -220,8 +220,8 @@ type cflowdPolicyDefinitionArgs struct {
 	InactiveFlowTimeout *int `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name *string `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all`
-	//   - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `both`
+	//   - Choices: `ipv4`, `ipv6`, `both`
 	Protocol *string `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp *bool `pulumi:"remarkedDscp"`
@@ -249,8 +249,8 @@ type CflowdPolicyDefinitionArgs struct {
 	InactiveFlowTimeout pulumi.IntPtrInput
 	// The name of the policy definition
 	Name pulumi.StringPtrInput
-	// Protocol, either `ipv4`, `ipv6` or `all`
-	//   - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `both`
+	//   - Choices: `ipv4`, `ipv6`, `both`
 	Protocol pulumi.StringPtrInput
 	// Collect remarked DSCP
 	RemarkedDscp pulumi.BoolPtrInput
@@ -381,8 +381,8 @@ func (o CflowdPolicyDefinitionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Protocol, either `ipv4`, `ipv6` or `all`
-//   - Choices: `ipv4`, `ipv6`, `all`
+// Protocol, either `ipv4`, `ipv6` or `both`
+//   - Choices: `ipv4`, `ipv6`, `both`
 func (o CflowdPolicyDefinitionOutput) Protocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.StringPtrOutput { return v.Protocol }).(pulumi.StringPtrOutput)
 }

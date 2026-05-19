@@ -102,8 +102,8 @@ export class CflowdPolicyDefinition extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      */
     declare public readonly protocol: pulumi.Output<string | undefined>;
     /**
@@ -211,8 +211,8 @@ export interface CflowdPolicyDefinitionState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      */
     protocol?: pulumi.Input<string | undefined>;
     /**
@@ -270,8 +270,8 @@ export interface CflowdPolicyDefinitionArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all`
-     *   - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `both`
+     *   - Choices: `ipv4`, `ipv6`, `both`
      */
     protocol?: pulumi.Input<string | undefined>;
     /**

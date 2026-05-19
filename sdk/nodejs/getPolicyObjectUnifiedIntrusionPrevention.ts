@@ -24,6 +24,7 @@ export function getPolicyObjectUnifiedIntrusionPrevention(args: GetPolicyObjectU
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectUnifiedIntrusionPrevention:getPolicyObjectUnifiedIntrusionPrevention", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetPolicyObjectUnifiedIntrusionPreventionArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -103,6 +108,7 @@ export function getPolicyObjectUnifiedIntrusionPreventionOutput(args: GetPolicyO
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectUnifiedIntrusionPrevention:getPolicyObjectUnifiedIntrusionPrevention", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -117,5 +123,9 @@ export interface GetPolicyObjectUnifiedIntrusionPreventionOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

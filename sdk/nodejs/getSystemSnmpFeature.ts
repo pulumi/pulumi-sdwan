@@ -26,6 +26,7 @@ export function getSystemSnmpFeature(args: GetSystemSnmpFeatureArgs, opts?: pulu
     return pulumi.runtime.invoke("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetSystemSnmpFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -132,6 +137,7 @@ export function getSystemSnmpFeatureOutput(args: GetSystemSnmpFeatureOutputArgs,
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -146,5 +152,9 @@ export interface GetSystemSnmpFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

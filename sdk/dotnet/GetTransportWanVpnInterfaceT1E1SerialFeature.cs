@@ -102,8 +102,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public string Id { get; set; } = null!;
+        [Input("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         /// <summary>
         /// Transport WAN VPN Feature ID
@@ -128,8 +134,14 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// The id of the Feature
         /// </summary>
-        [Input("id", required: true)]
-        public Input<string> Id { get; set; } = null!;
+        [Input("id")]
+        public Input<string>? Id { get; set; }
+
+        /// <summary>
+        /// The name of the Feature
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         /// <summary>
         /// Transport WAN VPN Feature ID

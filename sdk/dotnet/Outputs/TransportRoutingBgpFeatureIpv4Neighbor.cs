@@ -93,7 +93,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
         /// </summary>
-        public readonly int? LocalAs;
+        public readonly string? LocalAs;
         /// <summary>
         /// Variable name
         /// </summary>
@@ -118,7 +118,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Set remote autonomous system number
         /// </summary>
-        public readonly int? RemoteAs;
+        public readonly string? RemoteAs;
         /// <summary>
         /// Variable name
         /// </summary>
@@ -200,7 +200,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string? keepaliveTimeVariable,
 
-            int? localAs,
+            string? localAs,
 
             string? localAsVariable,
 
@@ -212,7 +212,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string? passwordVariable,
 
-            int? remoteAs,
+            string? remoteAs,
 
             string? remoteAsVariable,
 

@@ -24,6 +24,7 @@ export function getSystemGlobalFeature(args: GetSystemGlobalFeatureArgs, opts?: 
     return pulumi.runtime.invoke("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemGlobalFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -302,6 +307,7 @@ export function getSystemGlobalFeatureOutput(args: GetSystemGlobalFeatureOutputA
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -316,5 +322,9 @@ export interface GetSystemGlobalFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

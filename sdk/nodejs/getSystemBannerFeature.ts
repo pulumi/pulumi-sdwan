@@ -24,6 +24,7 @@ export function getSystemBannerFeature(args: GetSystemBannerFeatureArgs, opts?: 
     return pulumi.runtime.invoke("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemBannerFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -96,6 +101,7 @@ export function getSystemBannerFeatureOutput(args: GetSystemBannerFeatureOutputA
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -110,5 +116,9 @@ export interface GetSystemBannerFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

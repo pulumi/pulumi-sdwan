@@ -24,6 +24,7 @@ export function getSystemMrfFeature(args: GetSystemMrfFeatureArgs, opts?: pulumi
     return pulumi.runtime.invoke("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetSystemMrfFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -142,6 +147,7 @@ export function getSystemMrfFeatureOutput(args: GetSystemMrfFeatureOutputArgs, o
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -156,5 +162,9 @@ export interface GetSystemMrfFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

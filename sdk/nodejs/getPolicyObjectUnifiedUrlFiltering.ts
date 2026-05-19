@@ -24,6 +24,7 @@ export function getPolicyObjectUnifiedUrlFiltering(args: GetPolicyObjectUnifiedU
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -38,7 +39,11 @@ export interface GetPolicyObjectUnifiedUrlFilteringArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -96,6 +101,7 @@ export function getPolicyObjectUnifiedUrlFilteringOutput(args: GetPolicyObjectUn
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -110,5 +116,9 @@ export interface GetPolicyObjectUnifiedUrlFilteringOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

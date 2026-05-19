@@ -26,6 +26,7 @@ export function getPolicyObjectIpv6PrefixList(args: GetPolicyObjectIpv6PrefixLis
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectIpv6PrefixList:getPolicyObjectIpv6PrefixList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetPolicyObjectIpv6PrefixListArgs {
     /**
      * The id of the Policy_object
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Policy_object
+     */
+    name?: string;
 }
 
 /**
@@ -92,6 +97,7 @@ export function getPolicyObjectIpv6PrefixListOutput(args: GetPolicyObjectIpv6Pre
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectIpv6PrefixList:getPolicyObjectIpv6PrefixList", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -106,5 +112,9 @@ export interface GetPolicyObjectIpv6PrefixListOutputArgs {
     /**
      * The id of the Policy_object
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Policy_object
+     */
+    name?: pulumi.Input<string | undefined>;
 }

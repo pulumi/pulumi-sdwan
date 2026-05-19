@@ -8,6 +8,17 @@ declare var exports: any;
 const __config = new pulumi.Config("sdwan");
 
 /**
+ * API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+ */
+export declare const apiToken: string | undefined;
+Object.defineProperty(exports, "apiToken", {
+    get() {
+        return __config.get("apiToken");
+    },
+    enumerable: true,
+});
+
+/**
  * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
  */
 export declare const insecure: boolean | undefined;

@@ -26,6 +26,7 @@ export function getServiceLanVpnFeature(args: GetServiceLanVpnFeatureArgs, opts?
     return pulumi.runtime.invoke("sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceLanVpnFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -225,6 +230,7 @@ export function getServiceLanVpnFeatureOutput(args: GetServiceLanVpnFeatureOutpu
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -239,5 +245,9 @@ export interface GetServiceLanVpnFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

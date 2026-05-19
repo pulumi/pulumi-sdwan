@@ -27,7 +27,7 @@ class GetServiceDhcpServerFeatureResult:
     """
     A collection of values returned by getServiceDhcpServerFeature.
     """
-    def __init__(__self__, default_gateway=None, default_gateway_variable=None, description=None, dns_servers=None, dns_servers_variable=None, domain_name=None, domain_name_variable=None, exclude_variable=None, excludes=None, feature_profile_id=None, id=None, interface_mtu=None, interface_mtu_variable=None, lease_time=None, lease_time_variable=None, name=None, network_address=None, network_address_variable=None, option_codes=None, static_leases=None, subnet_mask=None, subnet_mask_variable=None, tftp_servers=None, tftp_servers_variable=None, version=None):
+    def __init__(__self__, default_gateway=None, default_gateway_variable=None, description=None, dhcp_ha_enable=None, dhcp_ha_enable_variable=None, dns_servers=None, dns_servers_variable=None, domain_name=None, domain_name_variable=None, exclude_variable=None, excludes=None, feature_profile_id=None, id=None, interface_mtu=None, interface_mtu_variable=None, lease_time=None, lease_time_variable=None, name=None, network_address=None, network_address_variable=None, option_codes=None, static_leases=None, subnet_mask=None, subnet_mask_variable=None, tftp_servers=None, tftp_servers_variable=None, version=None):
         if default_gateway and not isinstance(default_gateway, str):
             raise TypeError("Expected argument 'default_gateway' to be a str")
         pulumi.set(__self__, "default_gateway", default_gateway)
@@ -37,6 +37,12 @@ class GetServiceDhcpServerFeatureResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if dhcp_ha_enable and not isinstance(dhcp_ha_enable, bool):
+            raise TypeError("Expected argument 'dhcp_ha_enable' to be a bool")
+        pulumi.set(__self__, "dhcp_ha_enable", dhcp_ha_enable)
+        if dhcp_ha_enable_variable and not isinstance(dhcp_ha_enable_variable, str):
+            raise TypeError("Expected argument 'dhcp_ha_enable_variable' to be a str")
+        pulumi.set(__self__, "dhcp_ha_enable_variable", dhcp_ha_enable_variable)
         if dns_servers and not isinstance(dns_servers, list):
             raise TypeError("Expected argument 'dns_servers' to be a list")
         pulumi.set(__self__, "dns_servers", dns_servers)
@@ -127,6 +133,22 @@ class GetServiceDhcpServerFeatureResult:
         The description of the Feature
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnable")
+    def dhcp_ha_enable(self) -> _builtins.bool:
+        """
+        DHCP sync enable/disable for dual home edges
+        """
+        return pulumi.get(self, "dhcp_ha_enable")
+
+    @_builtins.property
+    @pulumi.getter(name="dhcpHaEnableVariable")
+    def dhcp_ha_enable_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dhcp_ha_enable_variable")
 
     @_builtins.property
     @pulumi.getter(name="dnsServers")
@@ -314,6 +336,8 @@ class AwaitableGetServiceDhcpServerFeatureResult(GetServiceDhcpServerFeatureResu
             default_gateway=self.default_gateway,
             default_gateway_variable=self.default_gateway_variable,
             description=self.description,
+            dhcp_ha_enable=self.dhcp_ha_enable,
+            dhcp_ha_enable_variable=self.dhcp_ha_enable_variable,
             dns_servers=self.dns_servers,
             dns_servers_variable=self.dns_servers_variable,
             domain_name=self.domain_name,
@@ -340,6 +364,7 @@ class AwaitableGetServiceDhcpServerFeatureResult(GetServiceDhcpServerFeatureResu
 
 def get_service_dhcp_server_feature(feature_profile_id: Optional[_builtins.str] = None,
                                     id: Optional[_builtins.str] = None,
+                                    name: Optional[_builtins.str] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceDhcpServerFeatureResult:
     """
     This data source can read the Service DHCP Server Feature.
@@ -357,10 +382,12 @@ def get_service_dhcp_server_feature(feature_profile_id: Optional[_builtins.str] 
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature', __args__, opts=opts, typ=GetServiceDhcpServerFeatureResult).value
 
@@ -368,6 +395,8 @@ def get_service_dhcp_server_feature(feature_profile_id: Optional[_builtins.str] 
         default_gateway=pulumi.get(__ret__, 'default_gateway'),
         default_gateway_variable=pulumi.get(__ret__, 'default_gateway_variable'),
         description=pulumi.get(__ret__, 'description'),
+        dhcp_ha_enable=pulumi.get(__ret__, 'dhcp_ha_enable'),
+        dhcp_ha_enable_variable=pulumi.get(__ret__, 'dhcp_ha_enable_variable'),
         dns_servers=pulumi.get(__ret__, 'dns_servers'),
         dns_servers_variable=pulumi.get(__ret__, 'dns_servers_variable'),
         domain_name=pulumi.get(__ret__, 'domain_name'),
@@ -391,7 +420,8 @@ def get_service_dhcp_server_feature(feature_profile_id: Optional[_builtins.str] 
         tftp_servers_variable=pulumi.get(__ret__, 'tftp_servers_variable'),
         version=pulumi.get(__ret__, 'version'))
 def get_service_dhcp_server_feature_output(feature_profile_id: pulumi.Input[Optional[_builtins.str]] = None,
-                                           id: pulumi.Input[Optional[_builtins.str]] = None,
+                                           id: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
+                                           name: pulumi.Input[Optional[Optional[_builtins.str]]] = None,
                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceDhcpServerFeatureResult]:
     """
     This data source can read the Service DHCP Server Feature.
@@ -409,16 +439,20 @@ def get_service_dhcp_server_feature_output(feature_profile_id: pulumi.Input[Opti
 
     :param _builtins.str feature_profile_id: Feature Profile ID
     :param _builtins.str id: The id of the Feature
+    :param _builtins.str name: The name of the Feature
     """
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature', __args__, opts=opts, typ=GetServiceDhcpServerFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceDhcpServerFeatureResult(
         default_gateway=pulumi.get(__response__, 'default_gateway'),
         default_gateway_variable=pulumi.get(__response__, 'default_gateway_variable'),
         description=pulumi.get(__response__, 'description'),
+        dhcp_ha_enable=pulumi.get(__response__, 'dhcp_ha_enable'),
+        dhcp_ha_enable_variable=pulumi.get(__response__, 'dhcp_ha_enable_variable'),
         dns_servers=pulumi.get(__response__, 'dns_servers'),
         dns_servers_variable=pulumi.get(__response__, 'dns_servers_variable'),
         domain_name=pulumi.get(__response__, 'domain_name'),

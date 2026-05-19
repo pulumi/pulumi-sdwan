@@ -26,6 +26,7 @@ export function getTransportTrackerGroupFeature(args: GetTransportTrackerGroupFe
     return pulumi.runtime.invoke("sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetTransportTrackerGroupFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -100,6 +105,7 @@ export function getTransportTrackerGroupFeatureOutput(args: GetTransportTrackerG
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -114,5 +120,9 @@ export interface GetTransportTrackerGroupFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

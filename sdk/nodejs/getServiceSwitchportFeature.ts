@@ -26,6 +26,7 @@ export function getServiceSwitchportFeature(args: GetServiceSwitchportFeatureArg
     return pulumi.runtime.invoke("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -40,7 +41,11 @@ export interface GetServiceSwitchportFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
 }
 
 /**
@@ -104,6 +109,7 @@ export function getServiceSwitchportFeatureOutput(args: GetServiceSwitchportFeat
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -118,5 +124,9 @@ export interface GetServiceSwitchportFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
 }

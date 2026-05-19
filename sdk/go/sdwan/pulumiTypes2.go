@@ -13,6 +13,228 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward struct {
+	// Direction of static NAT translation
+	Direction string `pulumi:"direction"`
+	// Enable DualRouter HA Mapping
+	EnableDualRouterHaMapping bool `pulumi:"enableDualRouterHaMapping"`
+	// Protocol
+	Protocol string `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable string `pulumi:"protocolVariable"`
+	// Source IP address to be translated
+	SourceIp string `pulumi:"sourceIp"`
+	// Variable name
+	SourceIpVariable string `pulumi:"sourceIpVariable"`
+	// source port to be translated
+	SourcePort int `pulumi:"sourcePort"`
+	// Variable name
+	SourcePortVariable string `pulumi:"sourcePortVariable"`
+	// Source VPN ID
+	SourceVpn int `pulumi:"sourceVpn"`
+	// Variable name
+	SourceVpnVariable string `pulumi:"sourceVpnVariable"`
+	// Statically translated source IP address
+	TranslatedIp string `pulumi:"translatedIp"`
+	// Variable name
+	TranslatedIpVariable string `pulumi:"translatedIpVariable"`
+	// Statically translated source IP address
+	TranslatedPort int `pulumi:"translatedPort"`
+	// Variable name
+	TranslatedPortVariable string `pulumi:"translatedPortVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs and GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs struct {
+	// Direction of static NAT translation
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Enable DualRouter HA Mapping
+	EnableDualRouterHaMapping pulumi.BoolInput `pulumi:"enableDualRouterHaMapping"`
+	// Protocol
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable pulumi.StringInput `pulumi:"protocolVariable"`
+	// Source IP address to be translated
+	SourceIp pulumi.StringInput `pulumi:"sourceIp"`
+	// Variable name
+	SourceIpVariable pulumi.StringInput `pulumi:"sourceIpVariable"`
+	// source port to be translated
+	SourcePort pulumi.IntInput `pulumi:"sourcePort"`
+	// Variable name
+	SourcePortVariable pulumi.StringInput `pulumi:"sourcePortVariable"`
+	// Source VPN ID
+	SourceVpn pulumi.IntInput `pulumi:"sourceVpn"`
+	// Variable name
+	SourceVpnVariable pulumi.StringInput `pulumi:"sourceVpnVariable"`
+	// Statically translated source IP address
+	TranslatedIp pulumi.StringInput `pulumi:"translatedIp"`
+	// Variable name
+	TranslatedIpVariable pulumi.StringInput `pulumi:"translatedIpVariable"`
+	// Statically translated source IP address
+	TranslatedPort pulumi.IntInput `pulumi:"translatedPort"`
+	// Variable name
+	TranslatedPortVariable pulumi.StringInput `pulumi:"translatedPortVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray and GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray{ GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray []GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
+	return o
+}
+
+// Direction of static NAT translation
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Enable DualRouter HA Mapping
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) EnableDualRouterHaMapping() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) bool {
+		return v.EnableDualRouterHaMapping
+	}).(pulumi.BoolOutput)
+}
+
+// Protocol
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) ProtocolVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.ProtocolVariable }).(pulumi.StringOutput)
+}
+
+// Source IP address to be translated
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.SourceIp }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceIpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.SourceIpVariable }).(pulumi.StringOutput)
+}
+
+// source port to be translated
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourcePort() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) int { return v.SourcePort }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourcePortVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string {
+		return v.SourcePortVariable
+	}).(pulumi.StringOutput)
+}
+
+// Source VPN ID
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceVpn() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) int { return v.SourceVpn }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) SourceVpnVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.SourceVpnVariable }).(pulumi.StringOutput)
+}
+
+// Statically translated source IP address
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string { return v.TranslatedIp }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedIpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string {
+		return v.TranslatedIpVariable
+	}).(pulumi.StringOutput)
+}
+
+// Statically translated source IP address
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedPort() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) int { return v.TranslatedPort }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput) TranslatedPortVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward) string {
+		return v.TranslatedPortVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput)
+}
+
 type GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation struct {
 	// Encapsulation
 	Encapsulation string `pulumi:"encapsulation"`
@@ -8420,6 +8642,8 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs{})
@@ -8538,6 +8762,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput{})
 	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationOutput{})

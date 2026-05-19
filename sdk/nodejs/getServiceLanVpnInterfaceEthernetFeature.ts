@@ -27,6 +27,7 @@ export function getServiceLanVpnInterfaceEthernetFeature(args: GetServiceLanVpnI
     return pulumi.runtime.invoke("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
         "serviceLanVpnFeatureId": args.serviceLanVpnFeatureId,
     }, opts);
 }
@@ -42,7 +43,11 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureArgs {
     /**
      * The id of the Feature
      */
-    id: string;
+    id?: string;
+    /**
+     * The name of the Feature
+     */
+    name?: string;
     /**
      * Service LAN VPN Feature ID
      */
@@ -508,6 +513,7 @@ export function getServiceLanVpnInterfaceEthernetFeatureOutput(args: GetServiceL
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", {
         "featureProfileId": args.featureProfileId,
         "id": args.id,
+        "name": args.name,
         "serviceLanVpnFeatureId": args.serviceLanVpnFeatureId,
     }, opts);
 }
@@ -523,7 +529,11 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureOutputArgs {
     /**
      * The id of the Feature
      */
-    id: pulumi.Input<string>;
+    id?: pulumi.Input<string | undefined>;
+    /**
+     * The name of the Feature
+     */
+    name?: pulumi.Input<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */

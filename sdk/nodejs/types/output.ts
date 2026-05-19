@@ -13443,6 +13443,37 @@ export interface GetPolicyObjectExtendedCommunityListEntry {
     extendedCommunity: string;
 }
 
+export interface GetPolicyObjectFeatureProfileParcelsParcel {
+    /**
+     * User who created the parcel (system for system-created parcels)
+     */
+    createdBy: string;
+    /**
+     * User who last updated the parcel
+     */
+    lastUpdatedBy: string;
+    /**
+     * Description of the parcel
+     */
+    parcelDescription: string;
+    /**
+     * Parcel identifier
+     */
+    parcelId: string;
+    /**
+     * Name of the parcel
+     */
+    parcelName: string;
+    /**
+     * Parcel type (e.g. app-list, data-prefix, etc.)
+     */
+    parcelType: string;
+    /**
+     * Number of references to this parcel
+     */
+    referenceCount: number;
+}
+
 export interface GetPolicyObjectIpv4PrefixListEntry {
     /**
      * IPv4 prefix length with ge range operator
@@ -16335,7 +16366,7 @@ export interface GetServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs: number;
+    localAs: string;
     /**
      * Variable name
      */
@@ -16359,7 +16390,7 @@ export interface GetServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs: number;
+    remoteAs: string;
     /**
      * Variable name
      */
@@ -16615,7 +16646,7 @@ export interface GetServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs: number;
+    localAs: string;
     /**
      * Variable name
      */
@@ -16639,7 +16670,7 @@ export interface GetServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs: number;
+    remoteAs: string;
     /**
      * Variable name
      */
@@ -18002,6 +18033,10 @@ export interface GetSystemAaaFeatureRadiusGroup {
      * Set VPN in which Radius server is located
      */
     vpn: number;
+    /**
+     * Variable name
+     */
+    vpnVariable: string;
 }
 
 export interface GetSystemAaaFeatureRadiusGroupServer {
@@ -18092,6 +18127,10 @@ export interface GetSystemAaaFeatureTacacsGroup {
      * Set VPN in which TACACS server is located
      */
     vpn: number;
+    /**
+     * Variable name
+     */
+    vpnVariable: string;
 }
 
 export interface GetSystemAaaFeatureTacacsGroupServer {
@@ -19918,7 +19957,7 @@ export interface GetTransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs: number;
+    localAs: string;
     /**
      * Variable name
      */
@@ -19942,7 +19981,7 @@ export interface GetTransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs: number;
+    remoteAs: string;
     /**
      * Variable name
      */
@@ -20186,7 +20225,7 @@ export interface GetTransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs: number;
+    localAs: string;
     /**
      * Variable name
      */
@@ -20210,7 +20249,7 @@ export interface GetTransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs: number;
+    remoteAs: string;
     /**
      * Variable name
      */
@@ -27083,7 +27122,7 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: number;
+    localAs?: string;
     /**
      * Variable name
      */
@@ -27108,7 +27147,7 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: number;
+    remoteAs?: string;
     /**
      * Variable name
      */
@@ -27396,7 +27435,7 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: number;
+    localAs?: string;
     /**
      * Variable name
      */
@@ -27421,7 +27460,7 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: number;
+    remoteAs?: string;
     /**
      * Variable name
      */
@@ -28936,6 +28975,10 @@ export interface SystemAaaFeatureRadiusGroup {
      *   - Default value: `0`
      */
     vpn?: number;
+    /**
+     * Variable name
+     */
+    vpnVariable?: string;
 }
 
 export interface SystemAaaFeatureRadiusGroupServer {
@@ -29039,6 +29082,10 @@ export interface SystemAaaFeatureTacacsGroup {
      *   - Default value: `0`
      */
     vpn?: number;
+    /**
+     * Variable name
+     */
+    vpnVariable?: string;
 }
 
 export interface SystemAaaFeatureTacacsGroupServer {
@@ -31023,7 +31070,7 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: number;
+    localAs?: string;
     /**
      * Variable name
      */
@@ -31048,7 +31095,7 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: number;
+    remoteAs?: string;
     /**
      * Variable name
      */
@@ -31323,7 +31370,7 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
      */
-    localAs?: number;
+    localAs?: string;
     /**
      * Variable name
      */
@@ -31348,7 +31395,7 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set remote autonomous system number
      */
-    remoteAs?: number;
+    remoteAs?: string;
     /**
      * Variable name
      */

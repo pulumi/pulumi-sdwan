@@ -19,6 +19,7 @@ __all__ = ['ProviderArgs', 'Provider']
 @pulumi.input_type
 class ProviderArgs:
     def __init__(__self__, *,
+                 api_token: pulumi.Input[Optional[_builtins.str]] = None,
                  insecure: pulumi.Input[Optional[_builtins.bool]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
@@ -28,6 +29,7 @@ class ProviderArgs:
         """
         The set of arguments for constructing a Provider resource.
 
+        :param pulumi.Input[_builtins.str] api_token: API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
@@ -35,6 +37,8 @@ class ProviderArgs:
         :param pulumi.Input[_builtins.str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         :param pulumi.Input[_builtins.str] username: Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
+        if api_token is not None:
+            pulumi.set(__self__, "api_token", api_token)
         if insecure is not None:
             pulumi.set(__self__, "insecure", insecure)
         if password is not None:
@@ -47,6 +51,18 @@ class ProviderArgs:
             pulumi.set(__self__, "url", url)
         if username is not None:
             pulumi.set(__self__, "username", username)
+
+    @_builtins.property
+    @pulumi.getter(name="apiToken")
+    def api_token(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        """
+        return pulumi.get(self, "api_token")
+
+    @api_token.setter
+    def api_token(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "api_token", value)
 
     @_builtins.property
     @pulumi.getter
@@ -127,6 +143,7 @@ class Provider(pulumi.ProviderResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 api_token: pulumi.Input[Optional[_builtins.str]] = None,
                  insecure: pulumi.Input[Optional[_builtins.bool]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
@@ -143,6 +160,7 @@ class Provider(pulumi.ProviderResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[_builtins.str] api_token: API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
@@ -178,6 +196,7 @@ class Provider(pulumi.ProviderResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 api_token: pulumi.Input[Optional[_builtins.str]] = None,
                  insecure: pulumi.Input[Optional[_builtins.bool]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
@@ -193,19 +212,28 @@ class Provider(pulumi.ProviderResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = ProviderArgs.__new__(ProviderArgs)
 
+            __props__.__dict__["api_token"] = None if api_token is None else pulumi.Output.secret(api_token)
             __props__.__dict__["insecure"] = pulumi.Output.from_input(insecure).apply(pulumi.runtime.to_json) if insecure is not None else None
             __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["retries"] = pulumi.Output.from_input(retries).apply(pulumi.runtime.to_json) if retries is not None else None
             __props__.__dict__["task_timeout"] = pulumi.Output.from_input(task_timeout).apply(pulumi.runtime.to_json) if task_timeout is not None else None
             __props__.__dict__["url"] = url
             __props__.__dict__["username"] = username
-        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["password"])
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["apiToken", "password"])
         opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Provider, __self__).__init__(
             'sdwan',
             resource_name,
             __props__,
             opts)
+
+    @_builtins.property
+    @pulumi.getter(name="apiToken")
+    def api_token(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        """
+        return pulumi.get(self, "api_token")
 
     @_builtins.property
     @pulumi.getter

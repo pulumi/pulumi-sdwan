@@ -272,6 +272,51 @@ public final class SystemAaaFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="trustsecCtsAuthList")
+    private @Nullable Output<String> trustsecCtsAuthList;
+
+    /**
+     * @return CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> trustsecCtsAuthList() {
+        return Optional.ofNullable(this.trustsecCtsAuthList);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="trustsecCtsAuthListVariable")
+    private @Nullable Output<String> trustsecCtsAuthListVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> trustsecCtsAuthListVariable() {
+        return Optional.ofNullable(this.trustsecCtsAuthListVariable);
+    }
+
+    /**
+     * RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    @Import(name="trustsecRadiusGroup")
+    private @Nullable Output<String> trustsecRadiusGroup;
+
+    /**
+     * @return RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+     * 
+     */
+    public Optional<Output<String>> trustsecRadiusGroup() {
+        return Optional.ofNullable(this.trustsecRadiusGroup);
+    }
+
+    /**
      * Create local login account
      * 
      */
@@ -305,6 +350,9 @@ public final class SystemAaaFeatureArgs extends com.pulumi.resources.ResourceArg
         this.radiusGroups = $.radiusGroups;
         this.serverAuthOrders = $.serverAuthOrders;
         this.tacacsGroups = $.tacacsGroups;
+        this.trustsecCtsAuthList = $.trustsecCtsAuthList;
+        this.trustsecCtsAuthListVariable = $.trustsecCtsAuthListVariable;
+        this.trustsecRadiusGroup = $.trustsecRadiusGroup;
         this.users = $.users;
     }
 
@@ -718,6 +766,69 @@ public final class SystemAaaFeatureArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder tacacsGroups(SystemAaaFeatureTacacsGroupArgs... tacacsGroups) {
             return tacacsGroups(List.of(tacacsGroups));
+        }
+
+        /**
+         * @param trustsecCtsAuthList CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecCtsAuthList(@Nullable Output<String> trustsecCtsAuthList) {
+            $.trustsecCtsAuthList = trustsecCtsAuthList;
+            return this;
+        }
+
+        /**
+         * @param trustsecCtsAuthList CTS Authorization List, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecCtsAuthList(String trustsecCtsAuthList) {
+            return trustsecCtsAuthList(Output.of(trustsecCtsAuthList));
+        }
+
+        /**
+         * @param trustsecCtsAuthListVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecCtsAuthListVariable(@Nullable Output<String> trustsecCtsAuthListVariable) {
+            $.trustsecCtsAuthListVariable = trustsecCtsAuthListVariable;
+            return this;
+        }
+
+        /**
+         * @param trustsecCtsAuthListVariable Variable name, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecCtsAuthListVariable(String trustsecCtsAuthListVariable) {
+            return trustsecCtsAuthListVariable(Output.of(trustsecCtsAuthListVariable));
+        }
+
+        /**
+         * @param trustsecRadiusGroup RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecRadiusGroup(@Nullable Output<String> trustsecRadiusGroup) {
+            $.trustsecRadiusGroup = trustsecRadiusGroup;
+            return this;
+        }
+
+        /**
+         * @param trustsecRadiusGroup RADIUS group, Attribute conditional on SD-WAN Manager version `20.18.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustsecRadiusGroup(String trustsecRadiusGroup) {
+            return trustsecRadiusGroup(Output.of(trustsecRadiusGroup));
         }
 
         /**
