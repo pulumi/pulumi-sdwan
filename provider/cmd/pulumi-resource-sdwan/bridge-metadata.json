@@ -1091,6 +1091,9 @@
                     }
                 }
             },
+            "sdwan_cloud_provider_settings": {
+                "current": "sdwan:index/cloudProviderSettings:CloudProviderSettings"
+            },
             "sdwan_color_list_policy_object": {
                 "current": "sdwan:index/colorListPolicyObject:ColorListPolicyObject",
                 "fields": {
@@ -5098,6 +5101,9 @@
                     }
                 }
             },
+            "sdwan_cloud_provider_settings": {
+                "current": "sdwan:index/getCloudProviderSettings:getCloudProviderSettings"
+            },
             "sdwan_color_list_policy_object": {
                 "current": "sdwan:index/getColorListPolicyObject:getColorListPolicyObject",
                 "fields": {
@@ -5778,6 +5784,14 @@
             },
             "sdwan_policy_object_feature_profile": {
                 "current": "sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile"
+            },
+            "sdwan_policy_object_feature_profile_parcels": {
+                "current": "sdwan:index/getPolicyObjectFeatureProfileParcels:getPolicyObjectFeatureProfileParcels",
+                "fields": {
+                    "parcels": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "sdwan_policy_object_ipv4_prefix_list": {
                 "current": "sdwan:index/getPolicyObjectIpv4PrefixList:getPolicyObjectIpv4PrefixList",
