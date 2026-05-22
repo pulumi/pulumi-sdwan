@@ -1167,7 +1167,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -1176,7 +1176,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict(TypedDict):
     Sequence IP type, either `ipv4`, `ipv6` or `all`
       - Choices: `ipv4`, `ipv6`, `all`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -1290,7 +1290,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgsDict(TypedDi
     """
     Enable logging, Attribute conditional on `type` equal to `log`
     """
-    sla_class_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs']]]]]
+    sla_class_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgsDict']]]]]
     """
     List of SLA class parameters, Attribute conditional on `type` equal to `slaClass`
     """
@@ -2105,13 +2105,13 @@ class ApplicationPriorityQosPolicyQosSchedulerArgs:
 
 
 class ApplicationPriorityTrafficPolicyPolicySequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionArgsDict']]]]]
     base_action: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Base Action
       - Choices: `drop`, `accept`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgsDict']]]]]
     protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Sequence IP Type
@@ -2270,8 +2270,8 @@ class ApplicationPriorityTrafficPolicyPolicySequenceActionArgsDict(TypedDict):
     """
     - Choices: `Cisco-Secure-Access`, `zScaler`
     """
-    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs']]]]]
-    sla_classes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs']]]]]
+    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgsDict']]]]]
+    sla_classes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgsDict']]]]]
     """
     slaClass
     """
@@ -4108,7 +4108,7 @@ class CedgeAaaFeatureTemplateRadiusClientArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    vpn_configurations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs']]]]]
+    vpn_configurations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgsDict']]]]]
     """
     VPN configuration
     """
@@ -4302,7 +4302,7 @@ class CedgeAaaFeatureTemplateRadiusServerGroupArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupServerArgs']]]]]
+    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupServerArgsDict']]]]]
     """
     Configure the Radius server
     """
@@ -4799,7 +4799,7 @@ class CedgeAaaFeatureTemplateTacacsServerGroupArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupServerArgs']]]]]
+    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupServerArgsDict']]]]]
     """
     Configure the TACACS server
     """
@@ -5180,7 +5180,7 @@ class CedgeAaaFeatureTemplateUserArgsDict(TypedDict):
     """
     Set the user scrypt password/hash
     """
-    ssh_pubkeys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserSshPubkeyArgs']]]]]
+    ssh_pubkeys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserSshPubkeyArgsDict']]]]]
     """
     List of RSA public-keys per user
     """
@@ -5414,7 +5414,7 @@ class CedgeAaaFeatureTemplateUserSshPubkeyArgs:
 
 
 class CedgeIgmpFeatureTemplateInterfaceArgsDict(TypedDict):
-    join_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs']]]]]
+    join_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CedgeIgmpFeatureTemplateInterfaceJoinGroupArgsDict']]]]]
     """
     Configure static joins
     """
@@ -6399,7 +6399,7 @@ class CentralizedPolicyDefinitionArgsDict(TypedDict):
     Policy definition type
       - Choices: `hubAndSpoke`, `mesh`, `control`, `vpnMembershipGroup`, `appRoute`, `cflowd`, `data`
     """
-    entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionEntryArgs']]]]]
+    entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CentralizedPolicyDefinitionEntryArgsDict']]]]]
     """
     List of entries
     """
@@ -7100,19 +7100,19 @@ class CiscoBgpFeatureTemplateAddressFamilyArgsDict(TypedDict):
     Set BGP address family
       - Choices: `ipv4-unicast`, `ipv6-unicast`
     """
-    ipv4_aggregate_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs']]]]]
+    ipv4_aggregate_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgsDict']]]]]
     """
     Aggregate prefixes in specific range
     """
-    ipv4_networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs']]]]]
+    ipv4_networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgsDict']]]]]
     """
     Configure the networks for BGP to advertise
     """
-    ipv6_aggregate_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgs']]]]]
+    ipv6_aggregate_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgsDict']]]]]
     """
     IPv6 Aggregate prefixes in specific range
     """
-    ipv6_networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgs']]]]]
+    ipv6_networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgsDict']]]]]
     """
     Configure the networks for BGP to advertise
     """
@@ -7129,7 +7129,7 @@ class CiscoBgpFeatureTemplateAddressFamilyArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    redistribute_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs']]]]]
+    redistribute_routes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgsDict']]]]]
     """
     Redistribute routes into BGP
     """
@@ -7971,7 +7971,7 @@ class CiscoBgpFeatureTemplateIpv4NeighborArgsDict(TypedDict):
     """
     Set neighbor address
     """
-    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs']]]]]
+    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgsDict']]]]]
     """
     Set BGP address family
     """
@@ -8737,7 +8737,7 @@ class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    route_policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs']]]]]
+    route_policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgsDict']]]]]
     """
     Select route policy to apply to prefixes received from BGP neighbor
     """
@@ -9028,11 +9028,11 @@ class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs:
 
 
 class CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict(TypedDict):
-    exports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetExportArgs']]]]]
+    exports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetExportArgsDict']]]]]
     """
     Export Target-VPN community for IPV4
     """
-    imports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetImportArgs']]]]]
+    imports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetImportArgsDict']]]]]
     """
     Import Target-VPN community for IPV4
     """
@@ -9282,7 +9282,7 @@ class CiscoBgpFeatureTemplateIpv6NeighborArgsDict(TypedDict):
     """
     Set neighbor address
     """
-    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs']]]]]
+    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgsDict']]]]]
     """
     Set BGP address family
     """
@@ -10050,7 +10050,7 @@ class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    route_policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs']]]]]
+    route_policies: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgsDict']]]]]
     """
     Select route policy to apply to prefixes received from BGP neighbor
     """
@@ -10345,11 +10345,11 @@ class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs:
 
 
 class CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict(TypedDict):
-    exports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetExportArgs']]]]]
+    exports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetExportArgsDict']]]]]
     """
     Export Target-VPN community for IPV6
     """
-    imports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetImportArgs']]]]]
+    imports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetImportArgsDict']]]]]
     """
     Import Target-VPN community for IPV6
     """
@@ -12392,7 +12392,7 @@ class CiscoOspfFeatureTemplateAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -12413,7 +12413,7 @@ class CiscoOspfFeatureTemplateAreaArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -13658,7 +13658,7 @@ class CiscoOspfv3FeatureTemplateIpv4AreaArgsDict(TypedDict):
     """
     Variable name
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -13688,7 +13688,7 @@ class CiscoOspfv3FeatureTemplateIpv4AreaArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -14852,7 +14852,7 @@ class CiscoOspfv3FeatureTemplateIpv6AreaArgsDict(TypedDict):
     """
     Variable name
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -14882,7 +14882,7 @@ class CiscoOspfv3FeatureTemplateIpv6AreaArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -17225,7 +17225,7 @@ class CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs:
 
 
 class CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict(TypedDict):
-    interface_pairs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs']]]]]
+    interface_pairs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgsDict']]]]]
     """
     Interface Pair for active and backup
     """
@@ -19801,7 +19801,7 @@ class CiscoSnmpFeatureTemplateViewArgsDict(TypedDict):
     """
     Set the name of the SNMP view
     """
-    object_identifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateViewObjectIdentifierArgs']]]]]
+    object_identifiers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateViewObjectIdentifierArgsDict']]]]]
     """
     Configure SNMP object identifier
     """
@@ -20056,7 +20056,7 @@ class CiscoSystemFeatureTemplateObjectTrackerArgsDict(TypedDict):
     """
     Variable name
     """
-    group_tracks_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgs']]]]]
+    group_tracks_ids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgsDict']]]]]
     """
     Tracks id in group configuration
     """
@@ -22276,7 +22276,7 @@ class CiscoVpnFeatureTemplateIpv4StaticRouteArgsDict(TypedDict):
     """
     Variable name
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgsDict']]]]]
     """
     IP gateway address
     """
@@ -22301,7 +22301,7 @@ class CiscoVpnFeatureTemplateIpv4StaticRouteArgsDict(TypedDict):
     """
     Variable name
     """
-    track_next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgs']]]]]
+    track_next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgsDict']]]]]
     """
     IP gateway address
     """
@@ -22939,7 +22939,7 @@ class CiscoVpnFeatureTemplateIpv6StaticRouteArgsDict(TypedDict):
     """
     Variable name
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgsDict']]]]]
     """
     IP gateway address
     """
@@ -23834,7 +23834,7 @@ class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs']]]]]
+    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgsDict']]]]]
     protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Advertised routes protocol
@@ -24104,7 +24104,7 @@ class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs']]]]]
+    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgsDict']]]]]
     protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Advertised routes protocol
@@ -24662,7 +24662,7 @@ class CiscoVpnFeatureTemplateRouteGlobalExportArgsDict(TypedDict):
     """
     Variable name
     """
-    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs']]]]]
+    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgsDict']]]]]
     """
     Enable redistribution of replicated route protocol
     """
@@ -24906,7 +24906,7 @@ class CiscoVpnFeatureTemplateRouteGlobalImportArgsDict(TypedDict):
     """
     Variable name
     """
-    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs']]]]]
+    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgsDict']]]]]
     """
     Enable redistribution of replicated route protocol
     """
@@ -25150,7 +25150,7 @@ class CiscoVpnFeatureTemplateRouteVpnImportArgsDict(TypedDict):
     """
     Variable name
     """
-    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs']]]]]
+    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgsDict']]]]]
     """
     Enable redistribution of replicated route protocol
     """
@@ -26285,7 +26285,7 @@ class CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    ipv4_secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs']]]]]
+    ipv4_secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict']]]]]
     """
     VRRP Secondary IP address
     """
@@ -26340,7 +26340,7 @@ class CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgs']]]]]
+    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgsDict']]]]]
     """
     tracking object for VRRP configuration
     """
@@ -27153,7 +27153,7 @@ class CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    ipv6_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgs']]]]]
+    ipv6_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgsDict']]]]]
     """
     IPv6 VRRP
     """
@@ -29060,7 +29060,7 @@ class ConfigurationGroupDeviceArgsDict(TypedDict):
     """
     Topology label for dual device configuration group (supported from version 20.18.1 onwards)
     """
-    variables: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgs']]]]]
+    variables: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgsDict']]]]]
     """
     List of variables
     """
@@ -29216,7 +29216,7 @@ class ConfigurationGroupTopologyDeviceArgsDict(TypedDict):
     """
     Criteria value
     """
-    unsupported_features: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs']]]]]
+    unsupported_features: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceUnsupportedFeatureArgsDict']]]]]
     """
     List of unsupported features
     """
@@ -29338,7 +29338,7 @@ class CustomControlTopologyPolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -29352,7 +29352,7 @@ class CustomControlTopologyPolicyDefinitionSequenceArgsDict(TypedDict):
     Sequence IP type, either `ipv4`, `ipv6` or `all`
       - Choices: `ipv4`, `ipv6`, `all`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -29499,7 +29499,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgsDict(TypedDict
     """
     Export to VPN list version
     """
-    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs']]]]]
+    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]]
     """
     List of set parameters, Attribute conditional on `type` equal to `set`
     """
@@ -30940,7 +30940,7 @@ class DomainListPolicyObjectEntryArgs:
 
 
 class EigrpFeatureTemplateAddressFamilyArgsDict(TypedDict):
-    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyNetworkArgs']]]]]
+    networks: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyNetworkArgsDict']]]]]
     """
     Configure the networks for EIGRP to advertise
     """
@@ -30948,7 +30948,7 @@ class EigrpFeatureTemplateAddressFamilyArgsDict(TypedDict):
     """
     Indicates if list item is considered optional.
     """
-    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyRedistributeArgs']]]]]
+    redistributes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyRedistributeArgsDict']]]]]
     """
     Redistribute routes into EIGRP
     """
@@ -31237,7 +31237,7 @@ class EigrpFeatureTemplateInterfaceArgsDict(TypedDict):
     """
     Variable name
     """
-    summary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceSummaryAddressArgs']]]]]
+    summary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceSummaryAddressArgsDict']]]]]
     """
     Set summary addresses
     """
@@ -31529,7 +31529,7 @@ class EigrpFeatureTemplateKeyArgs:
 
 
 class EmbeddedSecurityNgfwPolicySequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceActionArgsDict']]]]]
     """
     can be empty array or with type or parameter
     """
@@ -31538,7 +31538,7 @@ class EmbeddedSecurityNgfwPolicySequenceArgsDict(TypedDict):
     - Choices: `pass`, `inspect`, `drop`
     """
     disable_sequence: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityNgfwPolicySequenceMatchEntryArgsDict']]]]]
     sequence_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     sequence_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     sequence_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
@@ -32212,7 +32212,7 @@ class EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs:
 
 class EmbeddedSecurityPolicyAssemblyArgsDict(TypedDict):
     advanced_inspection_profile_policy_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
-    entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyEntryArgs']]]]]
+    entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['EmbeddedSecurityPolicyAssemblyEntryArgsDict']]]]]
     ngfw_policy_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     ssl_decryption_profile_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
 
@@ -32411,7 +32411,7 @@ class FeatureDeviceTemplateGeneralTemplateArgsDict(TypedDict):
     Feature template type
       - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
     """
-    sub_templates: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateArgs']]]]]
+    sub_templates: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict']]]]]
     """
     List of sub templates
     """
@@ -32501,7 +32501,7 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict(TypedDict):
     Feature template type
       - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
     """
-    sub_templates: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs']]]]]
+    sub_templates: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgsDict']]]]]
     """
     List of sub templates
     """
@@ -32716,7 +32716,7 @@ class HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict(TypedDict):
     """
     All hubs are equal (All Spokes Sites connect to all Hubs)
     """
-    spokes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs']]]]]
+    spokes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgsDict']]]]]
     """
     List of spokes
     """
@@ -32812,7 +32812,7 @@ class HubAndSpokeTopologyPolicyDefinitionTopologyArgs:
 
 
 class HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgsDict(TypedDict):
-    hubs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs']]]]]
+    hubs: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgsDict']]]]]
     """
     List of hubs
     """
@@ -33103,7 +33103,7 @@ class Ipv4AclPolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -33112,7 +33112,7 @@ class Ipv4AclPolicyDefinitionSequenceArgsDict(TypedDict):
     Base action, either `accept` or `drop`
       - Choices: `accept`, `drop`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -33244,7 +33244,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
     """
     Policer version
     """
-    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs']]]]]
+    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]]
     """
     List of set parameters, Attribute conditional on `type` equal to `set`
     """
@@ -33901,7 +33901,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -33910,7 +33910,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceArgsDict(TypedDict):
     Base action, either `accept` or `drop`
       - Choices: `accept`, `drop`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -34367,7 +34367,7 @@ class Ipv6AclPolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -34376,7 +34376,7 @@ class Ipv6AclPolicyDefinitionSequenceArgsDict(TypedDict):
     Base action, either `accept` or `drop`
       - Choices: `accept`, `drop`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -34508,7 +34508,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
     """
     Policer version
     """
-    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs']]]]]
+    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]]
     """
     List of set parameters, Attribute conditional on `type` equal to `set`
     """
@@ -35111,7 +35111,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -35120,7 +35120,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceArgsDict(TypedDict):
     Base action, either `accept` or `drop`
       - Choices: `accept`, `drop`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -36294,7 +36294,7 @@ class PolicyGroupDeviceArgsDict(TypedDict):
     """
     Device ID
     """
-    variables: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceVariableArgs']]]]]
+    variables: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicyGroupDeviceVariableArgsDict']]]]]
     """
     List of variables
     """
@@ -36430,7 +36430,7 @@ class PolicyObjectAppProbeClassEntryArgsDict(TypedDict):
     Forwarding Class Name
     """
     forwarding_class_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
-    maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgs']]]]]
+    maps: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgsDict']]]]]
     """
     Map
     """
@@ -38345,7 +38345,7 @@ class RoutePolicyDefinitionSequenceArgsDict(TypedDict):
     """
     Sequence name
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -38359,7 +38359,7 @@ class RoutePolicyDefinitionSequenceArgsDict(TypedDict):
     IP version, either `ipv4` or `ipv6`
       - Choices: `ipv4`, `ipv6`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -40471,7 +40471,7 @@ class SecurityPolicyDefinitionArgsDict(TypedDict):
     Policy definition type
       - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
     """
-    entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgs']]]]]
+    entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgsDict']]]]]
     """
     List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
     """
@@ -40931,7 +40931,7 @@ class ServiceDhcpServerFeatureStaticLeaseArgs:
 
 
 class ServiceIpv4AclFeatureSequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgsDict']]]]]
     """
     Define list of actions
     """
@@ -40941,7 +40941,7 @@ class ServiceIpv4AclFeatureSequenceArgsDict(TypedDict):
       - Choices: `drop`, `accept`
       - Default value: `accept`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgsDict']]]]]
     """
     Define match conditions
     """
@@ -41348,7 +41348,7 @@ class ServiceIpv4AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     """
     Variable name
     """
-    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]]]
+    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]]
     """
     Destination Port List
     """
@@ -41377,7 +41377,7 @@ class ServiceIpv4AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     """
     Variable name
     """
-    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]]]
+    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]]
     """
     Source Port List
     """
@@ -41655,7 +41655,7 @@ class ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs:
 
 
 class ServiceIpv6AclFeatureSequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgsDict']]]]]
     """
     Define list of actions
     """
@@ -41665,7 +41665,7 @@ class ServiceIpv6AclFeatureSequenceArgsDict(TypedDict):
       - Choices: `drop`, `accept`
       - Default value: `accept`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgsDict']]]]]
     """
     Define match conditions
     """
@@ -42068,7 +42068,7 @@ class ServiceIpv6AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     Destination Data IP Prefix
     """
     destination_data_prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
-    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]]]
+    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]]
     """
     Destination Port List
     """
@@ -42090,7 +42090,7 @@ class ServiceIpv6AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     Source Data IP Prefix
     """
     source_data_prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
-    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]]]
+    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]]
     """
     Source Port List
     """
@@ -42342,7 +42342,7 @@ class ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs:
 
 
 class ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict(TypedDict):
-    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs']]]]]
+    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgsDict']]]]]
     """
     IPv4 Prefix List
     """
@@ -42578,7 +42578,7 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs:
 
 
 class ServiceLanVpnFeatureAdvertiseOmpIpv6ArgsDict(TypedDict):
-    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs']]]]]
+    prefixes: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgsDict']]]]]
     """
     IPv6 Prefix List
     """
@@ -43313,7 +43313,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     Gateway type
       - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
     """
-    ip_static_route_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs']]]]]
+    ip_static_route_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgsDict']]]]]
     """
     , Attribute conditional on `gateway` equal to `staticRouteInterface`
     """
@@ -43325,11 +43325,11 @@ class ServiceLanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     """
     Variable name
     """
-    next_hop_with_trackers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs']]]]]
+    next_hop_with_trackers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgsDict']]]]]
     """
     IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` equal to `nextHop`
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopArgsDict']]]]]
     """
     IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
     """
@@ -43578,7 +43578,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgsDict(TypedDic
     """
     Variable name
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHopArgsDict']]]]]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs:
@@ -44026,7 +44026,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
     Gateway type
       - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
     """
-    ipv6_static_route_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs']]]]]
+    ipv6_static_route_interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgsDict']]]]]
     """
     , Attribute conditional on `gateway` equal to `staticRouteInterface`
     """
@@ -44039,7 +44039,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
     """
     Variable name, Attribute conditional on `gateway` equal to `nat`
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]]
     """
     IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
     """
@@ -44201,7 +44201,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgsDict(TypedD
     """
     Variable name
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHopArgsDict']]]]]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs:
@@ -45145,7 +45145,7 @@ class ServiceLanVpnFeatureNatPortForwardArgs:
 
 
 class ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgsDict(TypedDict):
-    redistributions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs']]]]]
+    redistributions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgsDict']]]]]
     """
     Redistribute Routes to specific Protocol on Service VPN
     """
@@ -45295,7 +45295,7 @@ class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs:
 
 
 class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgsDict(TypedDict):
-    redistributions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs']]]]]
+    redistributions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgsDict']]]]]
     """
     Redistribute Route to specific Protocol on Current Service VPN
     """
@@ -45488,7 +45488,7 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs:
 
 
 class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgsDict(TypedDict):
-    redistributions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgs']]]]]
+    redistributions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgsDict']]]]]
     """
     Redistribute Routes to specific Protocol on Global VPN
     """
@@ -46569,7 +46569,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs']]]]]
+    secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict']]]]]
     """
     VRRP Secondary Ip Addresses
     """
@@ -46598,7 +46598,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict(TypedDict):
     Track OMP status
       - Default value: `false`
     """
-    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs']]]]]
+    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgsDict']]]]]
     """
     Tracking object for VRRP configuration
     """
@@ -47291,7 +47291,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    ipv6_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs']]]]]
+    ipv6_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgsDict']]]]]
     """
     IPv6 VRRP
     """
@@ -48175,7 +48175,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs']]]]]
+    secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict']]]]]
     """
     VRRP Secondary IPV4 address
     """
@@ -48212,7 +48212,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs']]]]]
+    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgsDict']]]]]
     """
     tracking object for VRRP configuration
     """
@@ -48829,7 +48829,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs:
 
 
 class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict(TypedDict):
-    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs']]]]]
+    addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgsDict']]]]]
     """
     IPv6 VRRP
     """
@@ -48857,7 +48857,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs']]]]]
+    secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgsDict']]]]]
     """
     IPv6 Secondary IP address
     """
@@ -49449,7 +49449,7 @@ class ServiceMulticastFeatureIgmpInterfaceArgsDict(TypedDict):
     """
     Variable name
     """
-    join_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs']]]]]
+    join_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgsDict']]]]]
     """
     Configure static joins
     """
@@ -49633,7 +49633,7 @@ class ServiceMulticastFeatureMsdpGroupArgsDict(TypedDict):
     """
     Variable name
     """
-    peers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgs']]]]]
+    peers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgsDict']]]]]
     """
     Configure peer
     """
@@ -50671,7 +50671,7 @@ class ServiceObjectTrackerGroupFeatureTrackerElementArgs:
 
 
 class ServiceRoutePolicyFeatureSequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceActionArgsDict']]]]]
     """
     Define list of actions
     """
@@ -50686,7 +50686,7 @@ class ServiceRoutePolicyFeatureSequenceArgsDict(TypedDict):
     Sequence Id
       - Range: `1`-`65536`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceMatchEntryArgsDict']]]]]
     """
     Define match conditions
     """
@@ -51123,7 +51123,7 @@ class ServiceRoutePolicyFeatureSequenceMatchEntryArgsDict(TypedDict):
     Select a condition such as OR, AND or EXACT
       - Choices: `OR`, `AND`, `EXACT`
     """
-    standard_community_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs']]]]]
+    standard_community_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict']]]]]
     """
     Select a standard community list
     """
@@ -51518,7 +51518,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     Set neighbor address
     """
-    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs']]]]]
+    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict']]]]]
     """
     Set BGP address family
     """
@@ -53025,7 +53025,7 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     Set IPv6 neighbor address
     """
-    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs']]]]]
+    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict']]]]]
     """
     Set IPv6 BGP address family
     """
@@ -54334,7 +54334,7 @@ class ServiceRoutingEigrpFeatureInterfaceArgsDict(TypedDict):
     """
     Variable name
     """
-    summary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs']]]]]
+    summary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgsDict']]]]]
     """
     Set summary addresses
     """
@@ -54764,7 +54764,7 @@ class ServiceRoutingOspfFeatureAreaArgsDict(TypedDict):
     set the area type
       - Choices: `stub`, `nssa`
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -54777,7 +54777,7 @@ class ServiceRoutingOspfFeatureAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -55825,7 +55825,7 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaArgsDict(TypedDict):
     Set OSPFv3 area type
       - Choices: `stub`, `nssa`, `normal`
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -55837,7 +55837,7 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -56761,7 +56761,7 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaArgsDict(TypedDict):
     Set OSPFv3 area type
       - Choices: `stub`, `nssa`, `normal`
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -56773,7 +56773,7 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -60562,7 +60562,7 @@ class SystemAaaFeatureRadiusGroupArgsDict(TypedDict):
     """
     Set Radius server Group Name
     """
-    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupServerArgs']]]]]
+    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupServerArgsDict']]]]]
     """
     Configure the Radius server
     """
@@ -61059,7 +61059,7 @@ class SystemAaaFeatureTacacsGroupArgsDict(TypedDict):
     """
     Set TACACS server Group Name
     """
-    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupServerArgs']]]]]
+    servers: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupServerArgsDict']]]]]
     """
     Configure the TACACS server
     """
@@ -61440,7 +61440,7 @@ class SystemAaaFeatureUserArgsDict(TypedDict):
     """
     Variable name
     """
-    public_keys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserPublicKeyArgs']]]]]
+    public_keys: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemAaaFeatureUserPublicKeyArgsDict']]]]]
     """
     List of RSA public-keys per user
     """
@@ -65006,7 +65006,7 @@ class SystemSnmpFeatureViewArgsDict(TypedDict):
     """
     Set the name of the SNMP view
     """
-    oids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemSnmpFeatureViewOidArgs']]]]]
+    oids: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SystemSnmpFeatureViewOidArgsDict']]]]]
     """
     Configure SNMP object identifier
     """
@@ -65255,7 +65255,7 @@ class TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict(TypedDict):
     """
     Rule type
     """
-    source_and_destination_configurations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs']]]]]
+    source_and_destination_configurations: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgsDict']]]]]
     """
     List of network source / destination configuration
     """
@@ -65504,7 +65504,7 @@ class TrafficDataPolicyDefinitionSequenceArgsDict(TypedDict):
     Sequence type
       - Choices: `applicationFirewall`, `qos`, `serviceChaining`, `trafficEngineering`, `data`
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntryArgsDict']]]]]
     """
     List of action entries
     """
@@ -65518,7 +65518,7 @@ class TrafficDataPolicyDefinitionSequenceArgsDict(TypedDict):
     Sequence IP type, either `ipv4`, `ipv6` or `all`
       - Choices: `ipv4`, `ipv6`, `all`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
@@ -65690,7 +65690,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
     Loss correction packet duplication, Attribute conditional on `type` equal to `lossProtectPktDup`
       - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
     """
-    nat_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs']]]]]
+    nat_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgsDict']]]]]
     """
     List of NAT parameters, Attribute conditional on `type` equal to `nat`
     """
@@ -65726,7 +65726,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
     """
     Service node group, Attribute conditional on `type` equal to `serviceNodeGroup`
     """
-    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs']]]]]
+    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]]
     """
     List of set parameters, Attribute conditional on `type` equal to `set`
     """
@@ -67190,7 +67190,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
 
 
 class TransportIpv4AclFeatureSequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgsDict']]]]]
     """
     Define list of actions
     """
@@ -67200,7 +67200,7 @@ class TransportIpv4AclFeatureSequenceArgsDict(TypedDict):
       - Choices: `drop`, `accept`
       - Default value: `accept`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgsDict']]]]]
     """
     Define match conditions
     """
@@ -67607,7 +67607,7 @@ class TransportIpv4AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     """
     Variable name
     """
-    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]]]
+    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]]
     """
     Destination Port List
     """
@@ -67636,7 +67636,7 @@ class TransportIpv4AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     """
     Variable name
     """
-    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]]]
+    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]]
     """
     Source Port List
     """
@@ -67914,7 +67914,7 @@ class TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs:
 
 
 class TransportIpv6AclFeatureSequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgsDict']]]]]
     """
     Define list of actions
     """
@@ -67924,7 +67924,7 @@ class TransportIpv6AclFeatureSequenceArgsDict(TypedDict):
       - Choices: `drop`, `accept`
       - Default value: `accept`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgsDict']]]]]
     """
     Define match conditions
     """
@@ -68327,7 +68327,7 @@ class TransportIpv6AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     Destination Data IP Prefix
     """
     destination_data_prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
-    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]]]
+    destination_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]]
     """
     Destination Port List
     """
@@ -68349,7 +68349,7 @@ class TransportIpv6AclFeatureSequenceMatchEntryArgsDict(TypedDict):
     Source Data IP Prefix
     """
     source_data_prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
-    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]]]
+    source_ports: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]]
     """
     Source Port List
     """
@@ -68645,7 +68645,7 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     """
     Variable name
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv4StaticRouteNextHopArgsDict']]]]]
     """
     IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
     """
@@ -68914,7 +68914,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
     """
     Variable name, Attribute conditional on `gateway` equal to `nat`
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]]
     """
     IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
     """
@@ -69420,7 +69420,7 @@ class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
 
 
 class TransportRoutePolicyFeatureSequenceArgsDict(TypedDict):
-    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceActionArgs']]]]]
+    actions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceActionArgsDict']]]]]
     """
     Define list of actions
     """
@@ -69435,7 +69435,7 @@ class TransportRoutePolicyFeatureSequenceArgsDict(TypedDict):
     Sequence Id
       - Range: `1`-`65536`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceMatchEntryArgsDict']]]]]
     """
     Define match conditions
     """
@@ -69872,7 +69872,7 @@ class TransportRoutePolicyFeatureSequenceMatchEntryArgsDict(TypedDict):
     Select a condition such as OR, AND or EXACT
       - Choices: `OR`, `AND`, `EXACT`
     """
-    standard_community_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs']]]]]
+    standard_community_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict']]]]]
     """
     Select a standard community list
     """
@@ -70267,7 +70267,7 @@ class TransportRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
     """
     Set neighbor address
     """
-    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs']]]]]
+    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict']]]]]
     """
     Set BGP address family
     """
@@ -71754,7 +71754,7 @@ class TransportRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
     """
     Set IPv6 neighbor address
     """
-    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs']]]]]
+    address_families: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict']]]]]
     """
     Set IPv6 BGP address family
     """
@@ -73066,7 +73066,7 @@ class TransportRoutingOspfFeatureAreaArgsDict(TypedDict):
     set the area type
       - Choices: `stub`, `nssa`
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -73079,7 +73079,7 @@ class TransportRoutingOspfFeatureAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -74084,7 +74084,7 @@ class TransportRoutingOspfv3Ipv4FeatureAreaArgsDict(TypedDict):
     Set OSPFv3 area type
       - Choices: `stub`, `nssa`, `normal`
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -74096,7 +74096,7 @@ class TransportRoutingOspfv3Ipv4FeatureAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -75020,7 +75020,7 @@ class TransportRoutingOspfv3Ipv6FeatureAreaArgsDict(TypedDict):
     Set OSPFv3 area type
       - Choices: `stub`, `nssa`, `normal`
     """
-    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs']]]]]
+    interfaces: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict']]]]]
     """
     Set OSPF interface parameters
     """
@@ -75032,7 +75032,7 @@ class TransportRoutingOspfv3Ipv6FeatureAreaArgsDict(TypedDict):
     """
     Variable name
     """
-    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaRangeArgs']]]]]
+    ranges: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaRangeArgsDict']]]]]
     """
     Summarize OSPF routes at an area boundary
     """
@@ -75863,7 +75863,7 @@ class TransportT1E1ControllerFeatureEntryArgsDict(TypedDict):
     Cable Config
       - Choices: `short`, `long`
     """
-    channel_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgs']]]]]
+    channel_groups: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgsDict']]]]]
     """
     Channel Group List
     """
@@ -76456,7 +76456,7 @@ class TransportWanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
     """
     Variable name
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteNextHopArgsDict']]]]]
     """
     IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
     """
@@ -76725,7 +76725,7 @@ class TransportWanVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
     """
     Variable name, Attribute conditional on `gateway` equal to `nat`
     """
-    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgs']]]]]
+    next_hops: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]]
     """
     IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
     """
@@ -83150,7 +83150,7 @@ class VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs:
 
 
 class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict(TypedDict):
-    channel_group_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgs']]]]]
+    channel_group_lists: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgsDict']]]]]
     """
     Channel Group List
     """
@@ -84183,7 +84183,7 @@ class VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    ipv4_secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs']]]]]
+    ipv4_secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict']]]]]
     """
     VRRP Secondary IP address
     """
@@ -84242,7 +84242,7 @@ class VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgs']]]]]
+    tracking_objects: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgsDict']]]]]
     """
     tracking object for VRRP configuration
     """
@@ -85071,11 +85071,11 @@ class VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict(TypedDict):
     """
     Variable name
     """
-    ipv6_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgs']]]]]
+    ipv6_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgsDict']]]]]
     """
     IPv6 VRRP
     """
-    ipv6_secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgs']]]]]
+    ipv6_secondary_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgsDict']]]]]
     """
     IPv6 Secondary IP address
     """
@@ -86212,7 +86212,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgsDict(TypedDict):
     """
     Rule
     """
-    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs']]]]]
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgsDict']]]]]
     """
     List of actions entries
     """
@@ -86221,7 +86221,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgsDict(TypedDict):
     Rule Type
       - Choices: `ipv4`, `ipv6`
     """
-    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs']]]]]
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgsDict']]]]]
     """
     List of match entries
     """
