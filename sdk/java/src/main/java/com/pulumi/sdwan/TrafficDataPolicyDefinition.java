@@ -32,6 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TrafficDataPolicyDefinition;
  * import com.pulumi.sdwan.TrafficDataPolicyDefinitionArgs;
  * import com.pulumi.sdwan.inputs.TrafficDataPolicyDefinitionSequenceArgs;
+ * import com.pulumi.sdwan.inputs.TrafficDataPolicyDefinitionSequenceMatchEntryArgs;
+ * import com.pulumi.sdwan.inputs.TrafficDataPolicyDefinitionSequenceActionEntryArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

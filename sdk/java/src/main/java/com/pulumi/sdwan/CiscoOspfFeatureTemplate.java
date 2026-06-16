@@ -40,6 +40,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs;
  * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateRoutePolicyArgs;
  * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateAreaArgs;
+ * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateAreaInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateAreaRangeArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

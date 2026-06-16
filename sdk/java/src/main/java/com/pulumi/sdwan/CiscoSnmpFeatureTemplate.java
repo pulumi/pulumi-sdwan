@@ -38,6 +38,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.CiscoSnmpFeatureTemplate;
  * import com.pulumi.sdwan.CiscoSnmpFeatureTemplateArgs;
  * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateViewArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateViewObjectIdentifierArgs;
  * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateCommunityArgs;
  * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateGroupArgs;
  * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateUserArgs;

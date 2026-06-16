@@ -34,6 +34,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.ConfigurationGroup;
  * import com.pulumi.sdwan.ConfigurationGroupArgs;
  * import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
+ * import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceVariableArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

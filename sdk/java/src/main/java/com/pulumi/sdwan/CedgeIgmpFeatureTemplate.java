@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.CedgeIgmpFeatureTemplate;
  * import com.pulumi.sdwan.CedgeIgmpFeatureTemplateArgs;
  * import com.pulumi.sdwan.inputs.CedgeIgmpFeatureTemplateInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

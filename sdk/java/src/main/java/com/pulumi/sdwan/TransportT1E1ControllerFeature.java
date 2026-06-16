@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TransportT1E1ControllerFeature;
  * import com.pulumi.sdwan.TransportT1E1ControllerFeatureArgs;
  * import com.pulumi.sdwan.inputs.TransportT1E1ControllerFeatureEntryArgs;
+ * import com.pulumi.sdwan.inputs.TransportT1E1ControllerFeatureEntryChannelGroupArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

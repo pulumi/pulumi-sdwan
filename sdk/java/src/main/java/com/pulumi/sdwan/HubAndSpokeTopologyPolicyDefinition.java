@@ -32,6 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.HubAndSpokeTopologyPolicyDefinition;
  * import com.pulumi.sdwan.HubAndSpokeTopologyPolicyDefinitionArgs;
  * import com.pulumi.sdwan.inputs.HubAndSpokeTopologyPolicyDefinitionTopologyArgs;
+ * import com.pulumi.sdwan.inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs;
+ * import com.pulumi.sdwan.inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.ServiceRoutePolicyFeature;
  * import com.pulumi.sdwan.ServiceRoutePolicyFeatureArgs;
  * import com.pulumi.sdwan.inputs.ServiceRoutePolicyFeatureSequenceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutePolicyFeatureSequenceActionArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

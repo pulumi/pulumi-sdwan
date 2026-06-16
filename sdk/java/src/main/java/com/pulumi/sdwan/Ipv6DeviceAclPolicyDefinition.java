@@ -32,6 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.Ipv6DeviceAclPolicyDefinition;
  * import com.pulumi.sdwan.Ipv6DeviceAclPolicyDefinitionArgs;
  * import com.pulumi.sdwan.inputs.Ipv6DeviceAclPolicyDefinitionSequenceArgs;
+ * import com.pulumi.sdwan.inputs.Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs;
+ * import com.pulumi.sdwan.inputs.Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

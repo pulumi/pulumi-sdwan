@@ -32,6 +32,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.ApplicationAwareRoutingPolicyDefinition;
  * import com.pulumi.sdwan.ApplicationAwareRoutingPolicyDefinitionArgs;
  * import com.pulumi.sdwan.inputs.ApplicationAwareRoutingPolicyDefinitionSequenceArgs;
+ * import com.pulumi.sdwan.inputs.ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs;
+ * import com.pulumi.sdwan.inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

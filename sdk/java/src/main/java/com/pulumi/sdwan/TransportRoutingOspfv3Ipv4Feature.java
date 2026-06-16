@@ -36,6 +36,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TransportRoutingOspfv3Ipv4FeatureArgs;
  * import com.pulumi.sdwan.inputs.TransportRoutingOspfv3Ipv4FeatureRedistributeArgs;
  * import com.pulumi.sdwan.inputs.TransportRoutingOspfv3Ipv4FeatureAreaArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
