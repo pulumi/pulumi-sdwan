@@ -38,6 +38,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureRedistributeArgs;
  * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureRouterLsaArgs;
  * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureAreaArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureAreaInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureAreaRangeArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

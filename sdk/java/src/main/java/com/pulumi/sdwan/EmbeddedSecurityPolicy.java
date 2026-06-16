@@ -34,6 +34,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.EmbeddedSecurityPolicy;
  * import com.pulumi.sdwan.EmbeddedSecurityPolicyArgs;
  * import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyAssemblyArgs;
+ * import com.pulumi.sdwan.inputs.EmbeddedSecurityPolicyAssemblyEntryArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

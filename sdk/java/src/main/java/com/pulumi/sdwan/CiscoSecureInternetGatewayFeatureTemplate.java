@@ -36,6 +36,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.CiscoSecureInternetGatewayFeatureTemplateArgs;
  * import com.pulumi.sdwan.inputs.CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs;
  * import com.pulumi.sdwan.inputs.CiscoSecureInternetGatewayFeatureTemplateServiceArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs;
  * import com.pulumi.sdwan.inputs.CiscoSecureInternetGatewayFeatureTemplateTrackerArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;

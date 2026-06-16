@@ -39,6 +39,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureNetworkArgs;
  * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureMd5KeyArgs;
  * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

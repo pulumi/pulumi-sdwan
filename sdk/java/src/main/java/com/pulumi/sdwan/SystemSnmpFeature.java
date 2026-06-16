@@ -38,6 +38,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.SystemSnmpFeature;
  * import com.pulumi.sdwan.SystemSnmpFeatureArgs;
  * import com.pulumi.sdwan.inputs.SystemSnmpFeatureViewArgs;
+ * import com.pulumi.sdwan.inputs.SystemSnmpFeatureViewOidArgs;
  * import com.pulumi.sdwan.inputs.SystemSnmpFeatureCommunityArgs;
  * import com.pulumi.sdwan.inputs.SystemSnmpFeatureGroupArgs;
  * import com.pulumi.sdwan.inputs.SystemSnmpFeatureUserArgs;

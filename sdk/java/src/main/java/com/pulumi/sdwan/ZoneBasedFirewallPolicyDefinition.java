@@ -34,6 +34,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.ZoneBasedFirewallPolicyDefinitionArgs;
  * import com.pulumi.sdwan.inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs;
  * import com.pulumi.sdwan.inputs.ZoneBasedFirewallPolicyDefinitionRuleArgs;
+ * import com.pulumi.sdwan.inputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs;
+ * import com.pulumi.sdwan.inputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

@@ -32,6 +32,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.CentralizedPolicy;
  * import com.pulumi.sdwan.CentralizedPolicyArgs;
  * import com.pulumi.sdwan.inputs.CentralizedPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.CentralizedPolicyDefinitionEntryArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;

@@ -33,6 +33,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.EmbeddedSecurityNgfwPolicy;
  * import com.pulumi.sdwan.EmbeddedSecurityNgfwPolicyArgs;
  * import com.pulumi.sdwan.inputs.EmbeddedSecurityNgfwPolicySequenceArgs;
+ * import com.pulumi.sdwan.inputs.EmbeddedSecurityNgfwPolicySequenceMatchEntryArgs;
+ * import com.pulumi.sdwan.inputs.EmbeddedSecurityNgfwPolicySequenceActionArgs;
  * import java.util.ArrayList;
  * import java.util.Arrays;
  * import java.util.Map;
