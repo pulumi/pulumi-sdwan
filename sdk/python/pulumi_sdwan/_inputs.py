@@ -311,6 +311,8 @@ __all__ = [
     'ConfigurationGroupTopologyDeviceArgsDict',
     'ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs',
     'ConfigurationGroupTopologyDeviceUnsupportedFeatureArgsDict',
+    'CustomApplicationL3l4Args',
+    'CustomApplicationL3l4ArgsDict',
     'CustomControlTopologyPolicyDefinitionSequenceArgs',
     'CustomControlTopologyPolicyDefinitionSequenceArgsDict',
     'CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs',
@@ -741,6 +743,22 @@ __all__ = [
     'ServiceWirelessLanFeatureSsidArgsDict',
     'SiteListPolicyObjectEntryArgs',
     'SiteListPolicyObjectEntryArgsDict',
+    'SseCiscoFeatureInterfaceArgs',
+    'SseCiscoFeatureInterfaceArgsDict',
+    'SseCiscoFeatureInterfacePairArgs',
+    'SseCiscoFeatureInterfacePairArgsDict',
+    'SseCiscoFeatureTrackerArgs',
+    'SseCiscoFeatureTrackerArgsDict',
+    'SseZscalerFeatureInterfaceArgs',
+    'SseZscalerFeatureInterfaceArgsDict',
+    'SseZscalerFeatureInterfacePairArgs',
+    'SseZscalerFeatureInterfacePairArgsDict',
+    'SseZscalerFeatureSubLocationArgs',
+    'SseZscalerFeatureSubLocationArgsDict',
+    'SseZscalerFeatureSubLocationInternalIpArgs',
+    'SseZscalerFeatureSubLocationInternalIpArgsDict',
+    'SseZscalerFeatureTrackerArgs',
+    'SseZscalerFeatureTrackerArgsDict',
     'StandardCommunityListPolicyObjectEntryArgs',
     'StandardCommunityListPolicyObjectEntryArgsDict',
     'SwitchportFeatureTemplateInterfaceArgs',
@@ -809,6 +827,24 @@ __all__ = [
     'TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgsDict',
     'TlsSslDecryptionPolicyDefinitionUrlRuleArgs',
     'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict',
+    'TopologyCustomControlFeatureSequenceArgs',
+    'TopologyCustomControlFeatureSequenceArgsDict',
+    'TopologyCustomControlFeatureSequenceActionEntryArgs',
+    'TopologyCustomControlFeatureSequenceActionEntryArgsDict',
+    'TopologyCustomControlFeatureSequenceActionEntrySetParameterArgs',
+    'TopologyCustomControlFeatureSequenceActionEntrySetParameterArgsDict',
+    'TopologyCustomControlFeatureSequenceMatchEntryArgs',
+    'TopologyCustomControlFeatureSequenceMatchEntryArgsDict',
+    'TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs',
+    'TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgsDict',
+    'TopologyCustomControlFeatureTargetInboundRegionArgs',
+    'TopologyCustomControlFeatureTargetInboundRegionArgsDict',
+    'TopologyCustomControlFeatureTargetOutboundRegionArgs',
+    'TopologyCustomControlFeatureTargetOutboundRegionArgsDict',
+    'TopologyHubSpokeFeatureSpokeArgs',
+    'TopologyHubSpokeFeatureSpokeArgsDict',
+    'TopologyHubSpokeFeatureSpokeHubSiteArgs',
+    'TopologyHubSpokeFeatureSpokeHubSiteArgsDict',
     'TrafficDataPolicyDefinitionSequenceArgs',
     'TrafficDataPolicyDefinitionSequenceArgsDict',
     'TrafficDataPolicyDefinitionSequenceActionEntryArgs',
@@ -29327,6 +29363,78 @@ class ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs:
     @parcel_type.setter
     def parcel_type(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "parcel_type", value)
+
+
+class CustomApplicationL3l4ArgsDict(TypedDict):
+    ip_addresses: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    IPv4 Address (10.X.X.X, 20.0.0.0/24 separated by commas, subnet prefix length 24 to 32.)
+    """
+    l4_protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    L4 Protocol
+      - Choices: `TCP`, `UDP`, `TCP-UDP`
+    """
+    ports: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Ports (Space separated ports or range or both.)
+    """
+
+@pulumi.input_type
+class CustomApplicationL3l4Args:
+    def __init__(__self__, *,
+                 ip_addresses: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 l4_protocol: pulumi.Input[Optional[_builtins.str]] = None,
+                 ports: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ip_addresses: IPv4 Address (10.X.X.X, 20.0.0.0/24 separated by commas, subnet prefix length 24 to 32.)
+        :param pulumi.Input[_builtins.str] l4_protocol: L4 Protocol
+                 - Choices: `TCP`, `UDP`, `TCP-UDP`
+        :param pulumi.Input[_builtins.str] ports: Ports (Space separated ports or range or both.)
+        """
+        if ip_addresses is not None:
+            pulumi.set(__self__, "ip_addresses", ip_addresses)
+        if l4_protocol is not None:
+            pulumi.set(__self__, "l4_protocol", l4_protocol)
+        if ports is not None:
+            pulumi.set(__self__, "ports", ports)
+
+    @_builtins.property
+    @pulumi.getter(name="ipAddresses")
+    def ip_addresses(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        IPv4 Address (10.X.X.X, 20.0.0.0/24 separated by commas, subnet prefix length 24 to 32.)
+        """
+        return pulumi.get(self, "ip_addresses")
+
+    @ip_addresses.setter
+    def ip_addresses(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "ip_addresses", value)
+
+    @_builtins.property
+    @pulumi.getter(name="l4Protocol")
+    def l4_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        L4 Protocol
+          - Choices: `TCP`, `UDP`, `TCP-UDP`
+        """
+        return pulumi.get(self, "l4_protocol")
+
+    @l4_protocol.setter
+    def l4_protocol(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "l4_protocol", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def ports(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Ports (Space separated ports or range or both.)
+        """
+        return pulumi.get(self, "ports")
+
+    @ports.setter
+    def ports(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ports", value)
 
 
 class CustomControlTopologyPolicyDefinitionSequenceArgsDict(TypedDict):
@@ -59117,6 +59225,3389 @@ class SiteListPolicyObjectEntryArgs:
         pulumi.set(self, "site_id", value)
 
 
+class SseCiscoFeatureInterfaceArgsDict(TypedDict):
+    dpd_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE keepalive interval (seconds)
+      - Range: `0`-`65535`
+      - Default value: `10`
+    """
+    dpd_interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    dpd_retries: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE keepalive retries
+      - Range: `0`-`255`
+      - Default value: `3`
+    """
+    dpd_retries_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_ciphersuite: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IKE identity the IKE preshared secret belongs to
+      - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+      - Default value: `aes256-cbc-sha1`
+    """
+    ike_ciphersuite_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_group: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IKE Diffie Hellman Groups
+      - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+      - Default value: `16`
+    """
+    ike_group_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_rekey_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE rekey interval <300..1209600> seconds
+      - Range: `300`-`1209600`
+      - Default value: `14400`
+    """
+    ike_rekey_interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_version: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE Version <1..2>
+      - Range: `1`-`2`
+      - Default value: `2`
+    """
+    ike_version_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    interface_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Interface name: ipsec(1..255)
+    """
+    ipsec_ciphersuite: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IPsec(ESP) encryption and integrity protocol
+      - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+      - Default value: `aes256-cbc-sha512`
+    """
+    ipsec_ciphersuite_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ipsec_rekey_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IPsec rekey interval <300..1209600> seconds
+      - Range: `300`-`1209600`
+      - Default value: `3600`
+    """
+    ipsec_rekey_interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ipsec_replay_window: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Replay window size 32..8192 (must be a power of 2)
+      - Range: `64`-`4096`
+      - Default value: `512`
+    """
+    ipsec_replay_window_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    mtu: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Interface MTU <576..2000>, in bytes
+      - Range: `576`-`2000`
+      - Default value: `1400`
+    """
+    mtu_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    perfect_forward_secrecy: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IPsec perfect forward secrecy settings
+      - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+      - Default value: `group-16`
+    """
+    perfect_forward_secrecy_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    shutdown: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Administrative state
+      - Default value: `false`
+    """
+    shutdown_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tcp_mss_adjust: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    TCP MSS on SYN packets, in bytes
+      - Range: `500`-`1460`
+    """
+    tcp_mss_adjust_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    track_enable: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable/disable Cisco SSE tracking
+      - Default value: `true`
+    """
+    track_enable_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tracker: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Enable tracker for this interface
+      - Default value: `DefaultTracker`
+    """
+    tunnel_dc_preference: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    SSE Tunnel Data Center
+      - Choices: `primary-dc`, `secondary-dc`
+    """
+    tunnel_route_via: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+    """
+    tunnel_route_via_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tunnel_source_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+    """
+    tunnel_source_interface_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+
+@pulumi.input_type
+class SseCiscoFeatureInterfaceArgs:
+    def __init__(__self__, *,
+                 dpd_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 dpd_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dpd_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 dpd_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_ciphersuite: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_ciphersuite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ike_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_ciphersuite: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_ciphersuite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 perfect_forward_secrecy: pulumi.Input[Optional[_builtins.str]] = None,
+                 perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 shutdown_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 track_enable_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tracker: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_dc_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `0`-`65535`
+                 - Default value: `10`
+        :param pulumi.Input[_builtins.str] dpd_interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries
+                 - Range: `0`-`255`
+                 - Default value: `3`
+        :param pulumi.Input[_builtins.str] dpd_retries_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
+        :param pulumi.Input[_builtins.str] ike_ciphersuite_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+                 - Default value: `16`
+        :param pulumi.Input[_builtins.str] ike_group_variable: Variable name
+        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <300..1209600> seconds
+                 - Range: `300`-`1209600`
+                 - Default value: `14400`
+        :param pulumi.Input[_builtins.str] ike_rekey_interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2>
+                 - Range: `1`-`2`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] ike_version_variable: Variable name
+        :param pulumi.Input[_builtins.str] interface_name: Interface name: ipsec(1..255)
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+                 - Default value: `aes256-cbc-sha512`
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite_variable: Variable name
+        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `300`-`1209600`
+                 - Default value: `3600`
+        :param pulumi.Input[_builtins.str] ipsec_rekey_interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Range: `64`-`4096`
+                 - Default value: `512`
+        :param pulumi.Input[_builtins.str] ipsec_replay_window_variable: Variable name
+        :param pulumi.Input[_builtins.int] mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1400`
+        :param pulumi.Input[_builtins.str] mtu_variable: Variable name
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+                 - Default value: `group-16`
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
+        :param pulumi.Input[_builtins.bool] track_enable: Enable/disable Cisco SSE tracking
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.str] track_enable_variable: Variable name
+        :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
+                 - Default value: `DefaultTracker`
+        :param pulumi.Input[_builtins.str] tunnel_dc_preference: SSE Tunnel Data Center
+                 - Choices: `primary-dc`, `secondary-dc`
+        :param pulumi.Input[_builtins.str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        :param pulumi.Input[_builtins.str] tunnel_route_via_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        :param pulumi.Input[_builtins.str] tunnel_source_interface_variable: Variable name
+        """
+        if dpd_interval is not None:
+            pulumi.set(__self__, "dpd_interval", dpd_interval)
+        if dpd_interval_variable is not None:
+            pulumi.set(__self__, "dpd_interval_variable", dpd_interval_variable)
+        if dpd_retries is not None:
+            pulumi.set(__self__, "dpd_retries", dpd_retries)
+        if dpd_retries_variable is not None:
+            pulumi.set(__self__, "dpd_retries_variable", dpd_retries_variable)
+        if ike_ciphersuite is not None:
+            pulumi.set(__self__, "ike_ciphersuite", ike_ciphersuite)
+        if ike_ciphersuite_variable is not None:
+            pulumi.set(__self__, "ike_ciphersuite_variable", ike_ciphersuite_variable)
+        if ike_group is not None:
+            pulumi.set(__self__, "ike_group", ike_group)
+        if ike_group_variable is not None:
+            pulumi.set(__self__, "ike_group_variable", ike_group_variable)
+        if ike_rekey_interval is not None:
+            pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
+        if ike_rekey_interval_variable is not None:
+            pulumi.set(__self__, "ike_rekey_interval_variable", ike_rekey_interval_variable)
+        if ike_version is not None:
+            pulumi.set(__self__, "ike_version", ike_version)
+        if ike_version_variable is not None:
+            pulumi.set(__self__, "ike_version_variable", ike_version_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if ipsec_ciphersuite is not None:
+            pulumi.set(__self__, "ipsec_ciphersuite", ipsec_ciphersuite)
+        if ipsec_ciphersuite_variable is not None:
+            pulumi.set(__self__, "ipsec_ciphersuite_variable", ipsec_ciphersuite_variable)
+        if ipsec_rekey_interval is not None:
+            pulumi.set(__self__, "ipsec_rekey_interval", ipsec_rekey_interval)
+        if ipsec_rekey_interval_variable is not None:
+            pulumi.set(__self__, "ipsec_rekey_interval_variable", ipsec_rekey_interval_variable)
+        if ipsec_replay_window is not None:
+            pulumi.set(__self__, "ipsec_replay_window", ipsec_replay_window)
+        if ipsec_replay_window_variable is not None:
+            pulumi.set(__self__, "ipsec_replay_window_variable", ipsec_replay_window_variable)
+        if mtu is not None:
+            pulumi.set(__self__, "mtu", mtu)
+        if mtu_variable is not None:
+            pulumi.set(__self__, "mtu_variable", mtu_variable)
+        if perfect_forward_secrecy is not None:
+            pulumi.set(__self__, "perfect_forward_secrecy", perfect_forward_secrecy)
+        if perfect_forward_secrecy_variable is not None:
+            pulumi.set(__self__, "perfect_forward_secrecy_variable", perfect_forward_secrecy_variable)
+        if shutdown is not None:
+            pulumi.set(__self__, "shutdown", shutdown)
+        if shutdown_variable is not None:
+            pulumi.set(__self__, "shutdown_variable", shutdown_variable)
+        if tcp_mss_adjust is not None:
+            pulumi.set(__self__, "tcp_mss_adjust", tcp_mss_adjust)
+        if tcp_mss_adjust_variable is not None:
+            pulumi.set(__self__, "tcp_mss_adjust_variable", tcp_mss_adjust_variable)
+        if track_enable is not None:
+            pulumi.set(__self__, "track_enable", track_enable)
+        if track_enable_variable is not None:
+            pulumi.set(__self__, "track_enable_variable", track_enable_variable)
+        if tracker is not None:
+            pulumi.set(__self__, "tracker", tracker)
+        if tunnel_dc_preference is not None:
+            pulumi.set(__self__, "tunnel_dc_preference", tunnel_dc_preference)
+        if tunnel_route_via is not None:
+            pulumi.set(__self__, "tunnel_route_via", tunnel_route_via)
+        if tunnel_route_via_variable is not None:
+            pulumi.set(__self__, "tunnel_route_via_variable", tunnel_route_via_variable)
+        if tunnel_source_interface is not None:
+            pulumi.set(__self__, "tunnel_source_interface", tunnel_source_interface)
+        if tunnel_source_interface_variable is not None:
+            pulumi.set(__self__, "tunnel_source_interface_variable", tunnel_source_interface_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdInterval")
+    def dpd_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE keepalive interval (seconds)
+          - Range: `0`-`65535`
+          - Default value: `10`
+        """
+        return pulumi.get(self, "dpd_interval")
+
+    @dpd_interval.setter
+    def dpd_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "dpd_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdIntervalVariable")
+    def dpd_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_interval_variable")
+
+    @dpd_interval_variable.setter
+    def dpd_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dpd_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetries")
+    def dpd_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE keepalive retries
+          - Range: `0`-`255`
+          - Default value: `3`
+        """
+        return pulumi.get(self, "dpd_retries")
+
+    @dpd_retries.setter
+    def dpd_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "dpd_retries", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetriesVariable")
+    def dpd_retries_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_retries_variable")
+
+    @dpd_retries_variable.setter
+    def dpd_retries_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dpd_retries_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuite")
+    def ike_ciphersuite(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
+        """
+        return pulumi.get(self, "ike_ciphersuite")
+
+    @ike_ciphersuite.setter
+    def ike_ciphersuite(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_ciphersuite", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuiteVariable")
+    def ike_ciphersuite_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_ciphersuite_variable")
+
+    @ike_ciphersuite_variable.setter
+    def ike_ciphersuite_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_ciphersuite_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroup")
+    def ike_group(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+          - Default value: `16`
+        """
+        return pulumi.get(self, "ike_group")
+
+    @ike_group.setter
+    def ike_group(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_group", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroupVariable")
+    def ike_group_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_group_variable")
+
+    @ike_group_variable.setter
+    def ike_group_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_group_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyInterval")
+    def ike_rekey_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE rekey interval <300..1209600> seconds
+          - Range: `300`-`1209600`
+          - Default value: `14400`
+        """
+        return pulumi.get(self, "ike_rekey_interval")
+
+    @ike_rekey_interval.setter
+    def ike_rekey_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ike_rekey_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyIntervalVariable")
+    def ike_rekey_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_rekey_interval_variable")
+
+    @ike_rekey_interval_variable.setter
+    def ike_rekey_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_rekey_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeVersion")
+    def ike_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE Version <1..2>
+          - Range: `1`-`2`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "ike_version")
+
+    @ike_version.setter
+    def ike_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ike_version", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeVersionVariable")
+    def ike_version_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_version_variable")
+
+    @ike_version_variable.setter
+    def ike_version_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_version_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Interface name: ipsec(1..255)
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuite")
+    def ipsec_ciphersuite(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+          - Default value: `aes256-cbc-sha512`
+        """
+        return pulumi.get(self, "ipsec_ciphersuite")
+
+    @ipsec_ciphersuite.setter
+    def ipsec_ciphersuite(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_ciphersuite", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuiteVariable")
+    def ipsec_ciphersuite_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_ciphersuite_variable")
+
+    @ipsec_ciphersuite_variable.setter
+    def ipsec_ciphersuite_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_ciphersuite_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyInterval")
+    def ipsec_rekey_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `300`-`1209600`
+          - Default value: `3600`
+        """
+        return pulumi.get(self, "ipsec_rekey_interval")
+
+    @ipsec_rekey_interval.setter
+    def ipsec_rekey_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ipsec_rekey_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyIntervalVariable")
+    def ipsec_rekey_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_rekey_interval_variable")
+
+    @ipsec_rekey_interval_variable.setter
+    def ipsec_rekey_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_rekey_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindow")
+    def ipsec_replay_window(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Replay window size 32..8192 (must be a power of 2)
+          - Range: `64`-`4096`
+          - Default value: `512`
+        """
+        return pulumi.get(self, "ipsec_replay_window")
+
+    @ipsec_replay_window.setter
+    def ipsec_replay_window(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ipsec_replay_window", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindowVariable")
+    def ipsec_replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_replay_window_variable")
+
+    @ipsec_replay_window_variable.setter
+    def ipsec_replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_replay_window_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1400`
+        """
+        return pulumi.get(self, "mtu")
+
+    @mtu.setter
+    def mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "mtu", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mtuVariable")
+    def mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mtu_variable")
+
+    @mtu_variable.setter
+    def mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "mtu_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecy")
+    def perfect_forward_secrecy(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IPsec perfect forward secrecy settings
+          - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+          - Default value: `group-16`
+        """
+        return pulumi.get(self, "perfect_forward_secrecy")
+
+    @perfect_forward_secrecy.setter
+    def perfect_forward_secrecy(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "perfect_forward_secrecy", value)
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecyVariable")
+    def perfect_forward_secrecy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "perfect_forward_secrecy_variable")
+
+    @perfect_forward_secrecy_variable.setter
+    def perfect_forward_secrecy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "perfect_forward_secrecy_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Administrative state
+          - Default value: `false`
+        """
+        return pulumi.get(self, "shutdown")
+
+    @shutdown.setter
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "shutdown", value)
+
+    @_builtins.property
+    @pulumi.getter(name="shutdownVariable")
+    def shutdown_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "shutdown_variable")
+
+    @shutdown_variable.setter
+    def shutdown_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "shutdown_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjust")
+    def tcp_mss_adjust(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
+        """
+        return pulumi.get(self, "tcp_mss_adjust")
+
+    @tcp_mss_adjust.setter
+    def tcp_mss_adjust(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "tcp_mss_adjust", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjustVariable")
+    def tcp_mss_adjust_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tcp_mss_adjust_variable")
+
+    @tcp_mss_adjust_variable.setter
+    def tcp_mss_adjust_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tcp_mss_adjust_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trackEnable")
+    def track_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/disable Cisco SSE tracking
+          - Default value: `true`
+        """
+        return pulumi.get(self, "track_enable")
+
+    @track_enable.setter
+    def track_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "track_enable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trackEnableVariable")
+    def track_enable_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "track_enable_variable")
+
+    @track_enable_variable.setter
+    def track_enable_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "track_enable_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def tracker(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Enable tracker for this interface
+          - Default value: `DefaultTracker`
+        """
+        return pulumi.get(self, "tracker")
+
+    @tracker.setter
+    def tracker(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tracker", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDcPreference")
+    def tunnel_dc_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        SSE Tunnel Data Center
+          - Choices: `primary-dc`, `secondary-dc`
+        """
+        return pulumi.get(self, "tunnel_dc_preference")
+
+    @tunnel_dc_preference.setter
+    def tunnel_dc_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_dc_preference", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteVia")
+    def tunnel_route_via(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        return pulumi.get(self, "tunnel_route_via")
+
+    @tunnel_route_via.setter
+    def tunnel_route_via(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_route_via", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteViaVariable")
+    def tunnel_route_via_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_route_via_variable")
+
+    @tunnel_route_via_variable.setter
+    def tunnel_route_via_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_route_via_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterface")
+    def tunnel_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        return pulumi.get(self, "tunnel_source_interface")
+
+    @tunnel_source_interface.setter
+    def tunnel_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_source_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterfaceVariable")
+    def tunnel_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_source_interface_variable")
+
+    @tunnel_source_interface_variable.setter
+    def tunnel_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_source_interface_variable", value)
+
+
+class SseCiscoFeatureInterfacePairArgsDict(TypedDict):
+    active_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Active Tunnel Interface for SSE
+    """
+    active_interface_weight: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Active Tunnel Interface Weight
+      - Range: `1`-`255`
+    """
+    backup_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Backup Tunnel Interface for Cisco SSE
+    """
+    backup_interface_weight: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Backup Tunnel Interface Weight
+      - Range: `1`-`255`
+    """
+
+@pulumi.input_type
+class SseCiscoFeatureInterfacePairArgs:
+    def __init__(__self__, *,
+                 active_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 active_interface_weight: pulumi.Input[Optional[_builtins.int]] = None,
+                 backup_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 backup_interface_weight: pulumi.Input[Optional[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] active_interface: Active Tunnel Interface for SSE
+        :param pulumi.Input[_builtins.int] active_interface_weight: Active Tunnel Interface Weight
+                 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.str] backup_interface: Backup Tunnel Interface for Cisco SSE
+        :param pulumi.Input[_builtins.int] backup_interface_weight: Backup Tunnel Interface Weight
+                 - Range: `1`-`255`
+        """
+        if active_interface is not None:
+            pulumi.set(__self__, "active_interface", active_interface)
+        if active_interface_weight is not None:
+            pulumi.set(__self__, "active_interface_weight", active_interface_weight)
+        if backup_interface is not None:
+            pulumi.set(__self__, "backup_interface", backup_interface)
+        if backup_interface_weight is not None:
+            pulumi.set(__self__, "backup_interface_weight", backup_interface_weight)
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterface")
+    def active_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Active Tunnel Interface for SSE
+        """
+        return pulumi.get(self, "active_interface")
+
+    @active_interface.setter
+    def active_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "active_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterfaceWeight")
+    def active_interface_weight(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Active Tunnel Interface Weight
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "active_interface_weight")
+
+    @active_interface_weight.setter
+    def active_interface_weight(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "active_interface_weight", value)
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterface")
+    def backup_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Backup Tunnel Interface for Cisco SSE
+        """
+        return pulumi.get(self, "backup_interface")
+
+    @backup_interface.setter
+    def backup_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "backup_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterfaceWeight")
+    def backup_interface_weight(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Backup Tunnel Interface Weight
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "backup_interface_weight")
+
+    @backup_interface_weight.setter
+    def backup_interface_weight(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "backup_interface_weight", value)
+
+
+class SseCiscoFeatureTrackerArgsDict(TypedDict):
+    endpoint_api_url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    API url of endpoint
+    """
+    endpoint_api_url_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Probe interval <10..600> seconds
+      - Range: `20`-`600`
+      - Default value: `30`
+    """
+    interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    multiplier: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Probe failure multiplier <1..10> failed attempts
+      - Range: `1`-`10`
+      - Default value: `2`
+    """
+    multiplier_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Tracker name
+    """
+    threshold: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Probe Timeout threshold <100..1000> milliseconds
+      - Range: `100`-`1000`
+      - Default value: `1000`
+    """
+    threshold_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+
+@pulumi.input_type
+class SseCiscoFeatureTrackerArgs:
+    def __init__(__self__, *,
+                 endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
+        :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
+        :param pulumi.Input[_builtins.int] interval: Probe interval <10..600> seconds
+                 - Range: `20`-`600`
+                 - Default value: `30`
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] multiplier: Probe failure multiplier <1..10> failed attempts
+                 - Range: `1`-`10`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
+        :param pulumi.Input[_builtins.str] name: Tracker name
+        :param pulumi.Input[_builtins.int] threshold: Probe Timeout threshold <100..1000> milliseconds
+                 - Range: `100`-`1000`
+                 - Default value: `1000`
+        :param pulumi.Input[_builtins.str] threshold_variable: Variable name
+        """
+        if endpoint_api_url is not None:
+            pulumi.set(__self__, "endpoint_api_url", endpoint_api_url)
+        if endpoint_api_url_variable is not None:
+            pulumi.set(__self__, "endpoint_api_url_variable", endpoint_api_url_variable)
+        if interval is not None:
+            pulumi.set(__self__, "interval", interval)
+        if interval_variable is not None:
+            pulumi.set(__self__, "interval_variable", interval_variable)
+        if multiplier is not None:
+            pulumi.set(__self__, "multiplier", multiplier)
+        if multiplier_variable is not None:
+            pulumi.set(__self__, "multiplier_variable", multiplier_variable)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if threshold is not None:
+            pulumi.set(__self__, "threshold", threshold)
+        if threshold_variable is not None:
+            pulumi.set(__self__, "threshold_variable", threshold_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrl")
+    def endpoint_api_url(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        API url of endpoint
+        """
+        return pulumi.get(self, "endpoint_api_url")
+
+    @endpoint_api_url.setter
+    def endpoint_api_url(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_api_url", value)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrlVariable")
+    def endpoint_api_url_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "endpoint_api_url_variable")
+
+    @endpoint_api_url_variable.setter
+    def endpoint_api_url_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_api_url_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Probe interval <10..600> seconds
+          - Range: `20`-`600`
+          - Default value: `30`
+        """
+        return pulumi.get(self, "interval")
+
+    @interval.setter
+    def interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="intervalVariable")
+    def interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interval_variable")
+
+    @interval_variable.setter
+    def interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Probe failure multiplier <1..10> failed attempts
+          - Range: `1`-`10`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "multiplier")
+
+    @multiplier.setter
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "multiplier", value)
+
+    @_builtins.property
+    @pulumi.getter(name="multiplierVariable")
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "multiplier_variable")
+
+    @multiplier_variable.setter
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "multiplier_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Tracker name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Probe Timeout threshold <100..1000> milliseconds
+          - Range: `100`-`1000`
+          - Default value: `1000`
+        """
+        return pulumi.get(self, "threshold")
+
+    @threshold.setter
+    def threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "threshold", value)
+
+    @_builtins.property
+    @pulumi.getter(name="thresholdVariable")
+    def threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "threshold_variable")
+
+    @threshold_variable.setter
+    def threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "threshold_variable", value)
+
+
+class SseZscalerFeatureInterfaceArgsDict(TypedDict):
+    auto: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Auto Tunnel Mode
+    """
+    dpd_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE keepalive interval (seconds)
+      - Range: `10`-`3600`
+      - Default value: `10`
+    """
+    dpd_interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    dpd_retries: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE keepalive retries
+      - Range: `2`-`60`
+      - Default value: `3`
+    """
+    dpd_retries_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_ciphersuite: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IKE identity the IKE preshared secret belongs to
+      - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+      - Default value: `aes256-cbc-sha1`
+    """
+    ike_ciphersuite_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_group: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IKE Diffie Hellman Groups
+      - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+      - Default value: `16`
+    """
+    ike_group_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_local_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+    """
+    ike_local_id_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_rekey_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE rekey interval <300..1209600> seconds
+      - Range: `300`-`86400`
+      - Default value: `14400`
+    """
+    ike_rekey_interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_remote_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+    """
+    ike_remote_id_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ike_version: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IKE Version <1..2>
+      - Range: `1`-`2`
+      - Default value: `2`
+    """
+    ike_version_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    interface_description: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Interface description
+    """
+    interface_description_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    interface_name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Interface name: IPsec when present
+    """
+    ipsec_ciphersuite: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IPsec(ESP) encryption and integrity protocol
+      - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+      - Default value: `aes256-cbc-sha512`
+    """
+    ipsec_ciphersuite_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ipsec_rekey_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    IPsec rekey interval <300..1209600> seconds
+      - Range: `300`-`1209600`
+      - Default value: `3600`
+    """
+    ipsec_rekey_interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ipsec_replay_window: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Replay window size 32..8192 (must be a power of 2)
+      - Default value: `512`
+    """
+    ipsec_replay_window_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ipv4_address: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Assign IPv4 address
+    """
+    ipv4_address_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    mtu: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Interface MTU <576..2000>, in bytes
+      - Range: `576`-`2000`
+      - Default value: `1400`
+    """
+    mtu_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    perfect_forward_secrecy: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IPsec perfect forward secrecy settings
+      - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+      - Default value: `none`
+    """
+    perfect_forward_secrecy_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    pre_shared_key_dynamic: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Use preshared key to authenticate IKE peer
+    """
+    pre_shared_secret: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Use preshared key to authenticate IKE peer
+    """
+    pre_shared_secret_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    shutdown: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Administrative state
+      - Default value: `false`
+    """
+    tcp_mss_adjust: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    TCP MSS on SYN packets, in bytes
+      - Range: `500`-`1460`
+    """
+    tcp_mss_adjust_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    track_enable: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable/disable Zscaler SSE tracking
+      - Default value: `true`
+    """
+    tracker: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Enable tracker for this interface
+      - Default value: `DefaultTracker`
+    """
+    tunnel_dc_preference: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Zscaler SSE Tunnel Data Center
+      - Choices: `primary-dc`, `secondary-dc`
+    """
+    tunnel_destination: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Tunnel destination IP address
+    """
+    tunnel_destination_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tunnel_public_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Public IP required to setup GRE tunnel to Zscaler
+      - Default value: `Auto`
+    """
+    tunnel_public_ip_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tunnel_route_via: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+    """
+    tunnel_route_via_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tunnel_set: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Zscaler SSE Tunnel Provider
+      - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+    """
+    tunnel_source: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Tunnel source IP Address
+    """
+    tunnel_source_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+    """
+    tunnel_source_interface_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    tunnel_source_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    unnumbered: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Unnumbered interface
+    """
+
+@pulumi.input_type
+class SseZscalerFeatureInterfaceArgs:
+    def __init__(__self__, *,
+                 auto: pulumi.Input[Optional[_builtins.bool]] = None,
+                 dpd_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 dpd_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dpd_retries: pulumi.Input[Optional[_builtins.int]] = None,
+                 dpd_retries_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_ciphersuite: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_ciphersuite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_group: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_group_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_local_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_local_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 ike_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_remote_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_remote_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ike_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 ike_version_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_description_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interface_name: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_ciphersuite: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_ciphersuite_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_rekey_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_rekey_interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipsec_replay_window: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipsec_replay_window_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_address: pulumi.Input[Optional[_builtins.str]] = None,
+                 ipv4_address_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mtu: pulumi.Input[Optional[_builtins.int]] = None,
+                 mtu_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 perfect_forward_secrecy: pulumi.Input[Optional[_builtins.str]] = None,
+                 perfect_forward_secrecy_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_key_dynamic: pulumi.Input[Optional[_builtins.bool]] = None,
+                 pre_shared_secret: pulumi.Input[Optional[_builtins.str]] = None,
+                 pre_shared_secret_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 shutdown: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tcp_mss_adjust: pulumi.Input[Optional[_builtins.int]] = None,
+                 tcp_mss_adjust_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 track_enable: pulumi.Input[Optional[_builtins.bool]] = None,
+                 tracker: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_dc_preference: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_destination: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_destination_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_public_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_public_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_route_via_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_set: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_interface_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 tunnel_source_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 unnumbered: pulumi.Input[Optional[_builtins.bool]] = None):
+        """
+        :param pulumi.Input[_builtins.bool] auto: Auto Tunnel Mode
+        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `10`-`3600`
+                 - Default value: `10`
+        :param pulumi.Input[_builtins.str] dpd_interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries
+                 - Range: `2`-`60`
+                 - Default value: `3`
+        :param pulumi.Input[_builtins.str] dpd_retries_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
+        :param pulumi.Input[_builtins.str] ike_ciphersuite_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+                 - Default value: `16`
+        :param pulumi.Input[_builtins.str] ike_group_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_local_id: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        :param pulumi.Input[_builtins.str] ike_local_id_variable: Variable name
+        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <300..1209600> seconds
+                 - Range: `300`-`86400`
+                 - Default value: `14400`
+        :param pulumi.Input[_builtins.str] ike_rekey_interval_variable: Variable name
+        :param pulumi.Input[_builtins.str] ike_remote_id: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        :param pulumi.Input[_builtins.str] ike_remote_id_variable: Variable name
+        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2>
+                 - Range: `1`-`2`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] ike_version_variable: Variable name
+        :param pulumi.Input[_builtins.str] interface_description: Interface description
+        :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
+        :param pulumi.Input[_builtins.str] interface_name: Interface name: IPsec when present
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+                 - Default value: `aes256-cbc-sha512`
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite_variable: Variable name
+        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `300`-`1209600`
+                 - Default value: `3600`
+        :param pulumi.Input[_builtins.str] ipsec_rekey_interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Default value: `512`
+        :param pulumi.Input[_builtins.str] ipsec_replay_window_variable: Variable name
+        :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
+        :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
+        :param pulumi.Input[_builtins.int] mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1400`
+        :param pulumi.Input[_builtins.str] mtu_variable: Variable name
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+                 - Default value: `none`
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
+        :param pulumi.Input[_builtins.bool] pre_shared_key_dynamic: Use preshared key to authenticate IKE peer
+        :param pulumi.Input[_builtins.str] pre_shared_secret: Use preshared key to authenticate IKE peer
+        :param pulumi.Input[_builtins.str] pre_shared_secret_variable: Variable name
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
+        :param pulumi.Input[_builtins.bool] track_enable: Enable/disable Zscaler SSE tracking
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
+                 - Default value: `DefaultTracker`
+        :param pulumi.Input[_builtins.str] tunnel_dc_preference: Zscaler SSE Tunnel Data Center
+                 - Choices: `primary-dc`, `secondary-dc`
+        :param pulumi.Input[_builtins.str] tunnel_destination: Tunnel destination IP address
+        :param pulumi.Input[_builtins.str] tunnel_destination_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_public_ip: Public IP required to setup GRE tunnel to Zscaler
+                 - Default value: `Auto`
+        :param pulumi.Input[_builtins.str] tunnel_public_ip_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        :param pulumi.Input[_builtins.str] tunnel_route_via_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_set: Zscaler SSE Tunnel Provider
+                 - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+        :param pulumi.Input[_builtins.str] tunnel_source: Tunnel source IP Address
+        :param pulumi.Input[_builtins.str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        :param pulumi.Input[_builtins.str] tunnel_source_interface_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_source_variable: Variable name
+        :param pulumi.Input[_builtins.bool] unnumbered: Unnumbered interface
+        """
+        if auto is not None:
+            pulumi.set(__self__, "auto", auto)
+        if dpd_interval is not None:
+            pulumi.set(__self__, "dpd_interval", dpd_interval)
+        if dpd_interval_variable is not None:
+            pulumi.set(__self__, "dpd_interval_variable", dpd_interval_variable)
+        if dpd_retries is not None:
+            pulumi.set(__self__, "dpd_retries", dpd_retries)
+        if dpd_retries_variable is not None:
+            pulumi.set(__self__, "dpd_retries_variable", dpd_retries_variable)
+        if ike_ciphersuite is not None:
+            pulumi.set(__self__, "ike_ciphersuite", ike_ciphersuite)
+        if ike_ciphersuite_variable is not None:
+            pulumi.set(__self__, "ike_ciphersuite_variable", ike_ciphersuite_variable)
+        if ike_group is not None:
+            pulumi.set(__self__, "ike_group", ike_group)
+        if ike_group_variable is not None:
+            pulumi.set(__self__, "ike_group_variable", ike_group_variable)
+        if ike_local_id is not None:
+            pulumi.set(__self__, "ike_local_id", ike_local_id)
+        if ike_local_id_variable is not None:
+            pulumi.set(__self__, "ike_local_id_variable", ike_local_id_variable)
+        if ike_rekey_interval is not None:
+            pulumi.set(__self__, "ike_rekey_interval", ike_rekey_interval)
+        if ike_rekey_interval_variable is not None:
+            pulumi.set(__self__, "ike_rekey_interval_variable", ike_rekey_interval_variable)
+        if ike_remote_id is not None:
+            pulumi.set(__self__, "ike_remote_id", ike_remote_id)
+        if ike_remote_id_variable is not None:
+            pulumi.set(__self__, "ike_remote_id_variable", ike_remote_id_variable)
+        if ike_version is not None:
+            pulumi.set(__self__, "ike_version", ike_version)
+        if ike_version_variable is not None:
+            pulumi.set(__self__, "ike_version_variable", ike_version_variable)
+        if interface_description is not None:
+            pulumi.set(__self__, "interface_description", interface_description)
+        if interface_description_variable is not None:
+            pulumi.set(__self__, "interface_description_variable", interface_description_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if ipsec_ciphersuite is not None:
+            pulumi.set(__self__, "ipsec_ciphersuite", ipsec_ciphersuite)
+        if ipsec_ciphersuite_variable is not None:
+            pulumi.set(__self__, "ipsec_ciphersuite_variable", ipsec_ciphersuite_variable)
+        if ipsec_rekey_interval is not None:
+            pulumi.set(__self__, "ipsec_rekey_interval", ipsec_rekey_interval)
+        if ipsec_rekey_interval_variable is not None:
+            pulumi.set(__self__, "ipsec_rekey_interval_variable", ipsec_rekey_interval_variable)
+        if ipsec_replay_window is not None:
+            pulumi.set(__self__, "ipsec_replay_window", ipsec_replay_window)
+        if ipsec_replay_window_variable is not None:
+            pulumi.set(__self__, "ipsec_replay_window_variable", ipsec_replay_window_variable)
+        if ipv4_address is not None:
+            pulumi.set(__self__, "ipv4_address", ipv4_address)
+        if ipv4_address_variable is not None:
+            pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
+        if mtu is not None:
+            pulumi.set(__self__, "mtu", mtu)
+        if mtu_variable is not None:
+            pulumi.set(__self__, "mtu_variable", mtu_variable)
+        if perfect_forward_secrecy is not None:
+            pulumi.set(__self__, "perfect_forward_secrecy", perfect_forward_secrecy)
+        if perfect_forward_secrecy_variable is not None:
+            pulumi.set(__self__, "perfect_forward_secrecy_variable", perfect_forward_secrecy_variable)
+        if pre_shared_key_dynamic is not None:
+            pulumi.set(__self__, "pre_shared_key_dynamic", pre_shared_key_dynamic)
+        if pre_shared_secret is not None:
+            pulumi.set(__self__, "pre_shared_secret", pre_shared_secret)
+        if pre_shared_secret_variable is not None:
+            pulumi.set(__self__, "pre_shared_secret_variable", pre_shared_secret_variable)
+        if shutdown is not None:
+            pulumi.set(__self__, "shutdown", shutdown)
+        if tcp_mss_adjust is not None:
+            pulumi.set(__self__, "tcp_mss_adjust", tcp_mss_adjust)
+        if tcp_mss_adjust_variable is not None:
+            pulumi.set(__self__, "tcp_mss_adjust_variable", tcp_mss_adjust_variable)
+        if track_enable is not None:
+            pulumi.set(__self__, "track_enable", track_enable)
+        if tracker is not None:
+            pulumi.set(__self__, "tracker", tracker)
+        if tunnel_dc_preference is not None:
+            pulumi.set(__self__, "tunnel_dc_preference", tunnel_dc_preference)
+        if tunnel_destination is not None:
+            pulumi.set(__self__, "tunnel_destination", tunnel_destination)
+        if tunnel_destination_variable is not None:
+            pulumi.set(__self__, "tunnel_destination_variable", tunnel_destination_variable)
+        if tunnel_public_ip is not None:
+            pulumi.set(__self__, "tunnel_public_ip", tunnel_public_ip)
+        if tunnel_public_ip_variable is not None:
+            pulumi.set(__self__, "tunnel_public_ip_variable", tunnel_public_ip_variable)
+        if tunnel_route_via is not None:
+            pulumi.set(__self__, "tunnel_route_via", tunnel_route_via)
+        if tunnel_route_via_variable is not None:
+            pulumi.set(__self__, "tunnel_route_via_variable", tunnel_route_via_variable)
+        if tunnel_set is not None:
+            pulumi.set(__self__, "tunnel_set", tunnel_set)
+        if tunnel_source is not None:
+            pulumi.set(__self__, "tunnel_source", tunnel_source)
+        if tunnel_source_interface is not None:
+            pulumi.set(__self__, "tunnel_source_interface", tunnel_source_interface)
+        if tunnel_source_interface_variable is not None:
+            pulumi.set(__self__, "tunnel_source_interface_variable", tunnel_source_interface_variable)
+        if tunnel_source_variable is not None:
+            pulumi.set(__self__, "tunnel_source_variable", tunnel_source_variable)
+        if unnumbered is not None:
+            pulumi.set(__self__, "unnumbered", unnumbered)
+
+    @_builtins.property
+    @pulumi.getter
+    def auto(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Auto Tunnel Mode
+        """
+        return pulumi.get(self, "auto")
+
+    @auto.setter
+    def auto(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "auto", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdInterval")
+    def dpd_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE keepalive interval (seconds)
+          - Range: `10`-`3600`
+          - Default value: `10`
+        """
+        return pulumi.get(self, "dpd_interval")
+
+    @dpd_interval.setter
+    def dpd_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "dpd_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdIntervalVariable")
+    def dpd_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_interval_variable")
+
+    @dpd_interval_variable.setter
+    def dpd_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dpd_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetries")
+    def dpd_retries(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE keepalive retries
+          - Range: `2`-`60`
+          - Default value: `3`
+        """
+        return pulumi.get(self, "dpd_retries")
+
+    @dpd_retries.setter
+    def dpd_retries(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "dpd_retries", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dpdRetriesVariable")
+    def dpd_retries_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "dpd_retries_variable")
+
+    @dpd_retries_variable.setter
+    def dpd_retries_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dpd_retries_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuite")
+    def ike_ciphersuite(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
+        """
+        return pulumi.get(self, "ike_ciphersuite")
+
+    @ike_ciphersuite.setter
+    def ike_ciphersuite(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_ciphersuite", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeCiphersuiteVariable")
+    def ike_ciphersuite_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_ciphersuite_variable")
+
+    @ike_ciphersuite_variable.setter
+    def ike_ciphersuite_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_ciphersuite_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroup")
+    def ike_group(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+          - Default value: `16`
+        """
+        return pulumi.get(self, "ike_group")
+
+    @ike_group.setter
+    def ike_group(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_group", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeGroupVariable")
+    def ike_group_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_group_variable")
+
+    @ike_group_variable.setter
+    def ike_group_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_group_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeLocalId")
+    def ike_local_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        """
+        return pulumi.get(self, "ike_local_id")
+
+    @ike_local_id.setter
+    def ike_local_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_local_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeLocalIdVariable")
+    def ike_local_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_local_id_variable")
+
+    @ike_local_id_variable.setter
+    def ike_local_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_local_id_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyInterval")
+    def ike_rekey_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE rekey interval <300..1209600> seconds
+          - Range: `300`-`86400`
+          - Default value: `14400`
+        """
+        return pulumi.get(self, "ike_rekey_interval")
+
+    @ike_rekey_interval.setter
+    def ike_rekey_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ike_rekey_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRekeyIntervalVariable")
+    def ike_rekey_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_rekey_interval_variable")
+
+    @ike_rekey_interval_variable.setter
+    def ike_rekey_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_rekey_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRemoteId")
+    def ike_remote_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        """
+        return pulumi.get(self, "ike_remote_id")
+
+    @ike_remote_id.setter
+    def ike_remote_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_remote_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeRemoteIdVariable")
+    def ike_remote_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_remote_id_variable")
+
+    @ike_remote_id_variable.setter
+    def ike_remote_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_remote_id_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeVersion")
+    def ike_version(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IKE Version <1..2>
+          - Range: `1`-`2`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "ike_version")
+
+    @ike_version.setter
+    def ike_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ike_version", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ikeVersionVariable")
+    def ike_version_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ike_version_variable")
+
+    @ike_version_variable.setter
+    def ike_version_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ike_version_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceDescription")
+    def interface_description(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Interface description
+        """
+        return pulumi.get(self, "interface_description")
+
+    @interface_description.setter
+    def interface_description(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interface_description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceDescriptionVariable")
+    def interface_description_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_description_variable")
+
+    @interface_description_variable.setter
+    def interface_description_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interface_description_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Interface name: IPsec when present
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuite")
+    def ipsec_ciphersuite(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+          - Default value: `aes256-cbc-sha512`
+        """
+        return pulumi.get(self, "ipsec_ciphersuite")
+
+    @ipsec_ciphersuite.setter
+    def ipsec_ciphersuite(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_ciphersuite", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecCiphersuiteVariable")
+    def ipsec_ciphersuite_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_ciphersuite_variable")
+
+    @ipsec_ciphersuite_variable.setter
+    def ipsec_ciphersuite_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_ciphersuite_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyInterval")
+    def ipsec_rekey_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `300`-`1209600`
+          - Default value: `3600`
+        """
+        return pulumi.get(self, "ipsec_rekey_interval")
+
+    @ipsec_rekey_interval.setter
+    def ipsec_rekey_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ipsec_rekey_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecRekeyIntervalVariable")
+    def ipsec_rekey_interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_rekey_interval_variable")
+
+    @ipsec_rekey_interval_variable.setter
+    def ipsec_rekey_interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_rekey_interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindow")
+    def ipsec_replay_window(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Replay window size 32..8192 (must be a power of 2)
+          - Default value: `512`
+        """
+        return pulumi.get(self, "ipsec_replay_window")
+
+    @ipsec_replay_window.setter
+    def ipsec_replay_window(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "ipsec_replay_window", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipsecReplayWindowVariable")
+    def ipsec_replay_window_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipsec_replay_window_variable")
+
+    @ipsec_replay_window_variable.setter
+    def ipsec_replay_window_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipsec_replay_window_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipv4Address")
+    def ipv4_address(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Assign IPv4 address
+        """
+        return pulumi.get(self, "ipv4_address")
+
+    @ipv4_address.setter
+    def ipv4_address(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipv4_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipv4AddressVariable")
+    def ipv4_address_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv4_address_variable")
+
+    @ipv4_address_variable.setter
+    def ipv4_address_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipv4_address_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def mtu(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1400`
+        """
+        return pulumi.get(self, "mtu")
+
+    @mtu.setter
+    def mtu(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "mtu", value)
+
+    @_builtins.property
+    @pulumi.getter(name="mtuVariable")
+    def mtu_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mtu_variable")
+
+    @mtu_variable.setter
+    def mtu_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "mtu_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecy")
+    def perfect_forward_secrecy(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IPsec perfect forward secrecy settings
+          - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+          - Default value: `none`
+        """
+        return pulumi.get(self, "perfect_forward_secrecy")
+
+    @perfect_forward_secrecy.setter
+    def perfect_forward_secrecy(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "perfect_forward_secrecy", value)
+
+    @_builtins.property
+    @pulumi.getter(name="perfectForwardSecrecyVariable")
+    def perfect_forward_secrecy_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "perfect_forward_secrecy_variable")
+
+    @perfect_forward_secrecy_variable.setter
+    def perfect_forward_secrecy_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "perfect_forward_secrecy_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedKeyDynamic")
+    def pre_shared_key_dynamic(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_key_dynamic")
+
+    @pre_shared_key_dynamic.setter
+    def pre_shared_key_dynamic(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "pre_shared_key_dynamic", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecret")
+    def pre_shared_secret(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "pre_shared_secret")
+
+    @pre_shared_secret.setter
+    def pre_shared_secret(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "pre_shared_secret", value)
+
+    @_builtins.property
+    @pulumi.getter(name="preSharedSecretVariable")
+    def pre_shared_secret_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "pre_shared_secret_variable")
+
+    @pre_shared_secret_variable.setter
+    def pre_shared_secret_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "pre_shared_secret_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def shutdown(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Administrative state
+          - Default value: `false`
+        """
+        return pulumi.get(self, "shutdown")
+
+    @shutdown.setter
+    def shutdown(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "shutdown", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjust")
+    def tcp_mss_adjust(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
+        """
+        return pulumi.get(self, "tcp_mss_adjust")
+
+    @tcp_mss_adjust.setter
+    def tcp_mss_adjust(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "tcp_mss_adjust", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tcpMssAdjustVariable")
+    def tcp_mss_adjust_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tcp_mss_adjust_variable")
+
+    @tcp_mss_adjust_variable.setter
+    def tcp_mss_adjust_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tcp_mss_adjust_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="trackEnable")
+    def track_enable(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable/disable Zscaler SSE tracking
+          - Default value: `true`
+        """
+        return pulumi.get(self, "track_enable")
+
+    @track_enable.setter
+    def track_enable(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "track_enable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def tracker(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Enable tracker for this interface
+          - Default value: `DefaultTracker`
+        """
+        return pulumi.get(self, "tracker")
+
+    @tracker.setter
+    def tracker(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tracker", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDcPreference")
+    def tunnel_dc_preference(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Zscaler SSE Tunnel Data Center
+          - Choices: `primary-dc`, `secondary-dc`
+        """
+        return pulumi.get(self, "tunnel_dc_preference")
+
+    @tunnel_dc_preference.setter
+    def tunnel_dc_preference(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_dc_preference", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDestination")
+    def tunnel_destination(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Tunnel destination IP address
+        """
+        return pulumi.get(self, "tunnel_destination")
+
+    @tunnel_destination.setter
+    def tunnel_destination(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_destination", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelDestinationVariable")
+    def tunnel_destination_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_destination_variable")
+
+    @tunnel_destination_variable.setter
+    def tunnel_destination_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_destination_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelPublicIp")
+    def tunnel_public_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Public IP required to setup GRE tunnel to Zscaler
+          - Default value: `Auto`
+        """
+        return pulumi.get(self, "tunnel_public_ip")
+
+    @tunnel_public_ip.setter
+    def tunnel_public_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_public_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelPublicIpVariable")
+    def tunnel_public_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_public_ip_variable")
+
+    @tunnel_public_ip_variable.setter
+    def tunnel_public_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_public_ip_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteVia")
+    def tunnel_route_via(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        return pulumi.get(self, "tunnel_route_via")
+
+    @tunnel_route_via.setter
+    def tunnel_route_via(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_route_via", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelRouteViaVariable")
+    def tunnel_route_via_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_route_via_variable")
+
+    @tunnel_route_via_variable.setter
+    def tunnel_route_via_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_route_via_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSet")
+    def tunnel_set(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Zscaler SSE Tunnel Provider
+          - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+        """
+        return pulumi.get(self, "tunnel_set")
+
+    @tunnel_set.setter
+    def tunnel_set(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_set", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSource")
+    def tunnel_source(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Tunnel source IP Address
+        """
+        return pulumi.get(self, "tunnel_source")
+
+    @tunnel_source.setter
+    def tunnel_source(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_source", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterface")
+    def tunnel_source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        return pulumi.get(self, "tunnel_source_interface")
+
+    @tunnel_source_interface.setter
+    def tunnel_source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_source_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceInterfaceVariable")
+    def tunnel_source_interface_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_source_interface_variable")
+
+    @tunnel_source_interface_variable.setter
+    def tunnel_source_interface_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_source_interface_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelSourceVariable")
+    def tunnel_source_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_source_variable")
+
+    @tunnel_source_variable.setter
+    def tunnel_source_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tunnel_source_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def unnumbered(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Unnumbered interface
+        """
+        return pulumi.get(self, "unnumbered")
+
+    @unnumbered.setter
+    def unnumbered(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "unnumbered", value)
+
+
+class SseZscalerFeatureInterfacePairArgsDict(TypedDict):
+    active_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Active Tunnel Interface for Zscaler SSE
+    """
+    active_interface_weight: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Active Tunnel Interface Weight
+      - Range: `1`-`255`
+    """
+    backup_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Backup Tunnel Interface for Zscaler SSE
+    """
+    backup_interface_weight: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Backup Tunnel Interface Weight
+      - Range: `1`-`255`
+    """
+
+@pulumi.input_type
+class SseZscalerFeatureInterfacePairArgs:
+    def __init__(__self__, *,
+                 active_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 active_interface_weight: pulumi.Input[Optional[_builtins.int]] = None,
+                 backup_interface: pulumi.Input[Optional[_builtins.str]] = None,
+                 backup_interface_weight: pulumi.Input[Optional[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] active_interface: Active Tunnel Interface for Zscaler SSE
+        :param pulumi.Input[_builtins.int] active_interface_weight: Active Tunnel Interface Weight
+                 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.str] backup_interface: Backup Tunnel Interface for Zscaler SSE
+        :param pulumi.Input[_builtins.int] backup_interface_weight: Backup Tunnel Interface Weight
+                 - Range: `1`-`255`
+        """
+        if active_interface is not None:
+            pulumi.set(__self__, "active_interface", active_interface)
+        if active_interface_weight is not None:
+            pulumi.set(__self__, "active_interface_weight", active_interface_weight)
+        if backup_interface is not None:
+            pulumi.set(__self__, "backup_interface", backup_interface)
+        if backup_interface_weight is not None:
+            pulumi.set(__self__, "backup_interface_weight", backup_interface_weight)
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterface")
+    def active_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Active Tunnel Interface for Zscaler SSE
+        """
+        return pulumi.get(self, "active_interface")
+
+    @active_interface.setter
+    def active_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "active_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="activeInterfaceWeight")
+    def active_interface_weight(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Active Tunnel Interface Weight
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "active_interface_weight")
+
+    @active_interface_weight.setter
+    def active_interface_weight(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "active_interface_weight", value)
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterface")
+    def backup_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Backup Tunnel Interface for Zscaler SSE
+        """
+        return pulumi.get(self, "backup_interface")
+
+    @backup_interface.setter
+    def backup_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "backup_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="backupInterfaceWeight")
+    def backup_interface_weight(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Backup Tunnel Interface Weight
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "backup_interface_weight")
+
+    @backup_interface_weight.setter
+    def backup_interface_weight(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "backup_interface_weight", value)
+
+
+class SseZscalerFeatureSubLocationArgsDict(TypedDict):
+    aup_enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Displays an Acceptable Use Policy for unauthenticated traffic and require users to accept it
+      - Default value: `false`
+    """
+    aup_enabled_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    aup_timeout: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    How frequently in days the Acceptable Use Policy is displayed to users, Attribute conditional on `aup_enabled` equal to `true`
+      - Range: `1`-`180`
+      - Default value: `1`
+    """
+    aup_timeout_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `aup_enabled` equal to `true`
+    """
+    auth_required: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable Enforce Authentication to require users from this location to authenticate to the service.
+      - Default value: `false`
+    """
+    auth_required_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    block_internet_until_accepted: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Disable all access to the internet, including non-HTTP traffic, until the user accepts the Acceptable Use Policy, Attribute conditional on `aup_enabled` equal to `true`
+      - Default value: `false`
+    """
+    block_internet_until_accepted_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `aup_enabled` equal to `true`
+    """
+    caution_enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enforces a caution policy action and display an end user notification for unauthenticated traffic. If disabled, the action is treated as an allow policy.
+      - Default value: `false`
+    """
+    caution_enabled_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    display_time_unit: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Display time unit for Idle Time to Disassociation, Attribute conditional on `surrogate_ip` equal to `true`
+      - Choices: `MINUTE`, `HOUR`, `DAY`
+      - Default value: `MINUTE`
+    """
+    display_time_unit_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+    """
+    dn_bandwidth: NotRequired[pulumi.Input[Optional[_builtins.float]]]
+    """
+    , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+      - Range: `0.1`-`99999`
+    """
+    dn_bandwidth_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
+    """
+    enforce_bandwidth_control: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Enforce Bandwidth Control for sub location
+      - Choices: `location-bandwidth`, `override`, `disabled`
+      - Default value: `location-bandwidth`
+    """
+    enforce_bandwidth_control_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    force_ssl_inspection: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable to make SSL Interception enforce an Acceptable Use Policy for HTTPS traffic, Attribute conditional on `aup_enabled` equal to `true`
+      - Default value: `false`
+    """
+    force_ssl_inspection_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `aup_enabled` equal to `true`
+    """
+    idle_time: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping., Attribute conditional on `surrogate_ip` equal to `true`
+      - At Least: `1`
+      - Default value: `1`
+    """
+    idle_time_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+    """
+    internal_ips: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['SseZscalerFeatureSubLocationInternalIpArgsDict']]]]]
+    ip_enforced_for_known_browsers: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
+      - Default value: `false`
+    """
+    ip_enforced_for_known_browsers_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    name_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    ofw_enabled: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enforces firewall at the location
+      - Default value: `false`
+    """
+    ofw_enabled_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    refresh_time: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Length of time that surrogate user identity can be used for traffic from known browsers before it must refresh and re-validate the surrogate user identity, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+      - At Least: `1`
+      - Default value: `1`
+    """
+    refresh_time_unit: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Refresh Time display unit, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+      - Choices: `MINUTE`, `HOUR`, `DAY`
+      - Default value: `MINUTE`
+    """
+    refresh_time_unit_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+    """
+    refresh_time_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+    """
+    service_vpn_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    service_vpns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    surrogate_ip: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `auth_required` equal to `true`
+      - Default value: `false`
+    """
+    surrogate_ip_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `auth_required` equal to `true`
+    """
+    up_bandwidth: NotRequired[pulumi.Input[Optional[_builtins.float]]]
+    """
+    , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+      - Range: `0.1`-`99999`
+    """
+    up_bandwidth_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
+    """
+
+@pulumi.input_type
+class SseZscalerFeatureSubLocationArgs:
+    def __init__(__self__, *,
+                 aup_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 aup_enabled_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 aup_timeout: pulumi.Input[Optional[_builtins.int]] = None,
+                 aup_timeout_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 auth_required: pulumi.Input[Optional[_builtins.bool]] = None,
+                 auth_required_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 block_internet_until_accepted: pulumi.Input[Optional[_builtins.bool]] = None,
+                 block_internet_until_accepted_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 caution_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 caution_enabled_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 display_time_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 display_time_unit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 dn_bandwidth: pulumi.Input[Optional[_builtins.float]] = None,
+                 dn_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 enforce_bandwidth_control: pulumi.Input[Optional[_builtins.str]] = None,
+                 enforce_bandwidth_control_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 force_ssl_inspection: pulumi.Input[Optional[_builtins.bool]] = None,
+                 force_ssl_inspection_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 idle_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 idle_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_ips: pulumi.Input[Optional[Sequence[pulumi.Input['SseZscalerFeatureSubLocationInternalIpArgs']]]] = None,
+                 ip_enforced_for_known_browsers: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ip_enforced_for_known_browsers_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 name_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 ofw_enabled: pulumi.Input[Optional[_builtins.bool]] = None,
+                 ofw_enabled_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 refresh_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 refresh_time_unit: pulumi.Input[Optional[_builtins.str]] = None,
+                 refresh_time_unit_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 refresh_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_vpn_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 surrogate_ip: pulumi.Input[Optional[_builtins.bool]] = None,
+                 surrogate_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 up_bandwidth: pulumi.Input[Optional[_builtins.float]] = None,
+                 up_bandwidth_variable: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.bool] aup_enabled: Displays an Acceptable Use Policy for unauthenticated traffic and require users to accept it
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] aup_enabled_variable: Variable name
+        :param pulumi.Input[_builtins.int] aup_timeout: How frequently in days the Acceptable Use Policy is displayed to users, Attribute conditional on `aup_enabled` equal to `true`
+                 - Range: `1`-`180`
+                 - Default value: `1`
+        :param pulumi.Input[_builtins.str] aup_timeout_variable: Variable name, Attribute conditional on `aup_enabled` equal to `true`
+        :param pulumi.Input[_builtins.bool] auth_required: Enable Enforce Authentication to require users from this location to authenticate to the service.
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] auth_required_variable: Variable name
+        :param pulumi.Input[_builtins.bool] block_internet_until_accepted: Disable all access to the internet, including non-HTTP traffic, until the user accepts the Acceptable Use Policy, Attribute conditional on `aup_enabled` equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] block_internet_until_accepted_variable: Variable name, Attribute conditional on `aup_enabled` equal to `true`
+        :param pulumi.Input[_builtins.bool] caution_enabled: Enforces a caution policy action and display an end user notification for unauthenticated traffic. If disabled, the action is treated as an allow policy.
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] caution_enabled_variable: Variable name
+        :param pulumi.Input[_builtins.str] display_time_unit: Display time unit for Idle Time to Disassociation, Attribute conditional on `surrogate_ip` equal to `true`
+                 - Choices: `MINUTE`, `HOUR`, `DAY`
+                 - Default value: `MINUTE`
+        :param pulumi.Input[_builtins.str] display_time_unit_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+        :param pulumi.Input[_builtins.float] dn_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+                 - Range: `0.1`-`99999`
+        :param pulumi.Input[_builtins.str] dn_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        :param pulumi.Input[_builtins.str] enforce_bandwidth_control: Enforce Bandwidth Control for sub location
+                 - Choices: `location-bandwidth`, `override`, `disabled`
+                 - Default value: `location-bandwidth`
+        :param pulumi.Input[_builtins.str] enforce_bandwidth_control_variable: Variable name
+        :param pulumi.Input[_builtins.bool] force_ssl_inspection: Enable to make SSL Interception enforce an Acceptable Use Policy for HTTPS traffic, Attribute conditional on `aup_enabled` equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] force_ssl_inspection_variable: Variable name, Attribute conditional on `aup_enabled` equal to `true`
+        :param pulumi.Input[_builtins.int] idle_time: Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping., Attribute conditional on `surrogate_ip` equal to `true`
+                 - At Least: `1`
+                 - Default value: `1`
+        :param pulumi.Input[_builtins.str] idle_time_variable: Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+        :param pulumi.Input[_builtins.bool] ip_enforced_for_known_browsers: If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] ip_enforced_for_known_browsers_variable: Variable name
+        :param pulumi.Input[_builtins.str] name_variable: Variable name
+        :param pulumi.Input[_builtins.bool] ofw_enabled: Enforces firewall at the location
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] ofw_enabled_variable: Variable name
+        :param pulumi.Input[_builtins.int] refresh_time: Length of time that surrogate user identity can be used for traffic from known browsers before it must refresh and re-validate the surrogate user identity, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+                 - At Least: `1`
+                 - Default value: `1`
+        :param pulumi.Input[_builtins.str] refresh_time_unit: Refresh Time display unit, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+                 - Choices: `MINUTE`, `HOUR`, `DAY`
+                 - Default value: `MINUTE`
+        :param pulumi.Input[_builtins.str] refresh_time_unit_variable: Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+        :param pulumi.Input[_builtins.str] refresh_time_variable: Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+        :param pulumi.Input[_builtins.str] service_vpn_variable: Variable name
+        :param pulumi.Input[_builtins.bool] surrogate_ip: Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `auth_required` equal to `true`
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] surrogate_ip_variable: Variable name, Attribute conditional on `auth_required` equal to `true`
+        :param pulumi.Input[_builtins.float] up_bandwidth: , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+                 - Range: `0.1`-`99999`
+        :param pulumi.Input[_builtins.str] up_bandwidth_variable: Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        """
+        if aup_enabled is not None:
+            pulumi.set(__self__, "aup_enabled", aup_enabled)
+        if aup_enabled_variable is not None:
+            pulumi.set(__self__, "aup_enabled_variable", aup_enabled_variable)
+        if aup_timeout is not None:
+            pulumi.set(__self__, "aup_timeout", aup_timeout)
+        if aup_timeout_variable is not None:
+            pulumi.set(__self__, "aup_timeout_variable", aup_timeout_variable)
+        if auth_required is not None:
+            pulumi.set(__self__, "auth_required", auth_required)
+        if auth_required_variable is not None:
+            pulumi.set(__self__, "auth_required_variable", auth_required_variable)
+        if block_internet_until_accepted is not None:
+            pulumi.set(__self__, "block_internet_until_accepted", block_internet_until_accepted)
+        if block_internet_until_accepted_variable is not None:
+            pulumi.set(__self__, "block_internet_until_accepted_variable", block_internet_until_accepted_variable)
+        if caution_enabled is not None:
+            pulumi.set(__self__, "caution_enabled", caution_enabled)
+        if caution_enabled_variable is not None:
+            pulumi.set(__self__, "caution_enabled_variable", caution_enabled_variable)
+        if display_time_unit is not None:
+            pulumi.set(__self__, "display_time_unit", display_time_unit)
+        if display_time_unit_variable is not None:
+            pulumi.set(__self__, "display_time_unit_variable", display_time_unit_variable)
+        if dn_bandwidth is not None:
+            pulumi.set(__self__, "dn_bandwidth", dn_bandwidth)
+        if dn_bandwidth_variable is not None:
+            pulumi.set(__self__, "dn_bandwidth_variable", dn_bandwidth_variable)
+        if enforce_bandwidth_control is not None:
+            pulumi.set(__self__, "enforce_bandwidth_control", enforce_bandwidth_control)
+        if enforce_bandwidth_control_variable is not None:
+            pulumi.set(__self__, "enforce_bandwidth_control_variable", enforce_bandwidth_control_variable)
+        if force_ssl_inspection is not None:
+            pulumi.set(__self__, "force_ssl_inspection", force_ssl_inspection)
+        if force_ssl_inspection_variable is not None:
+            pulumi.set(__self__, "force_ssl_inspection_variable", force_ssl_inspection_variable)
+        if idle_time is not None:
+            pulumi.set(__self__, "idle_time", idle_time)
+        if idle_time_variable is not None:
+            pulumi.set(__self__, "idle_time_variable", idle_time_variable)
+        if internal_ips is not None:
+            pulumi.set(__self__, "internal_ips", internal_ips)
+        if ip_enforced_for_known_browsers is not None:
+            pulumi.set(__self__, "ip_enforced_for_known_browsers", ip_enforced_for_known_browsers)
+        if ip_enforced_for_known_browsers_variable is not None:
+            pulumi.set(__self__, "ip_enforced_for_known_browsers_variable", ip_enforced_for_known_browsers_variable)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if name_variable is not None:
+            pulumi.set(__self__, "name_variable", name_variable)
+        if ofw_enabled is not None:
+            pulumi.set(__self__, "ofw_enabled", ofw_enabled)
+        if ofw_enabled_variable is not None:
+            pulumi.set(__self__, "ofw_enabled_variable", ofw_enabled_variable)
+        if refresh_time is not None:
+            pulumi.set(__self__, "refresh_time", refresh_time)
+        if refresh_time_unit is not None:
+            pulumi.set(__self__, "refresh_time_unit", refresh_time_unit)
+        if refresh_time_unit_variable is not None:
+            pulumi.set(__self__, "refresh_time_unit_variable", refresh_time_unit_variable)
+        if refresh_time_variable is not None:
+            pulumi.set(__self__, "refresh_time_variable", refresh_time_variable)
+        if service_vpn_variable is not None:
+            pulumi.set(__self__, "service_vpn_variable", service_vpn_variable)
+        if service_vpns is not None:
+            pulumi.set(__self__, "service_vpns", service_vpns)
+        if surrogate_ip is not None:
+            pulumi.set(__self__, "surrogate_ip", surrogate_ip)
+        if surrogate_ip_variable is not None:
+            pulumi.set(__self__, "surrogate_ip_variable", surrogate_ip_variable)
+        if up_bandwidth is not None:
+            pulumi.set(__self__, "up_bandwidth", up_bandwidth)
+        if up_bandwidth_variable is not None:
+            pulumi.set(__self__, "up_bandwidth_variable", up_bandwidth_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="aupEnabled")
+    def aup_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Displays an Acceptable Use Policy for unauthenticated traffic and require users to accept it
+          - Default value: `false`
+        """
+        return pulumi.get(self, "aup_enabled")
+
+    @aup_enabled.setter
+    def aup_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "aup_enabled", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aupEnabledVariable")
+    def aup_enabled_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "aup_enabled_variable")
+
+    @aup_enabled_variable.setter
+    def aup_enabled_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "aup_enabled_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aupTimeout")
+    def aup_timeout(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        How frequently in days the Acceptable Use Policy is displayed to users, Attribute conditional on `aup_enabled` equal to `true`
+          - Range: `1`-`180`
+          - Default value: `1`
+        """
+        return pulumi.get(self, "aup_timeout")
+
+    @aup_timeout.setter
+    def aup_timeout(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "aup_timeout", value)
+
+    @_builtins.property
+    @pulumi.getter(name="aupTimeoutVariable")
+    def aup_timeout_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `aup_enabled` equal to `true`
+        """
+        return pulumi.get(self, "aup_timeout_variable")
+
+    @aup_timeout_variable.setter
+    def aup_timeout_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "aup_timeout_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authRequired")
+    def auth_required(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable Enforce Authentication to require users from this location to authenticate to the service.
+          - Default value: `false`
+        """
+        return pulumi.get(self, "auth_required")
+
+    @auth_required.setter
+    def auth_required(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "auth_required", value)
+
+    @_builtins.property
+    @pulumi.getter(name="authRequiredVariable")
+    def auth_required_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "auth_required_variable")
+
+    @auth_required_variable.setter
+    def auth_required_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "auth_required_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockInternetUntilAccepted")
+    def block_internet_until_accepted(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Disable all access to the internet, including non-HTTP traffic, until the user accepts the Acceptable Use Policy, Attribute conditional on `aup_enabled` equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "block_internet_until_accepted")
+
+    @block_internet_until_accepted.setter
+    def block_internet_until_accepted(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "block_internet_until_accepted", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockInternetUntilAcceptedVariable")
+    def block_internet_until_accepted_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `aup_enabled` equal to `true`
+        """
+        return pulumi.get(self, "block_internet_until_accepted_variable")
+
+    @block_internet_until_accepted_variable.setter
+    def block_internet_until_accepted_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "block_internet_until_accepted_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="cautionEnabled")
+    def caution_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enforces a caution policy action and display an end user notification for unauthenticated traffic. If disabled, the action is treated as an allow policy.
+          - Default value: `false`
+        """
+        return pulumi.get(self, "caution_enabled")
+
+    @caution_enabled.setter
+    def caution_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "caution_enabled", value)
+
+    @_builtins.property
+    @pulumi.getter(name="cautionEnabledVariable")
+    def caution_enabled_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "caution_enabled_variable")
+
+    @caution_enabled_variable.setter
+    def caution_enabled_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "caution_enabled_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="displayTimeUnit")
+    def display_time_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Display time unit for Idle Time to Disassociation, Attribute conditional on `surrogate_ip` equal to `true`
+          - Choices: `MINUTE`, `HOUR`, `DAY`
+          - Default value: `MINUTE`
+        """
+        return pulumi.get(self, "display_time_unit")
+
+    @display_time_unit.setter
+    def display_time_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "display_time_unit", value)
+
+    @_builtins.property
+    @pulumi.getter(name="displayTimeUnitVariable")
+    def display_time_unit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+        """
+        return pulumi.get(self, "display_time_unit_variable")
+
+    @display_time_unit_variable.setter
+    def display_time_unit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "display_time_unit_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dnBandwidth")
+    def dn_bandwidth(self) -> pulumi.Input[Optional[_builtins.float]]:
+        """
+        , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+          - Range: `0.1`-`99999`
+        """
+        return pulumi.get(self, "dn_bandwidth")
+
+    @dn_bandwidth.setter
+    def dn_bandwidth(self, value: pulumi.Input[Optional[_builtins.float]]):
+        pulumi.set(self, "dn_bandwidth", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dnBandwidthVariable")
+    def dn_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        """
+        return pulumi.get(self, "dn_bandwidth_variable")
+
+    @dn_bandwidth_variable.setter
+    def dn_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "dn_bandwidth_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforceBandwidthControl")
+    def enforce_bandwidth_control(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Enforce Bandwidth Control for sub location
+          - Choices: `location-bandwidth`, `override`, `disabled`
+          - Default value: `location-bandwidth`
+        """
+        return pulumi.get(self, "enforce_bandwidth_control")
+
+    @enforce_bandwidth_control.setter
+    def enforce_bandwidth_control(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "enforce_bandwidth_control", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enforceBandwidthControlVariable")
+    def enforce_bandwidth_control_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enforce_bandwidth_control_variable")
+
+    @enforce_bandwidth_control_variable.setter
+    def enforce_bandwidth_control_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "enforce_bandwidth_control_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="forceSslInspection")
+    def force_ssl_inspection(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable to make SSL Interception enforce an Acceptable Use Policy for HTTPS traffic, Attribute conditional on `aup_enabled` equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "force_ssl_inspection")
+
+    @force_ssl_inspection.setter
+    def force_ssl_inspection(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "force_ssl_inspection", value)
+
+    @_builtins.property
+    @pulumi.getter(name="forceSslInspectionVariable")
+    def force_ssl_inspection_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `aup_enabled` equal to `true`
+        """
+        return pulumi.get(self, "force_ssl_inspection_variable")
+
+    @force_ssl_inspection_variable.setter
+    def force_ssl_inspection_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "force_ssl_inspection_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="idleTime")
+    def idle_time(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping., Attribute conditional on `surrogate_ip` equal to `true`
+          - At Least: `1`
+          - Default value: `1`
+        """
+        return pulumi.get(self, "idle_time")
+
+    @idle_time.setter
+    def idle_time(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "idle_time", value)
+
+    @_builtins.property
+    @pulumi.getter(name="idleTimeVariable")
+    def idle_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `surrogate_ip` equal to `true`
+        """
+        return pulumi.get(self, "idle_time_variable")
+
+    @idle_time_variable.setter
+    def idle_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "idle_time_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="internalIps")
+    def internal_ips(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['SseZscalerFeatureSubLocationInternalIpArgs']]]]:
+        return pulumi.get(self, "internal_ips")
+
+    @internal_ips.setter
+    def internal_ips(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['SseZscalerFeatureSubLocationInternalIpArgs']]]]):
+        pulumi.set(self, "internal_ips", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipEnforcedForKnownBrowsers")
+    def ip_enforced_for_known_browsers(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
+          - Default value: `false`
+        """
+        return pulumi.get(self, "ip_enforced_for_known_browsers")
+
+    @ip_enforced_for_known_browsers.setter
+    def ip_enforced_for_known_browsers(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "ip_enforced_for_known_browsers", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipEnforcedForKnownBrowsersVariable")
+    def ip_enforced_for_known_browsers_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ip_enforced_for_known_browsers_variable")
+
+    @ip_enforced_for_known_browsers_variable.setter
+    def ip_enforced_for_known_browsers_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ip_enforced_for_known_browsers_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="nameVariable")
+    def name_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name_variable")
+
+    @name_variable.setter
+    def name_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "name_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ofwEnabled")
+    def ofw_enabled(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enforces firewall at the location
+          - Default value: `false`
+        """
+        return pulumi.get(self, "ofw_enabled")
+
+    @ofw_enabled.setter
+    def ofw_enabled(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "ofw_enabled", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ofwEnabledVariable")
+    def ofw_enabled_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ofw_enabled_variable")
+
+    @ofw_enabled_variable.setter
+    def ofw_enabled_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ofw_enabled_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="refreshTime")
+    def refresh_time(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Length of time that surrogate user identity can be used for traffic from known browsers before it must refresh and re-validate the surrogate user identity, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+          - At Least: `1`
+          - Default value: `1`
+        """
+        return pulumi.get(self, "refresh_time")
+
+    @refresh_time.setter
+    def refresh_time(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "refresh_time", value)
+
+    @_builtins.property
+    @pulumi.getter(name="refreshTimeUnit")
+    def refresh_time_unit(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Refresh Time display unit, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+          - Choices: `MINUTE`, `HOUR`, `DAY`
+          - Default value: `MINUTE`
+        """
+        return pulumi.get(self, "refresh_time_unit")
+
+    @refresh_time_unit.setter
+    def refresh_time_unit(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "refresh_time_unit", value)
+
+    @_builtins.property
+    @pulumi.getter(name="refreshTimeUnitVariable")
+    def refresh_time_unit_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+        """
+        return pulumi.get(self, "refresh_time_unit_variable")
+
+    @refresh_time_unit_variable.setter
+    def refresh_time_unit_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "refresh_time_unit_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="refreshTimeVariable")
+    def refresh_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `ip_enforced_for_known_browsers` equal to `true`
+        """
+        return pulumi.get(self, "refresh_time_variable")
+
+    @refresh_time_variable.setter
+    def refresh_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "refresh_time_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceVpnVariable")
+    def service_vpn_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "service_vpn_variable")
+
+    @service_vpn_variable.setter
+    def service_vpn_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_vpn_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceVpns")
+    def service_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "service_vpns")
+
+    @service_vpns.setter
+    def service_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "service_vpns", value)
+
+    @_builtins.property
+    @pulumi.getter(name="surrogateIp")
+    def surrogate_ip(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `auth_required` equal to `true`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "surrogate_ip")
+
+    @surrogate_ip.setter
+    def surrogate_ip(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "surrogate_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="surrogateIpVariable")
+    def surrogate_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `auth_required` equal to `true`
+        """
+        return pulumi.get(self, "surrogate_ip_variable")
+
+    @surrogate_ip_variable.setter
+    def surrogate_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "surrogate_ip_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="upBandwidth")
+    def up_bandwidth(self) -> pulumi.Input[Optional[_builtins.float]]:
+        """
+        , Attribute conditional on `enforce_bandwidth_control` equal to `override`
+          - Range: `0.1`-`99999`
+        """
+        return pulumi.get(self, "up_bandwidth")
+
+    @up_bandwidth.setter
+    def up_bandwidth(self, value: pulumi.Input[Optional[_builtins.float]]):
+        pulumi.set(self, "up_bandwidth", value)
+
+    @_builtins.property
+    @pulumi.getter(name="upBandwidthVariable")
+    def up_bandwidth_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `enforce_bandwidth_control` equal to `override`
+        """
+        return pulumi.get(self, "up_bandwidth_variable")
+
+    @up_bandwidth_variable.setter
+    def up_bandwidth_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "up_bandwidth_variable", value)
+
+
+class SseZscalerFeatureSubLocationInternalIpArgsDict(TypedDict):
+    internal_ip_value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    internal_ip_value_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+
+@pulumi.input_type
+class SseZscalerFeatureSubLocationInternalIpArgs:
+    def __init__(__self__, *,
+                 internal_ip_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 internal_ip_value_variable: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] internal_ip_value_variable: Variable name
+        """
+        if internal_ip_value is not None:
+            pulumi.set(__self__, "internal_ip_value", internal_ip_value)
+        if internal_ip_value_variable is not None:
+            pulumi.set(__self__, "internal_ip_value_variable", internal_ip_value_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="internalIpValue")
+    def internal_ip_value(self) -> pulumi.Input[Optional[_builtins.str]]:
+        return pulumi.get(self, "internal_ip_value")
+
+    @internal_ip_value.setter
+    def internal_ip_value(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "internal_ip_value", value)
+
+    @_builtins.property
+    @pulumi.getter(name="internalIpValueVariable")
+    def internal_ip_value_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "internal_ip_value_variable")
+
+    @internal_ip_value_variable.setter
+    def internal_ip_value_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "internal_ip_value_variable", value)
+
+
+class SseZscalerFeatureTrackerArgsDict(TypedDict):
+    endpoint_api_url: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    API url of endpoint
+    """
+    endpoint_api_url_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Probe interval <10..600> seconds
+      - Range: `20`-`600`
+      - Default value: `30`
+    """
+    interval_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    multiplier: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Probe failure multiplier <1..10> failed attempts
+      - Range: `1`-`10`
+      - Default value: `2`
+    """
+    multiplier_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Tracker name
+    """
+    threshold: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Probe Timeout threshold <100..1000> milliseconds
+      - Range: `100`-`1000`
+      - Default value: `1000`
+    """
+    threshold_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+
+@pulumi.input_type
+class SseZscalerFeatureTrackerArgs:
+    def __init__(__self__, *,
+                 endpoint_api_url: pulumi.Input[Optional[_builtins.str]] = None,
+                 endpoint_api_url_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 interval_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 multiplier: pulumi.Input[Optional[_builtins.int]] = None,
+                 multiplier_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 threshold: pulumi.Input[Optional[_builtins.int]] = None,
+                 threshold_variable: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] endpoint_api_url: API url of endpoint
+        :param pulumi.Input[_builtins.str] endpoint_api_url_variable: Variable name
+        :param pulumi.Input[_builtins.int] interval: Probe interval <10..600> seconds
+                 - Range: `20`-`600`
+                 - Default value: `30`
+        :param pulumi.Input[_builtins.str] interval_variable: Variable name
+        :param pulumi.Input[_builtins.int] multiplier: Probe failure multiplier <1..10> failed attempts
+                 - Range: `1`-`10`
+                 - Default value: `2`
+        :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
+        :param pulumi.Input[_builtins.str] name: Tracker name
+        :param pulumi.Input[_builtins.int] threshold: Probe Timeout threshold <100..1000> milliseconds
+                 - Range: `100`-`1000`
+                 - Default value: `1000`
+        :param pulumi.Input[_builtins.str] threshold_variable: Variable name
+        """
+        if endpoint_api_url is not None:
+            pulumi.set(__self__, "endpoint_api_url", endpoint_api_url)
+        if endpoint_api_url_variable is not None:
+            pulumi.set(__self__, "endpoint_api_url_variable", endpoint_api_url_variable)
+        if interval is not None:
+            pulumi.set(__self__, "interval", interval)
+        if interval_variable is not None:
+            pulumi.set(__self__, "interval_variable", interval_variable)
+        if multiplier is not None:
+            pulumi.set(__self__, "multiplier", multiplier)
+        if multiplier_variable is not None:
+            pulumi.set(__self__, "multiplier_variable", multiplier_variable)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if threshold is not None:
+            pulumi.set(__self__, "threshold", threshold)
+        if threshold_variable is not None:
+            pulumi.set(__self__, "threshold_variable", threshold_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrl")
+    def endpoint_api_url(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        API url of endpoint
+        """
+        return pulumi.get(self, "endpoint_api_url")
+
+    @endpoint_api_url.setter
+    def endpoint_api_url(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_api_url", value)
+
+    @_builtins.property
+    @pulumi.getter(name="endpointApiUrlVariable")
+    def endpoint_api_url_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "endpoint_api_url_variable")
+
+    @endpoint_api_url_variable.setter
+    def endpoint_api_url_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "endpoint_api_url_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Probe interval <10..600> seconds
+          - Range: `20`-`600`
+          - Default value: `30`
+        """
+        return pulumi.get(self, "interval")
+
+    @interval.setter
+    def interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="intervalVariable")
+    def interval_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interval_variable")
+
+    @interval_variable.setter
+    def interval_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "interval_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def multiplier(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Probe failure multiplier <1..10> failed attempts
+          - Range: `1`-`10`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "multiplier")
+
+    @multiplier.setter
+    def multiplier(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "multiplier", value)
+
+    @_builtins.property
+    @pulumi.getter(name="multiplierVariable")
+    def multiplier_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "multiplier_variable")
+
+    @multiplier_variable.setter
+    def multiplier_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "multiplier_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Tracker name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def threshold(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Probe Timeout threshold <100..1000> milliseconds
+          - Range: `100`-`1000`
+          - Default value: `1000`
+        """
+        return pulumi.get(self, "threshold")
+
+    @threshold.setter
+    def threshold(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "threshold", value)
+
+    @_builtins.property
+    @pulumi.getter(name="thresholdVariable")
+    def threshold_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "threshold_variable")
+
+    @threshold_variable.setter
+    def threshold_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "threshold_variable", value)
+
+
 class StandardCommunityListPolicyObjectEntryArgsDict(TypedDict):
     community: pulumi.Input[_builtins.str]
     """
@@ -65488,6 +68979,1387 @@ class TlsSslDecryptionPolicyDefinitionUrlRuleArgs:
     @tls_ssl_profile_policy_version.setter
     def tls_ssl_profile_policy_version(self, value: pulumi.Input[Optional[_builtins.int]]):
         pulumi.set(self, "tls_ssl_profile_policy_version", value)
+
+
+class TopologyCustomControlFeatureSequenceArgsDict(TypedDict):
+    action_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntryArgsDict']]]]]
+    base_action: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Base Action
+      - Choices: `reject`, `accept`
+    """
+    id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Sequence Id
+      - Range: `1`-`65536`
+    """
+    ip_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Sequence IP Type
+      - Choices: `ipv4`, `ipv6`, `all`
+    """
+    match_entries: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryArgsDict']]]]]
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Sequence Name
+    """
+    type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Sequence Type
+      - Choices: `route`, `tloc`
+    """
+
+@pulumi.input_type
+class TopologyCustomControlFeatureSequenceArgs:
+    def __init__(__self__, *,
+                 action_entries: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntryArgs']]]] = None,
+                 base_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 id: pulumi.Input[Optional[_builtins.int]] = None,
+                 ip_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_entries: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 type: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] base_action: Base Action
+                 - Choices: `reject`, `accept`
+        :param pulumi.Input[_builtins.int] id: Sequence Id
+                 - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.str] ip_type: Sequence IP Type
+                 - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] name: Sequence Name
+        :param pulumi.Input[_builtins.str] type: Sequence Type
+                 - Choices: `route`, `tloc`
+        """
+        if action_entries is not None:
+            pulumi.set(__self__, "action_entries", action_entries)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if ip_type is not None:
+            pulumi.set(__self__, "ip_type", ip_type)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
+
+    @_builtins.property
+    @pulumi.getter(name="actionEntries")
+    def action_entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntryArgs']]]]:
+        return pulumi.get(self, "action_entries")
+
+    @action_entries.setter
+    def action_entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntryArgs']]]]):
+        pulumi.set(self, "action_entries", value)
+
+    @_builtins.property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Base Action
+          - Choices: `reject`, `accept`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "base_action", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipType")
+    def ip_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Sequence IP Type
+          - Choices: `ipv4`, `ipv6`, `all`
+        """
+        return pulumi.get(self, "ip_type")
+
+    @ip_type.setter
+    def ip_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ip_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryArgs']]]]:
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Sequence Name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Sequence Type
+          - Choices: `route`, `tloc`
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "type", value)
+
+
+class TopologyCustomControlFeatureSequenceActionEntryArgsDict(TypedDict):
+    export_to_vpns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Export to VPN list
+    """
+    set_parameters: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntrySetParameterArgsDict']]]]]
+
+@pulumi.input_type
+class TopologyCustomControlFeatureSequenceActionEntryArgs:
+    def __init__(__self__, *,
+                 export_to_vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 set_parameters: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntrySetParameterArgs']]]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] export_to_vpns: Export to VPN list
+        """
+        if export_to_vpns is not None:
+            pulumi.set(__self__, "export_to_vpns", export_to_vpns)
+        if set_parameters is not None:
+            pulumi.set(__self__, "set_parameters", set_parameters)
+
+    @_builtins.property
+    @pulumi.getter(name="exportToVpns")
+    def export_to_vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Export to VPN list
+        """
+        return pulumi.get(self, "export_to_vpns")
+
+    @export_to_vpns.setter
+    def export_to_vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "export_to_vpns", value)
+
+    @_builtins.property
+    @pulumi.getter(name="setParameters")
+    def set_parameters(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntrySetParameterArgs']]]]:
+        return pulumi.get(self, "set_parameters")
+
+    @set_parameters.setter
+    def set_parameters(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceActionEntrySetParameterArgs']]]]):
+        pulumi.set(self, "set_parameters", value)
+
+
+class TopologyCustomControlFeatureSequenceActionEntrySetParameterArgsDict(TypedDict):
+    affinity: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Set affinity
+      - Range: `0`-`63`
+    """
+    community: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set community value, e.g. `1000:10000` or `internet` or `local-AS`
+    """
+    community_additive: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Set community additive
+    """
+    omp_tag: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Set OMP tag
+      - Range: `0`-`4294967295`
+    """
+    preference: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Set preference
+      - Range: `0`-`4294967295`
+    """
+    service_chain_tloc_color: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service chain TLOC color
+    """
+    service_chain_tloc_encapsulation: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service chain TLOC encapsulation
+      - Choices: `ipsec`, `gre`
+    """
+    service_chain_tloc_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service chain TLOC IP address
+    """
+    service_chain_tloc_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service chain TLOC list ID
+    """
+    service_chain_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service chain type
+      - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+    """
+    service_chain_vpn: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Set service chain VPN ID
+      - Range: `0`-`65530`
+    """
+    service_tloc_color: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service TLOC color
+    """
+    service_tloc_encapsulation: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service TLOC encapsulation
+      - Choices: `ipsec`, `gre`
+    """
+    service_tloc_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service TLOC IP address
+    """
+    service_tloc_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service TLOC list ID
+    """
+    service_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set service type
+      - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+    """
+    service_vpn: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Set service VPN ID
+      - Range: `0`-`65530`
+    """
+    tloc_action: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set TLOC action
+      - Choices: `strict`, `primary`, `backup`, `ecmp`
+    """
+    tloc_color: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set TLOC color
+    """
+    tloc_encapsulation: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set TLOC encapsulation
+      - Choices: `ipsec`, `gre`
+    """
+    tloc_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set TLOC IP address
+    """
+    tloc_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Set TLOC list ID
+    """
+
+@pulumi.input_type
+class TopologyCustomControlFeatureSequenceActionEntrySetParameterArgs:
+    def __init__(__self__, *,
+                 affinity: pulumi.Input[Optional[_builtins.int]] = None,
+                 community: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_additive: pulumi.Input[Optional[_builtins.bool]] = None,
+                 omp_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 preference: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_chain_tloc_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_chain_tloc_encapsulation: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_chain_tloc_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_chain_tloc_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_chain_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_chain_vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 service_tloc_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_tloc_encapsulation: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_tloc_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_tloc_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 service_vpn: pulumi.Input[Optional[_builtins.int]] = None,
+                 tloc_action: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_encapsulation: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_list_id: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.int] affinity: Set affinity
+                 - Range: `0`-`63`
+        :param pulumi.Input[_builtins.str] community: Set community value, e.g. `1000:10000` or `internet` or `local-AS`
+        :param pulumi.Input[_builtins.bool] community_additive: Set community additive
+        :param pulumi.Input[_builtins.int] omp_tag: Set OMP tag
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.int] preference: Set preference
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] service_chain_tloc_color: Set service chain TLOC color
+        :param pulumi.Input[_builtins.str] service_chain_tloc_encapsulation: Set service chain TLOC encapsulation
+                 - Choices: `ipsec`, `gre`
+        :param pulumi.Input[_builtins.str] service_chain_tloc_ip: Set service chain TLOC IP address
+        :param pulumi.Input[_builtins.str] service_chain_tloc_list_id: Set service chain TLOC list ID
+        :param pulumi.Input[_builtins.str] service_chain_type: Set service chain type
+                 - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        :param pulumi.Input[_builtins.int] service_chain_vpn: Set service chain VPN ID
+                 - Range: `0`-`65530`
+        :param pulumi.Input[_builtins.str] service_tloc_color: Set service TLOC color
+        :param pulumi.Input[_builtins.str] service_tloc_encapsulation: Set service TLOC encapsulation
+                 - Choices: `ipsec`, `gre`
+        :param pulumi.Input[_builtins.str] service_tloc_ip: Set service TLOC IP address
+        :param pulumi.Input[_builtins.str] service_tloc_list_id: Set service TLOC list ID
+        :param pulumi.Input[_builtins.str] service_type: Set service type
+                 - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        :param pulumi.Input[_builtins.int] service_vpn: Set service VPN ID
+                 - Range: `0`-`65530`
+        :param pulumi.Input[_builtins.str] tloc_action: Set TLOC action
+                 - Choices: `strict`, `primary`, `backup`, `ecmp`
+        :param pulumi.Input[_builtins.str] tloc_color: Set TLOC color
+        :param pulumi.Input[_builtins.str] tloc_encapsulation: Set TLOC encapsulation
+                 - Choices: `ipsec`, `gre`
+        :param pulumi.Input[_builtins.str] tloc_ip: Set TLOC IP address
+        :param pulumi.Input[_builtins.str] tloc_list_id: Set TLOC list ID
+        """
+        if affinity is not None:
+            pulumi.set(__self__, "affinity", affinity)
+        if community is not None:
+            pulumi.set(__self__, "community", community)
+        if community_additive is not None:
+            pulumi.set(__self__, "community_additive", community_additive)
+        if omp_tag is not None:
+            pulumi.set(__self__, "omp_tag", omp_tag)
+        if preference is not None:
+            pulumi.set(__self__, "preference", preference)
+        if service_chain_tloc_color is not None:
+            pulumi.set(__self__, "service_chain_tloc_color", service_chain_tloc_color)
+        if service_chain_tloc_encapsulation is not None:
+            pulumi.set(__self__, "service_chain_tloc_encapsulation", service_chain_tloc_encapsulation)
+        if service_chain_tloc_ip is not None:
+            pulumi.set(__self__, "service_chain_tloc_ip", service_chain_tloc_ip)
+        if service_chain_tloc_list_id is not None:
+            pulumi.set(__self__, "service_chain_tloc_list_id", service_chain_tloc_list_id)
+        if service_chain_type is not None:
+            pulumi.set(__self__, "service_chain_type", service_chain_type)
+        if service_chain_vpn is not None:
+            pulumi.set(__self__, "service_chain_vpn", service_chain_vpn)
+        if service_tloc_color is not None:
+            pulumi.set(__self__, "service_tloc_color", service_tloc_color)
+        if service_tloc_encapsulation is not None:
+            pulumi.set(__self__, "service_tloc_encapsulation", service_tloc_encapsulation)
+        if service_tloc_ip is not None:
+            pulumi.set(__self__, "service_tloc_ip", service_tloc_ip)
+        if service_tloc_list_id is not None:
+            pulumi.set(__self__, "service_tloc_list_id", service_tloc_list_id)
+        if service_type is not None:
+            pulumi.set(__self__, "service_type", service_type)
+        if service_vpn is not None:
+            pulumi.set(__self__, "service_vpn", service_vpn)
+        if tloc_action is not None:
+            pulumi.set(__self__, "tloc_action", tloc_action)
+        if tloc_color is not None:
+            pulumi.set(__self__, "tloc_color", tloc_color)
+        if tloc_encapsulation is not None:
+            pulumi.set(__self__, "tloc_encapsulation", tloc_encapsulation)
+        if tloc_ip is not None:
+            pulumi.set(__self__, "tloc_ip", tloc_ip)
+        if tloc_list_id is not None:
+            pulumi.set(__self__, "tloc_list_id", tloc_list_id)
+
+    @_builtins.property
+    @pulumi.getter
+    def affinity(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Set affinity
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "affinity")
+
+    @affinity.setter
+    def affinity(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "affinity", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def community(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set community value, e.g. `1000:10000` or `internet` or `local-AS`
+        """
+        return pulumi.get(self, "community")
+
+    @community.setter
+    def community(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "community", value)
+
+    @_builtins.property
+    @pulumi.getter(name="communityAdditive")
+    def community_additive(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Set community additive
+        """
+        return pulumi.get(self, "community_additive")
+
+    @community_additive.setter
+    def community_additive(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "community_additive", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ompTag")
+    def omp_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Set OMP tag
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "omp_tag")
+
+    @omp_tag.setter
+    def omp_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "omp_tag", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def preference(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Set preference
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "preference")
+
+    @preference.setter
+    def preference(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "preference", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceChainTlocColor")
+    def service_chain_tloc_color(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service chain TLOC color
+        """
+        return pulumi.get(self, "service_chain_tloc_color")
+
+    @service_chain_tloc_color.setter
+    def service_chain_tloc_color(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_chain_tloc_color", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceChainTlocEncapsulation")
+    def service_chain_tloc_encapsulation(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service chain TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "service_chain_tloc_encapsulation")
+
+    @service_chain_tloc_encapsulation.setter
+    def service_chain_tloc_encapsulation(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_chain_tloc_encapsulation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceChainTlocIp")
+    def service_chain_tloc_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service chain TLOC IP address
+        """
+        return pulumi.get(self, "service_chain_tloc_ip")
+
+    @service_chain_tloc_ip.setter
+    def service_chain_tloc_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_chain_tloc_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceChainTlocListId")
+    def service_chain_tloc_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service chain TLOC list ID
+        """
+        return pulumi.get(self, "service_chain_tloc_list_id")
+
+    @service_chain_tloc_list_id.setter
+    def service_chain_tloc_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_chain_tloc_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceChainType")
+    def service_chain_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service chain type
+          - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        return pulumi.get(self, "service_chain_type")
+
+    @service_chain_type.setter
+    def service_chain_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_chain_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceChainVpn")
+    def service_chain_vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Set service chain VPN ID
+          - Range: `0`-`65530`
+        """
+        return pulumi.get(self, "service_chain_vpn")
+
+    @service_chain_vpn.setter
+    def service_chain_vpn(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "service_chain_vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceTlocColor")
+    def service_tloc_color(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service TLOC color
+        """
+        return pulumi.get(self, "service_tloc_color")
+
+    @service_tloc_color.setter
+    def service_tloc_color(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_tloc_color", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceTlocEncapsulation")
+    def service_tloc_encapsulation(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "service_tloc_encapsulation")
+
+    @service_tloc_encapsulation.setter
+    def service_tloc_encapsulation(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_tloc_encapsulation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceTlocIp")
+    def service_tloc_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service TLOC IP address
+        """
+        return pulumi.get(self, "service_tloc_ip")
+
+    @service_tloc_ip.setter
+    def service_tloc_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_tloc_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceTlocListId")
+    def service_tloc_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service TLOC list ID
+        """
+        return pulumi.get(self, "service_tloc_list_id")
+
+    @service_tloc_list_id.setter
+    def service_tloc_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_tloc_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceType")
+    def service_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set service type
+          - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        """
+        return pulumi.get(self, "service_type")
+
+    @service_type.setter
+    def service_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "service_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serviceVpn")
+    def service_vpn(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Set service VPN ID
+          - Range: `0`-`65530`
+        """
+        return pulumi.get(self, "service_vpn")
+
+    @service_vpn.setter
+    def service_vpn(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "service_vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocAction")
+    def tloc_action(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set TLOC action
+          - Choices: `strict`, `primary`, `backup`, `ecmp`
+        """
+        return pulumi.get(self, "tloc_action")
+
+    @tloc_action.setter
+    def tloc_action(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_action", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocColor")
+    def tloc_color(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set TLOC color
+        """
+        return pulumi.get(self, "tloc_color")
+
+    @tloc_color.setter
+    def tloc_color(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_color", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocEncapsulation")
+    def tloc_encapsulation(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "tloc_encapsulation")
+
+    @tloc_encapsulation.setter
+    def tloc_encapsulation(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_encapsulation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocIp")
+    def tloc_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set TLOC IP address
+        """
+        return pulumi.get(self, "tloc_ip")
+
+    @tloc_ip.setter
+    def tloc_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocListId")
+    def tloc_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Set TLOC list ID
+        """
+        return pulumi.get(self, "tloc_list_id")
+
+    @tloc_list_id.setter
+    def tloc_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_list_id", value)
+
+
+class TopologyCustomControlFeatureSequenceMatchEntryArgsDict(TypedDict):
+    carrier: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Carrier
+      - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+    """
+    color_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Color list ID
+    """
+    community_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Community list ID
+    """
+    domain_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Domain ID
+      - Range: `1`-`4294967295`
+    """
+    expanded_community_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Expanded community list ID
+    """
+    group_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Group ID
+      - Range: `0`-`4294967295`
+    """
+    ipv6_prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    IPv6 prefix list ID
+    """
+    match_regions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgsDict']]]]]
+    """
+    Match regions list
+    """
+    omp_tag: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    OMP tag
+      - Range: `0`-`4294967295`
+    """
+    origin: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Origin
+      - Choices: `aggregate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
+    """
+    originator: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Originator IP
+    """
+    path_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Path type
+      - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
+    """
+    preference: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Preference
+      - Range: `0`-`4294967295`
+    """
+    prefix_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Prefix list ID
+    """
+    role: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Role
+      - Choices: `edge-router`, `border-router`
+    """
+    sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Site list
+    """
+    tloc_color: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    TLOC color
+    """
+    tloc_encapsulation: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    TLOC encapsulation
+      - Choices: `ipsec`, `gre`
+    """
+    tloc_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    TLOC IP address
+    """
+    tloc_list_id: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    TLOC list ID
+    """
+    vpns: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    VPN list
+    """
+
+@pulumi.input_type
+class TopologyCustomControlFeatureSequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 carrier: pulumi.Input[Optional[_builtins.str]] = None,
+                 color_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 community_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 domain_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 expanded_community_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 group_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 ipv6_prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 match_regions: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs']]]] = None,
+                 omp_tag: pulumi.Input[Optional[_builtins.int]] = None,
+                 origin: pulumi.Input[Optional[_builtins.str]] = None,
+                 originator: pulumi.Input[Optional[_builtins.str]] = None,
+                 path_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 preference: pulumi.Input[Optional[_builtins.int]] = None,
+                 prefix_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 role: pulumi.Input[Optional[_builtins.str]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tloc_color: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_encapsulation: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 tloc_list_id: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpns: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] carrier: Carrier
+                 - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+        :param pulumi.Input[_builtins.str] color_list_id: Color list ID
+        :param pulumi.Input[_builtins.str] community_list_id: Community list ID
+        :param pulumi.Input[_builtins.int] domain_id: Domain ID
+                 - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.str] expanded_community_list_id: Expanded community list ID
+        :param pulumi.Input[_builtins.int] group_id: Group ID
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] ipv6_prefix_list_id: IPv6 prefix list ID
+        :param pulumi.Input[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs']]] match_regions: Match regions list
+        :param pulumi.Input[_builtins.int] omp_tag: OMP tag
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] origin: Origin
+                 - Choices: `aggregate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
+        :param pulumi.Input[_builtins.str] originator: Originator IP
+        :param pulumi.Input[_builtins.str] path_type: Path type
+                 - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
+        :param pulumi.Input[_builtins.int] preference: Preference
+                 - Range: `0`-`4294967295`
+        :param pulumi.Input[_builtins.str] prefix_list_id: Prefix list ID
+        :param pulumi.Input[_builtins.str] role: Role
+                 - Choices: `edge-router`, `border-router`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: Site list
+        :param pulumi.Input[_builtins.str] tloc_color: TLOC color
+        :param pulumi.Input[_builtins.str] tloc_encapsulation: TLOC encapsulation
+                 - Choices: `ipsec`, `gre`
+        :param pulumi.Input[_builtins.str] tloc_ip: TLOC IP address
+        :param pulumi.Input[_builtins.str] tloc_list_id: TLOC list ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vpns: VPN list
+        """
+        if carrier is not None:
+            pulumi.set(__self__, "carrier", carrier)
+        if color_list_id is not None:
+            pulumi.set(__self__, "color_list_id", color_list_id)
+        if community_list_id is not None:
+            pulumi.set(__self__, "community_list_id", community_list_id)
+        if domain_id is not None:
+            pulumi.set(__self__, "domain_id", domain_id)
+        if expanded_community_list_id is not None:
+            pulumi.set(__self__, "expanded_community_list_id", expanded_community_list_id)
+        if group_id is not None:
+            pulumi.set(__self__, "group_id", group_id)
+        if ipv6_prefix_list_id is not None:
+            pulumi.set(__self__, "ipv6_prefix_list_id", ipv6_prefix_list_id)
+        if match_regions is not None:
+            pulumi.set(__self__, "match_regions", match_regions)
+        if omp_tag is not None:
+            pulumi.set(__self__, "omp_tag", omp_tag)
+        if origin is not None:
+            pulumi.set(__self__, "origin", origin)
+        if originator is not None:
+            pulumi.set(__self__, "originator", originator)
+        if path_type is not None:
+            pulumi.set(__self__, "path_type", path_type)
+        if preference is not None:
+            pulumi.set(__self__, "preference", preference)
+        if prefix_list_id is not None:
+            pulumi.set(__self__, "prefix_list_id", prefix_list_id)
+        if role is not None:
+            pulumi.set(__self__, "role", role)
+        if sites is not None:
+            pulumi.set(__self__, "sites", sites)
+        if tloc_color is not None:
+            pulumi.set(__self__, "tloc_color", tloc_color)
+        if tloc_encapsulation is not None:
+            pulumi.set(__self__, "tloc_encapsulation", tloc_encapsulation)
+        if tloc_ip is not None:
+            pulumi.set(__self__, "tloc_ip", tloc_ip)
+        if tloc_list_id is not None:
+            pulumi.set(__self__, "tloc_list_id", tloc_list_id)
+        if vpns is not None:
+            pulumi.set(__self__, "vpns", vpns)
+
+    @_builtins.property
+    @pulumi.getter
+    def carrier(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Carrier
+          - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+        """
+        return pulumi.get(self, "carrier")
+
+    @carrier.setter
+    def carrier(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "carrier", value)
+
+    @_builtins.property
+    @pulumi.getter(name="colorListId")
+    def color_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Color list ID
+        """
+        return pulumi.get(self, "color_list_id")
+
+    @color_list_id.setter
+    def color_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "color_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="communityListId")
+    def community_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Community list ID
+        """
+        return pulumi.get(self, "community_list_id")
+
+    @community_list_id.setter
+    def community_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "community_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="domainId")
+    def domain_id(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Domain ID
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "domain_id")
+
+    @domain_id.setter
+    def domain_id(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "domain_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="expandedCommunityListId")
+    def expanded_community_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Expanded community list ID
+        """
+        return pulumi.get(self, "expanded_community_list_id")
+
+    @expanded_community_list_id.setter
+    def expanded_community_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "expanded_community_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="groupId")
+    def group_id(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Group ID
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "group_id")
+
+    @group_id.setter
+    def group_id(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "group_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6PrefixListId")
+    def ipv6_prefix_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        IPv6 prefix list ID
+        """
+        return pulumi.get(self, "ipv6_prefix_list_id")
+
+    @ipv6_prefix_list_id.setter
+    def ipv6_prefix_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "ipv6_prefix_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="matchRegions")
+    def match_regions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs']]]]:
+        """
+        Match regions list
+        """
+        return pulumi.get(self, "match_regions")
+
+    @match_regions.setter
+    def match_regions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs']]]]):
+        pulumi.set(self, "match_regions", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ompTag")
+    def omp_tag(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        OMP tag
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "omp_tag")
+
+    @omp_tag.setter
+    def omp_tag(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "omp_tag", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def origin(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Origin
+          - Choices: `aggregate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
+        """
+        return pulumi.get(self, "origin")
+
+    @origin.setter
+    def origin(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "origin", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def originator(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Originator IP
+        """
+        return pulumi.get(self, "originator")
+
+    @originator.setter
+    def originator(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "originator", value)
+
+    @_builtins.property
+    @pulumi.getter(name="pathType")
+    def path_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Path type
+          - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
+        """
+        return pulumi.get(self, "path_type")
+
+    @path_type.setter
+    def path_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "path_type", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def preference(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Preference
+          - Range: `0`-`4294967295`
+        """
+        return pulumi.get(self, "preference")
+
+    @preference.setter
+    def preference(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "preference", value)
+
+    @_builtins.property
+    @pulumi.getter(name="prefixListId")
+    def prefix_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Prefix list ID
+        """
+        return pulumi.get(self, "prefix_list_id")
+
+    @prefix_list_id.setter
+    def prefix_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "prefix_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def role(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Role
+          - Choices: `edge-router`, `border-router`
+        """
+        return pulumi.get(self, "role")
+
+    @role.setter
+    def role(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "role", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Site list
+        """
+        return pulumi.get(self, "sites")
+
+    @sites.setter
+    def sites(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sites", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocColor")
+    def tloc_color(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        TLOC color
+        """
+        return pulumi.get(self, "tloc_color")
+
+    @tloc_color.setter
+    def tloc_color(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_color", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocEncapsulation")
+    def tloc_encapsulation(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "tloc_encapsulation")
+
+    @tloc_encapsulation.setter
+    def tloc_encapsulation(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_encapsulation", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocIp")
+    def tloc_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        TLOC IP address
+        """
+        return pulumi.get(self, "tloc_ip")
+
+    @tloc_ip.setter
+    def tloc_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tlocListId")
+    def tloc_list_id(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        TLOC list ID
+        """
+        return pulumi.get(self, "tloc_list_id")
+
+    @tloc_list_id.setter
+    def tloc_list_id(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "tloc_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def vpns(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        VPN list
+        """
+        return pulumi.get(self, "vpns")
+
+    @vpns.setter
+    def vpns(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "vpns", value)
+
+
+class TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgsDict(TypedDict):
+    region: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Region name
+    """
+    sub_regions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Sub-region list
+    """
+
+@pulumi.input_type
+class TopologyCustomControlFeatureSequenceMatchEntryMatchRegionArgs:
+    def __init__(__self__, *,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 sub_regions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] region: Region name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sub_regions: Sub-region list
+        """
+        if region is not None:
+            pulumi.set(__self__, "region", region)
+        if sub_regions is not None:
+            pulumi.set(__self__, "sub_regions", sub_regions)
+
+    @_builtins.property
+    @pulumi.getter
+    def region(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Region name
+        """
+        return pulumi.get(self, "region")
+
+    @region.setter
+    def region(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "region", value)
+
+    @_builtins.property
+    @pulumi.getter(name="subRegions")
+    def sub_regions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Sub-region list
+        """
+        return pulumi.get(self, "sub_regions")
+
+    @sub_regions.setter
+    def sub_regions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sub_regions", value)
+
+
+class TopologyCustomControlFeatureTargetInboundRegionArgsDict(TypedDict):
+    region: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Region name
+    """
+    sub_regions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Sub-region list
+    """
+
+@pulumi.input_type
+class TopologyCustomControlFeatureTargetInboundRegionArgs:
+    def __init__(__self__, *,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 sub_regions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] region: Region name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sub_regions: Sub-region list
+        """
+        if region is not None:
+            pulumi.set(__self__, "region", region)
+        if sub_regions is not None:
+            pulumi.set(__self__, "sub_regions", sub_regions)
+
+    @_builtins.property
+    @pulumi.getter
+    def region(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Region name
+        """
+        return pulumi.get(self, "region")
+
+    @region.setter
+    def region(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "region", value)
+
+    @_builtins.property
+    @pulumi.getter(name="subRegions")
+    def sub_regions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Sub-region list
+        """
+        return pulumi.get(self, "sub_regions")
+
+    @sub_regions.setter
+    def sub_regions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sub_regions", value)
+
+
+class TopologyCustomControlFeatureTargetOutboundRegionArgsDict(TypedDict):
+    region: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Region name
+    """
+    sub_regions: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    Sub-region list
+    """
+
+@pulumi.input_type
+class TopologyCustomControlFeatureTargetOutboundRegionArgs:
+    def __init__(__self__, *,
+                 region: pulumi.Input[Optional[_builtins.str]] = None,
+                 sub_regions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.str] region: Region name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sub_regions: Sub-region list
+        """
+        if region is not None:
+            pulumi.set(__self__, "region", region)
+        if sub_regions is not None:
+            pulumi.set(__self__, "sub_regions", sub_regions)
+
+    @_builtins.property
+    @pulumi.getter
+    def region(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Region name
+        """
+        return pulumi.get(self, "region")
+
+    @region.setter
+    def region(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "region", value)
+
+    @_builtins.property
+    @pulumi.getter(name="subRegions")
+    def sub_regions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Sub-region list
+        """
+        return pulumi.get(self, "sub_regions")
+
+    @sub_regions.setter
+    def sub_regions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sub_regions", value)
+
+
+class TopologyHubSpokeFeatureSpokeArgsDict(TypedDict):
+    hub_sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgsDict']]]]]
+    """
+    Hub Sites
+    """
+    name: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    spoke_sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+
+@pulumi.input_type
+class TopologyHubSpokeFeatureSpokeArgs:
+    def __init__(__self__, *,
+                 hub_sites: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]]] = None,
+                 name: pulumi.Input[Optional[_builtins.str]] = None,
+                 spoke_sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]] hub_sites: Hub Sites
+        """
+        if hub_sites is not None:
+            pulumi.set(__self__, "hub_sites", hub_sites)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if spoke_sites is not None:
+            pulumi.set(__self__, "spoke_sites", spoke_sites)
+
+    @_builtins.property
+    @pulumi.getter(name="hubSites")
+    def hub_sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]]]:
+        """
+        Hub Sites
+        """
+        return pulumi.get(self, "hub_sites")
+
+    @hub_sites.setter
+    def hub_sites(self, value: pulumi.Input[Optional[Sequence[pulumi.Input['TopologyHubSpokeFeatureSpokeHubSiteArgs']]]]):
+        pulumi.set(self, "hub_sites", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[Optional[_builtins.str]]:
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="spokeSites")
+    def spoke_sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        return pulumi.get(self, "spoke_sites")
+
+    @spoke_sites.setter
+    def spoke_sites(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "spoke_sites", value)
+
+
+class TopologyHubSpokeFeatureSpokeHubSiteArgsDict(TypedDict):
+    preference: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    preference
+      - Range: `1`-`255`
+    """
+    sites: NotRequired[pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]]
+    """
+    sites
+    """
+
+@pulumi.input_type
+class TopologyHubSpokeFeatureSpokeHubSiteArgs:
+    def __init__(__self__, *,
+                 preference: pulumi.Input[Optional[_builtins.int]] = None,
+                 sites: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input[_builtins.int] preference: preference
+                 - Range: `1`-`255`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sites: sites
+        """
+        if preference is not None:
+            pulumi.set(__self__, "preference", preference)
+        if sites is not None:
+            pulumi.set(__self__, "sites", sites)
+
+    @_builtins.property
+    @pulumi.getter
+    def preference(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        preference
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "preference")
+
+    @preference.setter
+    def preference(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "preference", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def sites(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        sites
+        """
+        return pulumi.get(self, "sites")
+
+    @sites.setter
+    def sites(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sites", value)
 
 
 class TrafficDataPolicyDefinitionSequenceArgsDict(TypedDict):

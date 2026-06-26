@@ -179,7 +179,7 @@ type SystemOmpFeature struct {
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - Range: `1`-`0`
+	//   - At Least: `1`
 	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrOutput `pulumi:"ecmpLimit"`
 	// Variable name
@@ -204,7 +204,7 @@ type SystemOmpFeature struct {
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrOutput `pulumi:"gracefulRestartVariable"`
 	// Hold Time (seconds)
-	//   - Default value: `60`
+	//   - Default value: `300`
 	Holdtime pulumi.IntPtrOutput `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrOutput `pulumi:"holdtimeVariable"`
@@ -382,7 +382,7 @@ type systemOmpFeatureState struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - Range: `1`-`0`
+	//   - At Least: `1`
 	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
@@ -407,7 +407,7 @@ type systemOmpFeatureState struct {
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
 	// Hold Time (seconds)
-	//   - Default value: `60`
+	//   - Default value: `300`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
@@ -553,7 +553,7 @@ type SystemOmpFeatureState struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - Range: `1`-`0`
+	//   - At Least: `1`
 	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
@@ -578,7 +578,7 @@ type SystemOmpFeatureState struct {
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
 	// Hold Time (seconds)
-	//   - Default value: `60`
+	//   - Default value: `300`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
@@ -728,7 +728,7 @@ type systemOmpFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - Range: `1`-`0`
+	//   - At Least: `1`
 	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
@@ -753,7 +753,7 @@ type systemOmpFeatureArgs struct {
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
 	// Hold Time (seconds)
-	//   - Default value: `60`
+	//   - Default value: `300`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
@@ -898,7 +898,7 @@ type SystemOmpFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - Range: `1`-`0`
+	//   - At Least: `1`
 	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
@@ -923,7 +923,7 @@ type SystemOmpFeatureArgs struct {
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
 	// Hold Time (seconds)
-	//   - Default value: `60`
+	//   - Default value: `300`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
@@ -1258,7 +1258,7 @@ func (o SystemOmpFeatureOutput) Description() pulumi.StringPtrOutput {
 }
 
 // Set maximum number of OMP paths to install in cEdge route table
-//   - Range: `1`-`0`
+//   - At Least: `1`
 //   - Default value: `4`
 func (o SystemOmpFeatureOutput) EcmpLimit() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.EcmpLimit }).(pulumi.IntPtrOutput)
@@ -1310,7 +1310,7 @@ func (o SystemOmpFeatureOutput) GracefulRestartVariable() pulumi.StringPtrOutput
 }
 
 // Hold Time (seconds)
-//   - Default value: `60`
+//   - Default value: `300`
 func (o SystemOmpFeatureOutput) Holdtime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.Holdtime }).(pulumi.IntPtrOutput)
 }

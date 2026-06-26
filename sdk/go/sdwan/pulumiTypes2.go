@@ -13,6 +13,5449 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetTransportRoutingBgpFeatureMplsInterface struct {
+	// Interface Name
+	InterfaceName string `pulumi:"interfaceName"`
+	// Variable name
+	InterfaceNameVariable string `pulumi:"interfaceNameVariable"`
+}
+
+// GetTransportRoutingBgpFeatureMplsInterfaceInput is an input type that accepts GetTransportRoutingBgpFeatureMplsInterfaceArgs and GetTransportRoutingBgpFeatureMplsInterfaceOutput values.
+// You can construct a concrete instance of `GetTransportRoutingBgpFeatureMplsInterfaceInput` via:
+//
+//	GetTransportRoutingBgpFeatureMplsInterfaceArgs{...}
+type GetTransportRoutingBgpFeatureMplsInterfaceInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingBgpFeatureMplsInterfaceOutput() GetTransportRoutingBgpFeatureMplsInterfaceOutput
+	ToGetTransportRoutingBgpFeatureMplsInterfaceOutputWithContext(context.Context) GetTransportRoutingBgpFeatureMplsInterfaceOutput
+}
+
+type GetTransportRoutingBgpFeatureMplsInterfaceArgs struct {
+	// Interface Name
+	InterfaceName pulumi.StringInput `pulumi:"interfaceName"`
+	// Variable name
+	InterfaceNameVariable pulumi.StringInput `pulumi:"interfaceNameVariable"`
+}
+
+func (GetTransportRoutingBgpFeatureMplsInterfaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingBgpFeatureMplsInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingBgpFeatureMplsInterfaceArgs) ToGetTransportRoutingBgpFeatureMplsInterfaceOutput() GetTransportRoutingBgpFeatureMplsInterfaceOutput {
+	return i.ToGetTransportRoutingBgpFeatureMplsInterfaceOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingBgpFeatureMplsInterfaceArgs) ToGetTransportRoutingBgpFeatureMplsInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureMplsInterfaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureMplsInterfaceOutput)
+}
+
+// GetTransportRoutingBgpFeatureMplsInterfaceArrayInput is an input type that accepts GetTransportRoutingBgpFeatureMplsInterfaceArray and GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingBgpFeatureMplsInterfaceArrayInput` via:
+//
+//	GetTransportRoutingBgpFeatureMplsInterfaceArray{ GetTransportRoutingBgpFeatureMplsInterfaceArgs{...} }
+type GetTransportRoutingBgpFeatureMplsInterfaceArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutput() GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput
+	ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput
+}
+
+type GetTransportRoutingBgpFeatureMplsInterfaceArray []GetTransportRoutingBgpFeatureMplsInterfaceInput
+
+func (GetTransportRoutingBgpFeatureMplsInterfaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureMplsInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingBgpFeatureMplsInterfaceArray) ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutput() GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput {
+	return i.ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingBgpFeatureMplsInterfaceArray) ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput)
+}
+
+type GetTransportRoutingBgpFeatureMplsInterfaceOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingBgpFeatureMplsInterfaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingBgpFeatureMplsInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingBgpFeatureMplsInterfaceOutput) ToGetTransportRoutingBgpFeatureMplsInterfaceOutput() GetTransportRoutingBgpFeatureMplsInterfaceOutput {
+	return o
+}
+
+func (o GetTransportRoutingBgpFeatureMplsInterfaceOutput) ToGetTransportRoutingBgpFeatureMplsInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureMplsInterfaceOutput {
+	return o
+}
+
+// Interface Name
+func (o GetTransportRoutingBgpFeatureMplsInterfaceOutput) InterfaceName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingBgpFeatureMplsInterface) string { return v.InterfaceName }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingBgpFeatureMplsInterfaceOutput) InterfaceNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingBgpFeatureMplsInterface) string { return v.InterfaceNameVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureMplsInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput) ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutput() GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput) ToGetTransportRoutingBgpFeatureMplsInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureMplsInterfaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureMplsInterface {
+		return vs[0].([]GetTransportRoutingBgpFeatureMplsInterface)[vs[1].(int)]
+	}).(GetTransportRoutingBgpFeatureMplsInterfaceOutput)
+}
+
+type GetTransportRoutingOspfFeatureArea struct {
+	// Set OSPF area number
+	AreaNumber int `pulumi:"areaNumber"`
+	// Variable name
+	AreaNumberVariable string `pulumi:"areaNumberVariable"`
+	// set the area type
+	AreaType string `pulumi:"areaType"`
+	// Set OSPF interface parameters
+	Interfaces []GetTransportRoutingOspfFeatureAreaInterface `pulumi:"interfaces"`
+	// Do not inject interarea routes into STUB or NSSA
+	NoSummary bool `pulumi:"noSummary"`
+	// Variable name
+	NoSummaryVariable string `pulumi:"noSummaryVariable"`
+	// Summarize OSPF routes at an area boundary
+	Ranges []GetTransportRoutingOspfFeatureAreaRange `pulumi:"ranges"`
+}
+
+// GetTransportRoutingOspfFeatureAreaInput is an input type that accepts GetTransportRoutingOspfFeatureAreaArgs and GetTransportRoutingOspfFeatureAreaOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureAreaInput` via:
+//
+//	GetTransportRoutingOspfFeatureAreaArgs{...}
+type GetTransportRoutingOspfFeatureAreaInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureAreaOutput() GetTransportRoutingOspfFeatureAreaOutput
+	ToGetTransportRoutingOspfFeatureAreaOutputWithContext(context.Context) GetTransportRoutingOspfFeatureAreaOutput
+}
+
+type GetTransportRoutingOspfFeatureAreaArgs struct {
+	// Set OSPF area number
+	AreaNumber pulumi.IntInput `pulumi:"areaNumber"`
+	// Variable name
+	AreaNumberVariable pulumi.StringInput `pulumi:"areaNumberVariable"`
+	// set the area type
+	AreaType pulumi.StringInput `pulumi:"areaType"`
+	// Set OSPF interface parameters
+	Interfaces GetTransportRoutingOspfFeatureAreaInterfaceArrayInput `pulumi:"interfaces"`
+	// Do not inject interarea routes into STUB or NSSA
+	NoSummary pulumi.BoolInput `pulumi:"noSummary"`
+	// Variable name
+	NoSummaryVariable pulumi.StringInput `pulumi:"noSummaryVariable"`
+	// Summarize OSPF routes at an area boundary
+	Ranges GetTransportRoutingOspfFeatureAreaRangeArrayInput `pulumi:"ranges"`
+}
+
+func (GetTransportRoutingOspfFeatureAreaArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureArea)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureAreaArgs) ToGetTransportRoutingOspfFeatureAreaOutput() GetTransportRoutingOspfFeatureAreaOutput {
+	return i.ToGetTransportRoutingOspfFeatureAreaOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureAreaArgs) ToGetTransportRoutingOspfFeatureAreaOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureAreaOutput)
+}
+
+// GetTransportRoutingOspfFeatureAreaArrayInput is an input type that accepts GetTransportRoutingOspfFeatureAreaArray and GetTransportRoutingOspfFeatureAreaArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureAreaArrayInput` via:
+//
+//	GetTransportRoutingOspfFeatureAreaArray{ GetTransportRoutingOspfFeatureAreaArgs{...} }
+type GetTransportRoutingOspfFeatureAreaArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureAreaArrayOutput() GetTransportRoutingOspfFeatureAreaArrayOutput
+	ToGetTransportRoutingOspfFeatureAreaArrayOutputWithContext(context.Context) GetTransportRoutingOspfFeatureAreaArrayOutput
+}
+
+type GetTransportRoutingOspfFeatureAreaArray []GetTransportRoutingOspfFeatureAreaInput
+
+func (GetTransportRoutingOspfFeatureAreaArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureArea)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureAreaArray) ToGetTransportRoutingOspfFeatureAreaArrayOutput() GetTransportRoutingOspfFeatureAreaArrayOutput {
+	return i.ToGetTransportRoutingOspfFeatureAreaArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureAreaArray) ToGetTransportRoutingOspfFeatureAreaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureAreaArrayOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureAreaOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureArea)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureAreaOutput) ToGetTransportRoutingOspfFeatureAreaOutput() GetTransportRoutingOspfFeatureAreaOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaOutput) ToGetTransportRoutingOspfFeatureAreaOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaOutput {
+	return o
+}
+
+// Set OSPF area number
+func (o GetTransportRoutingOspfFeatureAreaOutput) AreaNumber() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) int { return v.AreaNumber }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaOutput) AreaNumberVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) string { return v.AreaNumberVariable }).(pulumi.StringOutput)
+}
+
+// set the area type
+func (o GetTransportRoutingOspfFeatureAreaOutput) AreaType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) string { return v.AreaType }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface parameters
+func (o GetTransportRoutingOspfFeatureAreaOutput) Interfaces() GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) []GetTransportRoutingOspfFeatureAreaInterface {
+		return v.Interfaces
+	}).(GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput)
+}
+
+// Do not inject interarea routes into STUB or NSSA
+func (o GetTransportRoutingOspfFeatureAreaOutput) NoSummary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) bool { return v.NoSummary }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaOutput) NoSummaryVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) string { return v.NoSummaryVariable }).(pulumi.StringOutput)
+}
+
+// Summarize OSPF routes at an area boundary
+func (o GetTransportRoutingOspfFeatureAreaOutput) Ranges() GetTransportRoutingOspfFeatureAreaRangeArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureArea) []GetTransportRoutingOspfFeatureAreaRange { return v.Ranges }).(GetTransportRoutingOspfFeatureAreaRangeArrayOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureAreaArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureArea)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureAreaArrayOutput) ToGetTransportRoutingOspfFeatureAreaArrayOutput() GetTransportRoutingOspfFeatureAreaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaArrayOutput) ToGetTransportRoutingOspfFeatureAreaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfFeatureAreaOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfFeatureArea {
+		return vs[0].([]GetTransportRoutingOspfFeatureArea)[vs[1].(int)]
+	}).(GetTransportRoutingOspfFeatureAreaOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaInterface struct {
+	// Set OSPF interface authentication type
+	AuthenticationType string `pulumi:"authenticationType"`
+	// Variable name
+	AuthenticationTypeVariable string `pulumi:"authenticationTypeVariable"`
+	// Set cost of OSPF interface
+	Cost int `pulumi:"cost"`
+	// Variable name
+	CostVariable string `pulumi:"costVariable"`
+	// Set interval after which neighbor is declared to be down
+	DeadInterval int `pulumi:"deadInterval"`
+	// Variable name
+	DeadIntervalVariable string `pulumi:"deadIntervalVariable"`
+	// Set router’s priority to be elected as designated router
+	DesignatedRouterPriority int `pulumi:"designatedRouterPriority"`
+	// Variable name
+	DesignatedRouterPriorityVariable string `pulumi:"designatedRouterPriorityVariable"`
+	// Set interval between OSPF hello packets
+	HelloInterval int `pulumi:"helloInterval"`
+	// Variable name
+	HelloIntervalVariable string `pulumi:"helloIntervalVariable"`
+	// Set time between retransmitting LSAs
+	LsaRetransmitInterval int `pulumi:"lsaRetransmitInterval"`
+	// Variable name
+	LsaRetransmitIntervalVariable string `pulumi:"lsaRetransmitIntervalVariable"`
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	MessageDigestKey string `pulumi:"messageDigestKey"`
+	// Set MD5 message digest key
+	MessageDigestKeyId int `pulumi:"messageDigestKeyId"`
+	// Variable name
+	MessageDigestKeyIdVariable string `pulumi:"messageDigestKeyIdVariable"`
+	// Variable name
+	MessageDigestKeyVariable string `pulumi:"messageDigestKeyVariable"`
+	// Set interface name
+	Name string `pulumi:"name"`
+	// Variable name
+	NameVariable string `pulumi:"nameVariable"`
+	// Set the OSPF network type
+	NetworkType string `pulumi:"networkType"`
+	// Variable name
+	NetworkTypeVariable string `pulumi:"networkTypeVariable"`
+	// Set the interface to advertise its address, but not to actively run OSPF
+	PassiveInterface bool `pulumi:"passiveInterface"`
+	// Variable name
+	PassiveInterfaceVariable string `pulumi:"passiveInterfaceVariable"`
+}
+
+// GetTransportRoutingOspfFeatureAreaInterfaceInput is an input type that accepts GetTransportRoutingOspfFeatureAreaInterfaceArgs and GetTransportRoutingOspfFeatureAreaInterfaceOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureAreaInterfaceInput` via:
+//
+//	GetTransportRoutingOspfFeatureAreaInterfaceArgs{...}
+type GetTransportRoutingOspfFeatureAreaInterfaceInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureAreaInterfaceOutput() GetTransportRoutingOspfFeatureAreaInterfaceOutput
+	ToGetTransportRoutingOspfFeatureAreaInterfaceOutputWithContext(context.Context) GetTransportRoutingOspfFeatureAreaInterfaceOutput
+}
+
+type GetTransportRoutingOspfFeatureAreaInterfaceArgs struct {
+	// Set OSPF interface authentication type
+	AuthenticationType pulumi.StringInput `pulumi:"authenticationType"`
+	// Variable name
+	AuthenticationTypeVariable pulumi.StringInput `pulumi:"authenticationTypeVariable"`
+	// Set cost of OSPF interface
+	Cost pulumi.IntInput `pulumi:"cost"`
+	// Variable name
+	CostVariable pulumi.StringInput `pulumi:"costVariable"`
+	// Set interval after which neighbor is declared to be down
+	DeadInterval pulumi.IntInput `pulumi:"deadInterval"`
+	// Variable name
+	DeadIntervalVariable pulumi.StringInput `pulumi:"deadIntervalVariable"`
+	// Set router’s priority to be elected as designated router
+	DesignatedRouterPriority pulumi.IntInput `pulumi:"designatedRouterPriority"`
+	// Variable name
+	DesignatedRouterPriorityVariable pulumi.StringInput `pulumi:"designatedRouterPriorityVariable"`
+	// Set interval between OSPF hello packets
+	HelloInterval pulumi.IntInput `pulumi:"helloInterval"`
+	// Variable name
+	HelloIntervalVariable pulumi.StringInput `pulumi:"helloIntervalVariable"`
+	// Set time between retransmitting LSAs
+	LsaRetransmitInterval pulumi.IntInput `pulumi:"lsaRetransmitInterval"`
+	// Variable name
+	LsaRetransmitIntervalVariable pulumi.StringInput `pulumi:"lsaRetransmitIntervalVariable"`
+	// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+	MessageDigestKey pulumi.StringInput `pulumi:"messageDigestKey"`
+	// Set MD5 message digest key
+	MessageDigestKeyId pulumi.IntInput `pulumi:"messageDigestKeyId"`
+	// Variable name
+	MessageDigestKeyIdVariable pulumi.StringInput `pulumi:"messageDigestKeyIdVariable"`
+	// Variable name
+	MessageDigestKeyVariable pulumi.StringInput `pulumi:"messageDigestKeyVariable"`
+	// Set interface name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Variable name
+	NameVariable pulumi.StringInput `pulumi:"nameVariable"`
+	// Set the OSPF network type
+	NetworkType pulumi.StringInput `pulumi:"networkType"`
+	// Variable name
+	NetworkTypeVariable pulumi.StringInput `pulumi:"networkTypeVariable"`
+	// Set the interface to advertise its address, but not to actively run OSPF
+	PassiveInterface pulumi.BoolInput `pulumi:"passiveInterface"`
+	// Variable name
+	PassiveInterfaceVariable pulumi.StringInput `pulumi:"passiveInterfaceVariable"`
+}
+
+func (GetTransportRoutingOspfFeatureAreaInterfaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureAreaInterfaceArgs) ToGetTransportRoutingOspfFeatureAreaInterfaceOutput() GetTransportRoutingOspfFeatureAreaInterfaceOutput {
+	return i.ToGetTransportRoutingOspfFeatureAreaInterfaceOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureAreaInterfaceArgs) ToGetTransportRoutingOspfFeatureAreaInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaInterfaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureAreaInterfaceOutput)
+}
+
+// GetTransportRoutingOspfFeatureAreaInterfaceArrayInput is an input type that accepts GetTransportRoutingOspfFeatureAreaInterfaceArray and GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureAreaInterfaceArrayInput` via:
+//
+//	GetTransportRoutingOspfFeatureAreaInterfaceArray{ GetTransportRoutingOspfFeatureAreaInterfaceArgs{...} }
+type GetTransportRoutingOspfFeatureAreaInterfaceArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput
+	ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutputWithContext(context.Context) GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput
+}
+
+type GetTransportRoutingOspfFeatureAreaInterfaceArray []GetTransportRoutingOspfFeatureAreaInterfaceInput
+
+func (GetTransportRoutingOspfFeatureAreaInterfaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureAreaInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureAreaInterfaceArray) ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput {
+	return i.ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureAreaInterfaceArray) ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaInterfaceOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureAreaInterfaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) ToGetTransportRoutingOspfFeatureAreaInterfaceOutput() GetTransportRoutingOspfFeatureAreaInterfaceOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) ToGetTransportRoutingOspfFeatureAreaInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaInterfaceOutput {
+	return o
+}
+
+// Set OSPF interface authentication type
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) AuthenticationType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.AuthenticationType }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) AuthenticationTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.AuthenticationTypeVariable }).(pulumi.StringOutput)
+}
+
+// Set cost of OSPF interface
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) Cost() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.Cost }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) CostVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.CostVariable }).(pulumi.StringOutput)
+}
+
+// Set interval after which neighbor is declared to be down
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) DeadInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.DeadInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) DeadIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.DeadIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set router’s priority to be elected as designated router
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) DesignatedRouterPriority() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.DesignatedRouterPriority }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) DesignatedRouterPriorityVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.DesignatedRouterPriorityVariable }).(pulumi.StringOutput)
+}
+
+// Set interval between OSPF hello packets
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) HelloInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.HelloInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) HelloIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.HelloIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set time between retransmitting LSAs
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) LsaRetransmitInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.LsaRetransmitInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) LsaRetransmitIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.LsaRetransmitIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKey() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.MessageDigestKey }).(pulumi.StringOutput)
+}
+
+// Set MD5 message digest key
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) int { return v.MessageDigestKeyId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.MessageDigestKeyIdVariable }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) MessageDigestKeyVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.MessageDigestKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set interface name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) NameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.NameVariable }).(pulumi.StringOutput)
+}
+
+// Set the OSPF network type
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) NetworkType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.NetworkType }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) NetworkTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.NetworkTypeVariable }).(pulumi.StringOutput)
+}
+
+// Set the interface to advertise its address, but not to actively run OSPF
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) PassiveInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) bool { return v.PassiveInterface }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaInterfaceOutput) PassiveInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaInterface) string { return v.PassiveInterfaceVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureAreaInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput) ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput) ToGetTransportRoutingOspfFeatureAreaInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfFeatureAreaInterfaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfFeatureAreaInterface {
+		return vs[0].([]GetTransportRoutingOspfFeatureAreaInterface)[vs[1].(int)]
+	}).(GetTransportRoutingOspfFeatureAreaInterfaceOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaRange struct {
+	// Set cost for this range
+	Cost int `pulumi:"cost"`
+	// Variable name
+	CostVariable string `pulumi:"costVariable"`
+	// IP Address
+	IpAddress string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable string `pulumi:"ipAddressVariable"`
+	// Do not advertise this range
+	NoAdvertise bool `pulumi:"noAdvertise"`
+	// Variable name
+	NoAdvertiseVariable string `pulumi:"noAdvertiseVariable"`
+	// Subnet Mask
+	SubnetMask string `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
+}
+
+// GetTransportRoutingOspfFeatureAreaRangeInput is an input type that accepts GetTransportRoutingOspfFeatureAreaRangeArgs and GetTransportRoutingOspfFeatureAreaRangeOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureAreaRangeInput` via:
+//
+//	GetTransportRoutingOspfFeatureAreaRangeArgs{...}
+type GetTransportRoutingOspfFeatureAreaRangeInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureAreaRangeOutput() GetTransportRoutingOspfFeatureAreaRangeOutput
+	ToGetTransportRoutingOspfFeatureAreaRangeOutputWithContext(context.Context) GetTransportRoutingOspfFeatureAreaRangeOutput
+}
+
+type GetTransportRoutingOspfFeatureAreaRangeArgs struct {
+	// Set cost for this range
+	Cost pulumi.IntInput `pulumi:"cost"`
+	// Variable name
+	CostVariable pulumi.StringInput `pulumi:"costVariable"`
+	// IP Address
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringInput `pulumi:"ipAddressVariable"`
+	// Do not advertise this range
+	NoAdvertise pulumi.BoolInput `pulumi:"noAdvertise"`
+	// Variable name
+	NoAdvertiseVariable pulumi.StringInput `pulumi:"noAdvertiseVariable"`
+	// Subnet Mask
+	SubnetMask pulumi.StringInput `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
+}
+
+func (GetTransportRoutingOspfFeatureAreaRangeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaRange)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureAreaRangeArgs) ToGetTransportRoutingOspfFeatureAreaRangeOutput() GetTransportRoutingOspfFeatureAreaRangeOutput {
+	return i.ToGetTransportRoutingOspfFeatureAreaRangeOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureAreaRangeArgs) ToGetTransportRoutingOspfFeatureAreaRangeOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaRangeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureAreaRangeOutput)
+}
+
+// GetTransportRoutingOspfFeatureAreaRangeArrayInput is an input type that accepts GetTransportRoutingOspfFeatureAreaRangeArray and GetTransportRoutingOspfFeatureAreaRangeArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureAreaRangeArrayInput` via:
+//
+//	GetTransportRoutingOspfFeatureAreaRangeArray{ GetTransportRoutingOspfFeatureAreaRangeArgs{...} }
+type GetTransportRoutingOspfFeatureAreaRangeArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureAreaRangeArrayOutput() GetTransportRoutingOspfFeatureAreaRangeArrayOutput
+	ToGetTransportRoutingOspfFeatureAreaRangeArrayOutputWithContext(context.Context) GetTransportRoutingOspfFeatureAreaRangeArrayOutput
+}
+
+type GetTransportRoutingOspfFeatureAreaRangeArray []GetTransportRoutingOspfFeatureAreaRangeInput
+
+func (GetTransportRoutingOspfFeatureAreaRangeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureAreaRange)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureAreaRangeArray) ToGetTransportRoutingOspfFeatureAreaRangeArrayOutput() GetTransportRoutingOspfFeatureAreaRangeArrayOutput {
+	return i.ToGetTransportRoutingOspfFeatureAreaRangeArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureAreaRangeArray) ToGetTransportRoutingOspfFeatureAreaRangeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaRangeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureAreaRangeArrayOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaRangeOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureAreaRangeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaRange)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) ToGetTransportRoutingOspfFeatureAreaRangeOutput() GetTransportRoutingOspfFeatureAreaRangeOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) ToGetTransportRoutingOspfFeatureAreaRangeOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaRangeOutput {
+	return o
+}
+
+// Set cost for this range
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) Cost() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) int { return v.Cost }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) CostVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) string { return v.CostVariable }).(pulumi.StringOutput)
+}
+
+// IP Address
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) IpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) string { return v.IpAddressVariable }).(pulumi.StringOutput)
+}
+
+// Do not advertise this range
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) NoAdvertise() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) bool { return v.NoAdvertise }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) NoAdvertiseVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) string { return v.NoAdvertiseVariable }).(pulumi.StringOutput)
+}
+
+// Subnet Mask
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) SubnetMask() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) string { return v.SubnetMask }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureAreaRangeOutput) SubnetMaskVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureAreaRange) string { return v.SubnetMaskVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfFeatureAreaRangeArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureAreaRangeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureAreaRange)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureAreaRangeArrayOutput) ToGetTransportRoutingOspfFeatureAreaRangeArrayOutput() GetTransportRoutingOspfFeatureAreaRangeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaRangeArrayOutput) ToGetTransportRoutingOspfFeatureAreaRangeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureAreaRangeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureAreaRangeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfFeatureAreaRangeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfFeatureAreaRange {
+		return vs[0].([]GetTransportRoutingOspfFeatureAreaRange)[vs[1].(int)]
+	}).(GetTransportRoutingOspfFeatureAreaRangeOutput)
+}
+
+type GetTransportRoutingOspfFeatureRedistribute struct {
+	// Enable NAT DIA for redistributed routes
+	NatDia bool `pulumi:"natDia"`
+	// Variable name
+	NatDiaVariable string `pulumi:"natDiaVariable"`
+	// Set the protocol
+	Protocol string `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable string `pulumi:"protocolVariable"`
+	RoutePolicyId    string `pulumi:"routePolicyId"`
+}
+
+// GetTransportRoutingOspfFeatureRedistributeInput is an input type that accepts GetTransportRoutingOspfFeatureRedistributeArgs and GetTransportRoutingOspfFeatureRedistributeOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureRedistributeInput` via:
+//
+//	GetTransportRoutingOspfFeatureRedistributeArgs{...}
+type GetTransportRoutingOspfFeatureRedistributeInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureRedistributeOutput() GetTransportRoutingOspfFeatureRedistributeOutput
+	ToGetTransportRoutingOspfFeatureRedistributeOutputWithContext(context.Context) GetTransportRoutingOspfFeatureRedistributeOutput
+}
+
+type GetTransportRoutingOspfFeatureRedistributeArgs struct {
+	// Enable NAT DIA for redistributed routes
+	NatDia pulumi.BoolInput `pulumi:"natDia"`
+	// Variable name
+	NatDiaVariable pulumi.StringInput `pulumi:"natDiaVariable"`
+	// Set the protocol
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable pulumi.StringInput `pulumi:"protocolVariable"`
+	RoutePolicyId    pulumi.StringInput `pulumi:"routePolicyId"`
+}
+
+func (GetTransportRoutingOspfFeatureRedistributeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureRedistribute)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureRedistributeArgs) ToGetTransportRoutingOspfFeatureRedistributeOutput() GetTransportRoutingOspfFeatureRedistributeOutput {
+	return i.ToGetTransportRoutingOspfFeatureRedistributeOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureRedistributeArgs) ToGetTransportRoutingOspfFeatureRedistributeOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRedistributeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureRedistributeOutput)
+}
+
+// GetTransportRoutingOspfFeatureRedistributeArrayInput is an input type that accepts GetTransportRoutingOspfFeatureRedistributeArray and GetTransportRoutingOspfFeatureRedistributeArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureRedistributeArrayInput` via:
+//
+//	GetTransportRoutingOspfFeatureRedistributeArray{ GetTransportRoutingOspfFeatureRedistributeArgs{...} }
+type GetTransportRoutingOspfFeatureRedistributeArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureRedistributeArrayOutput() GetTransportRoutingOspfFeatureRedistributeArrayOutput
+	ToGetTransportRoutingOspfFeatureRedistributeArrayOutputWithContext(context.Context) GetTransportRoutingOspfFeatureRedistributeArrayOutput
+}
+
+type GetTransportRoutingOspfFeatureRedistributeArray []GetTransportRoutingOspfFeatureRedistributeInput
+
+func (GetTransportRoutingOspfFeatureRedistributeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureRedistribute)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureRedistributeArray) ToGetTransportRoutingOspfFeatureRedistributeArrayOutput() GetTransportRoutingOspfFeatureRedistributeArrayOutput {
+	return i.ToGetTransportRoutingOspfFeatureRedistributeArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureRedistributeArray) ToGetTransportRoutingOspfFeatureRedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRedistributeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureRedistributeArrayOutput)
+}
+
+type GetTransportRoutingOspfFeatureRedistributeOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureRedistributeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureRedistribute)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) ToGetTransportRoutingOspfFeatureRedistributeOutput() GetTransportRoutingOspfFeatureRedistributeOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) ToGetTransportRoutingOspfFeatureRedistributeOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRedistributeOutput {
+	return o
+}
+
+// Enable NAT DIA for redistributed routes
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) NatDia() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRedistribute) bool { return v.NatDia }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) NatDiaVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRedistribute) string { return v.NatDiaVariable }).(pulumi.StringOutput)
+}
+
+// Set the protocol
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRedistribute) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) ProtocolVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRedistribute) string { return v.ProtocolVariable }).(pulumi.StringOutput)
+}
+
+func (o GetTransportRoutingOspfFeatureRedistributeOutput) RoutePolicyId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRedistribute) string { return v.RoutePolicyId }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfFeatureRedistributeArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureRedistributeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureRedistribute)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureRedistributeArrayOutput) ToGetTransportRoutingOspfFeatureRedistributeArrayOutput() GetTransportRoutingOspfFeatureRedistributeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureRedistributeArrayOutput) ToGetTransportRoutingOspfFeatureRedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRedistributeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureRedistributeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfFeatureRedistributeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfFeatureRedistribute {
+		return vs[0].([]GetTransportRoutingOspfFeatureRedistribute)[vs[1].(int)]
+	}).(GetTransportRoutingOspfFeatureRedistributeOutput)
+}
+
+type GetTransportRoutingOspfFeatureRouterLsa struct {
+	// Set how long to advertise maximum metric after router starts up
+	Time int `pulumi:"time"`
+	// Variable name
+	TimeVariable string `pulumi:"timeVariable"`
+	// Set the router LSA advertisement type
+	Type string `pulumi:"type"`
+}
+
+// GetTransportRoutingOspfFeatureRouterLsaInput is an input type that accepts GetTransportRoutingOspfFeatureRouterLsaArgs and GetTransportRoutingOspfFeatureRouterLsaOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureRouterLsaInput` via:
+//
+//	GetTransportRoutingOspfFeatureRouterLsaArgs{...}
+type GetTransportRoutingOspfFeatureRouterLsaInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureRouterLsaOutput() GetTransportRoutingOspfFeatureRouterLsaOutput
+	ToGetTransportRoutingOspfFeatureRouterLsaOutputWithContext(context.Context) GetTransportRoutingOspfFeatureRouterLsaOutput
+}
+
+type GetTransportRoutingOspfFeatureRouterLsaArgs struct {
+	// Set how long to advertise maximum metric after router starts up
+	Time pulumi.IntInput `pulumi:"time"`
+	// Variable name
+	TimeVariable pulumi.StringInput `pulumi:"timeVariable"`
+	// Set the router LSA advertisement type
+	Type pulumi.StringInput `pulumi:"type"`
+}
+
+func (GetTransportRoutingOspfFeatureRouterLsaArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureRouterLsa)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureRouterLsaArgs) ToGetTransportRoutingOspfFeatureRouterLsaOutput() GetTransportRoutingOspfFeatureRouterLsaOutput {
+	return i.ToGetTransportRoutingOspfFeatureRouterLsaOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureRouterLsaArgs) ToGetTransportRoutingOspfFeatureRouterLsaOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRouterLsaOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureRouterLsaOutput)
+}
+
+// GetTransportRoutingOspfFeatureRouterLsaArrayInput is an input type that accepts GetTransportRoutingOspfFeatureRouterLsaArray and GetTransportRoutingOspfFeatureRouterLsaArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfFeatureRouterLsaArrayInput` via:
+//
+//	GetTransportRoutingOspfFeatureRouterLsaArray{ GetTransportRoutingOspfFeatureRouterLsaArgs{...} }
+type GetTransportRoutingOspfFeatureRouterLsaArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfFeatureRouterLsaArrayOutput() GetTransportRoutingOspfFeatureRouterLsaArrayOutput
+	ToGetTransportRoutingOspfFeatureRouterLsaArrayOutputWithContext(context.Context) GetTransportRoutingOspfFeatureRouterLsaArrayOutput
+}
+
+type GetTransportRoutingOspfFeatureRouterLsaArray []GetTransportRoutingOspfFeatureRouterLsaInput
+
+func (GetTransportRoutingOspfFeatureRouterLsaArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureRouterLsa)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfFeatureRouterLsaArray) ToGetTransportRoutingOspfFeatureRouterLsaArrayOutput() GetTransportRoutingOspfFeatureRouterLsaArrayOutput {
+	return i.ToGetTransportRoutingOspfFeatureRouterLsaArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfFeatureRouterLsaArray) ToGetTransportRoutingOspfFeatureRouterLsaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRouterLsaArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfFeatureRouterLsaArrayOutput)
+}
+
+type GetTransportRoutingOspfFeatureRouterLsaOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureRouterLsaOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfFeatureRouterLsa)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureRouterLsaOutput) ToGetTransportRoutingOspfFeatureRouterLsaOutput() GetTransportRoutingOspfFeatureRouterLsaOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureRouterLsaOutput) ToGetTransportRoutingOspfFeatureRouterLsaOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRouterLsaOutput {
+	return o
+}
+
+// Set how long to advertise maximum metric after router starts up
+func (o GetTransportRoutingOspfFeatureRouterLsaOutput) Time() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRouterLsa) int { return v.Time }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfFeatureRouterLsaOutput) TimeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRouterLsa) string { return v.TimeVariable }).(pulumi.StringOutput)
+}
+
+// Set the router LSA advertisement type
+func (o GetTransportRoutingOspfFeatureRouterLsaOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfFeatureRouterLsa) string { return v.Type }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfFeatureRouterLsaArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfFeatureRouterLsaArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfFeatureRouterLsa)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfFeatureRouterLsaArrayOutput) ToGetTransportRoutingOspfFeatureRouterLsaArrayOutput() GetTransportRoutingOspfFeatureRouterLsaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureRouterLsaArrayOutput) ToGetTransportRoutingOspfFeatureRouterLsaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfFeatureRouterLsaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfFeatureRouterLsaArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfFeatureRouterLsaOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfFeatureRouterLsa {
+		return vs[0].([]GetTransportRoutingOspfFeatureRouterLsa)[vs[1].(int)]
+	}).(GetTransportRoutingOspfFeatureRouterLsaOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureArea struct {
+	// Always translate type7 LSAs
+	AlwaysTranslate bool `pulumi:"alwaysTranslate"`
+	// Variable name
+	AlwaysTranslateVariable string `pulumi:"alwaysTranslateVariable"`
+	// Set OSPF area number
+	AreaNumber int `pulumi:"areaNumber"`
+	// Variable name
+	AreaNumberVariable string `pulumi:"areaNumberVariable"`
+	// Set OSPFv3 area type
+	AreaType string `pulumi:"areaType"`
+	// Set OSPF interface parameters
+	Interfaces []GetTransportRoutingOspfv3Ipv4FeatureAreaInterface `pulumi:"interfaces"`
+	// Do not inject inter-area routes
+	NoSummary bool `pulumi:"noSummary"`
+	// Variable name
+	NoSummaryVariable string `pulumi:"noSummaryVariable"`
+	// Summarize OSPF routes at an area boundary
+	Ranges []GetTransportRoutingOspfv3Ipv4FeatureAreaRange `pulumi:"ranges"`
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureAreaInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureAreaArgs and GetTransportRoutingOspfv3Ipv4FeatureAreaOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureAreaInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureAreaArgs{...}
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaArgs struct {
+	// Always translate type7 LSAs
+	AlwaysTranslate pulumi.BoolInput `pulumi:"alwaysTranslate"`
+	// Variable name
+	AlwaysTranslateVariable pulumi.StringInput `pulumi:"alwaysTranslateVariable"`
+	// Set OSPF area number
+	AreaNumber pulumi.IntInput `pulumi:"areaNumber"`
+	// Variable name
+	AreaNumberVariable pulumi.StringInput `pulumi:"areaNumberVariable"`
+	// Set OSPFv3 area type
+	AreaType pulumi.StringInput `pulumi:"areaType"`
+	// Set OSPF interface parameters
+	Interfaces GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayInput `pulumi:"interfaces"`
+	// Do not inject inter-area routes
+	NoSummary pulumi.BoolInput `pulumi:"noSummary"`
+	// Variable name
+	NoSummaryVariable pulumi.StringInput `pulumi:"noSummaryVariable"`
+	// Summarize OSPF routes at an area boundary
+	Ranges GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayInput `pulumi:"ranges"`
+}
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureArea)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaArgs) ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaArgs) ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureAreaOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureAreaArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureAreaArray and GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureAreaArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureAreaArray{ GetTransportRoutingOspfv3Ipv4FeatureAreaArgs{...} }
+type GetTransportRoutingOspfv3Ipv4FeatureAreaArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaArray []GetTransportRoutingOspfv3Ipv4FeatureAreaInput
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureArea)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaArray) ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaArray) ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureArea)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaOutput {
+	return o
+}
+
+// Always translate type7 LSAs
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) AlwaysTranslate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) bool { return v.AlwaysTranslate }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) AlwaysTranslateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) string { return v.AlwaysTranslateVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF area number
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) AreaNumber() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) int { return v.AreaNumber }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) AreaNumberVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) string { return v.AreaNumberVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPFv3 area type
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) AreaType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) string { return v.AreaType }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface parameters
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) Interfaces() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) []GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
+		return v.Interfaces
+	}).(GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput)
+}
+
+// Do not inject inter-area routes
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) NoSummary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) bool { return v.NoSummary }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) NoSummaryVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) string { return v.NoSummaryVariable }).(pulumi.StringOutput)
+}
+
+// Summarize OSPF routes at an area boundary
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaOutput) Ranges() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureArea) []GetTransportRoutingOspfv3Ipv4FeatureAreaRange {
+		return v.Ranges
+	}).(GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureArea)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv4FeatureAreaOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv4FeatureArea {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv4FeatureArea)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv4FeatureAreaOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterface struct {
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKey string `pulumi:"authenticationKey"`
+	// Variable name
+	AuthenticationKeyVariable string `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
+	AuthenticationSpi int `pulumi:"authenticationSpi"`
+	// Variable name
+	AuthenticationSpiVariable string `pulumi:"authenticationSpiVariable"`
+	// Set OSPF interface authentication configuration
+	AuthenticationType string `pulumi:"authenticationType"`
+	// Set cost of OSPF interface
+	Cost int `pulumi:"cost"`
+	// Variable name
+	CostVariable string `pulumi:"costVariable"`
+	// Set interval after which neighbor is declared to be down
+	DeadInterval int `pulumi:"deadInterval"`
+	// Variable name
+	DeadIntervalVariable string `pulumi:"deadIntervalVariable"`
+	// Set interval between OSPF hello packets
+	HelloInterval int `pulumi:"helloInterval"`
+	// Variable name
+	HelloIntervalVariable string `pulumi:"helloIntervalVariable"`
+	// Set time between retransmitting LSAs
+	LsaRetransmitInterval int `pulumi:"lsaRetransmitInterval"`
+	// Variable name
+	LsaRetransmitIntervalVariable string `pulumi:"lsaRetransmitIntervalVariable"`
+	// Set interface name
+	Name string `pulumi:"name"`
+	// Variable name
+	NameVariable string `pulumi:"nameVariable"`
+	// Set the OSPF network type
+	NetworkType string `pulumi:"networkType"`
+	// Variable name
+	NetworkTypeVariable string `pulumi:"networkTypeVariable"`
+	// Set the interface to advertise its address, but not to actively run OSPF
+	PassiveInterface bool `pulumi:"passiveInterface"`
+	// Variable name
+	PassiveInterfaceVariable string `pulumi:"passiveInterfaceVariable"`
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs and GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs{...}
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs struct {
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKey pulumi.StringInput `pulumi:"authenticationKey"`
+	// Variable name
+	AuthenticationKeyVariable pulumi.StringInput `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
+	AuthenticationSpi pulumi.IntInput `pulumi:"authenticationSpi"`
+	// Variable name
+	AuthenticationSpiVariable pulumi.StringInput `pulumi:"authenticationSpiVariable"`
+	// Set OSPF interface authentication configuration
+	AuthenticationType pulumi.StringInput `pulumi:"authenticationType"`
+	// Set cost of OSPF interface
+	Cost pulumi.IntInput `pulumi:"cost"`
+	// Variable name
+	CostVariable pulumi.StringInput `pulumi:"costVariable"`
+	// Set interval after which neighbor is declared to be down
+	DeadInterval pulumi.IntInput `pulumi:"deadInterval"`
+	// Variable name
+	DeadIntervalVariable pulumi.StringInput `pulumi:"deadIntervalVariable"`
+	// Set interval between OSPF hello packets
+	HelloInterval pulumi.IntInput `pulumi:"helloInterval"`
+	// Variable name
+	HelloIntervalVariable pulumi.StringInput `pulumi:"helloIntervalVariable"`
+	// Set time between retransmitting LSAs
+	LsaRetransmitInterval pulumi.IntInput `pulumi:"lsaRetransmitInterval"`
+	// Variable name
+	LsaRetransmitIntervalVariable pulumi.StringInput `pulumi:"lsaRetransmitIntervalVariable"`
+	// Set interface name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Variable name
+	NameVariable pulumi.StringInput `pulumi:"nameVariable"`
+	// Set the OSPF network type
+	NetworkType pulumi.StringInput `pulumi:"networkType"`
+	// Variable name
+	NetworkTypeVariable pulumi.StringInput `pulumi:"networkTypeVariable"`
+	// Set the interface to advertise its address, but not to actively run OSPF
+	PassiveInterface pulumi.BoolInput `pulumi:"passiveInterface"`
+	// Variable name
+	PassiveInterfaceVariable pulumi.StringInput `pulumi:"passiveInterfaceVariable"`
+}
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray and GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray{ GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs{...} }
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray []GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceInput
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureAreaInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput {
+	return o
+}
+
+// Set OSPF interface authentication IPSEC key
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKey() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.AuthenticationKey }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.AuthenticationKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface authentication IPSec SPI, range 256..4294967295
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationSpi() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) int { return v.AuthenticationSpi }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationSpiVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.AuthenticationSpiVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface authentication configuration
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) AuthenticationType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.AuthenticationType }).(pulumi.StringOutput)
+}
+
+// Set cost of OSPF interface
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) Cost() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) int { return v.Cost }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) CostVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.CostVariable }).(pulumi.StringOutput)
+}
+
+// Set interval after which neighbor is declared to be down
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) DeadInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) int { return v.DeadInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) DeadIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.DeadIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set interval between OSPF hello packets
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) HelloInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) int { return v.HelloInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) HelloIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.HelloIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set time between retransmitting LSAs
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) LsaRetransmitInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) int { return v.LsaRetransmitInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) LsaRetransmitIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string {
+		return v.LsaRetransmitIntervalVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set interface name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) NameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.NameVariable }).(pulumi.StringOutput)
+}
+
+// Set the OSPF network type
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) NetworkType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.NetworkType }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) NetworkTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.NetworkTypeVariable }).(pulumi.StringOutput)
+}
+
+// Set the interface to advertise its address, but not to actively run OSPF
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) PassiveInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) bool { return v.PassiveInterface }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput) PassiveInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaInterface) string { return v.PassiveInterfaceVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureAreaInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv4FeatureAreaInterface)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRange struct {
+	// Set cost for this range
+	Cost int `pulumi:"cost"`
+	// Variable name
+	CostVariable string `pulumi:"costVariable"`
+	IpAddress    string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable string `pulumi:"ipAddressVariable"`
+	// Do not advertise this range
+	NoAdvertise bool `pulumi:"noAdvertise"`
+	// Variable name
+	NoAdvertiseVariable string `pulumi:"noAdvertiseVariable"`
+	SubnetMask          string `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureAreaRangeInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs and GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureAreaRangeInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs{...}
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRangeInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs struct {
+	// Set cost for this range
+	Cost pulumi.IntInput `pulumi:"cost"`
+	// Variable name
+	CostVariable pulumi.StringInput `pulumi:"costVariable"`
+	IpAddress    pulumi.StringInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringInput `pulumi:"ipAddressVariable"`
+	// Do not advertise this range
+	NoAdvertise pulumi.BoolInput `pulumi:"noAdvertise"`
+	// Variable name
+	NoAdvertiseVariable pulumi.StringInput `pulumi:"noAdvertiseVariable"`
+	SubnetMask          pulumi.StringInput `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
+}
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaRange)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray and GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray{ GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs{...} }
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray []GetTransportRoutingOspfv3Ipv4FeatureAreaRangeInput
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureAreaRange)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaRange)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput {
+	return o
+}
+
+// Set cost for this range
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) Cost() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) int { return v.Cost }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) CostVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) string { return v.CostVariable }).(pulumi.StringOutput)
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) IpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) string { return v.IpAddressVariable }).(pulumi.StringOutput)
+}
+
+// Do not advertise this range
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) NoAdvertise() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) bool { return v.NoAdvertise }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) NoAdvertiseVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) string { return v.NoAdvertiseVariable }).(pulumi.StringOutput)
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) SubnetMask() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) string { return v.SubnetMask }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput) SubnetMaskVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureAreaRange) string { return v.SubnetMaskVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureAreaRange)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv4FeatureAreaRange {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv4FeatureAreaRange)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureRedistribute struct {
+	// Enable NAT DIA for redistributed routes
+	NatDia bool `pulumi:"natDia"`
+	// Variable name
+	NatDiaVariable string `pulumi:"natDiaVariable"`
+	// Set the protocol
+	Protocol string `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable string `pulumi:"protocolVariable"`
+	RoutePolicyId    string `pulumi:"routePolicyId"`
+	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+	TranslateRibMetric bool `pulumi:"translateRibMetric"`
+	// Variable name
+	TranslateRibMetricVariable string `pulumi:"translateRibMetricVariable"`
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureRedistributeInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs and GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureRedistributeInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs{...}
+type GetTransportRoutingOspfv3Ipv4FeatureRedistributeInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput() GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs struct {
+	// Enable NAT DIA for redistributed routes
+	NatDia pulumi.BoolInput `pulumi:"natDia"`
+	// Variable name
+	NatDiaVariable pulumi.StringInput `pulumi:"natDiaVariable"`
+	// Set the protocol
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable pulumi.StringInput `pulumi:"protocolVariable"`
+	RoutePolicyId    pulumi.StringInput `pulumi:"routePolicyId"`
+	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+	TranslateRibMetric pulumi.BoolInput `pulumi:"translateRibMetric"`
+	// Variable name
+	TranslateRibMetricVariable pulumi.StringInput `pulumi:"translateRibMetricVariable"`
+}
+
+func (GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureRedistribute)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput() GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray and GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray{ GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs{...} }
+type GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput
+	ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray []GetTransportRoutingOspfv3Ipv4FeatureRedistributeInput
+
+func (GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureRedistribute)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureRedistribute)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput() GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput {
+	return o
+}
+
+// Enable NAT DIA for redistributed routes
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) NatDia() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) bool { return v.NatDia }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) NatDiaVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) string { return v.NatDiaVariable }).(pulumi.StringOutput)
+}
+
+// Set the protocol
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) ProtocolVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) string { return v.ProtocolVariable }).(pulumi.StringOutput)
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) RoutePolicyId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) string { return v.RoutePolicyId }).(pulumi.StringOutput)
+}
+
+// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) TranslateRibMetric() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) bool { return v.TranslateRibMetric }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput) TranslateRibMetricVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv4FeatureRedistribute) string { return v.TranslateRibMetricVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv4FeatureRedistribute)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput() GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput) ToGetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv4FeatureRedistribute {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv4FeatureRedistribute)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureArea struct {
+	// Always translate type7 LSAs
+	AlwaysTranslate bool `pulumi:"alwaysTranslate"`
+	// Variable name
+	AlwaysTranslateVariable string `pulumi:"alwaysTranslateVariable"`
+	// Set OSPF area number
+	AreaNumber int `pulumi:"areaNumber"`
+	// Variable name
+	AreaNumberVariable string `pulumi:"areaNumberVariable"`
+	// Set OSPFv3 area type
+	AreaType string `pulumi:"areaType"`
+	// Set OSPF interface parameters
+	Interfaces []GetTransportRoutingOspfv3Ipv6FeatureAreaInterface `pulumi:"interfaces"`
+	// Do not inject inter-area routes
+	NoSummary bool `pulumi:"noSummary"`
+	// Variable name
+	NoSummaryVariable string `pulumi:"noSummaryVariable"`
+	// Summarize OSPF routes at an area boundary
+	Ranges []GetTransportRoutingOspfv3Ipv6FeatureAreaRange `pulumi:"ranges"`
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureAreaInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureAreaArgs and GetTransportRoutingOspfv3Ipv6FeatureAreaOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureAreaInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureAreaArgs{...}
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaArgs struct {
+	// Always translate type7 LSAs
+	AlwaysTranslate pulumi.BoolInput `pulumi:"alwaysTranslate"`
+	// Variable name
+	AlwaysTranslateVariable pulumi.StringInput `pulumi:"alwaysTranslateVariable"`
+	// Set OSPF area number
+	AreaNumber pulumi.IntInput `pulumi:"areaNumber"`
+	// Variable name
+	AreaNumberVariable pulumi.StringInput `pulumi:"areaNumberVariable"`
+	// Set OSPFv3 area type
+	AreaType pulumi.StringInput `pulumi:"areaType"`
+	// Set OSPF interface parameters
+	Interfaces GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayInput `pulumi:"interfaces"`
+	// Do not inject inter-area routes
+	NoSummary pulumi.BoolInput `pulumi:"noSummary"`
+	// Variable name
+	NoSummaryVariable pulumi.StringInput `pulumi:"noSummaryVariable"`
+	// Summarize OSPF routes at an area boundary
+	Ranges GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayInput `pulumi:"ranges"`
+}
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureArea)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaArgs) ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaArgs) ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureAreaOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureAreaArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureAreaArray and GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureAreaArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureAreaArray{ GetTransportRoutingOspfv3Ipv6FeatureAreaArgs{...} }
+type GetTransportRoutingOspfv3Ipv6FeatureAreaArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaArray []GetTransportRoutingOspfv3Ipv6FeatureAreaInput
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureArea)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaArray) ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaArray) ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureArea)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaOutput {
+	return o
+}
+
+// Always translate type7 LSAs
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) AlwaysTranslate() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) bool { return v.AlwaysTranslate }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) AlwaysTranslateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) string { return v.AlwaysTranslateVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF area number
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) AreaNumber() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) int { return v.AreaNumber }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) AreaNumberVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) string { return v.AreaNumberVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPFv3 area type
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) AreaType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) string { return v.AreaType }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface parameters
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) Interfaces() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) []GetTransportRoutingOspfv3Ipv6FeatureAreaInterface {
+		return v.Interfaces
+	}).(GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput)
+}
+
+// Do not inject inter-area routes
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) NoSummary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) bool { return v.NoSummary }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) NoSummaryVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) string { return v.NoSummaryVariable }).(pulumi.StringOutput)
+}
+
+// Summarize OSPF routes at an area boundary
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaOutput) Ranges() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureArea) []GetTransportRoutingOspfv3Ipv6FeatureAreaRange {
+		return v.Ranges
+	}).(GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureArea)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv6FeatureAreaOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv6FeatureArea {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv6FeatureArea)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv6FeatureAreaOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterface struct {
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKey string `pulumi:"authenticationKey"`
+	// Variable name
+	AuthenticationKeyVariable string `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
+	AuthenticationSpi int `pulumi:"authenticationSpi"`
+	// Variable name
+	AuthenticationSpiVariable string `pulumi:"authenticationSpiVariable"`
+	// Set OSPF interface authentication configuration
+	AuthenticationType string `pulumi:"authenticationType"`
+	// Set cost of OSPF interface
+	Cost int `pulumi:"cost"`
+	// Variable name
+	CostVariable string `pulumi:"costVariable"`
+	// Set interval after which neighbor is declared to be down
+	DeadInterval int `pulumi:"deadInterval"`
+	// Variable name
+	DeadIntervalVariable string `pulumi:"deadIntervalVariable"`
+	// Set interval between OSPF hello packets
+	HelloInterval int `pulumi:"helloInterval"`
+	// Variable name
+	HelloIntervalVariable string `pulumi:"helloIntervalVariable"`
+	// Set time between retransmitting LSAs
+	LsaRetransmitInterval int `pulumi:"lsaRetransmitInterval"`
+	// Variable name
+	LsaRetransmitIntervalVariable string `pulumi:"lsaRetransmitIntervalVariable"`
+	// Set interface name
+	Name string `pulumi:"name"`
+	// Variable name
+	NameVariable string `pulumi:"nameVariable"`
+	// Set the OSPF network type
+	NetworkType string `pulumi:"networkType"`
+	// Variable name
+	NetworkTypeVariable string `pulumi:"networkTypeVariable"`
+	// Set the interface to advertise its address, but not to actively run OSPF
+	PassiveInterface bool `pulumi:"passiveInterface"`
+	// Variable name
+	PassiveInterfaceVariable string `pulumi:"passiveInterfaceVariable"`
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs and GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs{...}
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs struct {
+	// Set OSPF interface authentication IPSEC key
+	AuthenticationKey pulumi.StringInput `pulumi:"authenticationKey"`
+	// Variable name
+	AuthenticationKeyVariable pulumi.StringInput `pulumi:"authenticationKeyVariable"`
+	// Set OSPF interface authentication IPSec SPI, range 256..4294967295
+	AuthenticationSpi pulumi.IntInput `pulumi:"authenticationSpi"`
+	// Variable name
+	AuthenticationSpiVariable pulumi.StringInput `pulumi:"authenticationSpiVariable"`
+	// Set OSPF interface authentication configuration
+	AuthenticationType pulumi.StringInput `pulumi:"authenticationType"`
+	// Set cost of OSPF interface
+	Cost pulumi.IntInput `pulumi:"cost"`
+	// Variable name
+	CostVariable pulumi.StringInput `pulumi:"costVariable"`
+	// Set interval after which neighbor is declared to be down
+	DeadInterval pulumi.IntInput `pulumi:"deadInterval"`
+	// Variable name
+	DeadIntervalVariable pulumi.StringInput `pulumi:"deadIntervalVariable"`
+	// Set interval between OSPF hello packets
+	HelloInterval pulumi.IntInput `pulumi:"helloInterval"`
+	// Variable name
+	HelloIntervalVariable pulumi.StringInput `pulumi:"helloIntervalVariable"`
+	// Set time between retransmitting LSAs
+	LsaRetransmitInterval pulumi.IntInput `pulumi:"lsaRetransmitInterval"`
+	// Variable name
+	LsaRetransmitIntervalVariable pulumi.StringInput `pulumi:"lsaRetransmitIntervalVariable"`
+	// Set interface name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Variable name
+	NameVariable pulumi.StringInput `pulumi:"nameVariable"`
+	// Set the OSPF network type
+	NetworkType pulumi.StringInput `pulumi:"networkType"`
+	// Variable name
+	NetworkTypeVariable pulumi.StringInput `pulumi:"networkTypeVariable"`
+	// Set the interface to advertise its address, but not to actively run OSPF
+	PassiveInterface pulumi.BoolInput `pulumi:"passiveInterface"`
+	// Variable name
+	PassiveInterfaceVariable pulumi.StringInput `pulumi:"passiveInterfaceVariable"`
+}
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray and GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray{ GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs{...} }
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray []GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceInput
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureAreaInterface)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput {
+	return o
+}
+
+// Set OSPF interface authentication IPSEC key
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKey() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.AuthenticationKey }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationKeyVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.AuthenticationKeyVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface authentication IPSec SPI, range 256..4294967295
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationSpi() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) int { return v.AuthenticationSpi }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationSpiVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.AuthenticationSpiVariable }).(pulumi.StringOutput)
+}
+
+// Set OSPF interface authentication configuration
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) AuthenticationType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.AuthenticationType }).(pulumi.StringOutput)
+}
+
+// Set cost of OSPF interface
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) Cost() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) int { return v.Cost }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) CostVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.CostVariable }).(pulumi.StringOutput)
+}
+
+// Set interval after which neighbor is declared to be down
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) DeadInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) int { return v.DeadInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) DeadIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.DeadIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set interval between OSPF hello packets
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) HelloInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) int { return v.HelloInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) HelloIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.HelloIntervalVariable }).(pulumi.StringOutput)
+}
+
+// Set time between retransmitting LSAs
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) LsaRetransmitInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) int { return v.LsaRetransmitInterval }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) LsaRetransmitIntervalVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string {
+		return v.LsaRetransmitIntervalVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set interface name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) NameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.NameVariable }).(pulumi.StringOutput)
+}
+
+// Set the OSPF network type
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) NetworkType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.NetworkType }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) NetworkTypeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.NetworkTypeVariable }).(pulumi.StringOutput)
+}
+
+// Set the interface to advertise its address, but not to actively run OSPF
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) PassiveInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) bool { return v.PassiveInterface }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput) PassiveInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaInterface) string { return v.PassiveInterfaceVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureAreaInterface)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv6FeatureAreaInterface {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv6FeatureAreaInterface)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRange struct {
+	// Set cost for this range
+	Cost int `pulumi:"cost"`
+	// Variable name
+	CostVariable string `pulumi:"costVariable"`
+	// Do not advertise this range
+	NoAdvertise bool `pulumi:"noAdvertise"`
+	// Variable name
+	NoAdvertiseVariable string `pulumi:"noAdvertiseVariable"`
+	// IPv6 prefix,for example 2001::/64
+	Prefix string `pulumi:"prefix"`
+	// Variable name
+	PrefixVariable string `pulumi:"prefixVariable"`
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureAreaRangeInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs and GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureAreaRangeInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs{...}
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRangeInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs struct {
+	// Set cost for this range
+	Cost pulumi.IntInput `pulumi:"cost"`
+	// Variable name
+	CostVariable pulumi.StringInput `pulumi:"costVariable"`
+	// Do not advertise this range
+	NoAdvertise pulumi.BoolInput `pulumi:"noAdvertise"`
+	// Variable name
+	NoAdvertiseVariable pulumi.StringInput `pulumi:"noAdvertiseVariable"`
+	// IPv6 prefix,for example 2001::/64
+	Prefix pulumi.StringInput `pulumi:"prefix"`
+	// Variable name
+	PrefixVariable pulumi.StringInput `pulumi:"prefixVariable"`
+}
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaRange)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray and GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray{ GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs{...} }
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray []GetTransportRoutingOspfv3Ipv6FeatureAreaRangeInput
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureAreaRange)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaRange)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput {
+	return o
+}
+
+// Set cost for this range
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) Cost() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaRange) int { return v.Cost }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) CostVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaRange) string { return v.CostVariable }).(pulumi.StringOutput)
+}
+
+// Do not advertise this range
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) NoAdvertise() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaRange) bool { return v.NoAdvertise }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) NoAdvertiseVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaRange) string { return v.NoAdvertiseVariable }).(pulumi.StringOutput)
+}
+
+// IPv6 prefix,for example 2001::/64
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) Prefix() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaRange) string { return v.Prefix }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput) PrefixVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureAreaRange) string { return v.PrefixVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureAreaRange)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv6FeatureAreaRange {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv6FeatureAreaRange)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureRedistribute struct {
+	// Set the protocol
+	Protocol string `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable string `pulumi:"protocolVariable"`
+	RoutePolicyId    string `pulumi:"routePolicyId"`
+	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+	TranslateRibMetric bool `pulumi:"translateRibMetric"`
+	// Variable name
+	TranslateRibMetricVariable string `pulumi:"translateRibMetricVariable"`
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureRedistributeInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs and GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureRedistributeInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs{...}
+type GetTransportRoutingOspfv3Ipv6FeatureRedistributeInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput() GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs struct {
+	// Set the protocol
+	Protocol pulumi.StringInput `pulumi:"protocol"`
+	// Variable name
+	ProtocolVariable pulumi.StringInput `pulumi:"protocolVariable"`
+	RoutePolicyId    pulumi.StringInput `pulumi:"routePolicyId"`
+	// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+	TranslateRibMetric pulumi.BoolInput `pulumi:"translateRibMetric"`
+	// Variable name
+	TranslateRibMetricVariable pulumi.StringInput `pulumi:"translateRibMetricVariable"`
+}
+
+func (GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureRedistribute)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput() GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput)
+}
+
+// GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayInput is an input type that accepts GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray and GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput values.
+// You can construct a concrete instance of `GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayInput` via:
+//
+//	GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray{ GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs{...} }
+type GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput
+	ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutputWithContext(context.Context) GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray []GetTransportRoutingOspfv3Ipv6FeatureRedistributeInput
+
+func (GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureRedistribute)(nil)).Elem()
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput {
+	return i.ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureRedistribute)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput() GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput {
+	return o
+}
+
+// Set the protocol
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) Protocol() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureRedistribute) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) ProtocolVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureRedistribute) string { return v.ProtocolVariable }).(pulumi.StringOutput)
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) RoutePolicyId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureRedistribute) string { return v.RoutePolicyId }).(pulumi.StringOutput)
+}
+
+// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) TranslateRibMetric() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureRedistribute) bool { return v.TranslateRibMetric }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput) TranslateRibMetricVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportRoutingOspfv3Ipv6FeatureRedistribute) string { return v.TranslateRibMetricVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportRoutingOspfv3Ipv6FeatureRedistribute)(nil)).Elem()
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput() GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput) ToGetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput {
+	return o
+}
+
+func (o GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingOspfv3Ipv6FeatureRedistribute {
+		return vs[0].([]GetTransportRoutingOspfv3Ipv6FeatureRedistribute)[vs[1].(int)]
+	}).(GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput)
+}
+
+type GetTransportT1E1ControllerFeatureEntry struct {
+	// Cable Config
+	CableLength string `pulumi:"cableLength"`
+	// Channel Group List
+	ChannelGroups []GetTransportT1E1ControllerFeatureEntryChannelGroup `pulumi:"channelGroups"`
+	// Clock Source
+	ClockSource string `pulumi:"clockSource"`
+	// Description
+	Description string `pulumi:"description"`
+	// Variable name
+	DescriptionVariable string `pulumi:"descriptionVariable"`
+	// Card Type
+	E1Description string `pulumi:"e1Description"`
+	// Framing
+	E1Framing string `pulumi:"e1Framing"`
+	// Variable name
+	E1FramingVariable string `pulumi:"e1FramingVariable"`
+	// LineCode
+	E1Linecode string `pulumi:"e1Linecode"`
+	// Variable name
+	E1LinecodeVariable string `pulumi:"e1LinecodeVariable"`
+	// length
+	LengthLong string `pulumi:"lengthLong"`
+	// Variable name
+	LengthLongVariable string `pulumi:"lengthLongVariable"`
+	// length
+	LengthShort string `pulumi:"lengthShort"`
+	// Variable name
+	LengthShortVariable string `pulumi:"lengthShortVariable"`
+	// Line Mode
+	LineMode string `pulumi:"lineMode"`
+	// Variable name
+	LineModeVariable string `pulumi:"lineModeVariable"`
+	// Card Type
+	T1Description string `pulumi:"t1Description"`
+	// Framing
+	T1Framing string `pulumi:"t1Framing"`
+	// Variable name
+	T1FramingVariable string `pulumi:"t1FramingVariable"`
+	// LineCode
+	T1Linecode string `pulumi:"t1Linecode"`
+	// Variable name
+	T1LinecodeVariable string `pulumi:"t1LinecodeVariable"`
+}
+
+// GetTransportT1E1ControllerFeatureEntryInput is an input type that accepts GetTransportT1E1ControllerFeatureEntryArgs and GetTransportT1E1ControllerFeatureEntryOutput values.
+// You can construct a concrete instance of `GetTransportT1E1ControllerFeatureEntryInput` via:
+//
+//	GetTransportT1E1ControllerFeatureEntryArgs{...}
+type GetTransportT1E1ControllerFeatureEntryInput interface {
+	pulumi.Input
+
+	ToGetTransportT1E1ControllerFeatureEntryOutput() GetTransportT1E1ControllerFeatureEntryOutput
+	ToGetTransportT1E1ControllerFeatureEntryOutputWithContext(context.Context) GetTransportT1E1ControllerFeatureEntryOutput
+}
+
+type GetTransportT1E1ControllerFeatureEntryArgs struct {
+	// Cable Config
+	CableLength pulumi.StringInput `pulumi:"cableLength"`
+	// Channel Group List
+	ChannelGroups GetTransportT1E1ControllerFeatureEntryChannelGroupArrayInput `pulumi:"channelGroups"`
+	// Clock Source
+	ClockSource pulumi.StringInput `pulumi:"clockSource"`
+	// Description
+	Description pulumi.StringInput `pulumi:"description"`
+	// Variable name
+	DescriptionVariable pulumi.StringInput `pulumi:"descriptionVariable"`
+	// Card Type
+	E1Description pulumi.StringInput `pulumi:"e1Description"`
+	// Framing
+	E1Framing pulumi.StringInput `pulumi:"e1Framing"`
+	// Variable name
+	E1FramingVariable pulumi.StringInput `pulumi:"e1FramingVariable"`
+	// LineCode
+	E1Linecode pulumi.StringInput `pulumi:"e1Linecode"`
+	// Variable name
+	E1LinecodeVariable pulumi.StringInput `pulumi:"e1LinecodeVariable"`
+	// length
+	LengthLong pulumi.StringInput `pulumi:"lengthLong"`
+	// Variable name
+	LengthLongVariable pulumi.StringInput `pulumi:"lengthLongVariable"`
+	// length
+	LengthShort pulumi.StringInput `pulumi:"lengthShort"`
+	// Variable name
+	LengthShortVariable pulumi.StringInput `pulumi:"lengthShortVariable"`
+	// Line Mode
+	LineMode pulumi.StringInput `pulumi:"lineMode"`
+	// Variable name
+	LineModeVariable pulumi.StringInput `pulumi:"lineModeVariable"`
+	// Card Type
+	T1Description pulumi.StringInput `pulumi:"t1Description"`
+	// Framing
+	T1Framing pulumi.StringInput `pulumi:"t1Framing"`
+	// Variable name
+	T1FramingVariable pulumi.StringInput `pulumi:"t1FramingVariable"`
+	// LineCode
+	T1Linecode pulumi.StringInput `pulumi:"t1Linecode"`
+	// Variable name
+	T1LinecodeVariable pulumi.StringInput `pulumi:"t1LinecodeVariable"`
+}
+
+func (GetTransportT1E1ControllerFeatureEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntry)(nil)).Elem()
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryArgs) ToGetTransportT1E1ControllerFeatureEntryOutput() GetTransportT1E1ControllerFeatureEntryOutput {
+	return i.ToGetTransportT1E1ControllerFeatureEntryOutputWithContext(context.Background())
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryArgs) ToGetTransportT1E1ControllerFeatureEntryOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportT1E1ControllerFeatureEntryOutput)
+}
+
+// GetTransportT1E1ControllerFeatureEntryArrayInput is an input type that accepts GetTransportT1E1ControllerFeatureEntryArray and GetTransportT1E1ControllerFeatureEntryArrayOutput values.
+// You can construct a concrete instance of `GetTransportT1E1ControllerFeatureEntryArrayInput` via:
+//
+//	GetTransportT1E1ControllerFeatureEntryArray{ GetTransportT1E1ControllerFeatureEntryArgs{...} }
+type GetTransportT1E1ControllerFeatureEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportT1E1ControllerFeatureEntryArrayOutput() GetTransportT1E1ControllerFeatureEntryArrayOutput
+	ToGetTransportT1E1ControllerFeatureEntryArrayOutputWithContext(context.Context) GetTransportT1E1ControllerFeatureEntryArrayOutput
+}
+
+type GetTransportT1E1ControllerFeatureEntryArray []GetTransportT1E1ControllerFeatureEntryInput
+
+func (GetTransportT1E1ControllerFeatureEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportT1E1ControllerFeatureEntry)(nil)).Elem()
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryArray) ToGetTransportT1E1ControllerFeatureEntryArrayOutput() GetTransportT1E1ControllerFeatureEntryArrayOutput {
+	return i.ToGetTransportT1E1ControllerFeatureEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryArray) ToGetTransportT1E1ControllerFeatureEntryArrayOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportT1E1ControllerFeatureEntryArrayOutput)
+}
+
+type GetTransportT1E1ControllerFeatureEntryOutput struct{ *pulumi.OutputState }
+
+func (GetTransportT1E1ControllerFeatureEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntry)(nil)).Elem()
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryOutput) ToGetTransportT1E1ControllerFeatureEntryOutput() GetTransportT1E1ControllerFeatureEntryOutput {
+	return o
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryOutput) ToGetTransportT1E1ControllerFeatureEntryOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryOutput {
+	return o
+}
+
+// Cable Config
+func (o GetTransportT1E1ControllerFeatureEntryOutput) CableLength() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.CableLength }).(pulumi.StringOutput)
+}
+
+// Channel Group List
+func (o GetTransportT1E1ControllerFeatureEntryOutput) ChannelGroups() GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) []GetTransportT1E1ControllerFeatureEntryChannelGroup {
+		return v.ChannelGroups
+	}).(GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput)
+}
+
+// Clock Source
+func (o GetTransportT1E1ControllerFeatureEntryOutput) ClockSource() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.ClockSource }).(pulumi.StringOutput)
+}
+
+// Description
+func (o GetTransportT1E1ControllerFeatureEntryOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) DescriptionVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.DescriptionVariable }).(pulumi.StringOutput)
+}
+
+// Card Type
+func (o GetTransportT1E1ControllerFeatureEntryOutput) E1Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.E1Description }).(pulumi.StringOutput)
+}
+
+// Framing
+func (o GetTransportT1E1ControllerFeatureEntryOutput) E1Framing() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.E1Framing }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) E1FramingVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.E1FramingVariable }).(pulumi.StringOutput)
+}
+
+// LineCode
+func (o GetTransportT1E1ControllerFeatureEntryOutput) E1Linecode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.E1Linecode }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) E1LinecodeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.E1LinecodeVariable }).(pulumi.StringOutput)
+}
+
+// length
+func (o GetTransportT1E1ControllerFeatureEntryOutput) LengthLong() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.LengthLong }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) LengthLongVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.LengthLongVariable }).(pulumi.StringOutput)
+}
+
+// length
+func (o GetTransportT1E1ControllerFeatureEntryOutput) LengthShort() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.LengthShort }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) LengthShortVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.LengthShortVariable }).(pulumi.StringOutput)
+}
+
+// Line Mode
+func (o GetTransportT1E1ControllerFeatureEntryOutput) LineMode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.LineMode }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) LineModeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.LineModeVariable }).(pulumi.StringOutput)
+}
+
+// Card Type
+func (o GetTransportT1E1ControllerFeatureEntryOutput) T1Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.T1Description }).(pulumi.StringOutput)
+}
+
+// Framing
+func (o GetTransportT1E1ControllerFeatureEntryOutput) T1Framing() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.T1Framing }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) T1FramingVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.T1FramingVariable }).(pulumi.StringOutput)
+}
+
+// LineCode
+func (o GetTransportT1E1ControllerFeatureEntryOutput) T1Linecode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.T1Linecode }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryOutput) T1LinecodeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntry) string { return v.T1LinecodeVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportT1E1ControllerFeatureEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportT1E1ControllerFeatureEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportT1E1ControllerFeatureEntry)(nil)).Elem()
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryArrayOutput) ToGetTransportT1E1ControllerFeatureEntryArrayOutput() GetTransportT1E1ControllerFeatureEntryArrayOutput {
+	return o
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryArrayOutput) ToGetTransportT1E1ControllerFeatureEntryArrayOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryArrayOutput {
+	return o
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryArrayOutput) Index(i pulumi.IntInput) GetTransportT1E1ControllerFeatureEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportT1E1ControllerFeatureEntry {
+		return vs[0].([]GetTransportT1E1ControllerFeatureEntry)[vs[1].(int)]
+	}).(GetTransportT1E1ControllerFeatureEntryOutput)
+}
+
+type GetTransportT1E1ControllerFeatureEntryChannelGroup struct {
+	// Number
+	ChannelGroup int `pulumi:"channelGroup"`
+	// Variable name
+	ChannelGroupVariable string `pulumi:"channelGroupVariable"`
+	// Time slots
+	TimeSlot string `pulumi:"timeSlot"`
+	// Variable name
+	TimeSlotVariable string `pulumi:"timeSlotVariable"`
+}
+
+// GetTransportT1E1ControllerFeatureEntryChannelGroupInput is an input type that accepts GetTransportT1E1ControllerFeatureEntryChannelGroupArgs and GetTransportT1E1ControllerFeatureEntryChannelGroupOutput values.
+// You can construct a concrete instance of `GetTransportT1E1ControllerFeatureEntryChannelGroupInput` via:
+//
+//	GetTransportT1E1ControllerFeatureEntryChannelGroupArgs{...}
+type GetTransportT1E1ControllerFeatureEntryChannelGroupInput interface {
+	pulumi.Input
+
+	ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutput() GetTransportT1E1ControllerFeatureEntryChannelGroupOutput
+	ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutputWithContext(context.Context) GetTransportT1E1ControllerFeatureEntryChannelGroupOutput
+}
+
+type GetTransportT1E1ControllerFeatureEntryChannelGroupArgs struct {
+	// Number
+	ChannelGroup pulumi.IntInput `pulumi:"channelGroup"`
+	// Variable name
+	ChannelGroupVariable pulumi.StringInput `pulumi:"channelGroupVariable"`
+	// Time slots
+	TimeSlot pulumi.StringInput `pulumi:"timeSlot"`
+	// Variable name
+	TimeSlotVariable pulumi.StringInput `pulumi:"timeSlotVariable"`
+}
+
+func (GetTransportT1E1ControllerFeatureEntryChannelGroupArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntryChannelGroup)(nil)).Elem()
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryChannelGroupArgs) ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutput() GetTransportT1E1ControllerFeatureEntryChannelGroupOutput {
+	return i.ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutputWithContext(context.Background())
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryChannelGroupArgs) ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryChannelGroupOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportT1E1ControllerFeatureEntryChannelGroupOutput)
+}
+
+// GetTransportT1E1ControllerFeatureEntryChannelGroupArrayInput is an input type that accepts GetTransportT1E1ControllerFeatureEntryChannelGroupArray and GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput values.
+// You can construct a concrete instance of `GetTransportT1E1ControllerFeatureEntryChannelGroupArrayInput` via:
+//
+//	GetTransportT1E1ControllerFeatureEntryChannelGroupArray{ GetTransportT1E1ControllerFeatureEntryChannelGroupArgs{...} }
+type GetTransportT1E1ControllerFeatureEntryChannelGroupArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput() GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput
+	ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutputWithContext(context.Context) GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput
+}
+
+type GetTransportT1E1ControllerFeatureEntryChannelGroupArray []GetTransportT1E1ControllerFeatureEntryChannelGroupInput
+
+func (GetTransportT1E1ControllerFeatureEntryChannelGroupArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportT1E1ControllerFeatureEntryChannelGroup)(nil)).Elem()
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryChannelGroupArray) ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput() GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput {
+	return i.ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportT1E1ControllerFeatureEntryChannelGroupArray) ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput)
+}
+
+type GetTransportT1E1ControllerFeatureEntryChannelGroupOutput struct{ *pulumi.OutputState }
+
+func (GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntryChannelGroup)(nil)).Elem()
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutput() GetTransportT1E1ControllerFeatureEntryChannelGroupOutput {
+	return o
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) ToGetTransportT1E1ControllerFeatureEntryChannelGroupOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryChannelGroupOutput {
+	return o
+}
+
+// Number
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) ChannelGroup() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntryChannelGroup) int { return v.ChannelGroup }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) ChannelGroupVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntryChannelGroup) string { return v.ChannelGroupVariable }).(pulumi.StringOutput)
+}
+
+// Time slots
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) TimeSlot() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntryChannelGroup) string { return v.TimeSlot }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupOutput) TimeSlotVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportT1E1ControllerFeatureEntryChannelGroup) string { return v.TimeSlotVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportT1E1ControllerFeatureEntryChannelGroup)(nil)).Elem()
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput) ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput() GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput {
+	return o
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput) ToGetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutputWithContext(ctx context.Context) GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput {
+	return o
+}
+
+func (o GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput) Index(i pulumi.IntInput) GetTransportT1E1ControllerFeatureEntryChannelGroupOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportT1E1ControllerFeatureEntryChannelGroup {
+		return vs[0].([]GetTransportT1E1ControllerFeatureEntryChannelGroup)[vs[1].(int)]
+	}).(GetTransportT1E1ControllerFeatureEntryChannelGroupOutput)
+}
+
+type GetTransportTrackerGroupFeatureTrackerElement struct {
+	TrackerId string `pulumi:"trackerId"`
+}
+
+// GetTransportTrackerGroupFeatureTrackerElementInput is an input type that accepts GetTransportTrackerGroupFeatureTrackerElementArgs and GetTransportTrackerGroupFeatureTrackerElementOutput values.
+// You can construct a concrete instance of `GetTransportTrackerGroupFeatureTrackerElementInput` via:
+//
+//	GetTransportTrackerGroupFeatureTrackerElementArgs{...}
+type GetTransportTrackerGroupFeatureTrackerElementInput interface {
+	pulumi.Input
+
+	ToGetTransportTrackerGroupFeatureTrackerElementOutput() GetTransportTrackerGroupFeatureTrackerElementOutput
+	ToGetTransportTrackerGroupFeatureTrackerElementOutputWithContext(context.Context) GetTransportTrackerGroupFeatureTrackerElementOutput
+}
+
+type GetTransportTrackerGroupFeatureTrackerElementArgs struct {
+	TrackerId pulumi.StringInput `pulumi:"trackerId"`
+}
+
+func (GetTransportTrackerGroupFeatureTrackerElementArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportTrackerGroupFeatureTrackerElement)(nil)).Elem()
+}
+
+func (i GetTransportTrackerGroupFeatureTrackerElementArgs) ToGetTransportTrackerGroupFeatureTrackerElementOutput() GetTransportTrackerGroupFeatureTrackerElementOutput {
+	return i.ToGetTransportTrackerGroupFeatureTrackerElementOutputWithContext(context.Background())
+}
+
+func (i GetTransportTrackerGroupFeatureTrackerElementArgs) ToGetTransportTrackerGroupFeatureTrackerElementOutputWithContext(ctx context.Context) GetTransportTrackerGroupFeatureTrackerElementOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportTrackerGroupFeatureTrackerElementOutput)
+}
+
+// GetTransportTrackerGroupFeatureTrackerElementArrayInput is an input type that accepts GetTransportTrackerGroupFeatureTrackerElementArray and GetTransportTrackerGroupFeatureTrackerElementArrayOutput values.
+// You can construct a concrete instance of `GetTransportTrackerGroupFeatureTrackerElementArrayInput` via:
+//
+//	GetTransportTrackerGroupFeatureTrackerElementArray{ GetTransportTrackerGroupFeatureTrackerElementArgs{...} }
+type GetTransportTrackerGroupFeatureTrackerElementArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportTrackerGroupFeatureTrackerElementArrayOutput() GetTransportTrackerGroupFeatureTrackerElementArrayOutput
+	ToGetTransportTrackerGroupFeatureTrackerElementArrayOutputWithContext(context.Context) GetTransportTrackerGroupFeatureTrackerElementArrayOutput
+}
+
+type GetTransportTrackerGroupFeatureTrackerElementArray []GetTransportTrackerGroupFeatureTrackerElementInput
+
+func (GetTransportTrackerGroupFeatureTrackerElementArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportTrackerGroupFeatureTrackerElement)(nil)).Elem()
+}
+
+func (i GetTransportTrackerGroupFeatureTrackerElementArray) ToGetTransportTrackerGroupFeatureTrackerElementArrayOutput() GetTransportTrackerGroupFeatureTrackerElementArrayOutput {
+	return i.ToGetTransportTrackerGroupFeatureTrackerElementArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportTrackerGroupFeatureTrackerElementArray) ToGetTransportTrackerGroupFeatureTrackerElementArrayOutputWithContext(ctx context.Context) GetTransportTrackerGroupFeatureTrackerElementArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportTrackerGroupFeatureTrackerElementArrayOutput)
+}
+
+type GetTransportTrackerGroupFeatureTrackerElementOutput struct{ *pulumi.OutputState }
+
+func (GetTransportTrackerGroupFeatureTrackerElementOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportTrackerGroupFeatureTrackerElement)(nil)).Elem()
+}
+
+func (o GetTransportTrackerGroupFeatureTrackerElementOutput) ToGetTransportTrackerGroupFeatureTrackerElementOutput() GetTransportTrackerGroupFeatureTrackerElementOutput {
+	return o
+}
+
+func (o GetTransportTrackerGroupFeatureTrackerElementOutput) ToGetTransportTrackerGroupFeatureTrackerElementOutputWithContext(ctx context.Context) GetTransportTrackerGroupFeatureTrackerElementOutput {
+	return o
+}
+
+func (o GetTransportTrackerGroupFeatureTrackerElementOutput) TrackerId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportTrackerGroupFeatureTrackerElement) string { return v.TrackerId }).(pulumi.StringOutput)
+}
+
+type GetTransportTrackerGroupFeatureTrackerElementArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportTrackerGroupFeatureTrackerElementArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportTrackerGroupFeatureTrackerElement)(nil)).Elem()
+}
+
+func (o GetTransportTrackerGroupFeatureTrackerElementArrayOutput) ToGetTransportTrackerGroupFeatureTrackerElementArrayOutput() GetTransportTrackerGroupFeatureTrackerElementArrayOutput {
+	return o
+}
+
+func (o GetTransportTrackerGroupFeatureTrackerElementArrayOutput) ToGetTransportTrackerGroupFeatureTrackerElementArrayOutputWithContext(ctx context.Context) GetTransportTrackerGroupFeatureTrackerElementArrayOutput {
+	return o
+}
+
+func (o GetTransportTrackerGroupFeatureTrackerElementArrayOutput) Index(i pulumi.IntInput) GetTransportTrackerGroupFeatureTrackerElementOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportTrackerGroupFeatureTrackerElement {
+		return vs[0].([]GetTransportTrackerGroupFeatureTrackerElement)[vs[1].(int)]
+	}).(GetTransportTrackerGroupFeatureTrackerElementOutput)
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRoute struct {
+	// Administrative distance
+	AdministrativeDistance int `pulumi:"administrativeDistance"`
+	// Variable name
+	AdministrativeDistanceVariable string `pulumi:"administrativeDistanceVariable"`
+	// Gateway
+	Gateway string `pulumi:"gateway"`
+	// IP Address
+	NetworkAddress string `pulumi:"networkAddress"`
+	// Variable name
+	NetworkAddressVariable string `pulumi:"networkAddressVariable"`
+	// IPv4 Route Gateway Next Hop
+	NextHops []GetTransportWanVpnFeatureIpv4StaticRouteNextHop `pulumi:"nextHops"`
+	// Subnet Mask
+	SubnetMask string `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
+}
+
+// GetTransportWanVpnFeatureIpv4StaticRouteInput is an input type that accepts GetTransportWanVpnFeatureIpv4StaticRouteArgs and GetTransportWanVpnFeatureIpv4StaticRouteOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv4StaticRouteInput` via:
+//
+//	GetTransportWanVpnFeatureIpv4StaticRouteArgs{...}
+type GetTransportWanVpnFeatureIpv4StaticRouteInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv4StaticRouteOutput() GetTransportWanVpnFeatureIpv4StaticRouteOutput
+	ToGetTransportWanVpnFeatureIpv4StaticRouteOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv4StaticRouteOutput
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteArgs struct {
+	// Administrative distance
+	AdministrativeDistance pulumi.IntInput `pulumi:"administrativeDistance"`
+	// Variable name
+	AdministrativeDistanceVariable pulumi.StringInput `pulumi:"administrativeDistanceVariable"`
+	// Gateway
+	Gateway pulumi.StringInput `pulumi:"gateway"`
+	// IP Address
+	NetworkAddress pulumi.StringInput `pulumi:"networkAddress"`
+	// Variable name
+	NetworkAddressVariable pulumi.StringInput `pulumi:"networkAddressVariable"`
+	// IPv4 Route Gateway Next Hop
+	NextHops GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput `pulumi:"nextHops"`
+	// Subnet Mask
+	SubnetMask pulumi.StringInput `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
+}
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRoute)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteArgs) ToGetTransportWanVpnFeatureIpv4StaticRouteOutput() GetTransportWanVpnFeatureIpv4StaticRouteOutput {
+	return i.ToGetTransportWanVpnFeatureIpv4StaticRouteOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteArgs) ToGetTransportWanVpnFeatureIpv4StaticRouteOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv4StaticRouteOutput)
+}
+
+// GetTransportWanVpnFeatureIpv4StaticRouteArrayInput is an input type that accepts GetTransportWanVpnFeatureIpv4StaticRouteArray and GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv4StaticRouteArrayInput` via:
+//
+//	GetTransportWanVpnFeatureIpv4StaticRouteArray{ GetTransportWanVpnFeatureIpv4StaticRouteArgs{...} }
+type GetTransportWanVpnFeatureIpv4StaticRouteArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutput() GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput
+	ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteArray []GetTransportWanVpnFeatureIpv4StaticRouteInput
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv4StaticRoute)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteArray) ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutput() GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput {
+	return i.ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteArray) ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput)
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRoute)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteOutput() GetTransportWanVpnFeatureIpv4StaticRouteOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteOutput {
+	return o
+}
+
+// Administrative distance
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) AdministrativeDistance() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) int { return v.AdministrativeDistance }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) AdministrativeDistanceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) string { return v.AdministrativeDistanceVariable }).(pulumi.StringOutput)
+}
+
+// Gateway
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) Gateway() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) string { return v.Gateway }).(pulumi.StringOutput)
+}
+
+// IP Address
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) NetworkAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) string { return v.NetworkAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) NetworkAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) string { return v.NetworkAddressVariable }).(pulumi.StringOutput)
+}
+
+// IPv4 Route Gateway Next Hop
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) NextHops() GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) []GetTransportWanVpnFeatureIpv4StaticRouteNextHop {
+		return v.NextHops
+	}).(GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput)
+}
+
+// Subnet Mask
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) SubnetMask() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) string { return v.SubnetMask }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv4StaticRouteOutput) SubnetMaskVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRoute) string { return v.SubnetMaskVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv4StaticRoute)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutput() GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureIpv4StaticRouteOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureIpv4StaticRoute {
+		return vs[0].([]GetTransportWanVpnFeatureIpv4StaticRoute)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureIpv4StaticRouteOutput)
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHop struct {
+	// Address
+	Address string `pulumi:"address"`
+	// Variable name
+	AddressVariable string `pulumi:"addressVariable"`
+	// Administrative distance
+	AdministrativeDistance int `pulumi:"administrativeDistance"`
+	// Variable name
+	AdministrativeDistanceVariable string `pulumi:"administrativeDistanceVariable"`
+}
+
+// GetTransportWanVpnFeatureIpv4StaticRouteNextHopInput is an input type that accepts GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs and GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv4StaticRouteNextHopInput` via:
+//
+//	GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs{...}
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHopInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput() GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput
+	ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs struct {
+	// Address
+	Address pulumi.StringInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
+	// Administrative distance
+	AdministrativeDistance pulumi.IntInput `pulumi:"administrativeDistance"`
+	// Variable name
+	AdministrativeDistanceVariable pulumi.StringInput `pulumi:"administrativeDistanceVariable"`
+}
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput() GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
+	return i.ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput)
+}
+
+// GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput is an input type that accepts GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray and GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput` via:
+//
+//	GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray{ GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs{...} }
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput() GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput
+	ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray []GetTransportWanVpnFeatureIpv4StaticRouteNextHopInput
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput() GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
+	return i.ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput)
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput() GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
+	return o
+}
+
+// Address
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRouteNextHop) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRouteNextHop) string { return v.AddressVariable }).(pulumi.StringOutput)
+}
+
+// Administrative distance
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) AdministrativeDistance() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRouteNextHop) int { return v.AdministrativeDistance }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput) AdministrativeDistanceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv4StaticRouteNextHop) string {
+		return v.AdministrativeDistanceVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv4StaticRouteNextHop)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput() GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) ToGetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureIpv4StaticRouteNextHop {
+		return vs[0].([]GetTransportWanVpnFeatureIpv4StaticRouteNextHop)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput)
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRoute struct {
+	// Gateway
+	Gateway string `pulumi:"gateway"`
+	// IPv6 Nat
+	Nat string `pulumi:"nat"`
+	// Variable name
+	NatVariable string `pulumi:"natVariable"`
+	// IPv6 Route Gateway Next Hop
+	NextHops []GetTransportWanVpnFeatureIpv6StaticRouteNextHop `pulumi:"nextHops"`
+	// IPv6 Route Gateway Next Hop
+	Null0 bool `pulumi:"null0"`
+	// Prefix
+	Prefix string `pulumi:"prefix"`
+	// Variable name
+	PrefixVariable string `pulumi:"prefixVariable"`
+}
+
+// GetTransportWanVpnFeatureIpv6StaticRouteInput is an input type that accepts GetTransportWanVpnFeatureIpv6StaticRouteArgs and GetTransportWanVpnFeatureIpv6StaticRouteOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv6StaticRouteInput` via:
+//
+//	GetTransportWanVpnFeatureIpv6StaticRouteArgs{...}
+type GetTransportWanVpnFeatureIpv6StaticRouteInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv6StaticRouteOutput() GetTransportWanVpnFeatureIpv6StaticRouteOutput
+	ToGetTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv6StaticRouteOutput
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteArgs struct {
+	// Gateway
+	Gateway pulumi.StringInput `pulumi:"gateway"`
+	// IPv6 Nat
+	Nat pulumi.StringInput `pulumi:"nat"`
+	// Variable name
+	NatVariable pulumi.StringInput `pulumi:"natVariable"`
+	// IPv6 Route Gateway Next Hop
+	NextHops GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput `pulumi:"nextHops"`
+	// IPv6 Route Gateway Next Hop
+	Null0 pulumi.BoolInput `pulumi:"null0"`
+	// Prefix
+	Prefix pulumi.StringInput `pulumi:"prefix"`
+	// Variable name
+	PrefixVariable pulumi.StringInput `pulumi:"prefixVariable"`
+}
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteArgs) ToGetTransportWanVpnFeatureIpv6StaticRouteOutput() GetTransportWanVpnFeatureIpv6StaticRouteOutput {
+	return i.ToGetTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteArgs) ToGetTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv6StaticRouteOutput)
+}
+
+// GetTransportWanVpnFeatureIpv6StaticRouteArrayInput is an input type that accepts GetTransportWanVpnFeatureIpv6StaticRouteArray and GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv6StaticRouteArrayInput` via:
+//
+//	GetTransportWanVpnFeatureIpv6StaticRouteArray{ GetTransportWanVpnFeatureIpv6StaticRouteArgs{...} }
+type GetTransportWanVpnFeatureIpv6StaticRouteArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutput() GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput
+	ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteArray []GetTransportWanVpnFeatureIpv6StaticRouteInput
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteArray) ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutput() GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput {
+	return i.ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteArray) ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput)
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteOutput() GetTransportWanVpnFeatureIpv6StaticRouteOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteOutput {
+	return o
+}
+
+// Gateway
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) Gateway() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) string { return v.Gateway }).(pulumi.StringOutput)
+}
+
+// IPv6 Nat
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) Nat() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) string { return v.Nat }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) NatVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) string { return v.NatVariable }).(pulumi.StringOutput)
+}
+
+// IPv6 Route Gateway Next Hop
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) NextHops() GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) []GetTransportWanVpnFeatureIpv6StaticRouteNextHop {
+		return v.NextHops
+	}).(GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput)
+}
+
+// IPv6 Route Gateway Next Hop
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) Null0() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) bool { return v.Null0 }).(pulumi.BoolOutput)
+}
+
+// Prefix
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) Prefix() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) string { return v.Prefix }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv6StaticRouteOutput) PrefixVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRoute) string { return v.PrefixVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv6StaticRoute)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutput() GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureIpv6StaticRouteOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureIpv6StaticRoute {
+		return vs[0].([]GetTransportWanVpnFeatureIpv6StaticRoute)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureIpv6StaticRouteOutput)
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHop struct {
+	// Address
+	Address string `pulumi:"address"`
+	// Variable name
+	AddressVariable string `pulumi:"addressVariable"`
+	// Administrative distance
+	AdministrativeDistance int `pulumi:"administrativeDistance"`
+	// Variable name
+	AdministrativeDistanceVariable string `pulumi:"administrativeDistanceVariable"`
+}
+
+// GetTransportWanVpnFeatureIpv6StaticRouteNextHopInput is an input type that accepts GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs and GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv6StaticRouteNextHopInput` via:
+//
+//	GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs{...}
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHopInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput() GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput
+	ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs struct {
+	// Address
+	Address pulumi.StringInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
+	// Administrative distance
+	AdministrativeDistance pulumi.IntInput `pulumi:"administrativeDistance"`
+	// Variable name
+	AdministrativeDistanceVariable pulumi.StringInput `pulumi:"administrativeDistanceVariable"`
+}
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput() GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
+	return i.ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput)
+}
+
+// GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput is an input type that accepts GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray and GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput` via:
+//
+//	GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray{ GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs{...} }
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput() GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput
+	ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray []GetTransportWanVpnFeatureIpv6StaticRouteNextHopInput
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput() GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
+	return i.ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput)
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput() GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
+	return o
+}
+
+// Address
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRouteNextHop) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRouteNextHop) string { return v.AddressVariable }).(pulumi.StringOutput)
+}
+
+// Administrative distance
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) AdministrativeDistance() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRouteNextHop) int { return v.AdministrativeDistance }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput) AdministrativeDistanceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureIpv6StaticRouteNextHop) string {
+		return v.AdministrativeDistanceVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureIpv6StaticRouteNextHop)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput() GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) ToGetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureIpv6StaticRouteNextHop {
+		return vs[0].([]GetTransportWanVpnFeatureIpv6StaticRouteNextHop)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput)
+}
+
+type GetTransportWanVpnFeatureNat64V4Pool struct {
+	// NAT64 v4 Pool Name
+	Nat64V4PoolName string `pulumi:"nat64V4PoolName"`
+	// Variable name
+	Nat64V4PoolNameVariable string `pulumi:"nat64V4PoolNameVariable"`
+	// NAT64 Overload
+	Nat64V4PoolOverload bool `pulumi:"nat64V4PoolOverload"`
+	// Variable name
+	Nat64V4PoolOverloadVariable string `pulumi:"nat64V4PoolOverloadVariable"`
+	// NAT64 Pool Range End
+	Nat64V4PoolRangeEnd string `pulumi:"nat64V4PoolRangeEnd"`
+	// Variable name
+	Nat64V4PoolRangeEndVariable string `pulumi:"nat64V4PoolRangeEndVariable"`
+	// NAT64 Pool Range Start
+	Nat64V4PoolRangeStart string `pulumi:"nat64V4PoolRangeStart"`
+	// Variable name
+	Nat64V4PoolRangeStartVariable string `pulumi:"nat64V4PoolRangeStartVariable"`
+}
+
+// GetTransportWanVpnFeatureNat64V4PoolInput is an input type that accepts GetTransportWanVpnFeatureNat64V4PoolArgs and GetTransportWanVpnFeatureNat64V4PoolOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureNat64V4PoolInput` via:
+//
+//	GetTransportWanVpnFeatureNat64V4PoolArgs{...}
+type GetTransportWanVpnFeatureNat64V4PoolInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureNat64V4PoolOutput() GetTransportWanVpnFeatureNat64V4PoolOutput
+	ToGetTransportWanVpnFeatureNat64V4PoolOutputWithContext(context.Context) GetTransportWanVpnFeatureNat64V4PoolOutput
+}
+
+type GetTransportWanVpnFeatureNat64V4PoolArgs struct {
+	// NAT64 v4 Pool Name
+	Nat64V4PoolName pulumi.StringInput `pulumi:"nat64V4PoolName"`
+	// Variable name
+	Nat64V4PoolNameVariable pulumi.StringInput `pulumi:"nat64V4PoolNameVariable"`
+	// NAT64 Overload
+	Nat64V4PoolOverload pulumi.BoolInput `pulumi:"nat64V4PoolOverload"`
+	// Variable name
+	Nat64V4PoolOverloadVariable pulumi.StringInput `pulumi:"nat64V4PoolOverloadVariable"`
+	// NAT64 Pool Range End
+	Nat64V4PoolRangeEnd pulumi.StringInput `pulumi:"nat64V4PoolRangeEnd"`
+	// Variable name
+	Nat64V4PoolRangeEndVariable pulumi.StringInput `pulumi:"nat64V4PoolRangeEndVariable"`
+	// NAT64 Pool Range Start
+	Nat64V4PoolRangeStart pulumi.StringInput `pulumi:"nat64V4PoolRangeStart"`
+	// Variable name
+	Nat64V4PoolRangeStartVariable pulumi.StringInput `pulumi:"nat64V4PoolRangeStartVariable"`
+}
+
+func (GetTransportWanVpnFeatureNat64V4PoolArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureNat64V4PoolArgs) ToGetTransportWanVpnFeatureNat64V4PoolOutput() GetTransportWanVpnFeatureNat64V4PoolOutput {
+	return i.ToGetTransportWanVpnFeatureNat64V4PoolOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureNat64V4PoolArgs) ToGetTransportWanVpnFeatureNat64V4PoolOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNat64V4PoolOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureNat64V4PoolOutput)
+}
+
+// GetTransportWanVpnFeatureNat64V4PoolArrayInput is an input type that accepts GetTransportWanVpnFeatureNat64V4PoolArray and GetTransportWanVpnFeatureNat64V4PoolArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureNat64V4PoolArrayInput` via:
+//
+//	GetTransportWanVpnFeatureNat64V4PoolArray{ GetTransportWanVpnFeatureNat64V4PoolArgs{...} }
+type GetTransportWanVpnFeatureNat64V4PoolArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureNat64V4PoolArrayOutput() GetTransportWanVpnFeatureNat64V4PoolArrayOutput
+	ToGetTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureNat64V4PoolArrayOutput
+}
+
+type GetTransportWanVpnFeatureNat64V4PoolArray []GetTransportWanVpnFeatureNat64V4PoolInput
+
+func (GetTransportWanVpnFeatureNat64V4PoolArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureNat64V4PoolArray) ToGetTransportWanVpnFeatureNat64V4PoolArrayOutput() GetTransportWanVpnFeatureNat64V4PoolArrayOutput {
+	return i.ToGetTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureNat64V4PoolArray) ToGetTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNat64V4PoolArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureNat64V4PoolArrayOutput)
+}
+
+type GetTransportWanVpnFeatureNat64V4PoolOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureNat64V4PoolOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) ToGetTransportWanVpnFeatureNat64V4PoolOutput() GetTransportWanVpnFeatureNat64V4PoolOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) ToGetTransportWanVpnFeatureNat64V4PoolOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNat64V4PoolOutput {
+	return o
+}
+
+// NAT64 v4 Pool Name
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolName }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolNameVariable }).(pulumi.StringOutput)
+}
+
+// NAT64 Overload
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolOverload() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) bool { return v.Nat64V4PoolOverload }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolOverloadVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolOverloadVariable }).(pulumi.StringOutput)
+}
+
+// NAT64 Pool Range End
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeEnd() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolRangeEnd }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeEndVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolRangeEndVariable }).(pulumi.StringOutput)
+}
+
+// NAT64 Pool Range Start
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeStart() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolRangeStart }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureNat64V4PoolOutput) Nat64V4PoolRangeStartVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNat64V4Pool) string { return v.Nat64V4PoolRangeStartVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureNat64V4PoolArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureNat64V4PoolArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureNat64V4Pool)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureNat64V4PoolArrayOutput) ToGetTransportWanVpnFeatureNat64V4PoolArrayOutput() GetTransportWanVpnFeatureNat64V4PoolArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureNat64V4PoolArrayOutput) ToGetTransportWanVpnFeatureNat64V4PoolArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNat64V4PoolArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureNat64V4PoolArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureNat64V4PoolOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureNat64V4Pool {
+		return vs[0].([]GetTransportWanVpnFeatureNat64V4Pool)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureNat64V4PoolOutput)
+}
+
+type GetTransportWanVpnFeatureNewHostMapping struct {
+	// Hostname
+	HostName string `pulumi:"hostName"`
+	// Variable name
+	HostNameVariable string `pulumi:"hostNameVariable"`
+	// List of IP
+	ListOfIpAddresses []string `pulumi:"listOfIpAddresses"`
+	// Variable name
+	ListOfIpAddressesVariable string `pulumi:"listOfIpAddressesVariable"`
+}
+
+// GetTransportWanVpnFeatureNewHostMappingInput is an input type that accepts GetTransportWanVpnFeatureNewHostMappingArgs and GetTransportWanVpnFeatureNewHostMappingOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureNewHostMappingInput` via:
+//
+//	GetTransportWanVpnFeatureNewHostMappingArgs{...}
+type GetTransportWanVpnFeatureNewHostMappingInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureNewHostMappingOutput() GetTransportWanVpnFeatureNewHostMappingOutput
+	ToGetTransportWanVpnFeatureNewHostMappingOutputWithContext(context.Context) GetTransportWanVpnFeatureNewHostMappingOutput
+}
+
+type GetTransportWanVpnFeatureNewHostMappingArgs struct {
+	// Hostname
+	HostName pulumi.StringInput `pulumi:"hostName"`
+	// Variable name
+	HostNameVariable pulumi.StringInput `pulumi:"hostNameVariable"`
+	// List of IP
+	ListOfIpAddresses pulumi.StringArrayInput `pulumi:"listOfIpAddresses"`
+	// Variable name
+	ListOfIpAddressesVariable pulumi.StringInput `pulumi:"listOfIpAddressesVariable"`
+}
+
+func (GetTransportWanVpnFeatureNewHostMappingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureNewHostMappingArgs) ToGetTransportWanVpnFeatureNewHostMappingOutput() GetTransportWanVpnFeatureNewHostMappingOutput {
+	return i.ToGetTransportWanVpnFeatureNewHostMappingOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureNewHostMappingArgs) ToGetTransportWanVpnFeatureNewHostMappingOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNewHostMappingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureNewHostMappingOutput)
+}
+
+// GetTransportWanVpnFeatureNewHostMappingArrayInput is an input type that accepts GetTransportWanVpnFeatureNewHostMappingArray and GetTransportWanVpnFeatureNewHostMappingArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureNewHostMappingArrayInput` via:
+//
+//	GetTransportWanVpnFeatureNewHostMappingArray{ GetTransportWanVpnFeatureNewHostMappingArgs{...} }
+type GetTransportWanVpnFeatureNewHostMappingArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureNewHostMappingArrayOutput() GetTransportWanVpnFeatureNewHostMappingArrayOutput
+	ToGetTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureNewHostMappingArrayOutput
+}
+
+type GetTransportWanVpnFeatureNewHostMappingArray []GetTransportWanVpnFeatureNewHostMappingInput
+
+func (GetTransportWanVpnFeatureNewHostMappingArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureNewHostMappingArray) ToGetTransportWanVpnFeatureNewHostMappingArrayOutput() GetTransportWanVpnFeatureNewHostMappingArrayOutput {
+	return i.ToGetTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureNewHostMappingArray) ToGetTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNewHostMappingArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureNewHostMappingArrayOutput)
+}
+
+type GetTransportWanVpnFeatureNewHostMappingOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureNewHostMappingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureNewHostMappingOutput) ToGetTransportWanVpnFeatureNewHostMappingOutput() GetTransportWanVpnFeatureNewHostMappingOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureNewHostMappingOutput) ToGetTransportWanVpnFeatureNewHostMappingOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNewHostMappingOutput {
+	return o
+}
+
+// Hostname
+func (o GetTransportWanVpnFeatureNewHostMappingOutput) HostName() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNewHostMapping) string { return v.HostName }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureNewHostMappingOutput) HostNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNewHostMapping) string { return v.HostNameVariable }).(pulumi.StringOutput)
+}
+
+// List of IP
+func (o GetTransportWanVpnFeatureNewHostMappingOutput) ListOfIpAddresses() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNewHostMapping) []string { return v.ListOfIpAddresses }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnFeatureNewHostMappingOutput) ListOfIpAddressesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureNewHostMapping) string { return v.ListOfIpAddressesVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureNewHostMappingArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureNewHostMappingArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureNewHostMapping)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureNewHostMappingArrayOutput) ToGetTransportWanVpnFeatureNewHostMappingArrayOutput() GetTransportWanVpnFeatureNewHostMappingArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureNewHostMappingArrayOutput) ToGetTransportWanVpnFeatureNewHostMappingArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureNewHostMappingArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureNewHostMappingArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureNewHostMappingOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureNewHostMapping {
+		return vs[0].([]GetTransportWanVpnFeatureNewHostMapping)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureNewHostMappingOutput)
+}
+
+type GetTransportWanVpnFeatureService struct {
+	// Service Type
+	ServiceType string `pulumi:"serviceType"`
+}
+
+// GetTransportWanVpnFeatureServiceInput is an input type that accepts GetTransportWanVpnFeatureServiceArgs and GetTransportWanVpnFeatureServiceOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureServiceInput` via:
+//
+//	GetTransportWanVpnFeatureServiceArgs{...}
+type GetTransportWanVpnFeatureServiceInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureServiceOutput() GetTransportWanVpnFeatureServiceOutput
+	ToGetTransportWanVpnFeatureServiceOutputWithContext(context.Context) GetTransportWanVpnFeatureServiceOutput
+}
+
+type GetTransportWanVpnFeatureServiceArgs struct {
+	// Service Type
+	ServiceType pulumi.StringInput `pulumi:"serviceType"`
+}
+
+func (GetTransportWanVpnFeatureServiceArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureServiceArgs) ToGetTransportWanVpnFeatureServiceOutput() GetTransportWanVpnFeatureServiceOutput {
+	return i.ToGetTransportWanVpnFeatureServiceOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureServiceArgs) ToGetTransportWanVpnFeatureServiceOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureServiceOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureServiceOutput)
+}
+
+// GetTransportWanVpnFeatureServiceArrayInput is an input type that accepts GetTransportWanVpnFeatureServiceArray and GetTransportWanVpnFeatureServiceArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnFeatureServiceArrayInput` via:
+//
+//	GetTransportWanVpnFeatureServiceArray{ GetTransportWanVpnFeatureServiceArgs{...} }
+type GetTransportWanVpnFeatureServiceArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnFeatureServiceArrayOutput() GetTransportWanVpnFeatureServiceArrayOutput
+	ToGetTransportWanVpnFeatureServiceArrayOutputWithContext(context.Context) GetTransportWanVpnFeatureServiceArrayOutput
+}
+
+type GetTransportWanVpnFeatureServiceArray []GetTransportWanVpnFeatureServiceInput
+
+func (GetTransportWanVpnFeatureServiceArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnFeatureServiceArray) ToGetTransportWanVpnFeatureServiceArrayOutput() GetTransportWanVpnFeatureServiceArrayOutput {
+	return i.ToGetTransportWanVpnFeatureServiceArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnFeatureServiceArray) ToGetTransportWanVpnFeatureServiceArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureServiceArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnFeatureServiceArrayOutput)
+}
+
+type GetTransportWanVpnFeatureServiceOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureServiceOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureServiceOutput) ToGetTransportWanVpnFeatureServiceOutput() GetTransportWanVpnFeatureServiceOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureServiceOutput) ToGetTransportWanVpnFeatureServiceOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureServiceOutput {
+	return o
+}
+
+// Service Type
+func (o GetTransportWanVpnFeatureServiceOutput) ServiceType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnFeatureService) string { return v.ServiceType }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnFeatureServiceArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnFeatureServiceArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnFeatureService)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnFeatureServiceArrayOutput) ToGetTransportWanVpnFeatureServiceArrayOutput() GetTransportWanVpnFeatureServiceArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureServiceArrayOutput) ToGetTransportWanVpnFeatureServiceArrayOutputWithContext(ctx context.Context) GetTransportWanVpnFeatureServiceArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnFeatureServiceArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnFeatureServiceOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnFeatureService {
+		return vs[0].([]GetTransportWanVpnFeatureService)[vs[1].(int)]
+	}).(GetTransportWanVpnFeatureServiceOutput)
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureArp struct {
+	// IP V4 Address
+	IpAddress string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable string `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress string `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable string `pulumi:"macAddressVariable"`
+}
+
+// GetTransportWanVpnInterfaceCellularFeatureArpInput is an input type that accepts GetTransportWanVpnInterfaceCellularFeatureArpArgs and GetTransportWanVpnInterfaceCellularFeatureArpOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceCellularFeatureArpInput` via:
+//
+//	GetTransportWanVpnInterfaceCellularFeatureArpArgs{...}
+type GetTransportWanVpnInterfaceCellularFeatureArpInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceCellularFeatureArpOutput() GetTransportWanVpnInterfaceCellularFeatureArpOutput
+	ToGetTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(context.Context) GetTransportWanVpnInterfaceCellularFeatureArpOutput
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureArpArgs struct {
+	// IP V4 Address
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringInput `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress pulumi.StringInput `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable pulumi.StringInput `pulumi:"macAddressVariable"`
+}
+
+func (GetTransportWanVpnInterfaceCellularFeatureArpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureArpArgs) ToGetTransportWanVpnInterfaceCellularFeatureArpOutput() GetTransportWanVpnInterfaceCellularFeatureArpOutput {
+	return i.ToGetTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureArpArgs) ToGetTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureArpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceCellularFeatureArpOutput)
+}
+
+// GetTransportWanVpnInterfaceCellularFeatureArpArrayInput is an input type that accepts GetTransportWanVpnInterfaceCellularFeatureArpArray and GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceCellularFeatureArpArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceCellularFeatureArpArray{ GetTransportWanVpnInterfaceCellularFeatureArpArgs{...} }
+type GetTransportWanVpnInterfaceCellularFeatureArpArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutput() GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput
+	ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureArpArray []GetTransportWanVpnInterfaceCellularFeatureArpInput
+
+func (GetTransportWanVpnInterfaceCellularFeatureArpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureArpArray) ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutput() GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureArpArray) ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureArpOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceCellularFeatureArpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureArpOutput) ToGetTransportWanVpnInterfaceCellularFeatureArpOutput() GetTransportWanVpnInterfaceCellularFeatureArpOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureArpOutput) ToGetTransportWanVpnInterfaceCellularFeatureArpOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureArpOutput {
+	return o
+}
+
+// IP V4 Address
+func (o GetTransportWanVpnInterfaceCellularFeatureArpOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureArp) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceCellularFeatureArpOutput) IpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureArp) string { return v.IpAddressVariable }).(pulumi.StringOutput)
+}
+
+// MAC Address
+func (o GetTransportWanVpnInterfaceCellularFeatureArpOutput) MacAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureArp) string { return v.MacAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceCellularFeatureArpOutput) MacAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureArp) string { return v.MacAddressVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceCellularFeatureArp)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput) ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutput() GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput) ToGetTransportWanVpnInterfaceCellularFeatureArpArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceCellularFeatureArpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceCellularFeatureArp {
+		return vs[0].([]GetTransportWanVpnInterfaceCellularFeatureArp)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceCellularFeatureArpOutput)
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation struct {
+	// Encapsulation
+	Encapsulation string `pulumi:"encapsulation"`
+	// Set preference for TLOC
+	Preference int `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable string `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight int `pulumi:"weight"`
+	// Variable name
+	WeightVariable string `pulumi:"weightVariable"`
+}
+
+// GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput is an input type that accepts GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs and GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput` via:
+//
+//	GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{...}
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput
+	ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Context) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs struct {
+	// Encapsulation
+	Encapsulation pulumi.StringInput `pulumi:"encapsulation"`
+	// Set preference for TLOC
+	Preference pulumi.IntInput `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable pulumi.StringInput `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	Weight pulumi.IntInput `pulumi:"weight"`
+	// Variable name
+	WeightVariable pulumi.StringInput `pulumi:"weightVariable"`
+}
+
+func (GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return i.ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
+}
+
+// GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput is an input type that accepts GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray and GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{ GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{...} }
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput
+	ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray []GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput
+
+func (GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput() GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+// Encapsulation
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) string {
+		return v.Encapsulation
+	}).(pulumi.StringOutput)
+}
+
+// Set preference for TLOC
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) int {
+		return v.Preference
+	}).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) string {
+		return v.PreferenceVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set weight for TLOC
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) int { return v.Weight }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation) string {
+		return v.WeightVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput() GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) ToGetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation {
+		return vs[0].([]GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureArp struct {
+	// IP V4 Address
+	IpAddress string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable string `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress string `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable string `pulumi:"macAddressVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureArpInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureArpArgs and GetTransportWanVpnInterfaceEthernetFeatureArpOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureArpInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureArpArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureArpInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureArpOutput() GetTransportWanVpnInterfaceEthernetFeatureArpOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureArpOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureArpArgs struct {
+	// IP V4 Address
+	IpAddress pulumi.StringInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringInput `pulumi:"ipAddressVariable"`
+	// MAC Address
+	MacAddress pulumi.StringInput `pulumi:"macAddress"`
+	// Variable name
+	MacAddressVariable pulumi.StringInput `pulumi:"macAddressVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureArpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureArpArgs) ToGetTransportWanVpnInterfaceEthernetFeatureArpOutput() GetTransportWanVpnInterfaceEthernetFeatureArpOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureArpArgs) ToGetTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureArpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureArpOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureArpArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureArpArray and GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureArpArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureArpArray{ GetTransportWanVpnInterfaceEthernetFeatureArpArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureArpArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureArpArray []GetTransportWanVpnInterfaceEthernetFeatureArpInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureArpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureArpArray) ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureArpArray) ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureArpOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureArpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpOutput) ToGetTransportWanVpnInterfaceEthernetFeatureArpOutput() GetTransportWanVpnInterfaceEthernetFeatureArpOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpOutput) ToGetTransportWanVpnInterfaceEthernetFeatureArpOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureArpOutput {
+	return o
+}
+
+// IP V4 Address
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpOutput) IpAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureArp) string { return v.IpAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpOutput) IpAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureArp) string { return v.IpAddressVariable }).(pulumi.StringOutput)
+}
+
+// MAC Address
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpOutput) MacAddress() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureArp) string { return v.MacAddress }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpOutput) MacAddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureArp) string { return v.MacAddressVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureArp)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureArpArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureArpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureArp {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureArp)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureArpOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress struct {
+	// IpV4 Address
+	Address string `pulumi:"address"`
+	// Variable name
+	AddressVariable string `pulumi:"addressVariable"`
+	// Subnet Mask
+	SubnetMask string `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs and GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs struct {
+	// IpV4 Address
+	Address pulumi.StringInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
+	// Subnet Mask
+	SubnetMask pulumi.StringInput `pulumi:"subnetMask"`
+	// Variable name
+	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray and GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{ GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray []GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return o
+}
+
+// IpV4 Address
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string {
+		return v.AddressVariable
+	}).(pulumi.StringOutput)
+}
+
+// Subnet Mask
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) SubnetMask() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string { return v.SubnetMask }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput) SubnetMaskVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress) string {
+		return v.SubnetMaskVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress struct {
+	// IPv6 Address Secondary
+	Address string `pulumi:"address"`
+	// Variable name
+	AddressVariable string `pulumi:"addressVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs and GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs struct {
+	// IPv6 Address Secondary
+	Address pulumi.StringInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray and GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray{ GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray []GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
+	return o
+}
+
+// IPv6 Address Secondary
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput) AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress) string {
+		return v.AddressVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress struct {
+	// IPv6 Address Secondary
+	Address string `pulumi:"address"`
+	// Variable name
+	AddressVariable string `pulumi:"addressVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs and GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs struct {
+	// IPv6 Address Secondary
+	Address pulumi.StringInput `pulumi:"address"`
+	// Variable name
+	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray and GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray{ GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray []GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
+	return o
+}
+
+// IPv6 Address Secondary
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput) AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress) string {
+		return v.AddressVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback struct {
+	// NAT Inside Source Loopback Interface
+	LoopbackInterface string `pulumi:"loopbackInterface"`
+	// Variable name
+	LoopbackInterfaceVariable string `pulumi:"loopbackInterfaceVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs and GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs struct {
+	// NAT Inside Source Loopback Interface
+	LoopbackInterface pulumi.StringInput `pulumi:"loopbackInterface"`
+	// Variable name
+	LoopbackInterfaceVariable pulumi.StringInput `pulumi:"loopbackInterfaceVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray and GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray{ GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray []GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
+	return o
+}
+
+// NAT Inside Source Loopback Interface
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) LoopbackInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback) string { return v.LoopbackInterface }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput) LoopbackInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback) string {
+		return v.LoopbackInterfaceVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool struct {
+	// Enable DualRouter HA Mapping
+	EnableDualRouterHaMapping bool `pulumi:"enableDualRouterHaMapping"`
+	// NAT Pool Name
+	Name int `pulumi:"name"`
+	// Variable name
+	NameVariable string `pulumi:"nameVariable"`
+	// NAT Overload
+	Overload bool `pulumi:"overload"`
+	// Variable name
+	OverloadVariable string `pulumi:"overloadVariable"`
+	// NAT Pool Prefix Length
+	PrefixLength int `pulumi:"prefixLength"`
+	// Variable name
+	PrefixLengthVariable string `pulumi:"prefixLengthVariable"`
+	// NAT Pool Range End
+	RangeEnd string `pulumi:"rangeEnd"`
+	// Variable name
+	RangeEndVariable string `pulumi:"rangeEndVariable"`
+	// NAT Pool Range Start
+	RangeStart string `pulumi:"rangeStart"`
+	// Variable name
+	RangeStartVariable string `pulumi:"rangeStartVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs and GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs struct {
+	// Enable DualRouter HA Mapping
+	EnableDualRouterHaMapping pulumi.BoolInput `pulumi:"enableDualRouterHaMapping"`
+	// NAT Pool Name
+	Name pulumi.IntInput `pulumi:"name"`
+	// Variable name
+	NameVariable pulumi.StringInput `pulumi:"nameVariable"`
+	// NAT Overload
+	Overload pulumi.BoolInput `pulumi:"overload"`
+	// Variable name
+	OverloadVariable pulumi.StringInput `pulumi:"overloadVariable"`
+	// NAT Pool Prefix Length
+	PrefixLength pulumi.IntInput `pulumi:"prefixLength"`
+	// Variable name
+	PrefixLengthVariable pulumi.StringInput `pulumi:"prefixLengthVariable"`
+	// NAT Pool Range End
+	RangeEnd pulumi.StringInput `pulumi:"rangeEnd"`
+	// Variable name
+	RangeEndVariable pulumi.StringInput `pulumi:"rangeEndVariable"`
+	// NAT Pool Range Start
+	RangeStart pulumi.StringInput `pulumi:"rangeStart"`
+	// Variable name
+	RangeStartVariable pulumi.StringInput `pulumi:"rangeStartVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray and GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray{ GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray []GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
+	return o
+}
+
+// Enable DualRouter HA Mapping
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) EnableDualRouterHaMapping() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) bool { return v.EnableDualRouterHaMapping }).(pulumi.BoolOutput)
+}
+
+// NAT Pool Name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) Name() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) int { return v.Name }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) NameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.NameVariable }).(pulumi.StringOutput)
+}
+
+// NAT Overload
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) Overload() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) bool { return v.Overload }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) OverloadVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.OverloadVariable }).(pulumi.StringOutput)
+}
+
+// NAT Pool Prefix Length
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) PrefixLength() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) int { return v.PrefixLength }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) PrefixLengthVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.PrefixLengthVariable }).(pulumi.StringOutput)
+}
+
+// NAT Pool Range End
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeEnd() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.RangeEnd }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeEndVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.RangeEndVariable }).(pulumi.StringOutput)
+}
+
+// NAT Pool Range Start
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeStart() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.RangeStart }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput) RangeStartVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool) string { return v.RangeStartVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat struct {
+	// Direction of static NAT translation
+	Direction string `pulumi:"direction"`
+	// Enable DualRouter HA Mapping
+	EnableDualRouterHaMapping bool `pulumi:"enableDualRouterHaMapping"`
+	// Source IP address to be translated
+	SourceIp string `pulumi:"sourceIp"`
+	// Variable name
+	SourceIpVariable string `pulumi:"sourceIpVariable"`
+	// Source VPN ID
+	SourceVpn int `pulumi:"sourceVpn"`
+	// Variable name
+	SourceVpnVariable string `pulumi:"sourceVpnVariable"`
+	// Statically translated source IP address
+	TranslatedIp string `pulumi:"translatedIp"`
+	// Variable name
+	TranslatedIpVariable string `pulumi:"translatedIpVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs and GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput() GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs struct {
+	// Direction of static NAT translation
+	Direction pulumi.StringInput `pulumi:"direction"`
+	// Enable DualRouter HA Mapping
+	EnableDualRouterHaMapping pulumi.BoolInput `pulumi:"enableDualRouterHaMapping"`
+	// Source IP address to be translated
+	SourceIp pulumi.StringInput `pulumi:"sourceIp"`
+	// Variable name
+	SourceIpVariable pulumi.StringInput `pulumi:"sourceIpVariable"`
+	// Source VPN ID
+	SourceVpn pulumi.IntInput `pulumi:"sourceVpn"`
+	// Variable name
+	SourceVpnVariable pulumi.StringInput `pulumi:"sourceVpnVariable"`
+	// Statically translated source IP address
+	TranslatedIp pulumi.StringInput `pulumi:"translatedIp"`
+	// Variable name
+	TranslatedIpVariable pulumi.StringInput `pulumi:"translatedIpVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput() GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray and GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray{ GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray []GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatInput
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput() GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
+	return o
+}
+
+// Direction of static NAT translation
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) Direction() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) string { return v.Direction }).(pulumi.StringOutput)
+}
+
+// Enable DualRouter HA Mapping
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) EnableDualRouterHaMapping() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) bool {
+		return v.EnableDualRouterHaMapping
+	}).(pulumi.BoolOutput)
+}
+
+// Source IP address to be translated
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) string { return v.SourceIp }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceIpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) string { return v.SourceIpVariable }).(pulumi.StringOutput)
+}
+
+// Source VPN ID
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceVpn() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) int { return v.SourceVpn }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) SourceVpnVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) string { return v.SourceVpnVariable }).(pulumi.StringOutput)
+}
+
+// Statically translated source IP address
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) TranslatedIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) string { return v.TranslatedIp }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput) TranslatedIpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat) string { return v.TranslatedIpVariable }).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink struct {
+	InterfaceId string `pulumi:"interfaceId"`
+	// Set lacp mode
+	LacpMode string `pulumi:"lacpMode"`
+	// Variable name
+	LacpModeVariable string `pulumi:"lacpModeVariable"`
+	// Set lacp port priority
+	LacpPortPriority int `pulumi:"lacpPortPriority"`
+	// Variable name
+	LacpPortPriorityVariable string `pulumi:"lacpPortPriorityVariable"`
+	// Set lacp rate
+	LacpRate string `pulumi:"lacpRate"`
+	// Variable name
+	LacpRateVariable string `pulumi:"lacpRateVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs and GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs struct {
+	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
+	// Set lacp mode
+	LacpMode pulumi.StringInput `pulumi:"lacpMode"`
+	// Variable name
+	LacpModeVariable pulumi.StringInput `pulumi:"lacpModeVariable"`
+	// Set lacp port priority
+	LacpPortPriority pulumi.IntInput `pulumi:"lacpPortPriority"`
+	// Variable name
+	LacpPortPriorityVariable pulumi.StringInput `pulumi:"lacpPortPriorityVariable"`
+	// Set lacp rate
+	LacpRate pulumi.StringInput `pulumi:"lacpRate"`
+	// Variable name
+	LacpRateVariable pulumi.StringInput `pulumi:"lacpRateVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray and GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray{ GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray []GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) InterfaceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) string {
+		return v.InterfaceId
+	}).(pulumi.StringOutput)
+}
+
+// Set lacp mode
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpMode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) string { return v.LacpMode }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpModeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) string {
+		return v.LacpModeVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set lacp port priority
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpPortPriority() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) int {
+		return v.LacpPortPriority
+	}).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpPortPriorityVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) string {
+		return v.LacpPortPriorityVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set lacp rate
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpRate() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) string { return v.LacpRate }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput) LacpRateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink) string {
+		return v.LacpRateVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink struct {
+	InterfaceId string `pulumi:"interfaceId"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs and GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs{...}
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs struct {
+	InterfaceId pulumi.StringInput `pulumi:"interfaceId"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray and GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray{ GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs{...} }
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray []GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput) InterfaceId() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink) string {
+		return v.InterfaceId
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput() GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66 struct {
+	// Egress Interface
+	EgressInterface bool `pulumi:"egressInterface"`
+	// Variable name
+	EgressInterfaceVariable string `pulumi:"egressInterfaceVariable"`
+	// Source Prefix
+	SourcePrefix string `pulumi:"sourcePrefix"`
+	// Variable name
+	SourcePrefixVariable string `pulumi:"sourcePrefixVariable"`
+	// Source VPN ID
+	SourceVpnId int `pulumi:"sourceVpnId"`
+	// Variable name
+	SourceVpnIdVariable string `pulumi:"sourceVpnIdVariable"`
+	// Translated Source Prefix
+	TranslatedSourcePrefix string `pulumi:"translatedSourcePrefix"`
+	// Variable name
+	TranslatedSourcePrefixVariable string `pulumi:"translatedSourcePrefixVariable"`
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Input is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args and GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Input` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args{...}
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Input interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output() GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args struct {
+	// Egress Interface
+	EgressInterface pulumi.BoolInput `pulumi:"egressInterface"`
+	// Variable name
+	EgressInterfaceVariable pulumi.StringInput `pulumi:"egressInterfaceVariable"`
+	// Source Prefix
+	SourcePrefix pulumi.StringInput `pulumi:"sourcePrefix"`
+	// Variable name
+	SourcePrefixVariable pulumi.StringInput `pulumi:"sourcePrefixVariable"`
+	// Source VPN ID
+	SourceVpnId pulumi.IntInput `pulumi:"sourceVpnId"`
+	// Variable name
+	SourceVpnIdVariable pulumi.StringInput `pulumi:"sourceVpnIdVariable"`
+	// Translated Source Prefix
+	TranslatedSourcePrefix pulumi.StringInput `pulumi:"translatedSourcePrefix"`
+	// Variable name
+	TranslatedSourcePrefixVariable pulumi.StringInput `pulumi:"translatedSourcePrefixVariable"`
+}
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output() GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output)
+}
+
+// GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput is an input type that accepts GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array and GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput values.
+// You can construct a concrete instance of `GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput` via:
+//
+//	GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array{ GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args{...} }
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput interface {
+	pulumi.Input
+
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput
+	ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array []GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Input
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
+	return i.ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(context.Background())
+}
+
+func (i GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output() GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66OutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
+	return o
+}
+
+// Egress Interface
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) EgressInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) bool { return v.EgressInterface }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) EgressInterfaceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) string { return v.EgressInterfaceVariable }).(pulumi.StringOutput)
+}
+
+// Source Prefix
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourcePrefix() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) string { return v.SourcePrefix }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourcePrefixVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) string { return v.SourcePrefixVariable }).(pulumi.StringOutput)
+}
+
+// Source VPN ID
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourceVpnId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) int { return v.SourceVpnId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) SourceVpnIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) string { return v.SourceVpnIdVariable }).(pulumi.StringOutput)
+}
+
+// Translated Source Prefix
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) TranslatedSourcePrefix() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) string { return v.TranslatedSourcePrefix }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output) TranslatedSourcePrefixVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetTransportWanVpnInterfaceEthernetFeatureStaticNat66) string {
+		return v.TranslatedSourcePrefixVariable
+	}).(pulumi.StringOutput)
+}
+
+type GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput struct{ *pulumi.OutputState }
+
+func (GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetTransportWanVpnInterfaceEthernetFeatureStaticNat66)(nil)).Elem()
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput() GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) ToGetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutputWithContext(ctx context.Context) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput {
+	return o
+}
+
+func (o GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput) Index(i pulumi.IntInput) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportWanVpnInterfaceEthernetFeatureStaticNat66 {
+		return vs[0].([]GetTransportWanVpnInterfaceEthernetFeatureStaticNat66)[vs[1].(int)]
+	}).(GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output)
+}
+
 type GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward struct {
 	// Direction of static NAT translation
 	Direction string `pulumi:"direction"`
@@ -8642,6 +14085,78 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureMplsInterfaceInput)(nil)).Elem(), GetTransportRoutingBgpFeatureMplsInterfaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureMplsInterfaceArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureMplsInterfaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaInput)(nil)).Elem(), GetTransportRoutingOspfFeatureAreaArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaArrayInput)(nil)).Elem(), GetTransportRoutingOspfFeatureAreaArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaInterfaceInput)(nil)).Elem(), GetTransportRoutingOspfFeatureAreaInterfaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaInterfaceArrayInput)(nil)).Elem(), GetTransportRoutingOspfFeatureAreaInterfaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaRangeInput)(nil)).Elem(), GetTransportRoutingOspfFeatureAreaRangeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureAreaRangeArrayInput)(nil)).Elem(), GetTransportRoutingOspfFeatureAreaRangeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureRedistributeInput)(nil)).Elem(), GetTransportRoutingOspfFeatureRedistributeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureRedistributeArrayInput)(nil)).Elem(), GetTransportRoutingOspfFeatureRedistributeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureRouterLsaInput)(nil)).Elem(), GetTransportRoutingOspfFeatureRouterLsaArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfFeatureRouterLsaArrayInput)(nil)).Elem(), GetTransportRoutingOspfFeatureRouterLsaArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureAreaArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureAreaArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaRangeInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureRedistributeInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureRedistributeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv4FeatureRedistributeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureAreaArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureAreaArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaRangeInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureRedistributeInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureRedistributeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayInput)(nil)).Elem(), GetTransportRoutingOspfv3Ipv6FeatureRedistributeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntryInput)(nil)).Elem(), GetTransportT1E1ControllerFeatureEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntryArrayInput)(nil)).Elem(), GetTransportT1E1ControllerFeatureEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntryChannelGroupInput)(nil)).Elem(), GetTransportT1E1ControllerFeatureEntryChannelGroupArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportT1E1ControllerFeatureEntryChannelGroupArrayInput)(nil)).Elem(), GetTransportT1E1ControllerFeatureEntryChannelGroupArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportTrackerGroupFeatureTrackerElementInput)(nil)).Elem(), GetTransportTrackerGroupFeatureTrackerElementArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportTrackerGroupFeatureTrackerElementArrayInput)(nil)).Elem(), GetTransportTrackerGroupFeatureTrackerElementArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRouteInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv4StaticRouteArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRouteArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv4StaticRouteArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRouteNextHopInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv4StaticRouteNextHopArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv4StaticRouteNextHopArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRouteInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv6StaticRouteArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRouteArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv6StaticRouteArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRouteNextHopInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv6StaticRouteNextHopArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureIpv6StaticRouteNextHopArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureNat64V4PoolInput)(nil)).Elem(), GetTransportWanVpnFeatureNat64V4PoolArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureNat64V4PoolArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureNat64V4PoolArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureNewHostMappingInput)(nil)).Elem(), GetTransportWanVpnFeatureNewHostMappingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureNewHostMappingArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureNewHostMappingArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureServiceInput)(nil)).Elem(), GetTransportWanVpnFeatureServiceArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnFeatureServiceArrayInput)(nil)).Elem(), GetTransportWanVpnFeatureServiceArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureArpInput)(nil)).Elem(), GetTransportWanVpnInterfaceCellularFeatureArpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureArpArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceCellularFeatureArpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureArpInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureArpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureArpArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureArpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Input)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Array{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationInput)(nil)).Elem(), GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs{})
@@ -8762,6 +14277,78 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureMplsInterfaceOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureMplsInterfaceArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureAreaOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureAreaArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureAreaInterfaceOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureAreaInterfaceArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureAreaRangeOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureAreaRangeArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureRedistributeOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureRedistributeArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureRouterLsaOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfFeatureRouterLsaArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureAreaOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureAreaArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureAreaInterfaceArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureAreaRangeOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureAreaRangeArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureRedistributeOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv4FeatureRedistributeArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureAreaOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureAreaArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureAreaInterfaceArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureAreaRangeOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureAreaRangeArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureRedistributeOutput{})
+	pulumi.RegisterOutputType(GetTransportRoutingOspfv3Ipv6FeatureRedistributeArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportT1E1ControllerFeatureEntryOutput{})
+	pulumi.RegisterOutputType(GetTransportT1E1ControllerFeatureEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportT1E1ControllerFeatureEntryChannelGroupOutput{})
+	pulumi.RegisterOutputType(GetTransportT1E1ControllerFeatureEntryChannelGroupArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportTrackerGroupFeatureTrackerElementOutput{})
+	pulumi.RegisterOutputType(GetTransportTrackerGroupFeatureTrackerElementArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv4StaticRouteOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv4StaticRouteArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv4StaticRouteNextHopOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv4StaticRouteNextHopArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv6StaticRouteOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv6StaticRouteArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv6StaticRouteNextHopOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureIpv6StaticRouteNextHopArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureNat64V4PoolOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureNat64V4PoolArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureNewHostMappingOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureNewHostMappingArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureServiceOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnFeatureServiceArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceCellularFeatureArpOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceCellularFeatureArpArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureArpOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureArpArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Output{})
+	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureStaticNat66ArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardOutput{})
 	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationOutput{})

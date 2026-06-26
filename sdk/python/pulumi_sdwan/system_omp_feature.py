@@ -142,7 +142,7 @@ class SystemOmpFeatureArgs:
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - Range: `1`-`0`
+                 - At Least: `1`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -157,7 +157,7 @@ class SystemOmpFeatureArgs:
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
-                 - Default value: `60`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
                  - Default value: `false`
@@ -774,7 +774,7 @@ class SystemOmpFeatureArgs:
     def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
-          - Range: `1`-`0`
+          - At Least: `1`
           - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
@@ -877,7 +877,7 @@ class SystemOmpFeatureArgs:
     def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
-          - Default value: `60`
+          - Default value: `300`
         """
         return pulumi.get(self, "holdtime")
 
@@ -1262,7 +1262,7 @@ class _SystemOmpFeatureState:
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - Range: `1`-`0`
+                 - At Least: `1`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -1278,7 +1278,7 @@ class _SystemOmpFeatureState:
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
-                 - Default value: `60`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
                  - Default value: `false`
@@ -1887,7 +1887,7 @@ class _SystemOmpFeatureState:
     def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
-          - Range: `1`-`0`
+          - At Least: `1`
           - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
@@ -2002,7 +2002,7 @@ class _SystemOmpFeatureState:
     def holdtime(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
-          - Default value: `60`
+          - Default value: `300`
         """
         return pulumi.get(self, "holdtime")
 
@@ -2459,7 +2459,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - Range: `1`-`0`
+                 - At Least: `1`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -2475,7 +2475,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
-                 - Default value: `60`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
                  - Default value: `false`
@@ -2865,7 +2865,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - Range: `1`-`0`
+                 - At Least: `1`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -2881,7 +2881,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
         :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
-                 - Default value: `60`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
                  - Default value: `false`
@@ -3289,7 +3289,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def ecmp_limit(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
-          - Range: `1`-`0`
+          - At Least: `1`
           - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
@@ -3368,7 +3368,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def holdtime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         Hold Time (seconds)
-          - Default value: `60`
+          - Default value: `300`
         """
         return pulumi.get(self, "holdtime")
 

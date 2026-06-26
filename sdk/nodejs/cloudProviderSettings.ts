@@ -30,7 +30,7 @@ import * as utilities from "./utilities";
  *     ciscoSseOrgId: "323456",
  *     ciscoSseAuthKey: "33333444",
  *     ciscoSseAuthSecret: "$CRYPT_CLUSTER$Gg4nVpFdldXga1hLKhdJrA==$hiFPirWJnqNxMq3l/m1ekw==",
- *     ciscoSseContextSharing: false,
+ *     ciscoSseContextSharing: true,
  * });
  * ```
  */

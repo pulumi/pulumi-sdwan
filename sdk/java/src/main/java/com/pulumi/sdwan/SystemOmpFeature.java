@@ -628,7 +628,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      * 
      */
@@ -637,7 +637,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      * 
      */
@@ -768,7 +768,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      * 
      */
     @Export(name="holdtime", refs={Integer.class}, tree="[0]")
@@ -776,7 +776,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      * 
      */
     public Output<Optional<Integer>> holdtime() {

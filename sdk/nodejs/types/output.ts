@@ -5917,6 +5917,22 @@ export interface ConfigurationGroupTopologyDeviceUnsupportedFeature {
     parcelType?: string;
 }
 
+export interface CustomApplicationL3l4 {
+    /**
+     * IPv4 Address (10.X.X.X, 20.0.0.0/24 separated by commas, subnet prefix length 24 to 32.)
+     */
+    ipAddresses?: string[];
+    /**
+     * L4 Protocol
+     *   - Choices: `TCP`, `UDP`, `TCP-UDP`
+     */
+    l4Protocol?: string;
+    /**
+     * Ports (Space separated ports or range or both.)
+     */
+    ports?: string;
+}
+
 export interface CustomControlTopologyPolicyDefinitionSequence {
     /**
      * List of action entries
@@ -11965,6 +11981,21 @@ export interface GetConfigurationGroupTopologyDeviceUnsupportedFeature {
     parcelType: string;
 }
 
+export interface GetCustomApplicationL3l4 {
+    /**
+     * IPv4 Address (10.X.X.X, 20.0.0.0/24 separated by commas, subnet prefix length 24 to 32.)
+     */
+    ipAddresses: string[];
+    /**
+     * L4 Protocol
+     */
+    l4Protocol: string;
+    /**
+     * Ports (Space separated ports or range or both.)
+     */
+    ports: string;
+}
+
 export interface GetCustomControlTopologyPolicyDefinitionSequence {
     /**
      * List of action entries
@@ -17737,6 +17768,624 @@ export interface GetSiteListPolicyObjectEntry {
     siteId: string;
 }
 
+export interface GetSseCiscoFeatureInterface {
+    /**
+     * IKE keepalive interval (seconds)
+     */
+    dpdInterval: number;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable: string;
+    /**
+     * IKE keepalive retries
+     */
+    dpdRetries: number;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     */
+    ikeCiphersuite: string;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable: string;
+    /**
+     * IKE Diffie Hellman Groups
+     */
+    ikeGroup: string;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable: string;
+    /**
+     * IKE rekey interval \n\n seconds
+     */
+    ikeRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable: string;
+    /**
+     * IKE Version \n\n
+     */
+    ikeVersion: number;
+    /**
+     * Variable name
+     */
+    ikeVersionVariable: string;
+    /**
+     * Interface name: ipsec(1..255)
+     */
+    interfaceName: string;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     */
+    ipsecCiphersuite: string;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable: string;
+    /**
+     * IPsec rekey interval \n\n seconds
+     */
+    ipsecRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     */
+    ipsecReplayWindow: number;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    mtu: number;
+    /**
+     * Variable name
+     */
+    mtuVariable: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     */
+    perfectForwardSecrecy: string;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable: string;
+    /**
+     * Administrative state
+     */
+    shutdown: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable: string;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     */
+    tcpMssAdjust: number;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable: string;
+    /**
+     * Enable/disable Cisco SSE tracking
+     */
+    trackEnable: boolean;
+    /**
+     * Variable name
+     */
+    trackEnableVariable: string;
+    /**
+     * Enable tracker for this interface
+     */
+    tracker: string;
+    /**
+     * SSE Tunnel Data Center
+     */
+    tunnelDcPreference: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    tunnelRouteVia: string;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    tunnelSourceInterface: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable: string;
+}
+
+export interface GetSseCiscoFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for SSE
+     */
+    activeInterface: string;
+    /**
+     * Active Tunnel Interface Weight
+     */
+    activeInterfaceWeight: number;
+    /**
+     * Backup Tunnel Interface for Cisco SSE
+     */
+    backupInterface: string;
+    /**
+     * Backup Tunnel Interface Weight
+     */
+    backupInterfaceWeight: number;
+}
+
+export interface GetSseCiscoFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl: string;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable: string;
+    /**
+     * Probe interval \n\n seconds
+     */
+    interval: number;
+    /**
+     * Variable name
+     */
+    intervalVariable: string;
+    /**
+     * Probe failure multiplier \n\n failed attempts
+     */
+    multiplier: number;
+    /**
+     * Variable name
+     */
+    multiplierVariable: string;
+    /**
+     * Tracker name
+     */
+    name: string;
+    /**
+     * Probe Timeout threshold \n\n milliseconds
+     */
+    threshold: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable: string;
+}
+
+export interface GetSseZscalerFeatureInterface {
+    /**
+     * Auto Tunnel Mode
+     */
+    auto: boolean;
+    /**
+     * IKE keepalive interval (seconds)
+     */
+    dpdInterval: number;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable: string;
+    /**
+     * IKE keepalive retries
+     */
+    dpdRetries: number;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     */
+    ikeCiphersuite: string;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable: string;
+    /**
+     * IKE Diffie Hellman Groups
+     */
+    ikeGroup: string;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable: string;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeLocalId: string;
+    /**
+     * Variable name
+     */
+    ikeLocalIdVariable: string;
+    /**
+     * IKE rekey interval \n\n seconds
+     */
+    ikeRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable: string;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeRemoteId: string;
+    /**
+     * Variable name
+     */
+    ikeRemoteIdVariable: string;
+    /**
+     * IKE Version \n\n
+     */
+    ikeVersion: number;
+    /**
+     * Variable name
+     */
+    ikeVersionVariable: string;
+    /**
+     * Interface description
+     */
+    interfaceDescription: string;
+    /**
+     * Variable name
+     */
+    interfaceDescriptionVariable: string;
+    /**
+     * Interface name: IPsec when present
+     */
+    interfaceName: string;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     */
+    ipsecCiphersuite: string;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable: string;
+    /**
+     * IPsec rekey interval \n\n seconds
+     */
+    ipsecRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     */
+    ipsecReplayWindow: number;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable: string;
+    /**
+     * Assign IPv4 address
+     */
+    ipv4Address: string;
+    /**
+     * Variable name
+     */
+    ipv4AddressVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    mtu: number;
+    /**
+     * Variable name
+     */
+    mtuVariable: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     */
+    perfectForwardSecrecy: string;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedKeyDynamic: boolean;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedSecret: string;
+    /**
+     * Variable name
+     */
+    preSharedSecretVariable: string;
+    /**
+     * Administrative state
+     */
+    shutdown: boolean;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     */
+    tcpMssAdjust: number;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable: string;
+    /**
+     * Enable/disable Zscaler SSE tracking
+     */
+    trackEnable: boolean;
+    /**
+     * Enable tracker for this interface
+     */
+    tracker: string;
+    /**
+     * Zscaler SSE Tunnel Data Center
+     */
+    tunnelDcPreference: string;
+    /**
+     * Tunnel destination IP address
+     */
+    tunnelDestination: string;
+    /**
+     * Variable name
+     */
+    tunnelDestinationVariable: string;
+    /**
+     * Public IP required to setup GRE tunnel to Zscaler
+     */
+    tunnelPublicIp: string;
+    /**
+     * Variable name
+     */
+    tunnelPublicIpVariable: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    tunnelRouteVia: string;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable: string;
+    /**
+     * Zscaler SSE Tunnel Provider
+     */
+    tunnelSet: string;
+    /**
+     * Tunnel source IP Address
+     */
+    tunnelSource: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    tunnelSourceInterface: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceVariable: string;
+    /**
+     * Unnumbered interface
+     */
+    unnumbered: boolean;
+}
+
+export interface GetSseZscalerFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for Zscaler SSE
+     */
+    activeInterface: string;
+    /**
+     * Active Tunnel Interface Weight
+     */
+    activeInterfaceWeight: number;
+    /**
+     * Backup Tunnel Interface for Zscaler SSE
+     */
+    backupInterface: string;
+    /**
+     * Backup Tunnel Interface Weight
+     */
+    backupInterfaceWeight: number;
+}
+
+export interface GetSseZscalerFeatureSubLocation {
+    /**
+     * Displays an Acceptable Use Policy for unauthenticated traffic and require users to accept it
+     */
+    aupEnabled: boolean;
+    /**
+     * Variable name
+     */
+    aupEnabledVariable: string;
+    /**
+     * How frequently in days the Acceptable Use Policy is displayed to users
+     */
+    aupTimeout: number;
+    /**
+     * Variable name
+     */
+    aupTimeoutVariable: string;
+    /**
+     * Enable Enforce Authentication to require users from this location to authenticate to the service.
+     */
+    authRequired: boolean;
+    /**
+     * Variable name
+     */
+    authRequiredVariable: string;
+    /**
+     * Disable all access to the internet, including non-HTTP traffic, until the user accepts the Acceptable Use Policy
+     */
+    blockInternetUntilAccepted: boolean;
+    /**
+     * Variable name
+     */
+    blockInternetUntilAcceptedVariable: string;
+    /**
+     * Enforces a caution policy action and display an end user notification for unauthenticated traffic. If disabled, the action is treated as an allow policy.
+     */
+    cautionEnabled: boolean;
+    /**
+     * Variable name
+     */
+    cautionEnabledVariable: string;
+    /**
+     * Display time unit for Idle Time to Disassociation
+     */
+    displayTimeUnit: string;
+    /**
+     * Variable name
+     */
+    displayTimeUnitVariable: string;
+    dnBandwidth: number;
+    /**
+     * Variable name
+     */
+    dnBandwidthVariable: string;
+    /**
+     * Enforce Bandwidth Control for sub location
+     */
+    enforceBandwidthControl: string;
+    /**
+     * Variable name
+     */
+    enforceBandwidthControlVariable: string;
+    /**
+     * Enable to make SSL Interception enforce an Acceptable Use Policy for HTTPS traffic
+     */
+    forceSslInspection: boolean;
+    /**
+     * Variable name
+     */
+    forceSslInspectionVariable: string;
+    /**
+     * Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping.
+     */
+    idleTime: number;
+    /**
+     * Variable name
+     */
+    idleTimeVariable: string;
+    internalIps: outputs.GetSseZscalerFeatureSubLocationInternalIp[];
+    /**
+     * If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
+     */
+    ipEnforcedForKnownBrowsers: boolean;
+    /**
+     * Variable name
+     */
+    ipEnforcedForKnownBrowsersVariable: string;
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Enforces firewall at the location
+     */
+    ofwEnabled: boolean;
+    /**
+     * Variable name
+     */
+    ofwEnabledVariable: string;
+    /**
+     * Length of time that surrogate user identity can be used for traffic from known browsers before it must refresh and re-validate the surrogate user identity
+     */
+    refreshTime: number;
+    /**
+     * Refresh Time display unit
+     */
+    refreshTimeUnit: string;
+    /**
+     * Variable name
+     */
+    refreshTimeUnitVariable: string;
+    /**
+     * Variable name
+     */
+    refreshTimeVariable: string;
+    /**
+     * Variable name
+     */
+    serviceVpnVariable: string;
+    serviceVpns: string[];
+    /**
+     * Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic.
+     */
+    surrogateIp: boolean;
+    /**
+     * Variable name
+     */
+    surrogateIpVariable: string;
+    upBandwidth: number;
+    /**
+     * Variable name
+     */
+    upBandwidthVariable: string;
+}
+
+export interface GetSseZscalerFeatureSubLocationInternalIp {
+    internalIpValue: string;
+    /**
+     * Variable name
+     */
+    internalIpValueVariable: string;
+}
+
+export interface GetSseZscalerFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl: string;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable: string;
+    /**
+     * Probe interval \n\n seconds
+     */
+    interval: number;
+    /**
+     * Variable name
+     */
+    intervalVariable: string;
+    /**
+     * Probe failure multiplier \n\n failed attempts
+     */
+    multiplier: number;
+    /**
+     * Variable name
+     */
+    multiplierVariable: string;
+    /**
+     * Tracker name
+     */
+    name: string;
+    /**
+     * Probe Timeout threshold \n\n milliseconds
+     */
+    threshold: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable: string;
+}
+
 export interface GetStandardCommunityListPolicyObjectEntry {
     /**
      * Standard community value, e.g. `100:1000`, `internet`, `local-AS`, `no-advertise` or `no-export`
@@ -18977,6 +19626,270 @@ export interface GetTlsSslDecryptionPolicyDefinitionUrlRule {
      * TLS SSL Profile Policy version
      */
     tlsSslProfilePolicyVersion: number;
+}
+
+export interface GetTopologyCustomControlFeatureSequence {
+    actionEntries: outputs.GetTopologyCustomControlFeatureSequenceActionEntry[];
+    /**
+     * Base Action
+     */
+    baseAction: string;
+    /**
+     * Sequence Id
+     */
+    id: number;
+    /**
+     * Sequence IP Type
+     */
+    ipType: string;
+    matchEntries: outputs.GetTopologyCustomControlFeatureSequenceMatchEntry[];
+    /**
+     * Sequence Name
+     */
+    name: string;
+    /**
+     * Sequence Type
+     */
+    type: string;
+}
+
+export interface GetTopologyCustomControlFeatureSequenceActionEntry {
+    /**
+     * Export to VPN list
+     */
+    exportToVpns: string[];
+    setParameters: outputs.GetTopologyCustomControlFeatureSequenceActionEntrySetParameter[];
+}
+
+export interface GetTopologyCustomControlFeatureSequenceActionEntrySetParameter {
+    /**
+     * Set affinity
+     */
+    affinity: number;
+    /**
+     * Set community value, e.g. `1000:10000` or `internet` or `local-AS`
+     */
+    community: string;
+    /**
+     * Set community additive
+     */
+    communityAdditive: boolean;
+    /**
+     * Set OMP tag
+     */
+    ompTag: number;
+    /**
+     * Set preference
+     */
+    preference: number;
+    /**
+     * Set service chain TLOC color
+     */
+    serviceChainTlocColor: string;
+    /**
+     * Set service chain TLOC encapsulation
+     */
+    serviceChainTlocEncapsulation: string;
+    /**
+     * Set service chain TLOC IP address
+     */
+    serviceChainTlocIp: string;
+    /**
+     * Set service chain TLOC list ID
+     */
+    serviceChainTlocListId: string;
+    /**
+     * Set service chain type
+     */
+    serviceChainType: string;
+    /**
+     * Set service chain VPN ID
+     */
+    serviceChainVpn: number;
+    /**
+     * Set service TLOC color
+     */
+    serviceTlocColor: string;
+    /**
+     * Set service TLOC encapsulation
+     */
+    serviceTlocEncapsulation: string;
+    /**
+     * Set service TLOC IP address
+     */
+    serviceTlocIp: string;
+    /**
+     * Set service TLOC list ID
+     */
+    serviceTlocListId: string;
+    /**
+     * Set service type
+     */
+    serviceType: string;
+    /**
+     * Set service VPN ID
+     */
+    serviceVpn: number;
+    /**
+     * Set TLOC action
+     */
+    tlocAction: string;
+    /**
+     * Set TLOC color
+     */
+    tlocColor: string;
+    /**
+     * Set TLOC encapsulation
+     */
+    tlocEncapsulation: string;
+    /**
+     * Set TLOC IP address
+     */
+    tlocIp: string;
+    /**
+     * Set TLOC list ID
+     */
+    tlocListId: string;
+}
+
+export interface GetTopologyCustomControlFeatureSequenceMatchEntry {
+    /**
+     * Carrier
+     */
+    carrier: string;
+    /**
+     * Color list ID
+     */
+    colorListId: string;
+    /**
+     * Community list ID
+     */
+    communityListId: string;
+    /**
+     * Domain ID
+     */
+    domainId: number;
+    /**
+     * Expanded community list ID
+     */
+    expandedCommunityListId: string;
+    /**
+     * Group ID
+     */
+    groupId: number;
+    /**
+     * IPv6 prefix list ID
+     */
+    ipv6PrefixListId: string;
+    /**
+     * Match regions list
+     */
+    matchRegions: outputs.GetTopologyCustomControlFeatureSequenceMatchEntryMatchRegion[];
+    /**
+     * OMP tag
+     */
+    ompTag: number;
+    /**
+     * Origin
+     */
+    origin: string;
+    /**
+     * Originator IP
+     */
+    originator: string;
+    /**
+     * Path type
+     */
+    pathType: string;
+    /**
+     * Preference
+     */
+    preference: number;
+    /**
+     * Prefix list ID
+     */
+    prefixListId: string;
+    /**
+     * Role
+     */
+    role: string;
+    /**
+     * Site list
+     */
+    sites: string[];
+    /**
+     * TLOC color
+     */
+    tlocColor: string;
+    /**
+     * TLOC encapsulation
+     */
+    tlocEncapsulation: string;
+    /**
+     * TLOC IP address
+     */
+    tlocIp: string;
+    /**
+     * TLOC list ID
+     */
+    tlocListId: string;
+    /**
+     * VPN list
+     */
+    vpns: string[];
+}
+
+export interface GetTopologyCustomControlFeatureSequenceMatchEntryMatchRegion {
+    /**
+     * Region name
+     */
+    region: string;
+    /**
+     * Sub-region list
+     */
+    subRegions: string[];
+}
+
+export interface GetTopologyCustomControlFeatureTargetInboundRegion {
+    /**
+     * Region name
+     */
+    region: string;
+    /**
+     * Sub-region list
+     */
+    subRegions: string[];
+}
+
+export interface GetTopologyCustomControlFeatureTargetOutboundRegion {
+    /**
+     * Region name
+     */
+    region: string;
+    /**
+     * Sub-region list
+     */
+    subRegions: string[];
+}
+
+export interface GetTopologyHubSpokeFeatureSpoke {
+    /**
+     * Hub Sites
+     */
+    hubSites: outputs.GetTopologyHubSpokeFeatureSpokeHubSite[];
+    name: string;
+    spokeSites: string[];
+}
+
+export interface GetTopologyHubSpokeFeatureSpokeHubSite {
+    /**
+     * preference
+     */
+    preference: number;
+    /**
+     * sites
+     */
+    sites: string[];
 }
 
 export interface GetTrafficDataPolicyDefinitionSequence {
@@ -28645,6 +29558,723 @@ export interface SiteListPolicyObjectEntry {
     siteId: string;
 }
 
+export interface SseCiscoFeatureInterface {
+    /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `10`
+     */
+    dpdInterval?: number;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable?: string;
+    /**
+     * IKE keepalive retries
+     *   - Range: `0`-`255`
+     *   - Default value: `3`
+     */
+    dpdRetries?: number;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable?: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     */
+    ikeCiphersuite?: string;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable?: string;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+     *   - Default value: `16`
+     */
+    ikeGroup?: string;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable?: string;
+    /**
+     * IKE rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `14400`
+     */
+    ikeRekeyInterval?: number;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable?: string;
+    /**
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `2`
+     */
+    ikeVersion?: number;
+    /**
+     * Variable name
+     */
+    ikeVersionVariable?: string;
+    /**
+     * Interface name: ipsec(1..255)
+     */
+    interfaceName?: string;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+     *   - Default value: `aes256-cbc-sha512`
+     */
+    ipsecCiphersuite?: string;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable?: string;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `3600`
+     */
+    ipsecRekeyInterval?: number;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable?: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
+     */
+    ipsecReplayWindow?: number;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable?: string;
+    /**
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1400`
+     */
+    mtu?: number;
+    /**
+     * Variable name
+     */
+    mtuVariable?: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+     *   - Default value: `group-16`
+     */
+    perfectForwardSecrecy?: string;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable?: string;
+    /**
+     * Administrative state
+     *   - Default value: `false`
+     */
+    shutdown?: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable?: string;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    tcpMssAdjust?: number;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable?: string;
+    /**
+     * Enable/disable Cisco SSE tracking
+     *   - Default value: `true`
+     */
+    trackEnable?: boolean;
+    /**
+     * Variable name
+     */
+    trackEnableVariable?: string;
+    /**
+     * Enable tracker for this interface
+     *   - Default value: `DefaultTracker`
+     */
+    tracker?: string;
+    /**
+     * SSE Tunnel Data Center
+     *   - Choices: `primary-dc`, `secondary-dc`
+     */
+    tunnelDcPreference?: string;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelRouteVia?: string;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable?: string;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelSourceInterface?: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable?: string;
+}
+
+export interface SseCiscoFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for SSE
+     */
+    activeInterface?: string;
+    /**
+     * Active Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    activeInterfaceWeight?: number;
+    /**
+     * Backup Tunnel Interface for Cisco SSE
+     */
+    backupInterface?: string;
+    /**
+     * Backup Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    backupInterfaceWeight?: number;
+}
+
+export interface SseCiscoFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl?: string;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable?: string;
+    /**
+     * Probe interval <10..600> seconds
+     *   - Range: `20`-`600`
+     *   - Default value: `30`
+     */
+    interval?: number;
+    /**
+     * Variable name
+     */
+    intervalVariable?: string;
+    /**
+     * Probe failure multiplier <1..10> failed attempts
+     *   - Range: `1`-`10`
+     *   - Default value: `2`
+     */
+    multiplier?: number;
+    /**
+     * Variable name
+     */
+    multiplierVariable?: string;
+    /**
+     * Tracker name
+     */
+    name?: string;
+    /**
+     * Probe Timeout threshold <100..1000> milliseconds
+     *   - Range: `100`-`1000`
+     *   - Default value: `1000`
+     */
+    threshold?: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: string;
+}
+
+export interface SseZscalerFeatureInterface {
+    /**
+     * Auto Tunnel Mode
+     */
+    auto?: boolean;
+    /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
+     */
+    dpdInterval?: number;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable?: string;
+    /**
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     */
+    dpdRetries?: number;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable?: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     */
+    ikeCiphersuite?: string;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable?: string;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+     *   - Default value: `16`
+     */
+    ikeGroup?: string;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable?: string;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeLocalId?: string;
+    /**
+     * Variable name
+     */
+    ikeLocalIdVariable?: string;
+    /**
+     * IKE rekey interval <300..1209600> seconds
+     *   - Range: `300`-`86400`
+     *   - Default value: `14400`
+     */
+    ikeRekeyInterval?: number;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable?: string;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeRemoteId?: string;
+    /**
+     * Variable name
+     */
+    ikeRemoteIdVariable?: string;
+    /**
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `2`
+     */
+    ikeVersion?: number;
+    /**
+     * Variable name
+     */
+    ikeVersionVariable?: string;
+    /**
+     * Interface description
+     */
+    interfaceDescription?: string;
+    /**
+     * Variable name
+     */
+    interfaceDescriptionVariable?: string;
+    /**
+     * Interface name: IPsec when present
+     */
+    interfaceName?: string;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+     *   - Default value: `aes256-cbc-sha512`
+     */
+    ipsecCiphersuite?: string;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable?: string;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `3600`
+     */
+    ipsecRekeyInterval?: number;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable?: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Default value: `512`
+     */
+    ipsecReplayWindow?: number;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable?: string;
+    /**
+     * Assign IPv4 address
+     */
+    ipv4Address?: string;
+    /**
+     * Variable name
+     */
+    ipv4AddressVariable?: string;
+    /**
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1400`
+     */
+    mtu?: number;
+    /**
+     * Variable name
+     */
+    mtuVariable?: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+     *   - Default value: `none`
+     */
+    perfectForwardSecrecy?: string;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable?: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedKeyDynamic?: boolean;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedSecret?: string;
+    /**
+     * Variable name
+     */
+    preSharedSecretVariable?: string;
+    /**
+     * Administrative state
+     *   - Default value: `false`
+     */
+    shutdown?: boolean;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    tcpMssAdjust?: number;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable?: string;
+    /**
+     * Enable/disable Zscaler SSE tracking
+     *   - Default value: `true`
+     */
+    trackEnable?: boolean;
+    /**
+     * Enable tracker for this interface
+     *   - Default value: `DefaultTracker`
+     */
+    tracker?: string;
+    /**
+     * Zscaler SSE Tunnel Data Center
+     *   - Choices: `primary-dc`, `secondary-dc`
+     */
+    tunnelDcPreference?: string;
+    /**
+     * Tunnel destination IP address
+     */
+    tunnelDestination?: string;
+    /**
+     * Variable name
+     */
+    tunnelDestinationVariable?: string;
+    /**
+     * Public IP required to setup GRE tunnel to Zscaler
+     *   - Default value: `Auto`
+     */
+    tunnelPublicIp?: string;
+    /**
+     * Variable name
+     */
+    tunnelPublicIpVariable?: string;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelRouteVia?: string;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable?: string;
+    /**
+     * Zscaler SSE Tunnel Provider
+     *   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+     */
+    tunnelSet?: string;
+    /**
+     * Tunnel source IP Address
+     */
+    tunnelSource?: string;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelSourceInterface?: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable?: string;
+    /**
+     * Variable name
+     */
+    tunnelSourceVariable?: string;
+    /**
+     * Unnumbered interface
+     */
+    unnumbered?: boolean;
+}
+
+export interface SseZscalerFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for Zscaler SSE
+     */
+    activeInterface?: string;
+    /**
+     * Active Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    activeInterfaceWeight?: number;
+    /**
+     * Backup Tunnel Interface for Zscaler SSE
+     */
+    backupInterface?: string;
+    /**
+     * Backup Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    backupInterfaceWeight?: number;
+}
+
+export interface SseZscalerFeatureSubLocation {
+    /**
+     * Displays an Acceptable Use Policy for unauthenticated traffic and require users to accept it
+     *   - Default value: `false`
+     */
+    aupEnabled?: boolean;
+    /**
+     * Variable name
+     */
+    aupEnabledVariable?: string;
+    /**
+     * How frequently in days the Acceptable Use Policy is displayed to users, Attribute conditional on `aupEnabled` equal to `true`
+     *   - Range: `1`-`180`
+     *   - Default value: `1`
+     */
+    aupTimeout?: number;
+    /**
+     * Variable name, Attribute conditional on `aupEnabled` equal to `true`
+     */
+    aupTimeoutVariable?: string;
+    /**
+     * Enable Enforce Authentication to require users from this location to authenticate to the service.
+     *   - Default value: `false`
+     */
+    authRequired?: boolean;
+    /**
+     * Variable name
+     */
+    authRequiredVariable?: string;
+    /**
+     * Disable all access to the internet, including non-HTTP traffic, until the user accepts the Acceptable Use Policy, Attribute conditional on `aupEnabled` equal to `true`
+     *   - Default value: `false`
+     */
+    blockInternetUntilAccepted?: boolean;
+    /**
+     * Variable name, Attribute conditional on `aupEnabled` equal to `true`
+     */
+    blockInternetUntilAcceptedVariable?: string;
+    /**
+     * Enforces a caution policy action and display an end user notification for unauthenticated traffic. If disabled, the action is treated as an allow policy.
+     *   - Default value: `false`
+     */
+    cautionEnabled?: boolean;
+    /**
+     * Variable name
+     */
+    cautionEnabledVariable?: string;
+    /**
+     * Display time unit for Idle Time to Disassociation, Attribute conditional on `surrogateIp` equal to `true`
+     *   - Choices: `MINUTE`, `HOUR`, `DAY`
+     *   - Default value: `MINUTE`
+     */
+    displayTimeUnit?: string;
+    /**
+     * Variable name, Attribute conditional on `surrogateIp` equal to `true`
+     */
+    displayTimeUnitVariable?: string;
+    /**
+     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     *   - Range: `0.1`-`99999`
+     */
+    dnBandwidth?: number;
+    /**
+     * Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
+     */
+    dnBandwidthVariable?: string;
+    /**
+     * Enforce Bandwidth Control for sub location
+     *   - Choices: `location-bandwidth`, `override`, `disabled`
+     *   - Default value: `location-bandwidth`
+     */
+    enforceBandwidthControl?: string;
+    /**
+     * Variable name
+     */
+    enforceBandwidthControlVariable?: string;
+    /**
+     * Enable to make SSL Interception enforce an Acceptable Use Policy for HTTPS traffic, Attribute conditional on `aupEnabled` equal to `true`
+     *   - Default value: `false`
+     */
+    forceSslInspection?: boolean;
+    /**
+     * Variable name, Attribute conditional on `aupEnabled` equal to `true`
+     */
+    forceSslInspectionVariable?: string;
+    /**
+     * Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping., Attribute conditional on `surrogateIp` equal to `true`
+     *   - At Least: `1`
+     *   - Default value: `1`
+     */
+    idleTime?: number;
+    /**
+     * Variable name, Attribute conditional on `surrogateIp` equal to `true`
+     */
+    idleTimeVariable?: string;
+    internalIps?: outputs.SseZscalerFeatureSubLocationInternalIp[];
+    /**
+     * If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
+     *   - Default value: `false`
+     */
+    ipEnforcedForKnownBrowsers?: boolean;
+    /**
+     * Variable name
+     */
+    ipEnforcedForKnownBrowsersVariable?: string;
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Enforces firewall at the location
+     *   - Default value: `false`
+     */
+    ofwEnabled?: boolean;
+    /**
+     * Variable name
+     */
+    ofwEnabledVariable?: string;
+    /**
+     * Length of time that surrogate user identity can be used for traffic from known browsers before it must refresh and re-validate the surrogate user identity, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     *   - At Least: `1`
+     *   - Default value: `1`
+     */
+    refreshTime?: number;
+    /**
+     * Refresh Time display unit, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     *   - Choices: `MINUTE`, `HOUR`, `DAY`
+     *   - Default value: `MINUTE`
+     */
+    refreshTimeUnit?: string;
+    /**
+     * Variable name, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     */
+    refreshTimeUnitVariable?: string;
+    /**
+     * Variable name, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     */
+    refreshTimeVariable?: string;
+    /**
+     * Variable name
+     */
+    serviceVpnVariable?: string;
+    serviceVpns?: string[];
+    /**
+     * Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
+     *   - Default value: `false`
+     */
+    surrogateIp?: boolean;
+    /**
+     * Variable name, Attribute conditional on `authRequired` equal to `true`
+     */
+    surrogateIpVariable?: string;
+    /**
+     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     *   - Range: `0.1`-`99999`
+     */
+    upBandwidth?: number;
+    /**
+     * Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
+     */
+    upBandwidthVariable?: string;
+}
+
+export interface SseZscalerFeatureSubLocationInternalIp {
+    internalIpValue?: string;
+    /**
+     * Variable name
+     */
+    internalIpValueVariable?: string;
+}
+
+export interface SseZscalerFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl?: string;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable?: string;
+    /**
+     * Probe interval <10..600> seconds
+     *   - Range: `20`-`600`
+     *   - Default value: `30`
+     */
+    interval?: number;
+    /**
+     * Variable name
+     */
+    intervalVariable?: string;
+    /**
+     * Probe failure multiplier <1..10> failed attempts
+     *   - Range: `1`-`10`
+     *   - Default value: `2`
+     */
+    multiplier?: number;
+    /**
+     * Variable name
+     */
+    multiplierVariable?: string;
+    /**
+     * Tracker name
+     */
+    name?: string;
+    /**
+     * Probe Timeout threshold <100..1000> milliseconds
+     *   - Range: `100`-`1000`
+     *   - Default value: `1000`
+     */
+    threshold?: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: string;
+}
+
 export interface StandardCommunityListPolicyObjectEntry {
     /**
      * Standard community value, e.g. `100:1000`, `internet`, `local-AS`, `no-advertise` or `no-export`
@@ -29998,6 +31628,295 @@ export interface TlsSslDecryptionPolicyDefinitionUrlRule {
      * TLS SSL Profile Policy version
      */
     tlsSslProfilePolicyVersion?: number;
+}
+
+export interface TopologyCustomControlFeatureSequence {
+    actionEntries?: outputs.TopologyCustomControlFeatureSequenceActionEntry[];
+    /**
+     * Base Action
+     *   - Choices: `reject`, `accept`
+     */
+    baseAction?: string;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    id?: number;
+    /**
+     * Sequence IP Type
+     *   - Choices: `ipv4`, `ipv6`, `all`
+     */
+    ipType?: string;
+    matchEntries?: outputs.TopologyCustomControlFeatureSequenceMatchEntry[];
+    /**
+     * Sequence Name
+     */
+    name?: string;
+    /**
+     * Sequence Type
+     *   - Choices: `route`, `tloc`
+     */
+    type?: string;
+}
+
+export interface TopologyCustomControlFeatureSequenceActionEntry {
+    /**
+     * Export to VPN list
+     */
+    exportToVpns?: string[];
+    setParameters?: outputs.TopologyCustomControlFeatureSequenceActionEntrySetParameter[];
+}
+
+export interface TopologyCustomControlFeatureSequenceActionEntrySetParameter {
+    /**
+     * Set affinity
+     *   - Range: `0`-`63`
+     */
+    affinity?: number;
+    /**
+     * Set community value, e.g. `1000:10000` or `internet` or `local-AS`
+     */
+    community?: string;
+    /**
+     * Set community additive
+     */
+    communityAdditive?: boolean;
+    /**
+     * Set OMP tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: number;
+    /**
+     * Set preference
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: number;
+    /**
+     * Set service chain TLOC color
+     */
+    serviceChainTlocColor?: string;
+    /**
+     * Set service chain TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    serviceChainTlocEncapsulation?: string;
+    /**
+     * Set service chain TLOC IP address
+     */
+    serviceChainTlocIp?: string;
+    /**
+     * Set service chain TLOC list ID
+     */
+    serviceChainTlocListId?: string;
+    /**
+     * Set service chain type
+     *   - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    serviceChainType?: string;
+    /**
+     * Set service chain VPN ID
+     *   - Range: `0`-`65530`
+     */
+    serviceChainVpn?: number;
+    /**
+     * Set service TLOC color
+     */
+    serviceTlocColor?: string;
+    /**
+     * Set service TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    serviceTlocEncapsulation?: string;
+    /**
+     * Set service TLOC IP address
+     */
+    serviceTlocIp?: string;
+    /**
+     * Set service TLOC list ID
+     */
+    serviceTlocListId?: string;
+    /**
+     * Set service type
+     *   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+     */
+    serviceType?: string;
+    /**
+     * Set service VPN ID
+     *   - Range: `0`-`65530`
+     */
+    serviceVpn?: number;
+    /**
+     * Set TLOC action
+     *   - Choices: `strict`, `primary`, `backup`, `ecmp`
+     */
+    tlocAction?: string;
+    /**
+     * Set TLOC color
+     */
+    tlocColor?: string;
+    /**
+     * Set TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    tlocEncapsulation?: string;
+    /**
+     * Set TLOC IP address
+     */
+    tlocIp?: string;
+    /**
+     * Set TLOC list ID
+     */
+    tlocListId?: string;
+}
+
+export interface TopologyCustomControlFeatureSequenceMatchEntry {
+    /**
+     * Carrier
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     */
+    carrier?: string;
+    /**
+     * Color list ID
+     */
+    colorListId?: string;
+    /**
+     * Community list ID
+     */
+    communityListId?: string;
+    /**
+     * Domain ID
+     *   - Range: `1`-`4294967295`
+     */
+    domainId?: number;
+    /**
+     * Expanded community list ID
+     */
+    expandedCommunityListId?: string;
+    /**
+     * Group ID
+     *   - Range: `0`-`4294967295`
+     */
+    groupId?: number;
+    /**
+     * IPv6 prefix list ID
+     */
+    ipv6PrefixListId?: string;
+    /**
+     * Match regions list
+     */
+    matchRegions?: outputs.TopologyCustomControlFeatureSequenceMatchEntryMatchRegion[];
+    /**
+     * OMP tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: number;
+    /**
+     * Origin
+     *   - Choices: `aggregate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
+     */
+    origin?: string;
+    /**
+     * Originator IP
+     */
+    originator?: string;
+    /**
+     * Path type
+     *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
+     */
+    pathType?: string;
+    /**
+     * Preference
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: number;
+    /**
+     * Prefix list ID
+     */
+    prefixListId?: string;
+    /**
+     * Role
+     *   - Choices: `edge-router`, `border-router`
+     */
+    role?: string;
+    /**
+     * Site list
+     */
+    sites?: string[];
+    /**
+     * TLOC color
+     */
+    tlocColor?: string;
+    /**
+     * TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    tlocEncapsulation?: string;
+    /**
+     * TLOC IP address
+     */
+    tlocIp?: string;
+    /**
+     * TLOC list ID
+     */
+    tlocListId?: string;
+    /**
+     * VPN list
+     */
+    vpns?: string[];
+}
+
+export interface TopologyCustomControlFeatureSequenceMatchEntryMatchRegion {
+    /**
+     * Region name
+     */
+    region?: string;
+    /**
+     * Sub-region list
+     */
+    subRegions?: string[];
+}
+
+export interface TopologyCustomControlFeatureTargetInboundRegion {
+    /**
+     * Region name
+     */
+    region?: string;
+    /**
+     * Sub-region list
+     */
+    subRegions?: string[];
+}
+
+export interface TopologyCustomControlFeatureTargetOutboundRegion {
+    /**
+     * Region name
+     */
+    region?: string;
+    /**
+     * Sub-region list
+     */
+    subRegions?: string[];
+}
+
+export interface TopologyHubSpokeFeatureSpoke {
+    /**
+     * Hub Sites
+     */
+    hubSites?: outputs.TopologyHubSpokeFeatureSpokeHubSite[];
+    name?: string;
+    spokeSites?: string[];
+}
+
+export interface TopologyHubSpokeFeatureSpokeHubSite {
+    /**
+     * preference
+     *   - Range: `1`-`255`
+     */
+    preference?: number;
+    /**
+     * sites
+     */
+    sites?: string[];
 }
 
 export interface TrafficDataPolicyDefinitionSequence {

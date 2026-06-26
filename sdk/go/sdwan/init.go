@@ -23,6 +23,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 	switch typ {
 	case "sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy":
 		r = &ActivateCentralizedPolicy{}
+	case "sdwan:index/activateTopologyGroup:ActivateTopologyGroup":
+		r = &ActivateTopologyGroup{}
 	case "sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition":
 		r = &AdvancedInspectionProfilePolicyDefinition{}
 	case "sdwan:index/advancedMalwareProtectionPolicyDefinition:AdvancedMalwareProtectionPolicyDefinition":
@@ -127,6 +129,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ColorListPolicyObject{}
 	case "sdwan:index/configurationGroup:ConfigurationGroup":
 		r = &ConfigurationGroup{}
+	case "sdwan:index/customApplication:CustomApplication":
+		r = &CustomApplication{}
 	case "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition":
 		r = &CustomControlTopologyPolicyDefinition{}
 	case "sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject":
@@ -367,6 +371,12 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SiteListPolicyObject{}
 	case "sdwan:index/slaClassPolicyObject:SlaClassPolicyObject":
 		r = &SlaClassPolicyObject{}
+	case "sdwan:index/sseCiscoFeature:SseCiscoFeature":
+		r = &SseCiscoFeature{}
+	case "sdwan:index/sseFeatureProfile:SseFeatureProfile":
+		r = &SseFeatureProfile{}
+	case "sdwan:index/sseZscalerFeature:SseZscalerFeature":
+		r = &SseZscalerFeature{}
 	case "sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject":
 		r = &StandardCommunityListPolicyObject{}
 	case "sdwan:index/switchportFeatureTemplate:SwitchportFeatureTemplate":
@@ -415,6 +425,16 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TlsSslDecryptionPolicyDefinition{}
 	case "sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition":
 		r = &TlsSslProfilePolicyDefinition{}
+	case "sdwan:index/topologyCustomControlFeature:TopologyCustomControlFeature":
+		r = &TopologyCustomControlFeature{}
+	case "sdwan:index/topologyFeatureProfile:TopologyFeatureProfile":
+		r = &TopologyFeatureProfile{}
+	case "sdwan:index/topologyGroup:TopologyGroup":
+		r = &TopologyGroup{}
+	case "sdwan:index/topologyHubSpokeFeature:TopologyHubSpokeFeature":
+		r = &TopologyHubSpokeFeature{}
+	case "sdwan:index/topologyMeshFeature:TopologyMeshFeature":
+		r = &TopologyMeshFeature{}
 	case "sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition":
 		r = &TrafficDataPolicyDefinition{}
 	case "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature":
@@ -549,6 +569,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/activateCentralizedPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/activateTopologyGroup",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -809,6 +834,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/configurationGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/customApplication",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1413,6 +1443,21 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/sseCiscoFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/sseFeatureProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/sseZscalerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/standardCommunityListPolicyObject",
 		&module{version},
 	)
@@ -1529,6 +1574,31 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/tlsSslProfilePolicyDefinition",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/topologyCustomControlFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/topologyFeatureProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/topologyGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/topologyHubSpokeFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/topologyMeshFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

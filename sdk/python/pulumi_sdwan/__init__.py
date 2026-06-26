@@ -7,6 +7,7 @@ from . import _utilities
 import typing
 # Export this package's modules as members:
 from .activate_centralized_policy import *
+from .activate_topology_group import *
 from .advanced_inspection_profile_policy_definition import *
 from .advanced_malware_protection_policy_definition import *
 from .allow_url_list_policy_object import *
@@ -59,6 +60,7 @@ from .cli_template_feature_template import *
 from .cloud_provider_settings import *
 from .color_list_policy_object import *
 from .configuration_group import *
+from .custom_application import *
 from .custom_control_topology_policy_definition import *
 from .data_fqdn_prefix_list_policy_object import *
 from .data_ipv4_prefix_list_policy_object import *
@@ -126,6 +128,7 @@ from .get_cli_template_feature_template import *
 from .get_cloud_provider_settings import *
 from .get_color_list_policy_object import *
 from .get_configuration_group import *
+from .get_custom_application import *
 from .get_custom_control_topology_policy_definition import *
 from .get_data_fqdn_prefix_list_policy_object import *
 from .get_data_ipv4_prefix_list_policy_object import *
@@ -248,6 +251,9 @@ from .get_service_wireless_lan_feature import *
 from .get_sig_security_feature_profile import *
 from .get_site_list_policy_object import *
 from .get_sla_class_policy_object import *
+from .get_sse_cisco_feature import *
+from .get_sse_feature_profile import *
+from .get_sse_zscaler_feature import *
 from .get_standard_community_list_policy_object import *
 from .get_switchport_feature_template import *
 from .get_system_aaa_feature import *
@@ -272,6 +278,11 @@ from .get_tag import *
 from .get_tloc_list_policy_object import *
 from .get_tls_ssl_decryption_policy_definition import *
 from .get_tls_ssl_profile_policy_definition import *
+from .get_topology_custom_control_feature import *
+from .get_topology_feature_profile import *
+from .get_topology_group import *
+from .get_topology_hub_spoke_feature import *
+from .get_topology_mesh_feature import *
 from .get_traffic_data_policy_definition import *
 from .get_transport_cellular_controller_feature import *
 from .get_transport_cellular_profile_feature import *
@@ -428,6 +439,9 @@ from .service_wireless_lan_feature import *
 from .sig_security_feature_profile import *
 from .site_list_policy_object import *
 from .sla_class_policy_object import *
+from .sse_cisco_feature import *
+from .sse_feature_profile import *
+from .sse_zscaler_feature import *
 from .standard_community_list_policy_object import *
 from .switchport_feature_template import *
 from .system_aaa_feature import *
@@ -452,6 +466,11 @@ from .tag import *
 from .tloc_list_policy_object import *
 from .tls_ssl_decryption_policy_definition import *
 from .tls_ssl_profile_policy_definition import *
+from .topology_custom_control_feature import *
+from .topology_feature_profile import *
+from .topology_group import *
+from .topology_hub_spoke_feature import *
+from .topology_mesh_feature import *
 from .traffic_data_policy_definition import *
 from .transport_cellular_controller_feature import *
 from .transport_cellular_profile_feature import *
@@ -521,6 +540,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy": "ActivateCentralizedPolicy"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/activateTopologyGroup",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/activateTopologyGroup:ActivateTopologyGroup": "ActivateTopologyGroup"
   }
  },
  {
@@ -937,6 +964,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/configurationGroup:ConfigurationGroup": "ConfigurationGroup"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/customApplication",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/customApplication:CustomApplication": "CustomApplication"
   }
  },
  {
@@ -1901,6 +1936,30 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/sseCiscoFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/sseCiscoFeature:SseCiscoFeature": "SseCiscoFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/sseFeatureProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/sseFeatureProfile:SseFeatureProfile": "SseFeatureProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/sseZscalerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/sseZscalerFeature:SseZscalerFeature": "SseZscalerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/standardCommunityListPolicyObject",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -2089,6 +2148,46 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition": "TlsSslProfilePolicyDefinition"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/topologyCustomControlFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/topologyCustomControlFeature:TopologyCustomControlFeature": "TopologyCustomControlFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/topologyFeatureProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/topologyFeatureProfile:TopologyFeatureProfile": "TopologyFeatureProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/topologyGroup",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/topologyGroup:TopologyGroup": "TopologyGroup"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/topologyHubSpokeFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/topologyHubSpokeFeature:TopologyHubSpokeFeature": "TopologyHubSpokeFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/topologyMeshFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/topologyMeshFeature:TopologyMeshFeature": "TopologyMeshFeature"
   }
  },
  {

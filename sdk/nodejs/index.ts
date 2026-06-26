@@ -10,6 +10,11 @@ export type ActivateCentralizedPolicy = import("./activateCentralizedPolicy").Ac
 export const ActivateCentralizedPolicy: typeof import("./activateCentralizedPolicy").ActivateCentralizedPolicy = null as any;
 utilities.lazyLoad(exports, ["ActivateCentralizedPolicy"], () => require("./activateCentralizedPolicy"));
 
+export { ActivateTopologyGroupArgs, ActivateTopologyGroupState } from "./activateTopologyGroup";
+export type ActivateTopologyGroup = import("./activateTopologyGroup").ActivateTopologyGroup;
+export const ActivateTopologyGroup: typeof import("./activateTopologyGroup").ActivateTopologyGroup = null as any;
+utilities.lazyLoad(exports, ["ActivateTopologyGroup"], () => require("./activateTopologyGroup"));
+
 export { AdvancedInspectionProfilePolicyDefinitionArgs, AdvancedInspectionProfilePolicyDefinitionState } from "./advancedInspectionProfilePolicyDefinition";
 export type AdvancedInspectionProfilePolicyDefinition = import("./advancedInspectionProfilePolicyDefinition").AdvancedInspectionProfilePolicyDefinition;
 export const AdvancedInspectionProfilePolicyDefinition: typeof import("./advancedInspectionProfilePolicyDefinition").AdvancedInspectionProfilePolicyDefinition = null as any;
@@ -269,6 +274,11 @@ export { ConfigurationGroupArgs, ConfigurationGroupState } from "./configuration
 export type ConfigurationGroup = import("./configurationGroup").ConfigurationGroup;
 export const ConfigurationGroup: typeof import("./configurationGroup").ConfigurationGroup = null as any;
 utilities.lazyLoad(exports, ["ConfigurationGroup"], () => require("./configurationGroup"));
+
+export { CustomApplicationArgs, CustomApplicationState } from "./customApplication";
+export type CustomApplication = import("./customApplication").CustomApplication;
+export const CustomApplication: typeof import("./customApplication").CustomApplication = null as any;
+utilities.lazyLoad(exports, ["CustomApplication"], () => require("./customApplication"));
 
 export { CustomControlTopologyPolicyDefinitionArgs, CustomControlTopologyPolicyDefinitionState } from "./customControlTopologyPolicyDefinition";
 export type CustomControlTopologyPolicyDefinition = import("./customControlTopologyPolicyDefinition").CustomControlTopologyPolicyDefinition;
@@ -604,6 +614,11 @@ export { GetConfigurationGroupArgs, GetConfigurationGroupResult, GetConfiguratio
 export const getConfigurationGroup: typeof import("./getConfigurationGroup").getConfigurationGroup = null as any;
 export const getConfigurationGroupOutput: typeof import("./getConfigurationGroup").getConfigurationGroupOutput = null as any;
 utilities.lazyLoad(exports, ["getConfigurationGroup","getConfigurationGroupOutput"], () => require("./getConfigurationGroup"));
+
+export { GetCustomApplicationArgs, GetCustomApplicationResult, GetCustomApplicationOutputArgs } from "./getCustomApplication";
+export const getCustomApplication: typeof import("./getCustomApplication").getCustomApplication = null as any;
+export const getCustomApplicationOutput: typeof import("./getCustomApplication").getCustomApplicationOutput = null as any;
+utilities.lazyLoad(exports, ["getCustomApplication","getCustomApplicationOutput"], () => require("./getCustomApplication"));
 
 export { GetCustomControlTopologyPolicyDefinitionArgs, GetCustomControlTopologyPolicyDefinitionResult, GetCustomControlTopologyPolicyDefinitionOutputArgs } from "./getCustomControlTopologyPolicyDefinition";
 export const getCustomControlTopologyPolicyDefinition: typeof import("./getCustomControlTopologyPolicyDefinition").getCustomControlTopologyPolicyDefinition = null as any;
@@ -1215,6 +1230,21 @@ export const getSlaClassPolicyObject: typeof import("./getSlaClassPolicyObject")
 export const getSlaClassPolicyObjectOutput: typeof import("./getSlaClassPolicyObject").getSlaClassPolicyObjectOutput = null as any;
 utilities.lazyLoad(exports, ["getSlaClassPolicyObject","getSlaClassPolicyObjectOutput"], () => require("./getSlaClassPolicyObject"));
 
+export { GetSseCiscoFeatureArgs, GetSseCiscoFeatureResult, GetSseCiscoFeatureOutputArgs } from "./getSseCiscoFeature";
+export const getSseCiscoFeature: typeof import("./getSseCiscoFeature").getSseCiscoFeature = null as any;
+export const getSseCiscoFeatureOutput: typeof import("./getSseCiscoFeature").getSseCiscoFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSseCiscoFeature","getSseCiscoFeatureOutput"], () => require("./getSseCiscoFeature"));
+
+export { GetSseFeatureProfileArgs, GetSseFeatureProfileResult, GetSseFeatureProfileOutputArgs } from "./getSseFeatureProfile";
+export const getSseFeatureProfile: typeof import("./getSseFeatureProfile").getSseFeatureProfile = null as any;
+export const getSseFeatureProfileOutput: typeof import("./getSseFeatureProfile").getSseFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getSseFeatureProfile","getSseFeatureProfileOutput"], () => require("./getSseFeatureProfile"));
+
+export { GetSseZscalerFeatureArgs, GetSseZscalerFeatureResult, GetSseZscalerFeatureOutputArgs } from "./getSseZscalerFeature";
+export const getSseZscalerFeature: typeof import("./getSseZscalerFeature").getSseZscalerFeature = null as any;
+export const getSseZscalerFeatureOutput: typeof import("./getSseZscalerFeature").getSseZscalerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSseZscalerFeature","getSseZscalerFeatureOutput"], () => require("./getSseZscalerFeature"));
+
 export { GetStandardCommunityListPolicyObjectArgs, GetStandardCommunityListPolicyObjectResult, GetStandardCommunityListPolicyObjectOutputArgs } from "./getStandardCommunityListPolicyObject";
 export const getStandardCommunityListPolicyObject: typeof import("./getStandardCommunityListPolicyObject").getStandardCommunityListPolicyObject = null as any;
 export const getStandardCommunityListPolicyObjectOutput: typeof import("./getStandardCommunityListPolicyObject").getStandardCommunityListPolicyObjectOutput = null as any;
@@ -1334,6 +1364,31 @@ export { GetTlsSslProfilePolicyDefinitionArgs, GetTlsSslProfilePolicyDefinitionR
 export const getTlsSslProfilePolicyDefinition: typeof import("./getTlsSslProfilePolicyDefinition").getTlsSslProfilePolicyDefinition = null as any;
 export const getTlsSslProfilePolicyDefinitionOutput: typeof import("./getTlsSslProfilePolicyDefinition").getTlsSslProfilePolicyDefinitionOutput = null as any;
 utilities.lazyLoad(exports, ["getTlsSslProfilePolicyDefinition","getTlsSslProfilePolicyDefinitionOutput"], () => require("./getTlsSslProfilePolicyDefinition"));
+
+export { GetTopologyCustomControlFeatureArgs, GetTopologyCustomControlFeatureResult, GetTopologyCustomControlFeatureOutputArgs } from "./getTopologyCustomControlFeature";
+export const getTopologyCustomControlFeature: typeof import("./getTopologyCustomControlFeature").getTopologyCustomControlFeature = null as any;
+export const getTopologyCustomControlFeatureOutput: typeof import("./getTopologyCustomControlFeature").getTopologyCustomControlFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTopologyCustomControlFeature","getTopologyCustomControlFeatureOutput"], () => require("./getTopologyCustomControlFeature"));
+
+export { GetTopologyFeatureProfileArgs, GetTopologyFeatureProfileResult, GetTopologyFeatureProfileOutputArgs } from "./getTopologyFeatureProfile";
+export const getTopologyFeatureProfile: typeof import("./getTopologyFeatureProfile").getTopologyFeatureProfile = null as any;
+export const getTopologyFeatureProfileOutput: typeof import("./getTopologyFeatureProfile").getTopologyFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getTopologyFeatureProfile","getTopologyFeatureProfileOutput"], () => require("./getTopologyFeatureProfile"));
+
+export { GetTopologyGroupArgs, GetTopologyGroupResult, GetTopologyGroupOutputArgs } from "./getTopologyGroup";
+export const getTopologyGroup: typeof import("./getTopologyGroup").getTopologyGroup = null as any;
+export const getTopologyGroupOutput: typeof import("./getTopologyGroup").getTopologyGroupOutput = null as any;
+utilities.lazyLoad(exports, ["getTopologyGroup","getTopologyGroupOutput"], () => require("./getTopologyGroup"));
+
+export { GetTopologyHubSpokeFeatureArgs, GetTopologyHubSpokeFeatureResult, GetTopologyHubSpokeFeatureOutputArgs } from "./getTopologyHubSpokeFeature";
+export const getTopologyHubSpokeFeature: typeof import("./getTopologyHubSpokeFeature").getTopologyHubSpokeFeature = null as any;
+export const getTopologyHubSpokeFeatureOutput: typeof import("./getTopologyHubSpokeFeature").getTopologyHubSpokeFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTopologyHubSpokeFeature","getTopologyHubSpokeFeatureOutput"], () => require("./getTopologyHubSpokeFeature"));
+
+export { GetTopologyMeshFeatureArgs, GetTopologyMeshFeatureResult, GetTopologyMeshFeatureOutputArgs } from "./getTopologyMeshFeature";
+export const getTopologyMeshFeature: typeof import("./getTopologyMeshFeature").getTopologyMeshFeature = null as any;
+export const getTopologyMeshFeatureOutput: typeof import("./getTopologyMeshFeature").getTopologyMeshFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTopologyMeshFeature","getTopologyMeshFeatureOutput"], () => require("./getTopologyMeshFeature"));
 
 export { GetTrafficDataPolicyDefinitionArgs, GetTrafficDataPolicyDefinitionResult, GetTrafficDataPolicyDefinitionOutputArgs } from "./getTrafficDataPolicyDefinition";
 export const getTrafficDataPolicyDefinition: typeof import("./getTrafficDataPolicyDefinition").getTrafficDataPolicyDefinition = null as any;
@@ -2113,6 +2168,21 @@ export type SlaClassPolicyObject = import("./slaClassPolicyObject").SlaClassPoli
 export const SlaClassPolicyObject: typeof import("./slaClassPolicyObject").SlaClassPolicyObject = null as any;
 utilities.lazyLoad(exports, ["SlaClassPolicyObject"], () => require("./slaClassPolicyObject"));
 
+export { SseCiscoFeatureArgs, SseCiscoFeatureState } from "./sseCiscoFeature";
+export type SseCiscoFeature = import("./sseCiscoFeature").SseCiscoFeature;
+export const SseCiscoFeature: typeof import("./sseCiscoFeature").SseCiscoFeature = null as any;
+utilities.lazyLoad(exports, ["SseCiscoFeature"], () => require("./sseCiscoFeature"));
+
+export { SseFeatureProfileArgs, SseFeatureProfileState } from "./sseFeatureProfile";
+export type SseFeatureProfile = import("./sseFeatureProfile").SseFeatureProfile;
+export const SseFeatureProfile: typeof import("./sseFeatureProfile").SseFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["SseFeatureProfile"], () => require("./sseFeatureProfile"));
+
+export { SseZscalerFeatureArgs, SseZscalerFeatureState } from "./sseZscalerFeature";
+export type SseZscalerFeature = import("./sseZscalerFeature").SseZscalerFeature;
+export const SseZscalerFeature: typeof import("./sseZscalerFeature").SseZscalerFeature = null as any;
+utilities.lazyLoad(exports, ["SseZscalerFeature"], () => require("./sseZscalerFeature"));
+
 export { StandardCommunityListPolicyObjectArgs, StandardCommunityListPolicyObjectState } from "./standardCommunityListPolicyObject";
 export type StandardCommunityListPolicyObject = import("./standardCommunityListPolicyObject").StandardCommunityListPolicyObject;
 export const StandardCommunityListPolicyObject: typeof import("./standardCommunityListPolicyObject").StandardCommunityListPolicyObject = null as any;
@@ -2232,6 +2302,31 @@ export { TlsSslProfilePolicyDefinitionArgs, TlsSslProfilePolicyDefinitionState }
 export type TlsSslProfilePolicyDefinition = import("./tlsSslProfilePolicyDefinition").TlsSslProfilePolicyDefinition;
 export const TlsSslProfilePolicyDefinition: typeof import("./tlsSslProfilePolicyDefinition").TlsSslProfilePolicyDefinition = null as any;
 utilities.lazyLoad(exports, ["TlsSslProfilePolicyDefinition"], () => require("./tlsSslProfilePolicyDefinition"));
+
+export { TopologyCustomControlFeatureArgs, TopologyCustomControlFeatureState } from "./topologyCustomControlFeature";
+export type TopologyCustomControlFeature = import("./topologyCustomControlFeature").TopologyCustomControlFeature;
+export const TopologyCustomControlFeature: typeof import("./topologyCustomControlFeature").TopologyCustomControlFeature = null as any;
+utilities.lazyLoad(exports, ["TopologyCustomControlFeature"], () => require("./topologyCustomControlFeature"));
+
+export { TopologyFeatureProfileArgs, TopologyFeatureProfileState } from "./topologyFeatureProfile";
+export type TopologyFeatureProfile = import("./topologyFeatureProfile").TopologyFeatureProfile;
+export const TopologyFeatureProfile: typeof import("./topologyFeatureProfile").TopologyFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["TopologyFeatureProfile"], () => require("./topologyFeatureProfile"));
+
+export { TopologyGroupArgs, TopologyGroupState } from "./topologyGroup";
+export type TopologyGroup = import("./topologyGroup").TopologyGroup;
+export const TopologyGroup: typeof import("./topologyGroup").TopologyGroup = null as any;
+utilities.lazyLoad(exports, ["TopologyGroup"], () => require("./topologyGroup"));
+
+export { TopologyHubSpokeFeatureArgs, TopologyHubSpokeFeatureState } from "./topologyHubSpokeFeature";
+export type TopologyHubSpokeFeature = import("./topologyHubSpokeFeature").TopologyHubSpokeFeature;
+export const TopologyHubSpokeFeature: typeof import("./topologyHubSpokeFeature").TopologyHubSpokeFeature = null as any;
+utilities.lazyLoad(exports, ["TopologyHubSpokeFeature"], () => require("./topologyHubSpokeFeature"));
+
+export { TopologyMeshFeatureArgs, TopologyMeshFeatureState } from "./topologyMeshFeature";
+export type TopologyMeshFeature = import("./topologyMeshFeature").TopologyMeshFeature;
+export const TopologyMeshFeature: typeof import("./topologyMeshFeature").TopologyMeshFeature = null as any;
+utilities.lazyLoad(exports, ["TopologyMeshFeature"], () => require("./topologyMeshFeature"));
 
 export { TrafficDataPolicyDefinitionArgs, TrafficDataPolicyDefinitionState } from "./trafficDataPolicyDefinition";
 export type TrafficDataPolicyDefinition = import("./trafficDataPolicyDefinition").TrafficDataPolicyDefinition;
@@ -2499,6 +2594,8 @@ const _module = {
         switch (type) {
             case "sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy":
                 return new ActivateCentralizedPolicy(name, <any>undefined, { urn })
+            case "sdwan:index/activateTopologyGroup:ActivateTopologyGroup":
+                return new ActivateTopologyGroup(name, <any>undefined, { urn })
             case "sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition":
                 return new AdvancedInspectionProfilePolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/advancedMalwareProtectionPolicyDefinition:AdvancedMalwareProtectionPolicyDefinition":
@@ -2603,6 +2700,8 @@ const _module = {
                 return new ColorListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/configurationGroup:ConfigurationGroup":
                 return new ConfigurationGroup(name, <any>undefined, { urn })
+            case "sdwan:index/customApplication:CustomApplication":
+                return new CustomApplication(name, <any>undefined, { urn })
             case "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition":
                 return new CustomControlTopologyPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject":
@@ -2843,6 +2942,12 @@ const _module = {
                 return new SiteListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/slaClassPolicyObject:SlaClassPolicyObject":
                 return new SlaClassPolicyObject(name, <any>undefined, { urn })
+            case "sdwan:index/sseCiscoFeature:SseCiscoFeature":
+                return new SseCiscoFeature(name, <any>undefined, { urn })
+            case "sdwan:index/sseFeatureProfile:SseFeatureProfile":
+                return new SseFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/sseZscalerFeature:SseZscalerFeature":
+                return new SseZscalerFeature(name, <any>undefined, { urn })
             case "sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject":
                 return new StandardCommunityListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/switchportFeatureTemplate:SwitchportFeatureTemplate":
@@ -2891,6 +2996,16 @@ const _module = {
                 return new TlsSslDecryptionPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition":
                 return new TlsSslProfilePolicyDefinition(name, <any>undefined, { urn })
+            case "sdwan:index/topologyCustomControlFeature:TopologyCustomControlFeature":
+                return new TopologyCustomControlFeature(name, <any>undefined, { urn })
+            case "sdwan:index/topologyFeatureProfile:TopologyFeatureProfile":
+                return new TopologyFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/topologyGroup:TopologyGroup":
+                return new TopologyGroup(name, <any>undefined, { urn })
+            case "sdwan:index/topologyHubSpokeFeature:TopologyHubSpokeFeature":
+                return new TopologyHubSpokeFeature(name, <any>undefined, { urn })
+            case "sdwan:index/topologyMeshFeature:TopologyMeshFeature":
+                return new TopologyMeshFeature(name, <any>undefined, { urn })
             case "sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition":
                 return new TrafficDataPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature":
@@ -2997,6 +3112,7 @@ const _module = {
     },
 };
 pulumi.runtime.registerResourceModule("sdwan", "index/activateCentralizedPolicy", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/activateTopologyGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/advancedInspectionProfilePolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/advancedMalwareProtectionPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/allowUrlListPolicyObject", _module)
@@ -3049,6 +3165,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/cliTemplateFeatureTemplate
 pulumi.runtime.registerResourceModule("sdwan", "index/cloudProviderSettings", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/colorListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroup", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/customApplication", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/customControlTopologyPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataFqdnPrefixListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataIpv4PrefixListPolicyObject", _module)
@@ -3169,6 +3286,9 @@ pulumi.runtime.registerResourceModule("sdwan", "index/serviceWirelessLanFeature"
 pulumi.runtime.registerResourceModule("sdwan", "index/sigSecurityFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/siteListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/slaClassPolicyObject", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/sseCiscoFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/sseFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/sseZscalerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/standardCommunityListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/switchportFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemAaaFeature", _module)
@@ -3193,6 +3313,11 @@ pulumi.runtime.registerResourceModule("sdwan", "index/tag", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlocListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslDecryptionPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslProfilePolicyDefinition", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/topologyCustomControlFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/topologyFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/topologyGroup", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/topologyHubSpokeFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/topologyMeshFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/trafficDataPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularControllerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularProfileFeature", _module)
