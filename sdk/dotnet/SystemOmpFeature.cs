@@ -313,7 +313,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set maximum number of OMP paths to install in cEdge route table
-        ///   - Range: `1`-`0`
+        ///   - At Least: `1`
         ///   - Default value: `4`
         /// </summary>
         [Output("ecmpLimit")]
@@ -374,7 +374,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Hold Time (seconds)
-        ///   - Default value: `60`
+        ///   - Default value: `300`
         /// </summary>
         [Output("holdtime")]
         public Output<int?> Holdtime { get; private set; } = null!;
@@ -791,7 +791,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set maximum number of OMP paths to install in cEdge route table
-        ///   - Range: `1`-`0`
+        ///   - At Least: `1`
         ///   - Default value: `4`
         /// </summary>
         [Input("ecmpLimit")]
@@ -852,7 +852,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Hold Time (seconds)
-        ///   - Default value: `60`
+        ///   - Default value: `300`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -1237,7 +1237,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set maximum number of OMP paths to install in cEdge route table
-        ///   - Range: `1`-`0`
+        ///   - At Least: `1`
         ///   - Default value: `4`
         /// </summary>
         [Input("ecmpLimit")]
@@ -1298,7 +1298,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Hold Time (seconds)
-        ///   - Default value: `60`
+        ///   - Default value: `300`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }

@@ -250,7 +250,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      */
     declare public readonly ecmpLimit: pulumi.Output<number | undefined>;
@@ -293,7 +293,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly gracefulRestartVariable: pulumi.Output<string | undefined>;
     /**
      * Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      */
     declare public readonly holdtime: pulumi.Output<number | undefined>;
     /**
@@ -711,7 +711,7 @@ export interface SystemOmpFeatureState {
     description?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number | undefined>;
@@ -754,7 +754,7 @@ export interface SystemOmpFeatureState {
     gracefulRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      */
     holdtime?: pulumi.Input<number | undefined>;
     /**
@@ -1017,7 +1017,7 @@ export interface SystemOmpFeatureArgs {
     description?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number | undefined>;
@@ -1060,7 +1060,7 @@ export interface SystemOmpFeatureArgs {
     gracefulRestartVariable?: pulumi.Input<string | undefined>;
     /**
      * Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      */
     holdtime?: pulumi.Input<number | undefined>;
     /**

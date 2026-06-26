@@ -581,7 +581,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      * 
      */
@@ -590,7 +590,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * @return Set maximum number of OMP paths to install in cEdge route table
-     *   - Range: `1`-`0`
+     *   - At Least: `1`
      *   - Default value: `4`
      * 
      */
@@ -730,7 +730,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      * 
      */
     @Import(name="holdtime")
@@ -738,7 +738,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * @return Hold Time (seconds)
-     *   - Default value: `60`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> holdtime() {
@@ -1942,7 +1942,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table
-         *   - Range: `1`-`0`
+         *   - At Least: `1`
          *   - Default value: `4`
          * 
          * @return builder
@@ -1955,7 +1955,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table
-         *   - Range: `1`-`0`
+         *   - At Least: `1`
          *   - Default value: `4`
          * 
          * @return builder
@@ -2145,7 +2145,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param holdtime Hold Time (seconds)
-         *   - Default value: `60`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -2157,7 +2157,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param holdtime Hold Time (seconds)
-         *   - Default value: `60`
+         *   - Default value: `300`
          * 
          * @return builder
          * 

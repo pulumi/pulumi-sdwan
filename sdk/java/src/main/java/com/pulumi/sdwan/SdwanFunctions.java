@@ -110,6 +110,8 @@ import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetColorListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
 import com.pulumi.sdwan.inputs.GetConfigurationGroupPlainArgs;
+import com.pulumi.sdwan.inputs.GetCustomApplicationArgs;
+import com.pulumi.sdwan.inputs.GetCustomApplicationPlainArgs;
 import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetDataFqdnPrefixListPolicyObjectArgs;
@@ -354,6 +356,12 @@ import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetSiteListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetSlaClassPolicyObjectPlainArgs;
+import com.pulumi.sdwan.inputs.GetSseCiscoFeatureArgs;
+import com.pulumi.sdwan.inputs.GetSseCiscoFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetSseFeatureProfileArgs;
+import com.pulumi.sdwan.inputs.GetSseFeatureProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetSseZscalerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetSseZscalerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetStandardCommunityListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetSwitchportFeatureTemplateArgs;
@@ -402,6 +410,16 @@ import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetTlsSslProfilePolicyDefinitionPlainArgs;
+import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetTopologyFeatureProfileArgs;
+import com.pulumi.sdwan.inputs.GetTopologyFeatureProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetTopologyGroupArgs;
+import com.pulumi.sdwan.inputs.GetTopologyGroupPlainArgs;
+import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetTopologyMeshFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTopologyMeshFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetTrafficDataPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportCellularControllerFeatureArgs;
@@ -553,6 +571,7 @@ import com.pulumi.sdwan.outputs.GetCliTemplateFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetCloudProviderSettingsResult;
 import com.pulumi.sdwan.outputs.GetColorListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetConfigurationGroupResult;
+import com.pulumi.sdwan.outputs.GetCustomApplicationResult;
 import com.pulumi.sdwan.outputs.GetCustomControlTopologyPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetDataFqdnPrefixListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetDataIpv4PrefixListPolicyObjectResult;
@@ -675,6 +694,9 @@ import com.pulumi.sdwan.outputs.GetServiceWirelessLanFeatureResult;
 import com.pulumi.sdwan.outputs.GetSigSecurityFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetSiteListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetSlaClassPolicyObjectResult;
+import com.pulumi.sdwan.outputs.GetSseCiscoFeatureResult;
+import com.pulumi.sdwan.outputs.GetSseFeatureProfileResult;
+import com.pulumi.sdwan.outputs.GetSseZscalerFeatureResult;
 import com.pulumi.sdwan.outputs.GetStandardCommunityListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetSwitchportFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetSystemAaaFeatureResult;
@@ -699,6 +721,11 @@ import com.pulumi.sdwan.outputs.GetTagResult;
 import com.pulumi.sdwan.outputs.GetTlocListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetTlsSslDecryptionPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetTlsSslProfilePolicyDefinitionResult;
+import com.pulumi.sdwan.outputs.GetTopologyCustomControlFeatureResult;
+import com.pulumi.sdwan.outputs.GetTopologyFeatureProfileResult;
+import com.pulumi.sdwan.outputs.GetTopologyGroupResult;
+import com.pulumi.sdwan.outputs.GetTopologyHubSpokeFeatureResult;
+import com.pulumi.sdwan.outputs.GetTopologyMeshFeatureResult;
 import com.pulumi.sdwan.outputs.GetTrafficDataPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetTransportCellularControllerFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportCellularProfileFeatureResult;
@@ -13431,6 +13458,206 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetConfigurationGroupResult> getConfigurationGroupPlain(GetConfigurationGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getConfigurationGroup:getConfigurationGroup", TypeShape.of(GetConfigurationGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Custom Application .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetCustomApplicationArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCustomApplication(GetCustomApplicationArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCustomApplicationResult> getCustomApplication(GetCustomApplicationArgs args) {
+        return getCustomApplication(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Custom Application .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetCustomApplicationArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCustomApplication(GetCustomApplicationArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetCustomApplicationResult> getCustomApplicationPlain(GetCustomApplicationPlainArgs args) {
+        return getCustomApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Custom Application .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetCustomApplicationArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCustomApplication(GetCustomApplicationArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCustomApplicationResult> getCustomApplication(GetCustomApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getCustomApplication:getCustomApplication", TypeShape.of(GetCustomApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Custom Application .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetCustomApplicationArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCustomApplication(GetCustomApplicationArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetCustomApplicationResult> getCustomApplication(GetCustomApplicationArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getCustomApplication:getCustomApplication", TypeShape.of(GetCustomApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Custom Application .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetCustomApplicationArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getCustomApplication(GetCustomApplicationArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetCustomApplicationResult> getCustomApplicationPlain(GetCustomApplicationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getCustomApplication:getCustomApplication", TypeShape.of(GetCustomApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Custom Control Topology Policy Definition .
@@ -38630,6 +38857,616 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", TypeShape.of(GetSlaClassPolicyObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the SSE Cisco Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseCiscoFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseCiscoFeature(GetSseCiscoFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseCiscoFeatureResult> getSseCiscoFeature(GetSseCiscoFeatureArgs args) {
+        return getSseCiscoFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SSE Cisco Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseCiscoFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseCiscoFeature(GetSseCiscoFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSseCiscoFeatureResult> getSseCiscoFeaturePlain(GetSseCiscoFeaturePlainArgs args) {
+        return getSseCiscoFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SSE Cisco Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseCiscoFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseCiscoFeature(GetSseCiscoFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseCiscoFeatureResult> getSseCiscoFeature(GetSseCiscoFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSseCiscoFeature:getSseCiscoFeature", TypeShape.of(GetSseCiscoFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Cisco Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseCiscoFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseCiscoFeature(GetSseCiscoFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseCiscoFeatureResult> getSseCiscoFeature(GetSseCiscoFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSseCiscoFeature:getSseCiscoFeature", TypeShape.of(GetSseCiscoFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Cisco Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseCiscoFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseCiscoFeature(GetSseCiscoFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSseCiscoFeatureResult> getSseCiscoFeaturePlain(GetSseCiscoFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getSseCiscoFeature:getSseCiscoFeature", TypeShape.of(GetSseCiscoFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseFeatureProfile(GetSseFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseFeatureProfileResult> getSseFeatureProfile(GetSseFeatureProfileArgs args) {
+        return getSseFeatureProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SSE Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseFeatureProfile(GetSseFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSseFeatureProfileResult> getSseFeatureProfilePlain(GetSseFeatureProfilePlainArgs args) {
+        return getSseFeatureProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SSE Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseFeatureProfile(GetSseFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseFeatureProfileResult> getSseFeatureProfile(GetSseFeatureProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSseFeatureProfile:getSseFeatureProfile", TypeShape.of(GetSseFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseFeatureProfile(GetSseFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseFeatureProfileResult> getSseFeatureProfile(GetSseFeatureProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSseFeatureProfile:getSseFeatureProfile", TypeShape.of(GetSseFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseFeatureProfile(GetSseFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSseFeatureProfileResult> getSseFeatureProfilePlain(GetSseFeatureProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getSseFeatureProfile:getSseFeatureProfile", TypeShape.of(GetSseFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Zscaler Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseZscalerFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseZscalerFeature(GetSseZscalerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseZscalerFeatureResult> getSseZscalerFeature(GetSseZscalerFeatureArgs args) {
+        return getSseZscalerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SSE Zscaler Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseZscalerFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseZscalerFeature(GetSseZscalerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSseZscalerFeatureResult> getSseZscalerFeaturePlain(GetSseZscalerFeaturePlainArgs args) {
+        return getSseZscalerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the SSE Zscaler Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseZscalerFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseZscalerFeature(GetSseZscalerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseZscalerFeatureResult> getSseZscalerFeature(GetSseZscalerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSseZscalerFeature:getSseZscalerFeature", TypeShape.of(GetSseZscalerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Zscaler Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseZscalerFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseZscalerFeature(GetSseZscalerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSseZscalerFeatureResult> getSseZscalerFeature(GetSseZscalerFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSseZscalerFeature:getSseZscalerFeature", TypeShape.of(GetSseZscalerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the SSE Zscaler Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSseZscalerFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSseZscalerFeature(GetSseZscalerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSseZscalerFeatureResult> getSseZscalerFeaturePlain(GetSseZscalerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getSseZscalerFeature:getSseZscalerFeature", TypeShape.of(GetSseZscalerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Standard Community List Policy Object .
      * 
      * ## Example Usage
@@ -43593,6 +44430,1021 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetTlsSslProfilePolicyDefinitionResult> getTlsSslProfilePolicyDefinitionPlain(GetTlsSslProfilePolicyDefinitionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition", TypeShape.of(GetTlsSslProfilePolicyDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Custom Control Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyCustomControlFeatureResult> getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs args) {
+        return getTopologyCustomControlFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Custom Control Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyCustomControlFeatureResult> getTopologyCustomControlFeaturePlain(GetTopologyCustomControlFeaturePlainArgs args) {
+        return getTopologyCustomControlFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Custom Control Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyCustomControlFeatureResult> getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyCustomControlFeature:getTopologyCustomControlFeature", TypeShape.of(GetTopologyCustomControlFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Custom Control Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyCustomControlFeatureResult> getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyCustomControlFeature:getTopologyCustomControlFeature", TypeShape.of(GetTopologyCustomControlFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Custom Control Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyCustomControlFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyCustomControlFeature(GetTopologyCustomControlFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyCustomControlFeatureResult> getTopologyCustomControlFeaturePlain(GetTopologyCustomControlFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTopologyCustomControlFeature:getTopologyCustomControlFeature", TypeShape.of(GetTopologyCustomControlFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyFeatureProfile(GetTopologyFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyFeatureProfileResult> getTopologyFeatureProfile(GetTopologyFeatureProfileArgs args) {
+        return getTopologyFeatureProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyFeatureProfile(GetTopologyFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyFeatureProfileResult> getTopologyFeatureProfilePlain(GetTopologyFeatureProfilePlainArgs args) {
+        return getTopologyFeatureProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyFeatureProfile(GetTopologyFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyFeatureProfileResult> getTopologyFeatureProfile(GetTopologyFeatureProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", TypeShape.of(GetTopologyFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyFeatureProfile(GetTopologyFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyFeatureProfileResult> getTopologyFeatureProfile(GetTopologyFeatureProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", TypeShape.of(GetTopologyFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Feature Profile .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyFeatureProfileArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyFeatureProfile(GetTopologyFeatureProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyFeatureProfileResult> getTopologyFeatureProfilePlain(GetTopologyFeatureProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTopologyFeatureProfile:getTopologyFeatureProfile", TypeShape.of(GetTopologyFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Group .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyGroupArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyGroup(GetTopologyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyGroupResult> getTopologyGroup(GetTopologyGroupArgs args) {
+        return getTopologyGroup(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Group .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyGroupArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyGroup(GetTopologyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyGroupResult> getTopologyGroupPlain(GetTopologyGroupPlainArgs args) {
+        return getTopologyGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Group .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyGroupArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyGroup(GetTopologyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyGroupResult> getTopologyGroup(GetTopologyGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyGroup:getTopologyGroup", TypeShape.of(GetTopologyGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Group .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyGroupArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyGroup(GetTopologyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyGroupResult> getTopologyGroup(GetTopologyGroupArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyGroup:getTopologyGroup", TypeShape.of(GetTopologyGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Group .
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyGroupArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyGroup(GetTopologyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyGroupResult> getTopologyGroupPlain(GetTopologyGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTopologyGroup:getTopologyGroup", TypeShape.of(GetTopologyGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Hub Spoke Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyHubSpokeFeatureResult> getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs args) {
+        return getTopologyHubSpokeFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Hub Spoke Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyHubSpokeFeatureResult> getTopologyHubSpokeFeaturePlain(GetTopologyHubSpokeFeaturePlainArgs args) {
+        return getTopologyHubSpokeFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Hub Spoke Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyHubSpokeFeatureResult> getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyHubSpokeFeature:getTopologyHubSpokeFeature", TypeShape.of(GetTopologyHubSpokeFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Hub Spoke Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyHubSpokeFeatureResult> getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyHubSpokeFeature:getTopologyHubSpokeFeature", TypeShape.of(GetTopologyHubSpokeFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Hub Spoke Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyHubSpokeFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyHubSpokeFeature(GetTopologyHubSpokeFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyHubSpokeFeatureResult> getTopologyHubSpokeFeaturePlain(GetTopologyHubSpokeFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTopologyHubSpokeFeature:getTopologyHubSpokeFeature", TypeShape.of(GetTopologyHubSpokeFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Mesh Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyMeshFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyMeshFeature(GetTopologyMeshFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyMeshFeatureResult> getTopologyMeshFeature(GetTopologyMeshFeatureArgs args) {
+        return getTopologyMeshFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Mesh Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyMeshFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyMeshFeature(GetTopologyMeshFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyMeshFeatureResult> getTopologyMeshFeaturePlain(GetTopologyMeshFeaturePlainArgs args) {
+        return getTopologyMeshFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Topology Mesh Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyMeshFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyMeshFeature(GetTopologyMeshFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyMeshFeatureResult> getTopologyMeshFeature(GetTopologyMeshFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyMeshFeature:getTopologyMeshFeature", TypeShape.of(GetTopologyMeshFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Mesh Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyMeshFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyMeshFeature(GetTopologyMeshFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetTopologyMeshFeatureResult> getTopologyMeshFeature(GetTopologyMeshFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTopologyMeshFeature:getTopologyMeshFeature", TypeShape.of(GetTopologyMeshFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Topology Mesh Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTopologyMeshFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTopologyMeshFeature(GetTopologyMeshFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetTopologyMeshFeatureResult> getTopologyMeshFeaturePlain(GetTopologyMeshFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTopologyMeshFeature:getTopologyMeshFeature", TypeShape.of(GetTopologyMeshFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Traffic Data Policy Definition .

@@ -40,7 +40,7 @@ namespace Pulumi.Sdwan
     ///         CiscoSseOrgId = "323456",
     ///         CiscoSseAuthKey = "33333444",
     ///         CiscoSseAuthSecret = "$CRYPT_CLUSTER$Gg4nVpFdldXga1hLKhdJrA==$hiFPirWJnqNxMq3l/m1ekw==",
-    ///         CiscoSseContextSharing = false,
+    ///         CiscoSseContextSharing = true,
     ///     });
     /// 
     /// });

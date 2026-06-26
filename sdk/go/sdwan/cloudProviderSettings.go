@@ -44,7 +44,7 @@ import (
 //				CiscoSseOrgId:          pulumi.String("323456"),
 //				CiscoSseAuthKey:        pulumi.String("33333444"),
 //				CiscoSseAuthSecret:     pulumi.String("$CRYPT_CLUSTER$Gg4nVpFdldXga1hLKhdJrA==$hiFPirWJnqNxMq3l/m1ekw=="),
-//				CiscoSseContextSharing: pulumi.Bool(false),
+//				CiscoSseContextSharing: pulumi.Bool(true),
 //			})
 //			if err != nil {
 //				return err

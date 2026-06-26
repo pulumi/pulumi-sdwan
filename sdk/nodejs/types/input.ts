@@ -5917,6 +5917,22 @@ export interface ConfigurationGroupTopologyDeviceUnsupportedFeature {
     parcelType?: pulumi.Input<string | undefined>;
 }
 
+export interface CustomApplicationL3l4 {
+    /**
+     * IPv4 Address (10.X.X.X, 20.0.0.0/24 separated by commas, subnet prefix length 24 to 32.)
+     */
+    ipAddresses?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * L4 Protocol
+     *   - Choices: `TCP`, `UDP`, `TCP-UDP`
+     */
+    l4Protocol?: pulumi.Input<string | undefined>;
+    /**
+     * Ports (Space separated ports or range or both.)
+     */
+    ports?: pulumi.Input<string | undefined>;
+}
+
 export interface CustomControlTopologyPolicyDefinitionSequence {
     /**
      * List of action entries
@@ -12131,6 +12147,723 @@ export interface SiteListPolicyObjectEntry {
     siteId: pulumi.Input<string>;
 }
 
+export interface SseCiscoFeatureInterface {
+    /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `10`
+     */
+    dpdInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE keepalive retries
+     *   - Range: `0`-`255`
+     *   - Default value: `3`
+     */
+    dpdRetries?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     */
+    ikeCiphersuite?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+     *   - Default value: `16`
+     */
+    ikeGroup?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `14400`
+     */
+    ikeRekeyInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `2`
+     */
+    ikeVersion?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ikeVersionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface name: ipsec(1..255)
+     */
+    interfaceName?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+     *   - Default value: `aes256-cbc-sha512`
+     */
+    ipsecCiphersuite?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `3600`
+     */
+    ipsecRekeyInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
+     */
+    ipsecReplayWindow?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1400`
+     */
+    mtu?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    mtuVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+     *   - Default value: `group-16`
+     */
+    perfectForwardSecrecy?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Administrative state
+     *   - Default value: `false`
+     */
+    shutdown?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    shutdownVariable?: pulumi.Input<string | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enable/disable Cisco SSE tracking
+     *   - Default value: `true`
+     */
+    trackEnable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    trackEnableVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enable tracker for this interface
+     *   - Default value: `DefaultTracker`
+     */
+    tracker?: pulumi.Input<string | undefined>;
+    /**
+     * SSE Tunnel Data Center
+     *   - Choices: `primary-dc`, `secondary-dc`
+     */
+    tunnelDcPreference?: pulumi.Input<string | undefined>;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface SseCiscoFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for SSE
+     */
+    activeInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Active Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    activeInterfaceWeight?: pulumi.Input<number | undefined>;
+    /**
+     * Backup Tunnel Interface for Cisco SSE
+     */
+    backupInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Backup Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    backupInterfaceWeight?: pulumi.Input<number | undefined>;
+}
+
+export interface SseCiscoFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Probe interval <10..600> seconds
+     *   - Range: `20`-`600`
+     *   - Default value: `30`
+     */
+    interval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    intervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Probe failure multiplier <1..10> failed attempts
+     *   - Range: `1`-`10`
+     *   - Default value: `2`
+     */
+    multiplier?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    multiplierVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Tracker name
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Probe Timeout threshold <100..1000> milliseconds
+     *   - Range: `100`-`1000`
+     *   - Default value: `1000`
+     */
+    threshold?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface SseZscalerFeatureInterface {
+    /**
+     * Auto Tunnel Mode
+     */
+    auto?: pulumi.Input<boolean | undefined>;
+    /**
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
+     */
+    dpdInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    dpdIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     */
+    dpdRetries?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    dpdRetriesVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
+     */
+    ikeCiphersuite?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeCiphersuiteVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `5`, `14`, `15`, `16`, `19`, `20`, `21`
+     *   - Default value: `16`
+     */
+    ikeGroup?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeGroupVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeLocalId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeLocalIdVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE rekey interval <300..1209600> seconds
+     *   - Range: `300`-`86400`
+     *   - Default value: `14400`
+     */
+    ikeRekeyInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ikeRekeyIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    ikeRemoteId?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ikeRemoteIdVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `2`
+     */
+    ikeVersion?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ikeVersionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface description
+     */
+    interfaceDescription?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    interfaceDescriptionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface name: IPsec when present
+     */
+    interfaceName?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`
+     *   - Default value: `aes256-cbc-sha512`
+     */
+    ipsecCiphersuite?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecCiphersuiteVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `300`-`1209600`
+     *   - Default value: `3600`
+     */
+    ipsecRekeyInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecRekeyIntervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Default value: `512`
+     */
+    ipsecReplayWindow?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    ipsecReplayWindowVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Assign IPv4 address
+     */
+    ipv4Address?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    ipv4AddressVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1400`
+     */
+    mtu?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    mtuVariable?: pulumi.Input<string | undefined>;
+    /**
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `none`
+     *   - Default value: `none`
+     */
+    perfectForwardSecrecy?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    perfectForwardSecrecyVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedKeyDynamic?: pulumi.Input<boolean | undefined>;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    preSharedSecret?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    preSharedSecretVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Administrative state
+     *   - Default value: `false`
+     */
+    shutdown?: pulumi.Input<boolean | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    tcpMssAdjust?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    tcpMssAdjustVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enable/disable Zscaler SSE tracking
+     *   - Default value: `true`
+     */
+    trackEnable?: pulumi.Input<boolean | undefined>;
+    /**
+     * Enable tracker for this interface
+     *   - Default value: `DefaultTracker`
+     */
+    tracker?: pulumi.Input<string | undefined>;
+    /**
+     * Zscaler SSE Tunnel Data Center
+     *   - Choices: `primary-dc`, `secondary-dc`
+     */
+    tunnelDcPreference?: pulumi.Input<string | undefined>;
+    /**
+     * Tunnel destination IP address
+     */
+    tunnelDestination?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelDestinationVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Public IP required to setup GRE tunnel to Zscaler
+     *   - Default value: `Auto`
+     */
+    tunnelPublicIp?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelPublicIpVariable?: pulumi.Input<string | undefined>;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelRouteVia?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelRouteViaVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Zscaler SSE Tunnel Provider
+     *   - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+     */
+    tunnelSet?: pulumi.Input<string | undefined>;
+    /**
+     * Tunnel source IP Address
+     */
+    tunnelSource?: pulumi.Input<string | undefined>;
+    /**
+     * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+     */
+    tunnelSourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelSourceInterfaceVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    tunnelSourceVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Unnumbered interface
+     */
+    unnumbered?: pulumi.Input<boolean | undefined>;
+}
+
+export interface SseZscalerFeatureInterfacePair {
+    /**
+     * Active Tunnel Interface for Zscaler SSE
+     */
+    activeInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Active Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    activeInterfaceWeight?: pulumi.Input<number | undefined>;
+    /**
+     * Backup Tunnel Interface for Zscaler SSE
+     */
+    backupInterface?: pulumi.Input<string | undefined>;
+    /**
+     * Backup Tunnel Interface Weight
+     *   - Range: `1`-`255`
+     */
+    backupInterfaceWeight?: pulumi.Input<number | undefined>;
+}
+
+export interface SseZscalerFeatureSubLocation {
+    /**
+     * Displays an Acceptable Use Policy for unauthenticated traffic and require users to accept it
+     *   - Default value: `false`
+     */
+    aupEnabled?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    aupEnabledVariable?: pulumi.Input<string | undefined>;
+    /**
+     * How frequently in days the Acceptable Use Policy is displayed to users, Attribute conditional on `aupEnabled` equal to `true`
+     *   - Range: `1`-`180`
+     *   - Default value: `1`
+     */
+    aupTimeout?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `aupEnabled` equal to `true`
+     */
+    aupTimeoutVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enable Enforce Authentication to require users from this location to authenticate to the service.
+     *   - Default value: `false`
+     */
+    authRequired?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    authRequiredVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Disable all access to the internet, including non-HTTP traffic, until the user accepts the Acceptable Use Policy, Attribute conditional on `aupEnabled` equal to `true`
+     *   - Default value: `false`
+     */
+    blockInternetUntilAccepted?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `aupEnabled` equal to `true`
+     */
+    blockInternetUntilAcceptedVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enforces a caution policy action and display an end user notification for unauthenticated traffic. If disabled, the action is treated as an allow policy.
+     *   - Default value: `false`
+     */
+    cautionEnabled?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    cautionEnabledVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Display time unit for Idle Time to Disassociation, Attribute conditional on `surrogateIp` equal to `true`
+     *   - Choices: `MINUTE`, `HOUR`, `DAY`
+     *   - Default value: `MINUTE`
+     */
+    displayTimeUnit?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `surrogateIp` equal to `true`
+     */
+    displayTimeUnitVariable?: pulumi.Input<string | undefined>;
+    /**
+     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     *   - Range: `0.1`-`99999`
+     */
+    dnBandwidth?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
+     */
+    dnBandwidthVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enforce Bandwidth Control for sub location
+     *   - Choices: `location-bandwidth`, `override`, `disabled`
+     *   - Default value: `location-bandwidth`
+     */
+    enforceBandwidthControl?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    enforceBandwidthControlVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enable to make SSL Interception enforce an Acceptable Use Policy for HTTPS traffic, Attribute conditional on `aupEnabled` equal to `true`
+     *   - Default value: `false`
+     */
+    forceSslInspection?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `aupEnabled` equal to `true`
+     */
+    forceSslInspectionVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Idle time to disassociation. How long after a completed transaction the service retains the IP address to user mapping., Attribute conditional on `surrogateIp` equal to `true`
+     *   - At Least: `1`
+     *   - Default value: `1`
+     */
+    idleTime?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `surrogateIp` equal to `true`
+     */
+    idleTimeVariable?: pulumi.Input<string | undefined>;
+    internalIps?: pulumi.Input<pulumi.Input<inputs.SseZscalerFeatureSubLocationInternalIp>[] | undefined>;
+    /**
+     * If enabled, and if the IP-user mapping exists, then the Surrogate user identity is used for traffic from known browsers. If disabled, traffic from known browsers will always be challenged using the configured authentication mechanism and Surrogate user identity is ignored
+     *   - Default value: `false`
+     */
+    ipEnforcedForKnownBrowsers?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    ipEnforcedForKnownBrowsersVariable?: pulumi.Input<string | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    nameVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Enforces firewall at the location
+     *   - Default value: `false`
+     */
+    ofwEnabled?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    ofwEnabledVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Length of time that surrogate user identity can be used for traffic from known browsers before it must refresh and re-validate the surrogate user identity, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     *   - At Least: `1`
+     *   - Default value: `1`
+     */
+    refreshTime?: pulumi.Input<number | undefined>;
+    /**
+     * Refresh Time display unit, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     *   - Choices: `MINUTE`, `HOUR`, `DAY`
+     *   - Default value: `MINUTE`
+     */
+    refreshTimeUnit?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     */
+    refreshTimeUnitVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `ipEnforcedForKnownBrowsers` equal to `true`
+     */
+    refreshTimeVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    serviceVpnVariable?: pulumi.Input<string | undefined>;
+    serviceVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * Enable Surrogate IP. Maps users to device IP addresses. This is used to enforce user policies on cookie-compatible traffic., Attribute conditional on `authRequired` equal to `true`
+     *   - Default value: `false`
+     */
+    surrogateIp?: pulumi.Input<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `authRequired` equal to `true`
+     */
+    surrogateIpVariable?: pulumi.Input<string | undefined>;
+    /**
+     * , Attribute conditional on `enforceBandwidthControl` equal to `override`
+     *   - Range: `0.1`-`99999`
+     */
+    upBandwidth?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `enforceBandwidthControl` equal to `override`
+     */
+    upBandwidthVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface SseZscalerFeatureSubLocationInternalIp {
+    internalIpValue?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    internalIpValueVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface SseZscalerFeatureTracker {
+    /**
+     * API url of endpoint
+     */
+    endpointApiUrl?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    endpointApiUrlVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Probe interval <10..600> seconds
+     *   - Range: `20`-`600`
+     *   - Default value: `30`
+     */
+    interval?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    intervalVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Probe failure multiplier <1..10> failed attempts
+     *   - Range: `1`-`10`
+     *   - Default value: `2`
+     */
+    multiplier?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    multiplierVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Tracker name
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Probe Timeout threshold <100..1000> milliseconds
+     *   - Range: `100`-`1000`
+     *   - Default value: `1000`
+     */
+    threshold?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: pulumi.Input<string | undefined>;
+}
+
 export interface StandardCommunityListPolicyObjectEntry {
     /**
      * Standard community value, e.g. `100:1000`, `internet`, `local-AS`, `no-advertise` or `no-export`
@@ -13484,6 +14217,295 @@ export interface TlsSslDecryptionPolicyDefinitionUrlRule {
      * TLS SSL Profile Policy version
      */
     tlsSslProfilePolicyVersion?: pulumi.Input<number | undefined>;
+}
+
+export interface TopologyCustomControlFeatureSequence {
+    actionEntries?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequenceActionEntry>[] | undefined>;
+    /**
+     * Base Action
+     *   - Choices: `reject`, `accept`
+     */
+    baseAction?: pulumi.Input<string | undefined>;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    id?: pulumi.Input<number | undefined>;
+    /**
+     * Sequence IP Type
+     *   - Choices: `ipv4`, `ipv6`, `all`
+     */
+    ipType?: pulumi.Input<string | undefined>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequenceMatchEntry>[] | undefined>;
+    /**
+     * Sequence Name
+     */
+    name?: pulumi.Input<string | undefined>;
+    /**
+     * Sequence Type
+     *   - Choices: `route`, `tloc`
+     */
+    type?: pulumi.Input<string | undefined>;
+}
+
+export interface TopologyCustomControlFeatureSequenceActionEntry {
+    /**
+     * Export to VPN list
+     */
+    exportToVpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequenceActionEntrySetParameter>[] | undefined>;
+}
+
+export interface TopologyCustomControlFeatureSequenceActionEntrySetParameter {
+    /**
+     * Set affinity
+     *   - Range: `0`-`63`
+     */
+    affinity?: pulumi.Input<number | undefined>;
+    /**
+     * Set community value, e.g. `1000:10000` or `internet` or `local-AS`
+     */
+    community?: pulumi.Input<string | undefined>;
+    /**
+     * Set community additive
+     */
+    communityAdditive?: pulumi.Input<boolean | undefined>;
+    /**
+     * Set OMP tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: pulumi.Input<number | undefined>;
+    /**
+     * Set preference
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: pulumi.Input<number | undefined>;
+    /**
+     * Set service chain TLOC color
+     */
+    serviceChainTlocColor?: pulumi.Input<string | undefined>;
+    /**
+     * Set service chain TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    serviceChainTlocEncapsulation?: pulumi.Input<string | undefined>;
+    /**
+     * Set service chain TLOC IP address
+     */
+    serviceChainTlocIp?: pulumi.Input<string | undefined>;
+    /**
+     * Set service chain TLOC list ID
+     */
+    serviceChainTlocListId?: pulumi.Input<string | undefined>;
+    /**
+     * Set service chain type
+     *   - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    serviceChainType?: pulumi.Input<string | undefined>;
+    /**
+     * Set service chain VPN ID
+     *   - Range: `0`-`65530`
+     */
+    serviceChainVpn?: pulumi.Input<number | undefined>;
+    /**
+     * Set service TLOC color
+     */
+    serviceTlocColor?: pulumi.Input<string | undefined>;
+    /**
+     * Set service TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    serviceTlocEncapsulation?: pulumi.Input<string | undefined>;
+    /**
+     * Set service TLOC IP address
+     */
+    serviceTlocIp?: pulumi.Input<string | undefined>;
+    /**
+     * Set service TLOC list ID
+     */
+    serviceTlocListId?: pulumi.Input<string | undefined>;
+    /**
+     * Set service type
+     *   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+     */
+    serviceType?: pulumi.Input<string | undefined>;
+    /**
+     * Set service VPN ID
+     *   - Range: `0`-`65530`
+     */
+    serviceVpn?: pulumi.Input<number | undefined>;
+    /**
+     * Set TLOC action
+     *   - Choices: `strict`, `primary`, `backup`, `ecmp`
+     */
+    tlocAction?: pulumi.Input<string | undefined>;
+    /**
+     * Set TLOC color
+     */
+    tlocColor?: pulumi.Input<string | undefined>;
+    /**
+     * Set TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    tlocEncapsulation?: pulumi.Input<string | undefined>;
+    /**
+     * Set TLOC IP address
+     */
+    tlocIp?: pulumi.Input<string | undefined>;
+    /**
+     * Set TLOC list ID
+     */
+    tlocListId?: pulumi.Input<string | undefined>;
+}
+
+export interface TopologyCustomControlFeatureSequenceMatchEntry {
+    /**
+     * Carrier
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     */
+    carrier?: pulumi.Input<string | undefined>;
+    /**
+     * Color list ID
+     */
+    colorListId?: pulumi.Input<string | undefined>;
+    /**
+     * Community list ID
+     */
+    communityListId?: pulumi.Input<string | undefined>;
+    /**
+     * Domain ID
+     *   - Range: `1`-`4294967295`
+     */
+    domainId?: pulumi.Input<number | undefined>;
+    /**
+     * Expanded community list ID
+     */
+    expandedCommunityListId?: pulumi.Input<string | undefined>;
+    /**
+     * Group ID
+     *   - Range: `0`-`4294967295`
+     */
+    groupId?: pulumi.Input<number | undefined>;
+    /**
+     * IPv6 prefix list ID
+     */
+    ipv6PrefixListId?: pulumi.Input<string | undefined>;
+    /**
+     * Match regions list
+     */
+    matchRegions?: pulumi.Input<pulumi.Input<inputs.TopologyCustomControlFeatureSequenceMatchEntryMatchRegion>[] | undefined>;
+    /**
+     * OMP tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: pulumi.Input<number | undefined>;
+    /**
+     * Origin
+     *   - Choices: `aggregate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
+     */
+    origin?: pulumi.Input<string | undefined>;
+    /**
+     * Originator IP
+     */
+    originator?: pulumi.Input<string | undefined>;
+    /**
+     * Path type
+     *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
+     */
+    pathType?: pulumi.Input<string | undefined>;
+    /**
+     * Preference
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: pulumi.Input<number | undefined>;
+    /**
+     * Prefix list ID
+     */
+    prefixListId?: pulumi.Input<string | undefined>;
+    /**
+     * Role
+     *   - Choices: `edge-router`, `border-router`
+     */
+    role?: pulumi.Input<string | undefined>;
+    /**
+     * Site list
+     */
+    sites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * TLOC color
+     */
+    tlocColor?: pulumi.Input<string | undefined>;
+    /**
+     * TLOC encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    tlocEncapsulation?: pulumi.Input<string | undefined>;
+    /**
+     * TLOC IP address
+     */
+    tlocIp?: pulumi.Input<string | undefined>;
+    /**
+     * TLOC list ID
+     */
+    tlocListId?: pulumi.Input<string | undefined>;
+    /**
+     * VPN list
+     */
+    vpns?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+}
+
+export interface TopologyCustomControlFeatureSequenceMatchEntryMatchRegion {
+    /**
+     * Region name
+     */
+    region?: pulumi.Input<string | undefined>;
+    /**
+     * Sub-region list
+     */
+    subRegions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+}
+
+export interface TopologyCustomControlFeatureTargetInboundRegion {
+    /**
+     * Region name
+     */
+    region?: pulumi.Input<string | undefined>;
+    /**
+     * Sub-region list
+     */
+    subRegions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+}
+
+export interface TopologyCustomControlFeatureTargetOutboundRegion {
+    /**
+     * Region name
+     */
+    region?: pulumi.Input<string | undefined>;
+    /**
+     * Sub-region list
+     */
+    subRegions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+}
+
+export interface TopologyHubSpokeFeatureSpoke {
+    /**
+     * Hub Sites
+     */
+    hubSites?: pulumi.Input<pulumi.Input<inputs.TopologyHubSpokeFeatureSpokeHubSite>[] | undefined>;
+    name?: pulumi.Input<string | undefined>;
+    spokeSites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+}
+
+export interface TopologyHubSpokeFeatureSpokeHubSite {
+    /**
+     * preference
+     *   - Range: `1`-`255`
+     */
+    preference?: pulumi.Input<number | undefined>;
+    /**
+     * sites
+     */
+    sites?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 export interface TrafficDataPolicyDefinitionSequence {
