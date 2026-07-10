@@ -13832,7 +13832,7 @@ class CiscoSecureInternetGatewayFeatureTemplateTracker(dict):
                  - Default value: `300`
         :param _builtins.str threshold_variable: Variable name
         :param _builtins.str tracker_type: - Choices: `SIG`
-                 - Default value: ` SIG`
+                 - Default value: `  SIG `
         """
         if endpoint_api_url is not None:
             pulumi.set(__self__, "endpoint_api_url", endpoint_api_url)
@@ -13958,7 +13958,7 @@ class CiscoSecureInternetGatewayFeatureTemplateTracker(dict):
     def tracker_type(self) -> Optional[_builtins.str]:
         """
         - Choices: `SIG`
-          - Default value: ` SIG`
+          - Default value: `  SIG `
         """
         return pulumi.get(self, "tracker_type")
 
@@ -30864,7 +30864,7 @@ class SecurityAppHostingFeatureTemplateVirtualApplication(dict):
         :param _builtins.str application_type: List of Virtual applications
                  - Choices: `utd`
                  - Default value: `utd`
-        :param _builtins.str data_gateway_ip: Data Gateway IP 
+        :param _builtins.str data_gateway_ip: Data Gateway IP
                  - Default value: `192.0.2.1/24`
         :param _builtins.str data_gateway_ip_variable: Variable name
         :param _builtins.str data_service_ip: Data Service IP
@@ -30937,7 +30937,7 @@ class SecurityAppHostingFeatureTemplateVirtualApplication(dict):
     @pulumi.getter(name="dataGatewayIp")
     def data_gateway_ip(self) -> Optional[_builtins.str]:
         """
-        Data Gateway IP 
+        Data Gateway IP
           - Default value: `192.0.2.1/24`
         """
         return pulumi.get(self, "data_gateway_ip")

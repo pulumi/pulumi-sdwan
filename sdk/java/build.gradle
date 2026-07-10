@@ -95,7 +95,7 @@ publishing {
                 inceptionYear = "2022"
                 name = "pulumi-sdwan"
                 packaging = "jar"
-                description = "A Pulumi package for managing resources on Cisco Catalyst SD-WAN."
+                description = $/A Pulumi package for managing resources on Cisco Catalyst SD-WAN./$
 
                 url = "https://github.com/pulumi/pulumi-sdwan"
 

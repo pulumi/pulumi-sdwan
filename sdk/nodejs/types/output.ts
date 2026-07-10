@@ -3562,7 +3562,7 @@ export interface CiscoSecureInternetGatewayFeatureTemplateTracker {
     thresholdVariable?: string;
     /**
      * - Choices: `SIG`
-     *   - Default value: ` SIG`
+     *   - Default value: `  SIG `
      */
     trackerType?: string;
 }
@@ -25579,7 +25579,7 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
      */
     applicationType?: string;
     /**
-     * Data Gateway IP 
+     * Data Gateway IP
      *   - Default value: `192.0.2.1/24`
      */
     dataGatewayIp?: string;

@@ -3562,7 +3562,7 @@ export interface CiscoSecureInternetGatewayFeatureTemplateTracker {
     thresholdVariable?: pulumi.Input<string | undefined>;
     /**
      * - Choices: `SIG`
-     *   - Default value: ` SIG`
+     *   - Default value: `  SIG `
      */
     trackerType?: pulumi.Input<string | undefined>;
 }
@@ -8168,7 +8168,7 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
      */
     applicationType?: pulumi.Input<string | undefined>;
     /**
-     * Data Gateway IP 
+     * Data Gateway IP
      *   - Default value: `192.0.2.1/24`
      */
     dataGatewayIp?: pulumi.Input<string | undefined>;
