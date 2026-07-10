@@ -110,7 +110,7 @@ class CiscoBgpFeatureTemplateArgs:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
         :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
@@ -591,7 +591,7 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="propagateAspath")
     def propagate_aspath(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Propagate AS Path 
+        Propagate AS Path
           - Default value: `false`
         """
         return pulumi.get(self, "propagate_aspath")
@@ -781,7 +781,7 @@ class _CiscoBgpFeatureTemplateState:
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
         :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
@@ -1270,7 +1270,7 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="propagateAspath")
     def propagate_aspath(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Propagate AS Path 
+        Propagate AS Path
           - Default value: `false`
         """
         return pulumi.get(self, "propagate_aspath")
@@ -1623,7 +1623,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
         :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
@@ -1992,7 +1992,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
         :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
@@ -2321,7 +2321,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="propagateAspath")
     def propagate_aspath(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Propagate AS Path 
+        Propagate AS Path
           - Default value: `false`
         """
         return pulumi.get(self, "propagate_aspath")

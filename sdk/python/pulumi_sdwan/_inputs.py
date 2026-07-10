@@ -18076,7 +18076,7 @@ class CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict(TypedDict):
     tracker_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     - Choices: `SIG`
-      - Default value: ` SIG`
+      - Default value: `  SIG `
     """
 
 @pulumi.input_type
@@ -18113,7 +18113,7 @@ class CiscoSecureInternetGatewayFeatureTemplateTrackerArgs:
                  - Default value: `300`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_type: - Choices: `SIG`
-                 - Default value: ` SIG`
+                 - Default value: `  SIG `
         """
         if endpoint_api_url is not None:
             pulumi.set(__self__, "endpoint_api_url", endpoint_api_url)
@@ -18283,7 +18283,7 @@ class CiscoSecureInternetGatewayFeatureTemplateTrackerArgs:
     def tracker_type(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         - Choices: `SIG`
-          - Default value: ` SIG`
+          - Default value: `  SIG `
         """
         return pulumi.get(self, "tracker_type")
 
@@ -40202,7 +40202,7 @@ class SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict(TypedDict):
     """
     data_gateway_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
-    Data Gateway IP 
+    Data Gateway IP
       - Default value: `192.0.2.1/24`
     """
     data_gateway_ip_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
@@ -40296,7 +40296,7 @@ class SecurityAppHostingFeatureTemplateVirtualApplicationArgs:
         :param pulumi.Input[_builtins.str] application_type: List of Virtual applications
                  - Choices: `utd`
                  - Default value: `utd`
-        :param pulumi.Input[_builtins.str] data_gateway_ip: Data Gateway IP 
+        :param pulumi.Input[_builtins.str] data_gateway_ip: Data Gateway IP
                  - Default value: `192.0.2.1/24`
         :param pulumi.Input[_builtins.str] data_gateway_ip_variable: Variable name
         :param pulumi.Input[_builtins.str] data_service_ip: Data Service IP
@@ -40373,7 +40373,7 @@ class SecurityAppHostingFeatureTemplateVirtualApplicationArgs:
     @pulumi.getter(name="dataGatewayIp")
     def data_gateway_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
-        Data Gateway IP 
+        Data Gateway IP
           - Default value: `192.0.2.1/24`
         """
         return pulumi.get(self, "data_gateway_ip")

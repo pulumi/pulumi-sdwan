@@ -313,7 +313,7 @@ export class CiscoBgpFeatureTemplate extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Propagate AS Path 
+     * Propagate AS Path
      *   - Default value: `false`
      */
     declare public readonly propagateAspath: pulumi.Output<boolean | undefined>;
@@ -610,7 +610,7 @@ export interface CiscoBgpFeatureTemplateState {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Propagate AS Path 
+     * Propagate AS Path
      *   - Default value: `false`
      */
     propagateAspath?: pulumi.Input<boolean | undefined>;
@@ -799,7 +799,7 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     name?: pulumi.Input<string | undefined>;
     /**
-     * Propagate AS Path 
+     * Propagate AS Path
      *   - Default value: `false`
      */
     propagateAspath?: pulumi.Input<boolean | undefined>;
