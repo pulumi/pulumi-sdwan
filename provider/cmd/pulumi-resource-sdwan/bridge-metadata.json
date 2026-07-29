@@ -5,7 +5,12 @@
                 "current": "sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy"
             },
             "sdwan_activate_topology_group": {
-                "current": "sdwan:index/activateTopologyGroup:ActivateTopologyGroup"
+                "current": "sdwan:index/activateTopologyGroup:ActivateTopologyGroup",
+                "fields": {
+                    "feature_versions": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "sdwan_advanced_inspection_profile_policy_definition": {
                 "current": "sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition"
@@ -1653,6 +1658,28 @@
             "sdwan_mirror_policy_object": {
                 "current": "sdwan:index/mirrorPolicyObject:MirrorPolicyObject"
             },
+            "sdwan_network_hierarchy_cflowd": {
+                "current": "sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd",
+                "fields": {
+                    "collectors": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_network_hierarchy_node": {
+                "current": "sdwan:index/networkHierarchyNode:NetworkHierarchyNode"
+            },
+            "sdwan_network_hierarchy_security_logging": {
+                "current": "sdwan:index/networkHierarchySecurityLogging:NetworkHierarchySecurityLogging",
+                "fields": {
+                    "high_speed_logging": {
+                        "maxItemsOne": false
+                    },
+                    "utd_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_object_group_policy_definition": {
                 "current": "sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition"
             },
@@ -1663,6 +1690,14 @@
                 "current": "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature",
                 "fields": {
                     "virtual_application": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_other_trustsec_feature": {
+                "current": "sdwan:index/otherTrustsecFeature:OtherTrustsecFeature",
+                "fields": {
+                    "sxp_connections": {
                         "maxItemsOne": false
                     }
                 }
@@ -2121,6 +2156,9 @@
                                 }
                             }
                         }
+                    },
+                    "high_speed_logging_entries": {
+                        "maxItemsOne": false
                     },
                     "logging": {
                         "maxItemsOne": false
@@ -3288,6 +3326,9 @@
                 "current": "sdwan:index/topologyGroup:TopologyGroup",
                 "fields": {
                     "feature_profile_ids": {
+                        "maxItemsOne": false
+                    },
+                    "feature_versions": {
                         "maxItemsOne": false
                     }
                 }
@@ -5863,6 +5904,28 @@
             "sdwan_mirror_policy_object": {
                 "current": "sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject"
             },
+            "sdwan_network_hierarchy_cflowd": {
+                "current": "sdwan:index/getNetworkHierarchyCflowd:getNetworkHierarchyCflowd",
+                "fields": {
+                    "collectors": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_network_hierarchy_node": {
+                "current": "sdwan:index/getNetworkHierarchyNode:getNetworkHierarchyNode"
+            },
+            "sdwan_network_hierarchy_security_logging": {
+                "current": "sdwan:index/getNetworkHierarchySecurityLogging:getNetworkHierarchySecurityLogging",
+                "fields": {
+                    "high_speed_logging": {
+                        "maxItemsOne": false
+                    },
+                    "utd_syslog": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_object_group_policy_definition": {
                 "current": "sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition"
             },
@@ -5873,6 +5936,14 @@
                 "current": "sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature",
                 "fields": {
                     "virtual_application": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_other_trustsec_feature": {
+                "current": "sdwan:index/getOtherTrustsecFeature:getOtherTrustsecFeature",
+                "fields": {
+                    "sxp_connections": {
                         "maxItemsOne": false
                     }
                 }
@@ -6339,6 +6410,9 @@
                                 }
                             }
                         }
+                    },
+                    "high_speed_logging_entries": {
+                        "maxItemsOne": false
                     },
                     "logging": {
                         "maxItemsOne": false
@@ -7507,6 +7581,9 @@
                 "fields": {
                     "feature_profile_ids": {
                         "maxItemsOne": false
+                    },
+                    "feature_versions": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -8553,9 +8630,13 @@
             "sdwan_localized_policy": {},
             "sdwan_mesh_topology_policy_definition": {},
             "sdwan_mirror_policy_object": {},
+            "sdwan_network_hierarchy_cflowd": {},
+            "sdwan_network_hierarchy_node": {},
+            "sdwan_network_hierarchy_security_logging": {},
             "sdwan_object_group_policy_definition": {},
             "sdwan_other_feature_profile": {},
             "sdwan_other_thousandeyes_feature": {},
+            "sdwan_other_trustsec_feature": {},
             "sdwan_other_ucse_feature": {},
             "sdwan_policer_policy_object": {},
             "sdwan_policy_group": {},
