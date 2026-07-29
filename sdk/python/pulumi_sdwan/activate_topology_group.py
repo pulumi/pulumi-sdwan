@@ -20,16 +20,16 @@ __all__ = ['ActivateTopologyGroupArgs', 'ActivateTopologyGroup']
 class ActivateTopologyGroupArgs:
     def __init__(__self__, *,
                  activate_topology_group_id: pulumi.Input[_builtins.str],
-                 version: pulumi.Input[Optional[_builtins.int]] = None):
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a ActivateTopologyGroup resource.
 
         :param pulumi.Input[_builtins.str] activate_topology_group_id: The ID of the topology group to activate
-        :param pulumi.Input[_builtins.int] version: The version of the topology group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
         """
         pulumi.set(__self__, "activate_topology_group_id", activate_topology_group_id)
-        if version is not None:
-            pulumi.set(__self__, "version", version)
+        if feature_versions is not None:
+            pulumi.set(__self__, "feature_versions", feature_versions)
 
     @_builtins.property
     @pulumi.getter(name="activateTopologyGroupId")
@@ -44,33 +44,37 @@ class ActivateTopologyGroupArgs:
         pulumi.set(self, "activate_topology_group_id", value)
 
     @_builtins.property
-    @pulumi.getter
-    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The version of the topology group
+        List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
         """
-        return pulumi.get(self, "version")
+        return pulumi.get(self, "feature_versions")
 
-    @version.setter
-    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
-        pulumi.set(self, "version", value)
+    @feature_versions.setter
+    def feature_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "feature_versions", value)
 
 
 @pulumi.input_type
 class _ActivateTopologyGroupState:
     def __init__(__self__, *,
                  activate_topology_group_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 version: pulumi.Input[Optional[_builtins.int]] = None):
+                 deployed_version: pulumi.Input[Optional[_builtins.int]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering ActivateTopologyGroup resources.
 
         :param pulumi.Input[_builtins.str] activate_topology_group_id: The ID of the topology group to activate
-        :param pulumi.Input[_builtins.int] version: The version of the topology group
+        :param pulumi.Input[_builtins.int] deployed_version: Server-side version of the topology group captured at last activation. Used internally for drift detection.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
         """
         if activate_topology_group_id is not None:
             pulumi.set(__self__, "activate_topology_group_id", activate_topology_group_id)
-        if version is not None:
-            pulumi.set(__self__, "version", version)
+        if deployed_version is not None:
+            pulumi.set(__self__, "deployed_version", deployed_version)
+        if feature_versions is not None:
+            pulumi.set(__self__, "feature_versions", feature_versions)
 
     @_builtins.property
     @pulumi.getter(name="activateTopologyGroupId")
@@ -85,16 +89,28 @@ class _ActivateTopologyGroupState:
         pulumi.set(self, "activate_topology_group_id", value)
 
     @_builtins.property
-    @pulumi.getter
-    def version(self) -> pulumi.Input[Optional[_builtins.int]]:
+    @pulumi.getter(name="deployedVersion")
+    def deployed_version(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
-        The version of the topology group
+        Server-side version of the topology group captured at last activation. Used internally for drift detection.
         """
-        return pulumi.get(self, "version")
+        return pulumi.get(self, "deployed_version")
 
-    @version.setter
-    def version(self, value: pulumi.Input[Optional[_builtins.int]]):
-        pulumi.set(self, "version", value)
+    @deployed_version.setter
+    def deployed_version(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "deployed_version", value)
+
+    @_builtins.property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+        """
+        return pulumi.get(self, "feature_versions")
+
+    @feature_versions.setter
+    def feature_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "feature_versions", value)
 
 
 @pulumi.type_token("sdwan:index/activateTopologyGroup:ActivateTopologyGroup")
@@ -104,17 +120,17 @@ class ActivateTopologyGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  activate_topology_group_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        This resource can activate a topology group. Only one topology group can be active at a time.
+        This resource can activate a topology group. Only one topology group can be active at a time. To switch the active group, change the `id` attribute on the existing resource in place instead of replacing the resource (destroy + create); an in-place change issues a single activation that supersedes the previous group, whereas a replacement deactivates the previous group first and withdraws all overlay control policy from the vSmarts during the switch.
           - Minimum SD-WAN Manager version: `20.15.0`
 
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] activate_topology_group_id: The ID of the topology group to activate
-        :param pulumi.Input[_builtins.int] version: The version of the topology group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
         """
         ...
     @overload
@@ -123,7 +139,7 @@ class ActivateTopologyGroup(pulumi.CustomResource):
                  args: ActivateTopologyGroupArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        This resource can activate a topology group. Only one topology group can be active at a time.
+        This resource can activate a topology group. Only one topology group can be active at a time. To switch the active group, change the `id` attribute on the existing resource in place instead of replacing the resource (destroy + create); an in-place change issues a single activation that supersedes the previous group, whereas a replacement deactivates the previous group first and withdraws all overlay control policy from the vSmarts during the switch.
           - Minimum SD-WAN Manager version: `20.15.0`
 
 
@@ -143,7 +159,7 @@ class ActivateTopologyGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  activate_topology_group_id: pulumi.Input[Optional[_builtins.str]] = None,
-                 version: pulumi.Input[Optional[_builtins.int]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -156,7 +172,8 @@ class ActivateTopologyGroup(pulumi.CustomResource):
             if activate_topology_group_id is None and not opts.urn:
                 raise TypeError("Missing required property 'activate_topology_group_id'")
             __props__.__dict__["activate_topology_group_id"] = activate_topology_group_id
-            __props__.__dict__["version"] = version
+            __props__.__dict__["feature_versions"] = feature_versions
+            __props__.__dict__["deployed_version"] = None
         super(ActivateTopologyGroup, __self__).__init__(
             'sdwan:index/activateTopologyGroup:ActivateTopologyGroup',
             resource_name,
@@ -168,7 +185,8 @@ class ActivateTopologyGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             activate_topology_group_id: pulumi.Input[Optional[_builtins.str]] = None,
-            version: pulumi.Input[Optional[_builtins.int]] = None) -> 'ActivateTopologyGroup':
+            deployed_version: pulumi.Input[Optional[_builtins.int]] = None,
+            feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'ActivateTopologyGroup':
         """
         Get an existing ActivateTopologyGroup resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -177,14 +195,16 @@ class ActivateTopologyGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] activate_topology_group_id: The ID of the topology group to activate
-        :param pulumi.Input[_builtins.int] version: The version of the topology group
+        :param pulumi.Input[_builtins.int] deployed_version: Server-side version of the topology group captured at last activation. Used internally for drift detection.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _ActivateTopologyGroupState.__new__(_ActivateTopologyGroupState)
 
         __props__.__dict__["activate_topology_group_id"] = activate_topology_group_id
-        __props__.__dict__["version"] = version
+        __props__.__dict__["deployed_version"] = deployed_version
+        __props__.__dict__["feature_versions"] = feature_versions
         return ActivateTopologyGroup(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
@@ -196,10 +216,18 @@ class ActivateTopologyGroup(pulumi.CustomResource):
         return pulumi.get(self, "activate_topology_group_id")
 
     @_builtins.property
-    @pulumi.getter
-    def version(self) -> pulumi.Output[Optional[_builtins.int]]:
+    @pulumi.getter(name="deployedVersion")
+    def deployed_version(self) -> pulumi.Output[_builtins.int]:
         """
-        The version of the topology group
+        Server-side version of the topology group captured at last activation. Used internally for drift detection.
         """
-        return pulumi.get(self, "version")
+        return pulumi.get(self, "deployed_version")
+
+    @_builtins.property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+        """
+        return pulumi.get(self, "feature_versions")
 

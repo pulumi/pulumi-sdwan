@@ -46,6 +46,8 @@ namespace Pulumi.Sdwan
     ///             {
     ///                 KeyId = 49737,
     ///                 Md5Value = "$CRYPT_CLUSTER",
+    ///                 HmacSha2Value = "hmac-sha2-key-example",
+    ///                 CmacAes128Value = "cmac-aes128-key-1234",
     ///             },
     ///         },
     ///         TrustedKeys = new[]

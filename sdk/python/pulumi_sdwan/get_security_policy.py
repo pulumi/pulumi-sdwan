@@ -27,7 +27,7 @@ class GetSecurityPolicyResult:
     """
     A collection of values returned by getSecurityPolicy.
     """
-    def __init__(__self__, audit_trail=None, definitions=None, description=None, direct_internet_applications=None, failure_mode=None, high_speed_logging_server_ip=None, high_speed_logging_server_port=None, high_speed_logging_server_source_interface=None, high_speed_logging_vpn=None, id=None, imcp_unreachable_allow=None, loggings=None, match_statistics_per_filter=None, max_incomplete_icmp_limit=None, max_incomplete_tcp_limit=None, max_incomplete_udp_limit=None, mode=None, name=None, session_reclassify_allow=None, tcp_syn_flood_limit=None, unified_logging=None, use_case=None, version=None):
+    def __init__(__self__, audit_trail=None, definitions=None, description=None, direct_internet_applications=None, failure_mode=None, high_speed_logging_entries=None, high_speed_logging_server_ip=None, high_speed_logging_server_port=None, high_speed_logging_vpn=None, id=None, imcp_unreachable_allow=None, loggings=None, match_statistics_per_filter=None, max_incomplete_icmp_limit=None, max_incomplete_tcp_limit=None, max_incomplete_udp_limit=None, mode=None, name=None, session_reclassify_allow=None, tcp_syn_flood_limit=None, unified_logging=None, use_case=None, version=None):
         if audit_trail and not isinstance(audit_trail, str):
             raise TypeError("Expected argument 'audit_trail' to be a str")
         pulumi.set(__self__, "audit_trail", audit_trail)
@@ -43,15 +43,15 @@ class GetSecurityPolicyResult:
         if failure_mode and not isinstance(failure_mode, str):
             raise TypeError("Expected argument 'failure_mode' to be a str")
         pulumi.set(__self__, "failure_mode", failure_mode)
+        if high_speed_logging_entries and not isinstance(high_speed_logging_entries, list):
+            raise TypeError("Expected argument 'high_speed_logging_entries' to be a list")
+        pulumi.set(__self__, "high_speed_logging_entries", high_speed_logging_entries)
         if high_speed_logging_server_ip and not isinstance(high_speed_logging_server_ip, str):
             raise TypeError("Expected argument 'high_speed_logging_server_ip' to be a str")
         pulumi.set(__self__, "high_speed_logging_server_ip", high_speed_logging_server_ip)
         if high_speed_logging_server_port and not isinstance(high_speed_logging_server_port, str):
             raise TypeError("Expected argument 'high_speed_logging_server_port' to be a str")
         pulumi.set(__self__, "high_speed_logging_server_port", high_speed_logging_server_port)
-        if high_speed_logging_server_source_interface and not isinstance(high_speed_logging_server_source_interface, str):
-            raise TypeError("Expected argument 'high_speed_logging_server_source_interface' to be a str")
-        pulumi.set(__self__, "high_speed_logging_server_source_interface", high_speed_logging_server_source_interface)
         if high_speed_logging_vpn and not isinstance(high_speed_logging_vpn, str):
             raise TypeError("Expected argument 'high_speed_logging_vpn' to be a str")
         pulumi.set(__self__, "high_speed_logging_vpn", high_speed_logging_vpn)
@@ -139,6 +139,14 @@ class GetSecurityPolicyResult:
         return pulumi.get(self, "failure_mode")
 
     @_builtins.property
+    @pulumi.getter(name="highSpeedLoggingEntries")
+    def high_speed_logging_entries(self) -> Sequence['outputs.GetSecurityPolicyHighSpeedLoggingEntryResult']:
+        """
+        High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+        """
+        return pulumi.get(self, "high_speed_logging_entries")
+
+    @_builtins.property
     @pulumi.getter(name="highSpeedLoggingServerIp")
     def high_speed_logging_server_ip(self) -> _builtins.str:
         """
@@ -153,14 +161,6 @@ class GetSecurityPolicyResult:
         High Speed Logging Port
         """
         return pulumi.get(self, "high_speed_logging_server_port")
-
-    @_builtins.property
-    @pulumi.getter(name="highSpeedLoggingServerSourceInterface")
-    def high_speed_logging_server_source_interface(self) -> _builtins.str:
-        """
-        High Speed Logging Source Interface
-        """
-        return pulumi.get(self, "high_speed_logging_server_source_interface")
 
     @_builtins.property
     @pulumi.getter(name="highSpeedLoggingVpn")
@@ -291,9 +291,9 @@ class AwaitableGetSecurityPolicyResult(GetSecurityPolicyResult):
             description=self.description,
             direct_internet_applications=self.direct_internet_applications,
             failure_mode=self.failure_mode,
+            high_speed_logging_entries=self.high_speed_logging_entries,
             high_speed_logging_server_ip=self.high_speed_logging_server_ip,
             high_speed_logging_server_port=self.high_speed_logging_server_port,
-            high_speed_logging_server_source_interface=self.high_speed_logging_server_source_interface,
             high_speed_logging_vpn=self.high_speed_logging_vpn,
             id=self.id,
             imcp_unreachable_allow=self.imcp_unreachable_allow,
@@ -339,9 +339,9 @@ def get_security_policy(id: Optional[_builtins.str] = None,
         description=pulumi.get(__ret__, 'description'),
         direct_internet_applications=pulumi.get(__ret__, 'direct_internet_applications'),
         failure_mode=pulumi.get(__ret__, 'failure_mode'),
+        high_speed_logging_entries=pulumi.get(__ret__, 'high_speed_logging_entries'),
         high_speed_logging_server_ip=pulumi.get(__ret__, 'high_speed_logging_server_ip'),
         high_speed_logging_server_port=pulumi.get(__ret__, 'high_speed_logging_server_port'),
-        high_speed_logging_server_source_interface=pulumi.get(__ret__, 'high_speed_logging_server_source_interface'),
         high_speed_logging_vpn=pulumi.get(__ret__, 'high_speed_logging_vpn'),
         id=pulumi.get(__ret__, 'id'),
         imcp_unreachable_allow=pulumi.get(__ret__, 'imcp_unreachable_allow'),
@@ -384,9 +384,9 @@ def get_security_policy_output(id: pulumi.Input[Optional[_builtins.str]] = None,
         description=pulumi.get(__response__, 'description'),
         direct_internet_applications=pulumi.get(__response__, 'direct_internet_applications'),
         failure_mode=pulumi.get(__response__, 'failure_mode'),
+        high_speed_logging_entries=pulumi.get(__response__, 'high_speed_logging_entries'),
         high_speed_logging_server_ip=pulumi.get(__response__, 'high_speed_logging_server_ip'),
         high_speed_logging_server_port=pulumi.get(__response__, 'high_speed_logging_server_port'),
-        high_speed_logging_server_source_interface=pulumi.get(__response__, 'high_speed_logging_server_source_interface'),
         high_speed_logging_vpn=pulumi.get(__response__, 'high_speed_logging_vpn'),
         id=pulumi.get(__response__, 'id'),
         imcp_unreachable_allow=pulumi.get(__response__, 'imcp_unreachable_allow'),

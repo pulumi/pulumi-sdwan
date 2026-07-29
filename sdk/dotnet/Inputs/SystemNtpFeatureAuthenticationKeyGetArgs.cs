@@ -13,7 +13,31 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class SystemNtpFeatureAuthenticationKeyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// MD5 authentication key ID
+        /// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        /// </summary>
+        [Input("cmacAes128Value")]
+        public Input<string>? CmacAes128Value { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        /// </summary>
+        [Input("cmacAes128ValueVariable")]
+        public Input<string>? CmacAes128ValueVariable { get; set; }
+
+        /// <summary>
+        /// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        /// </summary>
+        [Input("hmacSha2Value")]
+        public Input<string>? HmacSha2Value { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        /// </summary>
+        [Input("hmacSha2ValueVariable")]
+        public Input<string>? HmacSha2ValueVariable { get; set; }
+
+        /// <summary>
+        /// Authentication key ID
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("keyId")]

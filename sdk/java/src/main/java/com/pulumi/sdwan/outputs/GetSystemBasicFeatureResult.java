@@ -257,7 +257,7 @@ public final class GetSystemBasicFeatureResult {
      */
     private String overlayIdVariable;
     /**
-     * @return Enable port hopping
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      * 
      */
     private Boolean portHopping;
@@ -690,7 +690,7 @@ public final class GetSystemBasicFeatureResult {
         return this.overlayIdVariable;
     }
     /**
-     * @return Enable port hopping
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      * 
      */
     public Boolean portHopping() {

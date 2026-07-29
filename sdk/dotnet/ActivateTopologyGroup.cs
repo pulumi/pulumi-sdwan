@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Sdwan
 {
     /// <summary>
-    /// This resource can activate a topology group. Only one topology group can be active at a time.
+    /// This resource can activate a topology group. Only one topology group can be active at a time. To switch the active group, change the `Id` attribute on the existing resource in place instead of replacing the resource (destroy + create); an in-place change issues a single activation that supersedes the previous group, whereas a replacement deactivates the previous group first and withdraws all overlay control policy from the vSmarts during the switch.
     ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// </summary>
     [SdwanResourceType("sdwan:index/activateTopologyGroup:ActivateTopologyGroup")]
@@ -23,10 +23,16 @@ namespace Pulumi.Sdwan
         public Output<string> ActivateTopologyGroupId { get; private set; } = null!;
 
         /// <summary>
-        /// The version of the topology group
+        /// Server-side version of the topology group captured at last activation. Used internally for drift detection.
         /// </summary>
-        [Output("version")]
-        public Output<int?> Version { get; private set; } = null!;
+        [Output("deployedVersion")]
+        public Output<int> DeployedVersion { get; private set; } = null!;
+
+        /// <summary>
+        /// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+        /// </summary>
+        [Output("featureVersions")]
+        public Output<ImmutableArray<string>> FeatureVersions { get; private set; } = null!;
 
 
         /// <summary>
@@ -80,11 +86,17 @@ namespace Pulumi.Sdwan
         [Input("activateTopologyGroupId", required: true)]
         public Input<string> ActivateTopologyGroupId { get; set; } = null!;
 
+        [Input("featureVersions")]
+        private InputList<string>? _featureVersions;
+
         /// <summary>
-        /// The version of the topology group
+        /// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
         /// </summary>
-        [Input("version")]
-        public Input<int>? Version { get; set; }
+        public InputList<string> FeatureVersions
+        {
+            get => _featureVersions ?? (_featureVersions = new InputList<string>());
+            set => _featureVersions = value;
+        }
 
         public ActivateTopologyGroupArgs()
         {
@@ -101,10 +113,22 @@ namespace Pulumi.Sdwan
         public Input<string>? ActivateTopologyGroupId { get; set; }
 
         /// <summary>
-        /// The version of the topology group
+        /// Server-side version of the topology group captured at last activation. Used internally for drift detection.
         /// </summary>
-        [Input("version")]
-        public Input<int>? Version { get; set; }
+        [Input("deployedVersion")]
+        public Input<int>? DeployedVersion { get; set; }
+
+        [Input("featureVersions")]
+        private InputList<string>? _featureVersions;
+
+        /// <summary>
+        /// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+        /// </summary>
+        public InputList<string> FeatureVersions
+        {
+            get => _featureVersions ?? (_featureVersions = new InputList<string>());
+            set => _featureVersions = value;
+        }
 
         public ActivateTopologyGroupState()
         {

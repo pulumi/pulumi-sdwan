@@ -58,7 +58,7 @@ class SystemSecurityFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
-                 - Range: `10`-`1209600`
+                 - Range: `10`-`63113904`
                  - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         """
@@ -258,7 +258,7 @@ class SystemSecurityFeatureArgs:
     def rekey(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
-          - Range: `10`-`1209600`
+          - Range: `10`-`63113904`
           - Default value: `86400`
         """
         return pulumi.get(self, "rekey")
@@ -321,7 +321,7 @@ class _SystemSecurityFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
-                 - Range: `10`-`1209600`
+                 - Range: `10`-`63113904`
                  - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -525,7 +525,7 @@ class _SystemSecurityFeatureState:
     def rekey(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
-          - Range: `10`-`1209600`
+          - Range: `10`-`63113904`
           - Default value: `86400`
         """
         return pulumi.get(self, "rekey")
@@ -654,7 +654,7 @@ class SystemSecurityFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
-                 - Range: `10`-`1209600`
+                 - Range: `10`-`63113904`
                  - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         """
@@ -825,7 +825,7 @@ class SystemSecurityFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
-                 - Range: `10`-`1209600`
+                 - Range: `10`-`63113904`
                  - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -966,7 +966,7 @@ class SystemSecurityFeature(pulumi.CustomResource):
     def rekey(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         Set how often to change the AES key for DTLS connections
-          - Range: `10`-`1209600`
+          - Range: `10`-`63113904`
           - Default value: `86400`
         """
         return pulumi.get(self, "rekey")

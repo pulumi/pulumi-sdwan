@@ -12,15 +12,17 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// This resource can activate a topology group. Only one topology group can be active at a time.
+// This resource can activate a topology group. Only one topology group can be active at a time. To switch the active group, change the `id` attribute on the existing resource in place instead of replacing the resource (destroy + create); an in-place change issues a single activation that supersedes the previous group, whereas a replacement deactivates the previous group first and withdraws all overlay control policy from the vSmarts during the switch.
 //   - Minimum SD-WAN Manager version: `20.15.0`
 type ActivateTopologyGroup struct {
 	pulumi.CustomResourceState
 
 	// The ID of the topology group to activate
 	ActivateTopologyGroupId pulumi.StringOutput `pulumi:"activateTopologyGroupId"`
-	// The version of the topology group
-	Version pulumi.IntPtrOutput `pulumi:"version"`
+	// Server-side version of the topology group captured at last activation. Used internally for drift detection.
+	DeployedVersion pulumi.IntOutput `pulumi:"deployedVersion"`
+	// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+	FeatureVersions pulumi.StringArrayOutput `pulumi:"featureVersions"`
 }
 
 // NewActivateTopologyGroup registers a new resource with the given unique name, arguments, and options.
@@ -58,15 +60,19 @@ func GetActivateTopologyGroup(ctx *pulumi.Context,
 type activateTopologyGroupState struct {
 	// The ID of the topology group to activate
 	ActivateTopologyGroupId *string `pulumi:"activateTopologyGroupId"`
-	// The version of the topology group
-	Version *int `pulumi:"version"`
+	// Server-side version of the topology group captured at last activation. Used internally for drift detection.
+	DeployedVersion *int `pulumi:"deployedVersion"`
+	// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+	FeatureVersions []string `pulumi:"featureVersions"`
 }
 
 type ActivateTopologyGroupState struct {
 	// The ID of the topology group to activate
 	ActivateTopologyGroupId pulumi.StringPtrInput
-	// The version of the topology group
-	Version pulumi.IntPtrInput
+	// Server-side version of the topology group captured at last activation. Used internally for drift detection.
+	DeployedVersion pulumi.IntPtrInput
+	// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+	FeatureVersions pulumi.StringArrayInput
 }
 
 func (ActivateTopologyGroupState) ElementType() reflect.Type {
@@ -76,16 +82,16 @@ func (ActivateTopologyGroupState) ElementType() reflect.Type {
 type activateTopologyGroupArgs struct {
 	// The ID of the topology group to activate
 	ActivateTopologyGroupId string `pulumi:"activateTopologyGroupId"`
-	// The version of the topology group
-	Version *int `pulumi:"version"`
+	// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+	FeatureVersions []string `pulumi:"featureVersions"`
 }
 
 // The set of arguments for constructing a ActivateTopologyGroup resource.
 type ActivateTopologyGroupArgs struct {
 	// The ID of the topology group to activate
 	ActivateTopologyGroupId pulumi.StringInput
-	// The version of the topology group
-	Version pulumi.IntPtrInput
+	// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+	FeatureVersions pulumi.StringArrayInput
 }
 
 func (ActivateTopologyGroupArgs) ElementType() reflect.Type {
@@ -180,9 +186,14 @@ func (o ActivateTopologyGroupOutput) ActivateTopologyGroupId() pulumi.StringOutp
 	return o.ApplyT(func(v *ActivateTopologyGroup) pulumi.StringOutput { return v.ActivateTopologyGroupId }).(pulumi.StringOutput)
 }
 
-// The version of the topology group
-func (o ActivateTopologyGroupOutput) Version() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *ActivateTopologyGroup) pulumi.IntPtrOutput { return v.Version }).(pulumi.IntPtrOutput)
+// Server-side version of the topology group captured at last activation. Used internally for drift detection.
+func (o ActivateTopologyGroupOutput) DeployedVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v *ActivateTopologyGroup) pulumi.IntOutput { return v.DeployedVersion }).(pulumi.IntOutput)
+}
+
+// List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+func (o ActivateTopologyGroupOutput) FeatureVersions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ActivateTopologyGroup) pulumi.StringArrayOutput { return v.FeatureVersions }).(pulumi.StringArrayOutput)
 }
 
 type ActivateTopologyGroupArrayOutput struct{ *pulumi.OutputState }

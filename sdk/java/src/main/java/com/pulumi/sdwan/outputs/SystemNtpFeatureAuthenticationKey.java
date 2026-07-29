@@ -13,7 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SystemNtpFeatureAuthenticationKey {
     /**
-     * @return MD5 authentication key ID
+     * @return CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    private @Nullable String cmacAes128Value;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    private @Nullable String cmacAes128ValueVariable;
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    private @Nullable String hmacSha2Value;
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    private @Nullable String hmacSha2ValueVariable;
+    /**
+     * @return Authentication key ID
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -36,7 +56,35 @@ public final class SystemNtpFeatureAuthenticationKey {
 
     private SystemNtpFeatureAuthenticationKey() {}
     /**
-     * @return MD5 authentication key ID
+     * @return CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<String> cmacAes128Value() {
+        return Optional.ofNullable(this.cmacAes128Value);
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<String> cmacAes128ValueVariable() {
+        return Optional.ofNullable(this.cmacAes128ValueVariable);
+    }
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<String> hmacSha2Value() {
+        return Optional.ofNullable(this.hmacSha2Value);
+    }
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<String> hmacSha2ValueVariable() {
+        return Optional.ofNullable(this.hmacSha2ValueVariable);
+    }
+    /**
+     * @return Authentication key ID
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -74,6 +122,10 @@ public final class SystemNtpFeatureAuthenticationKey {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String cmacAes128Value;
+        private @Nullable String cmacAes128ValueVariable;
+        private @Nullable String hmacSha2Value;
+        private @Nullable String hmacSha2ValueVariable;
         private @Nullable Integer keyId;
         private @Nullable String keyIdVariable;
         private @Nullable String md5Value;
@@ -81,12 +133,40 @@ public final class SystemNtpFeatureAuthenticationKey {
         public Builder() {}
         public Builder(SystemNtpFeatureAuthenticationKey defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.cmacAes128Value = defaults.cmacAes128Value;
+    	      this.cmacAes128ValueVariable = defaults.cmacAes128ValueVariable;
+    	      this.hmacSha2Value = defaults.hmacSha2Value;
+    	      this.hmacSha2ValueVariable = defaults.hmacSha2ValueVariable;
     	      this.keyId = defaults.keyId;
     	      this.keyIdVariable = defaults.keyIdVariable;
     	      this.md5Value = defaults.md5Value;
     	      this.md5ValueVariable = defaults.md5ValueVariable;
         }
 
+        @CustomType.Setter
+        public Builder cmacAes128Value(@Nullable String cmacAes128Value) {
+
+            this.cmacAes128Value = cmacAes128Value;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder cmacAes128ValueVariable(@Nullable String cmacAes128ValueVariable) {
+
+            this.cmacAes128ValueVariable = cmacAes128ValueVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder hmacSha2Value(@Nullable String hmacSha2Value) {
+
+            this.hmacSha2Value = hmacSha2Value;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder hmacSha2ValueVariable(@Nullable String hmacSha2ValueVariable) {
+
+            this.hmacSha2ValueVariable = hmacSha2ValueVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder keyId(@Nullable Integer keyId) {
 
@@ -113,6 +193,10 @@ public final class SystemNtpFeatureAuthenticationKey {
         }
         public SystemNtpFeatureAuthenticationKey build() {
             final var _resultValue = new SystemNtpFeatureAuthenticationKey();
+            _resultValue.cmacAes128Value = cmacAes128Value;
+            _resultValue.cmacAes128ValueVariable = cmacAes128ValueVariable;
+            _resultValue.hmacSha2Value = hmacSha2Value;
+            _resultValue.hmacSha2ValueVariable = hmacSha2ValueVariable;
             _resultValue.keyId = keyId;
             _resultValue.keyIdVariable = keyIdVariable;
             _resultValue.md5Value = md5Value;

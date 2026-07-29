@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  * import * as sdwan from "@pulumi/sdwan";
  *
  * const example = new sdwan.CustomApplication("example", {
- *     appName: "Example",
+ *     appName: "Example-Custom",
  *     serverNames: ["*customapp.com"],
  *     l3l4s: [{
  *         ipAddresses: ["192.168.1.0/24"],

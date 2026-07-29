@@ -58,7 +58,10 @@ namespace Pulumi.Sdwan
     ///                     {
     ///                         SetParameters = new[]
     ///                         {
-    ///                             null,
+    ///                             new Sdwan.Inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs
+    ///                             {
+    ///                                 Dscp = 18,
+    ///                             },
     ///                         },
     ///                     },
     ///                 },

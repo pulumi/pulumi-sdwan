@@ -304,7 +304,9 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                     "dscps": [1],
                 }],
                 "actions": [{
-                    "set_parameters": [{}],
+                    "set_parameters": [{
+                        "dscp": 18,
+                    }],
                 }],
             }])
         ```
@@ -361,7 +363,9 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                     "dscps": [1],
                 }],
                 "actions": [{
-                    "set_parameters": [{}],
+                    "set_parameters": [{
+                        "dscp": 18,
+                    }],
                 }],
             }])
         ```

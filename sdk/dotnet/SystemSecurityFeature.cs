@@ -167,7 +167,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set how often to change the AES key for DTLS connections
-        ///   - Range: `10`-`1209600`
+        ///   - Range: `10`-`63113904`
         ///   - Default value: `86400`
         /// </summary>
         [Output("rekey")]
@@ -334,7 +334,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set how often to change the AES key for DTLS connections
-        ///   - Range: `10`-`1209600`
+        ///   - Range: `10`-`63113904`
         ///   - Default value: `86400`
         /// </summary>
         [Input("rekey")]
@@ -457,7 +457,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set how often to change the AES key for DTLS connections
-        ///   - Range: `10`-`1209600`
+        ///   - Range: `10`-`63113904`
         ///   - Default value: `86400`
         /// </summary>
         [Input("rekey")]

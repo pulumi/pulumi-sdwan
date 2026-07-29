@@ -222,7 +222,7 @@ type SystemBasicFeature struct {
 	OverlayId pulumi.IntPtrOutput `pulumi:"overlayId"`
 	// Variable name
 	OverlayIdVariable pulumi.StringPtrOutput `pulumi:"overlayIdVariable"`
-	// Enable port hopping
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 	//   - Default value: `true`
 	PortHopping pulumi.BoolPtrOutput `pulumi:"portHopping"`
 	// Variable name
@@ -422,7 +422,7 @@ type systemBasicFeatureState struct {
 	OverlayId *int `pulumi:"overlayId"`
 	// Variable name
 	OverlayIdVariable *string `pulumi:"overlayIdVariable"`
-	// Enable port hopping
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 	//   - Default value: `true`
 	PortHopping *bool `pulumi:"portHopping"`
 	// Variable name
@@ -590,7 +590,7 @@ type SystemBasicFeatureState struct {
 	OverlayId pulumi.IntPtrInput
 	// Variable name
 	OverlayIdVariable pulumi.StringPtrInput
-	// Enable port hopping
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 	//   - Default value: `true`
 	PortHopping pulumi.BoolPtrInput
 	// Variable name
@@ -762,7 +762,7 @@ type systemBasicFeatureArgs struct {
 	OverlayId *int `pulumi:"overlayId"`
 	// Variable name
 	OverlayIdVariable *string `pulumi:"overlayIdVariable"`
-	// Enable port hopping
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 	//   - Default value: `true`
 	PortHopping *bool `pulumi:"portHopping"`
 	// Variable name
@@ -929,7 +929,7 @@ type SystemBasicFeatureArgs struct {
 	OverlayId pulumi.IntPtrInput
 	// Variable name
 	OverlayIdVariable pulumi.StringPtrInput
-	// Enable port hopping
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 	//   - Default value: `true`
 	PortHopping pulumi.BoolPtrInput
 	// Variable name
@@ -1324,7 +1324,7 @@ func (o SystemBasicFeatureOutput) OverlayIdVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemBasicFeature) pulumi.StringPtrOutput { return v.OverlayIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable port hopping
+// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 //   - Default value: `true`
 func (o SystemBasicFeatureOutput) PortHopping() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemBasicFeature) pulumi.BoolPtrOutput { return v.PortHopping }).(pulumi.BoolPtrOutput)

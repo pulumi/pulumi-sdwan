@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan
     ///         {
     ///             new Sdwan.Inputs.OtherThousandeyesFeatureVirtualApplicationArgs
     ///             {
-    ///                 AccountGroupToken = "qwer",
+    ///                 AccountGroupToken = "qwerqwerqwerqwerqwerqwerqwerqwer",
     ///                 Vpn = 1,
     ///                 ManagementIp = "10.0.0.2",
     ///                 ManagementSubnetMask = "255.255.255.0",

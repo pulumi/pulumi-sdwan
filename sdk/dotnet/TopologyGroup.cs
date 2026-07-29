@@ -61,6 +61,12 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> FeatureProfileIds { get; private set; } = null!;
 
         /// <summary>
+        /// List of all associated feature versions
+        /// </summary>
+        [Output("featureVersions")]
+        public Output<ImmutableArray<string>> FeatureVersions { get; private set; } = null!;
+
+        /// <summary>
         /// The name of the topology group
         /// </summary>
         [Output("name")]
@@ -137,6 +143,18 @@ namespace Pulumi.Sdwan
             set => _featureProfileIds = value;
         }
 
+        [Input("featureVersions")]
+        private InputList<string>? _featureVersions;
+
+        /// <summary>
+        /// List of all associated feature versions
+        /// </summary>
+        public InputList<string> FeatureVersions
+        {
+            get => _featureVersions ?? (_featureVersions = new InputList<string>());
+            set => _featureVersions = value;
+        }
+
         /// <summary>
         /// The name of the topology group
         /// </summary>
@@ -174,6 +192,18 @@ namespace Pulumi.Sdwan
         {
             get => _featureProfileIds ?? (_featureProfileIds = new InputList<string>());
             set => _featureProfileIds = value;
+        }
+
+        [Input("featureVersions")]
+        private InputList<string>? _featureVersions;
+
+        /// <summary>
+        /// List of all associated feature versions
+        /// </summary>
+        public InputList<string> FeatureVersions
+        {
+            get => _featureVersions ?? (_featureVersions = new InputList<string>());
+            set => _featureVersions = value;
         }
 
         /// <summary>

@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .virtualApplications(OtherThousandeyesFeatureVirtualApplicationArgs.builder()
- *                 .accountGroupToken("qwer")
+ *                 .accountGroupToken("qwerqwerqwerqwerqwerqwerqwerqwer")
  *                 .vpn(1)
  *                 .managementIp("10.0.0.2")
  *                 .managementSubnetMask("255.255.255.0")

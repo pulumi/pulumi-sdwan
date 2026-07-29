@@ -618,7 +618,7 @@ class GetSystemBasicFeatureResult:
     @pulumi.getter(name="portHopping")
     def port_hopping(self) -> _builtins.bool:
         """
-        Enable port hopping
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
         """
         return pulumi.get(self, "port_hopping")
 

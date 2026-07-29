@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan
     /// {
     ///     var example = new Sdwan.CustomApplication("example", new()
     ///     {
-    ///         AppName = "Example",
+    ///         AppName = "Example-Custom",
     ///         ServerNames = new[]
     ///         {
     ///             "*customapp.com",

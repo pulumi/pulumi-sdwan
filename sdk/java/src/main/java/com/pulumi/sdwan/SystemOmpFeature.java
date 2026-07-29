@@ -628,7 +628,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      * 
      */
@@ -637,7 +637,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      * 
      */
@@ -722,7 +722,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      * 
      */
@@ -731,7 +731,7 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      * 
      */

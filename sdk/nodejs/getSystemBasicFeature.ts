@@ -245,7 +245,7 @@ export interface GetSystemBasicFeatureResult {
      */
     readonly overlayIdVariable: string;
     /**
-     * Enable port hopping
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      */
     readonly portHopping: boolean;
     /**

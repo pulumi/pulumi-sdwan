@@ -316,7 +316,7 @@ class CustomApplication(pulumi.CustomResource):
         import pulumi_sdwan as sdwan
 
         example = sdwan.CustomApplication("example",
-            app_name="Example",
+            app_name="Example-Custom",
             server_names=["*customapp.com"],
             l3l4s=[{
                 "ip_addresses": ["192.168.1.0/24"],
@@ -369,7 +369,7 @@ class CustomApplication(pulumi.CustomResource):
         import pulumi_sdwan as sdwan
 
         example = sdwan.CustomApplication("example",
-            app_name="Example",
+            app_name="Example-Custom",
             server_names=["*customapp.com"],
             l3l4s=[{
                 "ip_addresses": ["192.168.1.0/24"],

@@ -581,7 +581,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      * 
      */
@@ -590,7 +590,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * @return Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      * 
      */
@@ -681,7 +681,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      * 
      */
@@ -690,7 +690,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
     /**
      * @return Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      * 
      */
@@ -1942,7 +1942,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table
-         *   - At Least: `1`
+         *   - Range: `1`-`16`
          *   - Default value: `4`
          * 
          * @return builder
@@ -1955,7 +1955,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table
-         *   - At Least: `1`
+         *   - Range: `1`-`16`
          *   - Default value: `4`
          * 
          * @return builder
@@ -2078,7 +2078,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param gracefulRestartTimer Graceful Restart Timer (seconds)
-         *   - Range: `1`-`604800`
+         *   - Range: `1`-`31556952`
          *   - Default value: `43200`
          * 
          * @return builder
@@ -2091,7 +2091,7 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
 
         /**
          * @param gracefulRestartTimer Graceful Restart Timer (seconds)
-         *   - Range: `1`-`604800`
+         *   - Range: `1`-`31556952`
          *   - Default value: `43200`
          * 
          * @return builder

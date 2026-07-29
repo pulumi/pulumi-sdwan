@@ -47,7 +47,7 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
     /**
      * Configure authentication protocol
-     *   - Choices: `sha`
+     *   - Choices: `sha`, `sha256`
      * 
      */
     @Import(name="authenticationProtocol")
@@ -55,7 +55,7 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Configure authentication protocol
-     *   - Choices: `sha`
+     *   - Choices: `sha`, `sha256`
      * 
      */
     public Optional<Output<String>> authenticationProtocol() {
@@ -262,7 +262,7 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
         /**
          * @param authenticationProtocol Configure authentication protocol
-         *   - Choices: `sha`
+         *   - Choices: `sha`, `sha256`
          * 
          * @return builder
          * 
@@ -274,7 +274,7 @@ public final class SystemSnmpFeatureUserArgs extends com.pulumi.resources.Resour
 
         /**
          * @param authenticationProtocol Configure authentication protocol
-         *   - Choices: `sha`
+         *   - Choices: `sha`, `sha256`
          * 
          * @return builder
          * 

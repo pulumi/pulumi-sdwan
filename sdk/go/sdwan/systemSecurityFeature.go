@@ -118,7 +118,7 @@ type SystemSecurityFeature struct {
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Set how often to change the AES key for DTLS connections
-	//   - Range: `10`-`1209600`
+	//   - Range: `10`-`63113904`
 	//   - Default value: `86400`
 	Rekey pulumi.IntPtrOutput `pulumi:"rekey"`
 	// Variable name
@@ -192,7 +192,7 @@ type systemSecurityFeatureState struct {
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// Set how often to change the AES key for DTLS connections
-	//   - Range: `10`-`1209600`
+	//   - Range: `10`-`63113904`
 	//   - Default value: `86400`
 	Rekey *int `pulumi:"rekey"`
 	// Variable name
@@ -234,7 +234,7 @@ type SystemSecurityFeatureState struct {
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// Set how often to change the AES key for DTLS connections
-	//   - Range: `10`-`1209600`
+	//   - Range: `10`-`63113904`
 	//   - Default value: `86400`
 	Rekey pulumi.IntPtrInput
 	// Variable name
@@ -280,7 +280,7 @@ type systemSecurityFeatureArgs struct {
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// Set how often to change the AES key for DTLS connections
-	//   - Range: `10`-`1209600`
+	//   - Range: `10`-`63113904`
 	//   - Default value: `86400`
 	Rekey *int `pulumi:"rekey"`
 	// Variable name
@@ -321,7 +321,7 @@ type SystemSecurityFeatureArgs struct {
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// Set how often to change the AES key for DTLS connections
-	//   - Range: `10`-`1209600`
+	//   - Range: `10`-`63113904`
 	//   - Default value: `86400`
 	Rekey pulumi.IntPtrInput
 	// Variable name
@@ -486,7 +486,7 @@ func (o SystemSecurityFeatureOutput) Name() pulumi.StringOutput {
 }
 
 // Set how often to change the AES key for DTLS connections
-//   - Range: `10`-`1209600`
+//   - Range: `10`-`63113904`
 //   - Default value: `86400`
 func (o SystemSecurityFeatureOutput) Rekey() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.IntPtrOutput { return v.Rekey }).(pulumi.IntPtrOutput)

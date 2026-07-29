@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -32,25 +33,41 @@ public final class ActivateTopologyGroupState extends com.pulumi.resources.Resou
     }
 
     /**
-     * The version of the topology group
+     * Server-side version of the topology group captured at last activation. Used internally for drift detection.
      * 
      */
-    @Import(name="version")
-    private @Nullable Output<Integer> version;
+    @Import(name="deployedVersion")
+    private @Nullable Output<Integer> deployedVersion;
 
     /**
-     * @return The version of the topology group
+     * @return Server-side version of the topology group captured at last activation. Used internally for drift detection.
      * 
      */
-    public Optional<Output<Integer>> version() {
-        return Optional.ofNullable(this.version);
+    public Optional<Output<Integer>> deployedVersion() {
+        return Optional.ofNullable(this.deployedVersion);
+    }
+
+    /**
+     * List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+     * 
+     */
+    @Import(name="featureVersions")
+    private @Nullable Output<List<String>> featureVersions;
+
+    /**
+     * @return List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+     * 
+     */
+    public Optional<Output<List<String>>> featureVersions() {
+        return Optional.ofNullable(this.featureVersions);
     }
 
     private ActivateTopologyGroupState() {}
 
     private ActivateTopologyGroupState(ActivateTopologyGroupState $) {
         this.activateTopologyGroupId = $.activateTopologyGroupId;
-        this.version = $.version;
+        this.deployedVersion = $.deployedVersion;
+        this.featureVersions = $.featureVersions;
     }
 
     public static Builder builder() {
@@ -93,24 +110,55 @@ public final class ActivateTopologyGroupState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param version The version of the topology group
+         * @param deployedVersion Server-side version of the topology group captured at last activation. Used internally for drift detection.
          * 
          * @return builder
          * 
          */
-        public Builder version(@Nullable Output<Integer> version) {
-            $.version = version;
+        public Builder deployedVersion(@Nullable Output<Integer> deployedVersion) {
+            $.deployedVersion = deployedVersion;
             return this;
         }
 
         /**
-         * @param version The version of the topology group
+         * @param deployedVersion Server-side version of the topology group captured at last activation. Used internally for drift detection.
          * 
          * @return builder
          * 
          */
-        public Builder version(Integer version) {
-            return version(Output.of(version));
+        public Builder deployedVersion(Integer deployedVersion) {
+            return deployedVersion(Output.of(deployedVersion));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(@Nullable Output<List<String>> featureVersions) {
+            $.featureVersions = featureVersions;
+            return this;
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(List<String> featureVersions) {
+            return featureVersions(Output.of(featureVersions));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(String... featureVersions) {
+            return featureVersions(List.of(featureVersions));
         }
 
         public ActivateTopologyGroupState build() {

@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  * 
  *     public static void stack(Context ctx) {
  *         var example = new CustomApplication("example", CustomApplicationArgs.builder()
- *             .appName("Example")
+ *             .appName("Example-Custom")
  *             .serverNames("*customapp.com")
  *             .l3l4s(CustomApplicationL3l4Args.builder()
  *                 .ipAddresses("192.168.1.0/24")

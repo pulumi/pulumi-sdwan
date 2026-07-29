@@ -126,6 +126,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly ImmutableArray<string> FeatureProfileIds;
         /// <summary>
+        /// List of all associated feature versions
+        /// </summary>
+        public readonly ImmutableArray<string> FeatureVersions;
+        /// <summary>
         /// The id of the object
         /// </summary>
         public readonly string Id;
@@ -144,6 +148,8 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<string> featureProfileIds,
 
+            ImmutableArray<string> featureVersions,
+
             string id,
 
             string name,
@@ -152,6 +158,7 @@ namespace Pulumi.Sdwan
         {
             Description = description;
             FeatureProfileIds = featureProfileIds;
+            FeatureVersions = featureVersions;
             Id = id;
             Name = name;
             Solution = solution;

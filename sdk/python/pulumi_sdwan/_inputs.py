@@ -415,8 +415,18 @@ __all__ = [
     'LocalizedPolicyDefinitionArgsDict',
     'MeshTopologyPolicyDefinitionRegionArgs',
     'MeshTopologyPolicyDefinitionRegionArgsDict',
+    'NetworkHierarchyCflowdCollectorArgs',
+    'NetworkHierarchyCflowdCollectorArgsDict',
+    'NetworkHierarchyNodeAddressArgs',
+    'NetworkHierarchyNodeAddressArgsDict',
+    'NetworkHierarchySecurityLoggingHighSpeedLoggingArgs',
+    'NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict',
+    'NetworkHierarchySecurityLoggingUtdSyslogArgs',
+    'NetworkHierarchySecurityLoggingUtdSyslogArgsDict',
     'OtherThousandeyesFeatureVirtualApplicationArgs',
     'OtherThousandeyesFeatureVirtualApplicationArgsDict',
+    'OtherTrustsecFeatureSxpConnectionArgs',
+    'OtherTrustsecFeatureSxpConnectionArgsDict',
     'OtherUcseFeatureInterfaceArgs',
     'OtherUcseFeatureInterfaceArgsDict',
     'PolicyGroupDeviceArgs',
@@ -509,6 +519,8 @@ __all__ = [
     'SecurityPolicyDefinitionArgsDict',
     'SecurityPolicyDefinitionEntryArgs',
     'SecurityPolicyDefinitionEntryArgsDict',
+    'SecurityPolicyHighSpeedLoggingEntryArgs',
+    'SecurityPolicyHighSpeedLoggingEntryArgsDict',
     'SecurityPolicyLoggingArgs',
     'SecurityPolicyLoggingArgsDict',
     'ServiceDhcpServerFeatureOptionCodeArgs',
@@ -35822,6 +35834,373 @@ class MeshTopologyPolicyDefinitionRegionArgs:
         pulumi.set(self, "site_list_versions", value)
 
 
+class NetworkHierarchyCflowdCollectorArgsDict(TypedDict):
+    address: pulumi.Input[_builtins.str]
+    """
+    Collector IPv4 or IPv6 address
+    """
+    udp_port: pulumi.Input[_builtins.int]
+    """
+    Collector UDP port number
+      - Range: `1024`-`65535`
+      - Default value: `4739`
+    """
+    vpn_id: pulumi.Input[_builtins.int]
+    """
+    VPN ID
+      - Range: `0`-`65530`
+    """
+    bfd_metrics_export: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable BFD metrics exporting
+      - Default value: `false`
+    """
+    export_interval: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    BFD export interval in seconds. Only valid when `bfd_metrics_export` is `true`; setting it while `bfd_metrics_export` is `false` or unset is a configuration error.
+      - Range: `1`-`86400`
+      - Default value: `600`
+    """
+    export_spread: NotRequired[pulumi.Input[Optional[_builtins.bool]]]
+    """
+    Enable export spreading
+      - Default value: `false`
+    """
+
+@pulumi.input_type
+class NetworkHierarchyCflowdCollectorArgs:
+    def __init__(__self__, *,
+                 address: pulumi.Input[_builtins.str],
+                 udp_port: pulumi.Input[_builtins.int],
+                 vpn_id: pulumi.Input[_builtins.int],
+                 bfd_metrics_export: pulumi.Input[Optional[_builtins.bool]] = None,
+                 export_interval: pulumi.Input[Optional[_builtins.int]] = None,
+                 export_spread: pulumi.Input[Optional[_builtins.bool]] = None):
+        """
+        :param pulumi.Input[_builtins.str] address: Collector IPv4 or IPv6 address
+        :param pulumi.Input[_builtins.int] udp_port: Collector UDP port number
+                 - Range: `1024`-`65535`
+                 - Default value: `4739`
+        :param pulumi.Input[_builtins.int] vpn_id: VPN ID
+                 - Range: `0`-`65530`
+        :param pulumi.Input[_builtins.bool] bfd_metrics_export: Enable BFD metrics exporting
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] export_interval: BFD export interval in seconds. Only valid when `bfd_metrics_export` is `true`; setting it while `bfd_metrics_export` is `false` or unset is a configuration error.
+                 - Range: `1`-`86400`
+                 - Default value: `600`
+        :param pulumi.Input[_builtins.bool] export_spread: Enable export spreading
+                 - Default value: `false`
+        """
+        pulumi.set(__self__, "address", address)
+        pulumi.set(__self__, "udp_port", udp_port)
+        pulumi.set(__self__, "vpn_id", vpn_id)
+        if bfd_metrics_export is not None:
+            pulumi.set(__self__, "bfd_metrics_export", bfd_metrics_export)
+        if export_interval is not None:
+            pulumi.set(__self__, "export_interval", export_interval)
+        if export_spread is not None:
+            pulumi.set(__self__, "export_spread", export_spread)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> pulumi.Input[_builtins.str]:
+        """
+        Collector IPv4 or IPv6 address
+        """
+        return pulumi.get(self, "address")
+
+    @address.setter
+    def address(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="udpPort")
+    def udp_port(self) -> pulumi.Input[_builtins.int]:
+        """
+        Collector UDP port number
+          - Range: `1024`-`65535`
+          - Default value: `4739`
+        """
+        return pulumi.get(self, "udp_port")
+
+    @udp_port.setter
+    def udp_port(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "udp_port", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnId")
+    def vpn_id(self) -> pulumi.Input[_builtins.int]:
+        """
+        VPN ID
+          - Range: `0`-`65530`
+        """
+        return pulumi.get(self, "vpn_id")
+
+    @vpn_id.setter
+    def vpn_id(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "vpn_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="bfdMetricsExport")
+    def bfd_metrics_export(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable BFD metrics exporting
+          - Default value: `false`
+        """
+        return pulumi.get(self, "bfd_metrics_export")
+
+    @bfd_metrics_export.setter
+    def bfd_metrics_export(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "bfd_metrics_export", value)
+
+    @_builtins.property
+    @pulumi.getter(name="exportInterval")
+    def export_interval(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        BFD export interval in seconds. Only valid when `bfd_metrics_export` is `true`; setting it while `bfd_metrics_export` is `false` or unset is a configuration error.
+          - Range: `1`-`86400`
+          - Default value: `600`
+        """
+        return pulumi.get(self, "export_interval")
+
+    @export_interval.setter
+    def export_interval(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "export_interval", value)
+
+    @_builtins.property
+    @pulumi.getter(name="exportSpread")
+    def export_spread(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        Enable export spreading
+          - Default value: `false`
+        """
+        return pulumi.get(self, "export_spread")
+
+    @export_spread.setter
+    def export_spread(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "export_spread", value)
+
+
+class NetworkHierarchyNodeAddressArgsDict(TypedDict):
+    city: pulumi.Input[_builtins.str]
+    """
+    City
+    """
+    country: pulumi.Input[_builtins.str]
+    """
+    Country
+    """
+    state: pulumi.Input[_builtins.str]
+    """
+    State or province
+    """
+    street: pulumi.Input[_builtins.str]
+    """
+    Street address
+    """
+    zipcode: pulumi.Input[_builtins.str]
+    """
+    Zip or postal code
+    """
+
+@pulumi.input_type
+class NetworkHierarchyNodeAddressArgs:
+    def __init__(__self__, *,
+                 city: pulumi.Input[_builtins.str],
+                 country: pulumi.Input[_builtins.str],
+                 state: pulumi.Input[_builtins.str],
+                 street: pulumi.Input[_builtins.str],
+                 zipcode: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] city: City
+        :param pulumi.Input[_builtins.str] country: Country
+        :param pulumi.Input[_builtins.str] state: State or province
+        :param pulumi.Input[_builtins.str] street: Street address
+        :param pulumi.Input[_builtins.str] zipcode: Zip or postal code
+        """
+        pulumi.set(__self__, "city", city)
+        pulumi.set(__self__, "country", country)
+        pulumi.set(__self__, "state", state)
+        pulumi.set(__self__, "street", street)
+        pulumi.set(__self__, "zipcode", zipcode)
+
+    @_builtins.property
+    @pulumi.getter
+    def city(self) -> pulumi.Input[_builtins.str]:
+        """
+        City
+        """
+        return pulumi.get(self, "city")
+
+    @city.setter
+    def city(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "city", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def country(self) -> pulumi.Input[_builtins.str]:
+        """
+        Country
+        """
+        return pulumi.get(self, "country")
+
+    @country.setter
+    def country(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "country", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def state(self) -> pulumi.Input[_builtins.str]:
+        """
+        State or province
+        """
+        return pulumi.get(self, "state")
+
+    @state.setter
+    def state(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "state", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def street(self) -> pulumi.Input[_builtins.str]:
+        """
+        Street address
+        """
+        return pulumi.get(self, "street")
+
+    @street.setter
+    def street(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "street", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def zipcode(self) -> pulumi.Input[_builtins.str]:
+        """
+        Zip or postal code
+        """
+        return pulumi.get(self, "zipcode")
+
+    @zipcode.setter
+    def zipcode(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "zipcode", value)
+
+
+class NetworkHierarchySecurityLoggingHighSpeedLoggingArgsDict(TypedDict):
+    port: pulumi.Input[_builtins.int]
+    """
+    Server port number
+      - Range: `1`-`65535`
+    """
+    server_ip: pulumi.Input[_builtins.str]
+    """
+    Server IPv4 or IPv6 address
+    """
+    vrf: pulumi.Input[_builtins.str]
+    """
+    VRF name or ID
+    """
+
+@pulumi.input_type
+class NetworkHierarchySecurityLoggingHighSpeedLoggingArgs:
+    def __init__(__self__, *,
+                 port: pulumi.Input[_builtins.int],
+                 server_ip: pulumi.Input[_builtins.str],
+                 vrf: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.int] port: Server port number
+                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.str] server_ip: Server IPv4 or IPv6 address
+        :param pulumi.Input[_builtins.str] vrf: VRF name or ID
+        """
+        pulumi.set(__self__, "port", port)
+        pulumi.set(__self__, "server_ip", server_ip)
+        pulumi.set(__self__, "vrf", vrf)
+
+    @_builtins.property
+    @pulumi.getter
+    def port(self) -> pulumi.Input[_builtins.int]:
+        """
+        Server port number
+          - Range: `1`-`65535`
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "port", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serverIp")
+    def server_ip(self) -> pulumi.Input[_builtins.str]:
+        """
+        Server IPv4 or IPv6 address
+        """
+        return pulumi.get(self, "server_ip")
+
+    @server_ip.setter
+    def server_ip(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "server_ip", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def vrf(self) -> pulumi.Input[_builtins.str]:
+        """
+        VRF name or ID
+        """
+        return pulumi.get(self, "vrf")
+
+    @vrf.setter
+    def vrf(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "vrf", value)
+
+
+class NetworkHierarchySecurityLoggingUtdSyslogArgsDict(TypedDict):
+    server_ip: pulumi.Input[_builtins.str]
+    """
+    Server IPv4 address
+    """
+    vpn: pulumi.Input[_builtins.str]
+    """
+    VPN name or ID
+    """
+
+@pulumi.input_type
+class NetworkHierarchySecurityLoggingUtdSyslogArgs:
+    def __init__(__self__, *,
+                 server_ip: pulumi.Input[_builtins.str],
+                 vpn: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] server_ip: Server IPv4 address
+        :param pulumi.Input[_builtins.str] vpn: VPN name or ID
+        """
+        pulumi.set(__self__, "server_ip", server_ip)
+        pulumi.set(__self__, "vpn", vpn)
+
+    @_builtins.property
+    @pulumi.getter(name="serverIp")
+    def server_ip(self) -> pulumi.Input[_builtins.str]:
+        """
+        Server IPv4 address
+        """
+        return pulumi.get(self, "server_ip")
+
+    @server_ip.setter
+    def server_ip(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "server_ip", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> pulumi.Input[_builtins.str]:
+        """
+        VPN name or ID
+        """
+        return pulumi.get(self, "vpn")
+
+    @vpn.setter
+    def vpn(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "vpn", value)
+
+
 class OtherThousandeyesFeatureVirtualApplicationArgsDict(TypedDict):
     account_group_token: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -36258,6 +36637,311 @@ class OtherThousandeyesFeatureVirtualApplicationArgs:
     @vpn_variable.setter
     def vpn_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "vpn_variable", value)
+
+
+class OtherTrustsecFeatureSxpConnectionArgsDict(TypedDict):
+    max_hold_time: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Configure Connection Maximum hold time <0..65535>, Attribute conditional on (`mode` equal to `peer` and `mode_type` equal to `speaker`) or (`mode` equal to `local` and `mode_type` equal to `listener`)
+      - Range: `0`-`65535`
+      - Default value: `0`
+    """
+    max_hold_time_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on (`mode` equal to `peer` and `mode_type` equal to `speaker`) or (`mode` equal to `local` and `mode_type` equal to `listener`)
+    """
+    min_hold_time: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Configure Connection Minimum hold time <0..65535>, Attribute conditional on `mode_type` not equal to `both`
+      - Range: `0`-`65535`
+      - Default value: `0`
+    """
+    min_hold_time_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on `mode_type` not equal to `both`
+    """
+    mode: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Define Mode of connection
+      - Choices: `local`, `peer`
+      - Default value: `local`
+    """
+    mode_type: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Define Role of a device <speaker/listener/both>
+      - Choices: `speaker`, `listener`, `both`
+      - Default value: `speaker`
+    """
+    peer_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Configure SXP Peer IP address (IPv4)
+    """
+    peer_ip_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    preshared_key: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Define Preshared Key type
+      - Choices: `password`, `none`, `key chain`
+      - Default value: `none`
+    """
+    source_ip: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Configure SXP Source IP address (IPv4)
+    """
+    source_ip_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+    vpn_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
+    """
+    Configure Connection VPN (VRF) ID
+      - Range: `0`-`65527`
+      - Default value: `0`
+    """
+    vpn_id_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name
+    """
+
+@pulumi.input_type
+class OtherTrustsecFeatureSxpConnectionArgs:
+    def __init__(__self__, *,
+                 max_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 max_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 min_hold_time: pulumi.Input[Optional[_builtins.int]] = None,
+                 min_hold_time_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode: pulumi.Input[Optional[_builtins.str]] = None,
+                 mode_type: pulumi.Input[Optional[_builtins.str]] = None,
+                 peer_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 peer_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 preshared_key: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_ip: pulumi.Input[Optional[_builtins.str]] = None,
+                 source_ip_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 vpn_id: pulumi.Input[Optional[_builtins.int]] = None,
+                 vpn_id_variable: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.int] max_hold_time: Configure Connection Maximum hold time <0..65535>, Attribute conditional on (`mode` equal to `peer` and `mode_type` equal to `speaker`) or (`mode` equal to `local` and `mode_type` equal to `listener`)
+                 - Range: `0`-`65535`
+                 - Default value: `0`
+        :param pulumi.Input[_builtins.str] max_hold_time_variable: Variable name, Attribute conditional on (`mode` equal to `peer` and `mode_type` equal to `speaker`) or (`mode` equal to `local` and `mode_type` equal to `listener`)
+        :param pulumi.Input[_builtins.int] min_hold_time: Configure Connection Minimum hold time <0..65535>, Attribute conditional on `mode_type` not equal to `both`
+                 - Range: `0`-`65535`
+                 - Default value: `0`
+        :param pulumi.Input[_builtins.str] min_hold_time_variable: Variable name, Attribute conditional on `mode_type` not equal to `both`
+        :param pulumi.Input[_builtins.str] mode: Define Mode of connection
+                 - Choices: `local`, `peer`
+                 - Default value: `local`
+        :param pulumi.Input[_builtins.str] mode_type: Define Role of a device <speaker/listener/both>
+                 - Choices: `speaker`, `listener`, `both`
+                 - Default value: `speaker`
+        :param pulumi.Input[_builtins.str] peer_ip: Configure SXP Peer IP address (IPv4)
+        :param pulumi.Input[_builtins.str] peer_ip_variable: Variable name
+        :param pulumi.Input[_builtins.str] preshared_key: Define Preshared Key type
+                 - Choices: `password`, `none`, `key chain`
+                 - Default value: `none`
+        :param pulumi.Input[_builtins.str] source_ip: Configure SXP Source IP address (IPv4)
+        :param pulumi.Input[_builtins.str] source_ip_variable: Variable name
+        :param pulumi.Input[_builtins.int] vpn_id: Configure Connection VPN (VRF) ID
+                 - Range: `0`-`65527`
+                 - Default value: `0`
+        :param pulumi.Input[_builtins.str] vpn_id_variable: Variable name
+        """
+        if max_hold_time is not None:
+            pulumi.set(__self__, "max_hold_time", max_hold_time)
+        if max_hold_time_variable is not None:
+            pulumi.set(__self__, "max_hold_time_variable", max_hold_time_variable)
+        if min_hold_time is not None:
+            pulumi.set(__self__, "min_hold_time", min_hold_time)
+        if min_hold_time_variable is not None:
+            pulumi.set(__self__, "min_hold_time_variable", min_hold_time_variable)
+        if mode is not None:
+            pulumi.set(__self__, "mode", mode)
+        if mode_type is not None:
+            pulumi.set(__self__, "mode_type", mode_type)
+        if peer_ip is not None:
+            pulumi.set(__self__, "peer_ip", peer_ip)
+        if peer_ip_variable is not None:
+            pulumi.set(__self__, "peer_ip_variable", peer_ip_variable)
+        if preshared_key is not None:
+            pulumi.set(__self__, "preshared_key", preshared_key)
+        if source_ip is not None:
+            pulumi.set(__self__, "source_ip", source_ip)
+        if source_ip_variable is not None:
+            pulumi.set(__self__, "source_ip_variable", source_ip_variable)
+        if vpn_id is not None:
+            pulumi.set(__self__, "vpn_id", vpn_id)
+        if vpn_id_variable is not None:
+            pulumi.set(__self__, "vpn_id_variable", vpn_id_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="maxHoldTime")
+    def max_hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Configure Connection Maximum hold time <0..65535>, Attribute conditional on (`mode` equal to `peer` and `mode_type` equal to `speaker`) or (`mode` equal to `local` and `mode_type` equal to `listener`)
+          - Range: `0`-`65535`
+          - Default value: `0`
+        """
+        return pulumi.get(self, "max_hold_time")
+
+    @max_hold_time.setter
+    def max_hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "max_hold_time", value)
+
+    @_builtins.property
+    @pulumi.getter(name="maxHoldTimeVariable")
+    def max_hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on (`mode` equal to `peer` and `mode_type` equal to `speaker`) or (`mode` equal to `local` and `mode_type` equal to `listener`)
+        """
+        return pulumi.get(self, "max_hold_time_variable")
+
+    @max_hold_time_variable.setter
+    def max_hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "max_hold_time_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="minHoldTime")
+    def min_hold_time(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Configure Connection Minimum hold time <0..65535>, Attribute conditional on `mode_type` not equal to `both`
+          - Range: `0`-`65535`
+          - Default value: `0`
+        """
+        return pulumi.get(self, "min_hold_time")
+
+    @min_hold_time.setter
+    def min_hold_time(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "min_hold_time", value)
+
+    @_builtins.property
+    @pulumi.getter(name="minHoldTimeVariable")
+    def min_hold_time_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on `mode_type` not equal to `both`
+        """
+        return pulumi.get(self, "min_hold_time_variable")
+
+    @min_hold_time_variable.setter
+    def min_hold_time_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "min_hold_time_variable", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def mode(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Define Mode of connection
+          - Choices: `local`, `peer`
+          - Default value: `local`
+        """
+        return pulumi.get(self, "mode")
+
+    @mode.setter
+    def mode(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "mode", value)
+
+    @_builtins.property
+    @pulumi.getter(name="modeType")
+    def mode_type(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Define Role of a device <speaker/listener/both>
+          - Choices: `speaker`, `listener`, `both`
+          - Default value: `speaker`
+        """
+        return pulumi.get(self, "mode_type")
+
+    @mode_type.setter
+    def mode_type(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "mode_type", value)
+
+    @_builtins.property
+    @pulumi.getter(name="peerIp")
+    def peer_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Configure SXP Peer IP address (IPv4)
+        """
+        return pulumi.get(self, "peer_ip")
+
+    @peer_ip.setter
+    def peer_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "peer_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="peerIpVariable")
+    def peer_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "peer_ip_variable")
+
+    @peer_ip_variable.setter
+    def peer_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "peer_ip_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="presharedKey")
+    def preshared_key(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Define Preshared Key type
+          - Choices: `password`, `none`, `key chain`
+          - Default value: `none`
+        """
+        return pulumi.get(self, "preshared_key")
+
+    @preshared_key.setter
+    def preshared_key(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "preshared_key", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIp")
+    def source_ip(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Configure SXP Source IP address (IPv4)
+        """
+        return pulumi.get(self, "source_ip")
+
+    @source_ip.setter
+    def source_ip(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "source_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpVariable")
+    def source_ip_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_ip_variable")
+
+    @source_ip_variable.setter
+    def source_ip_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "source_ip_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnId")
+    def vpn_id(self) -> pulumi.Input[Optional[_builtins.int]]:
+        """
+        Configure Connection VPN (VRF) ID
+          - Range: `0`-`65527`
+          - Default value: `0`
+        """
+        return pulumi.get(self, "vpn_id")
+
+    @vpn_id.setter
+    def vpn_id(self, value: pulumi.Input[Optional[_builtins.int]]):
+        pulumi.set(self, "vpn_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vpnIdVariable")
+    def vpn_id_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vpn_id_variable")
+
+    @vpn_id_variable.setter
+    def vpn_id_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "vpn_id_variable", value)
 
 
 class OtherUcseFeatureInterfaceArgsDict(TypedDict):
@@ -40706,6 +41390,92 @@ class SecurityPolicyDefinitionEntryArgs:
     @source_zone.setter
     def source_zone(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "source_zone", value)
+
+
+class SecurityPolicyHighSpeedLoggingEntryArgsDict(TypedDict):
+    port: pulumi.Input[_builtins.str]
+    """
+    High Speed Logging Port
+    """
+    server_ip: pulumi.Input[_builtins.str]
+    """
+    High Speed Logging Server IP
+    """
+    vpn: pulumi.Input[_builtins.str]
+    """
+    High Speed Logging VPN
+    """
+    source_interface: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    High Speed Logging Source Interface
+    """
+
+@pulumi.input_type
+class SecurityPolicyHighSpeedLoggingEntryArgs:
+    def __init__(__self__, *,
+                 port: pulumi.Input[_builtins.str],
+                 server_ip: pulumi.Input[_builtins.str],
+                 vpn: pulumi.Input[_builtins.str],
+                 source_interface: pulumi.Input[Optional[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] port: High Speed Logging Port
+        :param pulumi.Input[_builtins.str] server_ip: High Speed Logging Server IP
+        :param pulumi.Input[_builtins.str] vpn: High Speed Logging VPN
+        :param pulumi.Input[_builtins.str] source_interface: High Speed Logging Source Interface
+        """
+        pulumi.set(__self__, "port", port)
+        pulumi.set(__self__, "server_ip", server_ip)
+        pulumi.set(__self__, "vpn", vpn)
+        if source_interface is not None:
+            pulumi.set(__self__, "source_interface", source_interface)
+
+    @_builtins.property
+    @pulumi.getter
+    def port(self) -> pulumi.Input[_builtins.str]:
+        """
+        High Speed Logging Port
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "port", value)
+
+    @_builtins.property
+    @pulumi.getter(name="serverIp")
+    def server_ip(self) -> pulumi.Input[_builtins.str]:
+        """
+        High Speed Logging Server IP
+        """
+        return pulumi.get(self, "server_ip")
+
+    @server_ip.setter
+    def server_ip(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "server_ip", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def vpn(self) -> pulumi.Input[_builtins.str]:
+        """
+        High Speed Logging VPN
+        """
+        return pulumi.get(self, "vpn")
+
+    @vpn.setter
+    def vpn(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "vpn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceInterface")
+    def source_interface(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        High Speed Logging Source Interface
+        """
+        return pulumi.get(self, "source_interface")
+
+    @source_interface.setter
+    def source_interface(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "source_interface", value)
 
 
 class SecurityPolicyLoggingArgsDict(TypedDict):
@@ -66752,9 +67522,25 @@ class SystemLoggingFeatureTlsProfileArgs:
 
 
 class SystemNtpFeatureAuthenticationKeyArgsDict(TypedDict):
+    cmac_aes128_value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+    """
+    cmac_aes128_value_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+    """
+    hmac_sha2_value: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+    """
+    hmac_sha2_value_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
+    """
+    Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+    """
     key_id: NotRequired[pulumi.Input[Optional[_builtins.int]]]
     """
-    MD5 authentication key ID
+    Authentication key ID
       - Range: `1`-`4294967295`
     """
     key_id_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
@@ -66773,17 +67559,33 @@ class SystemNtpFeatureAuthenticationKeyArgsDict(TypedDict):
 @pulumi.input_type
 class SystemNtpFeatureAuthenticationKeyArgs:
     def __init__(__self__, *,
+                 cmac_aes128_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 cmac_aes128_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_sha2_value: pulumi.Input[Optional[_builtins.str]] = None,
+                 hmac_sha2_value_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  key_id: pulumi.Input[Optional[_builtins.int]] = None,
                  key_id_variable: pulumi.Input[Optional[_builtins.str]] = None,
                  md5_value: pulumi.Input[Optional[_builtins.str]] = None,
                  md5_value_variable: pulumi.Input[Optional[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.int] key_id: MD5 authentication key ID
+        :param pulumi.Input[_builtins.str] cmac_aes128_value: CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        :param pulumi.Input[_builtins.str] cmac_aes128_value_variable: Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        :param pulumi.Input[_builtins.str] hmac_sha2_value: HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        :param pulumi.Input[_builtins.str] hmac_sha2_value_variable: Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        :param pulumi.Input[_builtins.int] key_id: Authentication key ID
                  - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] key_id_variable: Variable name
         :param pulumi.Input[_builtins.str] md5_value: Enter cleartext or AES-encrypted MD5 authentication key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         :param pulumi.Input[_builtins.str] md5_value_variable: Variable name
         """
+        if cmac_aes128_value is not None:
+            pulumi.set(__self__, "cmac_aes128_value", cmac_aes128_value)
+        if cmac_aes128_value_variable is not None:
+            pulumi.set(__self__, "cmac_aes128_value_variable", cmac_aes128_value_variable)
+        if hmac_sha2_value is not None:
+            pulumi.set(__self__, "hmac_sha2_value", hmac_sha2_value)
+        if hmac_sha2_value_variable is not None:
+            pulumi.set(__self__, "hmac_sha2_value_variable", hmac_sha2_value_variable)
         if key_id is not None:
             pulumi.set(__self__, "key_id", key_id)
         if key_id_variable is not None:
@@ -66794,10 +67596,58 @@ class SystemNtpFeatureAuthenticationKeyArgs:
             pulumi.set(__self__, "md5_value_variable", md5_value_variable)
 
     @_builtins.property
+    @pulumi.getter(name="cmacAes128Value")
+    def cmac_aes128_value(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        """
+        return pulumi.get(self, "cmac_aes128_value")
+
+    @cmac_aes128_value.setter
+    def cmac_aes128_value(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "cmac_aes128_value", value)
+
+    @_builtins.property
+    @pulumi.getter(name="cmacAes128ValueVariable")
+    def cmac_aes128_value_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        """
+        return pulumi.get(self, "cmac_aes128_value_variable")
+
+    @cmac_aes128_value_variable.setter
+    def cmac_aes128_value_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "cmac_aes128_value_variable", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hmacSha2Value")
+    def hmac_sha2_value(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        """
+        return pulumi.get(self, "hmac_sha2_value")
+
+    @hmac_sha2_value.setter
+    def hmac_sha2_value(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "hmac_sha2_value", value)
+
+    @_builtins.property
+    @pulumi.getter(name="hmacSha2ValueVariable")
+    def hmac_sha2_value_variable(self) -> pulumi.Input[Optional[_builtins.str]]:
+        """
+        Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+        """
+        return pulumi.get(self, "hmac_sha2_value_variable")
+
+    @hmac_sha2_value_variable.setter
+    def hmac_sha2_value_variable(self, value: pulumi.Input[Optional[_builtins.str]]):
+        pulumi.set(self, "hmac_sha2_value_variable", value)
+
+    @_builtins.property
     @pulumi.getter(name="keyId")
     def key_id(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
-        MD5 authentication key ID
+        Authentication key ID
           - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "key_id")
@@ -68269,7 +69119,7 @@ class SystemSnmpFeatureUserArgsDict(TypedDict):
     authentication_protocol: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
     Configure authentication protocol
-      - Choices: `sha`
+      - Choices: `sha`, `sha256`
     """
     authentication_protocol_variable: NotRequired[pulumi.Input[Optional[_builtins.str]]]
     """
@@ -68323,7 +69173,7 @@ class SystemSnmpFeatureUserArgs:
         :param pulumi.Input[_builtins.str] authentication_password: Specify authentication protocol password
         :param pulumi.Input[_builtins.str] authentication_password_variable: Variable name
         :param pulumi.Input[_builtins.str] authentication_protocol: Configure authentication protocol
-                 - Choices: `sha`
+                 - Choices: `sha`, `sha256`
         :param pulumi.Input[_builtins.str] authentication_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] group: Name of the SNMP group
         :param pulumi.Input[_builtins.str] group_variable: Variable name
@@ -68386,7 +69236,7 @@ class SystemSnmpFeatureUserArgs:
     def authentication_protocol(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
         Configure authentication protocol
-          - Choices: `sha`
+          - Choices: `sha`, `sha256`
         """
         return pulumi.get(self, "authentication_protocol")
 

@@ -66,12 +66,12 @@ type LookupSecurityPolicyResult struct {
 	DirectInternetApplications string `pulumi:"directInternetApplications"`
 	// Failure mode
 	FailureMode string `pulumi:"failureMode"`
+	// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+	HighSpeedLoggingEntries []GetSecurityPolicyHighSpeedLoggingEntry `pulumi:"highSpeedLoggingEntries"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp string `pulumi:"highSpeedLoggingServerIp"`
 	// High Speed Logging Port
 	HighSpeedLoggingServerPort string `pulumi:"highSpeedLoggingServerPort"`
-	// High Speed Logging Source Interface
-	HighSpeedLoggingServerSourceInterface string `pulumi:"highSpeedLoggingServerSourceInterface"`
 	// High Speed Logging VPN
 	HighSpeedLoggingVpn string `pulumi:"highSpeedLoggingVpn"`
 	// The id of the object
@@ -162,6 +162,13 @@ func (o LookupSecurityPolicyResultOutput) FailureMode() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.FailureMode }).(pulumi.StringOutput)
 }
 
+// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingEntries() GetSecurityPolicyHighSpeedLoggingEntryArrayOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) []GetSecurityPolicyHighSpeedLoggingEntry {
+		return v.HighSpeedLoggingEntries
+	}).(GetSecurityPolicyHighSpeedLoggingEntryArrayOutput)
+}
+
 // High Speed Logging Server IP
 func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingServerIp() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.HighSpeedLoggingServerIp }).(pulumi.StringOutput)
@@ -170,11 +177,6 @@ func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingServerIp() pulumi.Stri
 // High Speed Logging Port
 func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingServerPort() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.HighSpeedLoggingServerPort }).(pulumi.StringOutput)
-}
-
-// High Speed Logging Source Interface
-func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingServerSourceInterface() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.HighSpeedLoggingServerSourceInterface }).(pulumi.StringOutput)
 }
 
 // High Speed Logging VPN

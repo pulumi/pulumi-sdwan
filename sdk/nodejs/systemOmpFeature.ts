@@ -250,7 +250,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      */
     declare public readonly ecmpLimit: pulumi.Output<number | undefined>;
@@ -279,7 +279,7 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     declare public readonly gracefulRestart: pulumi.Output<boolean | undefined>;
     /**
      * Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      */
     declare public readonly gracefulRestartTimer: pulumi.Output<number | undefined>;
@@ -711,7 +711,7 @@ export interface SystemOmpFeatureState {
     description?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number | undefined>;
@@ -740,7 +740,7 @@ export interface SystemOmpFeatureState {
     gracefulRestart?: pulumi.Input<boolean | undefined>;
     /**
      * Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      */
     gracefulRestartTimer?: pulumi.Input<number | undefined>;
@@ -1017,7 +1017,7 @@ export interface SystemOmpFeatureArgs {
     description?: pulumi.Input<string | undefined>;
     /**
      * Set maximum number of OMP paths to install in cEdge route table
-     *   - At Least: `1`
+     *   - Range: `1`-`16`
      *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number | undefined>;
@@ -1046,7 +1046,7 @@ export interface SystemOmpFeatureArgs {
     gracefulRestart?: pulumi.Input<boolean | undefined>;
     /**
      * Graceful Restart Timer (seconds)
-     *   - Range: `1`-`604800`
+     *   - Range: `1`-`31556952`
      *   - Default value: `43200`
      */
     gracefulRestartTimer?: pulumi.Input<number | undefined>;

@@ -227,7 +227,7 @@ public final class SystemSecurityFeatureState extends com.pulumi.resources.Resou
 
     /**
      * Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      * 
      */
@@ -236,7 +236,7 @@ public final class SystemSecurityFeatureState extends com.pulumi.resources.Resou
 
     /**
      * @return Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      * 
      */
@@ -628,7 +628,7 @@ public final class SystemSecurityFeatureState extends com.pulumi.resources.Resou
 
         /**
          * @param rekey Set how often to change the AES key for DTLS connections
-         *   - Range: `10`-`1209600`
+         *   - Range: `10`-`63113904`
          *   - Default value: `86400`
          * 
          * @return builder
@@ -641,7 +641,7 @@ public final class SystemSecurityFeatureState extends com.pulumi.resources.Resou
 
         /**
          * @param rekey Set how often to change the AES key for DTLS connections
-         *   - Range: `10`-`1209600`
+         *   - Range: `10`-`63113904`
          *   - Default value: `86400`
          * 
          * @return builder

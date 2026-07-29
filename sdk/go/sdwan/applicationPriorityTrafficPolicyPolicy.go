@@ -54,7 +54,9 @@ import (
 //						Actions: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArray{
 //							&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArgs{
 //								SetParameters: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArray{
-//									&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs{},
+//									&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs{
+//										Dscp: pulumi.Int(18),
+//									},
 //								},
 //							},
 //						},

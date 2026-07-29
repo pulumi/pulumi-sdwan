@@ -26,13 +26,16 @@ class GetTopologyGroupResult:
     """
     A collection of values returned by getTopologyGroup.
     """
-    def __init__(__self__, description=None, feature_profile_ids=None, id=None, name=None, solution=None):
+    def __init__(__self__, description=None, feature_profile_ids=None, feature_versions=None, id=None, name=None, solution=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
         if feature_profile_ids and not isinstance(feature_profile_ids, list):
             raise TypeError("Expected argument 'feature_profile_ids' to be a list")
         pulumi.set(__self__, "feature_profile_ids", feature_profile_ids)
+        if feature_versions and not isinstance(feature_versions, list):
+            raise TypeError("Expected argument 'feature_versions' to be a list")
+        pulumi.set(__self__, "feature_versions", feature_versions)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -58,6 +61,14 @@ class GetTopologyGroupResult:
         List of feature profile IDs
         """
         return pulumi.get(self, "feature_profile_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> Sequence[_builtins.str]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
 
     @_builtins.property
     @pulumi.getter
@@ -92,6 +103,7 @@ class AwaitableGetTopologyGroupResult(GetTopologyGroupResult):
         return GetTopologyGroupResult(
             description=self.description,
             feature_profile_ids=self.feature_profile_ids,
+            feature_versions=self.feature_versions,
             id=self.id,
             name=self.name,
             solution=self.solution)
@@ -122,6 +134,7 @@ def get_topology_group(id: Optional[_builtins.str] = None,
     return AwaitableGetTopologyGroupResult(
         description=pulumi.get(__ret__, 'description'),
         feature_profile_ids=pulumi.get(__ret__, 'feature_profile_ids'),
+        feature_versions=pulumi.get(__ret__, 'feature_versions'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         solution=pulumi.get(__ret__, 'solution'))
@@ -149,6 +162,7 @@ def get_topology_group_output(id: pulumi.Input[Optional[_builtins.str]] = None,
     return __ret__.apply(lambda __response__: GetTopologyGroupResult(
         description=pulumi.get(__response__, 'description'),
         feature_profile_ids=pulumi.get(__response__, 'feature_profile_ids'),
+        feature_versions=pulumi.get(__response__, 'feature_versions'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         solution=pulumi.get(__response__, 'solution')))

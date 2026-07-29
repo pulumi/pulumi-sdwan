@@ -14,7 +14,23 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetSystemNtpFeatureAuthenticationKeyResult
     {
         /// <summary>
-        /// MD5 authentication key ID
+        /// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+        /// </summary>
+        public readonly string CmacAes128Value;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string CmacAes128ValueVariable;
+        /// <summary>
+        /// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+        /// </summary>
+        public readonly string HmacSha2Value;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string HmacSha2ValueVariable;
+        /// <summary>
+        /// Authentication key ID
         /// </summary>
         public readonly int KeyId;
         /// <summary>
@@ -32,6 +48,14 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetSystemNtpFeatureAuthenticationKeyResult(
+            string cmacAes128Value,
+
+            string cmacAes128ValueVariable,
+
+            string hmacSha2Value,
+
+            string hmacSha2ValueVariable,
+
             int keyId,
 
             string keyIdVariable,
@@ -40,6 +64,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string md5ValueVariable)
         {
+            CmacAes128Value = cmacAes128Value;
+            CmacAes128ValueVariable = cmacAes128ValueVariable;
+            HmacSha2Value = hmacSha2Value;
+            HmacSha2ValueVariable = hmacSha2ValueVariable;
             KeyId = keyId;
             KeyIdVariable = keyIdVariable;
             Md5Value = md5Value;

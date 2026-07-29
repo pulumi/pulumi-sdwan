@@ -337,7 +337,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string OverlayIdVariable;
         /// <summary>
-        /// Enable port hopping
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
         /// </summary>
         public readonly bool PortHopping;
         /// <summary>

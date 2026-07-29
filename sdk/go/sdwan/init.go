@@ -191,12 +191,20 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &MeshTopologyPolicyDefinition{}
 	case "sdwan:index/mirrorPolicyObject:MirrorPolicyObject":
 		r = &MirrorPolicyObject{}
+	case "sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd":
+		r = &NetworkHierarchyCflowd{}
+	case "sdwan:index/networkHierarchyNode:NetworkHierarchyNode":
+		r = &NetworkHierarchyNode{}
+	case "sdwan:index/networkHierarchySecurityLogging:NetworkHierarchySecurityLogging":
+		r = &NetworkHierarchySecurityLogging{}
 	case "sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition":
 		r = &ObjectGroupPolicyDefinition{}
 	case "sdwan:index/otherFeatureProfile:OtherFeatureProfile":
 		r = &OtherFeatureProfile{}
 	case "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature":
 		r = &OtherThousandeyesFeature{}
+	case "sdwan:index/otherTrustsecFeature:OtherTrustsecFeature":
+		r = &OtherTrustsecFeature{}
 	case "sdwan:index/otherUcseFeature:OtherUcseFeature":
 		r = &OtherUcseFeature{}
 	case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
@@ -993,6 +1001,21 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/networkHierarchyCflowd",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/networkHierarchyNode",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/networkHierarchySecurityLogging",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/objectGroupPolicyDefinition",
 		&module{version},
 	)
@@ -1004,6 +1027,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/otherThousandeyesFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/otherTrustsecFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

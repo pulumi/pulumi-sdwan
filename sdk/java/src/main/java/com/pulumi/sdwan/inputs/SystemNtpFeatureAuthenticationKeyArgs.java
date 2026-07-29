@@ -17,7 +17,67 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
     public static final SystemNtpFeatureAuthenticationKeyArgs Empty = new SystemNtpFeatureAuthenticationKeyArgs();
 
     /**
-     * MD5 authentication key ID
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    @Import(name="cmacAes128Value")
+    private @Nullable Output<String> cmacAes128Value;
+
+    /**
+     * @return CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<Output<String>> cmacAes128Value() {
+        return Optional.ofNullable(this.cmacAes128Value);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    @Import(name="cmacAes128ValueVariable")
+    private @Nullable Output<String> cmacAes128ValueVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<Output<String>> cmacAes128ValueVariable() {
+        return Optional.ofNullable(this.cmacAes128ValueVariable);
+    }
+
+    /**
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    @Import(name="hmacSha2Value")
+    private @Nullable Output<String> hmacSha2Value;
+
+    /**
+     * @return HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<Output<String>> hmacSha2Value() {
+        return Optional.ofNullable(this.hmacSha2Value);
+    }
+
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    @Import(name="hmacSha2ValueVariable")
+    private @Nullable Output<String> hmacSha2ValueVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     * 
+     */
+    public Optional<Output<String>> hmacSha2ValueVariable() {
+        return Optional.ofNullable(this.hmacSha2ValueVariable);
+    }
+
+    /**
+     * Authentication key ID
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -25,7 +85,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
     private @Nullable Output<Integer> keyId;
 
     /**
-     * @return MD5 authentication key ID
+     * @return Authentication key ID
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -81,6 +141,10 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
     private SystemNtpFeatureAuthenticationKeyArgs() {}
 
     private SystemNtpFeatureAuthenticationKeyArgs(SystemNtpFeatureAuthenticationKeyArgs $) {
+        this.cmacAes128Value = $.cmacAes128Value;
+        this.cmacAes128ValueVariable = $.cmacAes128ValueVariable;
+        this.hmacSha2Value = $.hmacSha2Value;
+        this.hmacSha2ValueVariable = $.hmacSha2ValueVariable;
         this.keyId = $.keyId;
         this.keyIdVariable = $.keyIdVariable;
         this.md5Value = $.md5Value;
@@ -106,7 +170,91 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyId MD5 authentication key ID
+         * @param cmacAes128Value CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128Value(@Nullable Output<String> cmacAes128Value) {
+            $.cmacAes128Value = cmacAes128Value;
+            return this;
+        }
+
+        /**
+         * @param cmacAes128Value CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128Value(String cmacAes128Value) {
+            return cmacAes128Value(Output.of(cmacAes128Value));
+        }
+
+        /**
+         * @param cmacAes128ValueVariable Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128ValueVariable(@Nullable Output<String> cmacAes128ValueVariable) {
+            $.cmacAes128ValueVariable = cmacAes128ValueVariable;
+            return this;
+        }
+
+        /**
+         * @param cmacAes128ValueVariable Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cmacAes128ValueVariable(String cmacAes128ValueVariable) {
+            return cmacAes128ValueVariable(Output.of(cmacAes128ValueVariable));
+        }
+
+        /**
+         * @param hmacSha2Value HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2Value(@Nullable Output<String> hmacSha2Value) {
+            $.hmacSha2Value = hmacSha2Value;
+            return this;
+        }
+
+        /**
+         * @param hmacSha2Value HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2Value(String hmacSha2Value) {
+            return hmacSha2Value(Output.of(hmacSha2Value));
+        }
+
+        /**
+         * @param hmacSha2ValueVariable Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2ValueVariable(@Nullable Output<String> hmacSha2ValueVariable) {
+            $.hmacSha2ValueVariable = hmacSha2ValueVariable;
+            return this;
+        }
+
+        /**
+         * @param hmacSha2ValueVariable Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hmacSha2ValueVariable(String hmacSha2ValueVariable) {
+            return hmacSha2ValueVariable(Output.of(hmacSha2ValueVariable));
+        }
+
+        /**
+         * @param keyId Authentication key ID
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -118,7 +266,7 @@ public final class SystemNtpFeatureAuthenticationKeyArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyId MD5 authentication key ID
+         * @param keyId Authentication key ID
          *   - Range: `1`-`4294967295`
          * 
          * @return builder

@@ -45,8 +45,10 @@ import (
 //				},
 //				AuthenticationKeys: sdwan.SystemNtpFeatureAuthenticationKeyArray{
 //					&sdwan.SystemNtpFeatureAuthenticationKeyArgs{
-//						KeyId:    pulumi.Int(49737),
-//						Md5Value: pulumi.String("$CRYPT_CLUSTER"),
+//						KeyId:           pulumi.Int(49737),
+//						Md5Value:        pulumi.String("$CRYPT_CLUSTER"),
+//						HmacSha2Value:   pulumi.String("hmac-sha2-key-example"),
+//						CmacAes128Value: pulumi.String("cmac-aes128-key-1234"),
 //					},
 //				},
 //				TrustedKeys: pulumi.IntArray{

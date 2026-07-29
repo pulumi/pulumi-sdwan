@@ -23,7 +23,7 @@ public final class SystemSnmpFeatureUser {
     private @Nullable String authenticationPasswordVariable;
     /**
      * @return Configure authentication protocol
-     *   - Choices: `sha`
+     *   - Choices: `sha`, `sha256`
      * 
      */
     private @Nullable String authenticationProtocol;
@@ -86,7 +86,7 @@ public final class SystemSnmpFeatureUser {
     }
     /**
      * @return Configure authentication protocol
-     *   - Choices: `sha`
+     *   - Choices: `sha`, `sha256`
      * 
      */
     public Optional<String> authenticationProtocol() {

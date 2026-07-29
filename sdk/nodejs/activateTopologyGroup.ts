@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * This resource can activate a topology group. Only one topology group can be active at a time.
+ * This resource can activate a topology group. Only one topology group can be active at a time. To switch the active group, change the `id` attribute on the existing resource in place instead of replacing the resource (destroy + create); an in-place change issues a single activation that supersedes the previous group, whereas a replacement deactivates the previous group first and withdraws all overlay control policy from the vSmarts during the switch.
  *   - Minimum SD-WAN Manager version: `20.15.0`
  */
 export class ActivateTopologyGroup extends pulumi.CustomResource {
@@ -41,9 +41,13 @@ export class ActivateTopologyGroup extends pulumi.CustomResource {
      */
     declare public readonly activateTopologyGroupId: pulumi.Output<string>;
     /**
-     * The version of the topology group
+     * Server-side version of the topology group captured at last activation. Used internally for drift detection.
      */
-    declare public readonly version: pulumi.Output<number | undefined>;
+    declare public /*out*/ readonly deployedVersion: pulumi.Output<number>;
+    /**
+     * List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+     */
+    declare public readonly featureVersions: pulumi.Output<string[] | undefined>;
 
     /**
      * Create a ActivateTopologyGroup resource with the given unique name, arguments, and options.
@@ -59,14 +63,16 @@ export class ActivateTopologyGroup extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ActivateTopologyGroupState | undefined;
             resourceInputs["activateTopologyGroupId"] = state?.activateTopologyGroupId;
-            resourceInputs["version"] = state?.version;
+            resourceInputs["deployedVersion"] = state?.deployedVersion;
+            resourceInputs["featureVersions"] = state?.featureVersions;
         } else {
             const args = argsOrState as ActivateTopologyGroupArgs | undefined;
             if (args?.activateTopologyGroupId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'activateTopologyGroupId'");
             }
             resourceInputs["activateTopologyGroupId"] = args?.activateTopologyGroupId;
-            resourceInputs["version"] = args?.version;
+            resourceInputs["featureVersions"] = args?.featureVersions;
+            resourceInputs["deployedVersion"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ActivateTopologyGroup.__pulumiType, name, resourceInputs, opts);
@@ -82,9 +88,13 @@ export interface ActivateTopologyGroupState {
      */
     activateTopologyGroupId?: pulumi.Input<string | undefined>;
     /**
-     * The version of the topology group
+     * Server-side version of the topology group captured at last activation. Used internally for drift detection.
      */
-    version?: pulumi.Input<number | undefined>;
+    deployedVersion?: pulumi.Input<number | undefined>;
+    /**
+     * List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+     */
+    featureVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
 /**
@@ -96,7 +106,7 @@ export interface ActivateTopologyGroupArgs {
      */
     activateTopologyGroupId: pulumi.Input<string>;
     /**
-     * The version of the topology group
+     * List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
      */
-    version?: pulumi.Input<number | undefined>;
+    featureVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }

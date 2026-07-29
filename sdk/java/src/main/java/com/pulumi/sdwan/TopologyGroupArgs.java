@@ -48,6 +48,21 @@ public final class TopologyGroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * List of all associated feature versions
+     * 
+     */
+    @Import(name="featureVersions")
+    private @Nullable Output<List<String>> featureVersions;
+
+    /**
+     * @return List of all associated feature versions
+     * 
+     */
+    public Optional<Output<List<String>>> featureVersions() {
+        return Optional.ofNullable(this.featureVersions);
+    }
+
+    /**
      * The name of the topology group
      * 
      */
@@ -84,6 +99,7 @@ public final class TopologyGroupArgs extends com.pulumi.resources.ResourceArgs {
     private TopologyGroupArgs(TopologyGroupArgs $) {
         this.description = $.description;
         this.featureProfileIds = $.featureProfileIds;
+        this.featureVersions = $.featureVersions;
         this.name = $.name;
         this.solution = $.solution;
     }
@@ -156,6 +172,37 @@ public final class TopologyGroupArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder featureProfileIds(String... featureProfileIds) {
             return featureProfileIds(List.of(featureProfileIds));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(@Nullable Output<List<String>> featureVersions) {
+            $.featureVersions = featureVersions;
+            return this;
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(List<String> featureVersions) {
+            return featureVersions(Output.of(featureVersions));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(String... featureVersions) {
+            return featureVersions(List.of(featureVersions));
         }
 
         /**

@@ -157,7 +157,7 @@ type LookupSystemBasicFeatureResult struct {
 	OverlayId int `pulumi:"overlayId"`
 	// Variable name
 	OverlayIdVariable string `pulumi:"overlayIdVariable"`
-	// Enable port hopping
+	// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 	PortHopping bool `pulumi:"portHopping"`
 	// Variable name
 	PortHoppingVariable string `pulumi:"portHoppingVariable"`
@@ -477,7 +477,7 @@ func (o LookupSystemBasicFeatureResultOutput) OverlayIdVariable() pulumi.StringO
 	return o.ApplyT(func(v LookupSystemBasicFeatureResult) string { return v.OverlayIdVariable }).(pulumi.StringOutput)
 }
 
-// Enable port hopping
+// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
 func (o LookupSystemBasicFeatureResultOutput) PortHopping() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSystemBasicFeatureResult) bool { return v.PortHopping }).(pulumi.BoolOutput)
 }

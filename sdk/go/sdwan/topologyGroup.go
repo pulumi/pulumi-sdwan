@@ -60,6 +60,8 @@ type TopologyGroup struct {
 	Description pulumi.StringOutput `pulumi:"description"`
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayOutput `pulumi:"featureProfileIds"`
+	// List of all associated feature versions
+	FeatureVersions pulumi.StringArrayOutput `pulumi:"featureVersions"`
 	// The name of the topology group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Type of solution
@@ -107,6 +109,8 @@ type topologyGroupState struct {
 	Description *string `pulumi:"description"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
+	// List of all associated feature versions
+	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the topology group
 	Name *string `pulumi:"name"`
 	// Type of solution
@@ -119,6 +123,8 @@ type TopologyGroupState struct {
 	Description pulumi.StringPtrInput
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayInput
+	// List of all associated feature versions
+	FeatureVersions pulumi.StringArrayInput
 	// The name of the topology group
 	Name pulumi.StringPtrInput
 	// Type of solution
@@ -135,6 +141,8 @@ type topologyGroupArgs struct {
 	Description string `pulumi:"description"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
+	// List of all associated feature versions
+	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the topology group
 	Name *string `pulumi:"name"`
 	// Type of solution
@@ -148,6 +156,8 @@ type TopologyGroupArgs struct {
 	Description pulumi.StringInput
 	// List of feature profile IDs
 	FeatureProfileIds pulumi.StringArrayInput
+	// List of all associated feature versions
+	FeatureVersions pulumi.StringArrayInput
 	// The name of the topology group
 	Name pulumi.StringPtrInput
 	// Type of solution
@@ -250,6 +260,11 @@ func (o TopologyGroupOutput) Description() pulumi.StringOutput {
 // List of feature profile IDs
 func (o TopologyGroupOutput) FeatureProfileIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TopologyGroup) pulumi.StringArrayOutput { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
+}
+
+// List of all associated feature versions
+func (o TopologyGroupOutput) FeatureVersions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *TopologyGroup) pulumi.StringArrayOutput { return v.FeatureVersions }).(pulumi.StringArrayOutput)
 }
 
 // The name of the topology group

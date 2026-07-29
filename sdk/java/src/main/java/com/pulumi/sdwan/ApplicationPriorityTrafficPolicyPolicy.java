@@ -66,6 +66,7 @@ import javax.annotation.Nullable;
  *                     .build())
  *                 .actions(ApplicationPriorityTrafficPolicyPolicySequenceActionArgs.builder()
  *                     .setParameters(ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs.builder()
+ *                         .dscp(18)
  *                         .build())
  *                     .build())
  *                 .build())

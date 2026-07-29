@@ -138,6 +138,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string FailureMode;
         /// <summary>
+        /// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetSecurityPolicyHighSpeedLoggingEntryResult> HighSpeedLoggingEntries;
+        /// <summary>
         /// High Speed Logging Server IP
         /// </summary>
         public readonly string HighSpeedLoggingServerIp;
@@ -145,10 +149,6 @@ namespace Pulumi.Sdwan
         /// High Speed Logging Port
         /// </summary>
         public readonly string HighSpeedLoggingServerPort;
-        /// <summary>
-        /// High Speed Logging Source Interface
-        /// </summary>
-        public readonly string HighSpeedLoggingServerSourceInterface;
         /// <summary>
         /// High Speed Logging VPN
         /// </summary>
@@ -219,11 +219,11 @@ namespace Pulumi.Sdwan
 
             string failureMode,
 
+            ImmutableArray<Outputs.GetSecurityPolicyHighSpeedLoggingEntryResult> highSpeedLoggingEntries,
+
             string highSpeedLoggingServerIp,
 
             string highSpeedLoggingServerPort,
-
-            string highSpeedLoggingServerSourceInterface,
 
             string highSpeedLoggingVpn,
 
@@ -260,9 +260,9 @@ namespace Pulumi.Sdwan
             Description = description;
             DirectInternetApplications = directInternetApplications;
             FailureMode = failureMode;
+            HighSpeedLoggingEntries = highSpeedLoggingEntries;
             HighSpeedLoggingServerIp = highSpeedLoggingServerIp;
             HighSpeedLoggingServerPort = highSpeedLoggingServerPort;
-            HighSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
             HighSpeedLoggingVpn = highSpeedLoggingVpn;
             Id = id;
             ImcpUnreachableAllow = imcpUnreachableAllow;
