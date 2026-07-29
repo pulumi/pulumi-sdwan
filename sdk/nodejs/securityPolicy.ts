@@ -92,19 +92,19 @@ export class SecurityPolicy extends pulumi.CustomResource {
      */
     declare public readonly failureMode: pulumi.Output<string | undefined>;
     /**
-     * High Speed Logging Server IP
+     * High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     */
+    declare public readonly highSpeedLoggingEntries: pulumi.Output<outputs.SecurityPolicyHighSpeedLoggingEntry[] | undefined>;
+    /**
+     * High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      */
     declare public readonly highSpeedLoggingServerIp: pulumi.Output<string | undefined>;
     /**
-     * High Speed Logging Port
+     * High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      */
     declare public readonly highSpeedLoggingServerPort: pulumi.Output<string | undefined>;
     /**
-     * High Speed Logging Source Interface
-     */
-    declare public readonly highSpeedLoggingServerSourceInterface: pulumi.Output<string | undefined>;
-    /**
-     * High Speed Logging VPN
+     * High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      */
     declare public readonly highSpeedLoggingVpn: pulumi.Output<string | undefined>;
     /**
@@ -183,9 +183,9 @@ export class SecurityPolicy extends pulumi.CustomResource {
             resourceInputs["description"] = state?.description;
             resourceInputs["directInternetApplications"] = state?.directInternetApplications;
             resourceInputs["failureMode"] = state?.failureMode;
+            resourceInputs["highSpeedLoggingEntries"] = state?.highSpeedLoggingEntries;
             resourceInputs["highSpeedLoggingServerIp"] = state?.highSpeedLoggingServerIp;
             resourceInputs["highSpeedLoggingServerPort"] = state?.highSpeedLoggingServerPort;
-            resourceInputs["highSpeedLoggingServerSourceInterface"] = state?.highSpeedLoggingServerSourceInterface;
             resourceInputs["highSpeedLoggingVpn"] = state?.highSpeedLoggingVpn;
             resourceInputs["imcpUnreachableAllow"] = state?.imcpUnreachableAllow;
             resourceInputs["loggings"] = state?.loggings;
@@ -213,9 +213,9 @@ export class SecurityPolicy extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["directInternetApplications"] = args?.directInternetApplications;
             resourceInputs["failureMode"] = args?.failureMode;
+            resourceInputs["highSpeedLoggingEntries"] = args?.highSpeedLoggingEntries;
             resourceInputs["highSpeedLoggingServerIp"] = args?.highSpeedLoggingServerIp;
             resourceInputs["highSpeedLoggingServerPort"] = args?.highSpeedLoggingServerPort;
-            resourceInputs["highSpeedLoggingServerSourceInterface"] = args?.highSpeedLoggingServerSourceInterface;
             resourceInputs["highSpeedLoggingVpn"] = args?.highSpeedLoggingVpn;
             resourceInputs["imcpUnreachableAllow"] = args?.imcpUnreachableAllow;
             resourceInputs["loggings"] = args?.loggings;
@@ -264,19 +264,19 @@ export interface SecurityPolicyState {
      */
     failureMode?: pulumi.Input<string | undefined>;
     /**
-     * High Speed Logging Server IP
+     * High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     */
+    highSpeedLoggingEntries?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyHighSpeedLoggingEntry>[] | undefined>;
+    /**
+     * High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      */
     highSpeedLoggingServerIp?: pulumi.Input<string | undefined>;
     /**
-     * High Speed Logging Port
+     * High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      */
     highSpeedLoggingServerPort?: pulumi.Input<string | undefined>;
     /**
-     * High Speed Logging Source Interface
-     */
-    highSpeedLoggingServerSourceInterface?: pulumi.Input<string | undefined>;
-    /**
-     * High Speed Logging VPN
+     * High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      */
     highSpeedLoggingVpn?: pulumi.Input<string | undefined>;
     /**
@@ -366,19 +366,19 @@ export interface SecurityPolicyArgs {
      */
     failureMode?: pulumi.Input<string | undefined>;
     /**
-     * High Speed Logging Server IP
+     * High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     */
+    highSpeedLoggingEntries?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyHighSpeedLoggingEntry>[] | undefined>;
+    /**
+     * High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      */
     highSpeedLoggingServerIp?: pulumi.Input<string | undefined>;
     /**
-     * High Speed Logging Port
+     * High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      */
     highSpeedLoggingServerPort?: pulumi.Input<string | undefined>;
     /**
-     * High Speed Logging Source Interface
-     */
-    highSpeedLoggingServerSourceInterface?: pulumi.Input<string | undefined>;
-    /**
-     * High Speed Logging VPN
+     * High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      */
     highSpeedLoggingVpn?: pulumi.Input<string | undefined>;
     /**

@@ -13258,6 +13258,82 @@ export interface GetMeshTopologyPolicyDefinitionRegion {
     siteListVersions: string[];
 }
 
+export interface GetNetworkHierarchyCflowdCollector {
+    /**
+     * Collector IPv4 or IPv6 address
+     */
+    address: string;
+    /**
+     * Enable BFD metrics exporting
+     */
+    bfdMetricsExport: boolean;
+    /**
+     * BFD export interval in seconds. Only applied when `bfdMetricsExport` is `true`; if set while `bfdMetricsExport` is `false` or unset, the value is ignored by SD-WAN Manager.
+     */
+    exportInterval: number;
+    /**
+     * Enable export spreading
+     */
+    exportSpread: boolean;
+    /**
+     * Collector UDP port number
+     */
+    udpPort: number;
+    /**
+     * VPN ID
+     */
+    vpnId: number;
+}
+
+export interface GetNetworkHierarchyNodeAddress {
+    /**
+     * City
+     */
+    city: string;
+    /**
+     * Country
+     */
+    country: string;
+    /**
+     * State or province
+     */
+    state: string;
+    /**
+     * Street address
+     */
+    street: string;
+    /**
+     * Zip or postal code
+     */
+    zipcode: string;
+}
+
+export interface GetNetworkHierarchySecurityLoggingHighSpeedLogging {
+    /**
+     * Server port number
+     */
+    port: number;
+    /**
+     * Server IPv4 or IPv6 address
+     */
+    serverIp: string;
+    /**
+     * VRF name or ID
+     */
+    vrf: string;
+}
+
+export interface GetNetworkHierarchySecurityLoggingUtdSyslog {
+    /**
+     * Server IPv4 address
+     */
+    serverIp: string;
+    /**
+     * VPN name or ID
+     */
+    vpn: string;
+}
+
 export interface GetOtherThousandeyesFeatureVirtualApplication {
     /**
      * Set the Account Group Token
@@ -13343,6 +13419,61 @@ export interface GetOtherThousandeyesFeatureVirtualApplication {
      * Variable name
      */
     vpnVariable: string;
+}
+
+export interface GetOtherTrustsecFeatureSxpConnection {
+    /**
+     * Configure Connection Maximum hold time \n\n
+     */
+    maxHoldTime: number;
+    /**
+     * Variable name
+     */
+    maxHoldTimeVariable: string;
+    /**
+     * Configure Connection Minimum hold time \n\n
+     */
+    minHoldTime: number;
+    /**
+     * Variable name
+     */
+    minHoldTimeVariable: string;
+    /**
+     * Define Mode of connection
+     */
+    mode: string;
+    /**
+     * Define Role of a device \n\n
+     */
+    modeType: string;
+    /**
+     * Configure SXP Peer IP address (IPv4)
+     */
+    peerIp: string;
+    /**
+     * Variable name
+     */
+    peerIpVariable: string;
+    /**
+     * Define Preshared Key type
+     */
+    presharedKey: string;
+    /**
+     * Configure SXP Source IP address (IPv4)
+     */
+    sourceIp: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable: string;
+    /**
+     * Configure Connection VPN (VRF) ID
+     */
+    vpnId: number;
+    /**
+     * Variable name
+     */
+    vpnIdVariable: string;
 }
 
 export interface GetOtherUcseFeatureInterface {
@@ -14221,6 +14352,25 @@ export interface GetSecurityPolicyDefinitionEntry {
      * Source Zone
      */
     sourceZone: string;
+}
+
+export interface GetSecurityPolicyHighSpeedLoggingEntry {
+    /**
+     * High Speed Logging Port
+     */
+    port: string;
+    /**
+     * High Speed Logging Server IP
+     */
+    serverIp: string;
+    /**
+     * High Speed Logging Source Interface
+     */
+    sourceInterface: string;
+    /**
+     * High Speed Logging VPN
+     */
+    vpn: string;
 }
 
 export interface GetSecurityPolicyLogging {
@@ -19184,7 +19334,23 @@ export interface GetSystemLoggingFeatureTlsProfile {
 
 export interface GetSystemNtpFeatureAuthenticationKey {
     /**
-     * MD5 authentication key ID
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+     */
+    cmacAes128Value: string;
+    /**
+     * Variable name
+     */
+    cmacAes128ValueVariable: string;
+    /**
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+     */
+    hmacSha2Value: string;
+    /**
+     * Variable name
+     */
+    hmacSha2ValueVariable: string;
+    /**
+     * Authentication key ID
      */
     keyId: number;
     /**
@@ -24650,6 +24816,90 @@ export interface MeshTopologyPolicyDefinitionRegion {
     siteListVersions?: string[];
 }
 
+export interface NetworkHierarchyCflowdCollector {
+    /**
+     * Collector IPv4 or IPv6 address
+     */
+    address: string;
+    /**
+     * Enable BFD metrics exporting
+     *   - Default value: `false`
+     */
+    bfdMetricsExport?: boolean;
+    /**
+     * BFD export interval in seconds. Only valid when `bfdMetricsExport` is `true`; setting it while `bfdMetricsExport` is `false` or unset is a configuration error.
+     *   - Range: `1`-`86400`
+     *   - Default value: `600`
+     */
+    exportInterval?: number;
+    /**
+     * Enable export spreading
+     *   - Default value: `false`
+     */
+    exportSpread?: boolean;
+    /**
+     * Collector UDP port number
+     *   - Range: `1024`-`65535`
+     *   - Default value: `4739`
+     */
+    udpPort: number;
+    /**
+     * VPN ID
+     *   - Range: `0`-`65530`
+     */
+    vpnId: number;
+}
+
+export interface NetworkHierarchyNodeAddress {
+    /**
+     * City
+     */
+    city: string;
+    /**
+     * Country
+     */
+    country: string;
+    /**
+     * State or province
+     */
+    state: string;
+    /**
+     * Street address
+     */
+    street: string;
+    /**
+     * Zip or postal code
+     */
+    zipcode: string;
+}
+
+export interface NetworkHierarchySecurityLoggingHighSpeedLogging {
+    /**
+     * Server port number
+     *   - Range: `1`-`65535`
+     */
+    port: number;
+    /**
+     * Server IPv4 or IPv6 address
+     */
+    serverIp: string;
+    /**
+     * VRF name or ID
+     */
+    vrf: string;
+}
+
+export interface NetworkHierarchySecurityLoggingUtdSyslog {
+    /**
+     * Server IPv4 address
+     */
+    serverIp: string;
+    /**
+     * VPN name or ID
+     */
+    vpn: string;
+}
+
 export interface OtherThousandeyesFeatureVirtualApplication {
     /**
      * Set the Account Group Token
@@ -24738,6 +24988,73 @@ export interface OtherThousandeyesFeatureVirtualApplication {
      * Variable name
      */
     vpnVariable?: string;
+}
+
+export interface OtherTrustsecFeatureSxpConnection {
+    /**
+     * Configure Connection Maximum hold time <0..65535>, Attribute conditional on (`mode` equal to `peer` and `modeType` equal to `speaker`) or (`mode` equal to `local` and `modeType` equal to `listener`)
+     *   - Range: `0`-`65535`
+     *   - Default value: `0`
+     */
+    maxHoldTime?: number;
+    /**
+     * Variable name, Attribute conditional on (`mode` equal to `peer` and `modeType` equal to `speaker`) or (`mode` equal to `local` and `modeType` equal to `listener`)
+     */
+    maxHoldTimeVariable?: string;
+    /**
+     * Configure Connection Minimum hold time <0..65535>, Attribute conditional on `modeType` not equal to `both`
+     *   - Range: `0`-`65535`
+     *   - Default value: `0`
+     */
+    minHoldTime?: number;
+    /**
+     * Variable name, Attribute conditional on `modeType` not equal to `both`
+     */
+    minHoldTimeVariable?: string;
+    /**
+     * Define Mode of connection
+     *   - Choices: `local`, `peer`
+     *   - Default value: `local`
+     */
+    mode?: string;
+    /**
+     * Define Role of a device <speaker/listener/both>
+     *   - Choices: `speaker`, `listener`, `both`
+     *   - Default value: `speaker`
+     */
+    modeType?: string;
+    /**
+     * Configure SXP Peer IP address (IPv4)
+     */
+    peerIp?: string;
+    /**
+     * Variable name
+     */
+    peerIpVariable?: string;
+    /**
+     * Define Preshared Key type
+     *   - Choices: `password`, `none`, `key chain`
+     *   - Default value: `none`
+     */
+    presharedKey?: string;
+    /**
+     * Configure SXP Source IP address (IPv4)
+     */
+    sourceIp?: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable?: string;
+    /**
+     * Configure Connection VPN (VRF) ID
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
+     */
+    vpnId?: number;
+    /**
+     * Variable name
+     */
+    vpnIdVariable?: string;
 }
 
 export interface OtherUcseFeatureInterface {
@@ -25680,6 +25997,25 @@ export interface SecurityPolicyDefinitionEntry {
      * Source Zone
      */
     sourceZone?: string;
+}
+
+export interface SecurityPolicyHighSpeedLoggingEntry {
+    /**
+     * High Speed Logging Port
+     */
+    port: string;
+    /**
+     * High Speed Logging Server IP
+     */
+    serverIp: string;
+    /**
+     * High Speed Logging Source Interface
+     */
+    sourceInterface?: string;
+    /**
+     * High Speed Logging VPN
+     */
+    vpn: string;
 }
 
 export interface SecurityPolicyLogging {
@@ -31157,7 +31493,23 @@ export interface SystemLoggingFeatureTlsProfile {
 
 export interface SystemNtpFeatureAuthenticationKey {
     /**
-     * MD5 authentication key ID
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    cmacAes128Value?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    cmacAes128ValueVariable?: string;
+    /**
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    hmacSha2Value?: string;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    hmacSha2ValueVariable?: string;
+    /**
+     * Authentication key ID
      *   - Range: `1`-`4294967295`
      */
     keyId?: number;
@@ -31484,7 +31836,7 @@ export interface SystemSnmpFeatureUser {
     authenticationPasswordVariable?: string;
     /**
      * Configure authentication protocol
-     *   - Choices: `sha`
+     *   - Choices: `sha`, `sha256`
      */
     authenticationProtocol?: string;
     /**

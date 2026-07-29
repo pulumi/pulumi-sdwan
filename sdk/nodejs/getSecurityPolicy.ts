@@ -62,6 +62,10 @@ export interface GetSecurityPolicyResult {
      */
     readonly failureMode: string;
     /**
+     * High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+     */
+    readonly highSpeedLoggingEntries: outputs.GetSecurityPolicyHighSpeedLoggingEntry[];
+    /**
      * High Speed Logging Server IP
      */
     readonly highSpeedLoggingServerIp: string;
@@ -69,10 +73,6 @@ export interface GetSecurityPolicyResult {
      * High Speed Logging Port
      */
     readonly highSpeedLoggingServerPort: string;
-    /**
-     * High Speed Logging Source Interface
-     */
-    readonly highSpeedLoggingServerSourceInterface: string;
     /**
      * High Speed Logging VPN
      */

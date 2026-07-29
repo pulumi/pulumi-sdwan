@@ -12,11 +12,12 @@ import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.ActivateTopologyGroupState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * This resource can activate a topology group. Only one topology group can be active at a time.
+ * This resource can activate a topology group. Only one topology group can be active at a time. To switch the active group, change the `id` attribute on the existing resource in place instead of replacing the resource (destroy + create); an in-place change issues a single activation that supersedes the previous group, whereas a replacement deactivates the previous group first and withdraws all overlay control policy from the vSmarts during the switch.
  *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  */
@@ -37,18 +38,32 @@ public class ActivateTopologyGroup extends com.pulumi.resources.CustomResource {
         return this.activateTopologyGroupId;
     }
     /**
-     * The version of the topology group
+     * Server-side version of the topology group captured at last activation. Used internally for drift detection.
      * 
      */
-    @Export(name="version", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> version;
+    @Export(name="deployedVersion", refs={Integer.class}, tree="[0]")
+    private Output<Integer> deployedVersion;
 
     /**
-     * @return The version of the topology group
+     * @return Server-side version of the topology group captured at last activation. Used internally for drift detection.
      * 
      */
-    public Output<Optional<Integer>> version() {
-        return Codegen.optional(this.version);
+    public Output<Integer> deployedVersion() {
+        return this.deployedVersion;
+    }
+    /**
+     * List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+     * 
+     */
+    @Export(name="featureVersions", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> featureVersions;
+
+    /**
+     * @return List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+     * 
+     */
+    public Output<Optional<List<String>>> featureVersions() {
+        return Codegen.optional(this.featureVersions);
     }
 
     /**

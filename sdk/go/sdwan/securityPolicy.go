@@ -79,13 +79,13 @@ type SecurityPolicy struct {
 	// Failure mode
 	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrOutput `pulumi:"failureMode"`
-	// High Speed Logging Server IP
+	// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+	HighSpeedLoggingEntries SecurityPolicyHighSpeedLoggingEntryArrayOutput `pulumi:"highSpeedLoggingEntries"`
+	// High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerIp pulumi.StringPtrOutput `pulumi:"highSpeedLoggingServerIp"`
-	// High Speed Logging Port
+	// High Speed Logging Port, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerPort pulumi.StringPtrOutput `pulumi:"highSpeedLoggingServerPort"`
-	// High Speed Logging Source Interface
-	HighSpeedLoggingServerSourceInterface pulumi.StringPtrOutput `pulumi:"highSpeedLoggingServerSourceInterface"`
-	// High Speed Logging VPN
+	// High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingVpn pulumi.StringPtrOutput `pulumi:"highSpeedLoggingVpn"`
 	// ICMP Unreachable Allow
 	//   - Choices: `on`, `off`
@@ -171,13 +171,13 @@ type securityPolicyState struct {
 	// Failure mode
 	//   - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
-	// High Speed Logging Server IP
+	// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+	HighSpeedLoggingEntries []SecurityPolicyHighSpeedLoggingEntry `pulumi:"highSpeedLoggingEntries"`
+	// High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerIp *string `pulumi:"highSpeedLoggingServerIp"`
-	// High Speed Logging Port
+	// High Speed Logging Port, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerPort *string `pulumi:"highSpeedLoggingServerPort"`
-	// High Speed Logging Source Interface
-	HighSpeedLoggingServerSourceInterface *string `pulumi:"highSpeedLoggingServerSourceInterface"`
-	// High Speed Logging VPN
+	// High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingVpn *string `pulumi:"highSpeedLoggingVpn"`
 	// ICMP Unreachable Allow
 	//   - Choices: `on`, `off`
@@ -228,13 +228,13 @@ type SecurityPolicyState struct {
 	// Failure mode
 	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
-	// High Speed Logging Server IP
+	// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+	HighSpeedLoggingEntries SecurityPolicyHighSpeedLoggingEntryArrayInput
+	// High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerIp pulumi.StringPtrInput
-	// High Speed Logging Port
+	// High Speed Logging Port, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerPort pulumi.StringPtrInput
-	// High Speed Logging Source Interface
-	HighSpeedLoggingServerSourceInterface pulumi.StringPtrInput
-	// High Speed Logging VPN
+	// High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingVpn pulumi.StringPtrInput
 	// ICMP Unreachable Allow
 	//   - Choices: `on`, `off`
@@ -289,13 +289,13 @@ type securityPolicyArgs struct {
 	// Failure mode
 	//   - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
-	// High Speed Logging Server IP
+	// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+	HighSpeedLoggingEntries []SecurityPolicyHighSpeedLoggingEntry `pulumi:"highSpeedLoggingEntries"`
+	// High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerIp *string `pulumi:"highSpeedLoggingServerIp"`
-	// High Speed Logging Port
+	// High Speed Logging Port, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerPort *string `pulumi:"highSpeedLoggingServerPort"`
-	// High Speed Logging Source Interface
-	HighSpeedLoggingServerSourceInterface *string `pulumi:"highSpeedLoggingServerSourceInterface"`
-	// High Speed Logging VPN
+	// High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingVpn *string `pulumi:"highSpeedLoggingVpn"`
 	// ICMP Unreachable Allow
 	//   - Choices: `on`, `off`
@@ -345,13 +345,13 @@ type SecurityPolicyArgs struct {
 	// Failure mode
 	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
-	// High Speed Logging Server IP
+	// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+	HighSpeedLoggingEntries SecurityPolicyHighSpeedLoggingEntryArrayInput
+	// High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerIp pulumi.StringPtrInput
-	// High Speed Logging Port
+	// High Speed Logging Port, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingServerPort pulumi.StringPtrInput
-	// High Speed Logging Source Interface
-	HighSpeedLoggingServerSourceInterface pulumi.StringPtrInput
-	// High Speed Logging VPN
+	// High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
 	HighSpeedLoggingVpn pulumi.StringPtrInput
 	// ICMP Unreachable Allow
 	//   - Choices: `on`, `off`
@@ -501,22 +501,24 @@ func (o SecurityPolicyOutput) FailureMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.FailureMode }).(pulumi.StringPtrOutput)
 }
 
-// High Speed Logging Server IP
+// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+func (o SecurityPolicyOutput) HighSpeedLoggingEntries() SecurityPolicyHighSpeedLoggingEntryArrayOutput {
+	return o.ApplyT(func(v *SecurityPolicy) SecurityPolicyHighSpeedLoggingEntryArrayOutput {
+		return v.HighSpeedLoggingEntries
+	}).(SecurityPolicyHighSpeedLoggingEntryArrayOutput)
+}
+
+// High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
 func (o SecurityPolicyOutput) HighSpeedLoggingServerIp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.HighSpeedLoggingServerIp }).(pulumi.StringPtrOutput)
 }
 
-// High Speed Logging Port
+// High Speed Logging Port, Attribute conditional on `mode` equal to `security`
 func (o SecurityPolicyOutput) HighSpeedLoggingServerPort() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.HighSpeedLoggingServerPort }).(pulumi.StringPtrOutput)
 }
 
-// High Speed Logging Source Interface
-func (o SecurityPolicyOutput) HighSpeedLoggingServerSourceInterface() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.HighSpeedLoggingServerSourceInterface }).(pulumi.StringPtrOutput)
-}
-
-// High Speed Logging VPN
+// High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
 func (o SecurityPolicyOutput) HighSpeedLoggingVpn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.HighSpeedLoggingVpn }).(pulumi.StringPtrOutput)
 }

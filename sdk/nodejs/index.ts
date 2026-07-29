@@ -775,6 +775,21 @@ export const getMirrorPolicyObject: typeof import("./getMirrorPolicyObject").get
 export const getMirrorPolicyObjectOutput: typeof import("./getMirrorPolicyObject").getMirrorPolicyObjectOutput = null as any;
 utilities.lazyLoad(exports, ["getMirrorPolicyObject","getMirrorPolicyObjectOutput"], () => require("./getMirrorPolicyObject"));
 
+export { GetNetworkHierarchyCflowdArgs, GetNetworkHierarchyCflowdResult, GetNetworkHierarchyCflowdOutputArgs } from "./getNetworkHierarchyCflowd";
+export const getNetworkHierarchyCflowd: typeof import("./getNetworkHierarchyCflowd").getNetworkHierarchyCflowd = null as any;
+export const getNetworkHierarchyCflowdOutput: typeof import("./getNetworkHierarchyCflowd").getNetworkHierarchyCflowdOutput = null as any;
+utilities.lazyLoad(exports, ["getNetworkHierarchyCflowd","getNetworkHierarchyCflowdOutput"], () => require("./getNetworkHierarchyCflowd"));
+
+export { GetNetworkHierarchyNodeArgs, GetNetworkHierarchyNodeResult, GetNetworkHierarchyNodeOutputArgs } from "./getNetworkHierarchyNode";
+export const getNetworkHierarchyNode: typeof import("./getNetworkHierarchyNode").getNetworkHierarchyNode = null as any;
+export const getNetworkHierarchyNodeOutput: typeof import("./getNetworkHierarchyNode").getNetworkHierarchyNodeOutput = null as any;
+utilities.lazyLoad(exports, ["getNetworkHierarchyNode","getNetworkHierarchyNodeOutput"], () => require("./getNetworkHierarchyNode"));
+
+export { GetNetworkHierarchySecurityLoggingArgs, GetNetworkHierarchySecurityLoggingResult, GetNetworkHierarchySecurityLoggingOutputArgs } from "./getNetworkHierarchySecurityLogging";
+export const getNetworkHierarchySecurityLogging: typeof import("./getNetworkHierarchySecurityLogging").getNetworkHierarchySecurityLogging = null as any;
+export const getNetworkHierarchySecurityLoggingOutput: typeof import("./getNetworkHierarchySecurityLogging").getNetworkHierarchySecurityLoggingOutput = null as any;
+utilities.lazyLoad(exports, ["getNetworkHierarchySecurityLogging","getNetworkHierarchySecurityLoggingOutput"], () => require("./getNetworkHierarchySecurityLogging"));
+
 export { GetObjectGroupPolicyDefinitionArgs, GetObjectGroupPolicyDefinitionResult, GetObjectGroupPolicyDefinitionOutputArgs } from "./getObjectGroupPolicyDefinition";
 export const getObjectGroupPolicyDefinition: typeof import("./getObjectGroupPolicyDefinition").getObjectGroupPolicyDefinition = null as any;
 export const getObjectGroupPolicyDefinitionOutput: typeof import("./getObjectGroupPolicyDefinition").getObjectGroupPolicyDefinitionOutput = null as any;
@@ -789,6 +804,11 @@ export { GetOtherThousandeyesFeatureArgs, GetOtherThousandeyesFeatureResult, Get
 export const getOtherThousandeyesFeature: typeof import("./getOtherThousandeyesFeature").getOtherThousandeyesFeature = null as any;
 export const getOtherThousandeyesFeatureOutput: typeof import("./getOtherThousandeyesFeature").getOtherThousandeyesFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getOtherThousandeyesFeature","getOtherThousandeyesFeatureOutput"], () => require("./getOtherThousandeyesFeature"));
+
+export { GetOtherTrustsecFeatureArgs, GetOtherTrustsecFeatureResult, GetOtherTrustsecFeatureOutputArgs } from "./getOtherTrustsecFeature";
+export const getOtherTrustsecFeature: typeof import("./getOtherTrustsecFeature").getOtherTrustsecFeature = null as any;
+export const getOtherTrustsecFeatureOutput: typeof import("./getOtherTrustsecFeature").getOtherTrustsecFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getOtherTrustsecFeature","getOtherTrustsecFeatureOutput"], () => require("./getOtherTrustsecFeature"));
 
 export { GetOtherUcseFeatureArgs, GetOtherUcseFeatureResult, GetOtherUcseFeatureOutputArgs } from "./getOtherUcseFeature";
 export const getOtherUcseFeature: typeof import("./getOtherUcseFeature").getOtherUcseFeature = null as any;
@@ -1715,6 +1735,21 @@ export type MirrorPolicyObject = import("./mirrorPolicyObject").MirrorPolicyObje
 export const MirrorPolicyObject: typeof import("./mirrorPolicyObject").MirrorPolicyObject = null as any;
 utilities.lazyLoad(exports, ["MirrorPolicyObject"], () => require("./mirrorPolicyObject"));
 
+export { NetworkHierarchyCflowdArgs, NetworkHierarchyCflowdState } from "./networkHierarchyCflowd";
+export type NetworkHierarchyCflowd = import("./networkHierarchyCflowd").NetworkHierarchyCflowd;
+export const NetworkHierarchyCflowd: typeof import("./networkHierarchyCflowd").NetworkHierarchyCflowd = null as any;
+utilities.lazyLoad(exports, ["NetworkHierarchyCflowd"], () => require("./networkHierarchyCflowd"));
+
+export { NetworkHierarchyNodeArgs, NetworkHierarchyNodeState } from "./networkHierarchyNode";
+export type NetworkHierarchyNode = import("./networkHierarchyNode").NetworkHierarchyNode;
+export const NetworkHierarchyNode: typeof import("./networkHierarchyNode").NetworkHierarchyNode = null as any;
+utilities.lazyLoad(exports, ["NetworkHierarchyNode"], () => require("./networkHierarchyNode"));
+
+export { NetworkHierarchySecurityLoggingArgs, NetworkHierarchySecurityLoggingState } from "./networkHierarchySecurityLogging";
+export type NetworkHierarchySecurityLogging = import("./networkHierarchySecurityLogging").NetworkHierarchySecurityLogging;
+export const NetworkHierarchySecurityLogging: typeof import("./networkHierarchySecurityLogging").NetworkHierarchySecurityLogging = null as any;
+utilities.lazyLoad(exports, ["NetworkHierarchySecurityLogging"], () => require("./networkHierarchySecurityLogging"));
+
 export { ObjectGroupPolicyDefinitionArgs, ObjectGroupPolicyDefinitionState } from "./objectGroupPolicyDefinition";
 export type ObjectGroupPolicyDefinition = import("./objectGroupPolicyDefinition").ObjectGroupPolicyDefinition;
 export const ObjectGroupPolicyDefinition: typeof import("./objectGroupPolicyDefinition").ObjectGroupPolicyDefinition = null as any;
@@ -1729,6 +1764,11 @@ export { OtherThousandeyesFeatureArgs, OtherThousandeyesFeatureState } from "./o
 export type OtherThousandeyesFeature = import("./otherThousandeyesFeature").OtherThousandeyesFeature;
 export const OtherThousandeyesFeature: typeof import("./otherThousandeyesFeature").OtherThousandeyesFeature = null as any;
 utilities.lazyLoad(exports, ["OtherThousandeyesFeature"], () => require("./otherThousandeyesFeature"));
+
+export { OtherTrustsecFeatureArgs, OtherTrustsecFeatureState } from "./otherTrustsecFeature";
+export type OtherTrustsecFeature = import("./otherTrustsecFeature").OtherTrustsecFeature;
+export const OtherTrustsecFeature: typeof import("./otherTrustsecFeature").OtherTrustsecFeature = null as any;
+utilities.lazyLoad(exports, ["OtherTrustsecFeature"], () => require("./otherTrustsecFeature"));
 
 export { OtherUcseFeatureArgs, OtherUcseFeatureState } from "./otherUcseFeature";
 export type OtherUcseFeature = import("./otherUcseFeature").OtherUcseFeature;
@@ -2762,12 +2802,20 @@ const _module = {
                 return new MeshTopologyPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/mirrorPolicyObject:MirrorPolicyObject":
                 return new MirrorPolicyObject(name, <any>undefined, { urn })
+            case "sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd":
+                return new NetworkHierarchyCflowd(name, <any>undefined, { urn })
+            case "sdwan:index/networkHierarchyNode:NetworkHierarchyNode":
+                return new NetworkHierarchyNode(name, <any>undefined, { urn })
+            case "sdwan:index/networkHierarchySecurityLogging:NetworkHierarchySecurityLogging":
+                return new NetworkHierarchySecurityLogging(name, <any>undefined, { urn })
             case "sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition":
                 return new ObjectGroupPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/otherFeatureProfile:OtherFeatureProfile":
                 return new OtherFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature":
                 return new OtherThousandeyesFeature(name, <any>undefined, { urn })
+            case "sdwan:index/otherTrustsecFeature:OtherTrustsecFeature":
+                return new OtherTrustsecFeature(name, <any>undefined, { urn })
             case "sdwan:index/otherUcseFeature:OtherUcseFeature":
                 return new OtherUcseFeature(name, <any>undefined, { urn })
             case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
@@ -3196,9 +3244,13 @@ pulumi.runtime.registerResourceModule("sdwan", "index/localApplicationListPolicy
 pulumi.runtime.registerResourceModule("sdwan", "index/localizedPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/meshTopologyPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/mirrorPolicyObject", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/networkHierarchyCflowd", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/networkHierarchyNode", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/networkHierarchySecurityLogging", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/objectGroupPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/otherFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/otherThousandeyesFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/otherTrustsecFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/otherUcseFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policerPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyGroup", _module)

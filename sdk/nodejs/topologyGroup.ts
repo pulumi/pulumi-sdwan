@@ -67,6 +67,10 @@ export class TopologyGroup extends pulumi.CustomResource {
      */
     declare public readonly featureProfileIds: pulumi.Output<string[] | undefined>;
     /**
+     * List of all associated feature versions
+     */
+    declare public readonly featureVersions: pulumi.Output<string[] | undefined>;
+    /**
      * The name of the topology group
      */
     declare public readonly name: pulumi.Output<string>;
@@ -91,6 +95,7 @@ export class TopologyGroup extends pulumi.CustomResource {
             const state = argsOrState as TopologyGroupState | undefined;
             resourceInputs["description"] = state?.description;
             resourceInputs["featureProfileIds"] = state?.featureProfileIds;
+            resourceInputs["featureVersions"] = state?.featureVersions;
             resourceInputs["name"] = state?.name;
             resourceInputs["solution"] = state?.solution;
         } else {
@@ -103,6 +108,7 @@ export class TopologyGroup extends pulumi.CustomResource {
             }
             resourceInputs["description"] = args?.description;
             resourceInputs["featureProfileIds"] = args?.featureProfileIds;
+            resourceInputs["featureVersions"] = args?.featureVersions;
             resourceInputs["name"] = args?.name;
             resourceInputs["solution"] = args?.solution;
         }
@@ -123,6 +129,10 @@ export interface TopologyGroupState {
      * List of feature profile IDs
      */
     featureProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * List of all associated feature versions
+     */
+    featureVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the topology group
      */
@@ -146,6 +156,10 @@ export interface TopologyGroupArgs {
      * List of feature profile IDs
      */
     featureProfileIds?: pulumi.Input<pulumi.Input<string>[] | undefined>;
+    /**
+     * List of all associated feature versions
+     */
+    featureVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
     /**
      * The name of the topology group
      */

@@ -54,6 +54,7 @@ export class Provider extends pulumi.ProviderResource {
         opts = opts || {};
         {
             resourceInputs["apiToken"] = args?.apiToken ? pulumi.secret(args.apiToken) : undefined;
+            resourceInputs["deployOnOutOfDate"] = pulumi.output(args?.deployOnOutOfDate).apply(JSON.stringify);
             resourceInputs["insecure"] = pulumi.output(args?.insecure).apply(JSON.stringify);
             resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["retries"] = pulumi.output(args?.retries).apply(JSON.stringify);
@@ -85,6 +86,10 @@ export interface ProviderArgs {
      * API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
      */
     apiToken?: pulumi.Input<string | undefined>;
+    /**
+     * When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+     */
+    deployOnOutOfDate?: pulumi.Input<boolean | undefined>;
     /**
      * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
      */

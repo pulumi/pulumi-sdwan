@@ -60,6 +60,8 @@ type LookupTopologyGroupResult struct {
 	Description string `pulumi:"description"`
 	// List of feature profile IDs
 	FeatureProfileIds []string `pulumi:"featureProfileIds"`
+	// List of all associated feature versions
+	FeatureVersions []string `pulumi:"featureVersions"`
 	// The id of the object
 	Id string `pulumi:"id"`
 	// The name of the topology group
@@ -110,6 +112,11 @@ func (o LookupTopologyGroupResultOutput) Description() pulumi.StringOutput {
 // List of feature profile IDs
 func (o LookupTopologyGroupResultOutput) FeatureProfileIds() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTopologyGroupResult) []string { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
+}
+
+// List of all associated feature versions
+func (o LookupTopologyGroupResultOutput) FeatureVersions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupTopologyGroupResult) []string { return v.FeatureVersions }).(pulumi.StringArrayOutput)
 }
 
 // The id of the object

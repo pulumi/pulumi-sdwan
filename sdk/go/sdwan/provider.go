@@ -58,6 +58,8 @@ func NewProvider(ctx *pulumi.Context,
 type providerArgs struct {
 	// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
 	ApiToken *string `pulumi:"apiToken"`
+	// When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+	DeployOnOutOfDate *bool `pulumi:"deployOnOutOfDate"`
 	// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 	Insecure *bool `pulumi:"insecure"`
 	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
@@ -76,6 +78,8 @@ type providerArgs struct {
 type ProviderArgs struct {
 	// API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
 	ApiToken pulumi.StringPtrInput
+	// When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+	DeployOnOutOfDate pulumi.BoolPtrInput
 	// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 	Insecure pulumi.BoolPtrInput
 	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.

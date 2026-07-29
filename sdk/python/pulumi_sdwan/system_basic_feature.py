@@ -159,7 +159,7 @@ class SystemBasicFeatureArgs:
                  - Range: `1`-`4294967295`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] overlay_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] port_hopping: Enable port hopping
+        :param pulumi.Input[_builtins.bool] port_hopping: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_hopping_variable: Variable name
         :param pulumi.Input[_builtins.int] port_offset: Set the TLOC port offset when multiple devices are behind a NAT
@@ -909,7 +909,7 @@ class SystemBasicFeatureArgs:
     @pulumi.getter(name="portHopping")
     def port_hopping(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Enable port hopping
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
           - Default value: `true`
         """
         return pulumi.get(self, "port_hopping")
@@ -1274,7 +1274,7 @@ class _SystemBasicFeatureState:
                  - Range: `1`-`4294967295`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] overlay_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] port_hopping: Enable port hopping
+        :param pulumi.Input[_builtins.bool] port_hopping: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_hopping_variable: Variable name
         :param pulumi.Input[_builtins.int] port_offset: Set the TLOC port offset when multiple devices are behind a NAT
@@ -2028,7 +2028,7 @@ class _SystemBasicFeatureState:
     @pulumi.getter(name="portHopping")
     def port_hopping(self) -> pulumi.Input[Optional[_builtins.bool]]:
         """
-        Enable port hopping
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
           - Default value: `true`
         """
         return pulumi.get(self, "port_hopping")
@@ -2472,7 +2472,7 @@ class SystemBasicFeature(pulumi.CustomResource):
                  - Range: `1`-`4294967295`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] overlay_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] port_hopping: Enable port hopping
+        :param pulumi.Input[_builtins.bool] port_hopping: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_hopping_variable: Variable name
         :param pulumi.Input[_builtins.int] port_offset: Set the TLOC port offset when multiple devices are behind a NAT
@@ -2882,7 +2882,7 @@ class SystemBasicFeature(pulumi.CustomResource):
                  - Range: `1`-`4294967295`
                  - Default value: `1`
         :param pulumi.Input[_builtins.str] overlay_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] port_hopping: Enable port hopping
+        :param pulumi.Input[_builtins.bool] port_hopping: The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] port_hopping_variable: Variable name
         :param pulumi.Input[_builtins.int] port_offset: Set the TLOC port offset when multiple devices are behind a NAT
@@ -3387,7 +3387,7 @@ class SystemBasicFeature(pulumi.CustomResource):
     @pulumi.getter(name="portHopping")
     def port_hopping(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable port hopping
+        The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
           - Default value: `true`
         """
         return pulumi.get(self, "port_hopping")

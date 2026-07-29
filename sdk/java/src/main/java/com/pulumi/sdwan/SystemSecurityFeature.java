@@ -292,7 +292,7 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
     }
     /**
      * Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      * 
      */
@@ -301,7 +301,7 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      * 
      */

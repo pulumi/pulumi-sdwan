@@ -160,9 +160,13 @@ from .get_local_application_list_policy_object import *
 from .get_localized_policy import *
 from .get_mesh_topology_policy_definition import *
 from .get_mirror_policy_object import *
+from .get_network_hierarchy_cflowd import *
+from .get_network_hierarchy_node import *
+from .get_network_hierarchy_security_logging import *
 from .get_object_group_policy_definition import *
 from .get_other_feature_profile import *
 from .get_other_thousandeyes_feature import *
+from .get_other_trustsec_feature import *
 from .get_other_ucse_feature import *
 from .get_policer_policy_object import *
 from .get_policy_group import *
@@ -348,9 +352,13 @@ from .local_application_list_policy_object import *
 from .localized_policy import *
 from .mesh_topology_policy_definition import *
 from .mirror_policy_object import *
+from .network_hierarchy_cflowd import *
+from .network_hierarchy_node import *
+from .network_hierarchy_security_logging import *
 from .object_group_policy_definition import *
 from .other_feature_profile import *
 from .other_thousandeyes_feature import *
+from .other_trustsec_feature import *
 from .other_ucse_feature import *
 from .policer_policy_object import *
 from .policy_group import *
@@ -1216,6 +1224,30 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/networkHierarchyCflowd",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/networkHierarchyCflowd:NetworkHierarchyCflowd": "NetworkHierarchyCflowd"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/networkHierarchyNode",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/networkHierarchyNode:NetworkHierarchyNode": "NetworkHierarchyNode"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/networkHierarchySecurityLogging",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/networkHierarchySecurityLogging:NetworkHierarchySecurityLogging": "NetworkHierarchySecurityLogging"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/objectGroupPolicyDefinition",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1236,6 +1268,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature": "OtherThousandeyesFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/otherTrustsecFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/otherTrustsecFeature:OtherTrustsecFeature": "OtherTrustsecFeature"
   }
  },
  {

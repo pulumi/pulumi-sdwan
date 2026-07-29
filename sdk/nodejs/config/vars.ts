@@ -19,6 +19,17 @@ Object.defineProperty(exports, "apiToken", {
 });
 
 /**
+ * When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+ */
+export declare const deployOnOutOfDate: boolean | undefined;
+Object.defineProperty(exports, "deployOnOutOfDate", {
+    get() {
+        return __config.getObject<boolean>("deployOnOutOfDate");
+    },
+    enumerable: true,
+});
+
+/**
  * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
  */
 export declare const insecure: boolean | undefined;

@@ -179,7 +179,7 @@ type SystemOmpFeature struct {
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - At Least: `1`
+	//   - Range: `1`-`16`
 	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrOutput `pulumi:"ecmpLimit"`
 	// Variable name
@@ -196,7 +196,7 @@ type SystemOmpFeature struct {
 	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrOutput `pulumi:"gracefulRestart"`
 	// Graceful Restart Timer (seconds)
-	//   - Range: `1`-`604800`
+	//   - Range: `1`-`31556952`
 	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrOutput `pulumi:"gracefulRestartTimer"`
 	// Variable name
@@ -382,7 +382,7 @@ type systemOmpFeatureState struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - At Least: `1`
+	//   - Range: `1`-`16`
 	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
@@ -399,7 +399,7 @@ type systemOmpFeatureState struct {
 	//   - Default value: `true`
 	GracefulRestart *bool `pulumi:"gracefulRestart"`
 	// Graceful Restart Timer (seconds)
-	//   - Range: `1`-`604800`
+	//   - Range: `1`-`31556952`
 	//   - Default value: `43200`
 	GracefulRestartTimer *int `pulumi:"gracefulRestartTimer"`
 	// Variable name
@@ -553,7 +553,7 @@ type SystemOmpFeatureState struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - At Least: `1`
+	//   - Range: `1`-`16`
 	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
@@ -570,7 +570,7 @@ type SystemOmpFeatureState struct {
 	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrInput
 	// Graceful Restart Timer (seconds)
-	//   - Range: `1`-`604800`
+	//   - Range: `1`-`31556952`
 	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrInput
 	// Variable name
@@ -728,7 +728,7 @@ type systemOmpFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - At Least: `1`
+	//   - Range: `1`-`16`
 	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
@@ -745,7 +745,7 @@ type systemOmpFeatureArgs struct {
 	//   - Default value: `true`
 	GracefulRestart *bool `pulumi:"gracefulRestart"`
 	// Graceful Restart Timer (seconds)
-	//   - Range: `1`-`604800`
+	//   - Range: `1`-`31556952`
 	//   - Default value: `43200`
 	GracefulRestartTimer *int `pulumi:"gracefulRestartTimer"`
 	// Variable name
@@ -898,7 +898,7 @@ type SystemOmpFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Set maximum number of OMP paths to install in cEdge route table
-	//   - At Least: `1`
+	//   - Range: `1`-`16`
 	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
@@ -915,7 +915,7 @@ type SystemOmpFeatureArgs struct {
 	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrInput
 	// Graceful Restart Timer (seconds)
-	//   - Range: `1`-`604800`
+	//   - Range: `1`-`31556952`
 	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrInput
 	// Variable name
@@ -1258,7 +1258,7 @@ func (o SystemOmpFeatureOutput) Description() pulumi.StringPtrOutput {
 }
 
 // Set maximum number of OMP paths to install in cEdge route table
-//   - At Least: `1`
+//   - Range: `1`-`16`
 //   - Default value: `4`
 func (o SystemOmpFeatureOutput) EcmpLimit() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.EcmpLimit }).(pulumi.IntPtrOutput)
@@ -1293,7 +1293,7 @@ func (o SystemOmpFeatureOutput) GracefulRestart() pulumi.BoolPtrOutput {
 }
 
 // Graceful Restart Timer (seconds)
-//   - Range: `1`-`604800`
+//   - Range: `1`-`31556952`
 //   - Default value: `43200`
 func (o SystemOmpFeatureOutput) GracefulRestartTimer() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.GracefulRestartTimer }).(pulumi.IntPtrOutput)

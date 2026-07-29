@@ -13,6 +13,888 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type VpnInterfaceCellularFeatureTemplateNatPortForward struct {
+	// Indicates if list item is considered optional.
+	Optional *bool `pulumi:"optional"`
+	// Ending port of port range
+	//   - Range: `0`-`65535`
+	PortEndRange *int `pulumi:"portEndRange"`
+	// Starting port of port range
+	//   - Range: `0`-`65535`
+	PortStartRange *int `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress *string `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable *string `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	//   - Range: `0`-`65535`
+	PrivateVpn *int `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable *string `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	//   - Choices: `tcp`, `udp`
+	Protocol *string `pulumi:"protocol"`
+}
+
+// VpnInterfaceCellularFeatureTemplateNatPortForwardInput is an input type that accepts VpnInterfaceCellularFeatureTemplateNatPortForwardArgs and VpnInterfaceCellularFeatureTemplateNatPortForwardOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateNatPortForwardInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplateNatPortForwardArgs{...}
+type VpnInterfaceCellularFeatureTemplateNatPortForwardInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutput() VpnInterfaceCellularFeatureTemplateNatPortForwardOutput
+	ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateNatPortForwardOutput
+}
+
+type VpnInterfaceCellularFeatureTemplateNatPortForwardArgs struct {
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolPtrInput `pulumi:"optional"`
+	// Ending port of port range
+	//   - Range: `0`-`65535`
+	PortEndRange pulumi.IntPtrInput `pulumi:"portEndRange"`
+	// Starting port of port range
+	//   - Range: `0`-`65535`
+	PortStartRange pulumi.IntPtrInput `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress pulumi.StringPtrInput `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable pulumi.StringPtrInput `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	//   - Range: `0`-`65535`
+	PrivateVpn pulumi.IntPtrInput `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable pulumi.StringPtrInput `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	//   - Choices: `tcp`, `udp`
+	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
+}
+
+func (VpnInterfaceCellularFeatureTemplateNatPortForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplateNatPortForwardArgs) ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutput() VpnInterfaceCellularFeatureTemplateNatPortForwardOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplateNatPortForwardArgs) ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateNatPortForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateNatPortForwardOutput)
+}
+
+// VpnInterfaceCellularFeatureTemplateNatPortForwardArrayInput is an input type that accepts VpnInterfaceCellularFeatureTemplateNatPortForwardArray and VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateNatPortForwardArrayInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplateNatPortForwardArray{ VpnInterfaceCellularFeatureTemplateNatPortForwardArgs{...} }
+type VpnInterfaceCellularFeatureTemplateNatPortForwardArrayInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput() VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput
+	ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput
+}
+
+type VpnInterfaceCellularFeatureTemplateNatPortForwardArray []VpnInterfaceCellularFeatureTemplateNatPortForwardInput
+
+func (VpnInterfaceCellularFeatureTemplateNatPortForwardArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplateNatPortForwardArray) ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput() VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplateNatPortForwardArray) ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateNatPortForwardOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutput() VpnInterfaceCellularFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) ToVpnInterfaceCellularFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+// Indicates if list item is considered optional.
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) Optional() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
+}
+
+// Ending port of port range
+//   - Range: `0`-`65535`
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) PortEndRange() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *int { return v.PortEndRange }).(pulumi.IntPtrOutput)
+}
+
+// Starting port of port range
+//   - Range: `0`-`65535`
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) PortStartRange() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *int { return v.PortStartRange }).(pulumi.IntPtrOutput)
+}
+
+// Private IP Address to translate to
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) PrivateIpAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *string { return v.PrivateIpAddress }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) PrivateIpAddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *string { return v.PrivateIpAddressVariable }).(pulumi.StringPtrOutput)
+}
+
+// VPN in which private IP Address resides
+//   - Range: `0`-`65535`
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) PrivateVpn() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *int { return v.PrivateVpn }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) PrivateVpnVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *string { return v.PrivateVpnVariable }).(pulumi.StringPtrOutput)
+}
+
+// Layer 4 protocol to apply port forwarding to
+//   - Choices: `tcp`, `udp`
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardOutput) Protocol() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateNatPortForward) *string { return v.Protocol }).(pulumi.StringPtrOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput) ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput() VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput) ToVpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput) Index(i pulumi.IntInput) VpnInterfaceCellularFeatureTemplateNatPortForwardOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceCellularFeatureTemplateNatPortForward {
+		return vs[0].([]VpnInterfaceCellularFeatureTemplateNatPortForward)[vs[1].(int)]
+	}).(VpnInterfaceCellularFeatureTemplateNatPortForwardOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplatePolicer struct {
+	// Direction
+	//   - Choices: `in`, `out`
+	Direction *string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional *bool `pulumi:"optional"`
+	// Name of policer
+	PolicerName *string `pulumi:"policerName"`
+}
+
+// VpnInterfaceCellularFeatureTemplatePolicerInput is an input type that accepts VpnInterfaceCellularFeatureTemplatePolicerArgs and VpnInterfaceCellularFeatureTemplatePolicerOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplatePolicerInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplatePolicerArgs{...}
+type VpnInterfaceCellularFeatureTemplatePolicerInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplatePolicerOutput() VpnInterfaceCellularFeatureTemplatePolicerOutput
+	ToVpnInterfaceCellularFeatureTemplatePolicerOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplatePolicerOutput
+}
+
+type VpnInterfaceCellularFeatureTemplatePolicerArgs struct {
+	// Direction
+	//   - Choices: `in`, `out`
+	Direction pulumi.StringPtrInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolPtrInput `pulumi:"optional"`
+	// Name of policer
+	PolicerName pulumi.StringPtrInput `pulumi:"policerName"`
+}
+
+func (VpnInterfaceCellularFeatureTemplatePolicerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplatePolicerArgs) ToVpnInterfaceCellularFeatureTemplatePolicerOutput() VpnInterfaceCellularFeatureTemplatePolicerOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplatePolicerOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplatePolicerArgs) ToVpnInterfaceCellularFeatureTemplatePolicerOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplatePolicerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplatePolicerOutput)
+}
+
+// VpnInterfaceCellularFeatureTemplatePolicerArrayInput is an input type that accepts VpnInterfaceCellularFeatureTemplatePolicerArray and VpnInterfaceCellularFeatureTemplatePolicerArrayOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplatePolicerArrayInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplatePolicerArray{ VpnInterfaceCellularFeatureTemplatePolicerArgs{...} }
+type VpnInterfaceCellularFeatureTemplatePolicerArrayInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutput() VpnInterfaceCellularFeatureTemplatePolicerArrayOutput
+	ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplatePolicerArrayOutput
+}
+
+type VpnInterfaceCellularFeatureTemplatePolicerArray []VpnInterfaceCellularFeatureTemplatePolicerInput
+
+func (VpnInterfaceCellularFeatureTemplatePolicerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplatePolicerArray) ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutput() VpnInterfaceCellularFeatureTemplatePolicerArrayOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplatePolicerArray) ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplatePolicerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplatePolicerArrayOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplatePolicerOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplatePolicerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplatePolicerOutput) ToVpnInterfaceCellularFeatureTemplatePolicerOutput() VpnInterfaceCellularFeatureTemplatePolicerOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplatePolicerOutput) ToVpnInterfaceCellularFeatureTemplatePolicerOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplatePolicerOutput {
+	return o
+}
+
+// Direction
+//   - Choices: `in`, `out`
+func (o VpnInterfaceCellularFeatureTemplatePolicerOutput) Direction() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplatePolicer) *string { return v.Direction }).(pulumi.StringPtrOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o VpnInterfaceCellularFeatureTemplatePolicerOutput) Optional() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplatePolicer) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
+}
+
+// Name of policer
+func (o VpnInterfaceCellularFeatureTemplatePolicerOutput) PolicerName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplatePolicer) *string { return v.PolicerName }).(pulumi.StringPtrOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplatePolicerArrayOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplatePolicerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplatePolicer)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplatePolicerArrayOutput) ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutput() VpnInterfaceCellularFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplatePolicerArrayOutput) ToVpnInterfaceCellularFeatureTemplatePolicerArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplatePolicerArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplatePolicerArrayOutput) Index(i pulumi.IntInput) VpnInterfaceCellularFeatureTemplatePolicerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceCellularFeatureTemplatePolicer {
+		return vs[0].([]VpnInterfaceCellularFeatureTemplatePolicer)[vs[1].(int)]
+	}).(VpnInterfaceCellularFeatureTemplatePolicerOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateStaticArp struct {
+	// IP Address
+	IpAddress *string `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable *string `pulumi:"ipAddressVariable"`
+	// MAC address
+	Mac *string `pulumi:"mac"`
+	// Variable name
+	MacVariable *string `pulumi:"macVariable"`
+	// Indicates if list item is considered optional.
+	Optional *bool `pulumi:"optional"`
+}
+
+// VpnInterfaceCellularFeatureTemplateStaticArpInput is an input type that accepts VpnInterfaceCellularFeatureTemplateStaticArpArgs and VpnInterfaceCellularFeatureTemplateStaticArpOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateStaticArpInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplateStaticArpArgs{...}
+type VpnInterfaceCellularFeatureTemplateStaticArpInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplateStaticArpOutput() VpnInterfaceCellularFeatureTemplateStaticArpOutput
+	ToVpnInterfaceCellularFeatureTemplateStaticArpOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateStaticArpOutput
+}
+
+type VpnInterfaceCellularFeatureTemplateStaticArpArgs struct {
+	// IP Address
+	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
+	// Variable name
+	IpAddressVariable pulumi.StringPtrInput `pulumi:"ipAddressVariable"`
+	// MAC address
+	Mac pulumi.StringPtrInput `pulumi:"mac"`
+	// Variable name
+	MacVariable pulumi.StringPtrInput `pulumi:"macVariable"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolPtrInput `pulumi:"optional"`
+}
+
+func (VpnInterfaceCellularFeatureTemplateStaticArpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateStaticArp)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplateStaticArpArgs) ToVpnInterfaceCellularFeatureTemplateStaticArpOutput() VpnInterfaceCellularFeatureTemplateStaticArpOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplateStaticArpOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplateStaticArpArgs) ToVpnInterfaceCellularFeatureTemplateStaticArpOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateStaticArpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateStaticArpOutput)
+}
+
+// VpnInterfaceCellularFeatureTemplateStaticArpArrayInput is an input type that accepts VpnInterfaceCellularFeatureTemplateStaticArpArray and VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateStaticArpArrayInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplateStaticArpArray{ VpnInterfaceCellularFeatureTemplateStaticArpArgs{...} }
+type VpnInterfaceCellularFeatureTemplateStaticArpArrayInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutput() VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput
+	ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput
+}
+
+type VpnInterfaceCellularFeatureTemplateStaticArpArray []VpnInterfaceCellularFeatureTemplateStaticArpInput
+
+func (VpnInterfaceCellularFeatureTemplateStaticArpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateStaticArp)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplateStaticArpArray) ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutput() VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplateStaticArpArray) ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateStaticArpOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplateStaticArpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateStaticArp)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) ToVpnInterfaceCellularFeatureTemplateStaticArpOutput() VpnInterfaceCellularFeatureTemplateStaticArpOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) ToVpnInterfaceCellularFeatureTemplateStaticArpOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateStaticArpOutput {
+	return o
+}
+
+// IP Address
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) IpAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateStaticArp) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) IpAddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateStaticArp) *string { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
+}
+
+// MAC address
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) Mac() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateStaticArp) *string { return v.Mac }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) MacVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateStaticArp) *string { return v.MacVariable }).(pulumi.StringPtrOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o VpnInterfaceCellularFeatureTemplateStaticArpOutput) Optional() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateStaticArp) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateStaticArp)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput) ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutput() VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput) ToVpnInterfaceCellularFeatureTemplateStaticArpArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput) Index(i pulumi.IntInput) VpnInterfaceCellularFeatureTemplateStaticArpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceCellularFeatureTemplateStaticArp {
+		return vs[0].([]VpnInterfaceCellularFeatureTemplateStaticArp)[vs[1].(int)]
+	}).(VpnInterfaceCellularFeatureTemplateStaticArpOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation struct {
+	// Encapsulation
+	//   - Choices: `gre`, `ipsec`
+	Encapsulation *string `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional *bool `pulumi:"optional"`
+	// Set preference for TLOC
+	//   - Range: `0`-`4294967295`
+	Preference *int `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable *string `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	//   - Range: `1`-`255`
+	//   - Default value: `1`
+	Weight *int `pulumi:"weight"`
+	// Variable name
+	WeightVariable *string `pulumi:"weightVariable"`
+}
+
+// VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationInput is an input type that accepts VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs and VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs{...}
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput() VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput
+	ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput
+}
+
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs struct {
+	// Encapsulation
+	//   - Choices: `gre`, `ipsec`
+	Encapsulation pulumi.StringPtrInput `pulumi:"encapsulation"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolPtrInput `pulumi:"optional"`
+	// Set preference for TLOC
+	//   - Range: `0`-`4294967295`
+	Preference pulumi.IntPtrInput `pulumi:"preference"`
+	// Variable name
+	PreferenceVariable pulumi.StringPtrInput `pulumi:"preferenceVariable"`
+	// Set weight for TLOC
+	//   - Range: `1`-`255`
+	//   - Default value: `1`
+	Weight pulumi.IntPtrInput `pulumi:"weight"`
+	// Variable name
+	WeightVariable pulumi.StringPtrInput `pulumi:"weightVariable"`
+}
+
+func (VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput() VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+// VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayInput is an input type that accepts VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray and VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput values.
+// You can construct a concrete instance of `VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayInput` via:
+//
+//	VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray{ VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs{...} }
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+	ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Context) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput
+}
+
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray []VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationInput
+
+func (VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (i VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return i.ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput() VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return o
+}
+
+// Encapsulation
+//   - Choices: `gre`, `ipsec`
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) Encapsulation() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation) *string {
+		return v.Encapsulation
+	}).(pulumi.StringPtrOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) Optional() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
+}
+
+// Set preference for TLOC
+//   - Range: `0`-`4294967295`
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) Preference() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation) *int { return v.Preference }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) PreferenceVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation) *string {
+		return v.PreferenceVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+// Set weight for TLOC
+//   - Range: `1`-`255`
+//   - Default value: `1`
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) Weight() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation) *int { return v.Weight }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput) WeightVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation) *string {
+		return v.WeightVariable
+	}).(pulumi.StringPtrOutput)
+}
+
+type VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation)(nil)).Elem()
+}
+
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput() VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) ToVpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutputWithContext(ctx context.Context) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput) Index(i pulumi.IntInput) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation {
+		return vs[0].([]VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulation)[vs[1].(int)]
+	}).(VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput)
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateAccessList struct {
+	// Name of access list
+	AclName *string `pulumi:"aclName"`
+	// Variable name
+	AclNameVariable *string `pulumi:"aclNameVariable"`
+	// Direction
+	//   - Choices: `in`, `out`
+	Direction *string `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional *bool `pulumi:"optional"`
+}
+
+// VpnInterfaceDslIpoeFeatureTemplateAccessListInput is an input type that accepts VpnInterfaceDslIpoeFeatureTemplateAccessListArgs and VpnInterfaceDslIpoeFeatureTemplateAccessListOutput values.
+// You can construct a concrete instance of `VpnInterfaceDslIpoeFeatureTemplateAccessListInput` via:
+//
+//	VpnInterfaceDslIpoeFeatureTemplateAccessListArgs{...}
+type VpnInterfaceDslIpoeFeatureTemplateAccessListInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutput() VpnInterfaceDslIpoeFeatureTemplateAccessListOutput
+	ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutputWithContext(context.Context) VpnInterfaceDslIpoeFeatureTemplateAccessListOutput
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateAccessListArgs struct {
+	// Name of access list
+	AclName pulumi.StringPtrInput `pulumi:"aclName"`
+	// Variable name
+	AclNameVariable pulumi.StringPtrInput `pulumi:"aclNameVariable"`
+	// Direction
+	//   - Choices: `in`, `out`
+	Direction pulumi.StringPtrInput `pulumi:"direction"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolPtrInput `pulumi:"optional"`
+}
+
+func (VpnInterfaceDslIpoeFeatureTemplateAccessListArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateAccessListArgs) ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutput() VpnInterfaceDslIpoeFeatureTemplateAccessListOutput {
+	return i.ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateAccessListArgs) ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateAccessListOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceDslIpoeFeatureTemplateAccessListOutput)
+}
+
+// VpnInterfaceDslIpoeFeatureTemplateAccessListArrayInput is an input type that accepts VpnInterfaceDslIpoeFeatureTemplateAccessListArray and VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput values.
+// You can construct a concrete instance of `VpnInterfaceDslIpoeFeatureTemplateAccessListArrayInput` via:
+//
+//	VpnInterfaceDslIpoeFeatureTemplateAccessListArray{ VpnInterfaceDslIpoeFeatureTemplateAccessListArgs{...} }
+type VpnInterfaceDslIpoeFeatureTemplateAccessListArrayInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput() VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput
+	ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutputWithContext(context.Context) VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateAccessListArray []VpnInterfaceDslIpoeFeatureTemplateAccessListInput
+
+func (VpnInterfaceDslIpoeFeatureTemplateAccessListArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceDslIpoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateAccessListArray) ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput() VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput {
+	return i.ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateAccessListArray) ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput)
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateAccessListOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutput() VpnInterfaceDslIpoeFeatureTemplateAccessListOutput {
+	return o
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) ToVpnInterfaceDslIpoeFeatureTemplateAccessListOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateAccessListOutput {
+	return o
+}
+
+// Name of access list
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) AclName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateAccessList) *string { return v.AclName }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) AclNameVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateAccessList) *string { return v.AclNameVariable }).(pulumi.StringPtrOutput)
+}
+
+// Direction
+//   - Choices: `in`, `out`
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) Direction() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateAccessList) *string { return v.Direction }).(pulumi.StringPtrOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListOutput) Optional() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateAccessList) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceDslIpoeFeatureTemplateAccessList)(nil)).Elem()
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput) ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput() VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput) ToVpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput) Index(i pulumi.IntInput) VpnInterfaceDslIpoeFeatureTemplateAccessListOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceDslIpoeFeatureTemplateAccessList {
+		return vs[0].([]VpnInterfaceDslIpoeFeatureTemplateAccessList)[vs[1].(int)]
+	}).(VpnInterfaceDslIpoeFeatureTemplateAccessListOutput)
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForward struct {
+	// Indicates if list item is considered optional.
+	Optional *bool `pulumi:"optional"`
+	// Ending port of port range
+	//   - Range: `0`-`65535`
+	PortEndRange *int `pulumi:"portEndRange"`
+	// Starting port of port range
+	//   - Range: `0`-`65535`
+	PortStartRange *int `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress *string `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable *string `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	//   - Range: `0`-`65535`
+	PrivateVpn *int `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable *string `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	//   - Choices: `tcp`, `udp`
+	Protocol *string `pulumi:"protocol"`
+}
+
+// VpnInterfaceDslIpoeFeatureTemplateNatPortForwardInput is an input type that accepts VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs and VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput values.
+// You can construct a concrete instance of `VpnInterfaceDslIpoeFeatureTemplateNatPortForwardInput` via:
+//
+//	VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs{...}
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForwardInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput() VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput
+	ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutputWithContext(context.Context) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs struct {
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolPtrInput `pulumi:"optional"`
+	// Ending port of port range
+	//   - Range: `0`-`65535`
+	PortEndRange pulumi.IntPtrInput `pulumi:"portEndRange"`
+	// Starting port of port range
+	//   - Range: `0`-`65535`
+	PortStartRange pulumi.IntPtrInput `pulumi:"portStartRange"`
+	// Private IP Address to translate to
+	PrivateIpAddress pulumi.StringPtrInput `pulumi:"privateIpAddress"`
+	// Variable name
+	PrivateIpAddressVariable pulumi.StringPtrInput `pulumi:"privateIpAddressVariable"`
+	// VPN in which private IP Address resides
+	//   - Range: `0`-`65535`
+	PrivateVpn pulumi.IntPtrInput `pulumi:"privateVpn"`
+	// Variable name
+	PrivateVpnVariable pulumi.StringPtrInput `pulumi:"privateVpnVariable"`
+	// Layer 4 protocol to apply port forwarding to
+	//   - Choices: `tcp`, `udp`
+	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
+}
+
+func (VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput() VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput {
+	return i.ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput)
+}
+
+// VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayInput is an input type that accepts VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray and VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput values.
+// You can construct a concrete instance of `VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayInput` via:
+//
+//	VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray{ VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs{...} }
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayInput interface {
+	pulumi.Input
+
+	ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput() VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput
+	ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutputWithContext(context.Context) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray []VpnInterfaceDslIpoeFeatureTemplateNatPortForwardInput
+
+func (VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceDslIpoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput() VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput {
+	return i.ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutputWithContext(context.Background())
+}
+
+func (i VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput)
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput() VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput {
+	return o
+}
+
+// Indicates if list item is considered optional.
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) Optional() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *bool { return v.Optional }).(pulumi.BoolPtrOutput)
+}
+
+// Ending port of port range
+//   - Range: `0`-`65535`
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) PortEndRange() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *int { return v.PortEndRange }).(pulumi.IntPtrOutput)
+}
+
+// Starting port of port range
+//   - Range: `0`-`65535`
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) PortStartRange() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *int { return v.PortStartRange }).(pulumi.IntPtrOutput)
+}
+
+// Private IP Address to translate to
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) PrivateIpAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *string { return v.PrivateIpAddress }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) PrivateIpAddressVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *string { return v.PrivateIpAddressVariable }).(pulumi.StringPtrOutput)
+}
+
+// VPN in which private IP Address resides
+//   - Range: `0`-`65535`
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) PrivateVpn() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *int { return v.PrivateVpn }).(pulumi.IntPtrOutput)
+}
+
+// Variable name
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) PrivateVpnVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *string { return v.PrivateVpnVariable }).(pulumi.StringPtrOutput)
+}
+
+// Layer 4 protocol to apply port forwarding to
+//   - Choices: `tcp`, `udp`
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput) Protocol() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v VpnInterfaceDslIpoeFeatureTemplateNatPortForward) *string { return v.Protocol }).(pulumi.StringPtrOutput)
+}
+
+type VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput struct{ *pulumi.OutputState }
+
+func (VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]VpnInterfaceDslIpoeFeatureTemplateNatPortForward)(nil)).Elem()
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput() VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput) ToVpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutputWithContext(ctx context.Context) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput {
+	return o
+}
+
+func (o VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput) Index(i pulumi.IntInput) VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VpnInterfaceDslIpoeFeatureTemplateNatPortForward {
+		return vs[0].([]VpnInterfaceDslIpoeFeatureTemplateNatPortForward)[vs[1].(int)]
+	}).(VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput)
+}
+
 type VpnInterfaceDslIpoeFeatureTemplatePolicer struct {
 	// Direction
 	//   - Choices: `in`, `out`
@@ -39257,6 +40139,457 @@ func (o GetMeshTopologyPolicyDefinitionRegionArrayOutput) Index(i pulumi.IntInpu
 	}).(GetMeshTopologyPolicyDefinitionRegionOutput)
 }
 
+type GetNetworkHierarchyCflowdCollector struct {
+	// Collector IPv4 or IPv6 address
+	Address string `pulumi:"address"`
+	// Enable BFD metrics exporting
+	BfdMetricsExport bool `pulumi:"bfdMetricsExport"`
+	// BFD export interval in seconds. Only applied when `bfdMetricsExport` is `true`; if set while `bfdMetricsExport` is `false` or unset, the value is ignored by SD-WAN Manager.
+	ExportInterval int `pulumi:"exportInterval"`
+	// Enable export spreading
+	ExportSpread bool `pulumi:"exportSpread"`
+	// Collector UDP port number
+	UdpPort int `pulumi:"udpPort"`
+	// VPN ID
+	VpnId int `pulumi:"vpnId"`
+}
+
+// GetNetworkHierarchyCflowdCollectorInput is an input type that accepts GetNetworkHierarchyCflowdCollectorArgs and GetNetworkHierarchyCflowdCollectorOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyCflowdCollectorInput` via:
+//
+//	GetNetworkHierarchyCflowdCollectorArgs{...}
+type GetNetworkHierarchyCflowdCollectorInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyCflowdCollectorOutput() GetNetworkHierarchyCflowdCollectorOutput
+	ToGetNetworkHierarchyCflowdCollectorOutputWithContext(context.Context) GetNetworkHierarchyCflowdCollectorOutput
+}
+
+type GetNetworkHierarchyCflowdCollectorArgs struct {
+	// Collector IPv4 or IPv6 address
+	Address pulumi.StringInput `pulumi:"address"`
+	// Enable BFD metrics exporting
+	BfdMetricsExport pulumi.BoolInput `pulumi:"bfdMetricsExport"`
+	// BFD export interval in seconds. Only applied when `bfdMetricsExport` is `true`; if set while `bfdMetricsExport` is `false` or unset, the value is ignored by SD-WAN Manager.
+	ExportInterval pulumi.IntInput `pulumi:"exportInterval"`
+	// Enable export spreading
+	ExportSpread pulumi.BoolInput `pulumi:"exportSpread"`
+	// Collector UDP port number
+	UdpPort pulumi.IntInput `pulumi:"udpPort"`
+	// VPN ID
+	VpnId pulumi.IntInput `pulumi:"vpnId"`
+}
+
+func (GetNetworkHierarchyCflowdCollectorArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyCflowdCollector)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyCflowdCollectorArgs) ToGetNetworkHierarchyCflowdCollectorOutput() GetNetworkHierarchyCflowdCollectorOutput {
+	return i.ToGetNetworkHierarchyCflowdCollectorOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyCflowdCollectorArgs) ToGetNetworkHierarchyCflowdCollectorOutputWithContext(ctx context.Context) GetNetworkHierarchyCflowdCollectorOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyCflowdCollectorOutput)
+}
+
+// GetNetworkHierarchyCflowdCollectorArrayInput is an input type that accepts GetNetworkHierarchyCflowdCollectorArray and GetNetworkHierarchyCflowdCollectorArrayOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyCflowdCollectorArrayInput` via:
+//
+//	GetNetworkHierarchyCflowdCollectorArray{ GetNetworkHierarchyCflowdCollectorArgs{...} }
+type GetNetworkHierarchyCflowdCollectorArrayInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyCflowdCollectorArrayOutput() GetNetworkHierarchyCflowdCollectorArrayOutput
+	ToGetNetworkHierarchyCflowdCollectorArrayOutputWithContext(context.Context) GetNetworkHierarchyCflowdCollectorArrayOutput
+}
+
+type GetNetworkHierarchyCflowdCollectorArray []GetNetworkHierarchyCflowdCollectorInput
+
+func (GetNetworkHierarchyCflowdCollectorArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchyCflowdCollector)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyCflowdCollectorArray) ToGetNetworkHierarchyCflowdCollectorArrayOutput() GetNetworkHierarchyCflowdCollectorArrayOutput {
+	return i.ToGetNetworkHierarchyCflowdCollectorArrayOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyCflowdCollectorArray) ToGetNetworkHierarchyCflowdCollectorArrayOutputWithContext(ctx context.Context) GetNetworkHierarchyCflowdCollectorArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyCflowdCollectorArrayOutput)
+}
+
+type GetNetworkHierarchyCflowdCollectorOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyCflowdCollectorOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyCflowdCollector)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyCflowdCollectorOutput) ToGetNetworkHierarchyCflowdCollectorOutput() GetNetworkHierarchyCflowdCollectorOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyCflowdCollectorOutput) ToGetNetworkHierarchyCflowdCollectorOutputWithContext(ctx context.Context) GetNetworkHierarchyCflowdCollectorOutput {
+	return o
+}
+
+// Collector IPv4 or IPv6 address
+func (o GetNetworkHierarchyCflowdCollectorOutput) Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyCflowdCollector) string { return v.Address }).(pulumi.StringOutput)
+}
+
+// Enable BFD metrics exporting
+func (o GetNetworkHierarchyCflowdCollectorOutput) BfdMetricsExport() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyCflowdCollector) bool { return v.BfdMetricsExport }).(pulumi.BoolOutput)
+}
+
+// BFD export interval in seconds. Only applied when `bfdMetricsExport` is `true`; if set while `bfdMetricsExport` is `false` or unset, the value is ignored by SD-WAN Manager.
+func (o GetNetworkHierarchyCflowdCollectorOutput) ExportInterval() pulumi.IntOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyCflowdCollector) int { return v.ExportInterval }).(pulumi.IntOutput)
+}
+
+// Enable export spreading
+func (o GetNetworkHierarchyCflowdCollectorOutput) ExportSpread() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyCflowdCollector) bool { return v.ExportSpread }).(pulumi.BoolOutput)
+}
+
+// Collector UDP port number
+func (o GetNetworkHierarchyCflowdCollectorOutput) UdpPort() pulumi.IntOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyCflowdCollector) int { return v.UdpPort }).(pulumi.IntOutput)
+}
+
+// VPN ID
+func (o GetNetworkHierarchyCflowdCollectorOutput) VpnId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyCflowdCollector) int { return v.VpnId }).(pulumi.IntOutput)
+}
+
+type GetNetworkHierarchyCflowdCollectorArrayOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyCflowdCollectorArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchyCflowdCollector)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyCflowdCollectorArrayOutput) ToGetNetworkHierarchyCflowdCollectorArrayOutput() GetNetworkHierarchyCflowdCollectorArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyCflowdCollectorArrayOutput) ToGetNetworkHierarchyCflowdCollectorArrayOutputWithContext(ctx context.Context) GetNetworkHierarchyCflowdCollectorArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyCflowdCollectorArrayOutput) Index(i pulumi.IntInput) GetNetworkHierarchyCflowdCollectorOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetNetworkHierarchyCflowdCollector {
+		return vs[0].([]GetNetworkHierarchyCflowdCollector)[vs[1].(int)]
+	}).(GetNetworkHierarchyCflowdCollectorOutput)
+}
+
+type GetNetworkHierarchyNodeAddress struct {
+	// City
+	City string `pulumi:"city"`
+	// Country
+	Country string `pulumi:"country"`
+	// State or province
+	State string `pulumi:"state"`
+	// Street address
+	Street string `pulumi:"street"`
+	// Zip or postal code
+	Zipcode string `pulumi:"zipcode"`
+}
+
+// GetNetworkHierarchyNodeAddressInput is an input type that accepts GetNetworkHierarchyNodeAddressArgs and GetNetworkHierarchyNodeAddressOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchyNodeAddressInput` via:
+//
+//	GetNetworkHierarchyNodeAddressArgs{...}
+type GetNetworkHierarchyNodeAddressInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchyNodeAddressOutput() GetNetworkHierarchyNodeAddressOutput
+	ToGetNetworkHierarchyNodeAddressOutputWithContext(context.Context) GetNetworkHierarchyNodeAddressOutput
+}
+
+type GetNetworkHierarchyNodeAddressArgs struct {
+	// City
+	City pulumi.StringInput `pulumi:"city"`
+	// Country
+	Country pulumi.StringInput `pulumi:"country"`
+	// State or province
+	State pulumi.StringInput `pulumi:"state"`
+	// Street address
+	Street pulumi.StringInput `pulumi:"street"`
+	// Zip or postal code
+	Zipcode pulumi.StringInput `pulumi:"zipcode"`
+}
+
+func (GetNetworkHierarchyNodeAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyNodeAddress)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchyNodeAddressArgs) ToGetNetworkHierarchyNodeAddressOutput() GetNetworkHierarchyNodeAddressOutput {
+	return i.ToGetNetworkHierarchyNodeAddressOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchyNodeAddressArgs) ToGetNetworkHierarchyNodeAddressOutputWithContext(ctx context.Context) GetNetworkHierarchyNodeAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchyNodeAddressOutput)
+}
+
+type GetNetworkHierarchyNodeAddressOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchyNodeAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchyNodeAddress)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchyNodeAddressOutput) ToGetNetworkHierarchyNodeAddressOutput() GetNetworkHierarchyNodeAddressOutput {
+	return o
+}
+
+func (o GetNetworkHierarchyNodeAddressOutput) ToGetNetworkHierarchyNodeAddressOutputWithContext(ctx context.Context) GetNetworkHierarchyNodeAddressOutput {
+	return o
+}
+
+// City
+func (o GetNetworkHierarchyNodeAddressOutput) City() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodeAddress) string { return v.City }).(pulumi.StringOutput)
+}
+
+// Country
+func (o GetNetworkHierarchyNodeAddressOutput) Country() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodeAddress) string { return v.Country }).(pulumi.StringOutput)
+}
+
+// State or province
+func (o GetNetworkHierarchyNodeAddressOutput) State() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodeAddress) string { return v.State }).(pulumi.StringOutput)
+}
+
+// Street address
+func (o GetNetworkHierarchyNodeAddressOutput) Street() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodeAddress) string { return v.Street }).(pulumi.StringOutput)
+}
+
+// Zip or postal code
+func (o GetNetworkHierarchyNodeAddressOutput) Zipcode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchyNodeAddress) string { return v.Zipcode }).(pulumi.StringOutput)
+}
+
+type GetNetworkHierarchySecurityLoggingHighSpeedLogging struct {
+	// Server port number
+	Port int `pulumi:"port"`
+	// Server IPv4 or IPv6 address
+	ServerIp string `pulumi:"serverIp"`
+	// VRF name or ID
+	Vrf string `pulumi:"vrf"`
+}
+
+// GetNetworkHierarchySecurityLoggingHighSpeedLoggingInput is an input type that accepts GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs and GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchySecurityLoggingHighSpeedLoggingInput` via:
+//
+//	GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs{...}
+type GetNetworkHierarchySecurityLoggingHighSpeedLoggingInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput() GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput
+	ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutputWithContext(context.Context) GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput
+}
+
+type GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs struct {
+	// Server port number
+	Port pulumi.IntInput `pulumi:"port"`
+	// Server IPv4 or IPv6 address
+	ServerIp pulumi.StringInput `pulumi:"serverIp"`
+	// VRF name or ID
+	Vrf pulumi.StringInput `pulumi:"vrf"`
+}
+
+func (GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchySecurityLoggingHighSpeedLogging)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput() GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput {
+	return i.ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput)
+}
+
+// GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayInput is an input type that accepts GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray and GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayInput` via:
+//
+//	GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray{ GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs{...} }
+type GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput() GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput
+	ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutputWithContext(context.Context) GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput
+}
+
+type GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray []GetNetworkHierarchySecurityLoggingHighSpeedLoggingInput
+
+func (GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchySecurityLoggingHighSpeedLogging)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput() GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput {
+	return i.ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput)
+}
+
+type GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchySecurityLoggingHighSpeedLogging)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput() GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput {
+	return o
+}
+
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput {
+	return o
+}
+
+// Server port number
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput) Port() pulumi.IntOutput {
+	return o.ApplyT(func(v GetNetworkHierarchySecurityLoggingHighSpeedLogging) int { return v.Port }).(pulumi.IntOutput)
+}
+
+// Server IPv4 or IPv6 address
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput) ServerIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchySecurityLoggingHighSpeedLogging) string { return v.ServerIp }).(pulumi.StringOutput)
+}
+
+// VRF name or ID
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput) Vrf() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchySecurityLoggingHighSpeedLogging) string { return v.Vrf }).(pulumi.StringOutput)
+}
+
+type GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchySecurityLoggingHighSpeedLogging)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput() GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput) ToGetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput) Index(i pulumi.IntInput) GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetNetworkHierarchySecurityLoggingHighSpeedLogging {
+		return vs[0].([]GetNetworkHierarchySecurityLoggingHighSpeedLogging)[vs[1].(int)]
+	}).(GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput)
+}
+
+type GetNetworkHierarchySecurityLoggingUtdSyslog struct {
+	// Server IPv4 address
+	ServerIp string `pulumi:"serverIp"`
+	// VPN name or ID
+	Vpn string `pulumi:"vpn"`
+}
+
+// GetNetworkHierarchySecurityLoggingUtdSyslogInput is an input type that accepts GetNetworkHierarchySecurityLoggingUtdSyslogArgs and GetNetworkHierarchySecurityLoggingUtdSyslogOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchySecurityLoggingUtdSyslogInput` via:
+//
+//	GetNetworkHierarchySecurityLoggingUtdSyslogArgs{...}
+type GetNetworkHierarchySecurityLoggingUtdSyslogInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchySecurityLoggingUtdSyslogOutput() GetNetworkHierarchySecurityLoggingUtdSyslogOutput
+	ToGetNetworkHierarchySecurityLoggingUtdSyslogOutputWithContext(context.Context) GetNetworkHierarchySecurityLoggingUtdSyslogOutput
+}
+
+type GetNetworkHierarchySecurityLoggingUtdSyslogArgs struct {
+	// Server IPv4 address
+	ServerIp pulumi.StringInput `pulumi:"serverIp"`
+	// VPN name or ID
+	Vpn pulumi.StringInput `pulumi:"vpn"`
+}
+
+func (GetNetworkHierarchySecurityLoggingUtdSyslogArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchySecurityLoggingUtdSyslog)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchySecurityLoggingUtdSyslogArgs) ToGetNetworkHierarchySecurityLoggingUtdSyslogOutput() GetNetworkHierarchySecurityLoggingUtdSyslogOutput {
+	return i.ToGetNetworkHierarchySecurityLoggingUtdSyslogOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchySecurityLoggingUtdSyslogArgs) ToGetNetworkHierarchySecurityLoggingUtdSyslogOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingUtdSyslogOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchySecurityLoggingUtdSyslogOutput)
+}
+
+// GetNetworkHierarchySecurityLoggingUtdSyslogArrayInput is an input type that accepts GetNetworkHierarchySecurityLoggingUtdSyslogArray and GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput values.
+// You can construct a concrete instance of `GetNetworkHierarchySecurityLoggingUtdSyslogArrayInput` via:
+//
+//	GetNetworkHierarchySecurityLoggingUtdSyslogArray{ GetNetworkHierarchySecurityLoggingUtdSyslogArgs{...} }
+type GetNetworkHierarchySecurityLoggingUtdSyslogArrayInput interface {
+	pulumi.Input
+
+	ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput() GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput
+	ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutputWithContext(context.Context) GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput
+}
+
+type GetNetworkHierarchySecurityLoggingUtdSyslogArray []GetNetworkHierarchySecurityLoggingUtdSyslogInput
+
+func (GetNetworkHierarchySecurityLoggingUtdSyslogArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchySecurityLoggingUtdSyslog)(nil)).Elem()
+}
+
+func (i GetNetworkHierarchySecurityLoggingUtdSyslogArray) ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput() GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput {
+	return i.ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutputWithContext(context.Background())
+}
+
+func (i GetNetworkHierarchySecurityLoggingUtdSyslogArray) ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput)
+}
+
+type GetNetworkHierarchySecurityLoggingUtdSyslogOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchySecurityLoggingUtdSyslogOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetNetworkHierarchySecurityLoggingUtdSyslog)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogOutput) ToGetNetworkHierarchySecurityLoggingUtdSyslogOutput() GetNetworkHierarchySecurityLoggingUtdSyslogOutput {
+	return o
+}
+
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogOutput) ToGetNetworkHierarchySecurityLoggingUtdSyslogOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingUtdSyslogOutput {
+	return o
+}
+
+// Server IPv4 address
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogOutput) ServerIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchySecurityLoggingUtdSyslog) string { return v.ServerIp }).(pulumi.StringOutput)
+}
+
+// VPN name or ID
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogOutput) Vpn() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNetworkHierarchySecurityLoggingUtdSyslog) string { return v.Vpn }).(pulumi.StringOutput)
+}
+
+type GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput struct{ *pulumi.OutputState }
+
+func (GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetNetworkHierarchySecurityLoggingUtdSyslog)(nil)).Elem()
+}
+
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput) ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput() GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput) ToGetNetworkHierarchySecurityLoggingUtdSyslogArrayOutputWithContext(ctx context.Context) GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput {
+	return o
+}
+
+func (o GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput) Index(i pulumi.IntInput) GetNetworkHierarchySecurityLoggingUtdSyslogOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetNetworkHierarchySecurityLoggingUtdSyslog {
+		return vs[0].([]GetNetworkHierarchySecurityLoggingUtdSyslog)[vs[1].(int)]
+	}).(GetNetworkHierarchySecurityLoggingUtdSyslogOutput)
+}
+
 type GetOtherThousandeyesFeatureVirtualApplication struct {
 	// Set the Account Group Token
 	AccountGroupToken string `pulumi:"accountGroupToken"`
@@ -39532,6 +40865,211 @@ func (o GetOtherThousandeyesFeatureVirtualApplicationArrayOutput) Index(i pulumi
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetOtherThousandeyesFeatureVirtualApplication {
 		return vs[0].([]GetOtherThousandeyesFeatureVirtualApplication)[vs[1].(int)]
 	}).(GetOtherThousandeyesFeatureVirtualApplicationOutput)
+}
+
+type GetOtherTrustsecFeatureSxpConnection struct {
+	// Configure Connection Maximum hold time \n\n
+	MaxHoldTime int `pulumi:"maxHoldTime"`
+	// Variable name
+	MaxHoldTimeVariable string `pulumi:"maxHoldTimeVariable"`
+	// Configure Connection Minimum hold time \n\n
+	MinHoldTime int `pulumi:"minHoldTime"`
+	// Variable name
+	MinHoldTimeVariable string `pulumi:"minHoldTimeVariable"`
+	// Define Mode of connection
+	Mode string `pulumi:"mode"`
+	// Define Role of a device \n\n
+	ModeType string `pulumi:"modeType"`
+	// Configure SXP Peer IP address (IPv4)
+	PeerIp string `pulumi:"peerIp"`
+	// Variable name
+	PeerIpVariable string `pulumi:"peerIpVariable"`
+	// Define Preshared Key type
+	PresharedKey string `pulumi:"presharedKey"`
+	// Configure SXP Source IP address (IPv4)
+	SourceIp string `pulumi:"sourceIp"`
+	// Variable name
+	SourceIpVariable string `pulumi:"sourceIpVariable"`
+	// Configure Connection VPN (VRF) ID
+	VpnId int `pulumi:"vpnId"`
+	// Variable name
+	VpnIdVariable string `pulumi:"vpnIdVariable"`
+}
+
+// GetOtherTrustsecFeatureSxpConnectionInput is an input type that accepts GetOtherTrustsecFeatureSxpConnectionArgs and GetOtherTrustsecFeatureSxpConnectionOutput values.
+// You can construct a concrete instance of `GetOtherTrustsecFeatureSxpConnectionInput` via:
+//
+//	GetOtherTrustsecFeatureSxpConnectionArgs{...}
+type GetOtherTrustsecFeatureSxpConnectionInput interface {
+	pulumi.Input
+
+	ToGetOtherTrustsecFeatureSxpConnectionOutput() GetOtherTrustsecFeatureSxpConnectionOutput
+	ToGetOtherTrustsecFeatureSxpConnectionOutputWithContext(context.Context) GetOtherTrustsecFeatureSxpConnectionOutput
+}
+
+type GetOtherTrustsecFeatureSxpConnectionArgs struct {
+	// Configure Connection Maximum hold time \n\n
+	MaxHoldTime pulumi.IntInput `pulumi:"maxHoldTime"`
+	// Variable name
+	MaxHoldTimeVariable pulumi.StringInput `pulumi:"maxHoldTimeVariable"`
+	// Configure Connection Minimum hold time \n\n
+	MinHoldTime pulumi.IntInput `pulumi:"minHoldTime"`
+	// Variable name
+	MinHoldTimeVariable pulumi.StringInput `pulumi:"minHoldTimeVariable"`
+	// Define Mode of connection
+	Mode pulumi.StringInput `pulumi:"mode"`
+	// Define Role of a device \n\n
+	ModeType pulumi.StringInput `pulumi:"modeType"`
+	// Configure SXP Peer IP address (IPv4)
+	PeerIp pulumi.StringInput `pulumi:"peerIp"`
+	// Variable name
+	PeerIpVariable pulumi.StringInput `pulumi:"peerIpVariable"`
+	// Define Preshared Key type
+	PresharedKey pulumi.StringInput `pulumi:"presharedKey"`
+	// Configure SXP Source IP address (IPv4)
+	SourceIp pulumi.StringInput `pulumi:"sourceIp"`
+	// Variable name
+	SourceIpVariable pulumi.StringInput `pulumi:"sourceIpVariable"`
+	// Configure Connection VPN (VRF) ID
+	VpnId pulumi.IntInput `pulumi:"vpnId"`
+	// Variable name
+	VpnIdVariable pulumi.StringInput `pulumi:"vpnIdVariable"`
+}
+
+func (GetOtherTrustsecFeatureSxpConnectionArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetOtherTrustsecFeatureSxpConnection)(nil)).Elem()
+}
+
+func (i GetOtherTrustsecFeatureSxpConnectionArgs) ToGetOtherTrustsecFeatureSxpConnectionOutput() GetOtherTrustsecFeatureSxpConnectionOutput {
+	return i.ToGetOtherTrustsecFeatureSxpConnectionOutputWithContext(context.Background())
+}
+
+func (i GetOtherTrustsecFeatureSxpConnectionArgs) ToGetOtherTrustsecFeatureSxpConnectionOutputWithContext(ctx context.Context) GetOtherTrustsecFeatureSxpConnectionOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetOtherTrustsecFeatureSxpConnectionOutput)
+}
+
+// GetOtherTrustsecFeatureSxpConnectionArrayInput is an input type that accepts GetOtherTrustsecFeatureSxpConnectionArray and GetOtherTrustsecFeatureSxpConnectionArrayOutput values.
+// You can construct a concrete instance of `GetOtherTrustsecFeatureSxpConnectionArrayInput` via:
+//
+//	GetOtherTrustsecFeatureSxpConnectionArray{ GetOtherTrustsecFeatureSxpConnectionArgs{...} }
+type GetOtherTrustsecFeatureSxpConnectionArrayInput interface {
+	pulumi.Input
+
+	ToGetOtherTrustsecFeatureSxpConnectionArrayOutput() GetOtherTrustsecFeatureSxpConnectionArrayOutput
+	ToGetOtherTrustsecFeatureSxpConnectionArrayOutputWithContext(context.Context) GetOtherTrustsecFeatureSxpConnectionArrayOutput
+}
+
+type GetOtherTrustsecFeatureSxpConnectionArray []GetOtherTrustsecFeatureSxpConnectionInput
+
+func (GetOtherTrustsecFeatureSxpConnectionArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetOtherTrustsecFeatureSxpConnection)(nil)).Elem()
+}
+
+func (i GetOtherTrustsecFeatureSxpConnectionArray) ToGetOtherTrustsecFeatureSxpConnectionArrayOutput() GetOtherTrustsecFeatureSxpConnectionArrayOutput {
+	return i.ToGetOtherTrustsecFeatureSxpConnectionArrayOutputWithContext(context.Background())
+}
+
+func (i GetOtherTrustsecFeatureSxpConnectionArray) ToGetOtherTrustsecFeatureSxpConnectionArrayOutputWithContext(ctx context.Context) GetOtherTrustsecFeatureSxpConnectionArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetOtherTrustsecFeatureSxpConnectionArrayOutput)
+}
+
+type GetOtherTrustsecFeatureSxpConnectionOutput struct{ *pulumi.OutputState }
+
+func (GetOtherTrustsecFeatureSxpConnectionOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetOtherTrustsecFeatureSxpConnection)(nil)).Elem()
+}
+
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) ToGetOtherTrustsecFeatureSxpConnectionOutput() GetOtherTrustsecFeatureSxpConnectionOutput {
+	return o
+}
+
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) ToGetOtherTrustsecFeatureSxpConnectionOutputWithContext(ctx context.Context) GetOtherTrustsecFeatureSxpConnectionOutput {
+	return o
+}
+
+// Configure Connection Maximum hold time \n\n
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) MaxHoldTime() pulumi.IntOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) int { return v.MaxHoldTime }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) MaxHoldTimeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.MaxHoldTimeVariable }).(pulumi.StringOutput)
+}
+
+// Configure Connection Minimum hold time \n\n
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) MinHoldTime() pulumi.IntOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) int { return v.MinHoldTime }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) MinHoldTimeVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.MinHoldTimeVariable }).(pulumi.StringOutput)
+}
+
+// Define Mode of connection
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) Mode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.Mode }).(pulumi.StringOutput)
+}
+
+// Define Role of a device \n\n
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) ModeType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.ModeType }).(pulumi.StringOutput)
+}
+
+// Configure SXP Peer IP address (IPv4)
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) PeerIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.PeerIp }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) PeerIpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.PeerIpVariable }).(pulumi.StringOutput)
+}
+
+// Define Preshared Key type
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) PresharedKey() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.PresharedKey }).(pulumi.StringOutput)
+}
+
+// Configure SXP Source IP address (IPv4)
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) SourceIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.SourceIp }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) SourceIpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.SourceIpVariable }).(pulumi.StringOutput)
+}
+
+// Configure Connection VPN (VRF) ID
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) VpnId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) int { return v.VpnId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetOtherTrustsecFeatureSxpConnectionOutput) VpnIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetOtherTrustsecFeatureSxpConnection) string { return v.VpnIdVariable }).(pulumi.StringOutput)
+}
+
+type GetOtherTrustsecFeatureSxpConnectionArrayOutput struct{ *pulumi.OutputState }
+
+func (GetOtherTrustsecFeatureSxpConnectionArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetOtherTrustsecFeatureSxpConnection)(nil)).Elem()
+}
+
+func (o GetOtherTrustsecFeatureSxpConnectionArrayOutput) ToGetOtherTrustsecFeatureSxpConnectionArrayOutput() GetOtherTrustsecFeatureSxpConnectionArrayOutput {
+	return o
+}
+
+func (o GetOtherTrustsecFeatureSxpConnectionArrayOutput) ToGetOtherTrustsecFeatureSxpConnectionArrayOutputWithContext(ctx context.Context) GetOtherTrustsecFeatureSxpConnectionArrayOutput {
+	return o
+}
+
+func (o GetOtherTrustsecFeatureSxpConnectionArrayOutput) Index(i pulumi.IntInput) GetOtherTrustsecFeatureSxpConnectionOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetOtherTrustsecFeatureSxpConnection {
+		return vs[0].([]GetOtherTrustsecFeatureSxpConnection)[vs[1].(int)]
+	}).(GetOtherTrustsecFeatureSxpConnectionOutput)
 }
 
 type GetOtherUcseFeatureInterface struct {
@@ -45458,6 +46996,130 @@ func (o GetSecurityPolicyDefinitionEntryArrayOutput) Index(i pulumi.IntInput) Ge
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSecurityPolicyDefinitionEntry {
 		return vs[0].([]GetSecurityPolicyDefinitionEntry)[vs[1].(int)]
 	}).(GetSecurityPolicyDefinitionEntryOutput)
+}
+
+type GetSecurityPolicyHighSpeedLoggingEntry struct {
+	// High Speed Logging Port
+	Port string `pulumi:"port"`
+	// High Speed Logging Server IP
+	ServerIp string `pulumi:"serverIp"`
+	// High Speed Logging Source Interface
+	SourceInterface string `pulumi:"sourceInterface"`
+	// High Speed Logging VPN
+	Vpn string `pulumi:"vpn"`
+}
+
+// GetSecurityPolicyHighSpeedLoggingEntryInput is an input type that accepts GetSecurityPolicyHighSpeedLoggingEntryArgs and GetSecurityPolicyHighSpeedLoggingEntryOutput values.
+// You can construct a concrete instance of `GetSecurityPolicyHighSpeedLoggingEntryInput` via:
+//
+//	GetSecurityPolicyHighSpeedLoggingEntryArgs{...}
+type GetSecurityPolicyHighSpeedLoggingEntryInput interface {
+	pulumi.Input
+
+	ToGetSecurityPolicyHighSpeedLoggingEntryOutput() GetSecurityPolicyHighSpeedLoggingEntryOutput
+	ToGetSecurityPolicyHighSpeedLoggingEntryOutputWithContext(context.Context) GetSecurityPolicyHighSpeedLoggingEntryOutput
+}
+
+type GetSecurityPolicyHighSpeedLoggingEntryArgs struct {
+	// High Speed Logging Port
+	Port pulumi.StringInput `pulumi:"port"`
+	// High Speed Logging Server IP
+	ServerIp pulumi.StringInput `pulumi:"serverIp"`
+	// High Speed Logging Source Interface
+	SourceInterface pulumi.StringInput `pulumi:"sourceInterface"`
+	// High Speed Logging VPN
+	Vpn pulumi.StringInput `pulumi:"vpn"`
+}
+
+func (GetSecurityPolicyHighSpeedLoggingEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSecurityPolicyHighSpeedLoggingEntry)(nil)).Elem()
+}
+
+func (i GetSecurityPolicyHighSpeedLoggingEntryArgs) ToGetSecurityPolicyHighSpeedLoggingEntryOutput() GetSecurityPolicyHighSpeedLoggingEntryOutput {
+	return i.ToGetSecurityPolicyHighSpeedLoggingEntryOutputWithContext(context.Background())
+}
+
+func (i GetSecurityPolicyHighSpeedLoggingEntryArgs) ToGetSecurityPolicyHighSpeedLoggingEntryOutputWithContext(ctx context.Context) GetSecurityPolicyHighSpeedLoggingEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSecurityPolicyHighSpeedLoggingEntryOutput)
+}
+
+// GetSecurityPolicyHighSpeedLoggingEntryArrayInput is an input type that accepts GetSecurityPolicyHighSpeedLoggingEntryArray and GetSecurityPolicyHighSpeedLoggingEntryArrayOutput values.
+// You can construct a concrete instance of `GetSecurityPolicyHighSpeedLoggingEntryArrayInput` via:
+//
+//	GetSecurityPolicyHighSpeedLoggingEntryArray{ GetSecurityPolicyHighSpeedLoggingEntryArgs{...} }
+type GetSecurityPolicyHighSpeedLoggingEntryArrayInput interface {
+	pulumi.Input
+
+	ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutput() GetSecurityPolicyHighSpeedLoggingEntryArrayOutput
+	ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutputWithContext(context.Context) GetSecurityPolicyHighSpeedLoggingEntryArrayOutput
+}
+
+type GetSecurityPolicyHighSpeedLoggingEntryArray []GetSecurityPolicyHighSpeedLoggingEntryInput
+
+func (GetSecurityPolicyHighSpeedLoggingEntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSecurityPolicyHighSpeedLoggingEntry)(nil)).Elem()
+}
+
+func (i GetSecurityPolicyHighSpeedLoggingEntryArray) ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutput() GetSecurityPolicyHighSpeedLoggingEntryArrayOutput {
+	return i.ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutputWithContext(context.Background())
+}
+
+func (i GetSecurityPolicyHighSpeedLoggingEntryArray) ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutputWithContext(ctx context.Context) GetSecurityPolicyHighSpeedLoggingEntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetSecurityPolicyHighSpeedLoggingEntryArrayOutput)
+}
+
+type GetSecurityPolicyHighSpeedLoggingEntryOutput struct{ *pulumi.OutputState }
+
+func (GetSecurityPolicyHighSpeedLoggingEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetSecurityPolicyHighSpeedLoggingEntry)(nil)).Elem()
+}
+
+func (o GetSecurityPolicyHighSpeedLoggingEntryOutput) ToGetSecurityPolicyHighSpeedLoggingEntryOutput() GetSecurityPolicyHighSpeedLoggingEntryOutput {
+	return o
+}
+
+func (o GetSecurityPolicyHighSpeedLoggingEntryOutput) ToGetSecurityPolicyHighSpeedLoggingEntryOutputWithContext(ctx context.Context) GetSecurityPolicyHighSpeedLoggingEntryOutput {
+	return o
+}
+
+// High Speed Logging Port
+func (o GetSecurityPolicyHighSpeedLoggingEntryOutput) Port() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSecurityPolicyHighSpeedLoggingEntry) string { return v.Port }).(pulumi.StringOutput)
+}
+
+// High Speed Logging Server IP
+func (o GetSecurityPolicyHighSpeedLoggingEntryOutput) ServerIp() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSecurityPolicyHighSpeedLoggingEntry) string { return v.ServerIp }).(pulumi.StringOutput)
+}
+
+// High Speed Logging Source Interface
+func (o GetSecurityPolicyHighSpeedLoggingEntryOutput) SourceInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSecurityPolicyHighSpeedLoggingEntry) string { return v.SourceInterface }).(pulumi.StringOutput)
+}
+
+// High Speed Logging VPN
+func (o GetSecurityPolicyHighSpeedLoggingEntryOutput) Vpn() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSecurityPolicyHighSpeedLoggingEntry) string { return v.Vpn }).(pulumi.StringOutput)
+}
+
+type GetSecurityPolicyHighSpeedLoggingEntryArrayOutput struct{ *pulumi.OutputState }
+
+func (GetSecurityPolicyHighSpeedLoggingEntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetSecurityPolicyHighSpeedLoggingEntry)(nil)).Elem()
+}
+
+func (o GetSecurityPolicyHighSpeedLoggingEntryArrayOutput) ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutput() GetSecurityPolicyHighSpeedLoggingEntryArrayOutput {
+	return o
+}
+
+func (o GetSecurityPolicyHighSpeedLoggingEntryArrayOutput) ToGetSecurityPolicyHighSpeedLoggingEntryArrayOutputWithContext(ctx context.Context) GetSecurityPolicyHighSpeedLoggingEntryArrayOutput {
+	return o
+}
+
+func (o GetSecurityPolicyHighSpeedLoggingEntryArrayOutput) Index(i pulumi.IntInput) GetSecurityPolicyHighSpeedLoggingEntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSecurityPolicyHighSpeedLoggingEntry {
+		return vs[0].([]GetSecurityPolicyHighSpeedLoggingEntry)[vs[1].(int)]
+	}).(GetSecurityPolicyHighSpeedLoggingEntryOutput)
 }
 
 type GetSecurityPolicyLogging struct {
@@ -68853,7 +70515,15 @@ func (o GetSystemLoggingFeatureTlsProfileArrayOutput) Index(i pulumi.IntInput) G
 }
 
 type GetSystemNtpFeatureAuthenticationKey struct {
-	// MD5 authentication key ID
+	// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+	CmacAes128Value string `pulumi:"cmacAes128Value"`
+	// Variable name
+	CmacAes128ValueVariable string `pulumi:"cmacAes128ValueVariable"`
+	// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+	HmacSha2Value string `pulumi:"hmacSha2Value"`
+	// Variable name
+	HmacSha2ValueVariable string `pulumi:"hmacSha2ValueVariable"`
+	// Authentication key ID
 	KeyId int `pulumi:"keyId"`
 	// Variable name
 	KeyIdVariable string `pulumi:"keyIdVariable"`
@@ -68875,7 +70545,15 @@ type GetSystemNtpFeatureAuthenticationKeyInput interface {
 }
 
 type GetSystemNtpFeatureAuthenticationKeyArgs struct {
-	// MD5 authentication key ID
+	// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+	CmacAes128Value pulumi.StringInput `pulumi:"cmacAes128Value"`
+	// Variable name
+	CmacAes128ValueVariable pulumi.StringInput `pulumi:"cmacAes128ValueVariable"`
+	// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+	HmacSha2Value pulumi.StringInput `pulumi:"hmacSha2Value"`
+	// Variable name
+	HmacSha2ValueVariable pulumi.StringInput `pulumi:"hmacSha2ValueVariable"`
+	// Authentication key ID
 	KeyId pulumi.IntInput `pulumi:"keyId"`
 	// Variable name
 	KeyIdVariable pulumi.StringInput `pulumi:"keyIdVariable"`
@@ -68936,7 +70614,27 @@ func (o GetSystemNtpFeatureAuthenticationKeyOutput) ToGetSystemNtpFeatureAuthent
 	return o
 }
 
-// MD5 authentication key ID
+// CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes)
+func (o GetSystemNtpFeatureAuthenticationKeyOutput) CmacAes128Value() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemNtpFeatureAuthenticationKey) string { return v.CmacAes128Value }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemNtpFeatureAuthenticationKeyOutput) CmacAes128ValueVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemNtpFeatureAuthenticationKey) string { return v.CmacAes128ValueVariable }).(pulumi.StringOutput)
+}
+
+// HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes)
+func (o GetSystemNtpFeatureAuthenticationKeyOutput) HmacSha2Value() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemNtpFeatureAuthenticationKey) string { return v.HmacSha2Value }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetSystemNtpFeatureAuthenticationKeyOutput) HmacSha2ValueVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetSystemNtpFeatureAuthenticationKey) string { return v.HmacSha2ValueVariable }).(pulumi.StringOutput)
+}
+
+// Authentication key ID
 func (o GetSystemNtpFeatureAuthenticationKeyOutput) KeyId() pulumi.IntOutput {
 	return o.ApplyT(func(v GetSystemNtpFeatureAuthenticationKey) int { return v.KeyId }).(pulumi.IntOutput)
 }
@@ -76409,2398 +78107,19 @@ func (o GetTransportRoutePolicyFeatureSequenceActionArrayOutput) Index(i pulumi.
 	}).(GetTransportRoutePolicyFeatureSequenceActionOutput)
 }
 
-type GetTransportRoutePolicyFeatureSequenceMatchEntry struct {
-	AsPathListId string `pulumi:"asPathListId"`
-	// BGP Local Preference
-	BgpLocalPreference      int    `pulumi:"bgpLocalPreference"`
-	ExpandedCommunityListId string `pulumi:"expandedCommunityListId"`
-	ExtendedCommunityListId string `pulumi:"extendedCommunityListId"`
-	Ipv4AddressPrefixListId string `pulumi:"ipv4AddressPrefixListId"`
-	Ipv4NextHopPrefixListId string `pulumi:"ipv4NextHopPrefixListId"`
-	Ipv6AddressPrefixListId string `pulumi:"ipv6AddressPrefixListId"`
-	Ipv6NextHopPrefixListId string `pulumi:"ipv6NextHopPrefixListId"`
-	// Select Metric
-	Metric int `pulumi:"metric"`
-	// Select OMP Tag
-	OmpTag int `pulumi:"ompTag"`
-	// Select OSPF Tag
-	OspfTag int `pulumi:"ospfTag"`
-	// Select a condition such as OR, AND or EXACT
-	StandardCommunityListCriteria string `pulumi:"standardCommunityListCriteria"`
-	// Select a standard community list
-	StandardCommunityLists []GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList `pulumi:"standardCommunityLists"`
-}
-
-// GetTransportRoutePolicyFeatureSequenceMatchEntryInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceMatchEntryArgs and GetTransportRoutePolicyFeatureSequenceMatchEntryOutput values.
-// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceMatchEntryInput` via:
-//
-//	GetTransportRoutePolicyFeatureSequenceMatchEntryArgs{...}
-type GetTransportRoutePolicyFeatureSequenceMatchEntryInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryOutput
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryOutput
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryArgs struct {
-	AsPathListId pulumi.StringInput `pulumi:"asPathListId"`
-	// BGP Local Preference
-	BgpLocalPreference      pulumi.IntInput    `pulumi:"bgpLocalPreference"`
-	ExpandedCommunityListId pulumi.StringInput `pulumi:"expandedCommunityListId"`
-	ExtendedCommunityListId pulumi.StringInput `pulumi:"extendedCommunityListId"`
-	Ipv4AddressPrefixListId pulumi.StringInput `pulumi:"ipv4AddressPrefixListId"`
-	Ipv4NextHopPrefixListId pulumi.StringInput `pulumi:"ipv4NextHopPrefixListId"`
-	Ipv6AddressPrefixListId pulumi.StringInput `pulumi:"ipv6AddressPrefixListId"`
-	Ipv6NextHopPrefixListId pulumi.StringInput `pulumi:"ipv6NextHopPrefixListId"`
-	// Select Metric
-	Metric pulumi.IntInput `pulumi:"metric"`
-	// Select OMP Tag
-	OmpTag pulumi.IntInput `pulumi:"ompTag"`
-	// Select OSPF Tag
-	OspfTag pulumi.IntInput `pulumi:"ospfTag"`
-	// Select a condition such as OR, AND or EXACT
-	StandardCommunityListCriteria pulumi.StringInput `pulumi:"standardCommunityListCriteria"`
-	// Select a standard community list
-	StandardCommunityLists GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayInput `pulumi:"standardCommunityLists"`
-}
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntry)(nil)).Elem()
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryArgs) ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryOutput {
-	return i.ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryArgs) ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceMatchEntryOutput)
-}
-
-// GetTransportRoutePolicyFeatureSequenceMatchEntryArrayInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceMatchEntryArray and GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceMatchEntryArrayInput` via:
-//
-//	GetTransportRoutePolicyFeatureSequenceMatchEntryArray{ GetTransportRoutePolicyFeatureSequenceMatchEntryArgs{...} }
-type GetTransportRoutePolicyFeatureSequenceMatchEntryArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryArray []GetTransportRoutePolicyFeatureSequenceMatchEntryInput
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequenceMatchEntry)(nil)).Elem()
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryArray) ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput {
-	return i.ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryArray) ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput)
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntry)(nil)).Elem()
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) AsPathListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.AsPathListId }).(pulumi.StringOutput)
-}
-
-// BGP Local Preference
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) BgpLocalPreference() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) int { return v.BgpLocalPreference }).(pulumi.IntOutput)
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) ExpandedCommunityListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.ExpandedCommunityListId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) ExtendedCommunityListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.ExtendedCommunityListId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) Ipv4AddressPrefixListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.Ipv4AddressPrefixListId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) Ipv4NextHopPrefixListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.Ipv4NextHopPrefixListId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) Ipv6AddressPrefixListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.Ipv6AddressPrefixListId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) Ipv6NextHopPrefixListId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string { return v.Ipv6NextHopPrefixListId }).(pulumi.StringOutput)
-}
-
-// Select Metric
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) Metric() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) int { return v.Metric }).(pulumi.IntOutput)
-}
-
-// Select OMP Tag
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) OmpTag() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) int { return v.OmpTag }).(pulumi.IntOutput)
-}
-
-// Select OSPF Tag
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) OspfTag() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) int { return v.OspfTag }).(pulumi.IntOutput)
-}
-
-// Select a condition such as OR, AND or EXACT
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) StandardCommunityListCriteria() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) string {
-		return v.StandardCommunityListCriteria
-	}).(pulumi.StringOutput)
-}
-
-// Select a standard community list
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryOutput) StandardCommunityLists() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntry) []GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
-		return v.StandardCommunityLists
-	}).(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput)
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequenceMatchEntry)(nil)).Elem()
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput) Index(i pulumi.IntInput) GetTransportRoutePolicyFeatureSequenceMatchEntryOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutePolicyFeatureSequenceMatchEntry {
-		return vs[0].([]GetTransportRoutePolicyFeatureSequenceMatchEntry)[vs[1].(int)]
-	}).(GetTransportRoutePolicyFeatureSequenceMatchEntryOutput)
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList struct {
-	Id string `pulumi:"id"`
-}
-
-// GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs and GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput values.
-// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListInput` via:
-//
-//	GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs{...}
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs struct {
-	Id pulumi.StringInput `pulumi:"id"`
-}
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList)(nil)).Elem()
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput {
-	return i.ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput)
-}
-
-// GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayInput is an input type that accepts GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray and GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayInput` via:
-//
-//	GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray{ GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs{...} }
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput
-	ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutputWithContext(context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray []GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListInput
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList)(nil)).Elem()
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput {
-	return i.ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput)
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList)(nil)).Elem()
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList) string { return v.Id }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList)(nil)).Elem()
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput() GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput) ToGetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutputWithContext(ctx context.Context) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput) Index(i pulumi.IntInput) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
-		return vs[0].([]GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList)[vs[1].(int)]
-	}).(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4AggregateAddress struct {
-	// Set AS set path information
-	AsSetPath bool `pulumi:"asSetPath"`
-	// Variable name
-	AsSetPathVariable string `pulumi:"asSetPathVariable"`
-	NetworkAddress    string `pulumi:"networkAddress"`
-	// Variable name
-	NetworkAddressVariable string `pulumi:"networkAddressVariable"`
-	SubnetMask             string `pulumi:"subnetMask"`
-	// Variable name
-	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
-	// Filter out more specific routes from updates
-	SummaryOnly bool `pulumi:"summaryOnly"`
-	// Variable name
-	SummaryOnlyVariable string `pulumi:"summaryOnlyVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv4AggregateAddressInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs and GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4AggregateAddressInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs{...}
-type GetTransportRoutingBgpFeatureIpv4AggregateAddressInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutput() GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput
-	ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs struct {
-	// Set AS set path information
-	AsSetPath pulumi.BoolInput `pulumi:"asSetPath"`
-	// Variable name
-	AsSetPathVariable pulumi.StringInput `pulumi:"asSetPathVariable"`
-	NetworkAddress    pulumi.StringInput `pulumi:"networkAddress"`
-	// Variable name
-	NetworkAddressVariable pulumi.StringInput `pulumi:"networkAddressVariable"`
-	SubnetMask             pulumi.StringInput `pulumi:"subnetMask"`
-	// Variable name
-	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
-	// Filter out more specific routes from updates
-	SummaryOnly pulumi.BoolInput `pulumi:"summaryOnly"`
-	// Variable name
-	SummaryOnlyVariable pulumi.StringInput `pulumi:"summaryOnlyVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4AggregateAddress)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutput() GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4AggregateAddressArray and GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4AggregateAddressArray{ GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs{...} }
-type GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput() GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4AggregateAddressArray []GetTransportRoutingBgpFeatureIpv4AggregateAddressInput
-
-func (GetTransportRoutingBgpFeatureIpv4AggregateAddressArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4AggregateAddress)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4AggregateAddressArray) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput() GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4AggregateAddressArray) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4AggregateAddress)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutput() GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput {
-	return o
-}
-
-// Set AS set path information
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) AsSetPath() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) bool { return v.AsSetPath }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) AsSetPathVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.AsSetPathVariable }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.NetworkAddress }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) NetworkAddressVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.NetworkAddressVariable }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.SubnetMask }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) SubnetMaskVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.SubnetMaskVariable }).(pulumi.StringOutput)
-}
-
-// Filter out more specific routes from updates
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) SummaryOnly() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) bool { return v.SummaryOnly }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput) SummaryOnlyVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4AggregateAddress) string { return v.SummaryOnlyVariable }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4AggregateAddress)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput() GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput) ToGetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv4AggregateAddress {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv4AggregateAddress)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4Neighbor struct {
-	// Set neighbor address
-	Address string `pulumi:"address"`
-	// Set BGP address family
-	AddressFamilies []GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily `pulumi:"addressFamilies"`
-	// Variable name
-	AddressVariable string `pulumi:"addressVariable"`
-	// The number of accept as-path with my AS present in it
-	AllowasInNumber int `pulumi:"allowasInNumber"`
-	// Variable name
-	AllowasInNumberVariable string `pulumi:"allowasInNumberVariable"`
-	// Override matching AS-number while sending update
-	AsOverride bool `pulumi:"asOverride"`
-	// Variable name
-	AsOverrideVariable string `pulumi:"asOverrideVariable"`
-	// Set description
-	Description string `pulumi:"description"`
-	// Variable name
-	DescriptionVariable string `pulumi:"descriptionVariable"`
-	// Set TTL value for peers that are not directly connected
-	EbgpMultihop int `pulumi:"ebgpMultihop"`
-	// Variable name
-	EbgpMultihopVariable string `pulumi:"ebgpMultihopVariable"`
-	// Send explicit null label
-	ExplicitNull bool `pulumi:"explicitNull"`
-	// Variable name
-	ExplicitNullVariable string `pulumi:"explicitNullVariable"`
-	// Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
-	HoldTime int `pulumi:"holdTime"`
-	// Variable name
-	HoldTimeVariable string `pulumi:"holdTimeVariable"`
-	// Set how often to advertise keepalive messages to BGP peer
-	KeepaliveTime int `pulumi:"keepaliveTime"`
-	// Variable name
-	KeepaliveTimeVariable string `pulumi:"keepaliveTimeVariable"`
-	// Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-	LocalAs string `pulumi:"localAs"`
-	// Variable name
-	LocalAsVariable string `pulumi:"localAsVariable"`
-	// Set router to be next hop for routes advertised to neighbor
-	NextHopSelf bool `pulumi:"nextHopSelf"`
-	// Variable name
-	NextHopSelfVariable string `pulumi:"nextHopSelfVariable"`
-	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
-	Password string `pulumi:"password"`
-	// Variable name
-	PasswordVariable string `pulumi:"passwordVariable"`
-	// Set remote autonomous system number
-	RemoteAs string `pulumi:"remoteAs"`
-	// Variable name
-	RemoteAsVariable string `pulumi:"remoteAsVariable"`
-	// Send community attribute
-	SendCommunity bool `pulumi:"sendCommunity"`
-	// Variable name
-	SendCommunityVariable string `pulumi:"sendCommunityVariable"`
-	// Send extended community attribute
-	SendExtendedCommunity bool `pulumi:"sendExtendedCommunity"`
-	// Variable name
-	SendExtendedCommunityVariable string `pulumi:"sendExtendedCommunityVariable"`
-	// Send label
-	SendLabel bool `pulumi:"sendLabel"`
-	// Enable or disable a BGP neighbor
-	Shutdown bool `pulumi:"shutdown"`
-	// Variable name
-	ShutdownVariable string `pulumi:"shutdownVariable"`
-	// Source interface name for BGP neighbor
-	UpdateSourceInterface string `pulumi:"updateSourceInterface"`
-	// Variable name
-	UpdateSourceInterfaceVariable string `pulumi:"updateSourceInterfaceVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv4NeighborInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4NeighborArgs and GetTransportRoutingBgpFeatureIpv4NeighborOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4NeighborInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4NeighborArgs{...}
-type GetTransportRoutingBgpFeatureIpv4NeighborInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4NeighborOutput() GetTransportRoutingBgpFeatureIpv4NeighborOutput
-	ToGetTransportRoutingBgpFeatureIpv4NeighborOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4NeighborOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborArgs struct {
-	// Set neighbor address
-	Address pulumi.StringInput `pulumi:"address"`
-	// Set BGP address family
-	AddressFamilies GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayInput `pulumi:"addressFamilies"`
-	// Variable name
-	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
-	// The number of accept as-path with my AS present in it
-	AllowasInNumber pulumi.IntInput `pulumi:"allowasInNumber"`
-	// Variable name
-	AllowasInNumberVariable pulumi.StringInput `pulumi:"allowasInNumberVariable"`
-	// Override matching AS-number while sending update
-	AsOverride pulumi.BoolInput `pulumi:"asOverride"`
-	// Variable name
-	AsOverrideVariable pulumi.StringInput `pulumi:"asOverrideVariable"`
-	// Set description
-	Description pulumi.StringInput `pulumi:"description"`
-	// Variable name
-	DescriptionVariable pulumi.StringInput `pulumi:"descriptionVariable"`
-	// Set TTL value for peers that are not directly connected
-	EbgpMultihop pulumi.IntInput `pulumi:"ebgpMultihop"`
-	// Variable name
-	EbgpMultihopVariable pulumi.StringInput `pulumi:"ebgpMultihopVariable"`
-	// Send explicit null label
-	ExplicitNull pulumi.BoolInput `pulumi:"explicitNull"`
-	// Variable name
-	ExplicitNullVariable pulumi.StringInput `pulumi:"explicitNullVariable"`
-	// Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
-	HoldTime pulumi.IntInput `pulumi:"holdTime"`
-	// Variable name
-	HoldTimeVariable pulumi.StringInput `pulumi:"holdTimeVariable"`
-	// Set how often to advertise keepalive messages to BGP peer
-	KeepaliveTime pulumi.IntInput `pulumi:"keepaliveTime"`
-	// Variable name
-	KeepaliveTimeVariable pulumi.StringInput `pulumi:"keepaliveTimeVariable"`
-	// Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-	LocalAs pulumi.StringInput `pulumi:"localAs"`
-	// Variable name
-	LocalAsVariable pulumi.StringInput `pulumi:"localAsVariable"`
-	// Set router to be next hop for routes advertised to neighbor
-	NextHopSelf pulumi.BoolInput `pulumi:"nextHopSelf"`
-	// Variable name
-	NextHopSelfVariable pulumi.StringInput `pulumi:"nextHopSelfVariable"`
-	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
-	Password pulumi.StringInput `pulumi:"password"`
-	// Variable name
-	PasswordVariable pulumi.StringInput `pulumi:"passwordVariable"`
-	// Set remote autonomous system number
-	RemoteAs pulumi.StringInput `pulumi:"remoteAs"`
-	// Variable name
-	RemoteAsVariable pulumi.StringInput `pulumi:"remoteAsVariable"`
-	// Send community attribute
-	SendCommunity pulumi.BoolInput `pulumi:"sendCommunity"`
-	// Variable name
-	SendCommunityVariable pulumi.StringInput `pulumi:"sendCommunityVariable"`
-	// Send extended community attribute
-	SendExtendedCommunity pulumi.BoolInput `pulumi:"sendExtendedCommunity"`
-	// Variable name
-	SendExtendedCommunityVariable pulumi.StringInput `pulumi:"sendExtendedCommunityVariable"`
-	// Send label
-	SendLabel pulumi.BoolInput `pulumi:"sendLabel"`
-	// Enable or disable a BGP neighbor
-	Shutdown pulumi.BoolInput `pulumi:"shutdown"`
-	// Variable name
-	ShutdownVariable pulumi.StringInput `pulumi:"shutdownVariable"`
-	// Source interface name for BGP neighbor
-	UpdateSourceInterface pulumi.StringInput `pulumi:"updateSourceInterface"`
-	// Variable name
-	UpdateSourceInterfaceVariable pulumi.StringInput `pulumi:"updateSourceInterfaceVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4Neighbor)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborArgs) ToGetTransportRoutingBgpFeatureIpv4NeighborOutput() GetTransportRoutingBgpFeatureIpv4NeighborOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4NeighborOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborArgs) ToGetTransportRoutingBgpFeatureIpv4NeighborOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4NeighborOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv4NeighborArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4NeighborArray and GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4NeighborArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4NeighborArray{ GetTransportRoutingBgpFeatureIpv4NeighborArgs{...} }
-type GetTransportRoutingBgpFeatureIpv4NeighborArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutput() GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborArray []GetTransportRoutingBgpFeatureIpv4NeighborInput
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4Neighbor)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborArray) ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutput() GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborArray) ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4Neighbor)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborOutput() GetTransportRoutingBgpFeatureIpv4NeighborOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborOutput {
-	return o
-}
-
-// Set neighbor address
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) Address() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.Address }).(pulumi.StringOutput)
-}
-
-// Set BGP address family
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) AddressFamilies() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) []GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
-		return v.AddressFamilies
-	}).(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) AddressVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.AddressVariable }).(pulumi.StringOutput)
-}
-
-// The number of accept as-path with my AS present in it
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) AllowasInNumber() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) int { return v.AllowasInNumber }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) AllowasInNumberVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.AllowasInNumberVariable }).(pulumi.StringOutput)
-}
-
-// Override matching AS-number while sending update
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) AsOverride() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.AsOverride }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) AsOverrideVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.AsOverrideVariable }).(pulumi.StringOutput)
-}
-
-// Set description
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.Description }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) DescriptionVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.DescriptionVariable }).(pulumi.StringOutput)
-}
-
-// Set TTL value for peers that are not directly connected
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) EbgpMultihop() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) int { return v.EbgpMultihop }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) EbgpMultihopVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.EbgpMultihopVariable }).(pulumi.StringOutput)
-}
-
-// Send explicit null label
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) ExplicitNull() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.ExplicitNull }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) ExplicitNullVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.ExplicitNullVariable }).(pulumi.StringOutput)
-}
-
-// Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) HoldTime() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) int { return v.HoldTime }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) HoldTimeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.HoldTimeVariable }).(pulumi.StringOutput)
-}
-
-// Set how often to advertise keepalive messages to BGP peer
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) KeepaliveTime() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) int { return v.KeepaliveTime }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) KeepaliveTimeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.KeepaliveTimeVariable }).(pulumi.StringOutput)
-}
-
-// Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) LocalAs() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.LocalAs }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) LocalAsVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.LocalAsVariable }).(pulumi.StringOutput)
-}
-
-// Set router to be next hop for routes advertised to neighbor
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) NextHopSelf() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.NextHopSelf }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) NextHopSelfVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.NextHopSelfVariable }).(pulumi.StringOutput)
-}
-
-// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) Password() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.Password }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) PasswordVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.PasswordVariable }).(pulumi.StringOutput)
-}
-
-// Set remote autonomous system number
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) RemoteAs() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.RemoteAs }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) RemoteAsVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.RemoteAsVariable }).(pulumi.StringOutput)
-}
-
-// Send community attribute
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) SendCommunity() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.SendCommunity }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) SendCommunityVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.SendCommunityVariable }).(pulumi.StringOutput)
-}
-
-// Send extended community attribute
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) SendExtendedCommunity() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.SendExtendedCommunity }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) SendExtendedCommunityVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.SendExtendedCommunityVariable }).(pulumi.StringOutput)
-}
-
-// Send label
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) SendLabel() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.SendLabel }).(pulumi.BoolOutput)
-}
-
-// Enable or disable a BGP neighbor
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) Shutdown() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) bool { return v.Shutdown }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) ShutdownVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.ShutdownVariable }).(pulumi.StringOutput)
-}
-
-// Source interface name for BGP neighbor
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) UpdateSourceInterface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.UpdateSourceInterface }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborOutput) UpdateSourceInterfaceVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Neighbor) string { return v.UpdateSourceInterfaceVariable }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4Neighbor)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutput() GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv4NeighborOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv4Neighbor {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv4Neighbor)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv4NeighborOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily struct {
-	// Set maximum number of prefixes accepted from BGP peer
-	DisablePeerMaxNumberOfPrefixes int `pulumi:"disablePeerMaxNumberOfPrefixes"`
-	// Variable name
-	DisablePeerMaxNumberOfPrefixesVariable string `pulumi:"disablePeerMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	DisablePeerThreshold int `pulumi:"disablePeerThreshold"`
-	// Variable name
-	DisablePeerThresholdVariable string `pulumi:"disablePeerThresholdVariable"`
-	// Set IPv4 unicast address family
-	FamilyType       string `pulumi:"familyType"`
-	InRoutePolicyId  string `pulumi:"inRoutePolicyId"`
-	OutRoutePolicyId string `pulumi:"outRoutePolicyId"`
-	// Neighbor received maximum prefix policy is disabled.
-	PolicyType string `pulumi:"policyType"`
-	// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-	RestartInterval int `pulumi:"restartInterval"`
-	// Variable name
-	RestartIntervalVariable string `pulumi:"restartIntervalVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	RestartMaxNumberOfPrefixes int `pulumi:"restartMaxNumberOfPrefixes"`
-	// Variable name
-	RestartMaxNumberOfPrefixesVariable string `pulumi:"restartMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	RestartThreshold int `pulumi:"restartThreshold"`
-	// Variable name
-	RestartThresholdVariable string `pulumi:"restartThresholdVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	WarningMessageMaxNumberOfPrefixes int `pulumi:"warningMessageMaxNumberOfPrefixes"`
-	// Variable name
-	WarningMessageMaxNumberOfPrefixesVariable string `pulumi:"warningMessageMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	WarningMessageThreshold int `pulumi:"warningMessageThreshold"`
-	// Variable name
-	WarningMessageThresholdVariable string `pulumi:"warningMessageThresholdVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs and GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs{...}
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput
-	ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs struct {
-	// Set maximum number of prefixes accepted from BGP peer
-	DisablePeerMaxNumberOfPrefixes pulumi.IntInput `pulumi:"disablePeerMaxNumberOfPrefixes"`
-	// Variable name
-	DisablePeerMaxNumberOfPrefixesVariable pulumi.StringInput `pulumi:"disablePeerMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	DisablePeerThreshold pulumi.IntInput `pulumi:"disablePeerThreshold"`
-	// Variable name
-	DisablePeerThresholdVariable pulumi.StringInput `pulumi:"disablePeerThresholdVariable"`
-	// Set IPv4 unicast address family
-	FamilyType       pulumi.StringInput `pulumi:"familyType"`
-	InRoutePolicyId  pulumi.StringInput `pulumi:"inRoutePolicyId"`
-	OutRoutePolicyId pulumi.StringInput `pulumi:"outRoutePolicyId"`
-	// Neighbor received maximum prefix policy is disabled.
-	PolicyType pulumi.StringInput `pulumi:"policyType"`
-	// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-	RestartInterval pulumi.IntInput `pulumi:"restartInterval"`
-	// Variable name
-	RestartIntervalVariable pulumi.StringInput `pulumi:"restartIntervalVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	RestartMaxNumberOfPrefixes pulumi.IntInput `pulumi:"restartMaxNumberOfPrefixes"`
-	// Variable name
-	RestartMaxNumberOfPrefixesVariable pulumi.StringInput `pulumi:"restartMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	RestartThreshold pulumi.IntInput `pulumi:"restartThreshold"`
-	// Variable name
-	RestartThresholdVariable pulumi.StringInput `pulumi:"restartThresholdVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	WarningMessageMaxNumberOfPrefixes pulumi.IntInput `pulumi:"warningMessageMaxNumberOfPrefixes"`
-	// Variable name
-	WarningMessageMaxNumberOfPrefixesVariable pulumi.StringInput `pulumi:"warningMessageMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	WarningMessageThreshold pulumi.IntInput `pulumi:"warningMessageThreshold"`
-	// Variable name
-	WarningMessageThresholdVariable pulumi.StringInput `pulumi:"warningMessageThresholdVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray and GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray{ GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs{...} }
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray []GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyInput
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput {
-	return o
-}
-
-// Set maximum number of prefixes accepted from BGP peer
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) DisablePeerMaxNumberOfPrefixes() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int {
-		return v.DisablePeerMaxNumberOfPrefixes
-	}).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) DisablePeerMaxNumberOfPrefixesVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.DisablePeerMaxNumberOfPrefixesVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set threshold(1 to 100) at which to generate a warning message
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) DisablePeerThreshold() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int { return v.DisablePeerThreshold }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) DisablePeerThresholdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.DisablePeerThresholdVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set IPv4 unicast address family
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) FamilyType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string { return v.FamilyType }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) InRoutePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string { return v.InRoutePolicyId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) OutRoutePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string { return v.OutRoutePolicyId }).(pulumi.StringOutput)
-}
-
-// Neighbor received maximum prefix policy is disabled.
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) PolicyType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string { return v.PolicyType }).(pulumi.StringOutput)
-}
-
-// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) RestartInterval() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int { return v.RestartInterval }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) RestartIntervalVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.RestartIntervalVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set maximum number of prefixes accepted from BGP peer
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) RestartMaxNumberOfPrefixes() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int {
-		return v.RestartMaxNumberOfPrefixes
-	}).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) RestartMaxNumberOfPrefixesVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.RestartMaxNumberOfPrefixesVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set threshold(1 to 100) at which to generate a warning message
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) RestartThreshold() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int { return v.RestartThreshold }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) RestartThresholdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.RestartThresholdVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set maximum number of prefixes accepted from BGP peer
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) WarningMessageMaxNumberOfPrefixes() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int {
-		return v.WarningMessageMaxNumberOfPrefixes
-	}).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) WarningMessageMaxNumberOfPrefixesVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.WarningMessageMaxNumberOfPrefixesVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set threshold(1 to 100) at which to generate a warning message
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) WarningMessageThreshold() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) int { return v.WarningMessageThreshold }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput) WarningMessageThresholdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily) string {
-		return v.WarningMessageThresholdVariable
-	}).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput() GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) ToGetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4Network struct {
-	NetworkAddress string `pulumi:"networkAddress"`
-	// Variable name
-	NetworkAddressVariable string `pulumi:"networkAddressVariable"`
-	SubnetMask             string `pulumi:"subnetMask"`
-	// Variable name
-	SubnetMaskVariable string `pulumi:"subnetMaskVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv4NetworkInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4NetworkArgs and GetTransportRoutingBgpFeatureIpv4NetworkOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4NetworkInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4NetworkArgs{...}
-type GetTransportRoutingBgpFeatureIpv4NetworkInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4NetworkOutput() GetTransportRoutingBgpFeatureIpv4NetworkOutput
-	ToGetTransportRoutingBgpFeatureIpv4NetworkOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4NetworkOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4NetworkArgs struct {
-	NetworkAddress pulumi.StringInput `pulumi:"networkAddress"`
-	// Variable name
-	NetworkAddressVariable pulumi.StringInput `pulumi:"networkAddressVariable"`
-	SubnetMask             pulumi.StringInput `pulumi:"subnetMask"`
-	// Variable name
-	SubnetMaskVariable pulumi.StringInput `pulumi:"subnetMaskVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv4NetworkArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4Network)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NetworkArgs) ToGetTransportRoutingBgpFeatureIpv4NetworkOutput() GetTransportRoutingBgpFeatureIpv4NetworkOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4NetworkOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NetworkArgs) ToGetTransportRoutingBgpFeatureIpv4NetworkOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NetworkOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4NetworkOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv4NetworkArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4NetworkArray and GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4NetworkArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4NetworkArray{ GetTransportRoutingBgpFeatureIpv4NetworkArgs{...} }
-type GetTransportRoutingBgpFeatureIpv4NetworkArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutput() GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4NetworkArray []GetTransportRoutingBgpFeatureIpv4NetworkInput
-
-func (GetTransportRoutingBgpFeatureIpv4NetworkArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4Network)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NetworkArray) ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutput() GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4NetworkArray) ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NetworkOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4NetworkOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4Network)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) ToGetTransportRoutingBgpFeatureIpv4NetworkOutput() GetTransportRoutingBgpFeatureIpv4NetworkOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) ToGetTransportRoutingBgpFeatureIpv4NetworkOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NetworkOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) NetworkAddress() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.NetworkAddress }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) NetworkAddressVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.NetworkAddressVariable }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.SubnetMask }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4NetworkOutput) SubnetMaskVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Network) string { return v.SubnetMaskVariable }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4Network)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput) ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutput() GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput) ToGetTransportRoutingBgpFeatureIpv4NetworkArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv4NetworkOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv4Network {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv4Network)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv4NetworkOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4Redistribute struct {
-	// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
-	Metric int `pulumi:"metric"`
-	// Variable name
-	MetricVariable string `pulumi:"metricVariable"`
-	// Variable name
-	OspfMatchRouteVariable string `pulumi:"ospfMatchRouteVariable"`
-	// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
-	OspfMatchRoutes []string `pulumi:"ospfMatchRoutes"`
-	// Set the protocol to redistribute routes from
-	Protocol string `pulumi:"protocol"`
-	// Variable name
-	ProtocolVariable string `pulumi:"protocolVariable"`
-	RoutePolicyId    string `pulumi:"routePolicyId"`
-}
-
-// GetTransportRoutingBgpFeatureIpv4RedistributeInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4RedistributeArgs and GetTransportRoutingBgpFeatureIpv4RedistributeOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4RedistributeInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4RedistributeArgs{...}
-type GetTransportRoutingBgpFeatureIpv4RedistributeInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4RedistributeOutput() GetTransportRoutingBgpFeatureIpv4RedistributeOutput
-	ToGetTransportRoutingBgpFeatureIpv4RedistributeOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4RedistributeOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4RedistributeArgs struct {
-	// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
-	Metric pulumi.IntInput `pulumi:"metric"`
-	// Variable name
-	MetricVariable pulumi.StringInput `pulumi:"metricVariable"`
-	// Variable name
-	OspfMatchRouteVariable pulumi.StringInput `pulumi:"ospfMatchRouteVariable"`
-	// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
-	OspfMatchRoutes pulumi.StringArrayInput `pulumi:"ospfMatchRoutes"`
-	// Set the protocol to redistribute routes from
-	Protocol pulumi.StringInput `pulumi:"protocol"`
-	// Variable name
-	ProtocolVariable pulumi.StringInput `pulumi:"protocolVariable"`
-	RoutePolicyId    pulumi.StringInput `pulumi:"routePolicyId"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv4RedistributeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4Redistribute)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4RedistributeArgs) ToGetTransportRoutingBgpFeatureIpv4RedistributeOutput() GetTransportRoutingBgpFeatureIpv4RedistributeOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4RedistributeOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4RedistributeArgs) ToGetTransportRoutingBgpFeatureIpv4RedistributeOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4RedistributeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4RedistributeOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv4RedistributeArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv4RedistributeArray and GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv4RedistributeArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv4RedistributeArray{ GetTransportRoutingBgpFeatureIpv4RedistributeArgs{...} }
-type GetTransportRoutingBgpFeatureIpv4RedistributeArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput() GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv4RedistributeArray []GetTransportRoutingBgpFeatureIpv4RedistributeInput
-
-func (GetTransportRoutingBgpFeatureIpv4RedistributeArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4Redistribute)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4RedistributeArray) ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput() GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv4RedistributeArray) ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4RedistributeOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4RedistributeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4Redistribute)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) ToGetTransportRoutingBgpFeatureIpv4RedistributeOutput() GetTransportRoutingBgpFeatureIpv4RedistributeOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) ToGetTransportRoutingBgpFeatureIpv4RedistributeOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4RedistributeOutput {
-	return o
-}
-
-// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) Metric() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) int { return v.Metric }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) MetricVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) string { return v.MetricVariable }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) OspfMatchRouteVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) string { return v.OspfMatchRouteVariable }).(pulumi.StringOutput)
-}
-
-// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) OspfMatchRoutes() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) []string { return v.OspfMatchRoutes }).(pulumi.StringArrayOutput)
-}
-
-// Set the protocol to redistribute routes from
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) Protocol() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) string { return v.Protocol }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) ProtocolVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) string { return v.ProtocolVariable }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeOutput) RoutePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv4Redistribute) string { return v.RoutePolicyId }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv4Redistribute)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput) ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput() GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput) ToGetTransportRoutingBgpFeatureIpv4RedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv4RedistributeOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv4Redistribute {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv4Redistribute)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv4RedistributeOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6AggregateAddress struct {
-	// Configure the IPv6 prefixes to aggregate
-	AggregatePrefix string `pulumi:"aggregatePrefix"`
-	// Variable name
-	AggregatePrefixVariable string `pulumi:"aggregatePrefixVariable"`
-	// Set AS set path information
-	AsSetPath bool `pulumi:"asSetPath"`
-	// Variable name
-	AsSetPathVariable string `pulumi:"asSetPathVariable"`
-	// Filter out more specific routes from updates
-	SummaryOnly bool `pulumi:"summaryOnly"`
-	// Variable name
-	SummaryOnlyVariable string `pulumi:"summaryOnlyVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv6AggregateAddressInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs and GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6AggregateAddressInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs{...}
-type GetTransportRoutingBgpFeatureIpv6AggregateAddressInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutput() GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput
-	ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs struct {
-	// Configure the IPv6 prefixes to aggregate
-	AggregatePrefix pulumi.StringInput `pulumi:"aggregatePrefix"`
-	// Variable name
-	AggregatePrefixVariable pulumi.StringInput `pulumi:"aggregatePrefixVariable"`
-	// Set AS set path information
-	AsSetPath pulumi.BoolInput `pulumi:"asSetPath"`
-	// Variable name
-	AsSetPathVariable pulumi.StringInput `pulumi:"asSetPathVariable"`
-	// Filter out more specific routes from updates
-	SummaryOnly pulumi.BoolInput `pulumi:"summaryOnly"`
-	// Variable name
-	SummaryOnlyVariable pulumi.StringInput `pulumi:"summaryOnlyVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6AggregateAddress)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutput() GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6AggregateAddressArray and GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6AggregateAddressArray{ GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs{...} }
-type GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput() GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6AggregateAddressArray []GetTransportRoutingBgpFeatureIpv6AggregateAddressInput
-
-func (GetTransportRoutingBgpFeatureIpv6AggregateAddressArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6AggregateAddress)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6AggregateAddressArray) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput() GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6AggregateAddressArray) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6AggregateAddress)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutput() GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput {
-	return o
-}
-
-// Configure the IPv6 prefixes to aggregate
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) AggregatePrefix() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6AggregateAddress) string { return v.AggregatePrefix }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) AggregatePrefixVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6AggregateAddress) string { return v.AggregatePrefixVariable }).(pulumi.StringOutput)
-}
-
-// Set AS set path information
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) AsSetPath() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6AggregateAddress) bool { return v.AsSetPath }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) AsSetPathVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6AggregateAddress) string { return v.AsSetPathVariable }).(pulumi.StringOutput)
-}
-
-// Filter out more specific routes from updates
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) SummaryOnly() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6AggregateAddress) bool { return v.SummaryOnly }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput) SummaryOnlyVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6AggregateAddress) string { return v.SummaryOnlyVariable }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6AggregateAddress)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput() GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput) ToGetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv6AggregateAddress {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv6AggregateAddress)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6Neighbor struct {
-	// Set IPv6 neighbor address
-	Address string `pulumi:"address"`
-	// Set IPv6 BGP address family
-	AddressFamilies []GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily `pulumi:"addressFamilies"`
-	// Variable name
-	AddressVariable string `pulumi:"addressVariable"`
-	// The number of accept as-path with my AS present in it
-	AllowasInNumber int `pulumi:"allowasInNumber"`
-	// Variable name
-	AllowasInNumberVariable string `pulumi:"allowasInNumberVariable"`
-	// Override matching AS-number while sending update
-	AsOverride bool `pulumi:"asOverride"`
-	// Variable name
-	AsOverrideVariable string `pulumi:"asOverrideVariable"`
-	// Set description
-	Description string `pulumi:"description"`
-	// Variable name
-	DescriptionVariable string `pulumi:"descriptionVariable"`
-	// Set TTL value for peers that are not directly connected
-	EbgpMultihop int `pulumi:"ebgpMultihop"`
-	// Variable name
-	EbgpMultihopVariable string `pulumi:"ebgpMultihopVariable"`
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
-	HoldTime int `pulumi:"holdTime"`
-	// Variable name
-	HoldTimeVariable string `pulumi:"holdTimeVariable"`
-	// Interval (seconds) of keepalive messages sent to its BGP peer
-	KeepaliveTime int `pulumi:"keepaliveTime"`
-	// Variable name
-	KeepaliveTimeVariable string `pulumi:"keepaliveTimeVariable"`
-	// Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-	LocalAs string `pulumi:"localAs"`
-	// Variable name
-	LocalAsVariable string `pulumi:"localAsVariable"`
-	// Set router to be next hop for routes advertised to neighbor
-	NextHopSelf bool `pulumi:"nextHopSelf"`
-	// Variable name
-	NextHopSelfVariable string `pulumi:"nextHopSelfVariable"`
-	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
-	Password string `pulumi:"password"`
-	// Variable name
-	PasswordVariable string `pulumi:"passwordVariable"`
-	// Set remote autonomous system number
-	RemoteAs string `pulumi:"remoteAs"`
-	// Variable name
-	RemoteAsVariable string `pulumi:"remoteAsVariable"`
-	// Send community attribute
-	SendCommunity bool `pulumi:"sendCommunity"`
-	// Variable name
-	SendCommunityVariable string `pulumi:"sendCommunityVariable"`
-	// Send extended community attribute
-	SendExtendedCommunity bool `pulumi:"sendExtendedCommunity"`
-	// Variable name
-	SendExtendedCommunityVariable string `pulumi:"sendExtendedCommunityVariable"`
-	// Enable or disable a BGP neighbor
-	Shutdown bool `pulumi:"shutdown"`
-	// Variable name
-	ShutdownVariable string `pulumi:"shutdownVariable"`
-	// Source interface name for BGP neighbor
-	UpdateSourceInterface string `pulumi:"updateSourceInterface"`
-	// Variable name
-	UpdateSourceInterfaceVariable string `pulumi:"updateSourceInterfaceVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv6NeighborInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6NeighborArgs and GetTransportRoutingBgpFeatureIpv6NeighborOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6NeighborInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6NeighborArgs{...}
-type GetTransportRoutingBgpFeatureIpv6NeighborInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6NeighborOutput() GetTransportRoutingBgpFeatureIpv6NeighborOutput
-	ToGetTransportRoutingBgpFeatureIpv6NeighborOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6NeighborOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborArgs struct {
-	// Set IPv6 neighbor address
-	Address pulumi.StringInput `pulumi:"address"`
-	// Set IPv6 BGP address family
-	AddressFamilies GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayInput `pulumi:"addressFamilies"`
-	// Variable name
-	AddressVariable pulumi.StringInput `pulumi:"addressVariable"`
-	// The number of accept as-path with my AS present in it
-	AllowasInNumber pulumi.IntInput `pulumi:"allowasInNumber"`
-	// Variable name
-	AllowasInNumberVariable pulumi.StringInput `pulumi:"allowasInNumberVariable"`
-	// Override matching AS-number while sending update
-	AsOverride pulumi.BoolInput `pulumi:"asOverride"`
-	// Variable name
-	AsOverrideVariable pulumi.StringInput `pulumi:"asOverrideVariable"`
-	// Set description
-	Description pulumi.StringInput `pulumi:"description"`
-	// Variable name
-	DescriptionVariable pulumi.StringInput `pulumi:"descriptionVariable"`
-	// Set TTL value for peers that are not directly connected
-	EbgpMultihop pulumi.IntInput `pulumi:"ebgpMultihop"`
-	// Variable name
-	EbgpMultihopVariable pulumi.StringInput `pulumi:"ebgpMultihopVariable"`
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
-	HoldTime pulumi.IntInput `pulumi:"holdTime"`
-	// Variable name
-	HoldTimeVariable pulumi.StringInput `pulumi:"holdTimeVariable"`
-	// Interval (seconds) of keepalive messages sent to its BGP peer
-	KeepaliveTime pulumi.IntInput `pulumi:"keepaliveTime"`
-	// Variable name
-	KeepaliveTimeVariable pulumi.StringInput `pulumi:"keepaliveTimeVariable"`
-	// Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-	LocalAs pulumi.StringInput `pulumi:"localAs"`
-	// Variable name
-	LocalAsVariable pulumi.StringInput `pulumi:"localAsVariable"`
-	// Set router to be next hop for routes advertised to neighbor
-	NextHopSelf pulumi.BoolInput `pulumi:"nextHopSelf"`
-	// Variable name
-	NextHopSelfVariable pulumi.StringInput `pulumi:"nextHopSelfVariable"`
-	// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
-	Password pulumi.StringInput `pulumi:"password"`
-	// Variable name
-	PasswordVariable pulumi.StringInput `pulumi:"passwordVariable"`
-	// Set remote autonomous system number
-	RemoteAs pulumi.StringInput `pulumi:"remoteAs"`
-	// Variable name
-	RemoteAsVariable pulumi.StringInput `pulumi:"remoteAsVariable"`
-	// Send community attribute
-	SendCommunity pulumi.BoolInput `pulumi:"sendCommunity"`
-	// Variable name
-	SendCommunityVariable pulumi.StringInput `pulumi:"sendCommunityVariable"`
-	// Send extended community attribute
-	SendExtendedCommunity pulumi.BoolInput `pulumi:"sendExtendedCommunity"`
-	// Variable name
-	SendExtendedCommunityVariable pulumi.StringInput `pulumi:"sendExtendedCommunityVariable"`
-	// Enable or disable a BGP neighbor
-	Shutdown pulumi.BoolInput `pulumi:"shutdown"`
-	// Variable name
-	ShutdownVariable pulumi.StringInput `pulumi:"shutdownVariable"`
-	// Source interface name for BGP neighbor
-	UpdateSourceInterface pulumi.StringInput `pulumi:"updateSourceInterface"`
-	// Variable name
-	UpdateSourceInterfaceVariable pulumi.StringInput `pulumi:"updateSourceInterfaceVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6Neighbor)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborArgs) ToGetTransportRoutingBgpFeatureIpv6NeighborOutput() GetTransportRoutingBgpFeatureIpv6NeighborOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6NeighborOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborArgs) ToGetTransportRoutingBgpFeatureIpv6NeighborOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6NeighborOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv6NeighborArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6NeighborArray and GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6NeighborArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6NeighborArray{ GetTransportRoutingBgpFeatureIpv6NeighborArgs{...} }
-type GetTransportRoutingBgpFeatureIpv6NeighborArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutput() GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborArray []GetTransportRoutingBgpFeatureIpv6NeighborInput
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6Neighbor)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborArray) ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutput() GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborArray) ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6Neighbor)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborOutput() GetTransportRoutingBgpFeatureIpv6NeighborOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborOutput {
-	return o
-}
-
-// Set IPv6 neighbor address
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) Address() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.Address }).(pulumi.StringOutput)
-}
-
-// Set IPv6 BGP address family
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) AddressFamilies() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) []GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily {
-		return v.AddressFamilies
-	}).(GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) AddressVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.AddressVariable }).(pulumi.StringOutput)
-}
-
-// The number of accept as-path with my AS present in it
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) AllowasInNumber() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) int { return v.AllowasInNumber }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) AllowasInNumberVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.AllowasInNumberVariable }).(pulumi.StringOutput)
-}
-
-// Override matching AS-number while sending update
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) AsOverride() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) bool { return v.AsOverride }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) AsOverrideVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.AsOverrideVariable }).(pulumi.StringOutput)
-}
-
-// Set description
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) Description() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.Description }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) DescriptionVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.DescriptionVariable }).(pulumi.StringOutput)
-}
-
-// Set TTL value for peers that are not directly connected
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) EbgpMultihop() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) int { return v.EbgpMultihop }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) EbgpMultihopVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.EbgpMultihopVariable }).(pulumi.StringOutput)
-}
-
-// Interval (seconds) not receiving a keepalive message declares a BGP peer down
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) HoldTime() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) int { return v.HoldTime }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) HoldTimeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.HoldTimeVariable }).(pulumi.StringOutput)
-}
-
-// Interval (seconds) of keepalive messages sent to its BGP peer
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) KeepaliveTime() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) int { return v.KeepaliveTime }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) KeepaliveTimeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.KeepaliveTimeVariable }).(pulumi.StringOutput)
-}
-
-// Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) LocalAs() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.LocalAs }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) LocalAsVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.LocalAsVariable }).(pulumi.StringOutput)
-}
-
-// Set router to be next hop for routes advertised to neighbor
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) NextHopSelf() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) bool { return v.NextHopSelf }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) NextHopSelfVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.NextHopSelfVariable }).(pulumi.StringOutput)
-}
-
-// Set MD5 password on TCP connection with BGP peer [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) Password() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.Password }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) PasswordVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.PasswordVariable }).(pulumi.StringOutput)
-}
-
-// Set remote autonomous system number
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) RemoteAs() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.RemoteAs }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) RemoteAsVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.RemoteAsVariable }).(pulumi.StringOutput)
-}
-
-// Send community attribute
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) SendCommunity() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) bool { return v.SendCommunity }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) SendCommunityVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.SendCommunityVariable }).(pulumi.StringOutput)
-}
-
-// Send extended community attribute
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) SendExtendedCommunity() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) bool { return v.SendExtendedCommunity }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) SendExtendedCommunityVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.SendExtendedCommunityVariable }).(pulumi.StringOutput)
-}
-
-// Enable or disable a BGP neighbor
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) Shutdown() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) bool { return v.Shutdown }).(pulumi.BoolOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) ShutdownVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.ShutdownVariable }).(pulumi.StringOutput)
-}
-
-// Source interface name for BGP neighbor
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) UpdateSourceInterface() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.UpdateSourceInterface }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborOutput) UpdateSourceInterfaceVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Neighbor) string { return v.UpdateSourceInterfaceVariable }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6Neighbor)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutput() GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv6NeighborOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv6Neighbor {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv6Neighbor)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv6NeighborOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily struct {
-	// Set maximum number of prefixes accepted from BGP peer
-	DisablePeerMaxNumberOfPrefixes int `pulumi:"disablePeerMaxNumberOfPrefixes"`
-	// Variable name
-	DisablePeerMaxNumberOfPrefixesVariable string `pulumi:"disablePeerMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	DisablePeerThreshold int `pulumi:"disablePeerThreshold"`
-	// Variable name
-	DisablePeerThresholdVariable string `pulumi:"disablePeerThresholdVariable"`
-	// Set IPv6 unicast address family
-	FamilyType       string `pulumi:"familyType"`
-	InRoutePolicyId  string `pulumi:"inRoutePolicyId"`
-	OutRoutePolicyId string `pulumi:"outRoutePolicyId"`
-	// Neighbor received maximum prefix policy is disabled.
-	PolicyType string `pulumi:"policyType"`
-	// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-	RestartInterval int `pulumi:"restartInterval"`
-	// Variable name
-	RestartIntervalVariable string `pulumi:"restartIntervalVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	RestartMaxNumberOfPrefixes int `pulumi:"restartMaxNumberOfPrefixes"`
-	// Variable name
-	RestartMaxNumberOfPrefixesVariable string `pulumi:"restartMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	RestartThreshold int `pulumi:"restartThreshold"`
-	// Variable name
-	RestartThresholdVariable string `pulumi:"restartThresholdVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	WarningMessageMaxNumberOfPrefixes int `pulumi:"warningMessageMaxNumberOfPrefixes"`
-	// Variable name
-	WarningMessageMaxNumberOfPrefixesVariable string `pulumi:"warningMessageMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	WarningMessageThreshold int `pulumi:"warningMessageThreshold"`
-	// Variable name
-	WarningMessageThresholdVariable string `pulumi:"warningMessageThresholdVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs and GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs{...}
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput
-	ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs struct {
-	// Set maximum number of prefixes accepted from BGP peer
-	DisablePeerMaxNumberOfPrefixes pulumi.IntInput `pulumi:"disablePeerMaxNumberOfPrefixes"`
-	// Variable name
-	DisablePeerMaxNumberOfPrefixesVariable pulumi.StringInput `pulumi:"disablePeerMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	DisablePeerThreshold pulumi.IntInput `pulumi:"disablePeerThreshold"`
-	// Variable name
-	DisablePeerThresholdVariable pulumi.StringInput `pulumi:"disablePeerThresholdVariable"`
-	// Set IPv6 unicast address family
-	FamilyType       pulumi.StringInput `pulumi:"familyType"`
-	InRoutePolicyId  pulumi.StringInput `pulumi:"inRoutePolicyId"`
-	OutRoutePolicyId pulumi.StringInput `pulumi:"outRoutePolicyId"`
-	// Neighbor received maximum prefix policy is disabled.
-	PolicyType pulumi.StringInput `pulumi:"policyType"`
-	// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-	RestartInterval pulumi.IntInput `pulumi:"restartInterval"`
-	// Variable name
-	RestartIntervalVariable pulumi.StringInput `pulumi:"restartIntervalVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	RestartMaxNumberOfPrefixes pulumi.IntInput `pulumi:"restartMaxNumberOfPrefixes"`
-	// Variable name
-	RestartMaxNumberOfPrefixesVariable pulumi.StringInput `pulumi:"restartMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	RestartThreshold pulumi.IntInput `pulumi:"restartThreshold"`
-	// Variable name
-	RestartThresholdVariable pulumi.StringInput `pulumi:"restartThresholdVariable"`
-	// Set maximum number of prefixes accepted from BGP peer
-	WarningMessageMaxNumberOfPrefixes pulumi.IntInput `pulumi:"warningMessageMaxNumberOfPrefixes"`
-	// Variable name
-	WarningMessageMaxNumberOfPrefixesVariable pulumi.StringInput `pulumi:"warningMessageMaxNumberOfPrefixesVariable"`
-	// Set threshold(1 to 100) at which to generate a warning message
-	WarningMessageThreshold pulumi.IntInput `pulumi:"warningMessageThreshold"`
-	// Variable name
-	WarningMessageThresholdVariable pulumi.StringInput `pulumi:"warningMessageThresholdVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray and GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray{ GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs{...} }
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray []GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyInput
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput {
-	return o
-}
-
-// Set maximum number of prefixes accepted from BGP peer
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) DisablePeerMaxNumberOfPrefixes() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int {
-		return v.DisablePeerMaxNumberOfPrefixes
-	}).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) DisablePeerMaxNumberOfPrefixesVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.DisablePeerMaxNumberOfPrefixesVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set threshold(1 to 100) at which to generate a warning message
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) DisablePeerThreshold() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int { return v.DisablePeerThreshold }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) DisablePeerThresholdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.DisablePeerThresholdVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set IPv6 unicast address family
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) FamilyType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string { return v.FamilyType }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) InRoutePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string { return v.InRoutePolicyId }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) OutRoutePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string { return v.OutRoutePolicyId }).(pulumi.StringOutput)
-}
-
-// Neighbor received maximum prefix policy is disabled.
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) PolicyType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string { return v.PolicyType }).(pulumi.StringOutput)
-}
-
-// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) RestartInterval() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int { return v.RestartInterval }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) RestartIntervalVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.RestartIntervalVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set maximum number of prefixes accepted from BGP peer
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) RestartMaxNumberOfPrefixes() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int {
-		return v.RestartMaxNumberOfPrefixes
-	}).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) RestartMaxNumberOfPrefixesVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.RestartMaxNumberOfPrefixesVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set threshold(1 to 100) at which to generate a warning message
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) RestartThreshold() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int { return v.RestartThreshold }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) RestartThresholdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.RestartThresholdVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set maximum number of prefixes accepted from BGP peer
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) WarningMessageMaxNumberOfPrefixes() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int {
-		return v.WarningMessageMaxNumberOfPrefixes
-	}).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) WarningMessageMaxNumberOfPrefixesVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.WarningMessageMaxNumberOfPrefixesVariable
-	}).(pulumi.StringOutput)
-}
-
-// Set threshold(1 to 100) at which to generate a warning message
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) WarningMessageThreshold() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) int { return v.WarningMessageThreshold }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput) WarningMessageThresholdVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily) string {
-		return v.WarningMessageThresholdVariable
-	}).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput() GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput) ToGetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6Network struct {
-	// Configure the prefixes for BGP to announce
-	NetworkPrefix string `pulumi:"networkPrefix"`
-	// Variable name
-	NetworkPrefixVariable string `pulumi:"networkPrefixVariable"`
-}
-
-// GetTransportRoutingBgpFeatureIpv6NetworkInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6NetworkArgs and GetTransportRoutingBgpFeatureIpv6NetworkOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6NetworkInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6NetworkArgs{...}
-type GetTransportRoutingBgpFeatureIpv6NetworkInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6NetworkOutput() GetTransportRoutingBgpFeatureIpv6NetworkOutput
-	ToGetTransportRoutingBgpFeatureIpv6NetworkOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6NetworkOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6NetworkArgs struct {
-	// Configure the prefixes for BGP to announce
-	NetworkPrefix pulumi.StringInput `pulumi:"networkPrefix"`
-	// Variable name
-	NetworkPrefixVariable pulumi.StringInput `pulumi:"networkPrefixVariable"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv6NetworkArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6Network)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NetworkArgs) ToGetTransportRoutingBgpFeatureIpv6NetworkOutput() GetTransportRoutingBgpFeatureIpv6NetworkOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6NetworkOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NetworkArgs) ToGetTransportRoutingBgpFeatureIpv6NetworkOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NetworkOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6NetworkOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv6NetworkArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6NetworkArray and GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6NetworkArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6NetworkArray{ GetTransportRoutingBgpFeatureIpv6NetworkArgs{...} }
-type GetTransportRoutingBgpFeatureIpv6NetworkArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutput() GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6NetworkArray []GetTransportRoutingBgpFeatureIpv6NetworkInput
-
-func (GetTransportRoutingBgpFeatureIpv6NetworkArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6Network)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NetworkArray) ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutput() GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6NetworkArray) ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NetworkOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6NetworkOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6Network)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NetworkOutput) ToGetTransportRoutingBgpFeatureIpv6NetworkOutput() GetTransportRoutingBgpFeatureIpv6NetworkOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NetworkOutput) ToGetTransportRoutingBgpFeatureIpv6NetworkOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NetworkOutput {
-	return o
-}
-
-// Configure the prefixes for BGP to announce
-func (o GetTransportRoutingBgpFeatureIpv6NetworkOutput) NetworkPrefix() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Network) string { return v.NetworkPrefix }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6NetworkOutput) NetworkPrefixVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Network) string { return v.NetworkPrefixVariable }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6Network)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput) ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutput() GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput) ToGetTransportRoutingBgpFeatureIpv6NetworkArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv6NetworkOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv6Network {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv6Network)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv6NetworkOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6Redistribute struct {
-	// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
-	Metric int `pulumi:"metric"`
-	// Variable name
-	MetricVariable string `pulumi:"metricVariable"`
-	// Variable name
-	OspfMatchRouteVariable string `pulumi:"ospfMatchRouteVariable"`
-	// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
-	OspfMatchRoutes []string `pulumi:"ospfMatchRoutes"`
-	// Set the protocol to redistribute routes from
-	Protocol string `pulumi:"protocol"`
-	// Variable name
-	ProtocolVariable string `pulumi:"protocolVariable"`
-	RoutePolicyId    string `pulumi:"routePolicyId"`
-}
-
-// GetTransportRoutingBgpFeatureIpv6RedistributeInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6RedistributeArgs and GetTransportRoutingBgpFeatureIpv6RedistributeOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6RedistributeInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6RedistributeArgs{...}
-type GetTransportRoutingBgpFeatureIpv6RedistributeInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6RedistributeOutput() GetTransportRoutingBgpFeatureIpv6RedistributeOutput
-	ToGetTransportRoutingBgpFeatureIpv6RedistributeOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6RedistributeOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6RedistributeArgs struct {
-	// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
-	Metric pulumi.IntInput `pulumi:"metric"`
-	// Variable name
-	MetricVariable pulumi.StringInput `pulumi:"metricVariable"`
-	// Variable name
-	OspfMatchRouteVariable pulumi.StringInput `pulumi:"ospfMatchRouteVariable"`
-	// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
-	OspfMatchRoutes pulumi.StringArrayInput `pulumi:"ospfMatchRoutes"`
-	// Set the protocol to redistribute routes from
-	Protocol pulumi.StringInput `pulumi:"protocol"`
-	// Variable name
-	ProtocolVariable pulumi.StringInput `pulumi:"protocolVariable"`
-	RoutePolicyId    pulumi.StringInput `pulumi:"routePolicyId"`
-}
-
-func (GetTransportRoutingBgpFeatureIpv6RedistributeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6Redistribute)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6RedistributeArgs) ToGetTransportRoutingBgpFeatureIpv6RedistributeOutput() GetTransportRoutingBgpFeatureIpv6RedistributeOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6RedistributeOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6RedistributeArgs) ToGetTransportRoutingBgpFeatureIpv6RedistributeOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6RedistributeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6RedistributeOutput)
-}
-
-// GetTransportRoutingBgpFeatureIpv6RedistributeArrayInput is an input type that accepts GetTransportRoutingBgpFeatureIpv6RedistributeArray and GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput values.
-// You can construct a concrete instance of `GetTransportRoutingBgpFeatureIpv6RedistributeArrayInput` via:
-//
-//	GetTransportRoutingBgpFeatureIpv6RedistributeArray{ GetTransportRoutingBgpFeatureIpv6RedistributeArgs{...} }
-type GetTransportRoutingBgpFeatureIpv6RedistributeArrayInput interface {
-	pulumi.Input
-
-	ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput() GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput
-	ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutputWithContext(context.Context) GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput
-}
-
-type GetTransportRoutingBgpFeatureIpv6RedistributeArray []GetTransportRoutingBgpFeatureIpv6RedistributeInput
-
-func (GetTransportRoutingBgpFeatureIpv6RedistributeArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6Redistribute)(nil)).Elem()
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6RedistributeArray) ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput() GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput {
-	return i.ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutputWithContext(context.Background())
-}
-
-func (i GetTransportRoutingBgpFeatureIpv6RedistributeArray) ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6RedistributeOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6RedistributeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6Redistribute)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) ToGetTransportRoutingBgpFeatureIpv6RedistributeOutput() GetTransportRoutingBgpFeatureIpv6RedistributeOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) ToGetTransportRoutingBgpFeatureIpv6RedistributeOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6RedistributeOutput {
-	return o
-}
-
-// Metric value, the metric value helps determine the preference of routes when multiple paths are available. A lower metric is typically more preferred
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) Metric() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) int { return v.Metric }).(pulumi.IntOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) MetricVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) string { return v.MetricVariable }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) OspfMatchRouteVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) string { return v.OspfMatchRouteVariable }).(pulumi.StringOutput)
-}
-
-// Match the OSPF internal,external type 1 or external type 2 route and redistribute them to BGP.
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) OspfMatchRoutes() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) []string { return v.OspfMatchRoutes }).(pulumi.StringArrayOutput)
-}
-
-// Set the protocol to redistribute routes from
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) Protocol() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) string { return v.Protocol }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) ProtocolVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) string { return v.ProtocolVariable }).(pulumi.StringOutput)
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeOutput) RoutePolicyId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetTransportRoutingBgpFeatureIpv6Redistribute) string { return v.RoutePolicyId }).(pulumi.StringOutput)
-}
-
-type GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput struct{ *pulumi.OutputState }
-
-func (GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetTransportRoutingBgpFeatureIpv6Redistribute)(nil)).Elem()
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput) ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput() GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput) ToGetTransportRoutingBgpFeatureIpv6RedistributeArrayOutputWithContext(ctx context.Context) GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput {
-	return o
-}
-
-func (o GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput) Index(i pulumi.IntInput) GetTransportRoutingBgpFeatureIpv6RedistributeOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetTransportRoutingBgpFeatureIpv6Redistribute {
-		return vs[0].([]GetTransportRoutingBgpFeatureIpv6Redistribute)[vs[1].(int)]
-	}).(GetTransportRoutingBgpFeatureIpv6RedistributeOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateNatPortForwardInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateNatPortForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateNatPortForwardArrayInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateNatPortForwardArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplatePolicerInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplatePolicerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplatePolicerArrayInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplatePolicerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateStaticArpInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateStaticArpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateStaticArpArrayInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateStaticArpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayInput)(nil)).Elem(), VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateAccessListInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplateAccessListArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateAccessListArrayInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplateAccessListArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateNatPortForwardInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplatePolicerInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplatePolicerArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplatePolicerArrayInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplatePolicerArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationInput)(nil)).Elem(), VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs{})
@@ -79295,8 +78614,17 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetLocalizedPolicyDefinitionArrayInput)(nil)).Elem(), GetLocalizedPolicyDefinitionArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetMeshTopologyPolicyDefinitionRegionInput)(nil)).Elem(), GetMeshTopologyPolicyDefinitionRegionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetMeshTopologyPolicyDefinitionRegionArrayInput)(nil)).Elem(), GetMeshTopologyPolicyDefinitionRegionArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyCflowdCollectorInput)(nil)).Elem(), GetNetworkHierarchyCflowdCollectorArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyCflowdCollectorArrayInput)(nil)).Elem(), GetNetworkHierarchyCflowdCollectorArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchyNodeAddressInput)(nil)).Elem(), GetNetworkHierarchyNodeAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingHighSpeedLoggingInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingHighSpeedLoggingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingHighSpeedLoggingArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingUtdSyslogInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingUtdSyslogArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetNetworkHierarchySecurityLoggingUtdSyslogArrayInput)(nil)).Elem(), GetNetworkHierarchySecurityLoggingUtdSyslogArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetOtherThousandeyesFeatureVirtualApplicationInput)(nil)).Elem(), GetOtherThousandeyesFeatureVirtualApplicationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetOtherThousandeyesFeatureVirtualApplicationArrayInput)(nil)).Elem(), GetOtherThousandeyesFeatureVirtualApplicationArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetOtherTrustsecFeatureSxpConnectionInput)(nil)).Elem(), GetOtherTrustsecFeatureSxpConnectionArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetOtherTrustsecFeatureSxpConnectionArrayInput)(nil)).Elem(), GetOtherTrustsecFeatureSxpConnectionArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetOtherUcseFeatureInterfaceInput)(nil)).Elem(), GetOtherUcseFeatureInterfaceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetOtherUcseFeatureInterfaceArrayInput)(nil)).Elem(), GetOtherUcseFeatureInterfaceArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetPolicyGroupDeviceInput)(nil)).Elem(), GetPolicyGroupDeviceArgs{})
@@ -79391,6 +78719,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyDefinitionArrayInput)(nil)).Elem(), GetSecurityPolicyDefinitionArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyDefinitionEntryInput)(nil)).Elem(), GetSecurityPolicyDefinitionEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyDefinitionEntryArrayInput)(nil)).Elem(), GetSecurityPolicyDefinitionEntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyHighSpeedLoggingEntryInput)(nil)).Elem(), GetSecurityPolicyHighSpeedLoggingEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyHighSpeedLoggingEntryArrayInput)(nil)).Elem(), GetSecurityPolicyHighSpeedLoggingEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyLoggingInput)(nil)).Elem(), GetSecurityPolicyLoggingArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSecurityPolicyLoggingArrayInput)(nil)).Elem(), GetSecurityPolicyLoggingArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetServiceDhcpServerFeatureOptionCodeInput)(nil)).Elem(), GetServiceDhcpServerFeatureOptionCodeArgs{})
@@ -79777,30 +79107,18 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceActionInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceActionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceActionArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceActionArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayInput)(nil)).Elem(), GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4AggregateAddressInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4AggregateAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4AggregateAddressArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NeighborInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4NeighborArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NeighborArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4NeighborArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NetworkInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4NetworkArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4NetworkArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4NetworkArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4RedistributeInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4RedistributeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv4RedistributeArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv4RedistributeArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6AggregateAddressInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6AggregateAddressArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6AggregateAddressArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NeighborInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6NeighborArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NeighborArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6NeighborArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NetworkInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6NetworkArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6NetworkArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6NetworkArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6RedistributeInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6RedistributeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetTransportRoutingBgpFeatureIpv6RedistributeArrayInput)(nil)).Elem(), GetTransportRoutingBgpFeatureIpv6RedistributeArray{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateNatPortForwardOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateNatPortForwardArrayOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplatePolicerOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplatePolicerArrayOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateStaticArpOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateStaticArpArrayOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArrayOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplateAccessListOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplateAccessListArrayOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplateNatPortForwardOutput{})
+	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArrayOutput{})
 	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplatePolicerOutput{})
 	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplatePolicerArrayOutput{})
 	pulumi.RegisterOutputType(VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationOutput{})
@@ -80295,8 +79613,17 @@ func init() {
 	pulumi.RegisterOutputType(GetLocalizedPolicyDefinitionArrayOutput{})
 	pulumi.RegisterOutputType(GetMeshTopologyPolicyDefinitionRegionOutput{})
 	pulumi.RegisterOutputType(GetMeshTopologyPolicyDefinitionRegionArrayOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyCflowdCollectorOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyCflowdCollectorArrayOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchyNodeAddressOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingHighSpeedLoggingOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingHighSpeedLoggingArrayOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingUtdSyslogOutput{})
+	pulumi.RegisterOutputType(GetNetworkHierarchySecurityLoggingUtdSyslogArrayOutput{})
 	pulumi.RegisterOutputType(GetOtherThousandeyesFeatureVirtualApplicationOutput{})
 	pulumi.RegisterOutputType(GetOtherThousandeyesFeatureVirtualApplicationArrayOutput{})
+	pulumi.RegisterOutputType(GetOtherTrustsecFeatureSxpConnectionOutput{})
+	pulumi.RegisterOutputType(GetOtherTrustsecFeatureSxpConnectionArrayOutput{})
 	pulumi.RegisterOutputType(GetOtherUcseFeatureInterfaceOutput{})
 	pulumi.RegisterOutputType(GetOtherUcseFeatureInterfaceArrayOutput{})
 	pulumi.RegisterOutputType(GetPolicyGroupDeviceOutput{})
@@ -80391,6 +79718,8 @@ func init() {
 	pulumi.RegisterOutputType(GetSecurityPolicyDefinitionArrayOutput{})
 	pulumi.RegisterOutputType(GetSecurityPolicyDefinitionEntryOutput{})
 	pulumi.RegisterOutputType(GetSecurityPolicyDefinitionEntryArrayOutput{})
+	pulumi.RegisterOutputType(GetSecurityPolicyHighSpeedLoggingEntryOutput{})
+	pulumi.RegisterOutputType(GetSecurityPolicyHighSpeedLoggingEntryArrayOutput{})
 	pulumi.RegisterOutputType(GetSecurityPolicyLoggingOutput{})
 	pulumi.RegisterOutputType(GetSecurityPolicyLoggingArrayOutput{})
 	pulumi.RegisterOutputType(GetServiceDhcpServerFeatureOptionCodeOutput{})
@@ -80777,28 +80106,4 @@ func init() {
 	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceArrayOutput{})
 	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceActionOutput{})
 	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceActionArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4AggregateAddressOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4AggregateAddressArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4NeighborOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4NeighborArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamilyArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4NetworkOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4NetworkArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4RedistributeOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv4RedistributeArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6AggregateAddressOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6AggregateAddressArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6NeighborOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6NeighborArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6NeighborAddressFamilyArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6NetworkOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6NetworkArrayOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6RedistributeOutput{})
-	pulumi.RegisterOutputType(GetTransportRoutingBgpFeatureIpv6RedistributeArrayOutput{})
 }

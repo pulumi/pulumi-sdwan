@@ -48,6 +48,10 @@ export interface GetTopologyGroupResult {
      */
     readonly featureProfileIds: string[];
     /**
+     * List of all associated feature versions
+     */
+    readonly featureVersions: string[];
+    /**
      * The id of the object
      */
     readonly id: string;

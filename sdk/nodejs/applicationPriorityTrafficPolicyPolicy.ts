@@ -32,7 +32,9 @@ import * as utilities from "./utilities";
  *             dscps: [1],
  *         }],
  *         actions: [{
- *             setParameters: [{}],
+ *             setParameters: [{
+ *                 dscp: 18,
+ *             }],
  *         }],
  *     }],
  * });

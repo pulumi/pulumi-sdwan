@@ -22,6 +22,11 @@ public final class GetTopologyGroupResult {
      */
     private List<String> featureProfileIds;
     /**
+     * @return List of all associated feature versions
+     * 
+     */
+    private List<String> featureVersions;
+    /**
      * @return The id of the object
      * 
      */
@@ -51,6 +56,13 @@ public final class GetTopologyGroupResult {
      */
     public List<String> featureProfileIds() {
         return this.featureProfileIds;
+    }
+    /**
+     * @return List of all associated feature versions
+     * 
+     */
+    public List<String> featureVersions() {
+        return this.featureVersions;
     }
     /**
      * @return The id of the object
@@ -85,6 +97,7 @@ public final class GetTopologyGroupResult {
     public static final class Builder {
         private String description;
         private List<String> featureProfileIds;
+        private List<String> featureVersions;
         private String id;
         private String name;
         private String solution;
@@ -93,6 +106,7 @@ public final class GetTopologyGroupResult {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
     	      this.featureProfileIds = defaults.featureProfileIds;
+    	      this.featureVersions = defaults.featureVersions;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.solution = defaults.solution;
@@ -116,6 +130,17 @@ public final class GetTopologyGroupResult {
         }
         public Builder featureProfileIds(String... featureProfileIds) {
             return featureProfileIds(List.of(featureProfileIds));
+        }
+        @CustomType.Setter
+        public Builder featureVersions(List<String> featureVersions) {
+            if (featureVersions == null) {
+              throw new MissingRequiredPropertyException("GetTopologyGroupResult", "featureVersions");
+            }
+            this.featureVersions = featureVersions;
+            return this;
+        }
+        public Builder featureVersions(String... featureVersions) {
+            return featureVersions(List.of(featureVersions));
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -145,6 +170,7 @@ public final class GetTopologyGroupResult {
             final var _resultValue = new GetTopologyGroupResult();
             _resultValue.description = description;
             _resultValue.featureProfileIds = featureProfileIds;
+            _resultValue.featureVersions = featureVersions;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.solution = solution;

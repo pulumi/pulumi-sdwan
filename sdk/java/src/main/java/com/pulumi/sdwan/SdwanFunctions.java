@@ -174,12 +174,20 @@ import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetMeshTopologyPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetMirrorPolicyObjectPlainArgs;
+import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdArgs;
+import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdPlainArgs;
+import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodePlainArgs;
+import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingArgs;
+import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingPlainArgs;
 import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetObjectGroupPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetOtherFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetOtherFeatureProfilePlainArgs;
 import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeatureArgs;
 import com.pulumi.sdwan.inputs.GetOtherThousandeyesFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetOtherTrustsecFeatureArgs;
+import com.pulumi.sdwan.inputs.GetOtherTrustsecFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
 import com.pulumi.sdwan.inputs.GetOtherUcseFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
@@ -603,9 +611,13 @@ import com.pulumi.sdwan.outputs.GetLocalApplicationListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetLocalizedPolicyResult;
 import com.pulumi.sdwan.outputs.GetMeshTopologyPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetMirrorPolicyObjectResult;
+import com.pulumi.sdwan.outputs.GetNetworkHierarchyCflowdResult;
+import com.pulumi.sdwan.outputs.GetNetworkHierarchyNodeResult;
+import com.pulumi.sdwan.outputs.GetNetworkHierarchySecurityLoggingResult;
 import com.pulumi.sdwan.outputs.GetObjectGroupPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetOtherFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetOtherThousandeyesFeatureResult;
+import com.pulumi.sdwan.outputs.GetOtherTrustsecFeatureResult;
 import com.pulumi.sdwan.outputs.GetOtherUcseFeatureResult;
 import com.pulumi.sdwan.outputs.GetPolicerPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetPolicyGroupResult;
@@ -20122,6 +20134,686 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject", TypeShape.of(GetMirrorPolicyObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read Network Hierarchy Cflowd settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyCflowdResult> getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs args) {
+        return getNetworkHierarchyCflowd(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read Network Hierarchy Cflowd settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchyCflowdResult> getNetworkHierarchyCflowdPlain(GetNetworkHierarchyCflowdPlainArgs args) {
+        return getNetworkHierarchyCflowdPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read Network Hierarchy Cflowd settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyCflowdResult> getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getNetworkHierarchyCflowd:getNetworkHierarchyCflowd", TypeShape.of(GetNetworkHierarchyCflowdResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read Network Hierarchy Cflowd settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyCflowdResult> getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getNetworkHierarchyCflowd:getNetworkHierarchyCflowd", TypeShape.of(GetNetworkHierarchyCflowdResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read Network Hierarchy Cflowd settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyCflowdArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyCflowd(GetNetworkHierarchyCflowdArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchyCflowdResult> getNetworkHierarchyCflowdPlain(GetNetworkHierarchyCflowdPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getNetworkHierarchyCflowd:getNetworkHierarchyCflowd", TypeShape.of(GetNetworkHierarchyCflowdResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyNodeResult> getNetworkHierarchyNode() {
+        return getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchyNodeResult> getNetworkHierarchyNodePlain() {
+        return getNetworkHierarchyNodePlain(GetNetworkHierarchyNodePlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyNodeResult> getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs args) {
+        return getNetworkHierarchyNode(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchyNodeResult> getNetworkHierarchyNodePlain(GetNetworkHierarchyNodePlainArgs args) {
+        return getNetworkHierarchyNodePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyNodeResult> getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getNetworkHierarchyNode:getNetworkHierarchyNode", TypeShape.of(GetNetworkHierarchyNodeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchyNodeResult> getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getNetworkHierarchyNode:getNetworkHierarchyNode", TypeShape.of(GetNetworkHierarchyNodeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read a Network Hierarchy Node.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchyNodeArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchyNode(GetNetworkHierarchyNodeArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchyNodeResult> getNetworkHierarchyNodePlain(GetNetworkHierarchyNodePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getNetworkHierarchyNode:getNetworkHierarchyNode", TypeShape.of(GetNetworkHierarchyNodeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read Network Hierarchy Security Logging settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchySecurityLoggingResult> getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs args) {
+        return getNetworkHierarchySecurityLogging(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read Network Hierarchy Security Logging settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchySecurityLoggingResult> getNetworkHierarchySecurityLoggingPlain(GetNetworkHierarchySecurityLoggingPlainArgs args) {
+        return getNetworkHierarchySecurityLoggingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read Network Hierarchy Security Logging settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchySecurityLoggingResult> getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getNetworkHierarchySecurityLogging:getNetworkHierarchySecurityLogging", TypeShape.of(GetNetworkHierarchySecurityLoggingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read Network Hierarchy Security Logging settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetNetworkHierarchySecurityLoggingResult> getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getNetworkHierarchySecurityLogging:getNetworkHierarchySecurityLogging", TypeShape.of(GetNetworkHierarchySecurityLoggingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read Network Hierarchy Security Logging settings.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetNetworkHierarchySecurityLoggingArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getNetworkHierarchySecurityLogging(GetNetworkHierarchySecurityLoggingArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetNetworkHierarchySecurityLoggingResult> getNetworkHierarchySecurityLoggingPlain(GetNetworkHierarchySecurityLoggingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getNetworkHierarchySecurityLogging:getNetworkHierarchySecurityLogging", TypeShape.of(GetNetworkHierarchySecurityLoggingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Object Group Policy Definition .
      * 
      * ## Example Usage
@@ -20725,6 +21417,211 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetOtherThousandeyesFeatureResult> getOtherThousandeyesFeaturePlain(GetOtherThousandeyesFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", TypeShape.of(GetOtherThousandeyesFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Other TrustSec Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetOtherTrustsecFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetOtherTrustsecFeatureResult> getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs args) {
+        return getOtherTrustsecFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Other TrustSec Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetOtherTrustsecFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetOtherTrustsecFeatureResult> getOtherTrustsecFeaturePlain(GetOtherTrustsecFeaturePlainArgs args) {
+        return getOtherTrustsecFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Other TrustSec Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetOtherTrustsecFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetOtherTrustsecFeatureResult> getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getOtherTrustsecFeature:getOtherTrustsecFeature", TypeShape.of(GetOtherTrustsecFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Other TrustSec Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetOtherTrustsecFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetOtherTrustsecFeatureResult> getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getOtherTrustsecFeature:getOtherTrustsecFeature", TypeShape.of(GetOtherTrustsecFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Other TrustSec Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetOtherTrustsecFeatureArgs;
+     * import java.util.ArrayList;
+     * import java.util.Arrays;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getOtherTrustsecFeature(GetOtherTrustsecFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetOtherTrustsecFeatureResult> getOtherTrustsecFeaturePlain(GetOtherTrustsecFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getOtherTrustsecFeature:getOtherTrustsecFeature", TypeShape.of(GetOtherTrustsecFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Other UCSE Feature.

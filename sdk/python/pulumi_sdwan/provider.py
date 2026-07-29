@@ -20,6 +20,7 @@ __all__ = ['ProviderArgs', 'Provider']
 class ProviderArgs:
     def __init__(__self__, *,
                  api_token: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_on_out_of_date: pulumi.Input[Optional[_builtins.bool]] = None,
                  insecure: pulumi.Input[Optional[_builtins.bool]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
@@ -30,6 +31,7 @@ class ProviderArgs:
         The set of arguments for constructing a Provider resource.
 
         :param pulumi.Input[_builtins.str] api_token: API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        :param pulumi.Input[_builtins.bool] deploy_on_out_of_date: When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
@@ -39,6 +41,8 @@ class ProviderArgs:
         """
         if api_token is not None:
             pulumi.set(__self__, "api_token", api_token)
+        if deploy_on_out_of_date is not None:
+            pulumi.set(__self__, "deploy_on_out_of_date", deploy_on_out_of_date)
         if insecure is not None:
             pulumi.set(__self__, "insecure", insecure)
         if password is not None:
@@ -63,6 +67,18 @@ class ProviderArgs:
     @api_token.setter
     def api_token(self, value: pulumi.Input[Optional[_builtins.str]]):
         pulumi.set(self, "api_token", value)
+
+    @_builtins.property
+    @pulumi.getter(name="deployOnOutOfDate")
+    def deploy_on_out_of_date(self) -> pulumi.Input[Optional[_builtins.bool]]:
+        """
+        When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+        """
+        return pulumi.get(self, "deploy_on_out_of_date")
+
+    @deploy_on_out_of_date.setter
+    def deploy_on_out_of_date(self, value: pulumi.Input[Optional[_builtins.bool]]):
+        pulumi.set(self, "deploy_on_out_of_date", value)
 
     @_builtins.property
     @pulumi.getter
@@ -144,6 +160,7 @@ class Provider(pulumi.ProviderResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  api_token: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_on_out_of_date: pulumi.Input[Optional[_builtins.bool]] = None,
                  insecure: pulumi.Input[Optional[_builtins.bool]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
@@ -161,6 +178,7 @@ class Provider(pulumi.ProviderResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] api_token: API Token for the SD-WAN Manager. Can be used instead of username and password. This can also be set as the `SDWAN_API_TOKEN` environment variable.
+        :param pulumi.Input[_builtins.bool] deploy_on_out_of_date: When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
@@ -197,6 +215,7 @@ class Provider(pulumi.ProviderResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  api_token: pulumi.Input[Optional[_builtins.str]] = None,
+                 deploy_on_out_of_date: pulumi.Input[Optional[_builtins.bool]] = None,
                  insecure: pulumi.Input[Optional[_builtins.bool]] = None,
                  password: pulumi.Input[Optional[_builtins.str]] = None,
                  retries: pulumi.Input[Optional[_builtins.int]] = None,
@@ -213,6 +232,7 @@ class Provider(pulumi.ProviderResource):
             __props__ = ProviderArgs.__new__(ProviderArgs)
 
             __props__.__dict__["api_token"] = None if api_token is None else pulumi.Output.secret(api_token)
+            __props__.__dict__["deploy_on_out_of_date"] = pulumi.Output.from_input(deploy_on_out_of_date).apply(pulumi.runtime.to_json) if deploy_on_out_of_date is not None else None
             __props__.__dict__["insecure"] = pulumi.Output.from_input(insecure).apply(pulumi.runtime.to_json) if insecure is not None else None
             __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["retries"] = pulumi.Output.from_input(retries).apply(pulumi.runtime.to_json) if retries is not None else None

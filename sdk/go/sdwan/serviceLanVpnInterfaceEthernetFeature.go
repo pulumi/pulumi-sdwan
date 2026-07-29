@@ -50,6 +50,7 @@ import (
 //					pulumi.String("1.2.3.4"),
 //				},
 //				Ipv6AddressType: pulumi.String("static"),
+//				Ipv6Address:     pulumi.String("2001:0:0:1::0/64"),
 //				Ipv6DhcpHelpers: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArray{
 //					&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs{
 //						Address:         pulumi.String("2001:0:0:1::0"),

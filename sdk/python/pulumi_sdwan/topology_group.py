@@ -22,6 +22,7 @@ class TopologyGroupArgs:
                  description: pulumi.Input[_builtins.str],
                  solution: pulumi.Input[_builtins.str],
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None):
         """
         The set of arguments for constructing a TopologyGroup resource.
@@ -30,12 +31,15 @@ class TopologyGroupArgs:
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `sdwan`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the topology group
         """
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "solution", solution)
         if feature_profile_ids is not None:
             pulumi.set(__self__, "feature_profile_ids", feature_profile_ids)
+        if feature_versions is not None:
+            pulumi.set(__self__, "feature_versions", feature_versions)
         if name is not None:
             pulumi.set(__self__, "name", name)
 
@@ -77,6 +81,18 @@ class TopologyGroupArgs:
         pulumi.set(self, "feature_profile_ids", value)
 
     @_builtins.property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
+
+    @feature_versions.setter
+    def feature_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "feature_versions", value)
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Input[Optional[_builtins.str]]:
         """
@@ -94,6 +110,7 @@ class _TopologyGroupState:
     def __init__(__self__, *,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  solution: pulumi.Input[Optional[_builtins.str]] = None):
         """
@@ -101,6 +118,7 @@ class _TopologyGroupState:
 
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the topology group
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `sdwan`
@@ -109,6 +127,8 @@ class _TopologyGroupState:
             pulumi.set(__self__, "description", description)
         if feature_profile_ids is not None:
             pulumi.set(__self__, "feature_profile_ids", feature_profile_ids)
+        if feature_versions is not None:
+            pulumi.set(__self__, "feature_versions", feature_versions)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if solution is not None:
@@ -137,6 +157,18 @@ class _TopologyGroupState:
     @feature_profile_ids.setter
     def feature_profile_ids(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "feature_profile_ids", value)
+
+    @_builtins.property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
+
+    @feature_versions.setter
+    def feature_versions(self, value: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "feature_versions", value)
 
     @_builtins.property
     @pulumi.getter
@@ -172,6 +204,7 @@ class TopologyGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  solution: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -205,6 +238,7 @@ class TopologyGroup(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the topology group
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `sdwan`
@@ -258,6 +292,7 @@ class TopologyGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: pulumi.Input[Optional[_builtins.str]] = None,
                  feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: pulumi.Input[Optional[_builtins.str]] = None,
                  solution: pulumi.Input[Optional[_builtins.str]] = None,
                  __props__=None):
@@ -273,6 +308,7 @@ class TopologyGroup(pulumi.CustomResource):
                 raise TypeError("Missing required property 'description'")
             __props__.__dict__["description"] = description
             __props__.__dict__["feature_profile_ids"] = feature_profile_ids
+            __props__.__dict__["feature_versions"] = feature_versions
             __props__.__dict__["name"] = name
             if solution is None and not opts.urn:
                 raise TypeError("Missing required property 'solution'")
@@ -289,6 +325,7 @@ class TopologyGroup(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: pulumi.Input[Optional[_builtins.str]] = None,
             feature_profile_ids: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            feature_versions: pulumi.Input[Optional[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: pulumi.Input[Optional[_builtins.str]] = None,
             solution: pulumi.Input[Optional[_builtins.str]] = None) -> 'TopologyGroup':
         """
@@ -300,6 +337,7 @@ class TopologyGroup(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the topology group
         :param pulumi.Input[_builtins.str] solution: Type of solution
                  - Choices: `sdwan`
@@ -310,6 +348,7 @@ class TopologyGroup(pulumi.CustomResource):
 
         __props__.__dict__["description"] = description
         __props__.__dict__["feature_profile_ids"] = feature_profile_ids
+        __props__.__dict__["feature_versions"] = feature_versions
         __props__.__dict__["name"] = name
         __props__.__dict__["solution"] = solution
         return TopologyGroup(resource_name, opts=opts, __props__=__props__)
@@ -329,6 +368,14 @@ class TopologyGroup(pulumi.CustomResource):
         List of feature profile IDs
         """
         return pulumi.get(self, "feature_profile_ids")
+
+    @_builtins.property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
 
     @_builtins.property
     @pulumi.getter

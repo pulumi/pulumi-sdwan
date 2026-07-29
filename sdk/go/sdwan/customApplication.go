@@ -30,7 +30,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewCustomApplication(ctx, "example", &sdwan.CustomApplicationArgs{
-//				AppName: pulumi.String("Example"),
+//				AppName: pulumi.String("Example-Custom"),
 //				ServerNames: pulumi.StringArray{
 //					pulumi.String("*customapp.com"),
 //				},

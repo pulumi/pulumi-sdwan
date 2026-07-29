@@ -3937,6 +3937,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             }],
             ipv4_dhcp_helpers=["1.2.3.4"],
             ipv6_address_type="static",
+            ipv6_address="2001:0:0:1::0/64",
             ipv6_dhcp_helpers=[{
                 "address": "2001:0:0:1::0",
                 "dhcpv6_helper_vpn": 1,
@@ -4202,6 +4203,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             }],
             ipv4_dhcp_helpers=["1.2.3.4"],
             ipv6_address_type="static",
+            ipv6_address="2001:0:0:1::0/64",
             ipv6_dhcp_helpers=[{
                 "address": "2001:0:0:1::0",
                 "dhcpv6_helper_vpn": 1,

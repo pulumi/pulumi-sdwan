@@ -31,6 +31,8 @@ import * as utilities from "./utilities";
  *     authenticationKeys: [{
  *         keyId: 49737,
  *         md5Value: "$CRYPT_CLUSTER",
+ *         hmacSha2Value: "hmac-sha2-key-example",
+ *         cmacAes128Value: "cmac-aes128-key-1234",
  *     }],
  *     trustedKeys: [49737],
  *     authoritativeNtpServer: false,

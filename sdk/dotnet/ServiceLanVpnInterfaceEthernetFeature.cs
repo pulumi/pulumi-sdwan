@@ -48,6 +48,7 @@ namespace Pulumi.Sdwan
     ///             "1.2.3.4",
     ///         },
     ///         Ipv6AddressType = "static",
+    ///         Ipv6Address = "2001:0:0:1::0/64",
     ///         Ipv6DhcpHelpers = new[]
     ///         {
     ///             new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs

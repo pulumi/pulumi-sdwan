@@ -28,6 +28,13 @@ class _ExportableConfig(types.ModuleType):
         return __config__.get('apiToken')
 
     @_builtins.property
+    def deploy_on_out_of_date(self) -> Optional[bool]:
+        """
+        When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+        """
+        return __config__.get_bool('deployOnOutOfDate')
+
+    @_builtins.property
     def insecure(self) -> Optional[bool]:
         """
         Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.

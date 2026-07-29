@@ -410,7 +410,7 @@ namespace Pulumi.Sdwan
         public Output<string?> OverlayIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable port hopping
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
         ///   - Default value: `True`
         /// </summary>
         [Output("portHopping")]
@@ -915,7 +915,7 @@ namespace Pulumi.Sdwan
         public Input<string>? OverlayIdVariable { get; set; }
 
         /// <summary>
-        /// Enable port hopping
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
         ///   - Default value: `True`
         /// </summary>
         [Input("portHopping")]
@@ -1382,7 +1382,7 @@ namespace Pulumi.Sdwan
         public Input<string>? OverlayIdVariable { get; set; }
 
         /// <summary>
-        /// Enable port hopping
+        /// The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
         ///   - Default value: `True`
         /// </summary>
         [Input("portHopping")]

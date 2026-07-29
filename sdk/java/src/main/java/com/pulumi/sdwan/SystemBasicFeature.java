@@ -817,7 +817,7 @@ public class SystemBasicFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.overlayIdVariable);
     }
     /**
-     * Enable port hopping
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      * 
      */
@@ -825,7 +825,7 @@ public class SystemBasicFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ Boolean> portHopping;
 
     /**
-     * @return Enable port hopping
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      * 
      */

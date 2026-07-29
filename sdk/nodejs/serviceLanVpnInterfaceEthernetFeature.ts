@@ -33,6 +33,7 @@ import * as utilities from "./utilities";
  *     }],
  *     ipv4DhcpHelpers: ["1.2.3.4"],
  *     ipv6AddressType: "static",
+ *     ipv6Address: "2001:0:0:1::0/64",
  *     ipv6DhcpHelpers: [{
  *         address: "2001:0:0:1::0",
  *         dhcpv6HelperVpn: 1,

@@ -11,6 +11,7 @@ import com.pulumi.sdwan.SecurityPolicyArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.SecurityPolicyState;
 import com.pulumi.sdwan.outputs.SecurityPolicyDefinition;
+import com.pulumi.sdwan.outputs.SecurityPolicyHighSpeedLoggingEntry;
 import com.pulumi.sdwan.outputs.SecurityPolicyLogging;
 import java.lang.Integer;
 import java.lang.String;
@@ -156,56 +157,56 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.failureMode);
     }
     /**
-     * High Speed Logging Server IP
+     * High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     * 
+     */
+    @Export(name="highSpeedLoggingEntries", refs={List.class,SecurityPolicyHighSpeedLoggingEntry.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<SecurityPolicyHighSpeedLoggingEntry>> highSpeedLoggingEntries;
+
+    /**
+     * @return High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     * 
+     */
+    public Output<Optional<List<SecurityPolicyHighSpeedLoggingEntry>>> highSpeedLoggingEntries() {
+        return Codegen.optional(this.highSpeedLoggingEntries);
+    }
+    /**
+     * High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      * 
      */
     @Export(name="highSpeedLoggingServerIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> highSpeedLoggingServerIp;
 
     /**
-     * @return High Speed Logging Server IP
+     * @return High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      * 
      */
     public Output<Optional<String>> highSpeedLoggingServerIp() {
         return Codegen.optional(this.highSpeedLoggingServerIp);
     }
     /**
-     * High Speed Logging Port
+     * High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      * 
      */
     @Export(name="highSpeedLoggingServerPort", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> highSpeedLoggingServerPort;
 
     /**
-     * @return High Speed Logging Port
+     * @return High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      * 
      */
     public Output<Optional<String>> highSpeedLoggingServerPort() {
         return Codegen.optional(this.highSpeedLoggingServerPort);
     }
     /**
-     * High Speed Logging Source Interface
-     * 
-     */
-    @Export(name="highSpeedLoggingServerSourceInterface", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> highSpeedLoggingServerSourceInterface;
-
-    /**
-     * @return High Speed Logging Source Interface
-     * 
-     */
-    public Output<Optional<String>> highSpeedLoggingServerSourceInterface() {
-        return Codegen.optional(this.highSpeedLoggingServerSourceInterface);
-    }
-    /**
-     * High Speed Logging VPN
+     * High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      * 
      */
     @Export(name="highSpeedLoggingVpn", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> highSpeedLoggingVpn;
 
     /**
-     * @return High Speed Logging VPN
+     * @return High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      * 
      */
     public Output<Optional<String>> highSpeedLoggingVpn() {

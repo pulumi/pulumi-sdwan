@@ -205,7 +205,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             virtual_applications=[{
-                "account_group_token": "qwer",
+                "account_group_token": "qwerqwerqwerqwerqwerqwerqwerqwer",
                 "vpn": 1,
                 "management_ip": "10.0.0.2",
                 "management_subnet_mask": "255.255.255.0",
@@ -257,7 +257,7 @@ class OtherThousandeyesFeature(pulumi.CustomResource):
             description="My Example",
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             virtual_applications=[{
-                "account_group_token": "qwer",
+                "account_group_token": "qwerqwerqwerqwerqwerqwerqwerqwer",
                 "vpn": 1,
                 "management_ip": "10.0.0.2",
                 "management_subnet_mask": "255.255.255.0",

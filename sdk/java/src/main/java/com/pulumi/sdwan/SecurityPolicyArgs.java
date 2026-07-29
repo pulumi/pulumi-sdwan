@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.SecurityPolicyDefinitionArgs;
+import com.pulumi.sdwan.inputs.SecurityPolicyHighSpeedLoggingEntryArgs;
 import com.pulumi.sdwan.inputs.SecurityPolicyLoggingArgs;
 import java.lang.String;
 import java.util.List;
@@ -101,14 +102,29 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * High Speed Logging Server IP
+     * High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     * 
+     */
+    @Import(name="highSpeedLoggingEntries")
+    private @Nullable Output<List<SecurityPolicyHighSpeedLoggingEntryArgs>> highSpeedLoggingEntries;
+
+    /**
+     * @return High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+     * 
+     */
+    public Optional<Output<List<SecurityPolicyHighSpeedLoggingEntryArgs>>> highSpeedLoggingEntries() {
+        return Optional.ofNullable(this.highSpeedLoggingEntries);
+    }
+
+    /**
+     * High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      * 
      */
     @Import(name="highSpeedLoggingServerIp")
     private @Nullable Output<String> highSpeedLoggingServerIp;
 
     /**
-     * @return High Speed Logging Server IP
+     * @return High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
      * 
      */
     public Optional<Output<String>> highSpeedLoggingServerIp() {
@@ -116,14 +132,14 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * High Speed Logging Port
+     * High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      * 
      */
     @Import(name="highSpeedLoggingServerPort")
     private @Nullable Output<String> highSpeedLoggingServerPort;
 
     /**
-     * @return High Speed Logging Port
+     * @return High Speed Logging Port, Attribute conditional on `mode` equal to `security`
      * 
      */
     public Optional<Output<String>> highSpeedLoggingServerPort() {
@@ -131,29 +147,14 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * High Speed Logging Source Interface
-     * 
-     */
-    @Import(name="highSpeedLoggingServerSourceInterface")
-    private @Nullable Output<String> highSpeedLoggingServerSourceInterface;
-
-    /**
-     * @return High Speed Logging Source Interface
-     * 
-     */
-    public Optional<Output<String>> highSpeedLoggingServerSourceInterface() {
-        return Optional.ofNullable(this.highSpeedLoggingServerSourceInterface);
-    }
-
-    /**
-     * High Speed Logging VPN
+     * High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      * 
      */
     @Import(name="highSpeedLoggingVpn")
     private @Nullable Output<String> highSpeedLoggingVpn;
 
     /**
-     * @return High Speed Logging VPN
+     * @return High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
      * 
      */
     public Optional<Output<String>> highSpeedLoggingVpn() {
@@ -356,9 +357,9 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         this.description = $.description;
         this.directInternetApplications = $.directInternetApplications;
         this.failureMode = $.failureMode;
+        this.highSpeedLoggingEntries = $.highSpeedLoggingEntries;
         this.highSpeedLoggingServerIp = $.highSpeedLoggingServerIp;
         this.highSpeedLoggingServerPort = $.highSpeedLoggingServerPort;
-        this.highSpeedLoggingServerSourceInterface = $.highSpeedLoggingServerSourceInterface;
         this.highSpeedLoggingVpn = $.highSpeedLoggingVpn;
         this.imcpUnreachableAllow = $.imcpUnreachableAllow;
         this.loggings = $.loggings;
@@ -514,7 +515,38 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param highSpeedLoggingServerIp High Speed Logging Server IP
+         * @param highSpeedLoggingEntries High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggingEntries(@Nullable Output<List<SecurityPolicyHighSpeedLoggingEntryArgs>> highSpeedLoggingEntries) {
+            $.highSpeedLoggingEntries = highSpeedLoggingEntries;
+            return this;
+        }
+
+        /**
+         * @param highSpeedLoggingEntries High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggingEntries(List<SecurityPolicyHighSpeedLoggingEntryArgs> highSpeedLoggingEntries) {
+            return highSpeedLoggingEntries(Output.of(highSpeedLoggingEntries));
+        }
+
+        /**
+         * @param highSpeedLoggingEntries High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `mode` equal to `unified`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggingEntries(SecurityPolicyHighSpeedLoggingEntryArgs... highSpeedLoggingEntries) {
+            return highSpeedLoggingEntries(List.of(highSpeedLoggingEntries));
+        }
+
+        /**
+         * @param highSpeedLoggingServerIp High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -525,7 +557,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param highSpeedLoggingServerIp High Speed Logging Server IP
+         * @param highSpeedLoggingServerIp High Speed Logging Server IP, Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -535,7 +567,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param highSpeedLoggingServerPort High Speed Logging Port
+         * @param highSpeedLoggingServerPort High Speed Logging Port, Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -546,7 +578,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param highSpeedLoggingServerPort High Speed Logging Port
+         * @param highSpeedLoggingServerPort High Speed Logging Port, Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -556,28 +588,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param highSpeedLoggingServerSourceInterface High Speed Logging Source Interface
-         * 
-         * @return builder
-         * 
-         */
-        public Builder highSpeedLoggingServerSourceInterface(@Nullable Output<String> highSpeedLoggingServerSourceInterface) {
-            $.highSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
-            return this;
-        }
-
-        /**
-         * @param highSpeedLoggingServerSourceInterface High Speed Logging Source Interface
-         * 
-         * @return builder
-         * 
-         */
-        public Builder highSpeedLoggingServerSourceInterface(String highSpeedLoggingServerSourceInterface) {
-            return highSpeedLoggingServerSourceInterface(Output.of(highSpeedLoggingServerSourceInterface));
-        }
-
-        /**
-         * @param highSpeedLoggingVpn High Speed Logging VPN
+         * @param highSpeedLoggingVpn High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -588,7 +599,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param highSpeedLoggingVpn High Speed Logging VPN
+         * @param highSpeedLoggingVpn High Speed Logging VPN, Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 

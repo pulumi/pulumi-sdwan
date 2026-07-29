@@ -35,7 +35,7 @@ import (
 //				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
 //				VirtualApplications: sdwan.OtherThousandeyesFeatureVirtualApplicationArray{
 //					&sdwan.OtherThousandeyesFeatureVirtualApplicationArgs{
-//						AccountGroupToken:    pulumi.String("qwer"),
+//						AccountGroupToken:    pulumi.String("qwerqwerqwerqwerqwerqwerqwerqwer"),
 //						Vpn:                  pulumi.Int(1),
 //						ManagementIp:         pulumi.String("10.0.0.2"),
 //						ManagementSubnetMask: pulumi.String("255.255.255.0"),

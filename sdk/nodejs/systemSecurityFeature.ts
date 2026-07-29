@@ -145,7 +145,7 @@ export class SystemSecurityFeature extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      */
     declare public readonly rekey: pulumi.Output<number | undefined>;
@@ -277,7 +277,7 @@ export interface SystemSecurityFeatureState {
     name?: pulumi.Input<string | undefined>;
     /**
      * Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      */
     rekey?: pulumi.Input<number | undefined>;
@@ -354,7 +354,7 @@ export interface SystemSecurityFeatureArgs {
     name?: pulumi.Input<string | undefined>;
     /**
      * Set how often to change the AES key for DTLS connections
-     *   - Range: `10`-`1209600`
+     *   - Range: `10`-`63113904`
      *   - Default value: `86400`
      */
     rekey?: pulumi.Input<number | undefined>;

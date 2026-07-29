@@ -95,25 +95,25 @@ namespace Pulumi.Sdwan
         public Output<string?> FailureMode { get; private set; } = null!;
 
         /// <summary>
-        /// High Speed Logging Server IP
+        /// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `Mode` equal to `Unified`
+        /// </summary>
+        [Output("highSpeedLoggingEntries")]
+        public Output<ImmutableArray<Outputs.SecurityPolicyHighSpeedLoggingEntry>> HighSpeedLoggingEntries { get; private set; } = null!;
+
+        /// <summary>
+        /// High Speed Logging Server IP, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Output("highSpeedLoggingServerIp")]
         public Output<string?> HighSpeedLoggingServerIp { get; private set; } = null!;
 
         /// <summary>
-        /// High Speed Logging Port
+        /// High Speed Logging Port, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Output("highSpeedLoggingServerPort")]
         public Output<string?> HighSpeedLoggingServerPort { get; private set; } = null!;
 
         /// <summary>
-        /// High Speed Logging Source Interface
-        /// </summary>
-        [Output("highSpeedLoggingServerSourceInterface")]
-        public Output<string?> HighSpeedLoggingServerSourceInterface { get; private set; } = null!;
-
-        /// <summary>
-        /// High Speed Logging VPN
+        /// High Speed Logging VPN, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Output("highSpeedLoggingVpn")]
         public Output<string?> HighSpeedLoggingVpn { get; private set; } = null!;
@@ -286,26 +286,32 @@ namespace Pulumi.Sdwan
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
 
+        [Input("highSpeedLoggingEntries")]
+        private InputList<Inputs.SecurityPolicyHighSpeedLoggingEntryArgs>? _highSpeedLoggingEntries;
+
         /// <summary>
-        /// High Speed Logging Server IP
+        /// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `Mode` equal to `Unified`
+        /// </summary>
+        public InputList<Inputs.SecurityPolicyHighSpeedLoggingEntryArgs> HighSpeedLoggingEntries
+        {
+            get => _highSpeedLoggingEntries ?? (_highSpeedLoggingEntries = new InputList<Inputs.SecurityPolicyHighSpeedLoggingEntryArgs>());
+            set => _highSpeedLoggingEntries = value;
+        }
+
+        /// <summary>
+        /// High Speed Logging Server IP, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Input("highSpeedLoggingServerIp")]
         public Input<string>? HighSpeedLoggingServerIp { get; set; }
 
         /// <summary>
-        /// High Speed Logging Port
+        /// High Speed Logging Port, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Input("highSpeedLoggingServerPort")]
         public Input<string>? HighSpeedLoggingServerPort { get; set; }
 
         /// <summary>
-        /// High Speed Logging Source Interface
-        /// </summary>
-        [Input("highSpeedLoggingServerSourceInterface")]
-        public Input<string>? HighSpeedLoggingServerSourceInterface { get; set; }
-
-        /// <summary>
-        /// High Speed Logging VPN
+        /// High Speed Logging VPN, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Input("highSpeedLoggingVpn")]
         public Input<string>? HighSpeedLoggingVpn { get; set; }
@@ -439,26 +445,32 @@ namespace Pulumi.Sdwan
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
 
+        [Input("highSpeedLoggingEntries")]
+        private InputList<Inputs.SecurityPolicyHighSpeedLoggingEntryGetArgs>? _highSpeedLoggingEntries;
+
         /// <summary>
-        /// High Speed Logging Server IP
+        /// High Speed Logging entries for Unified Security Policy (supports multiple HSL servers), Attribute conditional on `Mode` equal to `Unified`
+        /// </summary>
+        public InputList<Inputs.SecurityPolicyHighSpeedLoggingEntryGetArgs> HighSpeedLoggingEntries
+        {
+            get => _highSpeedLoggingEntries ?? (_highSpeedLoggingEntries = new InputList<Inputs.SecurityPolicyHighSpeedLoggingEntryGetArgs>());
+            set => _highSpeedLoggingEntries = value;
+        }
+
+        /// <summary>
+        /// High Speed Logging Server IP, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Input("highSpeedLoggingServerIp")]
         public Input<string>? HighSpeedLoggingServerIp { get; set; }
 
         /// <summary>
-        /// High Speed Logging Port
+        /// High Speed Logging Port, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Input("highSpeedLoggingServerPort")]
         public Input<string>? HighSpeedLoggingServerPort { get; set; }
 
         /// <summary>
-        /// High Speed Logging Source Interface
-        /// </summary>
-        [Input("highSpeedLoggingServerSourceInterface")]
-        public Input<string>? HighSpeedLoggingServerSourceInterface { get; set; }
-
-        /// <summary>
-        /// High Speed Logging VPN
+        /// High Speed Logging VPN, Attribute conditional on `Mode` equal to `Security`
         /// </summary>
         [Input("highSpeedLoggingVpn")]
         public Input<string>? HighSpeedLoggingVpn { get; set; }

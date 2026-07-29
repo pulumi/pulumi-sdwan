@@ -311,7 +311,7 @@ export class SystemBasicFeature extends pulumi.CustomResource {
      */
     declare public readonly overlayIdVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable port hopping
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      */
     declare public readonly portHopping: pulumi.Output<boolean | undefined>;
@@ -769,7 +769,7 @@ export interface SystemBasicFeatureState {
      */
     overlayIdVariable?: pulumi.Input<string | undefined>;
     /**
-     * Enable port hopping
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      */
     portHopping?: pulumi.Input<boolean | undefined>;
@@ -1072,7 +1072,7 @@ export interface SystemBasicFeatureArgs {
      */
     overlayIdVariable?: pulumi.Input<string | undefined>;
     /**
-     * Enable port hopping
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      */
     portHopping?: pulumi.Input<boolean | undefined>;

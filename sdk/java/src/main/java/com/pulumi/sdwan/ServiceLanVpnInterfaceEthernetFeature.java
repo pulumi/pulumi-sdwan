@@ -80,6 +80,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .ipv4DhcpHelpers("1.2.3.4")
  *             .ipv6AddressType("static")
+ *             .ipv6Address("2001:0:0:1::0/64")
  *             .ipv6DhcpHelpers(ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs.builder()
  *                 .address("2001:0:0:1::0")
  *                 .dhcpv6HelperVpn(1)

@@ -142,7 +142,7 @@ class SystemOmpFeatureArgs:
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - At Least: `1`
+                 - Range: `1`-`16`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -152,7 +152,7 @@ class SystemOmpFeatureArgs:
         :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
                  - Default value: `true`
         :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
-                 - Range: `1`-`604800`
+                 - Range: `1`-`31556952`
                  - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
@@ -774,7 +774,7 @@ class SystemOmpFeatureArgs:
     def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
-          - At Least: `1`
+          - Range: `1`-`16`
           - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
@@ -839,7 +839,7 @@ class SystemOmpFeatureArgs:
     def graceful_restart_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Graceful Restart Timer (seconds)
-          - Range: `1`-`604800`
+          - Range: `1`-`31556952`
           - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
@@ -1262,7 +1262,7 @@ class _SystemOmpFeatureState:
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - At Least: `1`
+                 - Range: `1`-`16`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -1273,7 +1273,7 @@ class _SystemOmpFeatureState:
         :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
                  - Default value: `true`
         :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
-                 - Range: `1`-`604800`
+                 - Range: `1`-`31556952`
                  - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
@@ -1887,7 +1887,7 @@ class _SystemOmpFeatureState:
     def ecmp_limit(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
-          - At Least: `1`
+          - Range: `1`-`16`
           - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
@@ -1964,7 +1964,7 @@ class _SystemOmpFeatureState:
     def graceful_restart_timer(self) -> pulumi.Input[Optional[_builtins.int]]:
         """
         Graceful Restart Timer (seconds)
-          - Range: `1`-`604800`
+          - Range: `1`-`31556952`
           - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
@@ -2459,7 +2459,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - At Least: `1`
+                 - Range: `1`-`16`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -2470,7 +2470,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
                  - Default value: `true`
         :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
-                 - Range: `1`-`604800`
+                 - Range: `1`-`31556952`
                  - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
@@ -2865,7 +2865,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] aspath_auto_translation_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
-                 - At Least: `1`
+                 - Range: `1`-`16`
                  - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
         :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
@@ -2876,7 +2876,7 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
                  - Default value: `true`
         :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
-                 - Range: `1`-`604800`
+                 - Range: `1`-`31556952`
                  - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
@@ -3289,7 +3289,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def ecmp_limit(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         Set maximum number of OMP paths to install in cEdge route table
-          - At Least: `1`
+          - Range: `1`-`16`
           - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
@@ -3342,7 +3342,7 @@ class SystemOmpFeature(pulumi.CustomResource):
     def graceful_restart_timer(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
         Graceful Restart Timer (seconds)
-          - Range: `1`-`604800`
+          - Range: `1`-`31556952`
           - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")

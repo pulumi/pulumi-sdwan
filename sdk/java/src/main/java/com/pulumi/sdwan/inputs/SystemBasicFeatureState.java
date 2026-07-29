@@ -773,7 +773,7 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Enable port hopping
+     * The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      * 
      */
@@ -781,7 +781,7 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
     private @Nullable Output<Boolean> portHopping;
 
     /**
-     * @return Enable port hopping
+     * @return The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
      *   - Default value: `true`
      * 
      */
@@ -2250,7 +2250,7 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param portHopping Enable port hopping
+         * @param portHopping The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
          *   - Default value: `true`
          * 
          * @return builder
@@ -2262,7 +2262,7 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param portHopping Enable port hopping
+         * @param portHopping The port hop functionality is deprecated for devices 17.18 and higher. Use the full-port-hop field instead on interfaces.
          *   - Default value: `true`
          * 
          * @return builder

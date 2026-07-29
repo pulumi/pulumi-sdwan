@@ -95,6 +95,20 @@ public class TopologyGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.featureProfileIds);
     }
     /**
+     * List of all associated feature versions
+     * 
+     */
+    @Export(name="featureVersions", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> featureVersions;
+
+    /**
+     * @return List of all associated feature versions
+     * 
+     */
+    public Output<Optional<List<String>>> featureVersions() {
+        return Codegen.optional(this.featureVersions);
+    }
+    /**
      * The name of the topology group
      * 
      */

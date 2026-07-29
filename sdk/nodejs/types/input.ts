@@ -7239,6 +7239,90 @@ export interface MeshTopologyPolicyDefinitionRegion {
     siteListVersions?: pulumi.Input<pulumi.Input<string>[] | undefined>;
 }
 
+export interface NetworkHierarchyCflowdCollector {
+    /**
+     * Collector IPv4 or IPv6 address
+     */
+    address: pulumi.Input<string>;
+    /**
+     * Enable BFD metrics exporting
+     *   - Default value: `false`
+     */
+    bfdMetricsExport?: pulumi.Input<boolean | undefined>;
+    /**
+     * BFD export interval in seconds. Only valid when `bfdMetricsExport` is `true`; setting it while `bfdMetricsExport` is `false` or unset is a configuration error.
+     *   - Range: `1`-`86400`
+     *   - Default value: `600`
+     */
+    exportInterval?: pulumi.Input<number | undefined>;
+    /**
+     * Enable export spreading
+     *   - Default value: `false`
+     */
+    exportSpread?: pulumi.Input<boolean | undefined>;
+    /**
+     * Collector UDP port number
+     *   - Range: `1024`-`65535`
+     *   - Default value: `4739`
+     */
+    udpPort: pulumi.Input<number>;
+    /**
+     * VPN ID
+     *   - Range: `0`-`65530`
+     */
+    vpnId: pulumi.Input<number>;
+}
+
+export interface NetworkHierarchyNodeAddress {
+    /**
+     * City
+     */
+    city: pulumi.Input<string>;
+    /**
+     * Country
+     */
+    country: pulumi.Input<string>;
+    /**
+     * State or province
+     */
+    state: pulumi.Input<string>;
+    /**
+     * Street address
+     */
+    street: pulumi.Input<string>;
+    /**
+     * Zip or postal code
+     */
+    zipcode: pulumi.Input<string>;
+}
+
+export interface NetworkHierarchySecurityLoggingHighSpeedLogging {
+    /**
+     * Server port number
+     *   - Range: `1`-`65535`
+     */
+    port: pulumi.Input<number>;
+    /**
+     * Server IPv4 or IPv6 address
+     */
+    serverIp: pulumi.Input<string>;
+    /**
+     * VRF name or ID
+     */
+    vrf: pulumi.Input<string>;
+}
+
+export interface NetworkHierarchySecurityLoggingUtdSyslog {
+    /**
+     * Server IPv4 address
+     */
+    serverIp: pulumi.Input<string>;
+    /**
+     * VPN name or ID
+     */
+    vpn: pulumi.Input<string>;
+}
+
 export interface OtherThousandeyesFeatureVirtualApplication {
     /**
      * Set the Account Group Token
@@ -7327,6 +7411,73 @@ export interface OtherThousandeyesFeatureVirtualApplication {
      * Variable name
      */
     vpnVariable?: pulumi.Input<string | undefined>;
+}
+
+export interface OtherTrustsecFeatureSxpConnection {
+    /**
+     * Configure Connection Maximum hold time <0..65535>, Attribute conditional on (`mode` equal to `peer` and `modeType` equal to `speaker`) or (`mode` equal to `local` and `modeType` equal to `listener`)
+     *   - Range: `0`-`65535`
+     *   - Default value: `0`
+     */
+    maxHoldTime?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on (`mode` equal to `peer` and `modeType` equal to `speaker`) or (`mode` equal to `local` and `modeType` equal to `listener`)
+     */
+    maxHoldTimeVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Configure Connection Minimum hold time <0..65535>, Attribute conditional on `modeType` not equal to `both`
+     *   - Range: `0`-`65535`
+     *   - Default value: `0`
+     */
+    minHoldTime?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `modeType` not equal to `both`
+     */
+    minHoldTimeVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Define Mode of connection
+     *   - Choices: `local`, `peer`
+     *   - Default value: `local`
+     */
+    mode?: pulumi.Input<string | undefined>;
+    /**
+     * Define Role of a device <speaker/listener/both>
+     *   - Choices: `speaker`, `listener`, `both`
+     *   - Default value: `speaker`
+     */
+    modeType?: pulumi.Input<string | undefined>;
+    /**
+     * Configure SXP Peer IP address (IPv4)
+     */
+    peerIp?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    peerIpVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Define Preshared Key type
+     *   - Choices: `password`, `none`, `key chain`
+     *   - Default value: `none`
+     */
+    presharedKey?: pulumi.Input<string | undefined>;
+    /**
+     * Configure SXP Source IP address (IPv4)
+     */
+    sourceIp?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name
+     */
+    sourceIpVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Configure Connection VPN (VRF) ID
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
+     */
+    vpnId?: pulumi.Input<number | undefined>;
+    /**
+     * Variable name
+     */
+    vpnIdVariable?: pulumi.Input<string | undefined>;
 }
 
 export interface OtherUcseFeatureInterface {
@@ -8269,6 +8420,25 @@ export interface SecurityPolicyDefinitionEntry {
      * Source Zone
      */
     sourceZone?: pulumi.Input<string | undefined>;
+}
+
+export interface SecurityPolicyHighSpeedLoggingEntry {
+    /**
+     * High Speed Logging Port
+     */
+    port: pulumi.Input<string>;
+    /**
+     * High Speed Logging Server IP
+     */
+    serverIp: pulumi.Input<string>;
+    /**
+     * High Speed Logging Source Interface
+     */
+    sourceInterface?: pulumi.Input<string | undefined>;
+    /**
+     * High Speed Logging VPN
+     */
+    vpn: pulumi.Input<string>;
 }
 
 export interface SecurityPolicyLogging {
@@ -13746,7 +13916,23 @@ export interface SystemLoggingFeatureTlsProfile {
 
 export interface SystemNtpFeatureAuthenticationKey {
     /**
-     * MD5 authentication key ID
+     * CMAC-AES-128 (digest length = 128 bits, key length = [16 or 32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    cmacAes128Value?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    cmacAes128ValueVariable?: pulumi.Input<string | undefined>;
+    /**
+     * HMAC-SHA2-256 (digest length = 256 bits, key length = [1-32] bytes), Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    hmacSha2Value?: pulumi.Input<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on SD-WAN Manager version `26.1.1` or higher
+     */
+    hmacSha2ValueVariable?: pulumi.Input<string | undefined>;
+    /**
+     * Authentication key ID
      *   - Range: `1`-`4294967295`
      */
     keyId?: pulumi.Input<number | undefined>;
@@ -14073,7 +14259,7 @@ export interface SystemSnmpFeatureUser {
     authenticationPasswordVariable?: pulumi.Input<string | undefined>;
     /**
      * Configure authentication protocol
-     *   - Choices: `sha`
+     *   - Choices: `sha`, `sha256`
      */
     authenticationProtocol?: pulumi.Input<string | undefined>;
     /**

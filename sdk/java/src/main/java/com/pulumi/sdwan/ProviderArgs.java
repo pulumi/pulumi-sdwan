@@ -33,6 +33,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+     * 
+     */
+    @Import(name="deployOnOutOfDate", json=true)
+    private @Nullable Output<Boolean> deployOnOutOfDate;
+
+    /**
+     * @return When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> deployOnOutOfDate() {
+        return Optional.ofNullable(this.deployOnOutOfDate);
+    }
+
+    /**
      * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
      * 
      */
@@ -126,6 +141,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     private ProviderArgs(ProviderArgs $) {
         this.apiToken = $.apiToken;
+        this.deployOnOutOfDate = $.deployOnOutOfDate;
         this.insecure = $.insecure;
         this.password = $.password;
         this.retries = $.retries;
@@ -171,6 +187,27 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder apiToken(String apiToken) {
             return apiToken(Output.of(apiToken));
+        }
+
+        /**
+         * @param deployOnOutOfDate When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deployOnOutOfDate(@Nullable Output<Boolean> deployOnOutOfDate) {
+            $.deployOnOutOfDate = deployOnOutOfDate;
+            return this;
+        }
+
+        /**
+         * @param deployOnOutOfDate When enabled, Terraform will detect when a configuration group or policy group device is out of date during refresh and trigger a re-deploy on next apply. This can also be set as the `SDWAN_DEPLOY_ON_OUT_OF_DATE` environment variable. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deployOnOutOfDate(Boolean deployOnOutOfDate) {
+            return deployOnOutOfDate(Output.of(deployOnOutOfDate));
         }
 
         /**

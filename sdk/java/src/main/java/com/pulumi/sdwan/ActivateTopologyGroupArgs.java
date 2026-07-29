@@ -6,8 +6,8 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -33,25 +33,25 @@ public final class ActivateTopologyGroupArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The version of the topology group
+     * List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
      * 
      */
-    @Import(name="version")
-    private @Nullable Output<Integer> version;
+    @Import(name="featureVersions")
+    private @Nullable Output<List<String>> featureVersions;
 
     /**
-     * @return The version of the topology group
+     * @return List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
      * 
      */
-    public Optional<Output<Integer>> version() {
-        return Optional.ofNullable(this.version);
+    public Optional<Output<List<String>>> featureVersions() {
+        return Optional.ofNullable(this.featureVersions);
     }
 
     private ActivateTopologyGroupArgs() {}
 
     private ActivateTopologyGroupArgs(ActivateTopologyGroupArgs $) {
         this.activateTopologyGroupId = $.activateTopologyGroupId;
-        this.version = $.version;
+        this.featureVersions = $.featureVersions;
     }
 
     public static Builder builder() {
@@ -94,24 +94,34 @@ public final class ActivateTopologyGroupArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param version The version of the topology group
+         * @param featureVersions List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
          * 
          * @return builder
          * 
          */
-        public Builder version(@Nullable Output<Integer> version) {
-            $.version = version;
+        public Builder featureVersions(@Nullable Output<List<String>> featureVersions) {
+            $.featureVersions = featureVersions;
             return this;
         }
 
         /**
-         * @param version The version of the topology group
+         * @param featureVersions List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
          * 
          * @return builder
          * 
          */
-        public Builder version(Integer version) {
-            return version(Output.of(version));
+        public Builder featureVersions(List<String> featureVersions) {
+            return featureVersions(Output.of(featureVersions));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions. Any change to this list will trigger a re-deployment of the topology group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(String... featureVersions) {
+            return featureVersions(List.of(featureVersions));
         }
 
         public ActivateTopologyGroupArgs build() {

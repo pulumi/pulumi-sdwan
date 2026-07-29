@@ -6,6 +6,7 @@ package com.pulumi.sdwan.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyDefinition;
+import com.pulumi.sdwan.outputs.GetSecurityPolicyHighSpeedLoggingEntry;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyLogging;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,6 +41,11 @@ public final class GetSecurityPolicyResult {
      */
     private String failureMode;
     /**
+     * @return High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+     * 
+     */
+    private List<GetSecurityPolicyHighSpeedLoggingEntry> highSpeedLoggingEntries;
+    /**
      * @return High Speed Logging Server IP
      * 
      */
@@ -49,11 +55,6 @@ public final class GetSecurityPolicyResult {
      * 
      */
     private String highSpeedLoggingServerPort;
-    /**
-     * @return High Speed Logging Source Interface
-     * 
-     */
-    private String highSpeedLoggingServerSourceInterface;
     /**
      * @return High Speed Logging VPN
      * 
@@ -163,6 +164,13 @@ public final class GetSecurityPolicyResult {
         return this.failureMode;
     }
     /**
+     * @return High Speed Logging entries for Unified Security Policy (supports multiple HSL servers)
+     * 
+     */
+    public List<GetSecurityPolicyHighSpeedLoggingEntry> highSpeedLoggingEntries() {
+        return this.highSpeedLoggingEntries;
+    }
+    /**
      * @return High Speed Logging Server IP
      * 
      */
@@ -175,13 +183,6 @@ public final class GetSecurityPolicyResult {
      */
     public String highSpeedLoggingServerPort() {
         return this.highSpeedLoggingServerPort;
-    }
-    /**
-     * @return High Speed Logging Source Interface
-     * 
-     */
-    public String highSpeedLoggingServerSourceInterface() {
-        return this.highSpeedLoggingServerSourceInterface;
     }
     /**
      * @return High Speed Logging VPN
@@ -299,9 +300,9 @@ public final class GetSecurityPolicyResult {
         private String description;
         private String directInternetApplications;
         private String failureMode;
+        private List<GetSecurityPolicyHighSpeedLoggingEntry> highSpeedLoggingEntries;
         private String highSpeedLoggingServerIp;
         private String highSpeedLoggingServerPort;
-        private String highSpeedLoggingServerSourceInterface;
         private String highSpeedLoggingVpn;
         private String id;
         private String imcpUnreachableAllow;
@@ -325,9 +326,9 @@ public final class GetSecurityPolicyResult {
     	      this.description = defaults.description;
     	      this.directInternetApplications = defaults.directInternetApplications;
     	      this.failureMode = defaults.failureMode;
+    	      this.highSpeedLoggingEntries = defaults.highSpeedLoggingEntries;
     	      this.highSpeedLoggingServerIp = defaults.highSpeedLoggingServerIp;
     	      this.highSpeedLoggingServerPort = defaults.highSpeedLoggingServerPort;
-    	      this.highSpeedLoggingServerSourceInterface = defaults.highSpeedLoggingServerSourceInterface;
     	      this.highSpeedLoggingVpn = defaults.highSpeedLoggingVpn;
     	      this.id = defaults.id;
     	      this.imcpUnreachableAllow = defaults.imcpUnreachableAllow;
@@ -389,6 +390,17 @@ public final class GetSecurityPolicyResult {
             return this;
         }
         @CustomType.Setter
+        public Builder highSpeedLoggingEntries(List<GetSecurityPolicyHighSpeedLoggingEntry> highSpeedLoggingEntries) {
+            if (highSpeedLoggingEntries == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "highSpeedLoggingEntries");
+            }
+            this.highSpeedLoggingEntries = highSpeedLoggingEntries;
+            return this;
+        }
+        public Builder highSpeedLoggingEntries(GetSecurityPolicyHighSpeedLoggingEntry... highSpeedLoggingEntries) {
+            return highSpeedLoggingEntries(List.of(highSpeedLoggingEntries));
+        }
+        @CustomType.Setter
         public Builder highSpeedLoggingServerIp(String highSpeedLoggingServerIp) {
             if (highSpeedLoggingServerIp == null) {
               throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "highSpeedLoggingServerIp");
@@ -402,14 +414,6 @@ public final class GetSecurityPolicyResult {
               throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "highSpeedLoggingServerPort");
             }
             this.highSpeedLoggingServerPort = highSpeedLoggingServerPort;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder highSpeedLoggingServerSourceInterface(String highSpeedLoggingServerSourceInterface) {
-            if (highSpeedLoggingServerSourceInterface == null) {
-              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "highSpeedLoggingServerSourceInterface");
-            }
-            this.highSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
             return this;
         }
         @CustomType.Setter
@@ -542,9 +546,9 @@ public final class GetSecurityPolicyResult {
             _resultValue.description = description;
             _resultValue.directInternetApplications = directInternetApplications;
             _resultValue.failureMode = failureMode;
+            _resultValue.highSpeedLoggingEntries = highSpeedLoggingEntries;
             _resultValue.highSpeedLoggingServerIp = highSpeedLoggingServerIp;
             _resultValue.highSpeedLoggingServerPort = highSpeedLoggingServerPort;
-            _resultValue.highSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
             _resultValue.highSpeedLoggingVpn = highSpeedLoggingVpn;
             _resultValue.id = id;
             _resultValue.imcpUnreachableAllow = imcpUnreachableAllow;
