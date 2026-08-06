@@ -39,8 +39,8 @@ import (
 //						RuleId:     pulumi.Int(4),
 //						RuleName:   pulumi.String("Example"),
 //						RuleType:   pulumi.String("sslDecryption"),
-//						SourceAndDestinationConfiguration: []map[string]interface{}{
-//							map[string]interface{}{
+//						SourceAndDestinationConfiguration: []map[string]string{
+//							{
 //								"option": "destinationIp",
 //								"value":  "10.0.0.0/12",
 //							},
