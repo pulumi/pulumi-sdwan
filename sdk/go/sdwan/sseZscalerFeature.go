@@ -63,8 +63,8 @@ import (
 //						ServiceVpn: []string{
 //							"service_lan_vpn1,service_lan_vpn2",
 //						},
-//						InternalIp: []map[string]interface{}{
-//							map[string]interface{}{
+//						InternalIp: []map[string]string{
+//							{
 //								"internalIpValue": "172.16.2.1",
 //							},
 //						},

@@ -43,13 +43,13 @@ import (
 //				Ipv4RouteTargets: sdwan.CiscoBgpFeatureTemplateIpv4RouteTargetArray{
 //					&sdwan.CiscoBgpFeatureTemplateIpv4RouteTargetArgs{
 //						VpnId: pulumi.Int(1),
-//						Export: []map[string]interface{}{
-//							map[string]interface{}{
+//						Export: []map[string]string{
+//							{
 //								"asnIp": "10:100",
 //							},
 //						},
-//						Import: []map[string]interface{}{
-//							map[string]interface{}{
+//						Import: []map[string]string{
+//							{
 //								"asnIp": "10:100",
 //							},
 //						},
@@ -58,13 +58,13 @@ import (
 //				Ipv6RouteTargets: sdwan.CiscoBgpFeatureTemplateIpv6RouteTargetArray{
 //					&sdwan.CiscoBgpFeatureTemplateIpv6RouteTargetArgs{
 //						VpnId: pulumi.Int(1),
-//						Export: []map[string]interface{}{
-//							map[string]interface{}{
+//						Export: []map[string]string{
+//							{
 //								"asnIp": "10:100",
 //							},
 //						},
-//						Import: []map[string]interface{}{
-//							map[string]interface{}{
+//						Import: []map[string]string{
+//							{
 //								"asnIp": "10:100",
 //							},
 //						},
